@@ -43,18 +43,29 @@ def web_search(query: str, count: int = 5, timeout: int = 20) -> List[Dict[str, 
 
 
 def fetch_url(url: str, timeout: int = 20) -> str:
-    """抓取网页 HTML 文本"""
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/122.0.0.0 Safari/537.36"
+        ),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Referer": "https://www.google.com/",
+        "Connection": "keep-alive",
+        "Cache-Control": "no-cache",
+    }
+
     try:
-        headers = {"User-Agent": "Mozilla/5.0"}
         resp = requests.get(url, headers=headers, timeout=timeout)
         if resp.status_code == 200:
             return resp.text
-        else:
-            print(f"[fetch_url] HTTP {resp.status_code} for {url}")
-            return ""
+        print(f"[fetch_url] HTTP {resp.status_code} for {url}")
+        return ""
     except Exception as e:
         print(f"[fetch_url] ERROR for {url}: {e}")
         return ""
+
 
 
 def extract_install_links(base_url: str, html: str, max_links: int = 10) -> List[str]:
