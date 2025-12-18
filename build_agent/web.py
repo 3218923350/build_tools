@@ -42,7 +42,89 @@ def web_search(query: str, count: int = 5, timeout: int = 20) -> List[Dict[str, 
         return []
 
 
-def fetch_url(url: str, timeout: int = 20) -> str:
+import re
+import json
+import requests
+from urllib.parse import urlparse
+
+
+# ---------- 通用工具 ----------
+def _http_get(url: str, headers=None, params=None, timeout=20) -> requests.Response:
+    resp = requests.get(
+        url,
+        headers=headers,
+        params=params,
+        timeout=timeout,
+    )
+    return resp
+
+
+def _extract_text_from_html(html: str) -> str:
+    """
+    极简 HTML → 文本
+    （你后面大概率会用 BS / lxml，这里先保持轻量）
+    """
+    html = re.sub(r"<script[\s\S]*?</script>", "", html)
+    html = re.sub(r"<style[\s\S]*?</style>", "", html)
+    html = re.sub(r"<[^>]+>", " ", html)
+    return re.sub(r"\s+", " ", html).strip()
+
+
+# ---------- Reddit ----------
+def _fetch_reddit(url: str, timeout=20) -> str:
+    if not url.endswith(".json"):
+        url = url.rstrip("/") + ".json"
+
+    headers = {
+        "User-Agent": "research-bot/1.0 (contact: you@example.com)"
+    }
+
+    resp = _http_get(url, headers=headers, timeout=timeout)
+    if resp.status_code != 200:
+        print(f"[reddit] HTTP {resp.status_code} for {url}")
+        return ""
+
+    try:
+        data = resp.json()
+        post = data[0]["data"]["children"][0]["data"]
+        text = post.get("title", "") + "\n" + post.get("selftext", "")
+        return text.strip()
+    except Exception as e:
+        print(f"[reddit] parse error: {e}")
+        return ""
+
+
+# ---------- StackExchange / AskUbuntu ----------
+def _fetch_stackexchange(url: str, timeout=20) -> str:
+    m = re.search(r"/questions/(\d+)", url)
+    if not m:
+        return ""
+
+    qid = m.group(1)
+
+    api_url = f"https://api.stackexchange.com/2.3/questions/{qid}"
+    params = {
+        "site": "askubuntu",
+        "filter": "withbody",
+    }
+
+    resp = _http_get(api_url, params=params, timeout=timeout)
+    if resp.status_code != 200:
+        print(f"[stackexchange] HTTP {resp.status_code} for {api_url}")
+        return ""
+
+    try:
+        item = resp.json()["items"][0]
+        title = item.get("title", "")
+        body = _extract_text_from_html(item.get("body", ""))
+        return f"{title}\n{body}".strip()
+    except Exception as e:
+        print(f"[stackexchange] parse error: {e}")
+        return ""
+
+
+# ---------- 普通网页 ----------
+def _fetch_html(url: str, timeout=20) -> str:
     headers = {
         "User-Agent": (
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -53,15 +135,35 @@ def fetch_url(url: str, timeout: int = 20) -> str:
         "Accept-Language": "en-US,en;q=0.9",
         "Referer": "https://www.google.com/",
         "Connection": "keep-alive",
-        "Cache-Control": "no-cache",
     }
 
-    try:
-        resp = requests.get(url, headers=headers, timeout=timeout)
-        if resp.status_code == 200:
-            return resp.text
-        print(f"[fetch_url] HTTP {resp.status_code} for {url}")
+    resp = _http_get(url, headers=headers, timeout=timeout)
+    if resp.status_code != 200:
+        print(f"[fetch_html] HTTP {resp.status_code} for {url}")
         return ""
+
+    return _extract_text_from_html(resp.text)
+
+
+# ---------- 你要替换的主函数 ----------
+def fetch_url(url: str, timeout: int = 20) -> str:
+    """
+    Smart fetch:
+    - Reddit -> .json
+    - AskUbuntu / StackOverflow -> StackExchange API
+    - Others -> HTML
+    """
+    domain = urlparse(url).netloc.lower()
+
+    try:
+        if "reddit.com" in domain:
+            return _fetch_reddit(url, timeout)
+
+        if "askubuntu.com" in domain or "stackoverflow.com" in domain:
+            return _fetch_stackexchange(url, timeout)
+
+        return _fetch_html(url, timeout)
+
     except Exception as e:
         print(f"[fetch_url] ERROR for {url}: {e}")
         return ""
