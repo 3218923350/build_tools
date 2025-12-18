@@ -1,0 +1,4079 @@
+{
+  "generated_at": "2025-12-16T04:32:23.455291+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "S2",
+      "leaf_cluster_name": "结构生物-功能/位点/相互作用预测生态",
+      "domain": "StructBio",
+      "typical_objects": "seq/graph/structure",
+      "task_chain": "表征→功能/位点→相互作用→解释→benchmark",
+      "tool_form": "模型库 + 数据集 + 评测"
+    },
+    "unit": {
+      "unit_id": "S2-03",
+      "unit_name": "PPI/复合体/界面预测",
+      "target_scale": "150–350",
+      "coverage_tools": "docking/complex predictors、interface tools"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] ZDOCK",
+        "[GH] DeepRank",
+        "[GH] MaSIF",
+        "[GH] DiffDock-PP",
+        "[GH] EquiDock",
+        "[GH] ClusPro",
+        "[GH] HADDOCK",
+        "[GH] RoseTTAFold",
+        "[GH] AlphaFold-Multimer",
+        "[GH] protein-protein interaction prediction",
+        "[GH] molecular docking",
+        "[GH] protein complex prediction",
+        "[GH] protein interface prediction",
+        "[GH] binding site prediction",
+        "[GH] multimer prediction",
+        "[GH] protein-protein docking",
+        "[GH] interaction interface",
+        "[GH] deep learning docking",
+        "[GH] geometric deep learning protein",
+        "[GH] rigid body docking",
+        "[GH] PPI structure prediction",
+        "[WEB] protein-protein interaction prediction deep learning github",
+        "[WEB] molecular docking tools python github",
+        "[WEB] protein complex structure prediction alphafold github",
+        "[WEB] protein interface prediction tools github",
+        "[WEB] geometric deep learning for protein docking github"
+      ],
+      "total_candidates": 739,
+      "tool_candidates": 333,
+      "final_tools": 165
+    }
+  },
+  "tools": [
+    {
+      "name": "EvoDOCK",
+      "one_line_profile": "Memetic algorithm for all-atom protein-protein docking",
+      "detailed_description": "A Memetic Algorithm that boosts accuracy and speed of all-atom protein-protein docking, designed for evolutionary optimization of complex structures.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Andre-lab/evodock",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "protein-docking",
+        "evolutionary-algorithm",
+        "memetic-algorithm"
+      ],
+      "id": 1
+    },
+    {
+      "name": "Jupyter Dock",
+      "one_line_profile": "Interactive Jupyter notebooks for molecular docking protocols",
+      "detailed_description": "A set of Jupyter Notebooks for performing molecular docking protocols interactively, including visualization, file format conversion, and result analysis.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "visualization",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/AngelRuizMoreno/Jupyter_Dock",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-docking",
+        "jupyter-notebook",
+        "virtual-screening"
+      ],
+      "id": 2
+    },
+    {
+      "name": "EquiPNAS",
+      "one_line_profile": "Equivariant deep graph neural networks for protein-nucleic acid binding site prediction",
+      "detailed_description": "A pLM-informed E(3) equivariant deep graph neural network model designed for predicting protein-nucleic acid binding sites.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "protein_nucleic_acid_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Bhattacharya-Lab/EquiPNAS",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "binding-site",
+        "graph-neural-network",
+        "protein-rna"
+      ],
+      "id": 3
+    },
+    {
+      "name": "ProRNA3D-single",
+      "one_line_profile": "Single-sequence protein-RNA complex structure prediction",
+      "detailed_description": "A tool for predicting protein-RNA complex structures using biological language models from single sequences.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "complex_prediction",
+        "protein_rna_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Bhattacharya-Lab/ProRNA3D-single",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-rna",
+        "structure-prediction",
+        "language-model"
+      ],
+      "id": 4
+    },
+    {
+      "name": "DIPS-Plus",
+      "one_line_profile": "Enhanced database and tools for protein interface prediction",
+      "detailed_description": "The Enhanced Database of Interacting Protein Structures for Interface Prediction, providing data and potentially tools for training interface prediction models.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interface_prediction",
+        "dataset_generation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BioinfoMachineLearning/DIPS-Plus",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-interface",
+        "dataset",
+        "interaction"
+      ],
+      "id": 5
+    },
+    {
+      "name": "DProQ",
+      "one_line_profile": "Deep learning prediction of protein complex structure quality",
+      "detailed_description": "A deep learning method for assessing the quality of protein complex structures (QA).",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "quality_assessment",
+        "complex_structure"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BioinfoMachineLearning/DProQ",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "quality-assessment",
+        "deep-learning",
+        "protein-complex"
+      ],
+      "id": 6
+    },
+    {
+      "name": "DeepInteract",
+      "one_line_profile": "Geometric deep learning framework for predicting protein interface contacts",
+      "detailed_description": "A geometric deep learning framework utilizing Geometric Transformers for predicting protein interface contacts.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interface_prediction",
+        "contact_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BioinfoMachineLearning/DeepInteract",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "geometric-deep-learning",
+        "protein-interface",
+        "transformers"
+      ],
+      "id": 7
+    },
+    {
+      "name": "DeepRefine",
+      "one_line_profile": "Geometric deep learning for refining protein complex structures",
+      "detailed_description": "A geometric deep learning method designed for refining and assessing protein complex structures.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "structure_refinement",
+        "quality_assessment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BioinfoMachineLearning/DeepRefine",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "refinement",
+        "protein-complex",
+        "geometric-deep-learning"
+      ],
+      "id": 8
+    },
+    {
+      "name": "MULTICOM3",
+      "one_line_profile": "System for improving AlphaFold-based protein structure prediction",
+      "detailed_description": "Software system for improving AlphaFold2 and AlphaFold-Multimer based protein tertiary and quaternary structure prediction, ranked in CASP15.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "complex_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BioinfoMachineLearning/MULTICOM3",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "alphafold",
+        "multimer",
+        "casp15"
+      ],
+      "id": 9
+    },
+    {
+      "name": "MULTICOM4",
+      "one_line_profile": "Protein structure prediction system from MULTICOM lab",
+      "detailed_description": "The MULTICOM4 protein structure prediction system developed by the Bioinformatics and Machine Learning Lab at the University of Missouri.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BioinfoMachineLearning/MULTICOM4",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "structure-prediction",
+        "deep-learning"
+      ],
+      "id": 10
+    },
+    {
+      "name": "ProteomeLM",
+      "one_line_profile": "Proteome-scale language model for PPI and gene essentiality",
+      "detailed_description": "A proteome-scale language model allowing fast prediction of protein-protein interactions and gene essentiality across taxa.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "ppi_prediction",
+        "gene_essentiality"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Bitbol-Lab/ProteomeLM",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "language-model",
+        "ppi",
+        "proteome"
+      ],
+      "id": 11
+    },
+    {
+      "name": "SurfDock",
+      "one_line_profile": "Surface-Informed Diffusion Generative Model for Protein-ligand Docking",
+      "detailed_description": "SurfDock is a Surface-Informed Diffusion Generative Model for reliable and accurate protein-ligand complex prediction.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "complex_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CAODH/SurfDock",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-model",
+        "protein-ligand",
+        "generative-model"
+      ],
+      "id": 12
+    },
+    {
+      "name": "AlGDock",
+      "one_line_profile": "Molecular docking with Alchemical Interaction Grids",
+      "detailed_description": "A tool for molecular docking utilizing Alchemical Interaction Grids.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CCBatIIT/AlGDock",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-docking",
+        "alchemical-grids"
+      ],
+      "id": 13
+    },
+    {
+      "name": "DeepPPISP",
+      "one_line_profile": "Deep learning for protein-protein interaction sites prediction",
+      "detailed_description": "Predicts protein-protein interaction sites by combining local and global features with deep neural networks.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interaction_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CSUBioGroup/DeepPPISP",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ppi-sites",
+        "deep-learning"
+      ],
+      "id": 14
+    },
+    {
+      "name": "VortexDock",
+      "one_line_profile": "Distributed molecular docking system",
+      "detailed_description": "A Python-based distributed molecular docking system that supports parallel computation across multiple nodes to improve virtual screening efficiency.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "virtual_screening"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Capt-Lappland/VortexDock",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "distributed-computing",
+        "molecular-docking",
+        "virtual-screening"
+      ],
+      "id": 15
+    },
+    {
+      "name": "PoseX",
+      "one_line_profile": "Benchmark for molecular docking",
+      "detailed_description": "PoseX is a benchmark suite designed for evaluating molecular docking methods.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CataAI/PoseX",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "molecular-docking"
+      ],
+      "id": 16
+    },
+    {
+      "name": "RoseTTAFold2-PPI",
+      "one_line_profile": "Fast deep learning for large-scale PPI screening",
+      "detailed_description": "Fast deep learning methods for large-scale protein-protein interaction screening, developed by Cong Lab.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "ppi_screening",
+        "complex_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CongLabCode/RoseTTAFold2-PPI",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "rosettafold",
+        "ppi",
+        "screening"
+      ],
+      "id": 17
+    },
+    {
+      "name": "DeepRank-GNN-esm",
+      "one_line_profile": "Graph Network for PPI with language model features",
+      "detailed_description": "Graph Network for protein-protein interface prediction including language model features (ESM).",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interface_prediction",
+        "ppi_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DeepRank/DeepRank-GNN-esm",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gnn",
+        "esm",
+        "protein-interface"
+      ],
+      "id": 18
+    },
+    {
+      "name": "Deeprank-GNN",
+      "one_line_profile": "Graph Network for protein-protein interface",
+      "detailed_description": "Graph Network based framework for analyzing protein-protein interfaces.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interface_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DeepRank/Deeprank-GNN",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gnn",
+        "protein-interface"
+      ],
+      "id": 19
+    },
+    {
+      "name": "DeepRank",
+      "one_line_profile": "Deep learning framework for protein-protein interface data mining",
+      "detailed_description": "A deep learning framework for data mining of protein-protein interfaces (Legacy version).",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interface_prediction",
+        "data_mining"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DeepRank/deeprank",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "deep-learning",
+        "protein-interface"
+      ],
+      "id": 20
+    },
+    {
+      "name": "DeepRank2",
+      "one_line_profile": "Framework for data mining of protein interfaces and variants",
+      "detailed_description": "An open-source deep learning framework for data mining of protein-protein interfaces or single-residue variants.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interface_prediction",
+        "variant_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DeepRank/deeprank2",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "deep-learning",
+        "protein-interface",
+        "variants"
+      ],
+      "id": 21
+    },
+    {
+      "name": "iScore",
+      "one_line_profile": "Ranking protein-protein docking models",
+      "detailed_description": "MPI supported software for ranking protein-protein docking models based on a random walk graph kernel and support vector machines.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking_ranking",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DeepRank/iScore",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "docking-ranking",
+        "graph-kernel",
+        "svm"
+      ],
+      "id": 22
+    },
+    {
+      "name": "AF2Complex",
+      "one_line_profile": "Predicting direct PPI with AlphaFold models",
+      "detailed_description": "A tool for predicting direct protein-protein interactions using AlphaFold deep learning neural network models.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "ppi_prediction",
+        "complex_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FreshAirTonight/af2complex",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "alphafold",
+        "ppi",
+        "complex-prediction"
+      ],
+      "id": 23
+    },
+    {
+      "name": "Peptide Docking with AF2/RoseTTAFold",
+      "one_line_profile": "Protocols for peptide docking using AF2 and RoseTTAFold",
+      "detailed_description": "Code and protocols for peptide docking using AlphaFold2 and RoseTTAFold, as described in the associated publication.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "peptide_docking",
+        "structure_prediction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Furman-Lab/Peptide_docking_with_AF2_and_RosettAfold",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "peptide-docking",
+        "alphafold",
+        "rosettafold"
+      ],
+      "id": 24
+    },
+    {
+      "name": "AlphaRED",
+      "one_line_profile": "AlphaFold-initiated replica exchange protein docking",
+      "detailed_description": "A method for AlphaFold-initiated replica exchange protein docking.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "sampling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Graylab/AlphaRED",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "replica-exchange",
+        "alphafold"
+      ],
+      "id": 25
+    },
+    {
+      "name": "GeoDock",
+      "one_line_profile": "Flexible Protein-Protein Docking with Multi-Track Iterative Transformer",
+      "detailed_description": "A method for flexible protein-protein docking using a Multi-Track Iterative Transformer.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Graylab/GeoDock",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "transformer",
+        "flexible-docking"
+      ],
+      "id": 26
+    },
+    {
+      "name": "Anchor",
+      "one_line_profile": "Transcription Factor Binding Site Prediction",
+      "detailed_description": "Algorithm for in vivo Transcription Factor Binding Site Prediction, winner of ENCODE-DREAM challenge.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/GuanLab/Anchor",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "tfbs",
+        "binding-site",
+        "encode-dream"
+      ],
+      "id": 27
+    },
+    {
+      "name": "EquiBind",
+      "one_line_profile": "Geometric deep learning for small molecule binding structure prediction",
+      "detailed_description": "Geometric deep learning method for fast predictions of the 3D structure in which a small molecule binds to a protein.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "binding_structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HannesStark/EquiBind",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "geometric-deep-learning",
+        "docking",
+        "small-molecule"
+      ],
+      "id": 28
+    },
+    {
+      "name": "DeepVS",
+      "one_line_profile": "Docking-Based Virtual Screening with Deep Learning",
+      "detailed_description": "A tool for boosting docking-based virtual screening campaigns using deep learning.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "virtual_screening",
+        "docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JanainaCruz/DeepVS",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "virtual-screening",
+        "deep-learning",
+        "docking"
+      ],
+      "id": 29
+    },
+    {
+      "name": "CLAPE-SMB",
+      "one_line_profile": "Contrastive learning-based predictor for protein-small molecule binding sites",
+      "detailed_description": "A deep learning model utilizing contrastive learning and pre-trained encoders to predict binding sites between proteins and small molecules, specifically designed to address data scarcity in binding site prediction.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "interaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JueWangTHU/CLAPE-SMB",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "contrastive-learning",
+        "binding-sites",
+        "protein-ligand"
+      ],
+      "id": 30
+    },
+    {
+      "name": "PhysDock",
+      "one_line_profile": "Physics-guided diffusion model for protein-ligand complex structure prediction",
+      "detailed_description": "A deep learning framework that integrates physical constraints into an all-atom diffusion model to accurately predict the 3D structures of protein-ligand complexes.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "complex_structure_prediction",
+        "docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KexinZhangResearch/PhysDock",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-model",
+        "molecular-docking",
+        "physics-guided"
+      ],
+      "id": 31
+    },
+    {
+      "name": "PeSTo",
+      "one_line_profile": "Geometric deep learning for protein binding interface prediction",
+      "detailed_description": "A structure-based method using geometric deep learning to predict protein-protein and other molecular binding interfaces directly from atomic coordinates without requiring multiple sequence alignments.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interface_prediction",
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/LBM-EPFL/PeSTo",
+      "help_website": [
+        "https://pesto.epfl.ch/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "geometric-deep-learning",
+        "structural-biology",
+        "interface-prediction"
+      ],
+      "id": 32
+    },
+    {
+      "name": "PeSTo-Carbs",
+      "one_line_profile": "Deep learning predictor for protein-carbohydrate binding interfaces",
+      "detailed_description": "An extension of the PeSTo architecture specifically trained to predict binding interfaces between proteins and carbohydrates using geometric deep learning on structural data.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interface_prediction",
+        "protein-carbohydrate_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/LBM-EPFL/PeSTo-Carbs",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "carbohydrates",
+        "binding-sites",
+        "geometric-deep-learning"
+      ],
+      "id": 33
+    },
+    {
+      "name": "MaSIF",
+      "one_line_profile": "Molecular surface interaction fingerprinting for protein interaction prediction",
+      "detailed_description": "A geometric deep learning framework that analyzes molecular surfaces to predict protein-protein interactions, identify binding pockets, and generate surface fingerprints for docking.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interface_prediction",
+        "docking",
+        "surface_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LPDI-EPFL/masif",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "molecular-surface",
+        "geometric-deep-learning",
+        "ppi"
+      ],
+      "id": 34
+    },
+    {
+      "name": "MaSIF-neosurf",
+      "one_line_profile": "Surface-based protein design tool for ternary complexes",
+      "detailed_description": "A specialized version of MaSIF designed for the prediction and design of protein surfaces in the context of ternary complexes, enabling surface-centric protein engineering.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "protein_design",
+        "complex_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LPDI-EPFL/masif-neosurf",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "protein-design",
+        "ternary-complexes",
+        "surface-fingerprint"
+      ],
+      "id": 35
+    },
+    {
+      "name": "MAPE-PPI",
+      "one_line_profile": "Microenvironment-aware protein embedding for PPI prediction",
+      "detailed_description": "A deep learning framework for predicting protein-protein interactions that incorporates microenvironment-aware embeddings to capture detailed structural and physicochemical context.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "ppi_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LirongWu/MAPE-PPI",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-embedding",
+        "ppi",
+        "deep-learning"
+      ],
+      "id": 36
+    },
+    {
+      "name": "AlphaFastPPi",
+      "one_line_profile": "Accelerated AlphaFold-Multimer pipeline for PPI screening",
+      "detailed_description": "A streamlined pipeline leveraging AlphaFold-Multimer for high-throughput screening of protein-protein interactions, optimized for speed and efficiency in detecting binders.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "ppi_screening",
+        "complex_prediction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MIDIfactory/AlphaFastPPi",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "alphafold",
+        "ppi-screening",
+        "high-throughput"
+      ],
+      "id": 37
+    },
+    {
+      "name": "DockStream",
+      "one_line_profile": "Unified wrapper interface for molecular docking software",
+      "detailed_description": "A flexible platform that wraps various molecular docking backends into a unified interface, designed to facilitate the integration of docking into de novo molecular design workflows.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "workflow_automation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MolecularAI/DockStream",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "molecular-docking",
+        "drug-design",
+        "workflow"
+      ],
+      "id": 38
+    },
+    {
+      "name": "MzDOCK",
+      "one_line_profile": "GUI-based automated pipeline for molecular docking",
+      "detailed_description": "A user-friendly graphical interface pipeline for performing molecular docking tasks, automating the preparation and execution steps for researchers.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Muzatheking12/MzDOCK",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gui",
+        "molecular-docking",
+        "automation"
+      ],
+      "id": 39
+    },
+    {
+      "name": "DeepDock",
+      "one_line_profile": "Geometric deep learning for binding conformation prediction",
+      "detailed_description": "A geometric deep learning approach to predict the binding conformations of bioactive molecules, leveraging graph neural networks to model molecular interactions.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "conformation_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/OptiMaL-PSE-Lab/DeepDock",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "geometric-deep-learning",
+        "binding-conformation",
+        "drug-discovery"
+      ],
+      "id": 40
+    },
+    {
+      "name": "gnina-torch",
+      "one_line_profile": "PyTorch implementation of GNINA scoring function",
+      "detailed_description": "A PyTorch reimplementation of the GNINA molecular docking scoring function, enabling differentiable scoring and integration into deep learning pipelines.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "scoring_function",
+        "docking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RMeli/gnina-torch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "molecular-docking",
+        "scoring-function"
+      ],
+      "id": 41
+    },
+    {
+      "name": "RFDesign",
+      "one_line_profile": "Protein hallucination and inpainting using RoseTTAFold",
+      "detailed_description": "A suite of tools for de novo protein design, including hallucination and inpainting, leveraging the RoseTTAFold architecture to generate novel protein backbones and sequences.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "protein_design",
+        "structure_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RosettaCommons/RFDesign",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "protein-design",
+        "hallucination",
+        "inpainting"
+      ],
+      "id": 42
+    },
+    {
+      "name": "RoseTTAFold",
+      "one_line_profile": "Deep learning-based protein structure prediction",
+      "detailed_description": "A highly accurate deep learning tool for predicting protein structures and multi-chain complexes from sequence information, utilizing a three-track network architecture.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "complex_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RosettaCommons/RoseTTAFold",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structure-prediction",
+        "deep-learning",
+        "protein-folding"
+      ],
+      "id": 43
+    },
+    {
+      "name": "Protein Generator",
+      "one_line_profile": "Joint sequence and structure generation with RoseTTAFold diffusion",
+      "detailed_description": "A diffusion-based generative model for simultaneous generation of protein sequences and structures, expanding the capabilities of RoseTTAFold for protein design tasks.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "protein_design",
+        "generative_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RosettaCommons/protein_generator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-model",
+        "protein-design",
+        "sequence-generation"
+      ],
+      "id": 44
+    },
+    {
+      "name": "LABODOCK",
+      "one_line_profile": "Colab-based platform for molecular docking",
+      "detailed_description": "A cloud-based suite of molecular docking tools running on Google Colab, providing an accessible interface for performing docking simulations without local resource constraints.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "cloud_computing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/RyanZR/labodock",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "google-colab",
+        "molecular-docking",
+        "cloud-platform"
+      ],
+      "id": 45
+    },
+    {
+      "name": "XFEM_Fracture2D",
+      "one_line_profile": "Extended Finite Element Method solver for 2D fracture propagation",
+      "detailed_description": "A MATLAB-based solver for simulating arbitrary multiple crack propagations in 2D linear-elastic solids using the Extended Finite Element Method (XFEM).",
+      "domains": [
+        "Materials Science",
+        "Mechanics"
+      ],
+      "subtask_category": [
+        "fracture_simulation",
+        "finite_element_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/ShelvanLee/XFEM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "xfem",
+        "fracture-mechanics",
+        "simulation"
+      ],
+      "id": 46
+    },
+    {
+      "name": "iLearnPlus",
+      "one_line_profile": "Automated machine-learning platform for nucleic acid and protein analysis",
+      "detailed_description": "A comprehensive machine learning platform with a graphical user interface for feature extraction, analysis, and prediction using nucleic acid and protein sequence data.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "sequence_analysis",
+        "feature_extraction",
+        "automl"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Superzchen/iLearnPlus",
+      "help_website": [
+        "https://ilearnplus.readthedocs.io/"
+      ],
+      "license": null,
+      "tags": [
+        "bioinformatics",
+        "machine-learning",
+        "gui"
+      ],
+      "id": 47
+    },
+    {
+      "name": "AMDock",
+      "one_line_profile": "Assisted molecular docking wrapper for AutoDock4 and Vina",
+      "detailed_description": "A user-friendly graphical tool that streamlines the molecular docking process using AutoDock4 and AutoDock Vina, designed for Linux and macOS environments.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Valdes-Tresanco-MS/AMDock",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "autodock",
+        "gui",
+        "molecular-docking"
+      ],
+      "id": 48
+    },
+    {
+      "name": "AMDock-win",
+      "one_line_profile": "Windows version of AMDock for assisted molecular docking",
+      "detailed_description": "The Windows-compatible version of the AMDock tool, providing a GUI for assisted molecular docking with AutoDock4 and AutoDock Vina.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Valdes-Tresanco-MS/AMDock-win",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "autodock",
+        "gui",
+        "windows"
+      ],
+      "id": 49
+    },
+    {
+      "name": "TopoFormer",
+      "one_line_profile": "Topological transformer for protein-ligand complex interaction prediction",
+      "detailed_description": "A deep learning model utilizing topological data analysis and transformer architecture to predict protein-ligand complex interactions.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "complex_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/WeilabMSU/TopoFormer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "transformer",
+        "topology",
+        "protein-ligand"
+      ],
+      "id": 50
+    },
+    {
+      "name": "VinaLC",
+      "one_line_profile": "Parallel molecular docking program based on AutoDock Vina",
+      "detailed_description": "A high-performance parallel computing version of AutoDock Vina developed by LLNL, designed for large-scale virtual screening on HPC clusters.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "virtual_screening"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/XiaohuaZhangLLNL/VinaLC",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "docking",
+        "mpi",
+        "hpc",
+        "autodock-vina"
+      ],
+      "id": 51
+    },
+    {
+      "name": "Physics-aware-Multiplex-GNN",
+      "one_line_profile": "Physics-aware Multiplex Graph Neural Networks for molecular systems",
+      "detailed_description": "A universal geometric deep learning framework for molecular systems that incorporates physical constraints and multiplex graph representations.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_modeling",
+        "geometric_deep_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/XieResearchGroup/Physics-aware-Multiplex-GNN",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gnn",
+        "geometric-deep-learning",
+        "molecular-systems"
+      ],
+      "id": 52
+    },
+    {
+      "name": "CLAPE",
+      "one_line_profile": "Contrastive learning and pre-trained encoder for binding sites prediction",
+      "detailed_description": "A deep learning tool using contrastive learning and pre-trained encoders to predict protein-ligand binding sites.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "interaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/YAndrewL/CLAPE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "contrastive-learning",
+        "binding-sites",
+        "protein-ligand"
+      ],
+      "id": 53
+    },
+    {
+      "name": "RLMM",
+      "one_line_profile": "Reinforcement learning environment for molecular docking",
+      "detailed_description": "A reinforcement learning environment designed for molecular modeling tasks, specifically focusing on protein-ligand docking.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "reinforcement_learning_env"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aclyde11/RLMM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reinforcement-learning",
+        "docking",
+        "molecular-modeling"
+      ],
+      "id": 54
+    },
+    {
+      "name": "DockCoV2",
+      "one_line_profile": "Molecular docking pipeline against SARS-CoV2",
+      "detailed_description": "A specialized molecular docking pipeline developed by Taiwan AI Labs for screening drug databases against SARS-CoV2 targets.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "virtual_screening"
+      ],
+      "application_level": "workflow",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/ailabstw/DockCoV2",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "sars-cov-2",
+        "docking",
+        "drug-discovery"
+      ],
+      "id": 55
+    },
+    {
+      "name": "MEGADOCK",
+      "one_line_profile": "Ultra-high-performance protein-protein docking software",
+      "detailed_description": "A high-performance protein-protein docking tool designed for heterogeneous supercomputers, utilizing FFT-based algorithms.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "protein_docking",
+        "ppi_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/akiyamalab/MEGADOCK",
+      "help_website": [
+        "https://www.bi.cs.titech.ac.jp/megadock"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "docking",
+        "fft",
+        "hpc",
+        "protein-protein"
+      ],
+      "id": 56
+    },
+    {
+      "name": "QuickBind",
+      "one_line_profile": "Light-weight and interpretable molecular docking model",
+      "detailed_description": "A machine learning model for molecular docking that emphasizes lightweight architecture and interpretability.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "pose_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/aqlaboratory/QuickBind",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "interpretable-ai",
+        "molecular-binding"
+      ],
+      "id": 57
+    },
+    {
+      "name": "MCGLPPI",
+      "one_line_profile": "Geometric representation learning for protein-protein complex property prediction",
+      "detailed_description": "A framework integrating molecular coarse-grained models into geometric representation learning for predicting properties of protein-protein complexes.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "ppi_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/arantir123/MCGLPPI",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "geometric-deep-learning",
+        "coarse-grained",
+        "ppi"
+      ],
+      "id": 58
+    },
+    {
+      "name": "dockit",
+      "one_line_profile": "High-throughput molecular docking wrapper for Vina engines",
+      "detailed_description": "A Python tool to facilitate high-throughput molecular docking with multiple targets and ligands using AutoDock Vina series engines.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "virtual_screening"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aretasg/dockit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "high-throughput",
+        "vina",
+        "docking-wrapper"
+      ],
+      "id": 59
+    },
+    {
+      "name": "aws-rosettafold",
+      "one_line_profile": "Infrastructure template for running RoseTTAFold on AWS Batch",
+      "detailed_description": "A deployment toolkit and Jupyter notebooks for running the RoseTTAFold protein structure prediction model on AWS cloud infrastructure.",
+      "domains": [
+        "S2",
+        "S2-02",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "cloud_deployment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aws-samples/aws-rosettafold",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rosettafold",
+        "aws",
+        "cloud-computing"
+      ],
+      "id": 60
+    },
+    {
+      "name": "Struct2Graph",
+      "one_line_profile": "GCN with mutual attention for PPI prediction",
+      "detailed_description": "A PyTorch implementation of Graph Convolutional Networks with mutual attention mechanisms for predicting protein-protein interactions.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "ppi_prediction",
+        "interaction_classification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/baranwa2/Struct2Graph",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gcn",
+        "attention",
+        "ppi"
+      ],
+      "id": 61
+    },
+    {
+      "name": "metascreener",
+      "one_line_profile": "Integration script for docking and virtual screening",
+      "detailed_description": "A collection of scripts that integrates various docking, virtual screening, similarity search, and molecular modeling programs into a unified workflow.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "virtual_screening",
+        "workflow_integration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bio-hpc/metascreener",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "virtual-screening",
+        "docking",
+        "pipeline"
+      ],
+      "id": 62
+    },
+    {
+      "name": "GraphSite",
+      "one_line_profile": "Protein-DNA binding site prediction using graph transformer",
+      "detailed_description": "A deep learning tool for predicting protein-DNA binding sites using graph transformers and predicted protein structures.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "protein_dna_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/biomed-AI/GraphSite",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "graph-transformer",
+        "dna-binding",
+        "structure-based"
+      ],
+      "id": 63
+    },
+    {
+      "name": "LMetalSite",
+      "one_line_profile": "Alignment-free metal ion-binding site prediction",
+      "detailed_description": "A tool for predicting metal ion-binding sites from protein sequences using pretrained language models and multi-task learning.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "metal_binding"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/biomed-AI/LMetalSite",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "metal-binding",
+        "plm",
+        "sequence-based"
+      ],
+      "id": 64
+    },
+    {
+      "name": "scalar-fields",
+      "one_line_profile": "Equivariant Scalar Fields for Molecular Docking",
+      "detailed_description": "An implementation of Equivariant Scalar Fields for molecular docking using Fast Fourier Transforms, enabling efficient and accurate docking simulations.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "method_development"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bjing2016/scalar-fields",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "equivariant-neural-networks",
+        "docking",
+        "fft"
+      ],
+      "id": 65
+    },
+    {
+      "name": "CarsiDock",
+      "one_line_profile": "Deep learning paradigm for accurate protein-ligand docking",
+      "detailed_description": "A deep learning-based docking tool that leverages large-scale pre-training for accurate protein-ligand docking and screening.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "virtual_screening"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/carbonsilicon-ai/CarsiDock",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "deep-learning",
+        "docking",
+        "pre-training"
+      ],
+      "id": 66
+    },
+    {
+      "name": "MaSIF_colab",
+      "one_line_profile": "dMaSIF implementation for Google Colab",
+      "detailed_description": "A Google Colab wrapper/implementation for dMaSIF (differentiable Molecular Surface Interaction Fingerprinting), facilitating the prediction of protein interaction sites.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interface_prediction",
+        "surface_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/casperg92/MaSIF_colab",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "masif",
+        "colab",
+        "protein-surface"
+      ],
+      "id": 67
+    },
+    {
+      "name": "AutoDock-Vina",
+      "one_line_profile": "Standard open-source molecular docking software",
+      "detailed_description": "One of the most widely used open-source programs for molecular docking, designed for efficient prediction of protein-ligand binding modes.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "virtual_screening"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ccsb-scripps/AutoDock-Vina",
+      "help_website": [
+        "http://vina.scripps.edu/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "docking",
+        "standard-tool",
+        "protein-ligand"
+      ],
+      "id": 68
+    },
+    {
+      "name": "flashfold",
+      "one_line_profile": "Tool for protein and protein complex structure prediction",
+      "detailed_description": "A tool designed for the prediction of protein structures and protein complexes, likely leveraging AlphaFold or similar methodologies.",
+      "domains": [
+        "S2",
+        "S2-02",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "complex_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chayan7/flashfold",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structure-prediction",
+        "complexes",
+        "folding"
+      ],
+      "id": 69
+    },
+    {
+      "name": "CReM-dock",
+      "one_line_profile": "Docking-guided chemical molecule generation tool",
+      "detailed_description": "CReM-dock integrates molecular docking with the CReM library to generate chemically reasonable molecules that fit into a specific protein binding pocket.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_generation",
+        "docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ci-lab-cz/crem-dock",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "drug-design",
+        "generative-model",
+        "docking"
+      ],
+      "id": 70
+    },
+    {
+      "name": "EquiDocker",
+      "one_line_profile": "Dockerized deployment for EquiDock rigid protein docking",
+      "detailed_description": "Provides a containerized environment to run the EquiDock system for rigid body protein-protein docking, simplifying dependency management.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "deployment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/colbyford/EquiDocker",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docker",
+        "protein-docking",
+        "deep-learning"
+      ],
+      "id": 71
+    },
+    {
+      "name": "HADDOCKer",
+      "one_line_profile": "Docker images for the HADDOCK biomolecular docking system",
+      "detailed_description": "Containerized version of HADDOCK (High Ambiguity Driven protein-protein DOCKing) to facilitate the prediction of biomolecular complex structures.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "deployment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/colbyford/HADDOCKer",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "docker",
+        "haddock",
+        "complex-prediction"
+      ],
+      "id": 72
+    },
+    {
+      "name": "RoseTTAFold_Docker",
+      "one_line_profile": "Docker image for RoseTTAFold structure prediction system",
+      "detailed_description": "A containerized deployment solution for the RoseTTAFold system from the UW Baker Lab, enabling easier setup for protein structure and complex prediction.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "deployment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Dockerfile",
+      "repo_url": "https://github.com/colbyford/RoseTTAFold_Docker",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "rosettafold",
+        "docker",
+        "protein-structure"
+      ],
+      "id": 73
+    },
+    {
+      "name": "curcuma",
+      "one_line_profile": "Small molecular docking and conformation filtering tool",
+      "detailed_description": "A simple tool designed for small molecule docking and filtering of molecular conformations.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "conformation_filtering"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/conradhuebler/curcuma",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "molecular-docking",
+        "conformation"
+      ],
+      "id": 74
+    },
+    {
+      "name": "DeepDock",
+      "one_line_profile": "Deep learning framework for molecular docking",
+      "detailed_description": "An experimental package from DeepChem utilizing deep learning techniques for molecular docking tasks.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepchem/deepdock",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "molecular-docking",
+        "deepchem"
+      ],
+      "id": 75
+    },
+    {
+      "name": "parallel-PLANTS",
+      "one_line_profile": "Parallel execution wrapper for PLANTS docking software",
+      "detailed_description": "Scripts to enable parallel molecular docking using the PLANTS (Protein-Ligand ANT System) software.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/discoverdata/parallel-PLANTS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "parallel-computing",
+        "molecular-docking",
+        "plants"
+      ],
+      "id": 76
+    },
+    {
+      "name": "rgl",
+      "one_line_profile": "3D visualization system for R",
+      "detailed_description": "A 3D visualization system based on OpenGL that provides a medium to high-level interface for use in R, widely used for scientific data visualization including molecular structures.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/dmurdoch/rgl",
+      "help_website": [
+        "https://dmurdoch.github.io/rgl/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "visualization",
+        "3d",
+        "r-package"
+      ],
+      "id": 77
+    },
+    {
+      "name": "dockstring",
+      "one_line_profile": "Package for molecular docking with curated benchmarks",
+      "detailed_description": "A Python package that facilitates molecular docking and provides an extensive, highly-curated dataset and realistic benchmark tasks for drug discovery.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dockstring/dockstring",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "drug-discovery",
+        "benchmark",
+        "docking"
+      ],
+      "id": 78
+    },
+    {
+      "name": "Uni-Dock",
+      "one_line_profile": "GPU-accelerated molecular docking program",
+      "detailed_description": "A high-performance, GPU-accelerated molecular docking program developed by DP Technology.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/dptech-corp/Uni-Dock",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gpu-acceleration",
+        "molecular-docking",
+        "autodock-vina"
+      ],
+      "id": 79
+    },
+    {
+      "name": "Uni-Dock2",
+      "one_line_profile": "Next-generation GPU-accelerated molecular docking software",
+      "detailed_description": "The second version of Uni-Dock, offering enhanced GPU acceleration for molecular docking tasks.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/dptech-corp/Uni-Dock2",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gpu",
+        "docking",
+        "drug-discovery"
+      ],
+      "id": 80
+    },
+    {
+      "name": "Uni-Fold",
+      "one_line_profile": "Open-source platform for protein structure prediction",
+      "detailed_description": "A reimplementation and improvement of AlphaFold for protein structure prediction, supporting training and inference.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "complex_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dptech-corp/Uni-Fold",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "alphafold",
+        "protein-folding",
+        "multimer"
+      ],
+      "id": 81
+    },
+    {
+      "name": "MolModa",
+      "one_line_profile": "Browser-based molecular docking environment",
+      "detailed_description": "A web-based tool that allows users to perform molecular docking entirely within their web browsers.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/durrantlab/molmoda",
+      "help_website": [
+        "https://durrantlab.com/molmoda/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "web-tool",
+        "docking",
+        "autodock-vina"
+      ],
+      "id": 82
+    },
+    {
+      "name": "PEPPI",
+      "one_line_profile": "Pipeline for protein-protein interaction prediction",
+      "detailed_description": "A pipeline designed for predicting protein-protein interactions, implemented in Fortran.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interaction_prediction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/ewbell94/PEPPI",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "ppi",
+        "prediction-pipeline"
+      ],
+      "id": 83
+    },
+    {
+      "name": "AFM-LIS",
+      "one_line_profile": "Local Interaction Score calculation from AlphaFold-Multimer",
+      "detailed_description": "Tools to calculate Local Interaction Scores (LIS) from AlphaFold-Multimer predictions to enhance protein-protein interaction discovery.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/flyark/AFM-LIS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "alphafold-multimer",
+        "ppi-scoring",
+        "bioinformatics"
+      ],
+      "id": 84
+    },
+    {
+      "name": "GUIFold",
+      "one_line_profile": "GUI for running local AlphaFold2 jobs",
+      "detailed_description": "A graphical user interface for managing and submitting AlphaFold2 jobs on local installations or queuing systems.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "job_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fmi-basel/GUIFold",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gui",
+        "alphafold",
+        "job-submission"
+      ],
+      "id": 85
+    },
+    {
+      "name": "pipgcn",
+      "one_line_profile": "Protein Interface Prediction using Graph Convolutional Networks",
+      "detailed_description": "A deep learning tool using Graph Convolutional Networks (GCN) for predicting protein-protein interaction interfaces.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interface_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fouticus/pipgcn",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gcn",
+        "interface-prediction",
+        "deep-learning"
+      ],
+      "id": 86
+    },
+    {
+      "name": "alphafold-peptide-receptors",
+      "one_line_profile": "Workflow for identifying peptide-receptor interactions",
+      "detailed_description": "A notebook-based workflow for identifying and modeling peptide-receptor interactions using AlphaFold-Multimer.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "peptide_docking"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/fteufel/alphafold-peptide-receptors",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "peptide",
+        "alphafold",
+        "interaction-screening"
+      ],
+      "id": 87
+    },
+    {
+      "name": "DiffDock",
+      "one_line_profile": "Diffusion generative model for molecular docking",
+      "detailed_description": "State-of-the-art deep learning model for molecular docking that treats docking as a generative modeling problem using diffusion processes.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gcorso/DiffDock",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-model",
+        "molecular-docking",
+        "generative-ai"
+      ],
+      "id": 88
+    },
+    {
+      "name": "gnina",
+      "one_line_profile": "Deep learning framework for molecular docking",
+      "detailed_description": "A molecular docking software that utilizes convolutional neural networks for scoring and pose prediction, built upon Smina/AutoDock Vina.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/gnina/gnina",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cnn",
+        "docking",
+        "structure-based-drug-design"
+      ],
+      "id": 89
+    },
+    {
+      "name": "AlphaFold",
+      "one_line_profile": "Protein structure prediction system",
+      "detailed_description": "The official implementation of AlphaFold 2, an AI system that predicts a protein's 3D structure from its amino acid sequence with high accuracy.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "complex_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/google-deepmind/alphafold",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "protein-structure",
+        "deep-learning",
+        "casp"
+      ],
+      "id": 90
+    },
+    {
+      "name": "haddock-restraints",
+      "one_line_profile": "Restraint generation tool for HADDOCK",
+      "detailed_description": "A utility to generate distance restraints for HADDOCK docking simulations from various data sources.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "docking_preparation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/haddocking/haddock-restraints",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "haddock",
+        "restraints",
+        "pre-processing"
+      ],
+      "id": 91
+    },
+    {
+      "name": "haddock-runner",
+      "one_line_profile": "Runner for large-scale HADDOCK simulations",
+      "detailed_description": "A tool to facilitate running large-scale HADDOCK docking simulations with multiple input molecules and scenarios.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/haddocking/haddock-runner",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "haddock",
+        "high-throughput",
+        "simulation"
+      ],
+      "id": 92
+    },
+    {
+      "name": "haddock-tools",
+      "one_line_profile": "Utility scripts for HADDOCK",
+      "detailed_description": "A collection of useful scripts for preparing input files and analyzing output data for the HADDOCK docking software.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haddocking/haddock-tools",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "haddock",
+        "utilities",
+        "bioinformatics"
+      ],
+      "id": 93
+    },
+    {
+      "name": "HADDOCK3",
+      "one_line_profile": "Modular integrative modeling software",
+      "detailed_description": "The next generation of HADDOCK, redesigned as a modular pipeline for integrative modeling of biomolecular complexes.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "complex_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haddocking/haddock3",
+      "help_website": [
+        "https://www.bonvinlab.org/haddock3/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "integrative-modeling",
+        "docking",
+        "modular"
+      ],
+      "id": 94
+    },
+    {
+      "name": "PRODIGY",
+      "one_line_profile": "Binding affinity prediction for protein-protein complexes from structural data",
+      "detailed_description": "PRODIGY (PROtein binDIng enerGY prediction) is a structure-based predictor of binding affinity in protein-protein complexes. It predicts binding free energy using structural features like intermolecular contacts and non-interacting surface properties.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "ppi_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haddocking/prodigy",
+      "help_website": [
+        "https://wenmr.science.uu.nl/prodigy/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "binding-affinity",
+        "protein-protein-interaction",
+        "structural-biology"
+      ],
+      "id": 95
+    },
+    {
+      "name": "CoPRA",
+      "one_line_profile": "Protein-RNA binding affinity prediction using cross-domain pretrained models",
+      "detailed_description": "CoPRA (Complex-Protein-RNA Affinity) bridges cross-domain pretrained sequence models with complex structures to predict protein-RNA binding affinity. It integrates sequence and structural information to estimate interaction strength.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "protein_rna_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hanrthu/CoPRA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-rna",
+        "binding-affinity",
+        "deep-learning"
+      ],
+      "id": 96
+    },
+    {
+      "name": "DTMOL",
+      "one_line_profile": "Diffusion transformer model for target-based molecular docking",
+      "detailed_description": "DTMOL is a diffusion transformer-based model designed for target-based molecular docking. It leverages generative diffusion processes to predict the binding pose of ligands within protein targets.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "pose_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haotianteng/dtmol",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "diffusion-model",
+        "molecular-docking",
+        "transformer"
+      ],
+      "id": 97
+    },
+    {
+      "name": "DMFF-DTA",
+      "one_line_profile": "Dual modality feature fused neural network for drug-target affinity prediction",
+      "detailed_description": "DMFF-DTA is a deep learning model that integrates binding site information with dual modality feature fusion to predict drug-target binding affinities, aiding in drug discovery processes.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "drug_target_affinity",
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hehh77/DMFF-DTA",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dta",
+        "drug-discovery",
+        "deep-learning"
+      ],
+      "id": 98
+    },
+    {
+      "name": "YuelPocket",
+      "one_line_profile": "Protein-ligand binding site prediction using graph neural networks",
+      "detailed_description": "YuelPocket utilizes graph neural networks to predict protein-ligand binding sites. It processes protein structures as graphs to identify potential pockets where ligands might bind.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "pocket_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hust220/yuel_pocket",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gnn",
+        "binding-site",
+        "protein-ligand"
+      ],
+      "id": 99
+    },
+    {
+      "name": "vina_docking",
+      "one_line_profile": "Python scripts for automating Vina docking against DUDE targets",
+      "detailed_description": "A collection of Python scripts designed to facilitate and automate molecular docking workflows using AutoDock Vina, specifically targeted at the DUD-E dataset protein targets.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "virtual_screening"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jacquesboitreaud/vina_docking",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "autodock-vina",
+        "docking",
+        "automation"
+      ],
+      "id": 100
+    },
+    {
+      "name": "PIDA",
+      "one_line_profile": "Analysis and visualization of protein-protein interaction docking solutions",
+      "detailed_description": "PIDA (Protein Interaction Docking Analysis) is a tool for analyzing multiple PPI docking solutions. It calculates contact regions using mdtraj and provides visualizations via nglview to assess docking quality.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking_analysis",
+        "visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/jharman25/pida",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "docking-analysis",
+        "ppi",
+        "visualization"
+      ],
+      "id": 101
+    },
+    {
+      "name": "DeepComplex",
+      "one_line_profile": "Deep learning prediction of inter-chain contacts in protein complexes",
+      "detailed_description": "DeepComplex is a deep learning method for predicting inter-chain contacts within protein complexes. It aids in reconstructing protein quaternary structures by identifying interface residues.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "contact_prediction",
+        "ppi_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/jianlin-cheng/DeepComplex",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deep-learning",
+        "protein-complex",
+        "contact-map"
+      ],
+      "id": 102
+    },
+    {
+      "name": "MPBind",
+      "one_line_profile": "Transformer-based protein binding site prediction",
+      "detailed_description": "MPBind utilizes transformer architectures to predict protein binding sites from sequence and structural information, focusing on identifying functional residues involved in interactions.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "residue_classification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jianlin-cheng/MPBind",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "transformer",
+        "binding-site",
+        "protein-interaction"
+      ],
+      "id": 103
+    },
+    {
+      "name": "PUResNetV2.0",
+      "one_line_profile": "Deep learning model for ligand binding site prediction",
+      "detailed_description": "PUResNetV2.0 is a deep learning approach for predicting ligand binding sites on protein surfaces, utilizing residual networks to identify potential pockets.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "pocket_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jivankandel/PUResNetV2.0",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ligand-binding",
+        "deep-learning",
+        "resnet"
+      ],
+      "id": 104
+    },
+    {
+      "name": "AlphaCutter",
+      "one_line_profile": "Removal of non-globular regions from predicted protein structures",
+      "detailed_description": "AlphaCutter is a utility script designed to process predicted protein structures (e.g., from AlphaFold) by removing non-globular or disordered regions, improving the quality of structures for downstream docking or analysis.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "structure_processing",
+        "model_refinement"
+      ],
+      "application_level": "utility",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/johnnytam100/AlphaCutter",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "alphafold",
+        "structure-refinement",
+        "protein-structure"
+      ],
+      "id": 105
+    },
+    {
+      "name": "Rapppid",
+      "one_line_profile": "Regularised automatic prediction of protein-protein interactions",
+      "detailed_description": "Rapppid (Regularised Automatic Prediction of Protein-Protein Interactions using Deep Learning) is a computational tool for predicting PPIs using deep neural networks with regularization techniques.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "ppi_prediction",
+        "interaction_classification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jszym/rapppid",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "ppi",
+        "deep-learning",
+        "bioinformatics"
+      ],
+      "id": 106
+    },
+    {
+      "name": "PPLM",
+      "one_line_profile": "Protein-Protein Language Model for contact and interaction prediction",
+      "detailed_description": "PPLM is a Protein-Protein Language Model that employs novel attention mechanisms to enhance the prediction of inter-protein contacts and interactions, leveraging sequence data.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "contact_prediction",
+        "ppi_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/junliu621/PPLM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "language-model",
+        "ppi",
+        "contact-prediction"
+      ],
+      "id": 107
+    },
+    {
+      "name": "AutoParty",
+      "one_line_profile": "ML-guided visual inspection tool for molecular docking",
+      "detailed_description": "AutoParty is a machine learning-guided tool designed to assist in the visual inspection of molecular docking results, helping to prioritize and analyze docking poses.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking_analysis",
+        "visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/keiserlab/autoparty",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-docking",
+        "visualization",
+        "machine-learning"
+      ],
+      "id": 108
+    },
+    {
+      "name": "DiffDock-PP",
+      "one_line_profile": "Rigid protein-protein docking with diffusion models",
+      "detailed_description": "DiffDock-PP is a generative diffusion model for rigid protein-protein docking. It predicts the docked conformation of protein complexes by learning the diffusion process over the group of rigid body transformations.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "protein_docking",
+        "structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ketatam/DiffDock-PP",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "diffusion-model",
+        "protein-docking",
+        "generative-ai"
+      ],
+      "id": 109
+    },
+    {
+      "name": "DeepPurpose",
+      "one_line_profile": "Deep learning toolkit for drug-target interaction and property prediction",
+      "detailed_description": "DeepPurpose is a comprehensive deep learning library for drug discovery tasks, including Drug-Target Interaction (DTI) prediction, drug property prediction, PPI, and protein function prediction.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "dti_prediction",
+        "ppi_prediction",
+        "property_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kexinhuang12345/DeepPurpose",
+      "help_website": [
+        "https://deeppurpose.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "drug-discovery",
+        "dti",
+        "deep-learning"
+      ],
+      "id": 110
+    },
+    {
+      "name": "DOVE",
+      "one_line_profile": "Deep-learning based docking decoy evaluation method",
+      "detailed_description": "DOVE (DOcking decoy eValuation mEthod) is a deep learning-based scoring function for evaluating protein-protein docking models. It distinguishes near-native structures from incorrect decoys using interface features.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "scoring_function",
+        "docking_evaluation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kiharalab/DOVE",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "docking-scoring",
+        "deep-learning",
+        "protein-docking"
+      ],
+      "id": 111
+    },
+    {
+      "name": "EPBD-BERT",
+      "one_line_profile": "Transcription factor binding site prediction using BERT",
+      "detailed_description": "EPBD-BERT applies BERT-based language models to predict transcription factor binding sites on DNA sequences, aiding in the identification of mutations and drug discovery targets.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "dna_protein_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/lanl/EPBD-BERT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bert",
+        "transcription-factor",
+        "binding-site"
+      ],
+      "id": 112
+    },
+    {
+      "name": "LightDock",
+      "one_line_profile": "Protein-protein/peptide/DNA docking framework based on GSO algorithm",
+      "detailed_description": "LightDock is a macromolecular docking framework that uses the Glowworm Swarm Optimization (GSO) algorithm. It supports protein-protein, protein-peptide, and protein-DNA docking with flexibility and scoring.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "complex_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lightdock/lightdock",
+      "help_website": [
+        "https://lightdock.org/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "docking",
+        "swarm-optimization",
+        "protein-dna"
+      ],
+      "id": 113
+    },
+    {
+      "name": "LightDock (Python 2.7)",
+      "one_line_profile": "Legacy Python 2.7 version of the LightDock docking framework",
+      "detailed_description": "This is the legacy Python 2.7 implementation of the LightDock framework for macromolecular docking. Users are generally encouraged to use the Python 3 version.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/lightdock/lightdock-python2.7",
+      "help_website": [
+        "https://lightdock.org/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "docking",
+        "legacy"
+      ],
+      "id": 114
+    },
+    {
+      "name": "AlphaFold-StepByStep",
+      "one_line_profile": "Scripts to run AlphaFold2 and Multimer step-by-step",
+      "detailed_description": "A collection of scripts and instructions to run AlphaFold2 and AlphaFold-Multimer in a step-by-step manner, allowing for greater control over the structure prediction pipeline.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lipan6461188/AlphaFold-StepByStep",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "alphafold",
+        "pipeline",
+        "structure-prediction"
+      ],
+      "id": 115
+    },
+    {
+      "name": "Dockey",
+      "one_line_profile": "Integrated tool for molecular docking and virtual screening",
+      "detailed_description": "Dockey is an integrated platform designed to streamline molecular docking and virtual screening workflows, providing an interface for managing ligands, targets, and docking runs.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "virtual_screening"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lmdu/dockey",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "virtual-screening",
+        "drug-discovery"
+      ],
+      "id": 116
+    },
+    {
+      "name": "DELPHI",
+      "one_line_profile": "Deep learning prediction of protein-protein binding sites",
+      "detailed_description": "DELPHI is a deep learning-based method for predicting protein-protein binding sites from sequence and structural information, aiming to identify interface residues accurately.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "ppi_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lucian-ilie/DELPHI",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deep-learning",
+        "binding-site",
+        "ppi"
+      ],
+      "id": 117
+    },
+    {
+      "name": "DeepLocalProteinDocking",
+      "one_line_profile": "Learning protein representation for rigid-body docking",
+      "detailed_description": "DeepLocalProteinDocking focuses on learning local protein representations to facilitate rigid-body protein docking, improving the sampling and scoring of docked conformations.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "protein_docking",
+        "representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lupoglaz/DeepLocalProteinDocking",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "docking",
+        "deep-learning",
+        "protein-structure"
+      ],
+      "id": 118
+    },
+    {
+      "name": "AutoDock-Notebooks",
+      "one_line_profile": "Cloud-based molecular docking notebooks",
+      "detailed_description": "A collection of Jupyter notebooks designed to run AutoDock-based molecular docking workflows in cloud environments (e.g., Google Colab), making docking accessible without local installation.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "cloud_computing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/mabdelmaksoud53/AutoDock-Notebooks",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "autodock",
+        "jupyter",
+        "cloud-docking"
+      ],
+      "id": 119
+    },
+    {
+      "name": "mBER",
+      "one_line_profile": "Manifold Binder Engineering and Refinement for antibody design",
+      "detailed_description": "mBER (Manifold Binder Engineering and Refinement) enables antibody binder design by leveraging structure templates and sequence conditioning in backprop design through AlphaFold-Multimer.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "antibody_design",
+        "protein_design",
+        "structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/manifoldbio/mber-open",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "antibody-design",
+        "alphafold",
+        "protein-engineering"
+      ],
+      "id": 120
+    },
+    {
+      "name": "MeetDock",
+      "one_line_profile": "Protein-Protein Docking software",
+      "detailed_description": "MeetDock is a software tool for protein-protein docking, designed to predict the complex structure formed by two interacting proteins.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "protein_docking",
+        "complex_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/maxibor/meetdock",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "docking",
+        "ppi",
+        "java"
+      ],
+      "id": 121
+    },
+    {
+      "name": "DockCADD-v2",
+      "one_line_profile": "Automated computational framework for molecular docking",
+      "detailed_description": "DockCADD-v2 is an automated computational framework designed to facilitate molecular docking workflows in Computer-Aided Drug Design (CADD).",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "cadd"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mehdikariim/DockCADD-v2",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "drug-design",
+        "automation"
+      ],
+      "id": 122
+    },
+    {
+      "name": "eFindSite",
+      "one_line_profile": "Ligand binding site prediction and virtual screening tool",
+      "detailed_description": "A structure-based approach for ligand binding site prediction and virtual screening, utilizing meta-threading to identify potential binding pockets.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "virtual_screening"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/michal-brylinski/efindsite",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "binding-site",
+        "ligand",
+        "structure-based"
+      ],
+      "id": 123
+    },
+    {
+      "name": "Plantain",
+      "one_line_profile": "Fast molecular docking with AI pose scoring",
+      "detailed_description": "A molecular docking tool that integrates an AI-based pose scoring function to achieve fast and accurate ligand placement.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "scoring_function"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/molecularmodelinglab/plantain",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "ai-scoring",
+        "drug-discovery"
+      ],
+      "id": 124
+    },
+    {
+      "name": "PIPR (seq_ppi)",
+      "one_line_profile": "Sequence-based protein-protein interaction prediction",
+      "detailed_description": "Implementation of 'Multifaceted Protein-Protein Interaction Prediction Based on Siamese Residual RCNN', using sequence data to predict interactions.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "ppi_prediction",
+        "sequence_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/muhaochen/seq_ppi",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ppi",
+        "deep-learning",
+        "rcnn"
+      ],
+      "id": 125
+    },
+    {
+      "name": "ModTox",
+      "one_line_profile": "MD trajectory analysis platform for toxicity prediction",
+      "detailed_description": "An in silico platform to analyze Molecular Dynamics trajectories using metrics, clustering, and machine learning techniques, specifically for toxicology.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "md_analysis",
+        "toxicity_prediction"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/nostrumbiodiscovery/modtox",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "molecular-dynamics",
+        "toxicology",
+        "clustering"
+      ],
+      "id": 126
+    },
+    {
+      "name": "EquiDock",
+      "one_line_profile": "Geometric deep learning for rigid protein-protein docking",
+      "detailed_description": "A rigid 3D protein-protein docking method using SE(3)-equivariant graph neural networks for fast structure prediction.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "protein_docking",
+        "geometric_deep_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Roff",
+      "repo_url": "https://github.com/octavian-ganea/equidock_public",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "equivariant-gnn",
+        "3d-structure"
+      ],
+      "id": 127
+    },
+    {
+      "name": "SpatialPPIv2",
+      "one_line_profile": "GNN and PLM based PPI prediction",
+      "detailed_description": "Enhances protein-protein interaction prediction by combining graph neural networks with protein language models.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "ppi_prediction",
+        "representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ohuelab/SpatialPPIv2",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gnn",
+        "protein-language-model",
+        "interaction"
+      ],
+      "id": 128
+    },
+    {
+      "name": "DockingPie",
+      "one_line_profile": "Consensus docking plugin for PyMOL",
+      "detailed_description": "A PyMOL plugin designed to facilitate consensus docking analysis, integrating results from multiple docking programs.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/paiardin/DockingPie",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "pymol-plugin",
+        "consensus-docking",
+        "visualization"
+      ],
+      "id": 129
+    },
+    {
+      "name": "AFProfile",
+      "one_line_profile": "AlphaFold-multimer MSA profile denoiser",
+      "detailed_description": "Improves protein complex prediction with AlphaFold-multimer by denoising the Multiple Sequence Alignment (MSA) profile.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "complex_prediction",
+        "msa_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/patrickbryant1/AFProfile",
+      "help_website": [],
+      "license": "CC-BY-4.0",
+      "tags": [
+        "alphafold",
+        "protein-complex",
+        "msa"
+      ],
+      "id": 130
+    },
+    {
+      "name": "SpeedPPI",
+      "one_line_profile": "Rapid PPI network creation from MSAs",
+      "detailed_description": "A deep learning tool for rapid creation of protein-protein interaction networks directly from multiple sequence alignments.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "ppi_prediction",
+        "network_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/patrickbryant1/SpeedPPI",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "ppi-network",
+        "deep-learning",
+        "msa"
+      ],
+      "id": 131
+    },
+    {
+      "name": "PandaDock",
+      "one_line_profile": "Physics-based molecular docking tool",
+      "detailed_description": "A Python-based molecular docking implementation utilizing physics-based scoring.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pritampanda15/PandaDock",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "physics-based",
+        "python"
+      ],
+      "id": 132
+    },
+    {
+      "name": "STRING2GO",
+      "one_line_profile": "Function prediction from PPI network topology",
+      "detailed_description": "Predicts protein function (GO terms) based on the topology of protein-protein interaction networks using deep maxout neural networks.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "function_prediction",
+        "ppi_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/psipred/STRING2GO",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "go-prediction",
+        "network-topology",
+        "deep-learning"
+      ],
+      "id": 133
+    },
+    {
+      "name": "PyPLIF-HIPPOS",
+      "one_line_profile": "Molecular interaction fingerprinting tool",
+      "detailed_description": "A tool for generating molecular interaction fingerprints from docking results of Autodock Vina and PLANTS, aiding in post-docking analysis.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interaction_fingerprinting",
+        "docking_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/radifar/PyPLIF-HIPPOS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "fingerprinting",
+        "docking",
+        "interaction-analysis"
+      ],
+      "id": 134
+    },
+    {
+      "name": "P2Rank",
+      "one_line_profile": "Ligand binding site prediction tool",
+      "detailed_description": "A machine learning-based tool for predicting ligand binding sites from protein structures, known for its speed and accuracy.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Groovy",
+      "repo_url": "https://github.com/rdk/p2rank",
+      "help_website": [
+        "http://prankweb.cz/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "binding-site",
+        "machine-learning",
+        "structure-based"
+      ],
+      "id": 135
+    },
+    {
+      "name": "Pocket-CFDM",
+      "one_line_profile": "Artificial binding pocket generation for diffusion models",
+      "detailed_description": "A tool to augment training datasets for generative diffusion models in molecular docking by creating artificial binding pockets.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "dataset_augmentation",
+        "binding_pocket_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/receptor-ai/pocket-cfdm",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-model",
+        "binding-pocket",
+        "data-augmentation"
+      ],
+      "id": 136
+    },
+    {
+      "name": "BIPSPI",
+      "one_line_profile": "Partner-specific protein binding site prediction",
+      "detailed_description": "Predicts binding sites on a protein surface specifically for a given interaction partner.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rsanchezgarc/BIPSPI",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "binding-site",
+        "partner-specific",
+        "interaction"
+      ],
+      "id": 137
+    },
+    {
+      "name": "gdock",
+      "one_line_profile": "Genetic algorithm-based protein-protein docking",
+      "detailed_description": "A protein-protein docking tool implemented in Rust using genetic algorithms for optimization.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "protein_docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/rvhonorato/gdock",
+      "help_website": [],
+      "license": "0BSD",
+      "tags": [
+        "docking",
+        "genetic-algorithm",
+        "rust"
+      ],
+      "id": 138
+    },
+    {
+      "name": "CryptoSite",
+      "one_line_profile": "Cryptic binding site prediction",
+      "detailed_description": "A library for identifying cryptic binding sites in proteins, which are sites that only become accessible upon ligand binding.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/salilab/cryptosite",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "cryptic-sites",
+        "binding-site",
+        "drug-discovery"
+      ],
+      "id": 139
+    },
+    {
+      "name": "D-SCRIPT",
+      "one_line_profile": "Structure-aware sequence-based PPI prediction",
+      "detailed_description": "An interpretable deep learning model that predicts protein-protein interactions from sequences while implicitly modeling structural contacts.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "ppi_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/samsledje/D-SCRIPT",
+      "help_website": [
+        "http://dscript.csail.mit.edu/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "ppi",
+        "deep-learning",
+        "sequence-based"
+      ],
+      "id": 140
+    },
+    {
+      "name": "Metal Binding Prediction",
+      "one_line_profile": "Sequence-based metal binding site prediction",
+      "detailed_description": "Methods to predict metal ion binding sites in proteins using amino acid sequence data.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/sbl-sdsc/metal-binding-prediction",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "metal-binding",
+        "sequence-analysis"
+      ],
+      "id": 141
+    },
+    {
+      "name": "PPIprediction",
+      "one_line_profile": "3D Zernike descriptor based PPI interface prediction",
+      "detailed_description": "Software utilizing 3D Zernike descriptors and SVMs for predicting protein-protein interfaces.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "ppi_prediction",
+        "interface_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/sdaberdaku/PPIprediction",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "zernike-descriptors",
+        "svm",
+        "interface"
+      ],
+      "id": 142
+    },
+    {
+      "name": "Bichrom",
+      "one_line_profile": "Transcription factor binding site prediction",
+      "detailed_description": "An interpretable bimodal neural network for predicting transcription factor binding sites from DNA sequence and chromatin accessibility data.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/seqcode/Bichrom",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "transcription-factor",
+        "binding-site",
+        "deep-learning"
+      ],
+      "id": 143
+    },
+    {
+      "name": "ATTRACT",
+      "one_line_profile": "Macromolecular docking program suite",
+      "detailed_description": "A comprehensive suite for docking protein-protein, protein-nucleic acid, and protein-peptide complexes.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "macromolecular_docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sjdv1982/attract",
+      "help_website": [
+        "http://www.attract.ph.tum.de/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "docking",
+        "macromolecule",
+        "complex-structure"
+      ],
+      "id": 144
+    },
+    {
+      "name": "GGNN_Meets_PLM",
+      "one_line_profile": "Geometric DL with Protein Language Models",
+      "detailed_description": "Integration of pre-trained protein language models into geometric deep learning networks for protein tasks.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "protein_representation_learning",
+        "structure_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/smiles724/GGNN_Meets_PLM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "geometric-deep-learning",
+        "protein-language-model",
+        "gnn"
+      ],
+      "id": 145
+    },
+    {
+      "name": "DeepSurf",
+      "one_line_profile": "Surface-based ligand binding site prediction",
+      "detailed_description": "A deep learning approach that uses protein surface representations to predict ligand binding sites.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stemylonas/DeepSurf",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "surface-based",
+        "binding-site",
+        "deep-learning"
+      ],
+      "id": 146
+    },
+    {
+      "name": "DeepPBS",
+      "one_line_profile": "Geometric deep learning model for predicting protein–DNA binding specificity",
+      "detailed_description": "Geometric deep learning of protein–DNA binding specificity. It predicts the binding specificity of proteins to DNA sequences using geometric deep learning techniques.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "protein_dna_binding"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/timkartar/DeepPBS",
+      "help_website": [
+        "https://github.com/timkartar/DeepPBS"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "deep-learning",
+        "protein-dna",
+        "geometric-deep-learning",
+        "binding-specificity"
+      ],
+      "id": 147
+    },
+    {
+      "name": "GrASP",
+      "one_line_profile": "Graph Attention Site Prediction for identifying druggable binding sites",
+      "detailed_description": "Graph Attention Site Prediction (GrASP): Identifying Druggable Binding Sites Using Graph Neural Networks with Attention. It leverages graph neural networks to predict potential binding sites on protein surfaces.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "druggability"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tiwarylab/GrASP",
+      "help_website": [
+        "https://github.com/tiwarylab/GrASP"
+      ],
+      "license": "MIT",
+      "tags": [
+        "graph-neural-networks",
+        "binding-sites",
+        "drug-discovery",
+        "attention-mechanism"
+      ],
+      "id": 148
+    },
+    {
+      "name": "HDXRank",
+      "one_line_profile": "Tool to rank protein-protein complex predictions using HDX-MS restraints",
+      "detailed_description": "Applies HDX-MS (Hydrogen-Deuterium Exchange Mass Spectrometry) restraints to rank protein-protein complex predictions, aiding in the structural determination of complexes.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "complex_ranking",
+        "hdx_ms",
+        "structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tsudalab/HDXRank",
+      "help_website": [
+        "https://github.com/tsudalab/HDXRank"
+      ],
+      "license": "MIT",
+      "tags": [
+        "hdx-ms",
+        "protein-protein-interaction",
+        "ranking",
+        "mass-spectrometry"
+      ],
+      "id": 149
+    },
+    {
+      "name": "PhosIDN",
+      "one_line_profile": "Deep learning tool for protein phosphorylation site prediction",
+      "detailed_description": "PhosIDN: an integrated deep neural network for improving protein phosphorylation site prediction by combining sequence and protein–protein interaction information.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "site_prediction",
+        "phosphorylation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ustchangyuanyang/PhosIDN",
+      "help_website": [
+        "https://github.com/ustchangyuanyang/PhosIDN"
+      ],
+      "license": null,
+      "tags": [
+        "deep-learning",
+        "phosphorylation",
+        "ptm",
+        "sequence-analysis"
+      ],
+      "id": 150
+    },
+    {
+      "name": "RoseTTAFold2NA",
+      "one_line_profile": "Protein/nucleic acid complex structure prediction tool",
+      "detailed_description": "RoseTTAFold2 protein/nucleic acid complex prediction. It extends RoseTTAFold to predict structures of complexes involving proteins and nucleic acids (DNA/RNA).",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "complex_prediction",
+        "protein_nucleic_acid"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uw-ipd/RoseTTAFold2NA",
+      "help_website": [
+        "https://github.com/uw-ipd/RoseTTAFold2NA"
+      ],
+      "license": "MIT",
+      "tags": [
+        "rosettafold",
+        "structure-prediction",
+        "protein-dna",
+        "protein-rna"
+      ],
+      "id": 151
+    },
+    {
+      "name": "SDOCK2.0",
+      "one_line_profile": "FFT-based global protein-protein docking program",
+      "detailed_description": "Fast Fourier transform (FFT) based global protein-protein docking program incorporates stepwise force field potentials in the scoring function for accurate complex modeling.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "protein_protein_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/victorPKU/SDOCK2.0",
+      "help_website": [
+        "https://github.com/victorPKU/SDOCK2.0"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "docking",
+        "fft",
+        "protein-complex",
+        "scoring-function"
+      ],
+      "id": 152
+    },
+    {
+      "name": "ProQDock",
+      "one_line_profile": "Protein-Protein docking scoring program using SVR",
+      "detailed_description": "ProQDock is a Protein-Protein docking scoring program that uses high level coordinate driven features compiled and trained by a Support Vector Regression algorithm.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "scoring",
+        "docking",
+        "quality_assessment"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/wallnerlab/ProQDock",
+      "help_website": [
+        "https://github.com/wallnerlab/ProQDock"
+      ],
+      "license": null,
+      "tags": [
+        "docking-scoring",
+        "svr",
+        "protein-protein-interaction",
+        "quality-estimation"
+      ],
+      "id": 153
+    },
+    {
+      "name": "SPOC",
+      "one_line_profile": "Tool for scoring binary AlphaFold-Multimer predictions",
+      "detailed_description": "Code repository for the SPOC tool for scoring binary AF-M (AlphaFold-Multimer) predictions, aiding in the identification of high-confidence interactions.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "scoring",
+        "alphafold_analysis",
+        "interaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/walterlab-HMS/SPOC",
+      "help_website": [
+        "https://github.com/walterlab-HMS/SPOC"
+      ],
+      "license": "MIT",
+      "tags": [
+        "alphafold",
+        "scoring",
+        "protein-interaction",
+        "multimer"
+      ],
+      "id": 154
+    },
+    {
+      "name": "libzdock",
+      "one_line_profile": "Library for ZDOCK predictions and PDB structure handling",
+      "detailed_description": "ZDOCK predictions and PDB structures library in C++ and Python. Provides programmatic access to ZDOCK docking functionalities.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "structure_manipulation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/weng-lab/libzdock",
+      "help_website": [
+        "https://github.com/weng-lab/libzdock"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "zdock",
+        "docking",
+        "pdb",
+        "library"
+      ],
+      "id": 155
+    },
+    {
+      "name": "EBMDock",
+      "one_line_profile": "Neural probabilistic protein-protein docking via energy-based models",
+      "detailed_description": "Official implementation for the paper 'EBMDOCK: Neural Probabilistic Protein-Protein Docking via a Differentiable Energy-Based Model' (ICLR 2024).",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "generative_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Roff",
+      "repo_url": "https://github.com/wuhuaijin/EBMDock",
+      "help_website": [
+        "https://github.com/wuhuaijin/EBMDock"
+      ],
+      "license": null,
+      "tags": [
+        "energy-based-model",
+        "docking",
+        "deep-learning",
+        "probabilistic-modeling"
+      ],
+      "id": 156
+    },
+    {
+      "name": "GRASP-JAX",
+      "one_line_profile": "Protein complex structure prediction using experimental restraints (JAX)",
+      "detailed_description": "A tool for accurate protein complex structure prediction using diverse experimental restraints. This is the JAX implementation of the GRASP method.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "complex_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xiergo/GRASP-JAX",
+      "help_website": [
+        "https://github.com/xiergo/GRASP-JAX"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "jax",
+        "structure-prediction",
+        "experimental-restraints",
+        "protein-complex"
+      ],
+      "id": 157
+    },
+    {
+      "name": "MARPPI",
+      "one_line_profile": "Multi-scale residual network for PPI prediction",
+      "detailed_description": "MARPPI: Boosting prediction of protein−protein interactions with multi-scale architecture residual network.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "ppi"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xueleecs/MARPPI",
+      "help_website": [
+        "https://github.com/xueleecs/MARPPI"
+      ],
+      "license": null,
+      "tags": [
+        "ppi",
+        "deep-learning",
+        "residual-network",
+        "interaction-prediction"
+      ],
+      "id": 158
+    },
+    {
+      "name": "iDeep",
+      "one_line_profile": "Integrated prediction of RNA-protein binding sites",
+      "detailed_description": "iDeep: integrated prediction of RNA-protein binding sites using deep learning. It combines multiple data sources to predict RBP binding sites.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "rna_protein_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/xypan1232/iDeep",
+      "help_website": [
+        "https://github.com/xypan1232/iDeep"
+      ],
+      "license": null,
+      "tags": [
+        "rna-protein",
+        "binding-sites",
+        "deep-learning",
+        "rbp"
+      ],
+      "id": 159
+    },
+    {
+      "name": "ElliDock",
+      "one_line_profile": "Rigid protein-protein docking via equivariant elliptic-paraboloid interface prediction",
+      "detailed_description": "Implementation of 'Rigid protein-protein docking via equivariant elliptic-paraboloid interface prediction' (ICLR 2024). A geometric deep learning approach to docking.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "interface_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/yaledeus/ElliDock",
+      "help_website": [
+        "https://github.com/yaledeus/ElliDock"
+      ],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "equivariant-neural-network",
+        "geometric-deep-learning",
+        "interface-prediction"
+      ],
+      "id": 160
+    },
+    {
+      "name": "FragXsiteDTI",
+      "one_line_profile": "Drug Target Interaction Prediction using binding sites and fragments",
+      "detailed_description": "Drug Target Interaction Prediction Using Protein Binding Sites And Drug Fragments. A deep learning model for DTI prediction.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "drug_target_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yazdanimehdi/FragXsiteDTI",
+      "help_website": [
+        "https://github.com/yazdanimehdi/FragXsiteDTI"
+      ],
+      "license": null,
+      "tags": [
+        "dti",
+        "drug-discovery",
+        "binding-sites",
+        "deep-learning"
+      ],
+      "id": 161
+    },
+    {
+      "name": "DeepCSeqSite",
+      "one_line_profile": "Protein-ligand binding sites prediction toolkit",
+      "detailed_description": "Protein-ligand binding sites prediction toolkits using deep learning methods based on sequence information.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "protein_ligand"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yfCuiFaith/DeepCSeqSite",
+      "help_website": [
+        "https://github.com/yfCuiFaith/DeepCSeqSite"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "binding-sites",
+        "protein-ligand",
+        "deep-learning",
+        "sequence-based"
+      ],
+      "id": 162
+    },
+    {
+      "name": "PepPCBench",
+      "one_line_profile": "Benchmark for Protein-Peptide Complex Structure Prediction with AlphaFold3",
+      "detailed_description": "Comprehensive Benchmark for Protein-Peptide Complex Structure Prediction with AlphaFold3. Provides datasets and evaluation protocols for peptide-protein docking.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "structure_prediction",
+        "peptide_protein"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/zhaisilong/PepPCBench",
+      "help_website": [
+        "https://github.com/zhaisilong/PepPCBench"
+      ],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "alphafold3",
+        "peptide-protein",
+        "complex-prediction"
+      ],
+      "id": 163
+    },
+    {
+      "name": "GeoBind",
+      "one_line_profile": "Geometric deep learning for nucleic acid binding interface segmentation",
+      "detailed_description": "Segmentation of nucleic acid binding interface on protein surface with geometric deep learning. Identifies RNA/DNA binding sites on protein structures.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "interface_prediction",
+        "nucleic_acid_binding"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zpliulab/GeoBind",
+      "help_website": [
+        "https://github.com/zpliulab/GeoBind"
+      ],
+      "license": "MIT",
+      "tags": [
+        "geometric-deep-learning",
+        "binding-interface",
+        "rna-binding",
+        "dna-binding"
+      ],
+      "id": 164
+    },
+    {
+      "name": "NeuralPLexer",
+      "one_line_profile": "State-specific protein-ligand complex structure prediction model",
+      "detailed_description": "NeuralPLexer: State-specific protein-ligand complex structure prediction with a multi-scale deep generative model. Capable of predicting conformational changes upon ligand binding.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "protein_ligand_complex"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/zrqiao/NeuralPLexer",
+      "help_website": [
+        "https://github.com/zrqiao/NeuralPLexer"
+      ],
+      "license": "BSD-3-Clause-Clear",
+      "tags": [
+        "generative-model",
+        "protein-ligand",
+        "structure-prediction",
+        "conformational-change"
+      ],
+      "id": 165
+    }
+  ]
+}

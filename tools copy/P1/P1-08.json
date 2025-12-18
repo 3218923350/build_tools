@@ -1,0 +1,5907 @@
+{
+  "generated_at": "2025-12-16T04:46:16.767094+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "P1",
+      "leaf_cluster_name": "物理仿真-CFD 求解器与湍流生态",
+      "domain": "Physics/CFD",
+      "typical_objects": "meshes/fields",
+      "task_chain": "网格→求解→模型→后处理→验证→UQ",
+      "tool_form": "solver + pre/post + UQ"
+    },
+    "unit": {
+      "unit_id": "P1-08",
+      "unit_name": "HPC与工程化（GPU/容器/工作流）",
+      "target_scale": "150–350",
+      "coverage_tools": "MPI/CUDA、build、containers"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] Trilinos",
+        "[GH] AMReX",
+        "[GH] PETSc",
+        "[GH] Apptainer",
+        "[GH] Spack",
+        "[GH] Palabos",
+        "[GH] Nek5000",
+        "[GH] PyFR",
+        "[GH] SU2",
+        "[GH] OpenFOAM",
+        "[GH] CFD MPI",
+        "[GH] CFD GPU",
+        "[GH] CFD CUDA",
+        "[GH] CFD OpenMP",
+        "[GH] Lattice Boltzmann GPU",
+        "[GH] Navier-Stokes parallel",
+        "[GH] high performance computing CFD",
+        "[GH] CFD container",
+        "[GH] Singularity CFD",
+        "[GH] Spack package CFD",
+        "[GH] CFD benchmark",
+        "[GH] parallel finite volume",
+        "[GH] OpenACC CFD",
+        "[GH] domain decomposition method",
+        "[GH] CFD workflow automation",
+        "[WEB] GPU accelerated CFD solver github",
+        "[WEB] MPI parallel CFD framework github",
+        "[WEB] high performance computing CFD tools github",
+        "[WEB] CFD docker singularity container github",
+        "[WEB] Spack packages for CFD github",
+        "[WEB] Lattice Boltzmann GPU implementation github"
+      ],
+      "total_candidates": 1032,
+      "tool_candidates": 524,
+      "final_tools": 235
+    }
+  },
+  "tools": [
+    {
+      "name": "LB-t",
+      "one_line_profile": "Multi-threaded object-oriented CFD code using Lattice Boltzmann Method",
+      "detailed_description": "A multi-threaded object-oriented computational fluid dynamics (CFD) solver for three-dimensional incompressible fluid flow. It utilizes the incompressible lattice-Boltzmann method (LBM) on regular grids, supporting general lattices (D2Q9, D3Q15, etc.) and is implemented in C++17 with OpenMP parallelization.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "fluid_dynamics_simulation",
+        "lbm_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/2b-t/LB-t",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cfd",
+        "lbm",
+        "openmp",
+        "fluid-dynamics"
+      ],
+      "id": 1
+    },
+    {
+      "name": "ACCESS-OM2",
+      "one_line_profile": "Global coupled ocean-sea ice model configuration for climate research",
+      "detailed_description": "The ACCESS-OM2 is a global coupled ocean-sea ice model developed by the Australian Community Climate and Earth System Simulator (ACCESS). It serves as a key component for climate modeling and oceanographic research.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "ocean_modeling",
+        "climate_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/ACCESS-NRI/ACCESS-OM2",
+      "help_website": [
+        "https://access-om2.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "ocean-model",
+        "climate-science",
+        "sea-ice"
+      ],
+      "id": 2
+    },
+    {
+      "name": "Castro",
+      "one_line_profile": "Adaptive mesh compressible astrophysics radiation-hydrodynamics solver",
+      "detailed_description": "Castro is an adaptive mesh refinement (AMR) code for astrophysical compressible hydrodynamics, radiation-hydrodynamics, and magneto-hydrodynamics simulations. It supports massively parallel architectures (CPU and GPU) using the AMReX framework.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "astrophysics_simulation",
+        "hydrodynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Astro/Castro",
+      "help_website": [
+        "https://amrex-astro.github.io/Castro/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "astrophysics",
+        "amr",
+        "hydrodynamics",
+        "gpu"
+      ],
+      "id": 3
+    },
+    {
+      "name": "MAESTROeX",
+      "one_line_profile": "Low Mach number stellar hydrodynamics simulation code",
+      "detailed_description": "MAESTROeX is a C++ code based on AMReX for simulating low Mach number stellar hydrodynamics. It is designed for modeling long-time evolution of astrophysical flows where sound waves can be filtered out.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "stellar_hydrodynamics",
+        "astrophysics_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Astro/MAESTROeX",
+      "help_website": [
+        "https://amrex-astro.github.io/MAESTROeX/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "stellar-evolution",
+        "hydrodynamics",
+        "low-mach"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Microphysics",
+      "one_line_profile": "Astrophysical microphysics routines for AMReX-based codes",
+      "detailed_description": "A collection of common astrophysical microphysics routines (nuclear networks, equations of state, opacity) designed with interfaces for integration into various AMReX-based simulation codes like Castro and MAESTROeX.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "physics_modeling",
+        "microphysics"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Astro/Microphysics",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "astrophysics",
+        "nuclear-physics",
+        "eos"
+      ],
+      "id": 5
+    },
+    {
+      "name": "Nyx",
+      "one_line_profile": "Adaptive mesh N-body hydro cosmological simulation code",
+      "detailed_description": "Nyx is a massively parallel, adaptive mesh refinement (AMR) code for cosmological simulations. It solves equations for N-body dark matter and compressible hydrodynamics of baryonic gas to model the evolution of the universe.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "cosmological_simulation",
+        "n-body_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Astro/Nyx",
+      "help_website": [
+        "https://amrex-astro.github.io/Nyx/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cosmology",
+        "n-body",
+        "hydrodynamics",
+        "amr"
+      ],
+      "id": 6
+    },
+    {
+      "name": "Amrvis",
+      "one_line_profile": "Visualization package for AMReX-based simulation data",
+      "detailed_description": "Amrvis is a specialized visualization tool designed to read, display, and analyze output and profiling data from scientific simulation codes built on the AMReX framework.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "scientific_visualization",
+        "data_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Codes/Amrvis",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "visualization",
+        "amr",
+        "cfd-post-processing"
+      ],
+      "id": 7
+    },
+    {
+      "name": "AMReX",
+      "one_line_profile": "Software framework for block-structured adaptive mesh refinement",
+      "detailed_description": "AMReX is a software framework designed for building massively parallel, block-structured adaptive mesh refinement (AMR) applications. It supports solving systems of partial differential equations on hierarchical grids with GPU acceleration.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation_framework",
+        "amr_library"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Codes/amrex",
+      "help_website": [
+        "https://amrex-codes.github.io/amrex/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "amr",
+        "hpc",
+        "framework",
+        "pde-solver"
+      ],
+      "id": 8
+    },
+    {
+      "name": "pyamrex",
+      "one_line_profile": "GPU-enabled zero-copy Python bindings for AMReX",
+      "detailed_description": "pyamrex provides Python bindings for the AMReX framework, enabling zero-copy data exchange between C++ AMReX kernels and Python environments. It facilitates the integration of AI/ML workflows with high-performance AMR simulations.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation_interface",
+        "scientific_computing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AMReX-Codes/pyamrex",
+      "help_website": [
+        "https://amrex-codes.github.io/pyamrex/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "python-bindings",
+        "amr",
+        "gpu",
+        "ai4s"
+      ],
+      "id": 9
+    },
+    {
+      "name": "PeleAnalysis",
+      "one_line_profile": "Processing tools for reacting flow simulations with AMReX",
+      "detailed_description": "A collection of post-processing and analysis tools specifically designed for reacting flow simulations generated by AMReX-based CFD codes (Pele suite).",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "flow_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Combustion/PeleAnalysis",
+      "help_website": [
+        "https://peleanalysis.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "combustion",
+        "cfd-analysis",
+        "post-processing"
+      ],
+      "id": 10
+    },
+    {
+      "name": "PeleC",
+      "one_line_profile": "AMR code for compressible reacting flow simulations",
+      "detailed_description": "PeleC is an adaptive mesh refinement (AMR) solver for compressible reacting flows. It is part of the Pele suite and is designed for high-performance combustion simulations on modern supercomputers.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "combustion_simulation",
+        "reacting_flow"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Combustion/PeleC",
+      "help_website": [
+        "https://amrex-combustion.github.io/PeleC/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "combustion",
+        "compressible-flow",
+        "amr"
+      ],
+      "id": 11
+    },
+    {
+      "name": "PeleLMeX",
+      "one_line_profile": "Adaptive mesh solver for low Mach number reacting flows",
+      "detailed_description": "PeleLMeX is an adaptive mesh hydrodynamics simulation code for low Mach number reacting flows. It is an evolution of PeleLM, offering improved performance and scalability for combustion research.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "combustion_simulation",
+        "low_mach_flow"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Combustion/PeleLMeX",
+      "help_website": [
+        "https://amrex-combustion.github.io/PeleLMeX/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "combustion",
+        "low-mach",
+        "amr"
+      ],
+      "id": 12
+    },
+    {
+      "name": "PeleMP",
+      "one_line_profile": "Multiphysics models for the Pele combustion suite",
+      "detailed_description": "PeleMP provides multiphysics models (such as spray and soot models) for use with the Pele suite of combustion codes (PeleC, PeleLMeX).",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "physics_modeling",
+        "multiphysics"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Combustion/PeleMP",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "multiphysics",
+        "combustion",
+        "spray-modeling"
+      ],
+      "id": 13
+    },
+    {
+      "name": "PelePhysics",
+      "one_line_profile": "Physics databases and routines for combustion simulations",
+      "detailed_description": "PelePhysics is a library containing physics databases (thermodynamics, transport, chemistry) and implementation code shared across the Pele suite of combustion solvers.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "physics_modeling",
+        "chemistry_kinetics"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Combustion/PelePhysics",
+      "help_website": [
+        "https://amrex-combustion.github.io/PelePhysics/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "combustion",
+        "chemistry",
+        "thermodynamics"
+      ],
+      "id": 14
+    },
+    {
+      "name": "FHDeX",
+      "one_line_profile": "Stochastic hybrid models and algorithms for fluctuating hydrodynamics",
+      "detailed_description": "FHDeX provides AMReX-enabled code libraries for stochastic hybrid models and algorithms for fluids, specifically focusing on fluctuating hydrodynamics.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "fluid_dynamics_simulation",
+        "stochastic_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-FHD/FHDeX",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "fluctuating-hydrodynamics",
+        "stochastic-methods",
+        "amr"
+      ],
+      "id": 15
+    },
+    {
+      "name": "LBMeX",
+      "one_line_profile": "Lattice Boltzmann methods implementation on AMReX",
+      "detailed_description": "LBMeX implements Lattice Boltzmann methods (LBM) using the AMReX software framework, enabling scalable parallel simulations of fluid flows on structured grids.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "fluid_dynamics_simulation",
+        "lbm_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-FHD/LBMeX",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "lbm",
+        "amr",
+        "fluid-dynamics"
+      ],
+      "id": 16
+    },
+    {
+      "name": "AMReX-Hydro",
+      "one_line_profile": "Hydrodynamic routines for AMReX-based applications",
+      "detailed_description": "AMReX-Hydro is a collection of hydrodynamic routines and solvers built on the AMReX framework, providing reusable components for fluid dynamics simulations.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "fluid_dynamics_simulation",
+        "hydrodynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Fluids/AMReX-Hydro",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "hydrodynamics",
+        "amr",
+        "cfd"
+      ],
+      "id": 17
+    },
+    {
+      "name": "IAMR",
+      "one_line_profile": "Parallel AMR solver for variable-density incompressible Navier-Stokes",
+      "detailed_description": "IAMR is a parallel, adaptive mesh refinement (AMR) code that solves the variable-density incompressible Navier-Stokes equations, suitable for modeling diverse fluid flow problems.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "fluid_dynamics_simulation",
+        "incompressible_flow"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Fluids/IAMR",
+      "help_website": [
+        "https://amrex-fluids.github.io/IAMR/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "navier-stokes",
+        "incompressible",
+        "amr"
+      ],
+      "id": 18
+    },
+    {
+      "name": "incflo",
+      "one_line_profile": "Incompressible Navier-Stokes solver for complex geometries",
+      "detailed_description": "incflo is an incompressible Navier-Stokes solver built on AMReX, designed to handle complex geometries and embedded boundaries for fluid flow simulations.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "fluid_dynamics_simulation",
+        "incompressible_flow"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Fluids/incflo",
+      "help_website": [
+        "https://amrex-fluids.github.io/incflo/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "navier-stokes",
+        "complex-geometry",
+        "embedded-boundary"
+      ],
+      "id": 19
+    },
+    {
+      "name": "ELEQTRONeX",
+      "one_line_profile": "Electrostatic-Quantum Transport framework for modeling FETs",
+      "detailed_description": "ELEQTRONeX is a simulation framework based on the nonequilibrium Green's function (NEGF) method for modeling electrostatic-quantum transport in field-effect transistors (FETs).",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "device_simulation",
+        "quantum_transport"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Microelectronics/ELEQTRONeX",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "microelectronics",
+        "quantum-transport",
+        "negf"
+      ],
+      "id": 20
+    },
+    {
+      "name": "FerroX",
+      "one_line_profile": "3D phase-field simulation framework for ferroelectric materials",
+      "detailed_description": "FerroX is a massively parallel, 3D phase-field simulation framework designed for modeling ferroelectric materials and scalable logic devices using AMReX.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "materials_modeling",
+        "phase_field_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Microelectronics/FerroX",
+      "help_website": [
+        "https://amrex-microelectronics.github.io/FerroX/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "ferroelectrics",
+        "phase-field",
+        "microelectronics"
+      ],
+      "id": 21
+    },
+    {
+      "name": "artemis",
+      "one_line_profile": "Adaptive mesh electrodynamics solver for quantum materials",
+      "detailed_description": "ARTEMIS couples Maxwell's equations solvers with classical equations for quantum material behavior (e.g., micromagnetics, superconductivity) to quantify the performance of next-generation microelectronics.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "electrodynamics_simulation",
+        "materials_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AMReX-Microelectronics/artemis",
+      "help_website": [
+        "https://amrex-microelectronics.github.io/artemis/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "electrodynamics",
+        "quantum-materials",
+        "microelectronics"
+      ],
+      "id": 22
+    },
+    {
+      "name": "DLBFoam",
+      "one_line_profile": "Dynamic load balancing library for OpenFOAM",
+      "detailed_description": "DLBFoam is an open-source library that provides dynamic load balancing capabilities for fast reacting flow simulations in OpenFOAM, improving parallel efficiency in cases with localized computational loads.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "hpc_optimization",
+        "load_balancing"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Aalto-CFD/DLBFoam",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "load-balancing",
+        "hpc"
+      ],
+      "id": 23
+    },
+    {
+      "name": "flowtorch",
+      "one_line_profile": "Python library for analysis and reduced-order modeling of fluid flows",
+      "detailed_description": "flowTorch is a Python library designed for the analysis and reduced-order modeling (ROM) of fluid flow data. It leverages PyTorch to integrate machine learning techniques with fluid dynamics analysis.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "flow_analysis",
+        "reduced_order_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AndreWeiner/flowtorch",
+      "help_website": [
+        "https://flowtorch.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "rom",
+        "fluid-dynamics",
+        "pytorch",
+        "machine-learning"
+      ],
+      "id": 24
+    },
+    {
+      "name": "Omega3D",
+      "one_line_profile": "GPU-accelerated 3D vortex methods solver with GUI",
+      "detailed_description": "Omega3D is a GPU-accelerated computational fluid dynamics solver based on 3D vortex methods. It includes a graphical user interface (GUI) for ease of use and is developed by Applied Scientific Research.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "fluid_dynamics_simulation",
+        "vortex_method"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Applied-Scientific-Research/Omega3D",
+      "help_website": [
+        "https://omega3d.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "vortex-method",
+        "gpu",
+        "cfd",
+        "gui"
+      ],
+      "id": 25
+    },
+    {
+      "name": "ImpactX",
+      "one_line_profile": "High-performance beam dynamics modeling code",
+      "detailed_description": "ImpactX is a code for the high-performance modeling of beam dynamics in particle accelerators. It accounts for collective effects and is designed to run efficiently on modern supercomputing architectures.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "beam_dynamics",
+        "particle_accelerator_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/BLAST-ImpactX/impactx",
+      "help_website": [
+        "https://impactx.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "particle-accelerator",
+        "beam-dynamics",
+        "hpc"
+      ],
+      "id": 26
+    },
+    {
+      "name": "WarpX",
+      "one_line_profile": "Advanced electromagnetic Particle-In-Cell code",
+      "detailed_description": "WarpX is an advanced electromagnetic Particle-In-Cell (PIC) code designed for simulating laser-plasma interactions and particle accelerators on exascale supercomputers.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "plasma_simulation",
+        "particle_in_cell"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/BLAST-WarpX/warpx",
+      "help_website": [
+        "https://warpx.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "pic",
+        "plasma-physics",
+        "exascale"
+      ],
+      "id": 27
+    },
+    {
+      "name": "HPK",
+      "one_line_profile": "Tool for running Kubernetes applications on HPC Slurm clusters",
+      "detailed_description": "HPK (High Performance Kubernetes) allows users to run Kubernetes-native applications within HPC environments by translating deployments to Slurm jobs and Singularity/Apptainer containers, bridging cloud-native and HPC workflows.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "hpc_integration"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/CARV-ICS-FORTH/HPK",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "kubernetes",
+        "slurm",
+        "hpc",
+        "apptainer"
+      ],
+      "id": 28
+    },
+    {
+      "name": "VISCOPLASTIC-LBM",
+      "one_line_profile": "GPU-accelerated LBM solver for viscoplastic flows",
+      "detailed_description": "A Lattice Boltzmann Method (LBM) software designed for simulating viscoplastic fluid flows, leveraging GPU acceleration (CUDA) for high performance.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "fluid_dynamics_simulation",
+        "lbm_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/CERNN/VISCOPLASTIC-LBM",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "lbm",
+        "viscoplastic",
+        "cuda",
+        "gpu"
+      ],
+      "id": 29
+    },
+    {
+      "name": "TCLB",
+      "one_line_profile": "Templated MPI+CUDA/CPU Lattice Boltzmann code",
+      "detailed_description": "TCLB is a high-performance Lattice Boltzmann Method (LBM) code that uses C++ templates for efficient code generation on both CPU and GPU architectures, supporting MPI for multi-node parallelism.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "fluid_dynamics_simulation",
+        "lbm_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/CFD-GO/TCLB",
+      "help_website": [
+        "https://tclb.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "lbm",
+        "hpc",
+        "cuda",
+        "mpi"
+      ],
+      "id": 30
+    },
+    {
+      "name": "CaNS",
+      "one_line_profile": "Massively-parallel DNS code for canonical flows",
+      "detailed_description": "CaNS is a code designed for fast, massively-parallel direct numerical simulations (DNS) of canonical fluid flows (e.g., channel flow, duct flow) using FFT-based solvers.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "fluid_dynamics_simulation",
+        "dns_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/CaNS-World/CaNS",
+      "help_website": [
+        "https://cans-world.github.io/CaNS/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dns",
+        "fluid-dynamics",
+        "fft",
+        "mpi"
+      ],
+      "id": 31
+    },
+    {
+      "name": "Tsunamis.jl",
+      "one_line_profile": "Parallel Shallow Water Equations Solver in Julia",
+      "detailed_description": "Tsunamis.jl is a Julia-based solver for the Shallow Water Equations using the Finite Volume Method and HLLE Riemann Solver, designed for simulating tsunami propagation and related phenomena.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "geophysical_fluid_dynamics",
+        "tsunami_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/Ceyron/Tsunamis.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "shallow-water-equations",
+        "julia",
+        "finite-volume"
+      ],
+      "id": 32
+    },
+    {
+      "name": "sdfibm",
+      "one_line_profile": "Immersed boundary method solver using signed distance fields",
+      "detailed_description": "sdfibm implements an immersed boundary method (IBM) empowered by signed distance fields (SDF) within the OpenFOAM framework, enabling simulations of flows around complex geometries.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "fluid_dynamics_simulation",
+        "immersed_boundary_method"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ChenguangZhang/sdfibm",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "openfoam",
+        "immersed-boundary",
+        "sdf",
+        "cfd"
+      ],
+      "id": 33
+    },
+    {
+      "name": "OpenCFDinCUDA",
+      "one_line_profile": "GPU-accelerated 2D fluid simulation solver using Finite Volume Method",
+      "detailed_description": "A 2D fluid simulation program implementing the finite volume method on structured meshes, accelerated using CUDA for GPU performance.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Cofludy/OpenCFDinCUDA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cfd",
+        "cuda",
+        "gpu",
+        "fvm"
+      ],
+      "id": 34
+    },
+    {
+      "name": "cotainr",
+      "one_line_profile": "User-space Apptainer/Singularity container builder for HPC",
+      "detailed_description": "A tool designed to build Apptainer/Singularity containers in user space, facilitating the deployment of scientific software in HPC environments.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "containerization",
+        "hpc_deployment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DeiC-HPC/cotainr",
+      "help_website": [],
+      "license": "EUPL-1.2",
+      "tags": [
+        "hpc",
+        "containers",
+        "apptainer",
+        "singularity"
+      ],
+      "id": 35
+    },
+    {
+      "name": "pde-dataset-generator",
+      "one_line_profile": "Generator for PDE ground truth datasets from standard solvers",
+      "detailed_description": "A tool for generating Partial Differential Equations (PDEs) ground truth datasets using established solvers like ARCSim, FEniCS, and SU2, designed for ML-based physics modeling.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "data_generation",
+        "simulation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/DiffEqML/pde-dataset-generator",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pde",
+        "dataset",
+        "machine-learning",
+        "cfd"
+      ],
+      "id": 36
+    },
+    {
+      "name": "E4S",
+      "one_line_profile": "Extreme-scale Scientific Software Stack integration for Spack",
+      "detailed_description": "The Extreme-scale Scientific Software Stack (E4S) project repository for Spack integration, providing a curated collection of open-source software packages for HPC.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "package_management",
+        "hpc_deployment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/E4S-Project/e4s",
+      "help_website": [
+        "https://e4s.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "hpc",
+        "spack",
+        "software-stack"
+      ],
+      "id": 37
+    },
+    {
+      "name": "E4S à la carte",
+      "one_line_profile": "Custom container image builder for the E4S ecosystem",
+      "detailed_description": "A tool that allows users to customize container images by adding system and Spack packages, tailored for the Extreme-scale Scientific Software Stack (E4S).",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "containerization",
+        "image_building"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/E4S-Project/e4s-alc",
+      "help_website": [
+        "https://e4s.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "hpc",
+        "containers",
+        "customization"
+      ],
+      "id": 38
+    },
+    {
+      "name": "E4S Container Launcher",
+      "one_line_profile": "Container manager optimized for E4S HPC workflows",
+      "detailed_description": "A tool to manage and launch containers for the E4S project, simplifying the use of containerized scientific applications on HPC systems.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "container_management",
+        "workflow_execution"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/E4S-Project/e4s-cl",
+      "help_website": [
+        "https://e4s-cl.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "hpc",
+        "containers",
+        "mpi"
+      ],
+      "id": 39
+    },
+    {
+      "name": "HELYX-OS",
+      "one_line_profile": "Open-source GUI for OpenFOAM CFD simulations",
+      "detailed_description": "A graphical user interface for OpenFOAM, designed to facilitate the setup and execution of CFD simulations.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation_setup",
+        "pre_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/ENGYS/HELYX-OS",
+      "help_website": [
+        "https://engys.com/products/helyx-os"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "openfoam",
+        "gui"
+      ],
+      "id": 40
+    },
+    {
+      "name": "CarpetX",
+      "one_line_profile": "AMReX-based driver for the Einstein Toolkit",
+      "detailed_description": "A driver for the Einstein Toolkit based on the AMReX framework, enabling adaptive mesh refinement for relativistic astrophysics simulations.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "adaptive_mesh_refinement"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/EinsteinToolkit/CarpetX",
+      "help_website": [
+        "https://einsteintoolkit.org"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "astrophysics",
+        "amrex",
+        "hpc",
+        "gr"
+      ],
+      "id": 41
+    },
+    {
+      "name": "pyfra",
+      "one_line_profile": "Python framework for research experiment automation",
+      "detailed_description": "A research framework designed to simplify the orchestration of experiments, including remote execution, file syncing, and environment management for scientific research.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "experiment_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EleutherAI/pyfra",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "research-automation",
+        "devops-for-science",
+        "python"
+      ],
+      "id": 42
+    },
+    {
+      "name": "AMR-Wind",
+      "one_line_profile": "Massively parallel, block-structured adaptive mesh incompressible flow solver",
+      "detailed_description": "An AMReX-based structured wind solver for exascale simulations of atmospheric boundary layer flows and wind farm aerodynamics.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Exawind/amr-wind",
+      "help_website": [
+        "https://exawind.github.io/amr-wind/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "wind-energy",
+        "amrex",
+        "hpc"
+      ],
+      "id": 43
+    },
+    {
+      "name": "hybridPorousInterFoam",
+      "one_line_profile": "OpenFOAM solver for hybrid-scale porous media flows",
+      "detailed_description": "An OpenFOAM solver designed for performing single- and two-phase flow simulations on hybrid-scale porous media.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "porous_media_flow"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Franjcf/hybridPorousInterFoam",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "cfd",
+        "porous-media"
+      ],
+      "id": 44
+    },
+    {
+      "name": "GPUSPH",
+      "one_line_profile": "CUDA-based Smoothed Particle Hydrodynamics (SPH) solver",
+      "detailed_description": "An implementation of Weakly-Compressible Smoothed Particle Hydrodynamics (SPH) accelerated with CUDA, designed for free-surface flow simulations.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "particle_hydrodynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/GPUSPH/gpusph",
+      "help_website": [
+        "http://www.gpusph.org"
+      ],
+      "license": null,
+      "tags": [
+        "sph",
+        "cuda",
+        "cfd",
+        "gpu"
+      ],
+      "id": 45
+    },
+    {
+      "name": "PyFrac",
+      "one_line_profile": "Planar 3D hydraulic fracture growth solver",
+      "detailed_description": "A Python-based solver for simulating planar 3D hydraulic fracture growth, developed by the Geo-Energy Laboratory at EPFL.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fracture_mechanics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/GeoEnergyLab-EPFL/PyFrac",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "hydraulic-fracturing",
+        "geomechanics",
+        "simulation"
+      ],
+      "id": 46
+    },
+    {
+      "name": "dynamite",
+      "one_line_profile": "Fast quantum evolution and eigensolving using PETSc/SLEPc",
+      "detailed_description": "A tool for fast quantum dynamics evolution and eigensolving utilizing Krylov subspace methods via the PETSc and SLEPc libraries.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "quantum_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GregDMeyer/dynamite",
+      "help_website": [
+        "https://dynamite.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "quantum-physics",
+        "petsc",
+        "hpc"
+      ],
+      "id": 47
+    },
+    {
+      "name": "cuFSDAF",
+      "one_line_profile": "GPU-accelerated FSDAF algorithm for remote sensing data fusion",
+      "detailed_description": "A CUDA-parallelized implementation of the Flexible Spatiotemporal Data Fusion (FSDAF) algorithm, featuring adaptive domain decomposition for high-performance remote sensing data processing.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "image_fusion"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/HPSCIL/cuFSDAF",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "remote-sensing",
+        "cuda",
+        "gpu",
+        "data-fusion"
+      ],
+      "id": 48
+    },
+    {
+      "name": "NTUSTCFDLAB",
+      "one_line_profile": "3D Finite Volume Method CFD solver with OpenMP/MPI",
+      "detailed_description": "A 3D CFD solver based on the Finite Volume Method, implemented with hybrid OpenMP/MPI parallelization for fluid dynamics simulations.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/HSUAN221/NTUSTCFDLAB",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cfd",
+        "fvm",
+        "mpi",
+        "openmp"
+      ],
+      "id": 49
+    },
+    {
+      "name": "HiPACE",
+      "one_line_profile": "Highly efficient Plasma Accelerator Emulation code",
+      "detailed_description": "A quasistatic particle-in-cell (PIC) code designed for highly efficient emulation of plasma accelerators.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "plasma_physics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Hi-PACE/hipace",
+      "help_website": [
+        "https://hipace.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "pic",
+        "plasma",
+        "accelerator-physics"
+      ],
+      "id": 50
+    },
+    {
+      "name": "ITHACA-FV",
+      "one_line_profile": "Reduced Order Modelling (ROM) implementation for OpenFOAM",
+      "detailed_description": "A library implementing Reduced Order Modelling techniques specifically for OpenFOAM, enabling faster simulation times for parameterized CFD problems.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "modeling",
+        "reduced_order_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ITHACA-FV/ITHACA-FV",
+      "help_website": [
+        "https://mathlab.sissa.it/ithaca-fv"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "openfoam",
+        "rom",
+        "cfd"
+      ],
+      "id": 51
+    },
+    {
+      "name": "CompGrids.jl",
+      "one_line_profile": "Computational grid generation for Julia scientific computing",
+      "detailed_description": "A Julia library for creating computational grids compatible with ParallelStencil.jl and PETSc.jl, facilitating numerical simulations.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "mesh_generation",
+        "pre_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaGeodynamics/CompGrids.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "grid-generation",
+        "julia",
+        "geodynamics"
+      ],
+      "id": 52
+    },
+    {
+      "name": "PETSc.jl",
+      "one_line_profile": "Julia wrappers for the PETSc scientific library",
+      "detailed_description": "The Julia interface to PETSc (Portable, Extensible Toolkit for Scientific Computation), enabling high-performance scientific computing within the Julia ecosystem.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "linear_algebra"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaParallel/PETSc.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "hpc",
+        "petsc",
+        "julia",
+        "solver"
+      ],
+      "id": 53
+    },
+    {
+      "name": "KTH_Framework",
+      "one_line_profile": "Toolbox framework for Nek5000 CFD solver",
+      "detailed_description": "A framework for developing and managing toolboxes and extensions for the Nek5000 spectral element CFD solver, maintained by KTH.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation_extension",
+        "framework"
+      ],
+      "application_level": "library",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/KTH-Nek5000/KTH_Framework",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nek5000",
+        "cfd",
+        "framework"
+      ],
+      "id": 54
+    },
+    {
+      "name": "uberenv",
+      "one_line_profile": "Automated Spack-based software deployment tool",
+      "detailed_description": "A tool developed by LLNL to automate the use of Spack for building and deploying complex scientific software stacks.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "deployment",
+        "package_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/LLNL/uberenv",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "spack",
+        "hpc",
+        "deployment"
+      ],
+      "id": 55
+    },
+    {
+      "name": "MFC",
+      "one_line_profile": "Exascale simulation of multiphase fluid dynamics",
+      "detailed_description": "A high-performance computational fluid dynamics code for exascale simulation of multiphase and multi-physics flows.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "multiphase_flow"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/MFlowCode/MFC",
+      "help_website": [
+        "https://mflowcode.github.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "cfd",
+        "exascale",
+        "multiphase",
+        "hpc"
+      ],
+      "id": 56
+    },
+    {
+      "name": "Mallard",
+      "one_line_profile": "Unstructured, GPU accelerated, high-order finite volume CFD solver",
+      "detailed_description": "Mallard is a high-order finite volume Computational Fluid Dynamics (CFD) solver designed for unstructured grids. It leverages GPU acceleration to perform efficient simulations of fluid flows.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/MatthewBonanni/Mallard",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "cfd",
+        "gpu",
+        "finite-volume",
+        "unstructured-grid"
+      ],
+      "id": 57
+    },
+    {
+      "name": "ngmo-environments",
+      "one_line_profile": "Configuration environments for Met Office's Next Generation Modelling",
+      "detailed_description": "This repository contains the environment definitions and configurations required for the Next Generation Modelling for Momentum (NG-Mom) project at the Met Office, likely utilizing Spack or container technologies for reproducibility.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "deployment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MetOffice/ngmo-environments",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "hpc",
+        "environment",
+        "meteorology",
+        "configuration"
+      ],
+      "id": 58
+    },
+    {
+      "name": "wuFoil",
+      "one_line_profile": "Airfoil modelling, meshing, analysis, and optimization tool",
+      "detailed_description": "wuFoil is an integrated tool for airfoil design and analysis. It combines modelling, meshing, and optimization capabilities, providing interfaces to external solvers like SU2 and XFoil, and meshers like Gmsh.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "modeling",
+        "meshing",
+        "optimization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Mikekiely/wuFoil",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "airfoil",
+        "optimization",
+        "meshing",
+        "aerodynamics"
+      ],
+      "id": 59
+    },
+    {
+      "name": "strugepic",
+      "one_line_profile": "Structure preserving symplectic PIC simulation code",
+      "detailed_description": "Strugepic is a Particle-in-Cell (PIC) simulation code that implements structure-preserving symplectic algorithms. It is built upon the AMReX framework for adaptive mesh refinement and parallel computing.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "plasma_physics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/MoPHA/strugepic",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pic",
+        "amrex",
+        "symplectic",
+        "simulation"
+      ],
+      "id": 60
+    },
+    {
+      "name": "DrivAerNet",
+      "one_line_profile": "Large-Scale Multimodal Car Dataset with CFD Simulations",
+      "detailed_description": "DrivAerNet is a large-scale dataset designed for data-driven aerodynamic design. It includes computational fluid dynamics (CFD) simulation data and deep learning benchmarks for automotive aerodynamics.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "data_generation",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Mohamedelrefaie/DrivAerNet",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dataset",
+        "cfd",
+        "aerodynamics",
+        "deep-learning"
+      ],
+      "id": 61
+    },
+    {
+      "name": "molssi-hub",
+      "one_line_profile": "Container Hub for Computational Molecular Science",
+      "detailed_description": "The MolSSI Container Hub provides a centralized repository and tools for accessing and managing containers for computational molecular science software, facilitating reproducible research.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "deployment",
+        "package_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MolSSI/molssi-hub",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "containers",
+        "molecular-science",
+        "hpc",
+        "reproducibility"
+      ],
+      "id": 62
+    },
+    {
+      "name": "MHIT36",
+      "one_line_profile": "Multi-GPU code for interface-resolved multiphase turbulence simulations",
+      "detailed_description": "MHIT36 is a Direct Numerical Simulation (DNS) code for multiphase turbulence. It uses a phase-field method for interface description and is optimized for multi-GPU execution using the cuDecomp library.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "turbulence_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/MultiphaseFlowLab/MHIT36",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dns",
+        "multiphase-flow",
+        "gpu",
+        "turbulence"
+      ],
+      "id": 63
+    },
+    {
+      "name": "ngs-petsc",
+      "one_line_profile": "Interface between NGSolve and PETSc",
+      "detailed_description": "ngs-petsc is a library that provides an interface between the NGSolve finite element library and the PETSc toolkit for scientific computation, enabling the use of PETSc solvers within NGSolve.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "linear_algebra",
+        "solver_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/NGSolve/ngs-petsc",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ngsolve",
+        "petsc",
+        "finite-element",
+        "interface"
+      ],
+      "id": 64
+    },
+    {
+      "name": "marbles",
+      "one_line_profile": "Lattice Boltzmann method solver with adaptive mesh refinement",
+      "detailed_description": "Marbles is a fluid dynamics solver based on the Lattice Boltzmann Method (LBM). It features adaptive mesh refinement (AMR) to efficiently resolve multi-scale flow features.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/NREL/marbles",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "lbm",
+        "amr",
+        "cfd",
+        "simulation"
+      ],
+      "id": 65
+    },
+    {
+      "name": "Nalu",
+      "one_line_profile": "Generalized unstructured massively parallel low Mach flow solver",
+      "detailed_description": "Nalu is a massively parallel, unstructured grid CFD code designed for low Mach number flows. It is built on the Sierra Toolkit and Trilinos solver stack, suitable for a variety of open engineering applications.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/NaluCFD/Nalu",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "low-mach",
+        "parallel",
+        "unstructured-grid"
+      ],
+      "id": 66
+    },
+    {
+      "name": "SimpleNSSolver",
+      "one_line_profile": "Massively-parallelized Navier-Stokes solver",
+      "detailed_description": "SimpleNSSolver is a validated and documented Navier-Stokes solver designed for massive parallelism, suitable for fundamental fluid dynamics research.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/NaokiHori/SimpleNSSolver",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "navier-stokes",
+        "mpi",
+        "cfd",
+        "parallel"
+      ],
+      "id": 67
+    },
+    {
+      "name": "SimpleTCSolver",
+      "one_line_profile": "Massively-parallelized solver for Taylor-Couette flows",
+      "detailed_description": "SimpleTCSolver is a specialized Navier-Stokes solver optimized for simulating Taylor-Couette flows in a massively parallel computing environment.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/NaokiHori/SimpleTCSolver",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "taylor-couette",
+        "cfd",
+        "mpi",
+        "simulation"
+      ],
+      "id": 68
+    },
+    {
+      "name": "SimpleVOFSolver",
+      "one_line_profile": "Massively-parallelized VOF solver for droplet-laden flows",
+      "detailed_description": "SimpleVOFSolver implements the Volume-of-Fluid (VOF) method within a Navier-Stokes solver to simulate droplet-laden flows on massively parallel systems.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "multiphase_flow"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/NaokiHori/SimpleVOFSolver",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vof",
+        "droplet",
+        "cfd",
+        "multiphase"
+      ],
+      "id": 69
+    },
+    {
+      "name": "Nek5000",
+      "one_line_profile": "High-fidelity spectral element CFD solver",
+      "detailed_description": "Nek5000 is a spectral element method (SEM) code for the simulation of unsteady incompressible fluid flow with heat transfer, moving meshes, and other physics. It is known for its high order accuracy and scalability.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/Nek5000/Nek5000",
+      "help_website": [
+        "http://nek5000.mcs.anl.gov/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "spectral-element",
+        "cfd",
+        "hpc",
+        "turbulence"
+      ],
+      "id": 70
+    },
+    {
+      "name": "NekROM",
+      "one_line_profile": "Model-Order Reduction Framework for Nek5000",
+      "detailed_description": "NekROM is a framework designed to perform Model-Order Reduction (MOR) specifically for the Nek5000 CFD solver, enabling faster simulations through reduced order modeling.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "modeling",
+        "model_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/Nek5000/NekROM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mor",
+        "rom",
+        "nek5000",
+        "cfd"
+      ],
+      "id": 71
+    },
+    {
+      "name": "Nekbone",
+      "one_line_profile": "Proxy app for Nek5000 performance benchmarking",
+      "detailed_description": "Nekbone is a mini-app or proxy application derived from Nek5000. It captures the essential computational kernel of the full solver to facilitate performance analysis and benchmarking on HPC systems.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/Nek5000/Nekbone",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "proxy-app",
+        "benchmark",
+        "hpc",
+        "spectral-element"
+      ],
+      "id": 72
+    },
+    {
+      "name": "nekRS",
+      "one_line_profile": "GPU-accelerated spectral element CFD solver",
+      "detailed_description": "nekRS is the next-generation version of Nek5000, designed from the ground up for GPU acceleration using OCCA. It retains the spectral element method's accuracy while leveraging modern heterogeneous architectures.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Nek5000/nekRS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "gpu",
+        "cfd",
+        "spectral-element",
+        "hpc"
+      ],
+      "id": 73
+    },
+    {
+      "name": "NekBox",
+      "one_line_profile": "Box-geometry prototyping version of Nek5000",
+      "detailed_description": "NekBox is a specialized version of the Nek5000 code focused on box geometries. It serves as a prototyping tool for testing new algorithms and features in a simplified geometric context.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "prototyping"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/NekBox/NekBox",
+      "help_website": [
+        "http://nek5000.mcs.anl.gov/index.php/Main_Page"
+      ],
+      "license": null,
+      "tags": [
+        "prototyping",
+        "cfd",
+        "nek5000",
+        "fortran"
+      ],
+      "id": 74
+    },
+    {
+      "name": "VERTEX-CFD",
+      "one_line_profile": "Multi-physics solver for fusion applications",
+      "detailed_description": "VERTEX-CFD is a multi-physics computational fluid dynamics solver specifically developed for nuclear fusion applications, handling the complex physics requirements of fusion reactor simulations.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "nuclear_fusion"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ORNL/VERTEX-CFD",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "fusion",
+        "cfd",
+        "multi-physics",
+        "ornl"
+      ],
+      "id": 75
+    },
+    {
+      "name": "CFD-and-Blood-Damage-Benchmarks",
+      "one_line_profile": "Benchmark data for CFD and blood damage validation",
+      "detailed_description": "This repository contains benchmark datasets and validation studies for Computational Fluid Dynamics (CFD) applied to blood damage modeling, sponsored by the FDA.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "validation",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/OSEL-DAM/CFD-and-Blood-Damage-Benchmarks",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "benchmark",
+        "bio-cfd",
+        "validation",
+        "fda"
+      ],
+      "id": 76
+    },
+    {
+      "name": "CFD_Solver_2D_GPU",
+      "one_line_profile": "2D Unstructured-Grid CFD Solver Based on GPU",
+      "detailed_description": "A 2D Computational Fluid Dynamics solver that utilizes GPU acceleration for unstructured grids, designed for educational or research purposes in accelerating flow simulations.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OliveTIen/CFD_Solver_2D_GPU",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gpu",
+        "cfd",
+        "2d",
+        "unstructured-grid"
+      ],
+      "id": 77
+    },
+    {
+      "name": "OpenCFD-SCU",
+      "one_line_profile": "GPU High precision finite difference CFD solver",
+      "detailed_description": "OpenCFD-SCU is a high-precision finite difference CFD solver optimized for GPU architectures, developed for efficient simulation of fluid flows.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Cuda",
+      "repo_url": "https://github.com/OpenCFD-IMECH/OpenCFD-SCU",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "gpu",
+        "finite-difference",
+        "cfd",
+        "high-precision"
+      ],
+      "id": 78
+    },
+    {
+      "name": "OpenFOAM-1.7.x",
+      "one_line_profile": "Open Source CFD Toolbox (Version 1.7.x)",
+      "detailed_description": "OpenFOAM 1.7.x is a legacy version of the comprehensive open-source CFD toolbox, providing solvers and utilities for a wide range of fluid dynamics problems.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenCFD/OpenFOAM-1.7.x",
+      "help_website": [
+        "https://openfoam.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "openfoam",
+        "simulation",
+        "legacy"
+      ],
+      "id": 79
+    },
+    {
+      "name": "OpenFOAM-10",
+      "one_line_profile": "Open Source CFD Toolbox (Version 10)",
+      "detailed_description": "OpenFOAM Version 10 is a major release of the open-source CFD toolbox, featuring updated solvers, physical models, and improved performance for fluid dynamics simulations.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenFOAM/OpenFOAM-10",
+      "help_website": [
+        "https://openfoam.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "openfoam",
+        "simulation",
+        "fvm"
+      ],
+      "id": 80
+    },
+    {
+      "name": "OpenFOAM-2.2.x",
+      "one_line_profile": "Open Source CFD Toolbox (Version 2.2.x)",
+      "detailed_description": "OpenFOAM 2.2.x is a patch version of the OpenFOAM 2.2 release, providing bug fixes and stability improvements for this specific branch of the CFD toolbox.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/OpenFOAM/OpenFOAM-2.2.x",
+      "help_website": [
+        "https://openfoam.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "openfoam",
+        "simulation"
+      ],
+      "id": 81
+    },
+    {
+      "name": "OpenFOAM-2.3.x",
+      "one_line_profile": "Open Source CFD Toolbox (Version 2.3.x)",
+      "detailed_description": "OpenFOAM 2.3.x is a patch version of the OpenFOAM 2.3 release, maintaining the capabilities of the 2.3 series for CFD simulations.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenFOAM/OpenFOAM-2.3.x",
+      "help_website": [
+        "https://openfoam.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "openfoam",
+        "simulation"
+      ],
+      "id": 82
+    },
+    {
+      "name": "OpenFOAM-4.x",
+      "one_line_profile": "Open Source CFD Toolbox (Version 4.x)",
+      "detailed_description": "OpenFOAM 4.x is a patch version of the OpenFOAM 4 release, offering a stable environment for CFD simulations with the features introduced in version 4.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenFOAM/OpenFOAM-4.x",
+      "help_website": [
+        "https://openfoam.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "openfoam",
+        "simulation"
+      ],
+      "id": 83
+    },
+    {
+      "name": "OpenFOAM-5.x",
+      "one_line_profile": "Open Source CFD Toolbox (Version 5.x)",
+      "detailed_description": "OpenFOAM 5.x is a patch version of the OpenFOAM 5 release, continuing the development and maintenance of the version 5 branch.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenFOAM/OpenFOAM-5.x",
+      "help_website": [
+        "https://openfoam.org"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "cfd",
+        "openfoam",
+        "simulation"
+      ],
+      "id": 84
+    },
+    {
+      "name": "OpenFOAM-6",
+      "one_line_profile": "Open Source CFD Toolbox (Version 6)",
+      "detailed_description": "OpenFOAM Version 6 is a major release providing an extensive set of solvers and libraries for continuum mechanics, primarily CFD.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenFOAM/OpenFOAM-6",
+      "help_website": [
+        "https://openfoam.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "openfoam",
+        "simulation"
+      ],
+      "id": 85
+    },
+    {
+      "name": "OpenFOAM-7",
+      "one_line_profile": "Open Source CFD Toolbox (Version 7)",
+      "detailed_description": "OpenFOAM Version 7 is a major release of the standard open-source CFD library, including new features and improvements over previous versions.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenFOAM/OpenFOAM-7",
+      "help_website": [
+        "https://openfoam.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "openfoam",
+        "simulation"
+      ],
+      "id": 86
+    },
+    {
+      "name": "OpenFOAM-8",
+      "one_line_profile": "Open Source CFD Toolbox (Version 8)",
+      "detailed_description": "OpenFOAM Version 8 is a major release offering the latest advancements in open-source CFD capabilities from the OpenFOAM Foundation.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenFOAM/OpenFOAM-8",
+      "help_website": [
+        "https://openfoam.org"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "cfd",
+        "openfoam",
+        "simulation"
+      ],
+      "id": 87
+    },
+    {
+      "name": "OpenFOAM-9",
+      "one_line_profile": "Open Source CFD Toolbox (Version 9)",
+      "detailed_description": "OpenFOAM Version 9 is a major release providing robust and extensible solvers for complex fluid flow problems.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenFOAM/OpenFOAM-9",
+      "help_website": [
+        "https://openfoam.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "openfoam",
+        "simulation"
+      ],
+      "id": 88
+    },
+    {
+      "name": "OpenFOAM-dev",
+      "one_line_profile": "OpenFOAM Development Repository",
+      "detailed_description": "This is the development repository for OpenFOAM, containing the latest code changes, features, and experimental solvers before they are released in stable versions.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenFOAM/OpenFOAM-dev",
+      "help_website": [
+        "https://openfoam.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "openfoam",
+        "development",
+        "simulation"
+      ],
+      "id": 89
+    },
+    {
+      "name": "su2fmt",
+      "one_line_profile": "SU2 mesh format parser and visualizer",
+      "detailed_description": "su2fmt is a utility tool for parsing and visualizing mesh files in the SU2 format, aiding in the pre-processing and inspection of CFD meshes.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "meshing",
+        "visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenOrion/su2fmt",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "su2",
+        "mesh",
+        "visualization",
+        "parser"
+      ],
+      "id": 90
+    },
+    {
+      "name": "phasta",
+      "one_line_profile": "Parallel Hierarchic Adaptive Stabilized Transient Analysis solver",
+      "detailed_description": "PHASTA is a parallel, adaptive, stabilized finite element flow solver for compressible and incompressible Navier-Stokes equations, suitable for transient analysis.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/PHASTA/phasta",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cfd",
+        "finite-element",
+        "adaptive-mesh",
+        "parallel"
+      ],
+      "id": 91
+    },
+    {
+      "name": "LBDEMcoupling-public",
+      "one_line_profile": "Coupling between Palabos (LBM) and LIGGGHTS (DEM)",
+      "detailed_description": "This tool provides a coupling interface between the Lattice-Boltzmann code Palabos and the Discrete Element Method code LIGGGHTS, enabling resolved simulations of particulate flows.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "multiphase_flow"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ParticulateFlow/LBDEMcoupling-public",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "lbm",
+        "dem",
+        "coupling",
+        "palabos",
+        "liggghts"
+      ],
+      "id": 92
+    },
+    {
+      "name": "Palabos-PFM",
+      "one_line_profile": "Palabos with Phase Field Method addons",
+      "detailed_description": "Palabos-PFM extends the Palabos Lattice Boltzmann solver with Phase Field Method (PFM) capabilities for simulating multiphase flows with interface tracking.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "multiphase_flow"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ParticulateFlow/Palabos-PFM",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "lbm",
+        "pfm",
+        "multiphase",
+        "palabos"
+      ],
+      "id": 93
+    },
+    {
+      "name": "pawsey-spack-config",
+      "one_line_profile": "Spack configuration for Pawsey Supercomputing Centre",
+      "detailed_description": "This repository contains the Spack configuration files and recipes used to deploy the scientific software stack at the Pawsey Supercomputing Centre, facilitating reproducible HPC environments.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "deployment",
+        "package_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PawseySC/pawsey-spack-config",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "spack",
+        "hpc",
+        "deployment",
+        "configuration"
+      ],
+      "id": 94
+    },
+    {
+      "name": "phasicFlow",
+      "one_line_profile": "Parallel DEM and CFD-DEM simulation code",
+      "detailed_description": "phasicFlow is a highly efficient, parallel code designed for Discrete Element Method (DEM) and coupled CFD-DEM simulations, supporting both CPU and GPU architectures.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "multiphase_flow"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/PhasicFlow/phasicFlow",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dem",
+        "cfd-dem",
+        "gpu",
+        "simulation"
+      ],
+      "id": 95
+    },
+    {
+      "name": "pressio-rom",
+      "one_line_profile": "Library for reduced order models and solvers",
+      "detailed_description": "pressio-rom is a library providing linear and non-linear solvers, time integration schemes, and infrastructure for building Reduced Order Models (ROMs) in scientific computing.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "modeling",
+        "model_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Pressio/pressio-rom",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "rom",
+        "solver",
+        "time-integration",
+        "scientific-computing"
+      ],
+      "id": 96
+    },
+    {
+      "name": "FluidX3D",
+      "one_line_profile": "High-performance Lattice Boltzmann CFD software",
+      "detailed_description": "FluidX3D is a highly optimized Lattice Boltzmann Method (LBM) CFD software that runs on GPUs and CPUs via OpenCL, known for its speed and memory efficiency.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ProjectPhysX/FluidX3D",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "lbm",
+        "cfd",
+        "opencl",
+        "gpu"
+      ],
+      "id": 97
+    },
+    {
+      "name": "PyFR",
+      "one_line_profile": "Flux Reconstruction based CFD solver",
+      "detailed_description": "PyFR is an open-source Python based framework for solving advection-diffusion type problems on streaming architectures using the Flux Reconstruction approach of Huynh.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PyFR/PyFR",
+      "help_website": [
+        "http://www.pyfr.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "flux-reconstruction",
+        "python",
+        "gpu"
+      ],
+      "id": 98
+    },
+    {
+      "name": "rocm-spack-pkgs",
+      "one_line_profile": "Spack recipes for ROCm software stack",
+      "detailed_description": "This repository hosts Spack package recipes for the ROCm (Radeon Open Compute) platform, enabling the deployment of AMD's HPC software stack via the Spack package manager.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "deployment",
+        "package_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ROCm/rocm-spack-pkgs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spack",
+        "rocm",
+        "hpc",
+        "amd"
+      ],
+      "id": 99
+    },
+    {
+      "name": "Neurodocker",
+      "one_line_profile": "Container generator for reproducible neuroimaging and scientific computing",
+      "detailed_description": "A command-line tool to generate custom Docker and Singularity/Apptainer recipes and images for neuroimaging and scientific research, ensuring reproducibility by minimizing container size and managing dependencies.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "infrastructure",
+        "reproducibility"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ReproNim/neurodocker",
+      "help_website": [
+        "https://github.com/ReproNim/neurodocker"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "docker",
+        "singularity",
+        "reproducibility",
+        "neuroimaging"
+      ],
+      "id": 100
+    },
+    {
+      "name": "Spackenv",
+      "one_line_profile": "Environment management wrapper for Spack on HPC clusters",
+      "detailed_description": "A tool developed by SJTU HPC to manage and switch between Spack environments for system administrators, users, and developers, facilitating software stack management on high-performance computing clusters.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "infrastructure",
+        "package_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SJTU-HPC/spackenv",
+      "help_website": [
+        "https://github.com/SJTU-HPC/spackenv"
+      ],
+      "license": null,
+      "tags": [
+        "spack",
+        "hpc",
+        "environment-management"
+      ],
+      "id": 101
+    },
+    {
+      "name": "SciBlend",
+      "one_line_profile": "Scientific data visualization workflow within Blender",
+      "detailed_description": "A framework for creating advanced scientific data visualizations directly within Blender, enabling researchers to render high-quality 3D representations of simulation and experimental data.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "rendering"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SciBlend/SciBlend",
+      "help_website": [
+        "https://github.com/SciBlend/SciBlend"
+      ],
+      "license": null,
+      "tags": [
+        "blender",
+        "visualization",
+        "scientific-rendering"
+      ],
+      "id": 102
+    },
+    {
+      "name": "SedFoam",
+      "one_line_profile": "Two-phase flow solver for sediment transport in OpenFOAM",
+      "detailed_description": "A specialized solver for the OpenFOAM toolbox designed to simulate two-phase flow and sediment transport, widely used in geophysical and engineering fluid dynamics.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "sediment_transport"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/SedFoam/sedfoam",
+      "help_website": [
+        "https://github.com/SedFoam/sedfoam"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "cfd",
+        "sediment-transport",
+        "multiphase-flow"
+      ],
+      "id": 103
+    },
+    {
+      "name": "RapidCFD",
+      "one_line_profile": "GPU-accelerated fork of OpenFOAM",
+      "detailed_description": "A fork of OpenFOAM designed to run fully on CUDA platforms, enabling significant acceleration of Computational Fluid Dynamics (CFD) simulations using NVIDIA GPUs.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "acceleration"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/SimFlowCFD/RapidCFD-dev",
+      "help_website": [
+        "https://github.com/SimFlowCFD/RapidCFD-dev"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "openfoam",
+        "cuda",
+        "gpu",
+        "cfd"
+      ],
+      "id": 104
+    },
+    {
+      "name": "SmartFlow",
+      "one_line_profile": "Deep reinforcement learning framework for CFD on HPC",
+      "detailed_description": "A CFD-solver-agnostic deep reinforcement learning framework designed for high-performance computing platforms, facilitating the application of AI control and optimization in fluid dynamics simulations.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "modeling",
+        "optimization",
+        "ai4science"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SmartFlow-AI4CFD/SmartFlow",
+      "help_website": [
+        "https://github.com/SmartFlow-AI4CFD/SmartFlow"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "drl",
+        "cfd",
+        "hpc",
+        "ai4s"
+      ],
+      "id": 105
+    },
+    {
+      "name": "Tramonto",
+      "one_line_profile": "DFT-based software for modeling nanostructured fluids",
+      "detailed_description": "A software package from Sandia National Laboratories for modeling nanostructured fluids using Density Functional Theories (DFT) and Trilinos solvers, applicable to materials science and chemical physics.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/Tramonto/Tramonto",
+      "help_website": [
+        "https://tramonto.github.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "dft",
+        "fluid-dynamics",
+        "nanostructure",
+        "trilinos"
+      ],
+      "id": 106
+    },
+    {
+      "name": "E4S Recipes",
+      "one_line_profile": "Spack environments and container recipes for E4S",
+      "detailed_description": "A collection of Spack environment configurations and container recipes for the Extreme-scale Scientific Software Stack (E4S), facilitating the deployment of scientific software on HPC systems.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "infrastructure",
+        "deployment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Dockerfile",
+      "repo_url": "https://github.com/UO-OACISS/e4s",
+      "help_website": [
+        "https://e4s-project.github.io/"
+      ],
+      "license": null,
+      "tags": [
+        "e4s",
+        "spack",
+        "hpc",
+        "containers"
+      ],
+      "id": 107
+    },
+    {
+      "name": "IonSolver",
+      "one_line_profile": "GPU-accelerated magnetohydrodynamic (MHD) solver",
+      "detailed_description": "A magnetohydrodynamic simulation software featuring an extended Lattice Boltzmann method and GPU acceleration, written in Rust for high-performance plasma and fluid simulation.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "mhd"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/VioletSpace/IonSolver",
+      "help_website": [
+        "https://github.com/VioletSpace/IonSolver"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "mhd",
+        "lbm",
+        "gpu",
+        "rust"
+      ],
+      "id": 108
+    },
+    {
+      "name": "WENOEXT",
+      "one_line_profile": "WENO schemes library for OpenFOAM",
+      "detailed_description": "A library implementing Weighted Essentially Non-Oscillatory (WENO) schemes for the OpenFOAM framework, enhancing the accuracy of shock-capturing in compressible flow simulations.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "numerical_method"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/WENO-OF/WENOEXT",
+      "help_website": [
+        "https://github.com/WENO-OF/WENOEXT"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "weno",
+        "cfd",
+        "shock-capturing"
+      ],
+      "id": 109
+    },
+    {
+      "name": "pyFrame3DD",
+      "one_line_profile": "Python bindings for Frame3DD structural analysis",
+      "detailed_description": "Python bindings for Frame3DD, a static and dynamic structural analysis tool for 2D and 3D frames and trusses, maintained as part of the WISDEM (Wind Plant Integrated System Design and Engineering Model) project.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "modeling",
+        "structural_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/WISDEM/pyFrame3DD",
+      "help_website": [
+        "https://github.com/WISDEM/pyFrame3DD"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "structural-analysis",
+        "fem",
+        "wisdem",
+        "python-binding"
+      ],
+      "id": 110
+    },
+    {
+      "name": "XFluids",
+      "one_line_profile": "Cross-architecture heterogeneous CFD solver",
+      "detailed_description": "A unified cross-architecture heterogeneous CFD solver designed to run efficiently on various hardware platforms, supporting advanced fluid dynamics simulations.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/XFluids/XFluids",
+      "help_website": [
+        "https://github.com/XFluids/XFluids"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "cfd",
+        "heterogeneous-computing",
+        "solver"
+      ],
+      "id": 111
+    },
+    {
+      "name": "Lattice-Boltzmann-Method-GPU",
+      "one_line_profile": "High-performance GPU LBM solver",
+      "detailed_description": "A GPU-accelerated 3D Lattice Boltzmann Method (LBM) CFD solver developed at Imperial College, offering significant speedups over CPU serial codes for single-phase flow simulations.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "acceleration"
+      ],
+      "application_level": "solver",
+      "primary_language": "Cuda",
+      "repo_url": "https://github.com/Xinhuan-Imperial/Lattice-Boltzmann-Method-GPU",
+      "help_website": [
+        "https://github.com/Xinhuan-Imperial/Lattice-Boltzmann-Method-GPU"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "lbm",
+        "cuda",
+        "gpu",
+        "cfd"
+      ],
+      "id": 112
+    },
+    {
+      "name": "NekIBM",
+      "one_line_profile": "Immersed Boundary Method platform based on Nek5000",
+      "detailed_description": "A multiphase flow simulation platform utilizing the Direct-forced Immersed Boundary Method, built upon the spectral element solver Nek5000 for high-fidelity fluid simulations.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "multiphase_flow"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/YunchaoYang/NekIBM",
+      "help_website": [
+        "https://github.com/YunchaoYang/NekIBM"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "nek5000",
+        "ibm",
+        "multiphase",
+        "cfd"
+      ],
+      "id": 113
+    },
+    {
+      "name": "AI-workflows",
+      "one_line_profile": "Portable AI workflows for benchmarking",
+      "detailed_description": "A collection of portable, real-world AI workflows developed by the Alan Turing Institute for testing and benchmarking AI infrastructure and scientific applications.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/alan-turing-institute/AI-workflows",
+      "help_website": [
+        "https://github.com/alan-turing-institute/AI-workflows"
+      ],
+      "license": "MIT",
+      "tags": [
+        "benchmarking",
+        "ai-workflows",
+        "hpc"
+      ],
+      "id": 114
+    },
+    {
+      "name": "PyFRAP",
+      "one_line_profile": "FRAP analysis toolbox",
+      "detailed_description": "A Python-based toolbox for the analysis of Fluorescence Recovery After Photobleaching (FRAP) data, used to estimate diffusion coefficients and binding kinetics in biophysics.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "analysis",
+        "estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/alexblaessle/PyFRAP",
+      "help_website": [
+        "https://github.com/alexblaessle/PyFRAP"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "frap",
+        "biophysics",
+        "diffusion",
+        "analysis"
+      ],
+      "id": 115
+    },
+    {
+      "name": "Alsvinn",
+      "one_line_profile": "Fast Finite Volume simulator with UQ support",
+      "detailed_description": "A high-performance Finite Volume simulator designed for solving conservation laws with built-in support for Uncertainty Quantification (UQ), utilizing GPU acceleration.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "uncertainty_quantification"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/alsvinn/alsvinn",
+      "help_website": [
+        "https://github.com/alsvinn/alsvinn"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "finite-volume",
+        "uq",
+        "gpu",
+        "simulation"
+      ],
+      "id": 116
+    },
+    {
+      "name": "Apptainer",
+      "one_line_profile": "Application container system for HPC (formerly Singularity)",
+      "detailed_description": "The open-source container system for High-Performance Computing (HPC), formerly known as Singularity, designed to execute applications at bare-metal performance while maintaining security and reproducibility.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "infrastructure",
+        "virtualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/apptainer/apptainer",
+      "help_website": [
+        "https://apptainer.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "containers",
+        "hpc",
+        "singularity",
+        "linux"
+      ],
+      "id": 117
+    },
+    {
+      "name": "Apptheus",
+      "one_line_profile": "Prometheus metrics agent for Apptainer",
+      "detailed_description": "A monitoring agent that exposes Apptainer container metrics to Prometheus, enabling observability of containerized workloads in HPC environments.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "infrastructure",
+        "monitoring"
+      ],
+      "application_level": "service",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/apptainer/apptheus",
+      "help_website": [
+        "https://github.com/apptainer/apptheus"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "monitoring",
+        "prometheus",
+        "apptainer",
+        "hpc"
+      ],
+      "id": 118
+    },
+    {
+      "name": "Singularity",
+      "one_line_profile": "Legacy repository for Singularity containers",
+      "detailed_description": "The historical repository for Singularity (now Apptainer), widely used for scientific containers in HPC. This repo serves as a snapshot before the project moved to the Linux Foundation.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "infrastructure",
+        "virtualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/apptainer/singularity",
+      "help_website": [
+        "https://apptainer.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "singularity",
+        "containers",
+        "hpc"
+      ],
+      "id": 119
+    },
+    {
+      "name": "tbslas",
+      "one_line_profile": "Parallel semi-Lagrangian advection-diffusion solver",
+      "detailed_description": "A parallel, fast solver for scalar advection-diffusion and incompressible Navier-Stokes equations based on semi-Lagrangian and Volume-Integral methods, designed for high-performance simulation.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/arashb/tbslas",
+      "help_website": [
+        "https://github.com/arashb/tbslas"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cfd",
+        "semi-lagrangian",
+        "mpi",
+        "solver"
+      ],
+      "id": 120
+    },
+    {
+      "name": "PythonFOAM",
+      "one_line_profile": "In-situ analysis and ML coupling for OpenFOAM",
+      "detailed_description": "A library developed by Argonne National Laboratory to enable in-situ data analysis and machine learning integration directly within OpenFOAM simulations using Python.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "analysis",
+        "integration",
+        "ai4science"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/argonne-lcf/PythonFOAM",
+      "help_website": [
+        "https://github.com/argonne-lcf/PythonFOAM"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "openfoam",
+        "python",
+        "in-situ",
+        "machine-learning"
+      ],
+      "id": 121
+    },
+    {
+      "name": "THAPI-spack",
+      "one_line_profile": "Spack environment for THAPI tracing tool",
+      "detailed_description": "A Spack environment configuration for THAPI (Tracing High Performance Applications), facilitating the deployment of tracing and profiling tools on HPC systems.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "infrastructure",
+        "profiling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/argonne-lcf/THAPI-spack",
+      "help_website": [
+        "https://github.com/argonne-lcf/THAPI-spack"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "spack",
+        "profiling",
+        "hpc",
+        "thapi"
+      ],
+      "id": 122
+    },
+    {
+      "name": "TensorFlowFoam",
+      "one_line_profile": "TensorFlow C-API integration for OpenFOAM",
+      "detailed_description": "A framework integrating TensorFlow's C-API into OpenFOAM, enabling the development and deployment of data-driven CFD algorithms and deep learning models within fluid simulations.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "modeling",
+        "integration",
+        "ai4science"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/argonne-lcf/TensorFlowFoam",
+      "help_website": [
+        "https://github.com/argonne-lcf/TensorFlowFoam"
+      ],
+      "license": "MIT",
+      "tags": [
+        "tensorflow",
+        "openfoam",
+        "cfd",
+        "deep-learning"
+      ],
+      "id": 123
+    },
+    {
+      "name": "qc-pyFramework",
+      "one_line_profile": "ASAM standards quality checker framework",
+      "detailed_description": "A quality checker framework developed by ASAM e.V. to validate file and implementation conformity against ASAM automotive and engineering standards.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "validation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/asam-ev/qc-pyFramework",
+      "help_website": [
+        "https://github.com/asam-ev/qc-pyFramework"
+      ],
+      "license": "MPL-2.0",
+      "tags": [
+        "quality-control",
+        "asam",
+        "standards",
+        "validation"
+      ],
+      "id": 124
+    },
+    {
+      "name": "AmgXWrapper",
+      "one_line_profile": "Interface between PETSc and NVIDIA AmgX library for GPU acceleration",
+      "detailed_description": "A middleware library that allows PETSc-based scientific applications to utilize NVIDIA's AmgX library for solving linear systems on GPUs.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "linear_algebra",
+        "solver_acceleration"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/barbagroup/AmgXWrapper",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "petsc",
+        "amgx",
+        "gpu",
+        "solver"
+      ],
+      "id": 125
+    },
+    {
+      "name": "PetIBM",
+      "one_line_profile": "Immersed-boundary method solver for distributed-memory architectures",
+      "detailed_description": "A toolbox and application suite for solving the Navier-Stokes equations using the immersed-boundary method, designed for high-performance computing clusters.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "cfd_simulation",
+        "immersed_boundary_method"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/barbagroup/PetIBM",
+      "help_website": [
+        "https://github.com/barbagroup/PetIBM"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cfd",
+        "immersed-boundary",
+        "mpi",
+        "petsc"
+      ],
+      "id": 126
+    },
+    {
+      "name": "apptainer-conda",
+      "one_line_profile": "Tool for managing local Conda environments within Apptainer containers",
+      "detailed_description": "A utility to facilitate the creation and usage of Conda environments inside Apptainer (Singularity) containers, streamlining scientific workflows on HPC systems.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "reproducibility"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/bast/apptainer-conda",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "apptainer",
+        "conda",
+        "hpc",
+        "containers"
+      ],
+      "id": 127
+    },
+    {
+      "name": "pyfrost",
+      "one_line_profile": "Python bindings for Bifrost's compacted colored de Bruijn Graph",
+      "detailed_description": "A Python interface for the Bifrost library, enabling construction and analysis of compacted colored de Bruijn graphs for genomic data.",
+      "domains": [
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "genomics",
+        "graph_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/broadinstitute/pyfrost",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "bioinformatics",
+        "debruijn-graph",
+        "genomics"
+      ],
+      "id": 128
+    },
+    {
+      "name": "TRUST",
+      "one_line_profile": "Thermohydraulic software package for CFD simulations",
+      "detailed_description": "An open-source CFD software designed for incompressible single-phase and low Mach number flows, with extending capabilities for compressible multi-phase flows and GPU acceleration.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "cfd_simulation",
+        "thermohydraulics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/cea-trust-platform/trust-code",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cfd",
+        "thermohydraulics",
+        "simulation"
+      ],
+      "id": 129
+    },
+    {
+      "name": "CEASIOMpy",
+      "one_line_profile": "Conceptual aircraft design environment",
+      "detailed_description": "A Python-based environment for conceptual aircraft design, integrating various tools for aerodynamics, structure, and stability analysis.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "aircraft_design",
+        "aerodynamics"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cfsengineering/CEASIOMpy",
+      "help_website": [
+        "https://ceasiompy.readthedocs.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "aircraft-design",
+        "aerodynamics",
+        "python"
+      ],
+      "id": 130
+    },
+    {
+      "name": "GMSH-Airfoil-2D",
+      "one_line_profile": "Tool to generate 2D meshes around airfoils",
+      "detailed_description": "A Python utility that automates the generation of 2D meshes around airfoils using the GMSH mesh generator.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "meshing",
+        "preprocessing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cfsengineering/GMSH-Airfoil-2D",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gmsh",
+        "meshing",
+        "airfoil",
+        "cfd"
+      ],
+      "id": 131
+    },
+    {
+      "name": "PFEMFort",
+      "one_line_profile": "Parallel programming framework for Finite Element Analysis",
+      "detailed_description": "A framework for developing parallel Finite Element Analysis (FEA) applications using Fortran and PETSc.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "fem_analysis",
+        "parallel_computing"
+      ],
+      "application_level": "library",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/chennachaos/PFEMFort",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fem",
+        "fortran",
+        "petsc",
+        "mpi"
+      ],
+      "id": 132
+    },
+    {
+      "name": "PyClaw",
+      "one_line_profile": "Python interface to Clawpack and SharpClaw algorithms",
+      "detailed_description": "A Python-based interface for the Clawpack library, providing solvers for hyperbolic partial differential equations with support for parallel execution via PETSc (PetClaw).",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/clawpack/pyclaw",
+      "help_website": [
+        "http://www.clawpack.org/pyclaw/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "pde",
+        "hyperbolic",
+        "python",
+        "petsc"
+      ],
+      "id": 133
+    },
+    {
+      "name": "CompareM2",
+      "one_line_profile": "Microbial genomes-to-report pipeline",
+      "detailed_description": "A comprehensive pipeline for comparative genomics of microbial organisms, generating reports from genomic data.",
+      "domains": [
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "genomics",
+        "comparative_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cmkobel/CompareM2",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "genomics",
+        "pipeline",
+        "microbiology"
+      ],
+      "id": 134
+    },
+    {
+      "name": "mrs_apptainer",
+      "one_line_profile": "Apptainer wrappers and resources for MRS UAV System",
+      "detailed_description": "A collection of Apptainer definitions and wrapper scripts to deploy and run the MRS UAV System for robotics research and simulation.",
+      "domains": [
+        "P1-08",
+        "Robotics"
+      ],
+      "subtask_category": [
+        "robotics_simulation",
+        "deployment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/ctu-mrs/mrs_apptainer",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "uav",
+        "robotics",
+        "apptainer",
+        "simulation"
+      ],
+      "id": 135
+    },
+    {
+      "name": "PetIGA",
+      "one_line_profile": "PETSc-based framework for isogeometric analysis",
+      "detailed_description": "A framework built on top of PETSc for solving Partial Differential Equations using Isogeometric Analysis (IGA) methods.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "iga",
+        "pde_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/dalcinl/PetIGA",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "petsc",
+        "iga",
+        "fem",
+        "pde"
+      ],
+      "id": 136
+    },
+    {
+      "name": "classy_blocks",
+      "one_line_profile": "Python classes for OpenFOAM blockMesh generation",
+      "detailed_description": "A Python library that simplifies the creation of blockMesh dictionaries for OpenFOAM, allowing for programmatic mesh generation.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "meshing",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/damogranlabs/classy_blocks",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "openfoam",
+        "meshing",
+        "python",
+        "cfd"
+      ],
+      "id": 137
+    },
+    {
+      "name": "channel",
+      "one_line_profile": "DNS solver for turbulent channel flow",
+      "detailed_description": "A Direct Numerical Simulation (DNS) code for incompressible turbulent channel flow, featuring two-dimensional parallelization.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "cfd_simulation",
+        "dns"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/davecats/channel",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dns",
+        "turbulence",
+        "cfd",
+        "channel-flow"
+      ],
+      "id": 138
+    },
+    {
+      "name": "usv_sim_lsa",
+      "one_line_profile": "Unmanned Surface Vehicle simulation on Gazebo",
+      "detailed_description": "A simulation package for Unmanned Surface Vehicles (USV) using the Gazebo physics simulator, including environmental factors like water currents and winds.",
+      "domains": [
+        "P1",
+        "Robotics"
+      ],
+      "subtask_category": [
+        "robotics_simulation",
+        "physics_simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/disaster-robotics-proalertas/usv_sim_lsa",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gazebo",
+        "usv",
+        "simulation",
+        "robotics"
+      ],
+      "id": 139
+    },
+    {
+      "name": "pymech",
+      "one_line_profile": "Python software suite for Nek5000 and SIMSON",
+      "detailed_description": "A Python library for interacting with data and files from the Nek5000 and SIMSON CFD codes, facilitating post-processing and data management.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "postprocessing",
+        "data_io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eX-Mech/pymech",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "nek5000",
+        "cfd",
+        "postprocessing",
+        "python"
+      ],
+      "id": 140
+    },
+    {
+      "name": "MaximumSize_on_TopOpt_in_PETSc",
+      "one_line_profile": "Maximum Size constraints implementation for Topology Optimization in PETSc",
+      "detailed_description": "An implementation of maximum size constraints within a topology optimization framework based on PETSc, useful for structural optimization.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "topology_optimization",
+        "structural_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/edofersan/MaximumSize_on_TopOpt_in_PETSc",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "topology-optimization",
+        "petsc",
+        "constraints"
+      ],
+      "id": 141
+    },
+    {
+      "name": "ENRICO",
+      "one_line_profile": "Exascale Nuclear Reactor Investigative Code for coupled neutronics and thermal-hydraulics",
+      "detailed_description": "ENRICO is a driver for performing coupled neutronics and thermal-hydraulics simulations on exascale architectures, supporting Nek5000 and OpenMC.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "coupled_physics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/enrico-dev/enrico",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "nuclear-reactor",
+        "exascale",
+        "neutronics",
+        "thermal-hydraulics"
+      ],
+      "id": 142
+    },
+    {
+      "name": "ERF",
+      "one_line_profile": "Energy Research and Forecasting Model for atmospheric simulation",
+      "detailed_description": "ERF is a compressible Navier-Stokes solver built on the AMReX framework, designed for atmospheric modeling and energy research.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "weather_forecasting"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/erf-model/ERF",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "atmospheric-modeling",
+        "amrex",
+        "cfd",
+        "energy-research"
+      ],
+      "id": 143
+    },
+    {
+      "name": "OneFLOW",
+      "one_line_profile": "Large-scale multiphysics scientific simulation environment",
+      "detailed_description": "OneFLOW is a CFD solver designed for large-scale multiphysics simulations, supporting various fluid dynamics problems.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "multiphysics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/eric2003/OneFLOW",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cfd",
+        "multiphysics",
+        "simulation"
+      ],
+      "id": 144
+    },
+    {
+      "name": "NeoN",
+      "one_line_profile": "Modern CFD core prototype for high-order methods",
+      "detailed_description": "NeoN is a work-in-progress prototype for a modern Computational Fluid Dynamics core, focusing on high-order numerical methods.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/exasim-project/NeoN",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cfd",
+        "high-order-methods",
+        "fluid-dynamics"
+      ],
+      "id": 145
+    },
+    {
+      "name": "dolfiny",
+      "one_line_profile": "High-level wrappers for DOLFINx (FEniCS)",
+      "detailed_description": "dolfiny provides high-level convenience wrappers and utilities for DOLFINx, facilitating finite element simulations within the FEniCS ecosystem.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fenics-dolfiny/dolfiny",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "fenics",
+        "dolfinx",
+        "fem",
+        "wrapper"
+      ],
+      "id": 146
+    },
+    {
+      "name": "SkellySim",
+      "one_line_profile": "Hydrodynamic Cytoskeleton Simulator for bio-fluids",
+      "detailed_description": "SkellySim is a simulation tool for hydrodynamic cytoskeletal systems, modeling the interaction of flexible fibers and fluids.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "bio_physics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/flatironinstitute/SkellySim",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cytoskeleton",
+        "hydrodynamics",
+        "bio-fluids",
+        "simulation"
+      ],
+      "id": 147
+    },
+    {
+      "name": "relexi",
+      "one_line_profile": "Reinforcement learning framework for CFD on HPC",
+      "detailed_description": "Relexi is a scalable framework designed to apply reinforcement learning algorithms to Computational Fluid Dynamics problems on High-Performance Computing systems.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "control",
+        "ai4s"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/flexi-framework/relexi",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "reinforcement-learning",
+        "cfd",
+        "hpc",
+        "ai4s"
+      ],
+      "id": 148
+    },
+    {
+      "name": "fluidfoam",
+      "one_line_profile": "Python postprocessing tool for OpenFOAM data",
+      "detailed_description": "fluidfoam is a Python library for reading and post-processing OpenFOAM simulation data, enabling analysis and visualization within Python environments.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "post_processing",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fluiddyn/fluidfoam",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "post-processing",
+        "python",
+        "cfd"
+      ],
+      "id": 149
+    },
+    {
+      "name": "fluidsim",
+      "one_line_profile": "Framework for fluid dynamics simulations in Python",
+      "detailed_description": "fluidsim is an extensible framework for studying fluid dynamics via numerical simulations, providing a Pythonic interface for defining and running solvers.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fluiddyn/fluidsim",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "fluid-dynamics",
+        "python",
+        "simulation",
+        "framework"
+      ],
+      "id": 150
+    },
+    {
+      "name": "rheoTool",
+      "one_line_profile": "Toolbox for viscoelastic fluid flow simulation in OpenFOAM",
+      "detailed_description": "rheoTool is a toolbox developed on top of OpenFOAM to simulate Generalized Newtonian and viscoelastic fluid flows.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "rheology"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/fppimenta/rheoTool",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "viscoelastic",
+        "rheology",
+        "cfd"
+      ],
+      "id": 151
+    },
+    {
+      "name": "foamlib",
+      "one_line_profile": "Modern Python interface for interacting with OpenFOAM",
+      "detailed_description": "foamlib provides a Pythonic interface to interact with OpenFOAM cases, facilitating automation, configuration, and execution of CFD simulations.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "workflow",
+        "automation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gerlero/foamlib",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "python",
+        "automation",
+        "cfd"
+      ],
+      "id": 152
+    },
+    {
+      "name": "MANDYOC",
+      "one_line_profile": "Finite element code for mantle convection simulation",
+      "detailed_description": "MANDYOC is a finite element code built on PETSc to simulate thermo-chemical convection of the Earth's mantle.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "geophysics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ggciag/mandyoc",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "mantle-convection",
+        "geophysics",
+        "fem",
+        "petsc"
+      ],
+      "id": 153
+    },
+    {
+      "name": "Palabos",
+      "one_line_profile": "Parallel Lattice Boltzmann Solver",
+      "detailed_description": "Palabos is an open-source library and framework for computational fluid dynamics based on the Lattice Boltzmann method.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/gladk/palabos",
+      "help_website": [
+        "http://www.palabos.org/"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "lbm",
+        "cfd",
+        "lattice-boltzmann",
+        "fluid-dynamics"
+      ],
+      "id": 154
+    },
+    {
+      "name": "OpenSayal",
+      "one_line_profile": "Real-time GPU accelerated fluid simulator",
+      "detailed_description": "OpenSayal is a fluid simulation tool leveraging GPU acceleration for real-time performance.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Cuda",
+      "repo_url": "https://github.com/gopmur/OpenSayal",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gpu",
+        "fluid-simulation",
+        "cuda",
+        "real-time"
+      ],
+      "id": 155
+    },
+    {
+      "name": "GridapPETSc.jl",
+      "one_line_profile": "PETSc solvers interface for Gridap.jl",
+      "detailed_description": "GridapPETSc.jl provides an interface to use PETSc scalable solvers within the Gridap Julia finite element framework.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "solver_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/gridap/GridapPETSc.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "julia",
+        "petsc",
+        "fem",
+        "gridap"
+      ],
+      "id": 156
+    },
+    {
+      "name": "CUDA-LBM-simulator",
+      "one_line_profile": "GPU-accelerated Lattice-Boltzmann simulator",
+      "detailed_description": "A Lattice-Boltzmann fluid simulation implementation optimized for CUDA GPUs.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Cuda",
+      "repo_url": "https://github.com/henryfriedlander/CUDA-LBM-simulator",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "lbm",
+        "cuda",
+        "gpu",
+        "cfd"
+      ],
+      "id": 157
+    },
+    {
+      "name": "HPDDM",
+      "one_line_profile": "High-performance domain decomposition methods framework",
+      "detailed_description": "HPDDM is a framework providing high-performance implementations of domain decomposition methods for solving large-scale linear systems.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "linear_algebra"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/hpddm/hpddm",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "domain-decomposition",
+        "hpc",
+        "linear-solver",
+        "mpi"
+      ],
+      "id": 158
+    },
+    {
+      "name": "hyStrath",
+      "one_line_profile": "Hypersonic and rarefied gas dynamics simulation code",
+      "detailed_description": "hyStrath is a simulation code developed for hypersonic flows and rarefied gas dynamics.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/hystrath/hyStrath",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "hypersonic",
+        "rarefied-gas",
+        "cfd",
+        "aerodynamics"
+      ],
+      "id": 159
+    },
+    {
+      "name": "PFC3D_OpenFOAM",
+      "one_line_profile": "Coupling interface for PFC3D and OpenFOAM",
+      "detailed_description": "This tool enables fluid-particle interaction modeling by coupling PFC3D (Particle Flow Code) with OpenFOAM.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "coupled_physics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/itascaconsulting/PFC3D_OpenFOAM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "fluid-particle-interaction",
+        "openfoam",
+        "pfc3d",
+        "coupling"
+      ],
+      "id": 160
+    },
+    {
+      "name": "petsc4foam",
+      "one_line_profile": "PETSc linear solvers for OpenFOAM",
+      "detailed_description": "petsc4foam integrates PETSc's high-performance linear solvers into the OpenFOAM framework to accelerate simulations.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "acceleration"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/iydon/petsc4foam",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "petsc",
+        "linear-solver",
+        "hpc"
+      ],
+      "id": 161
+    },
+    {
+      "name": "CfdOF",
+      "one_line_profile": "OpenFOAM CFD workbench for FreeCAD",
+      "detailed_description": "CfdOF is a FreeCAD workbench that provides a GUI and workflow for setting up and running OpenFOAM CFD simulations directly within FreeCAD.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "workflow"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jaheyns/CfdOF",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "freecad",
+        "openfoam",
+        "gui",
+        "cfd"
+      ],
+      "id": 162
+    },
+    {
+      "name": "MPLBM-UT",
+      "one_line_profile": "Multiphase Lattice Boltzmann Method library for porous media",
+      "detailed_description": "MPLBM-UT is a library for performing multiphase simulations based on the Shan-Chen model, specifically designed for complicated geometries like porous media.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/je-santos/MPLBM-UT",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "lbm",
+        "multiphase",
+        "porous-media",
+        "cfd"
+      ],
+      "id": 163
+    },
+    {
+      "name": "GustGrid",
+      "one_line_profile": "Real-time CUDA-powered airflow and thermal simulation tool",
+      "detailed_description": "A C++/OpenGL tool utilizing CUDA for real-time simulation of airflow and thermal dynamics in PC cases, enabling interactive visualization of fluid dynamics.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/josephHelfenbein/GustGrid",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cfd",
+        "cuda",
+        "real-time-simulation"
+      ],
+      "id": 164
+    },
+    {
+      "name": "cfd-bwb-airfoil-optimizer",
+      "one_line_profile": "Airfoil optimization workflow using SU2 and OpenMDAO",
+      "detailed_description": "An optimization framework for Blended Wing Body (BWB) airfoils, integrating the SU2 CFD solver with OpenMDAO for design optimization.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "optimization",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/juri117/cfd-bwb-airfoil-optimizer",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "optimization",
+        "su2",
+        "openmdao",
+        "cfd"
+      ],
+      "id": 165
+    },
+    {
+      "name": "apptainer-in-docker",
+      "one_line_profile": "Utility to run Apptainer (HPC containers) inside Docker",
+      "detailed_description": "A specialized infrastructure tool enabling the use of Apptainer (formerly Singularity), the standard HPC container runtime, within Docker environments, facilitating CI/CD for scientific workflows.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "containerization",
+        "hpc_deployment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Dockerfile",
+      "repo_url": "https://github.com/kaczmarj/apptainer-in-docker",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "apptainer",
+        "hpc",
+        "docker",
+        "ci-cd"
+      ],
+      "id": 166
+    },
+    {
+      "name": "openInjMoldSim",
+      "one_line_profile": "Open source injection molding simulation solver for OpenFOAM",
+      "detailed_description": "A specialized solver based on OpenFOAM for simulating the injection molding process, addressing manufacturing and fluid dynamics problems.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "manufacturing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/krebeljk/openInjMoldSim",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "injection-molding",
+        "cfd"
+      ],
+      "id": 167
+    },
+    {
+      "name": "pyFRF",
+      "one_line_profile": "Frequency Response Function library for structural dynamics",
+      "detailed_description": "A Python library for calculating and analyzing Frequency Response Functions (FRF), commonly used in structural dynamics and vibration analysis.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "analysis",
+        "signal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ladisk/pyFRF",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-dynamics",
+        "frf",
+        "vibration"
+      ],
+      "id": 168
+    },
+    {
+      "name": "butterfly",
+      "one_line_profile": "Python API for creating and running OpenFOAM cases",
+      "detailed_description": "A library that allows users to create, run, and manage OpenFOAM CFD simulations directly from Python, often used in conjunction with parametric design tools.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "simulation_setup"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ladybug-tools/butterfly",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "python-api",
+        "cfd"
+      ],
+      "id": 169
+    },
+    {
+      "name": "MF-LBM",
+      "one_line_profile": "High-performance Lattice Boltzmann Code for porous media flow",
+      "detailed_description": "A portable and scalable Lattice Boltzmann Method (LBM) solver developed by LANL for Direct Numerical Simulation (DNS) of flow in porous media.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "porous_media"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/lanl/MF-LBM",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "lbm",
+        "cfd",
+        "porous-media",
+        "hpc"
+      ],
+      "id": 170
+    },
+    {
+      "name": "Peridigm",
+      "one_line_profile": "Massively-parallel computational peridynamics code",
+      "detailed_description": "An open-source computational peridynamics code developed at Sandia National Laboratories for multi-physics simulations of material failure, built on Trilinos.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "solid_mechanics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/lianyp/Peridigm",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "peridynamics",
+        "sandia",
+        "material-failure",
+        "mpi"
+      ],
+      "id": 171
+    },
+    {
+      "name": "CFDBench",
+      "one_line_profile": "Benchmark for machine learning methods in fluid dynamics",
+      "detailed_description": "A large-scale benchmark suite designed to evaluate and compare machine learning methods applied to fluid dynamics problems.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "dataset"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/luo-yining/CFDBench",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "ai4s",
+        "cfd",
+        "benchmark",
+        "machine-learning"
+      ],
+      "id": 172
+    },
+    {
+      "name": "madupite",
+      "one_line_profile": "Distributed Solver for Large-Scale Markov Decision Processes",
+      "detailed_description": "A high-performance distributed solver for large-scale Markov Decision Processes (MDP) utilizing inexact policy iteration, applicable in operations research and control theory.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "optimization",
+        "solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/madupite/madupite",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mdp",
+        "distributed-computing",
+        "solver"
+      ],
+      "id": 173
+    },
+    {
+      "name": "pi-BEM",
+      "one_line_profile": "Parallel Boundary Element Method solver",
+      "detailed_description": "A parallel implementation of the Boundary Element Method (BEM) for solving partial differential equations, developed by SISSA mathLab.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mathLab/pi-BEM",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "bem",
+        "solver",
+        "parallel-computing"
+      ],
+      "id": 174
+    },
+    {
+      "name": "DAFoam",
+      "one_line_profile": "Discrete Adjoint with OpenFOAM for Multidisciplinary Design Optimization",
+      "detailed_description": "A high-fidelity Multidisciplinary Design Optimization (MDO) tool that implements the discrete adjoint method within the OpenFOAM framework.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "optimization",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/mdolab/dafoam",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "adjoint-optimization",
+        "openfoam",
+        "mdo",
+        "cfd"
+      ],
+      "id": 175
+    },
+    {
+      "name": "Syndeo",
+      "one_line_profile": "Tool to run Ray jobs on SLURM with Apptainer",
+      "detailed_description": "A workflow orchestration tool from MIT Lincoln Laboratory that enables running massively parallel Ray jobs on SLURM clusters using secure Apptainer containers.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "distributed_computing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/mit-ll/Syndeo",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "hpc",
+        "ray",
+        "slurm",
+        "apptainer"
+      ],
+      "id": 176
+    },
+    {
+      "name": "aither",
+      "one_line_profile": "3D block-structured Navier-Stokes solver",
+      "detailed_description": "A computational fluid dynamics solver for the Navier-Stokes equations, featuring 3D block-structured grids and explicit/implicit time stepping.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mnucci32/aither",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cfd",
+        "navier-stokes",
+        "solver"
+      ],
+      "id": 177
+    },
+    {
+      "name": "PETSc-FEM",
+      "one_line_profile": "General purpose parallel multi-physics finite element solver",
+      "detailed_description": "A general purpose, parallel, multi-physics finite element program developed at CIMEC, built on top of PETSc libraries for solving partial differential equations.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "finite_element_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mstorti/petscfem",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "fem",
+        "petsc",
+        "multi-physics",
+        "parallel-computing"
+      ],
+      "id": 178
+    },
+    {
+      "name": "SOLVERLAB",
+      "one_line_profile": "PDE solver environment using SALOME/MEDCoupling and PETSc",
+      "detailed_description": "A PDE solver laboratory that integrates SALOME/MEDCoupling for meshing and PETSc for matrix computations, designed for developing and testing numerical solvers.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/ndjinga/SOLVERLAB",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "pde",
+        "solver",
+        "petsc",
+        "salome"
+      ],
+      "id": 179
+    },
+    {
+      "name": "nekStab",
+      "one_line_profile": "Global linear stability analysis toolbox for Nek5000",
+      "detailed_description": "An open source toolbox based on Krylov methods for performing highly parallel global linear stability analysis of incompressible flow problems within the Nek5000 CFD framework.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "analysis",
+        "stability_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/nekStab/nekStab",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cfd",
+        "stability-analysis",
+        "nek5000",
+        "krylov-methods"
+      ],
+      "id": 180
+    },
+    {
+      "name": "BARAM",
+      "one_line_profile": "User-friendly CFD software package based on OpenFOAM",
+      "detailed_description": "A comprehensive CFD software package designed to be accessible ('CFD for Everyone'), providing a GUI and workflow management for OpenFOAM-based simulations.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "cfd_solver"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nextfoam/baram",
+      "help_website": [
+        "http://baramcfd.org"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "cfd",
+        "openfoam",
+        "gui",
+        "simulation"
+      ],
+      "id": 181
+    },
+    {
+      "name": "freeCappuccino",
+      "one_line_profile": "3D unstructured finite volume CFD solver",
+      "detailed_description": "A three-dimensional unstructured finite volume code designed for fluid flow simulations, supporting various mesh types and flow conditions.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "cfd_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/nikola-m/freeCappuccino",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cfd",
+        "finite-volume",
+        "fluid-dynamics",
+        "unstructured-grid"
+      ],
+      "id": 182
+    },
+    {
+      "name": "Phase",
+      "one_line_profile": "Unstructured 2D multiphase solver with immersed boundary methods",
+      "detailed_description": "A solver for unstructured 2D multiphase flows utilizing immersed boundary methods, designed for simulating complex fluid interfaces.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "multiphase_flow"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/obrienadam/Phase",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cfd",
+        "multiphase",
+        "immersed-boundary",
+        "2d-simulation"
+      ],
+      "id": 183
+    },
+    {
+      "name": "petsc-hs",
+      "one_line_profile": "Haskell bindings for PETSc and SLEPc",
+      "detailed_description": "Provides Haskell bindings for the PETSc and SLEPc scientific computing libraries, enabling high-performance linear algebra and PDE solving within the Haskell ecosystem.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "development",
+        "linear_algebra"
+      ],
+      "application_level": "library",
+      "primary_language": "Haskell",
+      "repo_url": "https://github.com/ocramz/petsc-hs",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "haskell",
+        "petsc",
+        "slepc",
+        "bindings"
+      ],
+      "id": 184
+    },
+    {
+      "name": "pyFreeFem",
+      "one_line_profile": "Python wrapper for FreeFem++",
+      "detailed_description": "A Python wrapper library for FreeFem++, allowing users to interface with the FreeFem++ finite element solver using Python scripts.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "finite_element_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/odevauchelle/pyFreeFem",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "freefem",
+        "python",
+        "fem",
+        "wrapper"
+      ],
+      "id": 185
+    },
+    {
+      "name": "OpenMPS",
+      "one_line_profile": "Moving Particle Semi-implicit (MPS) method implementation",
+      "detailed_description": "An open source implementation of the Moving Particle Semi-implicit (MPS) method, a meshless method for simulating free-surface fluid flows.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "particle_method"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/openmps/openmps",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "mps",
+        "particle-simulation",
+        "cfd",
+        "meshless"
+      ],
+      "id": 186
+    },
+    {
+      "name": "DOT",
+      "one_line_profile": "Decomposed Optimization Time Integration for deformation dynamics",
+      "detailed_description": "A domain-decomposed optimization method (DOT) for fast and reliable simulation of deformation dynamics, enabling efficient convergence in extreme conditions.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "dynamics_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/penn-graphics-research/DOT",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "simulation",
+        "optimization",
+        "deformation",
+        "dynamics"
+      ],
+      "id": 187
+    },
+    {
+      "name": "PERMON",
+      "one_line_profile": "Parallel quadratic programming solver package",
+      "detailed_description": "A main package for quadratic programming (PermonQP) within the PERMON toolbox, providing parallel, scalable numerical solvers often used in contact mechanics and SVMs.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "numerical_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/permon/permon",
+      "help_website": [
+        "http://permon.vsb.cz"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "quadratic-programming",
+        "solver",
+        "parallel-computing",
+        "petsc"
+      ],
+      "id": 188
+    },
+    {
+      "name": "PETSc",
+      "one_line_profile": "Portable Extensible Toolkit for Scientific Computation",
+      "detailed_description": "A suite of data structures and routines for the scalable (parallel) solution of scientific applications modeled by partial differential equations, widely used in CFD and physics simulations.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "linear_algebra"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/petsc/petsc",
+      "help_website": [
+        "https://petsc.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "hpc",
+        "linear-algebra",
+        "pde-solver",
+        "mpi"
+      ],
+      "id": 189
+    },
+    {
+      "name": "porousMultiphaseFoam",
+      "one_line_profile": "Porous multiphase flow toolbox for OpenFOAM",
+      "detailed_description": "An OpenFOAM toolbox dedicated to the simulation of multiphase flow and transport in porous media.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "porous_media_flow"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/phorgue/porousMultiphaseFoam",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "openfoam",
+        "porous-media",
+        "multiphase",
+        "cfd"
+      ],
+      "id": 190
+    },
+    {
+      "name": "PISM",
+      "one_line_profile": "Parallel Ice Sheet Model",
+      "detailed_description": "An open source, parallel, high-resolution ice sheet model designed for simulating the dynamics of ice sheets and glaciers.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "glaciology"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pism/pism",
+      "help_website": [
+        "https://pism.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "ice-sheet",
+        "climate-model",
+        "geophysics",
+        "parallel-computing"
+      ],
+      "id": 191
+    },
+    {
+      "name": "ramsesGPU",
+      "one_line_profile": "GPU-optimized Astrophysics MHD simulation code",
+      "detailed_description": "A version of the RAMSES astrophysics Magnetohydrodynamics (MHD) simulation code optimized for large clusters of GPUs.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "astrophysics_mhd"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pkestene/ramsesGPU",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "mhd",
+        "astrophysics",
+        "gpu",
+        "hpc"
+      ],
+      "id": 192
+    },
+    {
+      "name": "CreateFFD",
+      "one_line_profile": "Free-Form Deformation box generator for SU2",
+      "detailed_description": "A utility to generate Free-Form Deformation (FFD) boxes for the SU2 CFD solver, facilitating shape optimization workflows.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "mesh_deformation"
+      ],
+      "application_level": "tool",
+      "primary_language": "Glyph",
+      "repo_url": "https://github.com/pointwise/CreateFFD",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "su2",
+        "ffd",
+        "optimization",
+        "cfd"
+      ],
+      "id": 193
+    },
+    {
+      "name": "OpenFOAM-preCICE Adapter",
+      "one_line_profile": "Adapter for coupling OpenFOAM with preCICE",
+      "detailed_description": "An adapter that allows OpenFOAM to be coupled with other solvers for multi-physics simulations using the preCICE coupling library.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "coupling",
+        "multiphase_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/precice/openfoam-adapter",
+      "help_website": [
+        "https://precice.org/adapter-openfoam-overview.html"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "precice",
+        "fsi",
+        "coupling"
+      ],
+      "id": 194
+    },
+    {
+      "name": "preCICE",
+      "one_line_profile": "Coupling library for partitioned multi-physics simulations",
+      "detailed_description": "A coupling library and ecosystem for partitioned multi-physics and multi-scale simulations, supporting surface and volume coupling across various solvers.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "coupling",
+        "multiphase_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/precice/precice",
+      "help_website": [
+        "https://precice.org"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "coupling",
+        "multi-physics",
+        "fsi",
+        "cht"
+      ],
+      "id": 195
+    },
+    {
+      "name": "preCICE SU2 Adapter",
+      "one_line_profile": "Coupling adapter connecting the SU2 CFD solver with the preCICE coupling library",
+      "detailed_description": "An official adapter that allows the SU2 CFD solver to communicate with the preCICE coupling library, enabling partitioned multi-physics simulations such as fluid-structure interaction (FSI) or conjugate heat transfer (CHT).",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "coupling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/precice/su2-adapter",
+      "help_website": [
+        "https://precice.org/adapter-su2-overview.html"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "cfd",
+        "fsi",
+        "coupling",
+        "su2",
+        "precice"
+      ],
+      "id": 196
+    },
+    {
+      "name": "CFDTool",
+      "one_line_profile": "MATLAB-based CFD simulation toolbox with GUI",
+      "detailed_description": "A MATLAB toolbox for Computational Fluid Dynamics (CFD) that provides a GUI and integrated solvers (including OpenFOAM and SU2 interfaces) for modeling fluid flow and heat transfer.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/precise-simulation/cfdtool",
+      "help_website": [
+        "https://www.cfdtool.com"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "matlab",
+        "simulation",
+        "gui"
+      ],
+      "id": 197
+    },
+    {
+      "name": "FEATool Multiphysics",
+      "one_line_profile": "Fully integrated physics simulation platform for MATLAB",
+      "detailed_description": "A multi-physics simulation toolbox for MATLAB that integrates FEA, FEniCS, OpenFOAM, and SU2 solvers into a unified GUI environment for modeling coupled physical phenomena.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/precise-simulation/featool-multiphysics",
+      "help_website": [
+        "https://www.featool.com"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "multiphysics",
+        "fea",
+        "cfd",
+        "matlab",
+        "simulation"
+      ],
+      "id": 198
+    },
+    {
+      "name": "AlphaFold Singularity",
+      "one_line_profile": "Singularity container definition for deploying AlphaFold on HPC systems",
+      "detailed_description": "A Singularity/Apptainer recipe designed to build and deploy the AlphaFold protein structure prediction system in High Performance Computing (HPC) environments where Docker is not available.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "deployment",
+        "structure_prediction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/prehensilecode/alphafold_singularity",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "alphafold",
+        "singularity",
+        "hpc",
+        "container"
+      ],
+      "id": 199
+    },
+    {
+      "name": "CfdOF",
+      "one_line_profile": "Computational Fluid Dynamics (CFD) workbench for FreeCAD",
+      "detailed_description": "A FreeCAD workbench that integrates OpenFOAM and FEniCS solvers, allowing users to perform CFD simulations directly within the FreeCAD parametric 3D modeling environment.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/qingfengxia/Cfd",
+      "help_website": [
+        "https://github.com/qingfengxia/Cfd"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "freecad",
+        "openfoam",
+        "cfd",
+        "cad",
+        "simulation"
+      ],
+      "id": 200
+    },
+    {
+      "name": "Quokka",
+      "one_line_profile": "Two-moment AMR radiation hydrodynamics solver for astrophysics",
+      "detailed_description": "A high-performance radiation hydrodynamics code with adaptive mesh refinement (AMR) that runs on CPUs and GPUs, designed for astrophysical simulations involving self-gravity, particles, and magnetic fields.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "astrophysics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/quokka-astro/quokka",
+      "help_website": [
+        "https://quokka-astro.github.io/quokka/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "hydrodynamics",
+        "amr",
+        "gpu",
+        "astrophysics",
+        "radiation"
+      ],
+      "id": 201
+    },
+    {
+      "name": "EBGeometry",
+      "one_line_profile": "C++ library for embedded boundary (EB) geometry generation",
+      "detailed_description": "A package for generating embedded boundary geometries, useful for setting up complex domains in CFD and PDE simulations.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "mesh_generation",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rmrsk/EBGeometry",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "geometry",
+        "mesh",
+        "cfd",
+        "embedded-boundary"
+      ],
+      "id": 202
+    },
+    {
+      "name": "PolyMPS",
+      "one_line_profile": "Moving Particle Semi-implicit (MPS) method solver",
+      "detailed_description": "A C++/OpenMP implementation of the Moving Particle Semi-implicit (MPS) method for simulating free-surface fluid flows with polygon or particle walls.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rubensamarojr/polymps",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mps",
+        "particle-method",
+        "cfd",
+        "fluid-simulation"
+      ],
+      "id": 203
+    },
+    {
+      "name": "Sailfish",
+      "one_line_profile": "GPU-accelerated Lattice Boltzmann Method (LBM) simulation package",
+      "detailed_description": "A high-performance Computational Fluid Dynamics (CFD) solver based on the Lattice Boltzmann Method, optimized for GPUs using CUDA and OpenCL.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sailfish-team/sailfish",
+      "help_website": [
+        "https://sailfish.readthedocs.io/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "lbm",
+        "cfd",
+        "gpu",
+        "cuda",
+        "opencl"
+      ],
+      "id": 204
+    },
+    {
+      "name": "Spack Manager",
+      "one_line_profile": "Management tool for Spack-based project and machine deployments",
+      "detailed_description": "A tool developed by Sandia National Laboratories to manage complex Spack environments, facilitating the deployment of scientific software stacks on HPC machines.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "package_management",
+        "deployment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sandialabs/spack-manager",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "spack",
+        "hpc",
+        "deployment",
+        "package-manager"
+      ],
+      "id": 205
+    },
+    {
+      "name": "P3DFFT++",
+      "one_line_profile": "Parallel 3D Fast Fourier Transform library for multiscale simulations",
+      "detailed_description": "A comprehensive library for performing parallel 3D FFTs, designed as a framework for simulating multiscale phenomena in HPC environments, supporting 1D/2D/3D domain decomposition.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "numerical_method",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/sdsc/p3dfft.3",
+      "help_website": [
+        "https://www.p3dfft.net"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "fft",
+        "hpc",
+        "mpi",
+        "parallel-computing"
+      ],
+      "id": 206
+    },
+    {
+      "name": "REMORA",
+      "one_line_profile": "GPU-enabled version of the Regional Ocean Modeling System (ROMS)",
+      "detailed_description": "A GPU-accelerated implementation of the ROMS ocean model, developed under the SciDAC project to enable high-performance oceanographic simulations.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "oceanography"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/seahorce-scidac/REMORA",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "ocean-modeling",
+        "gpu",
+        "roms",
+        "scidac"
+      ],
+      "id": 207
+    },
+    {
+      "name": "Wave CLI",
+      "one_line_profile": "CLI tool for provisioning containers in scientific workflows",
+      "detailed_description": "The command-line interface for the Wave container service, used within the Nextflow ecosystem to provision and manage containers for reproducible scientific data pipelines.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "deployment",
+        "containerization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/seqeralabs/wave-cli",
+      "help_website": [
+        "https://wave.seqera.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "containers",
+        "nextflow",
+        "workflow",
+        "reproducibility"
+      ],
+      "id": 208
+    },
+    {
+      "name": "OpenHyperFLOW2D",
+      "one_line_profile": "Parallel CFD code for 2D compressible viscous flows",
+      "detailed_description": "A research and educational CFD code supporting MPI, OpenMP, and CUDA for simulating transient viscous compressible flows with RANS/URANS turbulence models.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/sergeas67/OpenHyperFLOW2D",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "mpi",
+        "cuda",
+        "compressible-flow"
+      ],
+      "id": 209
+    },
+    {
+      "name": "cudaParticlesFoam",
+      "one_line_profile": "GPU-accelerated particle tracking library for OpenFOAM",
+      "detailed_description": "A library that offloads Lagrangian particle tracking calculations to the GPU within the OpenFOAM CFD framework, accelerating multiphase flow simulations.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "particle_tracking"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/simzero/cudaParticlesFoam",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "gpu",
+        "cuda",
+        "particle-tracking"
+      ],
+      "id": 210
+    },
+    {
+      "name": "docker2singularity",
+      "one_line_profile": "Tool to convert Docker images to Singularity/Apptainer format",
+      "detailed_description": "A utility that facilitates the conversion of Docker container images into Singularity images, enabling the use of Docker-based scientific tools in HPC environments where Singularity is the standard.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "deployment",
+        "containerization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/singularityhub/docker2singularity",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docker",
+        "singularity",
+        "hpc",
+        "conversion"
+      ],
+      "id": 211
+    },
+    {
+      "name": "snek5000",
+      "one_line_profile": "Python framework for the Nek5000 CFD solver",
+      "detailed_description": "A Pythonic interface and workflow manager for Nek5000, a spectral element method CFD solver, simplifying simulation setup, execution, and post-processing.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/snek5000/snek5000",
+      "help_website": [
+        "https://snek5000.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "nek5000",
+        "cfd",
+        "python",
+        "workflow"
+      ],
+      "id": 212
+    },
+    {
+      "name": "Alamo",
+      "one_line_profile": "Solid mechanics solver with Adaptive Mesh Refinement (AMR)",
+      "detailed_description": "A C++ code providing explicit and implicit solvers for solid mechanics problems, utilizing adaptive mesh refinement to handle multiscale features efficiently.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "solid_mechanics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/solidsgroup/alamo",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "solid-mechanics",
+        "amr",
+        "solver",
+        "cpp"
+      ],
+      "id": 213
+    },
+    {
+      "name": "Spack",
+      "one_line_profile": "Flexible package manager for HPC software",
+      "detailed_description": "A multi-platform package manager designed for high-performance computing (HPC) that supports multiple versions, configurations, platforms, and compilers, essential for managing scientific software stacks.",
+      "domains": [
+        "P1-08"
+      ],
+      "subtask_category": [
+        "package_management",
+        "deployment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spack/spack",
+      "help_website": [
+        "https://spack.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "hpc",
+        "package-manager",
+        "build-tool",
+        "scientific-software"
+      ],
+      "id": 214
+    },
+    {
+      "name": "SPECTER",
+      "one_line_profile": "Spectral element PDE solver for Navier-Stokes equations",
+      "detailed_description": "A PDE solver focused on Navier-Stokes and related equations with arbitrary boundary conditions, employing Fourier (FC-Gram) expansions and parallelized using MPI-OpenMP-CUDA.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "cfd_simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/specter-cfd/SPECTER",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cfd",
+        "navier-stokes",
+        "spectral-methods",
+        "mpi",
+        "cuda"
+      ],
+      "id": 215
+    },
+    {
+      "name": "SU2 MeshTools",
+      "one_line_profile": "Mesh manipulation tools for the SU2 CFD suite",
+      "detailed_description": "A collection of tools for generating and manipulating computational meshes specifically designed for the SU2 multiphysics simulation suite.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "mesh_generation",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/su2code/MeshTools",
+      "help_website": [
+        "https://su2code.github.io"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "mesh-generation",
+        "cfd",
+        "su2",
+        "preprocessing"
+      ],
+      "id": 216
+    },
+    {
+      "name": "SU2",
+      "one_line_profile": "Open-source suite for multiphysics simulation and design",
+      "detailed_description": "SU2 is an open-source suite for multiphysics simulation and design, featuring flow analysis and design optimization capabilities for solving partial differential equations (PDEs) on unstructured meshes.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "cfd_simulation",
+        "design_optimization",
+        "multiphysics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/su2code/SU2",
+      "help_website": [
+        "https://su2code.github.io"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "cfd",
+        "optimization",
+        "multiphysics",
+        "finite-volume"
+      ],
+      "id": 217
+    },
+    {
+      "name": "TopOpt in PETSc Python",
+      "one_line_profile": "Python wrapper for PETSc-based topology optimization",
+      "detailed_description": "A Python wrapper and extended functionality for topology optimization using PETSc, enabling efficient large-scale optimization on Cartesian grids.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "topology_optimization",
+        "structural_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/thsmit/TopOpt_in_PETSc_wrapped_in_Python",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "topology-optimization",
+        "petsc",
+        "python-wrapper"
+      ],
+      "id": 218
+    },
+    {
+      "name": "TopOpt in PETSc",
+      "one_line_profile": "Scalable topology optimization using PETSc",
+      "detailed_description": "Topology optimization framework for linear elastic minimum compliance problems with volume constraints on 3D Cartesian grids, leveraging the PETSc library for scalability.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "topology_optimization",
+        "structural_mechanics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/topopt/TopOpt_in_PETSc",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "topology-optimization",
+        "petsc",
+        "hpc",
+        "3d"
+      ],
+      "id": 219
+    },
+    {
+      "name": "TopOpt in PETSc Transient",
+      "one_line_profile": "Transient topology optimization using PETSc",
+      "detailed_description": "Extension of the TopOpt in PETSc framework to handle time-dependent linear elastic problems on 3D Cartesian grids.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "topology_optimization",
+        "transient_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/topopt/TopOpt_in_PETSc_Transient",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "topology-optimization",
+        "time-dependent",
+        "petsc"
+      ],
+      "id": 220
+    },
+    {
+      "name": "ForTrilinos",
+      "one_line_profile": "Fortran interfaces for Trilinos packages",
+      "detailed_description": "Provides portable object-oriented Fortran interfaces to Trilinos C++ packages, enabling Fortran-based scientific applications to leverage Trilinos solvers and tools.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "scientific_computing",
+        "linear_algebra"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/trilinos/ForTrilinos",
+      "help_website": [
+        "https://trilinos.github.io/ForTrilinos/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "fortran",
+        "trilinos",
+        "hpc",
+        "interface"
+      ],
+      "id": 221
+    },
+    {
+      "name": "Trilinos",
+      "one_line_profile": "Algorithms and technologies for complex scientific problems",
+      "detailed_description": "A collection of open-source software libraries intended to be used as building blocks for the development of scientific applications, focusing on linear algebra, solvers, and discretization.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "scientific_computing",
+        "linear_algebra",
+        "solver_framework"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/trilinos/Trilinos",
+      "help_website": [
+        "https://trilinos.github.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "hpc",
+        "linear-algebra",
+        "solvers",
+        "scientific-computing"
+      ],
+      "id": 222
+    },
+    {
+      "name": "JAXFLUIDS",
+      "one_line_profile": "Differentiable fluid dynamics package using JAX",
+      "detailed_description": "A fully differentiable fluid dynamics package written in Python using JAX, enabling machine learning integration and gradient-based optimization for fluid problems.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "cfd_simulation",
+        "differentiable_physics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tumaer/JAXFLUIDS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "jax",
+        "cfd",
+        "differentiable-programming",
+        "fluid-dynamics"
+      ],
+      "id": 223
+    },
+    {
+      "name": "turbinesFoam",
+      "one_line_profile": "Actuator line modeling library for OpenFOAM",
+      "detailed_description": "An extension library for OpenFOAM that implements actuator line modeling for simulating wind and hydrokinetic turbines.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "wind_energy_simulation",
+        "turbulence_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/turbinesFoam/turbinesFoam",
+      "help_website": [
+        "https://turbinesfoam.github.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "wind-energy",
+        "actuator-line",
+        "cfd"
+      ],
+      "id": 224
+    },
+    {
+      "name": "Underworld2",
+      "one_line_profile": "Parallel particle-in-cell finite element geodynamics code",
+      "detailed_description": "A parallel, particle-in-cell, finite element code designed for large-scale geodynamics simulations and modelling of crustal and mantle dynamics.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "geodynamics_simulation",
+        "finite_element_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/underworldcode/underworld2",
+      "help_website": [
+        "https://underworld2.readthedocs.io"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "geodynamics",
+        "fem",
+        "particle-in-cell",
+        "mpi"
+      ],
+      "id": 225
+    },
+    {
+      "name": "hybridCentralSolvers",
+      "one_line_profile": "Hybrid central scheme solvers for OpenFOAM",
+      "detailed_description": "A collection of hybrid central solvers for OpenFOAM, including one-phase, two-phase, and multicomponent versions for compressible flow simulations.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "cfd_simulation",
+        "numerical_methods"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/unicfdlab/hybridCentralSolvers",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "compressible-flow",
+        "hybrid-central-schemes"
+      ],
+      "id": 226
+    },
+    {
+      "name": "libAcoustics",
+      "one_line_profile": "OpenFOAM library for far-field noise computation",
+      "detailed_description": "An OpenFOAM library for computing far-field noise using acoustic analogies (e.g., Curle, Ffowcs Williams-Hawkings).",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "aeroacoustics",
+        "noise_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/unicfdlab/libAcoustics",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "acoustics",
+        "noise",
+        "cfd"
+      ],
+      "id": 227
+    },
+    {
+      "name": "DRLinFluids",
+      "one_line_profile": "Deep Reinforcement Learning coupled with OpenFOAM",
+      "detailed_description": "An open-source Python platform for coupling deep reinforcement learning (DRL) algorithms with OpenFOAM for flow control and optimization problems.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "flow_control",
+        "reinforcement_learning",
+        "cfd_simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/venturi123/DRLinFluids",
+      "help_website": [
+        "https://drlinfluids.readthedocs.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "openfoam",
+        "reinforcement-learning",
+        "flow-control",
+        "python"
+      ],
+      "id": 228
+    },
+    {
+      "name": "Waiwera",
+      "one_line_profile": "Parallel geothermal flow simulator",
+      "detailed_description": "A parallel, open-source simulator for geothermal flow and heat transport in porous media, designed for high-performance computing environments.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "geothermal_simulation",
+        "porous_media_flow"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/waiwera/waiwera",
+      "help_website": [
+        "https://waiwera.github.io"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "geothermal",
+        "groundwater",
+        "heat-transfer",
+        "parallel-computing"
+      ],
+      "id": 229
+    },
+    {
+      "name": "TopADD",
+      "one_line_profile": "Parallel topology optimization framework using PETSc",
+      "detailed_description": "A 2D/3D integrated topology optimization parallel-computing framework designed for arbitrary design domains, leveraging PETSc for high-performance computing.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "optimization",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/wonderfulzzd/TopADD_2D_3D_Arbitrary_TopOpt_in_PETSc",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "topology-optimization",
+        "petsc",
+        "hpc",
+        "finite-element"
+      ],
+      "id": 230
+    },
+    {
+      "name": "X3D2",
+      "one_line_profile": "Next-generation high-fidelity CFD solver",
+      "detailed_description": "A high-order finite-difference flow solver designed for high-fidelity computational fluid dynamics simulations, serving as the next-generation iteration of XCompact3d.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/xcompact3d/x3d2",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cfd",
+        "turbulence",
+        "high-fidelity",
+        "fluid-dynamics"
+      ],
+      "id": 231
+    },
+    {
+      "name": "ofpp",
+      "one_line_profile": "OpenFOAM Python Parser for data conversion",
+      "detailed_description": "A Python library to parse OpenFOAM output files and convert field data directly into Numpy arrays for efficient post-processing and analysis.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "format_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xu-xianghua/ofpp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "openfoam",
+        "numpy",
+        "cfd-post-processing",
+        "parser"
+      ],
+      "id": 232
+    },
+    {
+      "name": "navier_stokes_multigrid",
+      "one_line_profile": "3D Navier-Stokes solver with parallel multigrid",
+      "detailed_description": "A CFD solver for the 3D Navier-Stokes equations implementing a pressure-correction scheme and parallel multigrid V-cycle for efficient computation.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/yskmt/navier_stokes_multigrid",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "navier-stokes",
+        "multigrid",
+        "cfd",
+        "parallel-computing"
+      ],
+      "id": 233
+    },
+    {
+      "name": "turbulent-cfd",
+      "one_line_profile": "GPU-accelerated turbulent CFD solver",
+      "detailed_description": "A computational fluid dynamics solver for turbulent flows, leveraging CUDA and Vulkan for hardware acceleration on CPUs and GPUs.",
+      "domains": [
+        "P1",
+        "P1-08"
+      ],
+      "subtask_category": [
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/yuphin/turbulent-cfd",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cfd",
+        "cuda",
+        "vulkan",
+        "gpu-computing",
+        "turbulence"
+      ],
+      "id": 234
+    },
+    {
+      "name": "dugksFoam",
+      "one_line_profile": "OpenFOAM solver for Discrete Unified Gas Kinetic Scheme",
+      "detailed_description": "An OpenFOAM-based solver implementing the Discrete Unified Gas Kinetic Scheme (DUGKS) for simulating multiscale flow problems governed by the Boltzmann model equation.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/zhulianhua/dugksFoam",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "openfoam",
+        "boltzmann-equation",
+        "dugks",
+        "gas-kinetics"
+      ],
+      "id": 235
+    }
+  ]
+}

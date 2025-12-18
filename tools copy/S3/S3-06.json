@@ -1,0 +1,751 @@
+{
+  "generated_at": "2025-12-16T07:40:34.831612+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "S3",
+      "leaf_cluster_name": "药物发现-虚拟筛选与对接生态",
+      "domain": "Drug Discovery",
+      "typical_objects": "ligands/receptors",
+      "task_chain": "构象→对接→打分→再打分→验证→工作流",
+      "tool_form": "对接引擎 + HPC/workflow + 平台"
+    },
+    "unit": {
+      "unit_id": "S3-06",
+      "unit_name": "Benchmark与验证（pose/affinity）",
+      "target_scale": "150–300",
+      "coverage_tools": "benchmarks、metrics、datasets"
+    },
+    "search": {
+      "target_candidates": 300,
+      "queries": [
+        "[GH] DEKOIS",
+        "[GH] MUV",
+        "[GH] LIT-PCBA",
+        "[GH] spyrmsd",
+        "[GH] PDBbind",
+        "[GH] DUD-E",
+        "[GH] ODDT",
+        "[GH] PoseBusters",
+        "[GH] CASF",
+        "[GH] docking benchmark",
+        "[GH] scoring function benchmark",
+        "[GH] pose prediction metrics",
+        "[GH] binding affinity evaluation",
+        "[GH] virtual screening validation",
+        "[GH] RMSD calculation ligand",
+        "[GH] enrichment factor calculation",
+        "[GH] protein-ligand interaction metrics",
+        "[GH] decoy generation",
+        "[GH] CASF scoring",
+        "[GH] DUD-E dataset tools",
+        "[GH] docking pose validation",
+        "[GH] structure-based drug design benchmark",
+        "[WEB] molecular docking benchmark tools github",
+        "[WEB] protein ligand binding affinity benchmark github",
+        "[WEB] CASF scoring function assessment github",
+        "[WEB] virtual screening enrichment metrics github",
+        "[WEB] PoseBusters docking validation github",
+        "[WEB] ligand RMSD calculation tool github"
+      ],
+      "total_candidates": 430,
+      "tool_candidates": 107,
+      "final_tools": 27
+    }
+  },
+  "tools": [
+    {
+      "name": "PoseX",
+      "one_line_profile": "A benchmark dataset and toolkit for evaluating molecular docking pose generation",
+      "detailed_description": "PoseX is a benchmark designed to evaluate the quality of molecular docking poses. It provides datasets and metrics to assess the performance of docking algorithms in generating biologically relevant ligand conformations.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "pose_prediction"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CataAI/PoseX",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "benchmark",
+        "pose-prediction"
+      ],
+      "id": 1
+    },
+    {
+      "name": "MolScore",
+      "one_line_profile": "Automated scoring function framework for evaluating de novo molecular design models",
+      "detailed_description": "MolScore is a comprehensive scoring function framework designed to facilitate and standardize the evaluation of goal-directed generative models for de novo molecular design. It integrates various metrics including docking scores, ligand efficiency, and synthetic accessibility.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "molecule_generation",
+        "scoring"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MorganCThomas/MolScore",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scoring-function",
+        "generative-models",
+        "drug-design"
+      ],
+      "id": 2
+    },
+    {
+      "name": "PickyBinder",
+      "one_line_profile": "Automated workflow for benchmarking molecular docking tools against high-quality datasets",
+      "detailed_description": "PickyBinder is a workflow designed to benchmark various docking tools. It focuses on using high-quality protein-ligand datasets to evaluate the accuracy and reliability of docking predictions.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "docking"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PickyBinders/PickyBinder",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "benchmark",
+        "workflow"
+      ],
+      "id": 3
+    },
+    {
+      "name": "spyrmsd",
+      "one_line_profile": "Python tool for symmetry-corrected RMSD calculation in molecular structures",
+      "detailed_description": "spyrmsd is a Python library for calculating Root-Mean-Square Deviation (RMSD) between molecular structures. It specifically handles symmetry correction, making it essential for accurately comparing ligand poses in docking and molecular dynamics.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "metric_calculation",
+        "structure_comparison"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RMeli/spyrmsd",
+      "help_website": [
+        "https://spyrmsd.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "rmsd",
+        "structural-biology",
+        "cheminformatics"
+      ],
+      "id": 4
+    },
+    {
+      "name": "FDA",
+      "one_line_profile": "Folding-Docking-Affinity framework for unified protein-ligand binding affinity prediction",
+      "detailed_description": "FDA (Folding-Docking-Affinity) is a framework that integrates protein folding, molecular docking, and affinity prediction into a unified pipeline for evaluating protein-ligand interactions.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "affinity_prediction",
+        "docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ZhiGroup/FDA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "binding-affinity",
+        "docking",
+        "protein-folding"
+      ],
+      "id": 5
+    },
+    {
+      "name": "GEMS",
+      "one_line_profile": "Graph-based method for protein-ligand binding affinity prediction using protein language models",
+      "detailed_description": "GEMS is a deep learning model for predicting protein-ligand binding affinity. It leverages Graph Neural Networks (GNNs) and transfer learning from Protein Language Models (PLMs) to improve prediction accuracy.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "affinity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/camlab-ethz/GEMS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "binding-affinity",
+        "gnn",
+        "protein-language-models"
+      ],
+      "id": 6
+    },
+    {
+      "name": "rmsd",
+      "one_line_profile": "Lightweight tool to calculate Root-Mean-Square Deviation (RMSD) between two molecular structures",
+      "detailed_description": "This tool calculates the Root-Mean-Square Deviation (RMSD) of two molecules in XYZ or PDB format. It supports rotation (superposition) to find the minimum RMSD, a critical metric for validating docking poses.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "metric_calculation",
+        "structure_comparison"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/charnley/rmsd",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "rmsd",
+        "structural-biology",
+        "superposition"
+      ],
+      "id": 7
+    },
+    {
+      "name": "Uni-Mol",
+      "one_line_profile": "3D molecular representation learning framework for drug design",
+      "detailed_description": "Uni-Mol is a universal 3D molecular representation learning framework that significantly improves performance in various drug design tasks, including molecular property prediction and 3D conformation generation.",
+      "domains": [
+        "S3",
+        "Chemistry",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "molecular_representation",
+        "property_prediction",
+        "conformation_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepmodeling/Uni-Mol",
+      "help_website": [
+        "https://github.com/deepmodeling/Uni-Mol"
+      ],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "molecular-representation",
+        "3d-structure"
+      ],
+      "id": 8
+    },
+    {
+      "name": "Apobind",
+      "one_line_profile": "Dataset of apo structures for protein-ligand complexes",
+      "detailed_description": "Apobind provides a curated collection of apo (unbound) protein structures corresponding to the protein-ligand complexes found in the PDBbind database, useful for docking validation.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "docking_validation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/devalab/Apobind",
+      "help_website": [
+        "https://github.com/devalab/Apobind"
+      ],
+      "license": null,
+      "tags": [
+        "pdbbind",
+        "apo-structures",
+        "docking"
+      ],
+      "id": 9
+    },
+    {
+      "name": "dockstring",
+      "one_line_profile": "Benchmark dataset and package for molecular docking",
+      "detailed_description": "dockstring is a Python package that facilitates molecular docking experiments and provides a highly curated dataset with realistic benchmark tasks for evaluating drug discovery models.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "molecular_docking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dockstring/dockstring",
+      "help_website": [
+        "https://github.com/dockstring/dockstring"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "docking",
+        "benchmark",
+        "dataset"
+      ],
+      "id": 10
+    },
+    {
+      "name": "Uni-Dock-Benchmarks",
+      "one_line_profile": "Benchmarking datasets for Uni-Dock system",
+      "detailed_description": "A curated collection of datasets and benchmarking tests designed to evaluate the performance and accuracy of the Uni-Dock docking system, suitable for continuous integration and comparative studies.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "docking_validation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dptech-corp/Uni-Dock-Benchmarks",
+      "help_website": [
+        "https://github.com/dptech-corp/Uni-Dock-Benchmarks"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "docking",
+        "benchmark",
+        "uni-dock"
+      ],
+      "id": 11
+    },
+    {
+      "name": "Muview2",
+      "one_line_profile": "Visualization tool for micromagnetic simulations",
+      "detailed_description": "Muview2 is a 3D visualization tool designed for rendering micromagnetic simulation data generated by Mumax or OOMMF software.",
+      "domains": [
+        "Physics",
+        "Magnetism"
+      ],
+      "subtask_category": [
+        "visualization",
+        "simulation_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/grahamrow/Muview2",
+      "help_website": [
+        "https://github.com/grahamrow/Muview2"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "visualization",
+        "micromagnetics",
+        "mumax"
+      ],
+      "id": 12
+    },
+    {
+      "name": "rmsd-tool",
+      "one_line_profile": "Tool for calculating RMSD between molecular structures",
+      "detailed_description": "A Fortran-based tool from the Grimme Lab to calculate the Root Mean Square Deviation (RMSD) between molecular structures, essential for structural comparison.",
+      "domains": [
+        "Chemistry",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "structural_analysis",
+        "rmsd_calculation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/grimme-lab/rmsd-tool",
+      "help_website": [
+        "https://github.com/grimme-lab/rmsd-tool"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "rmsd",
+        "structural-biology",
+        "chemistry"
+      ],
+      "id": 13
+    },
+    {
+      "name": "BM5-clean",
+      "one_line_profile": "Cleaned Docking Benchmark 5 dataset",
+      "detailed_description": "A cleaned version of the Docking Benchmark 5 (BM5) dataset, ready for use with HADDOCK and other docking protocols for validation purposes.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Roff",
+      "repo_url": "https://github.com/haddocking/BM5-clean",
+      "help_website": [
+        "https://github.com/haddocking/BM5-clean"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "docking",
+        "benchmark",
+        "haddock"
+      ],
+      "id": 14
+    },
+    {
+      "name": "MemCplxDB",
+      "one_line_profile": "Membrane protein complexes docking benchmark",
+      "detailed_description": "A benchmark dataset specifically for membrane protein complexes, used to evaluate docking algorithms on membrane-embedded systems.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/haddocking/MemCplxDB",
+      "help_website": [
+        "https://github.com/haddocking/MemCplxDB"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "membrane-proteins",
+        "docking",
+        "benchmark"
+      ],
+      "id": 15
+    },
+    {
+      "name": "Prot-DNABenchmark",
+      "one_line_profile": "Protein-DNA docking benchmark dataset",
+      "detailed_description": "A benchmark dataset for evaluating protein-DNA docking methods, maintained by the HADDOCK team.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/haddocking/Prot-DNABenchmark",
+      "help_website": [
+        "https://github.com/haddocking/Prot-DNABenchmark"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "protein-dna",
+        "docking",
+        "benchmark"
+      ],
+      "id": 16
+    },
+    {
+      "name": "cyclic-peptides",
+      "one_line_profile": "Cyclic peptide-protein complexes benchmark",
+      "detailed_description": "A benchmark dataset containing cyclic peptide-protein complexes, including associated scripts and data for docking validation.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/haddocking/cyclic-peptides",
+      "help_website": [
+        "https://github.com/haddocking/cyclic-peptides"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "cyclic-peptides",
+        "docking",
+        "benchmark"
+      ],
+      "id": 17
+    },
+    {
+      "name": "CAPLA",
+      "one_line_profile": "Deep learning model for protein-ligand binding affinity prediction",
+      "detailed_description": "CAPLA is a deep learning approach based on a cross-attention mechanism for improved prediction of protein-ligand binding affinity.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "affinity_prediction",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": null,
+      "repo_url": "https://github.com/lennylv/CAPLA",
+      "help_website": [
+        "https://github.com/lennylv/CAPLA"
+      ],
+      "license": null,
+      "tags": [
+        "deep-learning",
+        "binding-affinity",
+        "cross-attention"
+      ],
+      "id": 18
+    },
+    {
+      "name": "PoseBusters",
+      "one_line_profile": "Plausibility checks for generated molecule poses",
+      "detailed_description": "PoseBusters is a Python package that performs a series of chemical and physical plausibility checks on generated molecule poses, serving as a validation tool for docking and generative models.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "pose_validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/maabuu/posebusters",
+      "help_website": [
+        "https://posebusters.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "validation",
+        "molecular-docking",
+        "cheminformatics"
+      ],
+      "id": 19
+    },
+    {
+      "name": "PoseBusters EM",
+      "one_line_profile": "Energy minimization module for PoseBusters",
+      "detailed_description": "A post-processing tool for energy minimization of molecular poses, used as part of the PoseBusters validation suite.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "energy_minimization",
+        "pose_refinement"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/maabuu/posebusters_em",
+      "help_website": [
+        "https://github.com/maabuu/posebusters_em"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "energy-minimization",
+        "molecular-modeling"
+      ],
+      "id": 20
+    },
+    {
+      "name": "CasFinder",
+      "one_line_profile": "CRISPR-Cas systems models for MacSyFinder",
+      "detailed_description": "A collection of HMM profiles and model definitions for detecting CRISPR-Cas systems using the MacSyFinder tool.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "sequence_analysis",
+        "system_identification"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/macsy-models/CasFinder",
+      "help_website": [
+        "https://github.com/macsy-models/CasFinder"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "crispr",
+        "macsyfinder",
+        "hmm"
+      ],
+      "id": 21
+    },
+    {
+      "name": "ODDT",
+      "one_line_profile": "Open Drug Discovery Toolkit",
+      "detailed_description": "ODDT (Open Drug Discovery Toolkit) is a modular and comprehensive library for computer-aided drug discovery (CADD), providing tools for molecular interaction scoring, docking, and virtual screening.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "virtual_screening",
+        "scoring",
+        "docking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/oddt/oddt",
+      "help_website": [
+        "http://oddt.readthedocs.org"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cadd",
+        "chemoinformatics",
+        "docking"
+      ],
+      "id": 22
+    },
+    {
+      "name": "protein-ligand-benchmark",
+      "one_line_profile": "Benchmark dataset for free energy calculations",
+      "detailed_description": "A curated benchmark dataset maintained by the Open Force Field Initiative for evaluating protein-ligand binding free energy calculations.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "free_energy_calculation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openforcefield/protein-ligand-benchmark",
+      "help_website": [
+        "https://github.com/openforcefield/protein-ligand-benchmark"
+      ],
+      "license": "MIT",
+      "tags": [
+        "free-energy",
+        "benchmark",
+        "openforcefield"
+      ],
+      "id": 23
+    },
+    {
+      "name": "antibody_benchmark",
+      "one_line_profile": "Antibody-Antigen Docking and Affinity Benchmark",
+      "detailed_description": "A standard benchmark dataset for evaluating antibody-antigen docking and affinity prediction methods, maintained by the Pierce Lab.",
+      "domains": [
+        "S3",
+        "S3-06",
+        "Immunology"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "antibody_design"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/piercelab/antibody_benchmark",
+      "help_website": [
+        "https://github.com/piercelab/antibody_benchmark"
+      ],
+      "license": "CC-BY-4.0",
+      "tags": [
+        "antibody",
+        "docking",
+        "benchmark"
+      ],
+      "id": 24
+    },
+    {
+      "name": "RDKit",
+      "one_line_profile": "Open source chemoinformatics and machine learning software",
+      "detailed_description": "RDKit is a collection of chemoinformatics and machine learning software written in C++ and Python, widely used for molecular descriptor generation, fingerprinting, and chemical database handling.",
+      "domains": [
+        "S3",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "chemoinformatics",
+        "molecular_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rdkit/rdkit",
+      "help_website": [
+        "http://www.rdkit.org"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "chemoinformatics",
+        "molecular-descriptors",
+        "fingerprints"
+      ],
+      "id": 25
+    },
+    {
+      "name": "VSDS-VD",
+      "one_line_profile": "Benchmark suite for AI-powered docking methods",
+      "detailed_description": "VSDS-VD (Virtual Screening Docking Score - Validation Dataset) is a benchmarking repository for evaluating and comparing AI-powered molecular docking methods in the context of virtual screening.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "virtual_screening"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shukai1997/VSDS-VD",
+      "help_website": [
+        "https://github.com/shukai1997/VSDS-VD"
+      ],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "benchmark",
+        "virtual-screening"
+      ],
+      "id": 26
+    },
+    {
+      "name": "muv",
+      "one_line_profile": "Generator for Maximum Unbiased Validation (MUV) datasets in virtual screening",
+      "detailed_description": "A Python tool designed to generate Maximum Unbiased Validation (MUV) datasets for benchmarking virtual screening methods. It implements algorithms to select active and decoy molecules that are topologically distinct but share similar physical properties, thereby removing artificial enrichment bias and providing a rigorous standard for validating docking and scoring functions.",
+      "domains": [
+        "S3",
+        "S3-06"
+      ],
+      "subtask_category": [
+        "dataset_generation",
+        "benchmarking",
+        "validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/skearnes/muv",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "virtual-screening",
+        "benchmarking",
+        "drug-discovery",
+        "dataset-generation",
+        "muv"
+      ],
+      "id": 27
+    }
+  ]
+}

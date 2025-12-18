@@ -1,0 +1,3610 @@
+{
+  "generated_at": "2025-12-17T12:31:53.872138+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "SYSBIO1",
+      "leaf_cluster_name": "计算系统生物学与动力学生态",
+      "domain": "Systems Biology",
+      "typical_objects": "ODE/PDE 模型, 代谢网络, 信号通路, 参数与不确定性",
+      "task_chain": "建模→参数估计→仿真→敏感性/UQ→反演→验证",
+      "tool_form": "建模语言/仿真器 + 参数估计/UQ + 数据拟合工作流"
+    },
+    "unit": {
+      "unit_id": "SYSBIO1-07",
+      "unit_name": "AI4SysBio（替代模型/推断加速/闭环设计）",
+      "target_scale": "200–450",
+      "coverage_tools": "surrogates、neural ODE、active learning"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] pypesto",
+        "[GH] AMICI",
+        "[GH] CellBox",
+        "[GH] NeuralPDE.jl",
+        "[GH] DataDrivenDiffEq.jl",
+        "[GH] sbi",
+        "[GH] PySINDy",
+        "[GH] torchdiffeq",
+        "[GH] DiffEqFlux.jl",
+        "[GH] neural ode",
+        "[GH] universal differential equations",
+        "[GH] surrogate model biology",
+        "[GH] simulation based inference",
+        "[GH] parameter estimation ml",
+        "[GH] systems biology deep learning",
+        "[GH] biological network inference",
+        "[GH] differentiable simulation",
+        "[GH] physics informed neural networks biology",
+        "[GH] data driven dynamics",
+        "[GH] active learning biology",
+        "[GH] metabolic flux machine learning",
+        "[GH] gene regulatory network neural network",
+        "[WEB] neural ode systems biology github",
+        "[WEB] machine learning for ode parameter estimation github",
+        "[WEB] surrogate modeling for biological systems github",
+        "[WEB] simulation based inference tools biology github",
+        "[WEB] data driven differential equations biology github"
+      ],
+      "total_candidates": 688,
+      "tool_candidates": 299,
+      "final_tools": 145
+    }
+  },
+  "tools": [
+    {
+      "name": "AMICI",
+      "one_line_profile": "High-performance sensitivity analysis for large ordinary differential equation models",
+      "detailed_description": "AMICI provides a multi-language (Python, C++, Matlab) interface for the SUNDIALS solvers CVODES (for ordinary differential equations) and IDAS (for algebraic differential equations). It is designed for efficient sensitivity analysis of large-scale models in systems biology.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "sensitivity_analysis",
+        "ode_solver",
+        "parameter_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AMICI-dev/AMICI",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "ode",
+        "sensitivity-analysis",
+        "systems-biology",
+        "sundials"
+      ],
+      "id": 1
+    },
+    {
+      "name": "ClimODE",
+      "one_line_profile": "Climate and Weather Forecasting With Physics-informed Neural ODEs",
+      "detailed_description": "ClimODE is a model implementation that utilizes Physics-informed Neural Ordinary Differential Equations for climate and weather forecasting tasks, integrating physical laws with deep learning.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "forecasting",
+        "simulation",
+        "neural_ode"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Aalto-QuML/ClimODE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "climate-forecasting",
+        "neural-ode",
+        "physics-informed-ml"
+      ],
+      "id": 2
+    },
+    {
+      "name": "BattMo.jl",
+      "one_line_profile": "Differentiable simulation of batteries in Julia",
+      "detailed_description": "BattMo.jl is a battery simulation tool written in Julia that leverages Jutul.jl for differentiable physics simulations, enabling optimization and parameter estimation for battery models.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "differentiable_physics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/BattMoTeam/BattMo.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "battery-simulation",
+        "julia",
+        "differentiable-programming"
+      ],
+      "id": 3
+    },
+    {
+      "name": "NeuralODE-ROM",
+      "one_line_profile": "Reduced-order Model for Fluid Flows via Neural ODEs",
+      "detailed_description": "A repository implementing Reduced-order Models (ROM) for fluid dynamics using Neural Ordinary Differential Equations, facilitating efficient simulation of complex flow dynamics.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "reduced_order_modeling",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CarlosJose126/NeuralODE-ROM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "fluid-dynamics",
+        "neural-ode",
+        "rom"
+      ],
+      "id": 4
+    },
+    {
+      "name": "exponax",
+      "one_line_profile": "Efficient Differentiable n-d PDE solvers in JAX",
+      "detailed_description": "Exponax provides efficient, differentiable solvers for n-dimensional Partial Differential Equations (PDEs) using JAX, suitable for physics-informed machine learning and gradient-based optimization.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "differentiable_physics"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Ceyron/exponax",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "jax",
+        "pde",
+        "differentiable-programming"
+      ],
+      "id": 5
+    },
+    {
+      "name": "universal_differential_equations",
+      "one_line_profile": "Codebase for Universal Differential Equations for Scientific Machine Learning",
+      "detailed_description": "This repository contains the reference implementation and examples for Universal Differential Equations (UDEs), a framework combining scientific models with machine learning to discover missing physics and dynamics.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "modeling",
+        "scientific_machine_learning",
+        "equation_discovery"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/ChrisRackauckas/universal_differential_equations",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sciml",
+        "ude",
+        "julia",
+        "neural-ode"
+      ],
+      "id": 6
+    },
+    {
+      "name": "DiffSMat",
+      "one_line_profile": "Differentiable scattering matrix computation for photonic devices",
+      "detailed_description": "DiffSMat is a C++ library for differentiable scattering matrix computations, enabling the inverse design and optimization of photonic devices through gradient-based methods.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "inverse_design",
+        "photonics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Columbia-Computational-X-Lab/DiffSMat",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "photonics",
+        "differentiable-simulation",
+        "scattering-matrix"
+      ],
+      "id": 7
+    },
+    {
+      "name": "StiffNeuralODE",
+      "one_line_profile": "Stiff Neural Ordinary Differential Equations solver",
+      "detailed_description": "Implements methods for training Neural ODEs on stiff systems, addressing stability and performance issues common in chemical and biological kinetics modeling.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "ode_solver",
+        "training_algorithm"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/DENG-MIT/StiffNeuralODE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "stiff-ode",
+        "neural-ode",
+        "sciml"
+      ],
+      "id": 8
+    },
+    {
+      "name": "reactorch",
+      "one_line_profile": "Differentiable Reacting Flow Simulation Package in PyTorch",
+      "detailed_description": "Reactorch is a differentiable simulation package for chemically reacting flows, implemented in PyTorch to facilitate machine learning integration and sensitivity analysis in combustion and chemical engineering.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "chemical_kinetics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DENG-MIT/reactorch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reacting-flow",
+        "pytorch",
+        "differentiable-simulation"
+      ],
+      "id": 9
+    },
+    {
+      "name": "neural-odes-segmentation",
+      "one_line_profile": "Neural ODEs for Semantic Segmentation in Pathology",
+      "detailed_description": "A deep learning model implementation applying Neural ODEs to the semantic segmentation of colon glands in medical imaging, demonstrating the utility of continuous-depth models in biomedical image analysis.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "medical_imaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DIAGNijmegen/neural-odes-segmentation",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-ode",
+        "medical-imaging",
+        "segmentation"
+      ],
+      "id": 10
+    },
+    {
+      "name": "sbi_lens",
+      "one_line_profile": "Weak Lensing Implicit Inference with Differentiable Simulator",
+      "detailed_description": "A Python package for performing Simulation-Based Inference (SBI) in cosmology, specifically for weak lensing, utilizing differentiable simulators for gradient-based inference.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "inference",
+        "cosmology",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DifferentiableUniverseInitiative/sbi_lens",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sbi",
+        "cosmology",
+        "differentiable-simulation",
+        "weak-lensing"
+      ],
+      "id": 11
+    },
+    {
+      "name": "MARBLE",
+      "one_line_profile": "Data-driven representation of non-linear dynamics over manifolds",
+      "detailed_description": "MARBLE is a package for learning representations of non-linear dynamical systems on manifolds using statistical distributions of local phase portrait features, applicable to neural and physical systems.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "dynamics_modeling",
+        "representation_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Dynamics-of-Neural-Systems-Lab/MARBLE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dynamical-systems",
+        "manifolds",
+        "representation-learning"
+      ],
+      "id": 12
+    },
+    {
+      "name": "JSD-SBI",
+      "one_line_profile": "Toolbox for Sequential Bayesian Inference in uncertain nonlinear dynamic systems",
+      "detailed_description": "A toolbox designed for performing Sequential Bayesian Inference (SBI) on uncertain nonlinear dynamic systems, facilitating parameter estimation and uncertainty quantification.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "inference",
+        "bayesian_inference",
+        "dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ETH-WindMil/JSD-SBI",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "sbi",
+        "bayesian-inference",
+        "dynamic-systems"
+      ],
+      "id": 13
+    },
+    {
+      "name": "augmented-neural-odes",
+      "one_line_profile": "PyTorch implementation of Augmented Neural ODEs",
+      "detailed_description": "A widely used implementation of Augmented Neural ODEs, which improves the expressivity and stability of standard Neural ODEs by augmenting the state space.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "modeling",
+        "neural_ode"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/EmilienDupont/augmented-neural-odes",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-ode",
+        "pytorch",
+        "deep-learning"
+      ],
+      "id": 14
+    },
+    {
+      "name": "Enzyme",
+      "one_line_profile": "High-performance automatic differentiation of LLVM and MLIR",
+      "detailed_description": "Enzyme is a compiler plugin that performs automatic differentiation (AD) on LLVM IR, enabling high-performance gradient computation for scientific codes written in languages like C, C++, Rust, and Julia.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "automatic_differentiation",
+        "compiler"
+      ],
+      "application_level": "library",
+      "primary_language": "LLVM",
+      "repo_url": "https://github.com/EnzymeAD/Enzyme",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "automatic-differentiation",
+        "llvm",
+        "hpc"
+      ],
+      "id": 15
+    },
+    {
+      "name": "PD-NJODE",
+      "one_line_profile": "Implementation of Path-dependent Neural Jump ODEs",
+      "detailed_description": "Official implementation for Path-dependent Neural Jump ODEs, a class of neural differential equations capable of modeling systems with jumps and path dependencies.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "modeling",
+        "neural_ode",
+        "stochastic_processes"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FlorianKrach/PD-NJODE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "neural-ode",
+        "jump-process",
+        "path-dependent"
+      ],
+      "id": 16
+    },
+    {
+      "name": "JAX-GalSim",
+      "one_line_profile": "Differentiable galaxy image simulations in JAX",
+      "detailed_description": "A JAX port of the GalSim library, enabling GPU-accelerated and differentiable simulations of galaxy images for astronomical research and analysis.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "astronomy"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GalSim-developers/JAX-GalSim",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "jax",
+        "astronomy",
+        "simulation",
+        "differentiable"
+      ],
+      "id": 17
+    },
+    {
+      "name": "ThinShellLab",
+      "one_line_profile": "Thin-shell Object Manipulations with Differentiable Physics Simulations",
+      "detailed_description": "A differentiable physics simulation framework specifically designed for thin-shell object manipulations, useful for robotic learning and physical modeling.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "differentiable_physics"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Genesis-Embodied-AI/ThinShellLab",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "physics-simulation",
+        "differentiable-physics",
+        "robotics"
+      ],
+      "id": 18
+    },
+    {
+      "name": "D.VA",
+      "one_line_profile": "Accelerating Visual-Policy Learning through Parallel Differentiable Simulation",
+      "detailed_description": "D.VA is a framework for parallel differentiable simulation, designed to accelerate the learning of visual policies in robotics and physical systems.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "robotics",
+        "differentiable_physics"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HaoxiangYou/D.VA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "differentiable-simulation",
+        "robotics",
+        "parallel-computing"
+      ],
+      "id": 19
+    },
+    {
+      "name": "fiddy",
+      "one_line_profile": "Finite difference methods library",
+      "detailed_description": "A Python library for computing finite differences, often used as a backend for gradient approximation in parameter estimation workflows within the ICB-DCM ecosystem.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "numerical_methods",
+        "differentiation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ICB-DCM/fiddy",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "finite-difference",
+        "numerical-analysis",
+        "derivatives"
+      ],
+      "id": 20
+    },
+    {
+      "name": "parPE",
+      "one_line_profile": "Parameter estimation for dynamical models using high-performance computing",
+      "detailed_description": "parPE is a C++ library and tool for scalable parameter estimation of dynamical systems (ODEs) using MPI for parallelization, designed for large-scale systems biology models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ICB-DCM/parPE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "parameter-estimation",
+        "hpc",
+        "systems-biology",
+        "mpi"
+      ],
+      "id": 21
+    },
+    {
+      "name": "pyPESTO",
+      "one_line_profile": "Python Parameter EStimation TOolbox",
+      "detailed_description": "pyPESTO is a widely used Python toolbox for parameter estimation, sensitivity analysis, and uncertainty quantification of biological models, supporting various backends like AMICI.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "sensitivity_analysis",
+        "uncertainty_quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ICB-DCM/pyPESTO",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "parameter-estimation",
+        "systems-biology",
+        "optimization"
+      ],
+      "id": 22
+    },
+    {
+      "name": "clarify",
+      "one_line_profile": "Simulation-Based Inference for Regression Models",
+      "detailed_description": "Clarify is a software package for simulation-based inference, allowing researchers to interpret statistical models by simulating quantities of interest and their uncertainties.",
+      "domains": [
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "inference",
+        "statistics"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/IQSS/clarify",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "simulation-based-inference",
+        "statistics",
+        "regression"
+      ],
+      "id": 23
+    },
+    {
+      "name": "SATA",
+      "one_line_profile": "Energy simulation framework for BPTT-based SNN inference and training",
+      "detailed_description": "SATA is a simulation framework designed to estimate the energy consumption and performance of Spiking Neural Networks (SNNs) trained with Backpropagation Through Time (BPTT).",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "neuromorphic_computing"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Intelligent-Computing-Lab-Panda/SATA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "snn",
+        "energy-simulation",
+        "neuromorphic"
+      ],
+      "id": 24
+    },
+    {
+      "name": "Twin4Build",
+      "one_line_profile": "Dynamic simulation of buildings with differentiable data-driven models",
+      "detailed_description": "Twin4Build is a simulation tool for building energy modeling that integrates differentiable data-driven models with semantic information, enabling digital twin applications.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "digital_twin"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JBjoernskov/Twin4Build",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "building-simulation",
+        "digital-twin",
+        "differentiable-modeling"
+      ],
+      "id": 25
+    },
+    {
+      "name": "Catalax",
+      "one_line_profile": "JAX-based framework to model biological systems",
+      "detailed_description": "Catalax is a JAX-based framework designed for modeling biological systems, leveraging JAX's composable transformations for efficient simulation and analysis.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation",
+        "systems_biology"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JR-1991/Catalax",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "jax",
+        "systems-biology",
+        "modeling"
+      ],
+      "id": 26
+    },
+    {
+      "name": "UniversalDiffEq.jl",
+      "one_line_profile": "Universal differential equations for ecologists",
+      "detailed_description": "A Julia library implementing Universal Differential Equations specifically tailored for ecological modeling, allowing the combination of mechanistic models with neural networks.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "modeling",
+        "ecology",
+        "ude"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/Jack-H-Buckner/UniversalDiffEq.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ecology",
+        "julia",
+        "universal-differential-equations"
+      ],
+      "id": 27
+    },
+    {
+      "name": "AstroNbodySim.jl",
+      "one_line_profile": "Unitful and differentiable gravitational N-body simulation code",
+      "detailed_description": "AstroNbodySim.jl is a Julia package for gravitational N-body simulations that supports physical units and automatic differentiation, suitable for astrophysical research.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "astrophysics",
+        "n_body"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaAstroSim/AstroNbodySim.jl",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "n-body",
+        "astrophysics",
+        "julia",
+        "differentiable-simulation"
+      ],
+      "id": 28
+    },
+    {
+      "name": "MathepiaModels.jl",
+      "one_line_profile": "Epidemic spatial and temporal model setup and simulation library",
+      "detailed_description": "A Julia library for setting up and simulating state-of-the-art epidemiology models, including universal differential equations and epidemiology-informed deep learning models.",
+      "domains": [
+        "SYSBIO1",
+        "Epidemiology"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaEpi/MathepiaModels.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "epidemiology",
+        "differential-equations",
+        "scientific-machine-learning"
+      ],
+      "id": 29
+    },
+    {
+      "name": "ASiM",
+      "one_line_profile": "Inference simulation framework for SRAM-based Analog CiM circuits",
+      "detailed_description": "A framework for modeling and analyzing the inference accuracy of SRAM-based Analog Compute-in-Memory (CiM) circuits.",
+      "domains": [
+        "Electronic Engineering",
+        "Hardware Simulation"
+      ],
+      "subtask_category": [
+        "simulation",
+        "inference_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Keio-CSG/ASiM",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "circuit-simulation",
+        "analog-computing",
+        "inference"
+      ],
+      "id": 30
+    },
+    {
+      "name": "MLE4LTI",
+      "one_line_profile": "Parameter estimation for Linear Time-Invariant Systems",
+      "detailed_description": "Implements Maximum Likelihood and Prediction Error Methods for estimating parameters in Linear Time-Invariant (LTI) systems.",
+      "domains": [
+        "Control Theory",
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "parameter_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Leo-Simpson/MLE4LTI",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "parameter-estimation",
+        "lti-systems",
+        "maximum-likelihood"
+      ],
+      "id": 31
+    },
+    {
+      "name": "torchoptics",
+      "one_line_profile": "Differentiable wave optics simulation library",
+      "detailed_description": "A differentiable wave optics simulation library built on PyTorch, enabling gradient-based optimization of optical systems.",
+      "domains": [
+        "Physics",
+        "Optics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MatthewFilipovich/torchoptics",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "optics",
+        "differentiable-simulation",
+        "pytorch"
+      ],
+      "id": 32
+    },
+    {
+      "name": "WarpDiffRobot",
+      "one_line_profile": "Differentiable simulation framework for robot-object interactions",
+      "detailed_description": "A framework that calibrates object properties through differentiable simulations of robot-object interactions.",
+      "domains": [
+        "Robotics",
+        "Physics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "calibration"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MediosZ/WarpDiffRobot",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "differentiable-simulation",
+        "robotics",
+        "calibration"
+      ],
+      "id": 33
+    },
+    {
+      "name": "DiffRL",
+      "one_line_profile": "Differentiable physics simulation for reinforcement learning",
+      "detailed_description": "A framework for accelerated policy learning using parallel differentiable simulation, enabling efficient reinforcement learning in physical environments.",
+      "domains": [
+        "Physics",
+        "Reinforcement Learning"
+      ],
+      "subtask_category": [
+        "simulation",
+        "training"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NVlabs/DiffRL",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "differentiable-simulation",
+        "reinforcement-learning",
+        "physics"
+      ],
+      "id": 34
+    },
+    {
+      "name": "neurodiffeq",
+      "one_line_profile": "Neural network solver for differential equations",
+      "detailed_description": "A library for solving ordinary and partial differential equations (ODEs/PDEs) using neural networks based on PyTorch.",
+      "domains": [
+        "SYSBIO1",
+        "SciML"
+      ],
+      "subtask_category": [
+        "simulation",
+        "solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NeuroDiffGym/neurodiffeq",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pinn",
+        "differential-equations",
+        "neural-networks"
+      ],
+      "id": 35
+    },
+    {
+      "name": "SphereUDE.jl",
+      "one_line_profile": "Universal Differential Equations for regression on the sphere",
+      "detailed_description": "A Julia package for performing regression analysis on spherical data using Universal Differential Equations (UDEs).",
+      "domains": [
+        "SYSBIO1",
+        "SciML"
+      ],
+      "subtask_category": [
+        "modeling",
+        "regression"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/ODINN-SciML/SphereUDE.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "universal-differential-equations",
+        "regression",
+        "julia"
+      ],
+      "id": 36
+    },
+    {
+      "name": "deepmaps",
+      "one_line_profile": "Single-cell biological network inference tool",
+      "detailed_description": "A tool for inferring single-cell biological networks using a heterogeneous graph transformer approach.",
+      "domains": [
+        "SYSBIO1",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "inference",
+        "network_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/OSU-BMBL/deepmaps",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "single-cell",
+        "network-inference",
+        "graph-neural-networks"
+      ],
+      "id": 37
+    },
+    {
+      "name": "peregrine",
+      "one_line_profile": "Simulation-based inference library for gravitational waves",
+      "detailed_description": "A simulation-based inference (SBI) library designed to perform analysis on a wide class of gravitational wave signals.",
+      "domains": [
+        "Astrophysics",
+        "Physics"
+      ],
+      "subtask_category": [
+        "inference",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PEREGRINE-GW/peregrine",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "sbi",
+        "inference"
+      ],
+      "id": 38
+    },
+    {
+      "name": "saqqara",
+      "one_line_profile": "SBI library for stochastic gravitational wave backgrounds",
+      "detailed_description": "A simulation-based inference (SBI) library designed specifically for analyzing stochastic gravitational wave background data.",
+      "domains": [
+        "Astrophysics",
+        "Physics"
+      ],
+      "subtask_category": [
+        "inference",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/PEREGRINE-GW/saqqara",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "sbi",
+        "stochastic-background"
+      ],
+      "id": 39
+    },
+    {
+      "name": "calisim",
+      "one_line_profile": "Toolbox for calibration and evaluation of simulation models",
+      "detailed_description": "A toolbox designed to assist in the calibration and evaluation of various simulation models.",
+      "domains": [
+        "Simulation",
+        "General Science"
+      ],
+      "subtask_category": [
+        "calibration",
+        "evaluation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Plant-Food-Research-Open/calisim",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "calibration",
+        "simulation",
+        "model-evaluation"
+      ],
+      "id": 40
+    },
+    {
+      "name": "PHOENIX",
+      "one_line_profile": "Biologically informed NeuralODE inference tool",
+      "detailed_description": "A tool to infer biologically informed NeuralODEs describing genome-wide regulatory dynamics.",
+      "domains": [
+        "SYSBIO1",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "inference",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/QuackenbushLab/phoenix",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-ode",
+        "gene-regulation",
+        "systems-biology"
+      ],
+      "id": 41
+    },
+    {
+      "name": "DataDrivenDiffEq.jl",
+      "one_line_profile": "Automated discovery of dynamical systems",
+      "detailed_description": "A library for data-driven modeling and automated discovery of dynamical systems, part of the SciML ecosystem.",
+      "domains": [
+        "SYSBIO1",
+        "SciML"
+      ],
+      "subtask_category": [
+        "modeling",
+        "discovery"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DataDrivenDiffEq.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dynamical-systems",
+        "symbolic-regression",
+        "sciml"
+      ],
+      "id": 42
+    },
+    {
+      "name": "DiffEqFlux.jl",
+      "one_line_profile": "Scientific Machine Learning (SciML) library for Julia",
+      "detailed_description": "Provides pre-built implicit layer architectures, stiff/non-stiff DE solvers, and tools for physics-informed machine learning.",
+      "domains": [
+        "SYSBIO1",
+        "SciML"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DiffEqFlux.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sciml",
+        "neural-differential-equations",
+        "flux"
+      ],
+      "id": 43
+    },
+    {
+      "name": "DiffEqParamEstim.jl",
+      "one_line_profile": "Parameter estimation for differential equations",
+      "detailed_description": "A library for scientific machine learning (SciML) parameter estimation with pre-built loss functions.",
+      "domains": [
+        "SYSBIO1",
+        "SciML"
+      ],
+      "subtask_category": [
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DiffEqParamEstim.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "parameter-estimation",
+        "differential-equations",
+        "sciml"
+      ],
+      "id": 44
+    },
+    {
+      "name": "ModelingToolkitNeuralNets.jl",
+      "one_line_profile": "Symbolic-Numeric Neural DAEs and UDEs",
+      "detailed_description": "A library for automating Scientific Machine Learning (SciML) using Symbolic-Numeric Neural DAEs and Universal Differential Equations.",
+      "domains": [
+        "SYSBIO1",
+        "SciML"
+      ],
+      "subtask_category": [
+        "modeling",
+        "automation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/ModelingToolkitNeuralNets.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "symbolic-numeric",
+        "neural-dae",
+        "sciml"
+      ],
+      "id": 45
+    },
+    {
+      "name": "NeuralPDE.jl",
+      "one_line_profile": "Physics-Informed Neural Networks (PINN) solvers",
+      "detailed_description": "A library providing Physics-Informed Neural Networks (PINN) solvers for partial differential equations, accelerating scientific simulation.",
+      "domains": [
+        "SYSBIO1",
+        "SciML"
+      ],
+      "subtask_category": [
+        "simulation",
+        "solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/NeuralPDE.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "pinn",
+        "pde-solver",
+        "sciml"
+      ],
+      "id": 46
+    },
+    {
+      "name": "OrdinaryDiffEq.jl",
+      "one_line_profile": "High-performance ODE and DAE solvers",
+      "detailed_description": "A library containing high-performance solvers for ordinary differential equations (ODEs) and differential-algebraic equations (DAEs), supporting neural ODEs.",
+      "domains": [
+        "SYSBIO1",
+        "SciML"
+      ],
+      "subtask_category": [
+        "simulation",
+        "solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/OrdinaryDiffEq.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "ode-solver",
+        "dae-solver",
+        "sciml"
+      ],
+      "id": 47
+    },
+    {
+      "name": "Surrogates.jl",
+      "one_line_profile": "Surrogate modeling and optimization library",
+      "detailed_description": "A library for surrogate modeling and optimization, designed for scientific machine learning applications.",
+      "domains": [
+        "SYSBIO1",
+        "SciML"
+      ],
+      "subtask_category": [
+        "modeling",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/Surrogates.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "surrogate-modeling",
+        "optimization",
+        "sciml"
+      ],
+      "id": 48
+    },
+    {
+      "name": "XFEM_Fracture2D",
+      "one_line_profile": "2D fracture simulation using Extended Finite Element Method",
+      "detailed_description": "A Matlab program for solving fracture problems involving arbitrary multiple crack propagations in a 2D linear-elastic solid using XFEM.",
+      "domains": [
+        "Mechanics",
+        "Physics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/ShelvanLee/XFEM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "xfem",
+        "fracture-mechanics",
+        "finite-element-method"
+      ],
+      "id": 49
+    },
+    {
+      "name": "diff-hybrid-traffic-sim",
+      "one_line_profile": "Differentiable hybrid traffic simulation",
+      "detailed_description": "A differentiable hybrid traffic simulation tool, enabling gradient-based optimization for traffic engineering.",
+      "domains": [
+        "Traffic Engineering",
+        "Simulation"
+      ],
+      "subtask_category": [
+        "simulation",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SonSang/diff-hybrid-traffic-sim",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "traffic-simulation",
+        "differentiable-simulation",
+        "optimization"
+      ],
+      "id": 50
+    },
+    {
+      "name": "JAX-CPFEM",
+      "one_line_profile": "Differentiable crystal plasticity finite element simulation",
+      "detailed_description": "Efficient GPU-computing simulation for differentiable crystal plasticity finite element method (CPFEM) using JAX.",
+      "domains": [
+        "Materials Science",
+        "Physics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SuperkakaSCU/JAX-CPFEM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "crystal-plasticity",
+        "fem",
+        "jax"
+      ],
+      "id": 51
+    },
+    {
+      "name": "PDMD",
+      "one_line_profile": "Potential-free Data-driven Molecular Dynamics",
+      "detailed_description": "A repository for Potential-free Data-driven Molecular Dynamics (PDMD), providing tools for molecular simulation without explicit potential functions.",
+      "domains": [
+        "Molecular Dynamics",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/TACC/PDMD",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "molecular-dynamics",
+        "data-driven",
+        "simulation"
+      ],
+      "id": 52
+    },
+    {
+      "name": "GNN-Fluid-Sim",
+      "one_line_profile": "GNN-based fluid simulation model",
+      "detailed_description": "A full implementation of a Graph Neural Network (GNN)-based fluid simulation model, offering a data-driven alternative to traditional CFD.",
+      "domains": [
+        "Fluid Dynamics",
+        "Physics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TrojanTroutTechnologies/GNN",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "fluid-simulation",
+        "gnn",
+        "cfd"
+      ],
+      "id": 53
+    },
+    {
+      "name": "diff_fem",
+      "one_line_profile": "Differentiable simulation of soft multi-body systems",
+      "detailed_description": "A differentiable physics simulator for soft multi-body systems using the Finite Element Method (FEM), enabling gradient-based optimization for control and design tasks.",
+      "domains": [
+        "PHYSICS",
+        "ROBOTICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/YilingQiao/diff_fem",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "differentiable-physics",
+        "fem",
+        "simulation"
+      ],
+      "id": 54
+    },
+    {
+      "name": "diffarticulated",
+      "one_line_profile": "Efficient differentiable simulation of articulated bodies",
+      "detailed_description": "A differentiable physics engine specifically designed for articulated bodies, supporting efficient gradient computation for robotics and control applications.",
+      "domains": [
+        "PHYSICS",
+        "ROBOTICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/YilingQiao/diffarticulated",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "differentiable-physics",
+        "articulated-bodies",
+        "robotics"
+      ],
+      "id": 55
+    },
+    {
+      "name": "Inferix",
+      "one_line_profile": "Block-diffusion based inference engine for world simulation",
+      "detailed_description": "A next-generation inference engine designed for world simulation, utilizing block-diffusion methods to enable efficient and scalable simulation inference.",
+      "domains": [
+        "SIMULATION",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "inference",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/alibaba-damo-academy/Inferix",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "inference-engine",
+        "diffusion",
+        "simulation"
+      ],
+      "id": 56
+    },
+    {
+      "name": "jaxsim",
+      "one_line_profile": "Differentiable physics engine and multibody dynamics library",
+      "detailed_description": "A differentiable physics engine and multibody dynamics library built with JAX, designed for control and robot learning applications.",
+      "domains": [
+        "PHYSICS",
+        "ROBOTICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ami-iit/jaxsim",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "jax",
+        "differentiable-physics",
+        "multibody-dynamics"
+      ],
+      "id": 57
+    },
+    {
+      "name": "Anode",
+      "one_line_profile": "Memory-efficient gradients for Neural ODEs",
+      "detailed_description": "A framework providing unconditionally accurate and memory-efficient gradient computation for Neural Ordinary Differential Equations (Neural ODEs).",
+      "domains": [
+        "SYSBIO1-07",
+        "ML"
+      ],
+      "subtask_category": [
+        "modeling",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/amirgholami/anode",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-ode",
+        "gradients",
+        "optimization"
+      ],
+      "id": 58
+    },
+    {
+      "name": "PyDEns",
+      "one_line_profile": "Framework for solving ODEs and PDEs using neural networks",
+      "detailed_description": "A Python framework for solving Ordinary and Partial Differential Equations (ODEs & PDEs) using neural networks, enabling mesh-free solutions.",
+      "domains": [
+        "MATH",
+        "PHYSICS",
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/analysiscenter/pydens",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pde-solver",
+        "neural-networks",
+        "physics-informed"
+      ],
+      "id": 59
+    },
+    {
+      "name": "3dpredictsim",
+      "one_line_profile": "3D muscle-driven predictive simulations of human movement",
+      "detailed_description": "A tool for generating 3D muscle-driven predictive simulations of human movement using direct collocation and algorithmic differentiation.",
+      "domains": [
+        "BIOMECHANICS",
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/antoinefalisse/3dpredictsim",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "biomechanics",
+        "predictive-simulation",
+        "muscle-model"
+      ],
+      "id": 60
+    },
+    {
+      "name": "cytopath",
+      "one_line_profile": "Simulation-based inference of differentiation trajectories",
+      "detailed_description": "A tool for simulation-based inference of differentiation trajectories from RNA velocity fields in single-cell data.",
+      "domains": [
+        "SYSBIO1",
+        "BIOINFORMATICS"
+      ],
+      "subtask_category": [
+        "inference",
+        "trajectory_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aron0093/cytopath",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "rna-velocity",
+        "differentiation",
+        "single-cell"
+      ],
+      "id": 61
+    },
+    {
+      "name": "XLuminA",
+      "one_line_profile": "Auto-differentiating discovery framework for super-resolution microscopy",
+      "detailed_description": "A highly-efficient, auto-differentiating discovery framework designed for optimizing super-resolution microscopy setups.",
+      "domains": [
+        "BIOIMAGING",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "optimization",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/artificial-scientist-lab/XLuminA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "microscopy",
+        "auto-differentiation",
+        "optics"
+      ],
+      "id": 62
+    },
+    {
+      "name": "QNODE",
+      "one_line_profile": "Quantum dynamics latent neural ODE",
+      "detailed_description": "A tool for modeling quantum dynamics using latent neural ordinary differential equations.",
+      "domains": [
+        "QUANTUM",
+        "PHYSICS",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "modeling",
+        "dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aspuru-guzik-group/QNODE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "quantum-dynamics",
+        "neural-ode",
+        "latent-dynamics"
+      ],
+      "id": 63
+    },
+    {
+      "name": "AMICI (ST)",
+      "one_line_profile": "Cell-cell interaction inference from spatial transcriptomics",
+      "detailed_description": "A cross-attention-based tool for inferring cell-cell interactions from spatial transcriptomics (ST) data.",
+      "domains": [
+        "SYSBIO1",
+        "BIOINFORMATICS"
+      ],
+      "subtask_category": [
+        "inference",
+        "interaction_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/azizilab/amici",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "spatial-transcriptomics",
+        "cell-interaction",
+        "inference"
+      ],
+      "id": 64
+    },
+    {
+      "name": "SimulationBasedInference.jl",
+      "one_line_profile": "Toolkit for simulation-based inference in Julia",
+      "detailed_description": "A flexible toolkit for performing simulation-based inference (SBI) using the Julia programming language.",
+      "domains": [
+        "SYSBIO1",
+        "STATISTICS"
+      ],
+      "subtask_category": [
+        "inference",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/bgroenks96/SimulationBasedInference.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "sbi",
+        "inference"
+      ],
+      "id": 65
+    },
+    {
+      "name": "predictionet",
+      "one_line_profile": "Genomic network inference combining data and priors",
+      "detailed_description": "A package for inferring biological networks by combining genomic data with prior information from literature and databases.",
+      "domains": [
+        "SYSBIO1",
+        "BIOINFORMATICS"
+      ],
+      "subtask_category": [
+        "inference",
+        "network_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/bhklab/predictionet",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "network-inference",
+        "genomics",
+        "priors"
+      ],
+      "id": 66
+    },
+    {
+      "name": "epower",
+      "one_line_profile": "Power analysis for environmental sampling designs",
+      "detailed_description": "A tool for conducting power analysis on beyond-BACI sampling designs through INLA-based inference and Monte Carlo simulation.",
+      "domains": [
+        "ECOLOGY",
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "analysis",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/bmtglobal/epower",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "power-analysis",
+        "ecology",
+        "simulation"
+      ],
+      "id": 67
+    },
+    {
+      "name": "demografr",
+      "one_line_profile": "Simulation-based inference in evolutionary biology",
+      "detailed_description": "A framework for performing simulation-based inference specifically for evolutionary biology and demographic modeling.",
+      "domains": [
+        "EVOLUTION",
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "inference",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/bodkan/demografr",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "evolutionary-biology",
+        "demography",
+        "sbi"
+      ],
+      "id": 68
+    },
+    {
+      "name": "ODE2VAE",
+      "one_line_profile": "Deep generative second order ODEs with Bayesian neural networks",
+      "detailed_description": "A deep generative model framework that combines second-order Ordinary Differential Equations (ODEs) with Variational Autoencoders (VAEs) for modeling high-dimensional sequential data.",
+      "domains": [
+        "SYSBIO1-07",
+        "ML"
+      ],
+      "subtask_category": [
+        "modeling",
+        "dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cagatayyildiz/ODE2VAE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "generative-model",
+        "ode",
+        "vae"
+      ],
+      "id": 69
+    },
+    {
+      "name": "pnode",
+      "one_line_profile": "Library for training neural ODEs",
+      "detailed_description": "A Python library designed to facilitate the training and implementation of Neural Ordinary Differential Equations.",
+      "domains": [
+        "SYSBIO1-07",
+        "ML"
+      ],
+      "subtask_category": [
+        "modeling",
+        "training"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/caidao22/pnode",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-ode",
+        "deep-learning",
+        "dynamics"
+      ],
+      "id": 70
+    },
+    {
+      "name": "KiMONo",
+      "one_line_profile": "Multi-omics network inference tool",
+      "detailed_description": "A network inference tool for multi-omics datasets that uses sparse-group-LASSO regression and incorporates prior biological information.",
+      "domains": [
+        "SYSBIO1",
+        "BIOINFORMATICS"
+      ],
+      "subtask_category": [
+        "inference",
+        "network_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/cellmapslab/kimono",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "multi-omics",
+        "network-inference",
+        "lasso"
+      ],
+      "id": 71
+    },
+    {
+      "name": "RNODE",
+      "one_line_profile": "Regularized Neural ODEs",
+      "detailed_description": "Implementation of Regularized Neural ODEs (RNODE), improving the training stability and performance of continuous-depth models.",
+      "domains": [
+        "SYSBIO1-07",
+        "ML"
+      ],
+      "subtask_category": [
+        "modeling",
+        "regularization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cfinlay/ffjord-rnode",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-ode",
+        "regularization",
+        "dynamics"
+      ],
+      "id": 72
+    },
+    {
+      "name": "DISCO-DJ",
+      "one_line_profile": "Differentiable Simulations for Cosmology with Jax",
+      "detailed_description": "A framework for differentiable cosmological simulations implemented in JAX, enabling gradient-based inference and optimization in cosmology.",
+      "domains": [
+        "ASTRONOMY",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/cosmo-sims/DISCO-DJ",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cosmology",
+        "differentiable-simulation",
+        "jax"
+      ],
+      "id": 73
+    },
+    {
+      "name": "NDP",
+      "one_line_profile": "Neural ODE Processes",
+      "detailed_description": "Implementation of Neural ODE Processes, a class of stochastic processes governed by Neural ODEs, useful for modeling time-series data.",
+      "domains": [
+        "SYSBIO1-07",
+        "ML"
+      ],
+      "subtask_category": [
+        "modeling",
+        "stochastic_process"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/crisbodnar/ndp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-ode",
+        "stochastic-processes",
+        "time-series"
+      ],
+      "id": 74
+    },
+    {
+      "name": "falcon",
+      "one_line_profile": "Distributed dynamic simulation-based inference",
+      "detailed_description": "A tool for distributed dynamic simulation-based inference, facilitating scalable inference tasks involving complex simulations.",
+      "domains": [
+        "SYSBIO1",
+        "STATISTICS"
+      ],
+      "subtask_category": [
+        "inference",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cweniger/falcon",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "sbi",
+        "distributed-computing",
+        "inference"
+      ],
+      "id": 75
+    },
+    {
+      "name": "ClimODE",
+      "one_line_profile": "Climate Forecasting With Physics-informed Neural ODEs",
+      "detailed_description": "A physics-informed Neural ODE model designed for climate forecasting, integrating physical laws with deep learning for weather prediction.",
+      "domains": [
+        "CLIMATE",
+        "EARTH_SCIENCE",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "forecasting",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/dataymeric/ClimODE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "climate",
+        "neural-ode",
+        "physics-informed"
+      ],
+      "id": 76
+    },
+    {
+      "name": "evoxels",
+      "one_line_profile": "Differentiable physics framework for voxel-based microstructure simulations",
+      "detailed_description": "A differentiable physics framework for simulating voxel-based microstructures, enabling optimization of material properties and structures.",
+      "domains": [
+        "MATERIALS",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/daubners/evoxels",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "differentiable-physics",
+        "microstructure",
+        "voxels"
+      ],
+      "id": 77
+    },
+    {
+      "name": "SIXSA",
+      "one_line_profile": "Simulation based Inference for X-ray Spectral Analysis",
+      "detailed_description": "A tool for performing simulation-based inference specifically for X-ray spectral analysis.",
+      "domains": [
+        "PHYSICS",
+        "ASTRONOMY"
+      ],
+      "subtask_category": [
+        "inference",
+        "spectral_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dbxifu/SIXSA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "x-ray",
+        "spectral-analysis",
+        "sbi"
+      ],
+      "id": 78
+    },
+    {
+      "name": "Updes",
+      "one_line_profile": "Universal Partial Differential Equations Simulator",
+      "detailed_description": "A universal simulator for Partial Differential Equations (PDEs), providing a flexible framework for solving various physical systems.",
+      "domains": [
+        "PHYSICS",
+        "MATH"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ddrous/Updes",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pde",
+        "simulator",
+        "physics"
+      ],
+      "id": 79
+    },
+    {
+      "name": "cheetah",
+      "one_line_profile": "Fast and differentiable particle accelerator optics simulation",
+      "detailed_description": "A fast and differentiable simulation tool for particle accelerator optics, designed for reinforcement learning and optimization applications.",
+      "domains": [
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/desy-ml/cheetah",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "particle-accelerator",
+        "differentiable-simulation",
+        "optics"
+      ],
+      "id": 80
+    },
+    {
+      "name": "sbijax",
+      "one_line_profile": "Simulation-based inference in JAX",
+      "detailed_description": "A library for performing simulation-based inference (SBI) using JAX, leveraging its automatic differentiation and compilation capabilities.",
+      "domains": [
+        "SYSBIO1",
+        "STATISTICS"
+      ],
+      "subtask_category": [
+        "inference",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dirmeier/sbijax",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "jax",
+        "sbi",
+        "inference"
+      ],
+      "id": 81
+    },
+    {
+      "name": "thz-tds-mle",
+      "one_line_profile": "Parameter estimation for terahertz time-domain spectroscopy",
+      "detailed_description": "A tool for maximum-likelihood parameter estimation in terahertz time-domain spectroscopy.",
+      "domains": [
+        "PHYSICS",
+        "CHEMISTRY"
+      ],
+      "subtask_category": [
+        "estimation",
+        "spectroscopy"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/dodge-research-group/thz-tds-mle",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "spectroscopy",
+        "parameter-estimation",
+        "terahertz"
+      ],
+      "id": 82
+    },
+    {
+      "name": "Dojo.jl",
+      "one_line_profile": "Differentiable physics engine for robotics",
+      "detailed_description": "A differentiable physics engine written in Julia, designed for robotics simulation and control.",
+      "domains": [
+        "ROBOTICS",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "control"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/dojo-sim/Dojo.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "robotics",
+        "differentiable-physics",
+        "julia"
+      ],
+      "id": 83
+    },
+    {
+      "name": "HydroGym",
+      "one_line_profile": "Differentiable RL environment for fluid dynamics modeling and control",
+      "detailed_description": "An open-source library of differentiable fluid dynamics solvers designed for reinforcement learning (RL) and optimization. It provides a suite of benchmark problems for data-driven modeling and control of fluid flows, leveraging differentiable physics to accelerate training and analysis.",
+      "domains": [
+        "PHYSICS",
+        "FLUID_DYNAMICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "control",
+        "reinforcement_learning"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dynamicslab/hydrogym",
+      "help_website": [
+        "https://hydrogym.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fluid-dynamics",
+        "reinforcement-learning",
+        "differentiable-physics"
+      ],
+      "id": 84
+    },
+    {
+      "name": "PySINDy",
+      "one_line_profile": "Sparse identification of nonlinear dynamical systems from data",
+      "detailed_description": "A comprehensive Python package for the Sparse Identification of Nonlinear Dynamics (SINDy) method. It enables researchers to discover governing dynamical system equations (ODEs/PDEs) from measurement data by enforcing sparsity in the candidate library of functions.",
+      "domains": [
+        "SYSBIO1",
+        "PHYSICS",
+        "MATH"
+      ],
+      "subtask_category": [
+        "system_identification",
+        "modeling",
+        "equation_discovery"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dynamicslab/pysindy",
+      "help_website": [
+        "https://pysindy.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "sindy",
+        "dynamical-systems",
+        "sparse-regression"
+      ],
+      "id": 85
+    },
+    {
+      "name": "dynamiqs",
+      "one_line_profile": "High-performance differentiable quantum systems simulation with JAX",
+      "detailed_description": "A JAX-based library for simulating open and closed quantum systems. It leverages GPU acceleration and automatic differentiation to enable gradient-based optimization for quantum control and dynamics problems.",
+      "domains": [
+        "QUANTUM",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "quantum_dynamics",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dynamiqs/dynamiqs",
+      "help_website": [
+        "https://www.dynamiqs.org"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "quantum-simulation",
+        "jax",
+        "differentiable-programming"
+      ],
+      "id": 86
+    },
+    {
+      "name": "TactileSimulation",
+      "one_line_profile": "Differentiable tactile simulation for robotic manipulation",
+      "detailed_description": "A simulation framework that provides efficient and differentiable tactile feedback for robotic manipulation tasks. It allows for the optimization of control policies by simulating the physical interaction and tactile sensing processes.",
+      "domains": [
+        "ROBOTICS",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "robotics",
+        "tactile_sensing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eanswer/TactileSimulation",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "robotics",
+        "tactile-simulation",
+        "differentiable-physics"
+      ],
+      "id": 87
+    },
+    {
+      "name": "pmwd",
+      "one_line_profile": "Particle-Mesh code for cosmological N-body simulations with derivatives",
+      "detailed_description": "A fully differentiable cosmological particle-mesh N-body simulator. It enables gradient-based inference of cosmological parameters and initial conditions from observational data by backpropagating through the forward simulation.",
+      "domains": [
+        "ASTRONOMY",
+        "COSMOLOGY"
+      ],
+      "subtask_category": [
+        "simulation",
+        "inference",
+        "n_body"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eelregit/pmwd",
+      "help_website": [
+        "https://pmwd.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cosmology",
+        "n-body",
+        "differentiable-simulation"
+      ],
+      "id": 88
+    },
+    {
+      "name": "Data Driven Dynamics",
+      "one_line_profile": "Data-driven dynamics modeling framework for aerial vehicles",
+      "detailed_description": "A framework for modeling the dynamics of aerial vehicles (like quadrotors) using data-driven approaches. It supports system identification and model learning tasks to improve control performance.",
+      "domains": [
+        "ROBOTICS",
+        "AEROSPACE"
+      ],
+      "subtask_category": [
+        "modeling",
+        "system_identification",
+        "dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ethz-asl/data-driven-dynamics",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "uav",
+        "dynamics-modeling",
+        "system-identification"
+      ],
+      "id": 89
+    },
+    {
+      "name": "DiffAvatar",
+      "one_line_profile": "Differentiable simulation for garment optimization and avatar reconstruction",
+      "detailed_description": "A framework utilizing differentiable physics simulation to optimize garment parameters and reconstruct 3D avatars from data. It bridges computer graphics and physical simulation for realistic clothing modeling.",
+      "domains": [
+        "PHYSICS",
+        "COMPUTER_GRAPHICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "optimization",
+        "soft_body_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/facebookresearch/DiffAvatar",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "differentiable-simulation",
+        "garment-modeling",
+        "avatar"
+      ],
+      "id": 90
+    },
+    {
+      "name": "ceviche",
+      "one_line_profile": "Electromagnetic simulation with automatic differentiation",
+      "detailed_description": "A Python library for simulating electromagnetic fields using Finite-Difference Time-Domain (FDTD) and Frequency-Domain (FDFD) methods. It supports automatic differentiation, enabling inverse design and optimization of photonic devices.",
+      "domains": [
+        "PHYSICS",
+        "PHOTONICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "inverse_design",
+        "electromagnetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fancompute/ceviche",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "electromagnetics",
+        "fdtd",
+        "inverse-design"
+      ],
+      "id": 91
+    },
+    {
+      "name": "diffaero",
+      "one_line_profile": "GPU-accelerated differentiable simulation for quadrotor aerodynamics",
+      "detailed_description": "A differentiable simulation framework designed for efficient policy learning in quadrotors. It models aerodynamic effects and allows gradients to propagate through the physics engine for reinforcement learning applications.",
+      "domains": [
+        "AEROSPACE",
+        "ROBOTICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "aerodynamics",
+        "policy_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/flyingbitac/diffaero",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "quadrotor",
+        "aerodynamics",
+        "differentiable-simulation"
+      ],
+      "id": 92
+    },
+    {
+      "name": "Differentiable Atomistic Potentials",
+      "one_line_profile": "Automatically differentiable potentials for molecular dynamics",
+      "detailed_description": "A library for defining and using atomistic potentials that are automatically differentiable. This facilitates the training of machine learning potentials and the calculation of forces and stress tensors in molecular simulations.",
+      "domains": [
+        "CHEMISTRY",
+        "MATERIALS_SCIENCE"
+      ],
+      "subtask_category": [
+        "simulation",
+        "molecular_dynamics",
+        "potential_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/google/differentiable-atomistic-potentials",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "molecular-dynamics",
+        "jax",
+        "atomistic-potentials"
+      ],
+      "id": 93
+    },
+    {
+      "name": "gradsim",
+      "one_line_profile": "Differentiable simulation for system identification and visuomotor control",
+      "detailed_description": "A differentiable physics engine and rendering framework focused on system identification and visuomotor control tasks. It allows for the recovery of physical parameters from video data through gradient descent.",
+      "domains": [
+        "ROBOTICS",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "system_identification",
+        "visuomotor_control"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gradsim/gradsim",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "differentiable-physics",
+        "system-identification",
+        "rendering"
+      ],
+      "id": 94
+    },
+    {
+      "name": "noa",
+      "one_line_profile": "Differentiable programming algorithms and framework in C++",
+      "detailed_description": "A modern C++ library for differentiable programming, enabling gradient-based optimization and learning within high-performance C++ applications. It serves as a foundational tool for building differentiable scientific simulations.",
+      "domains": [
+        "COMPUTER_SCIENCE",
+        "MATH"
+      ],
+      "subtask_category": [
+        "differentiable_programming",
+        "optimization",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/grinisrit/noa",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "c++",
+        "differentiable-programming",
+        "autodiff"
+      ],
+      "id": 95
+    },
+    {
+      "name": "sbiax",
+      "one_line_profile": "Lightweight and parallelized simulation-based inference in JAX",
+      "detailed_description": "A JAX-based library for Simulation-Based Inference (SBI), offering fast and parallelized implementations of inference algorithms like NPE (Neural Posterior Estimation). It is designed to accelerate parameter estimation for complex scientific models.",
+      "domains": [
+        "SYSBIO1",
+        "MATH"
+      ],
+      "subtask_category": [
+        "inference",
+        "parameter_estimation",
+        "sbi"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/homerjed/sbiax",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sbi",
+        "jax",
+        "inference"
+      ],
+      "id": 96
+    },
+    {
+      "name": "PySINDy GUI",
+      "one_line_profile": "Graphical User Interface for PySINDy",
+      "detailed_description": "A graphical user interface wrapper for the PySINDy library, making the sparse identification of nonlinear dynamics accessible to users without extensive coding experience. It facilitates data loading, parameter tuning, and model visualization.",
+      "domains": [
+        "SYSBIO1",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "system_identification",
+        "visualization",
+        "gui"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hyumo/pysindy-gui",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gui",
+        "pysindy",
+        "dynamical-systems"
+      ],
+      "id": 97
+    },
+    {
+      "name": "SuperGrad",
+      "one_line_profile": "Differentiable simulation of superconducting quantum processors",
+      "detailed_description": "A Python library for the differentiable simulation of superconducting quantum circuits. It enables pulse shaping and parameter optimization for quantum processors by providing gradients through the simulation dynamics.",
+      "domains": [
+        "QUANTUM",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "quantum_control",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/iqubit-org/supergrad",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "quantum-computing",
+        "superconducting-circuits",
+        "differentiable-simulation"
+      ],
+      "id": 98
+    },
+    {
+      "name": "easy-neural-ode",
+      "one_line_profile": "Library for learning differential equations that are easy to solve",
+      "detailed_description": "A library implementing methods to learn Neural ODEs with regularization terms that encourage the learned dynamics to be computationally efficient to solve. It serves as a practical tool for training faster and more stable Neural ODE models.",
+      "domains": [
+        "MATH",
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "modeling",
+        "ode_solver",
+        "machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jacobjinkelly/easy-neural-ode",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-ode",
+        "regularization",
+        "machine-learning"
+      ],
+      "id": 99
+    },
+    {
+      "name": "Jaxley",
+      "one_line_profile": "Differentiable biophysical neuron simulations on CPU/GPU/TPU",
+      "detailed_description": "A differentiable simulator for biophysically detailed neuron models using JAX. It allows for automatic differentiation of neuron dynamics, enabling gradient-based parameter estimation and optimization of neuronal properties.",
+      "domains": [
+        "NEUROSCIENCE",
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "parameter_estimation",
+        "neuroscience"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jaxleyverse/jaxley",
+      "help_website": [
+        "https://jaxley.readthedocs.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "neuroscience",
+        "jax",
+        "differentiable-simulation"
+      ],
+      "id": 100
+    },
+    {
+      "name": "DiffeRT",
+      "one_line_profile": "Differentiable Ray Tracing Toolbox for Radio Propagation",
+      "detailed_description": "A Python toolbox for differentiable ray tracing, specifically designed for radio propagation simulations. It enables the optimization of transmitter locations or environment parameters by backpropagating through the ray tracing process.",
+      "domains": [
+        "PHYSICS",
+        "TELECOMMUNICATIONS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "ray_tracing",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jeertmans/DiffeRT",
+      "help_website": [
+        "https://differt.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "ray-tracing",
+        "radio-propagation",
+        "differentiable-physics"
+      ],
+      "id": 101
+    },
+    {
+      "name": "BINNs",
+      "one_line_profile": "Biologically-informed neural networks implementation",
+      "detailed_description": "A library implementing Biologically-Informed Neural Networks (BINNs), which integrate biological knowledge (like sparse network structures) into neural network architectures for interpretable modeling of biological systems.",
+      "domains": [
+        "SYSBIO1",
+        "BIOINFORMATICS"
+      ],
+      "subtask_category": [
+        "modeling",
+        "inference",
+        "interpretable_ml"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/jlager/BINNs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "systems-biology",
+        "neural-networks",
+        "interpretable-ai"
+      ],
+      "id": 102
+    },
+    {
+      "name": "sbi4abm",
+      "one_line_profile": "Black-box Bayesian inference for agent-based models",
+      "detailed_description": "A toolkit for performing Simulation-Based Inference (SBI) on Agent-Based Models (ABMs). It provides interfaces to apply likelihood-free inference methods to complex, stochastic ABMs commonly used in ecology and social sciences.",
+      "domains": [
+        "SYSBIO1",
+        "ECOLOGY",
+        "SOCIAL_SCIENCE"
+      ],
+      "subtask_category": [
+        "inference",
+        "agent_based_modeling",
+        "bayesian_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/joelnmdyer/sbi4abm",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "agent-based-models",
+        "sbi",
+        "inference"
+      ],
+      "id": 103
+    },
+    {
+      "name": "GRGNN",
+      "one_line_profile": "Gene Regulatory Graph Neural Networks for network inference",
+      "detailed_description": "A Graph Neural Network (GNN) based framework for inferring gene regulatory networks from gene expression data. It utilizes the inductive capability of GNNs to predict regulatory relationships between genes.",
+      "domains": [
+        "SYSBIO1",
+        "BIOINFORMATICS"
+      ],
+      "subtask_category": [
+        "inference",
+        "gene_regulatory_network",
+        "graph_neural_networks"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/juexinwang/GRGNN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gene-regulatory-network",
+        "gnn",
+        "inference"
+      ],
+      "id": 104
+    },
+    {
+      "name": "torch_ACA",
+      "one_line_profile": "Adaptive Checkpoint Adjoint method for Neural ODE gradient estimation",
+      "detailed_description": "A PyTorch library implementing the Adaptive Checkpoint Adjoint (ACA) method. It improves the accuracy and stability of gradient estimation in Neural ODEs compared to standard adjoint methods, serving as a robust solver component.",
+      "domains": [
+        "MATH",
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "optimization",
+        "ode_solver",
+        "gradient_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/juntang-zhuang/torch_ACA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-ode",
+        "adjoint-method",
+        "pytorch"
+      ],
+      "id": 105
+    },
+    {
+      "name": "GNE",
+      "one_line_profile": "Deep learning framework for gene network inference",
+      "detailed_description": "A deep learning framework designed to infer gene regulatory networks by aggregating various biological information sources. It provides a pipeline for processing expression data and predicting gene-gene interactions.",
+      "domains": [
+        "SYSBIO1",
+        "BIOINFORMATICS"
+      ],
+      "subtask_category": [
+        "inference",
+        "gene_network",
+        "deep_learning"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kckishan/GNE",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gene-network-inference",
+        "deep-learning",
+        "bioinformatics"
+      ],
+      "id": 106
+    },
+    {
+      "name": "sbied",
+      "one_line_profile": "Simulation-based Inference for Epidemiological Dynamics",
+      "detailed_description": "A package for performing simulation-based inference specifically on epidemiological models. It helps researchers estimate parameters of disease spread models using observed data and likelihood-free inference techniques.",
+      "domains": [
+        "SYSBIO1",
+        "EPIDEMIOLOGY"
+      ],
+      "subtask_category": [
+        "inference",
+        "epidemiology",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/kingaa/sbied",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "epidemiology",
+        "sbi",
+        "inference"
+      ],
+      "id": 107
+    },
+    {
+      "name": "rude",
+      "one_line_profile": "Rheological Universal Differential Equations for complex fluids",
+      "detailed_description": "A scientific machine learning library for modeling complex fluids using Rheological Universal Differential Equations. It combines physics-based rheological models with neural networks to capture non-Newtonian fluid behavior.",
+      "domains": [
+        "PHYSICS",
+        "FLUID_DYNAMICS"
+      ],
+      "subtask_category": [
+        "modeling",
+        "rheology",
+        "sciml"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/krlennon/rude",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "rheology",
+        "complex-fluids",
+        "universal-differential-equations"
+      ],
+      "id": 108
+    },
+    {
+      "name": "JAXtronomy",
+      "one_line_profile": "GPU-accelerated differentiable gravitational lensing simulation",
+      "detailed_description": "A JAX port of the lenstronomy package, enabling parallelized, GPU-accelerated, and differentiable simulations of gravitational lensing. It is used for modeling strong lensing systems and inferring mass distributions.",
+      "domains": [
+        "ASTRONOMY",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "gravitational_lensing",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lenstronomy/JAXtronomy",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "gravitational-lensing",
+        "jax",
+        "astro-simulation"
+      ],
+      "id": 109
+    },
+    {
+      "name": "SBINN",
+      "one_line_profile": "Systems-biology-informed neural networks for parameter identification",
+      "detailed_description": "A framework for identifiability analysis and parameter identification in systems biology models using physics-informed neural networks (PINNs) tailored for biological dynamics.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "identifiability_analysis",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lu-group/sbinn",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pinns",
+        "systems-biology",
+        "parameter-inference"
+      ],
+      "id": 110
+    },
+    {
+      "name": "pySINDy",
+      "one_line_profile": "Sparse Identification of Nonlinear Dynamics (SINDy) algorithm implementation",
+      "detailed_description": "A Python package for the Sparse Identification of Nonlinear Dynamics (SINDy) method, enabling the discovery of governing dynamical systems equations from data.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "system_identification",
+        "equation_discovery",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/luckystarufo/pySINDy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sindy",
+        "dynamical-systems",
+        "system-identification"
+      ],
+      "id": 111
+    },
+    {
+      "name": "delfi",
+      "one_line_profile": "Density estimation likelihood-free inference toolkit",
+      "detailed_description": "A Python library for density estimation likelihood-free inference (DELFI), used for simulation-based inference in neuroscience and systems biology (predecessor to sbi).",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "inference",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mackelab/delfi",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "sbi",
+        "likelihood-free-inference",
+        "neuroscience"
+      ],
+      "id": 112
+    },
+    {
+      "name": "GATSBI",
+      "one_line_profile": "Generative Adversarial Training for Simulation-Based Inference",
+      "detailed_description": "A tool implementing Generative Adversarial Networks (GANs) for performing simulation-based inference, allowing for efficient parameter estimation in complex models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "inference",
+        "parameter_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mackelab/gatsbi",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "gan",
+        "sbi",
+        "simulation-based-inference"
+      ],
+      "id": 113
+    },
+    {
+      "name": "Simformer",
+      "one_line_profile": "Transformer and diffusion model based simulation-based inference",
+      "detailed_description": "A flexible all-in-one simulation-based inference framework combining transformers and diffusion models to handle complex posterior distributions.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "inference",
+        "parameter_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/mackelab/simformer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "transformers",
+        "diffusion-models",
+        "sbi"
+      ],
+      "id": 114
+    },
+    {
+      "name": "PINA",
+      "one_line_profile": "Physics-Informed Neural networks for Advanced modeling",
+      "detailed_description": "A Python package providing an intuitive interface for Physics-Informed Neural Networks (PINNs) to solve differential equations and model physical systems.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation",
+        "solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mathLab/PINA",
+      "help_website": [
+        "https://mathlab.github.io/PINA/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "pinns",
+        "pde-solver",
+        "scientific-machine-learning"
+      ],
+      "id": 115
+    },
+    {
+      "name": "Differentiable Simulation AM",
+      "one_line_profile": "Optimization tool for additive manufacturing using automatic differentiation",
+      "detailed_description": "An optimization framework leveraging automatic differentiation for simulation and process optimization in additive manufacturing contexts.",
+      "domains": [
+        "PHYSICS",
+        "MANUFACTURING"
+      ],
+      "subtask_category": [
+        "optimization",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/mojtabamozaffar/differentiable-simulation-am",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "additive-manufacturing",
+        "differentiable-simulation",
+        "optimization"
+      ],
+      "id": 116
+    },
+    {
+      "name": "Hypothesis",
+      "one_line_profile": "Toolkit for simulation-based inference and mechanization of science",
+      "detailed_description": "A Python toolkit designed for simulation-based inference (SBI), providing algorithms for likelihood-free inference and scientific hypothesis testing.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "inference",
+        "hypothesis_testing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/montefiore-institute/hypothesis",
+      "help_website": [
+        "https://hypothesis.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "sbi",
+        "inference",
+        "scientific-method"
+      ],
+      "id": 117
+    },
+    {
+      "name": "DIMOS",
+      "one_line_profile": "Differentiable Molecular Simulator framework",
+      "detailed_description": "A PyTorch-based framework for machine-learning enhanced differentiable molecular simulations, enabling gradient-based optimization of molecular parameters.",
+      "domains": [
+        "SYSBIO1",
+        "CHEMISTRY"
+      ],
+      "subtask_category": [
+        "simulation",
+        "molecular_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nec-research/DIMOS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "molecular-dynamics",
+        "differentiable-simulation",
+        "pytorch"
+      ],
+      "id": 118
+    },
+    {
+      "name": "DiffCloth",
+      "one_line_profile": "Differentiable cloth simulation with dry frictional contact",
+      "detailed_description": "A differentiable physics engine specifically for cloth simulation, supporting gradient-based optimization for physical parameters and control.",
+      "domains": [
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/omegaiota/DiffCloth",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "differentiable-physics",
+        "cloth-simulation",
+        "contact-mechanics"
+      ],
+      "id": 119
+    },
+    {
+      "name": "AeroSandbox",
+      "one_line_profile": "Aircraft design optimization via automatic differentiation",
+      "detailed_description": "A Python library for aircraft design optimization that leverages automatic differentiation for fast and accurate aerodynamic, propulsion, and structural analysis.",
+      "domains": [
+        "PHYSICS",
+        "ENGINEERING"
+      ],
+      "subtask_category": [
+        "optimization",
+        "simulation",
+        "design"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/peterdsharpe/AeroSandbox",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aerodynamics",
+        "optimization",
+        "automatic-differentiation"
+      ],
+      "id": 120
+    },
+    {
+      "name": "VMAS",
+      "one_line_profile": "Vectorized Multi-Agent Simulator",
+      "detailed_description": "A vectorized, differentiable physics simulator designed for efficient multi-agent reinforcement learning benchmarking and simulation.",
+      "domains": [
+        "PHYSICS",
+        "ROBOTICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "reinforcement_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/proroklab/VectorizedMultiAgentSimulator",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "multi-agent",
+        "differentiable-simulation",
+        "physics-engine"
+      ],
+      "id": 121
+    },
+    {
+      "name": "CGDMS",
+      "one_line_profile": "Differentiable molecular simulation of proteins",
+      "detailed_description": "A differentiable molecular simulation tool for proteins using a coarse-grained potential, enabling gradient-based optimization of molecular structures.",
+      "domains": [
+        "SYSBIO1",
+        "CHEMISTRY"
+      ],
+      "subtask_category": [
+        "simulation",
+        "molecular_dynamics",
+        "structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/psipred/cgdms",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-folding",
+        "differentiable-simulation",
+        "coarse-grained"
+      ],
+      "id": 122
+    },
+    {
+      "name": "Rewarped",
+      "one_line_profile": "Reinforcement learning in differentiable multiphysics simulation",
+      "detailed_description": "A framework for reinforcement learning within differentiable multiphysics simulations, built on NVIDIA Warp.",
+      "domains": [
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "simulation",
+        "reinforcement_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rewarped/rewarped",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "multiphysics",
+        "differentiable-simulation",
+        "reinforcement-learning"
+      ],
+      "id": 123
+    },
+    {
+      "name": "torchdiffeq",
+      "one_line_profile": "Differentiable ODE solvers with GPU support",
+      "detailed_description": "A library providing differentiable ordinary differential equation (ODE) solvers implemented in PyTorch, enabling the integration of ODEs into neural network architectures (Neural ODEs).",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07",
+        "MATH"
+      ],
+      "subtask_category": [
+        "simulation",
+        "solver",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rtqichen/torchdiffeq",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-ode",
+        "differentiable-solver",
+        "pytorch"
+      ],
+      "id": 124
+    },
+    {
+      "name": "NeuralLaplace",
+      "one_line_profile": "Differentiable Laplace Reconstructions for modeling time-series dynamics",
+      "detailed_description": "A library implementing Neural Laplace, a method for learning diverse differential equation environments using Laplace reconstructions. It offers O(1) complexity for modeling time observations and serves as an alternative to Neural ODEs for modeling complex dynamics.",
+      "domains": [
+        "SYSBIO1-07",
+        "AI4S_GENERAL"
+      ],
+      "subtask_category": [
+        "dynamics_modeling",
+        "time_series_forecasting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/samholt/NeuralLaplace",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-ode",
+        "laplace-transform",
+        "dynamics",
+        "differential-equations"
+      ],
+      "id": 125
+    },
+    {
+      "name": "CellBox",
+      "one_line_profile": "Interpretable machine learning for perturbation biology",
+      "detailed_description": "A framework for modeling cellular responses to perturbations using an interpretable machine learning approach. It combines ODE models with neural networks to infer interaction networks and predict system behavior under drug or genetic perturbations.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "network_inference",
+        "perturbation_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/sanderlab/CellBox",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "systems-biology",
+        "perturbation",
+        "ode-modeling",
+        "interpretable-ml"
+      ],
+      "id": 126
+    },
+    {
+      "name": "sbibm",
+      "one_line_profile": "Benchmarking framework for simulation-based inference algorithms",
+      "detailed_description": "A comprehensive benchmarking suite for simulation-based inference (SBI) methods. It provides a collection of reference tasks, metrics, and utilities to evaluate and compare the performance of different SBI algorithms systematically.",
+      "domains": [
+        "SYSBIO1-07",
+        "AI4S_GENERAL"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "algorithm_evaluation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sbi-benchmark/sbibm",
+      "help_website": [
+        "https://sbibm.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "sbi",
+        "benchmark",
+        "inference",
+        "metrics"
+      ],
+      "id": 127
+    },
+    {
+      "name": "sbi",
+      "one_line_profile": "Python package for simulation-based inference (likelihood-free inference)",
+      "detailed_description": "A standard library for simulation-based inference (SBI), enabling parameter estimation for complex simulators where the likelihood is intractable. It implements state-of-the-art neural inference methods (SNPE, SNLE, SNRE) to perform Bayesian inference.",
+      "domains": [
+        "SYSBIO1-07",
+        "AI4S_GENERAL"
+      ],
+      "subtask_category": [
+        "parameter_inference",
+        "posterior_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sbi-dev/sbi",
+      "help_website": [
+        "https://www.mackelab.org/sbi/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "simulation-based-inference",
+        "bayesian-inference",
+        "likelihood-free",
+        "parameter-estimation"
+      ],
+      "id": 128
+    },
+    {
+      "name": "QTensorAI",
+      "one_line_profile": "Hybrid quantum-classical neural network simulation platform",
+      "detailed_description": "A platform for simulating hybrid quantum-classical neural networks using tensor networks. It leverages QTensor for efficient quantum circuit simulation and integrates with PyTorch for differentiable training of hybrid models.",
+      "domains": [
+        "PHYSICS",
+        "AI4S_GENERAL"
+      ],
+      "subtask_category": [
+        "quantum_simulation",
+        "hybrid_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sss441803/QTensorAI",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "quantum-computing",
+        "tensor-networks",
+        "hybrid-neural-networks",
+        "simulation"
+      ],
+      "id": 129
+    },
+    {
+      "name": "socialforce",
+      "one_line_profile": "Differentiable Social Force simulation library",
+      "detailed_description": "A Python library implementing the Social Force Model for simulating particle or agent dynamics. It is fully differentiable, allowing for parameter optimization and integration into machine learning pipelines for analyzing crowd dynamics or biological cell migration.",
+      "domains": [
+        "SYSBIO1",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "agent_simulation",
+        "dynamics_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/svenkreiss/socialforce",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "social-force-model",
+        "differentiable-simulation",
+        "agent-based-modeling"
+      ],
+      "id": 130
+    },
+    {
+      "name": "paltas",
+      "one_line_profile": "Simulation-based inference pipeline for strong gravitational lensing",
+      "detailed_description": "A software package designed to conduct simulation-based inference on strong gravitational lensing systems. It generates realistic lensing simulations and trains neural posterior estimators to infer lens parameters from observational data.",
+      "domains": [
+        "ASTROPHYSICS"
+      ],
+      "subtask_category": [
+        "parameter_inference",
+        "image_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/swagnercarena/paltas",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-lensing",
+        "sbi",
+        "astrophysics",
+        "simulation"
+      ],
+      "id": 131
+    },
+    {
+      "name": "MarineHydro.jl",
+      "one_line_profile": "Differentiable boundary element simulations for hydrodynamics",
+      "detailed_description": "A Julia library for performing differentiable boundary element method (BEM) simulations. It is designed for the design and optimization of offshore structures by simulating wave-structure interactions.",
+      "domains": [
+        "ENGINEERING",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "hydrodynamics_simulation",
+        "structure_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/symbiotic-engineering/MarineHydro.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bem",
+        "hydrodynamics",
+        "differentiable-physics",
+        "julia"
+      ],
+      "id": 132
+    },
+    {
+      "name": "synference",
+      "one_line_profile": "SBI-based Spectral Energy Distribution (SED) fitting tool",
+      "detailed_description": "A tool for flexible Spectral Energy Distribution (SED) fitting in astronomy, powered by simulation-based inference. It integrates with the Synthesizer framework to infer physical properties of galaxies from photometric data.",
+      "domains": [
+        "ASTROPHYSICS"
+      ],
+      "subtask_category": [
+        "sed_fitting",
+        "parameter_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/synthesizer-project/synference",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "astronomy",
+        "sed-fitting",
+        "sbi",
+        "inference"
+      ],
+      "id": 133
+    },
+    {
+      "name": "RoboDojo.jl",
+      "one_line_profile": "Differentiable simulator for robotic systems",
+      "detailed_description": "A differentiable physics simulator written in Julia, designed for robotic systems. It enables gradient-based optimization for control and dynamics learning tasks.",
+      "domains": [
+        "ROBOTICS",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "robotics_simulation",
+        "control_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/thowell/RoboDojo.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "robotics",
+        "differentiable-simulation",
+        "julia",
+        "physics"
+      ],
+      "id": 134
+    },
+    {
+      "name": "jwave",
+      "one_line_profile": "JAX-based differentiable acoustic simulation framework",
+      "detailed_description": "A research framework for differentiable and parallelizable acoustic simulations using JAX. It supports execution on CPUs, GPUs, and TPUs, enabling efficient forward modeling and inversion for acoustic problems.",
+      "domains": [
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "acoustic_simulation",
+        "inverse_problems"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ucl-bug/jwave",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "acoustics",
+        "jax",
+        "differentiable-physics",
+        "simulation"
+      ],
+      "id": 135
+    },
+    {
+      "name": "harissa",
+      "one_line_profile": "Simulation and inference of gene regulatory networks",
+      "detailed_description": "A Python package for the simulation and inference of gene regulatory networks (GRNs) based on a mechanistic model of transcriptional bursting. It allows for generating realistic single-cell gene expression data and inferring network structures from data.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "grn_inference",
+        "single_cell_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ulysseherbach/harissa",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "gene-regulatory-networks",
+        "transcriptional-bursting",
+        "inference",
+        "simulation"
+      ],
+      "id": 136
+    },
+    {
+      "name": "CIE-R-Package",
+      "one_line_profile": "Causal Inference and Directional Enrichment for biological networks",
+      "detailed_description": "An R package providing methods for causal inference and directional enrichment analysis on biological networks. It helps in identifying active pathways and regulatory mechanisms from omics data.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "causal_inference",
+        "enrichment_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/umbibio/CIE-R-Package",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "causal-inference",
+        "biological-networks",
+        "enrichment-analysis",
+        "r-package"
+      ],
+      "id": 137
+    },
+    {
+      "name": "albatross",
+      "one_line_profile": "SBI library for stellar stream analysis",
+      "detailed_description": "A simulation-based inference library specifically designed for analyzing stellar streams in the Milky Way. It facilitates the estimation of potential parameters and stream properties using likelihood-free methods.",
+      "domains": [
+        "ASTROPHYSICS"
+      ],
+      "subtask_category": [
+        "stellar_stream_analysis",
+        "parameter_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/undark-lab/albatross",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "stellar-streams",
+        "sbi",
+        "inference"
+      ],
+      "id": 138
+    },
+    {
+      "name": "peregrine",
+      "one_line_profile": "SBI library for gravitational wave signal analysis",
+      "detailed_description": "A simulation-based inference library designed to perform analysis on a wide class of gravitational wave signals. It enables efficient parameter estimation for gravitational wave astronomy.",
+      "domains": [
+        "ASTROPHYSICS"
+      ],
+      "subtask_category": [
+        "gravitational_waves",
+        "parameter_inference"
+      ],
+      "application_level": "library",
+      "primary_language": null,
+      "repo_url": "https://github.com/undark-lab/peregrine-public",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "sbi",
+        "inference",
+        "astronomy"
+      ],
+      "id": 139
+    },
+    {
+      "name": "swyft",
+      "one_line_profile": "Scalable system for scientific simulation-based inference",
+      "detailed_description": "A library for efficient simulation-based inference, implementing Truncated Marginal Neural Ratio Estimation (TMNRE). It is designed to scale to complex scientific simulators and high-dimensional parameter spaces, widely used in cosmology and physics.",
+      "domains": [
+        "ASTROPHYSICS",
+        "PHYSICS",
+        "AI4S_GENERAL"
+      ],
+      "subtask_category": [
+        "parameter_inference",
+        "marginal_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/undark-lab/swyft",
+      "help_website": [
+        "https://swyft.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "sbi",
+        "tmnre",
+        "inference",
+        "scientific-computing"
+      ],
+      "id": 140
+    },
+    {
+      "name": "marginaleffects",
+      "one_line_profile": "R package for model interpretation and marginal effects",
+      "detailed_description": "An R package to compute and plot predictions, slopes, marginal means, and comparisons for various statistical and ML models. It supports uncertainty estimation via delta method, bootstrapping, and simulation-based inference, making it a powerful tool for statistical analysis in science.",
+      "domains": [
+        "STATISTICS",
+        "AI4S_GENERAL"
+      ],
+      "subtask_category": [
+        "statistical_analysis",
+        "model_interpretation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/vincentarelbundock/marginaleffects",
+      "help_website": [
+        "https://vincentarelbundock.github.io/marginaleffects/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "statistics",
+        "marginal-effects",
+        "inference",
+        "r-package"
+      ],
+      "id": 141
+    },
+    {
+      "name": "sbi_pp",
+      "one_line_profile": "Simulation-based inference customized for astronomical applications",
+      "detailed_description": "A library providing simulation-based inference tools tailored for astronomical tasks, such as photometric redshift estimation. It builds upon standard SBI methods to address domain-specific challenges in astronomy.",
+      "domains": [
+        "ASTROPHYSICS"
+      ],
+      "subtask_category": [
+        "photometric_redshift",
+        "parameter_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/wangbingjie/sbi_pp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "sbi",
+        "photometric-redshift",
+        "inference"
+      ],
+      "id": 142
+    },
+    {
+      "name": "diff-surfel-tracing",
+      "one_line_profile": "Differentiable 2D Gaussian ray tracer",
+      "detailed_description": "A fully differentiable 2D Gaussian ray tracer built on OptiX. It supports multiple-bounce path tracing for complex light transport simulation and is designed for integration into optimization and inverse rendering tasks.",
+      "domains": [
+        "PHYSICS",
+        "OPTICS"
+      ],
+      "subtask_category": [
+        "light_transport_simulation",
+        "inverse_rendering"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/xbillowy/diff-surfel-tracing",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "differentiable-rendering",
+        "ray-tracing",
+        "optics",
+        "simulation"
+      ],
+      "id": 143
+    },
+    {
+      "name": "Py_PSNODE",
+      "one_line_profile": "Neural ODE and DAE modules for power system modeling",
+      "detailed_description": "A library providing general neural Ordinary Differential Equation (ODE) and Differential Algebraic Equation (DAE) modules specifically for power system dynamic modeling. It facilitates the integration of neural networks with physical power system models.",
+      "domains": [
+        "ENGINEERING",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "power_system_modeling",
+        "dynamics_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xxh0523/Py_PSNODE",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "power-systems",
+        "neural-ode",
+        "dae",
+        "dynamics"
+      ],
+      "id": 144
+    },
+    {
+      "name": "APDTFlow",
+      "one_line_profile": "Time series forecasting framework using Neural ODEs",
+      "detailed_description": "A modular forecasting framework for time series data that leverages Neural ODEs, transformers, and probabilistic modeling. It allows researchers to experiment with and deploy advanced deep learning models for dynamic system forecasting.",
+      "domains": [
+        "AI4S_GENERAL",
+        "SYSBIO1-07"
+      ],
+      "subtask_category": [
+        "time_series_forecasting",
+        "dynamics_modeling"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yotambraun/APDTFlow",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "forecasting",
+        "neural-ode",
+        "time-series",
+        "probabilistic-modeling"
+      ],
+      "id": 145
+    }
+  ]
+}

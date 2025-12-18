@@ -1,0 +1,4500 @@
+{
+  "generated_at": "2025-12-16T19:03:02.262039+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "B3",
+      "leaf_cluster_name": "生信-单细胞与空间组学生态",
+      "domain": "Bioinfo",
+      "typical_objects": "count matrix, AnnData/Seurat, spatial",
+      "task_chain": "预处理→整合→聚类/轨迹→注释→可视化→复现",
+      "tool_form": "R/Python生态 + 交互可视化 + pipelines"
+    },
+    "unit": {
+      "unit_id": "B3-08",
+      "unit_name": "工作流与复现（modules/pipelines）",
+      "target_scale": "150–350",
+      "coverage_tools": "nf-core、Snakemake、容器、回归测试"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] scPipe",
+        "[GH] Cromwell",
+        "[GH] Cumulus",
+        "[GH] zUMIs",
+        "[GH] scFlow",
+        "[GH] nf-core/spatialtranscriptomics",
+        "[GH] Nextflow",
+        "[GH] Snakemake",
+        "[GH] nf-core/scrnaseq",
+        "[GH] scRNA-seq pipeline",
+        "[GH] single-cell workflow",
+        "[GH] spatial transcriptomics pipeline",
+        "[GH] nf-core scRNA-seq",
+        "[GH] snakemake scRNA-seq",
+        "[GH] nextflow spatial omics",
+        "[GH] reproducible scRNA-seq",
+        "[GH] single-cell analysis template",
+        "[GH] scATAC-seq workflow",
+        "[GH] 10x genomics pipeline",
+        "[GH] Seurat wrapper",
+        "[GH] Scanpy pipeline",
+        "[GH] single-cell container",
+        "[GH] bioinformatics workflow manager",
+        "[WEB] nf-core scrnaseq pipeline github",
+        "[WEB] snakemake single cell workflow github",
+        "[WEB] spatial transcriptomics analysis pipeline github",
+        "[WEB] reproducible single cell research template github",
+        "[WEB] best practices scRNA-seq workflow github"
+      ],
+      "total_candidates": 779,
+      "tool_candidates": 342,
+      "final_tools": 174
+    }
+  },
+  "tools": [
+    {
+      "name": "Tibanna",
+      "one_line_profile": "AWS cloud execution engine for genomic pipelines (CWL/WDL/Snakemake)",
+      "detailed_description": "Tibanna is a software tool that helps run genomic pipelines on Amazon Web Services (AWS). It supports standard workflow languages like CWL and WDL, as well as Snakemake, and is used by the 4DN DCIC for data processing.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_execution",
+        "cloud_computing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/4dn-dcic/tibanna",
+      "help_website": [
+        "https://tibanna.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "aws",
+        "pipeline",
+        "genomics",
+        "cwl",
+        "wdl"
+      ],
+      "id": 1
+    },
+    {
+      "name": "ATRACKCS",
+      "one_line_profile": "Automated detection and tracking of mesoscale convective systems",
+      "detailed_description": "A Python package designed for the automated detection and tracking of mesoscale convective systems in meteorological data, facilitating climate and weather research.",
+      "domains": [
+        "EarthSci"
+      ],
+      "subtask_category": [
+        "feature_detection",
+        "tracking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ATRACKCS/ATRACKCS",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "meteorology",
+        "climate",
+        "tracking"
+      ],
+      "id": 2
+    },
+    {
+      "name": "TallyNN",
+      "one_line_profile": "Single-cell analysis workflows for scCOLOR-seq data",
+      "detailed_description": "Provides single-cell analysis workflows specifically designed for double phosphoramidite barcode and UMI correction in scCOLOR-seq experiments.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "umi_correction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Acribbs/TallyNN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "workflow",
+        "umi"
+      ],
+      "id": 3
+    },
+    {
+      "name": "scpca-nf",
+      "one_line_profile": "Nextflow workflow for Single-cell Pediatric Cancer Atlas data",
+      "detailed_description": "A Nextflow workflow developed for processing data for the Single-cell Pediatric Cancer Atlas Portal, ensuring standardized analysis of pediatric cancer single-cell data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/AlexsLemonade/scpca-nf",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "nextflow",
+        "single-cell",
+        "cancer"
+      ],
+      "id": 4
+    },
+    {
+      "name": "SingleCellExperiment (Python)",
+      "one_line_profile": "Python container class for single-cell experiments",
+      "detailed_description": "A Python implementation of the SingleCellExperiment container class, providing a standardized data structure for storing and manipulating single-cell experiment data, mirroring the Bioconductor R class.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_structure",
+        "data_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BiocPy/SingleCellExperiment",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "data-structure",
+        "bioconductor"
+      ],
+      "id": 5
+    },
+    {
+      "name": "stLearn",
+      "one_line_profile": "Machine learning pipeline for spatial transcriptomics analysis",
+      "detailed_description": "A comprehensive machine learning pipeline for analyzing spatial transcriptomics data, integrating gene expression, tissue morphology, and spatial location to infer biological insights.",
+      "domains": [
+        "B3",
+        "B3-05"
+      ],
+      "subtask_category": [
+        "spatial_analysis",
+        "machine_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BiomedicalMachineLearning/stLearn",
+      "help_website": [
+        "https://stlearn.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "spatial-transcriptomics",
+        "machine-learning",
+        "bioinformatics"
+      ],
+      "id": 6
+    },
+    {
+      "name": "IMCDataAnalysis",
+      "one_line_profile": "Workflow for multiplexed imaging data analysis",
+      "detailed_description": "An R-based workflow designed for the analysis of multiplexed imaging data, such as Imaging Mass Cytometry (IMC), facilitating processing and visualization of high-dimensional image data.",
+      "domains": [
+        "B3",
+        "B3-06"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/BodenmillerGroup/IMCDataAnalysis",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "imaging",
+        "mass-cytometry",
+        "workflow"
+      ],
+      "id": 7
+    },
+    {
+      "name": "CalliNGS-NF",
+      "one_line_profile": "Nextflow pipeline for GATK RNA-Seq Variant Calling",
+      "detailed_description": "A Nextflow pipeline implementing the GATK Best Practices for RNA-Seq variant calling, enabling reproducible and scalable detection of genetic variants from RNA sequencing data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/CRG-CNAG/CalliNGS-NF",
+      "help_website": [],
+      "license": "MPL-2.0",
+      "tags": [
+        "rna-seq",
+        "variant-calling",
+        "gatk",
+        "nextflow"
+      ],
+      "id": 8
+    },
+    {
+      "name": "fold_tree",
+      "one_line_profile": "Snakemake pipeline for creating phylogenetic trees",
+      "detailed_description": "A Snakemake pipeline designed to automate the creation of phylogenetic trees from sets of sequences, streamlining the process of evolutionary analysis.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "phylogenetics",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/DessimozLab/fold_tree",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "phylogenetics",
+        "snakemake",
+        "evolution"
+      ],
+      "id": 9
+    },
+    {
+      "name": "VIRify",
+      "one_line_profile": "Pipeline for detection of phages and eukaryotic viruses",
+      "detailed_description": "A bioinformatics pipeline for the detection and classification of bacteriophages and eukaryotic viruses from metagenomic and metatranscriptomic assembly data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "metagenomics",
+        "virus_detection"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EBI-Metagenomics/emg-viral-pipeline",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "metagenomics",
+        "virology",
+        "pipeline"
+      ],
+      "id": 10
+    },
+    {
+      "name": "REAT",
+      "one_line_profile": "Robust Eukaryotic Annotation Toolkit",
+      "detailed_description": "A toolkit designed for the robust annotation of eukaryotic genomes, facilitating the identification and functional characterization of genomic elements.",
+      "domains": [
+        "B3"
+      ],
+      "subtask_category": [
+        "genome_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EI-CoreBioinformatics/reat",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "annotation",
+        "genomics",
+        "eukaryotes"
+      ],
+      "id": 11
+    },
+    {
+      "name": "caper",
+      "one_line_profile": "Python wrapper for Cromwell/WDL workflow execution",
+      "detailed_description": "A Python wrapper and CLI for the Cromwell workflow engine, designed to simplify the execution of WDL workflows on various infrastructure backends, widely used by the ENCODE project.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ENCODE-DCC/caper",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cromwell",
+        "wdl",
+        "workflow",
+        "encode"
+      ],
+      "id": 12
+    },
+    {
+      "name": "croo",
+      "one_line_profile": "Cromwell output organizer",
+      "detailed_description": "A utility tool to organize and structure the output files generated by Cromwell workflow executions, making it easier to manage and interpret results from complex pipelines.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "data_management",
+        "workflow_utility"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ENCODE-DCC/croo",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cromwell",
+        "output-management",
+        "encode"
+      ],
+      "id": 13
+    },
+    {
+      "name": "scAmpi",
+      "one_line_profile": "Workflow for single-cell RNA-seq analysis",
+      "detailed_description": "A comprehensive workflow for single-cell RNA-seq data analysis, providing end-to-end processing capabilities from raw data to biological insights.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ETH-NEXUS/scAmpi_single_cell_RNA",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "single-cell",
+        "rna-seq",
+        "workflow"
+      ],
+      "id": 14
+    },
+    {
+      "name": "MAG_Snakemake_wf",
+      "one_line_profile": "Snakemake workflow for recovery of prokaryotic genomes",
+      "detailed_description": "A Snakemake workflow designed for the recovery of prokaryotic genomes (Metagenome-Assembled Genomes, MAGs) from shotgun metagenomic sequencing data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "metagenomics",
+        "genome_assembly"
+      ],
+      "application_level": "workflow",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/Finn-Lab/MAG_Snakemake_wf",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "metagenomics",
+        "snakemake",
+        "mag"
+      ],
+      "id": 15
+    },
+    {
+      "name": "AsaruSim",
+      "one_line_profile": "Simulation workflow for 10X single cell Nanopore reads",
+      "detailed_description": "A workflow for simulating 10X Genomics single-cell RNA-seq data sequenced with Nanopore technology, useful for benchmarking and method development.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "simulation",
+        "data_generation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GenomiqueENS/AsaruSim",
+      "help_website": [
+        "https://GenomiqueENS.github.io/AsaruSim/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "simulation",
+        "nanopore",
+        "single-cell"
+      ],
+      "id": 16
+    },
+    {
+      "name": "Eoulsan",
+      "one_line_profile": "Pipeline and framework for NGS analysis",
+      "detailed_description": "A Java-based framework and pipeline for the analysis of Next-Generation Sequencing (NGS) data, including RNA-seq and scRNA-seq, supporting distributed computing.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "pipeline"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/GenomiqueENS/eoulsan",
+      "help_website": [
+        "http://eoulsan.genomique.ehens.fr/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "ngs",
+        "rna-seq",
+        "distributed-computing"
+      ],
+      "id": 17
+    },
+    {
+      "name": "sv-callers",
+      "one_line_profile": "Snakemake workflow for structural variant detection",
+      "detailed_description": "A Snakemake-based workflow that integrates multiple tools for detecting structural variants in genomic data, ensuring reproducible and comprehensive variant calling.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GooglingTheCancerGenome/sv-callers",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "structural-variants",
+        "snakemake",
+        "genomics"
+      ],
+      "id": 18
+    },
+    {
+      "name": "dropSeqPipe",
+      "one_line_profile": "Snakemake workflow for Drop-Seq scRNA-seq pre-processing",
+      "detailed_description": "A Snakemake workflow specifically designed for the pre-processing of Drop-Seq single-cell RNA-seq data, handling alignment, quantification, and quality control.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Hoohm/dropSeqPipe",
+      "help_website": [],
+      "license": "CC-BY-SA-4.0",
+      "tags": [
+        "drop-seq",
+        "snakemake",
+        "single-cell"
+      ],
+      "id": 19
+    },
+    {
+      "name": "multifish",
+      "one_line_profile": "Analysis pipeline for EASI-FISH spatial transcriptomics",
+      "detailed_description": "A computational pipeline for processing and analyzing EASI-FISH data, enabling high-resolution spatial transcriptomics studies.",
+      "domains": [
+        "B3",
+        "B3-05"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "spatial_transcriptomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/JaneliaSciComp/multifish",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "fish",
+        "spatial",
+        "imaging"
+      ],
+      "id": 20
+    },
+    {
+      "name": "Kitware Cumulus",
+      "one_line_profile": "Cloud cluster management platform for scientific computing",
+      "detailed_description": "A platform and REST API developed by Kitware for creating and managing cloud clusters, facilitating high-performance computing (HPC) and scientific workflows in the cloud.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "cloud_computing",
+        "hpc_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Kitware/cumulus",
+      "help_website": [
+        "https://cumulus.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "hpc",
+        "cloud",
+        "cluster-management"
+      ],
+      "id": 21
+    },
+    {
+      "name": "pytest-workflow",
+      "one_line_profile": "Test framework for bioinformatics workflows",
+      "detailed_description": "A Pytest plugin designed for testing bioinformatics workflows and pipelines (e.g., Snakemake, Nextflow) using YAML configuration files, ensuring reproducibility and correctness.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "regression_testing",
+        "workflow_validation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LUMC/pytest-workflow",
+      "help_website": [
+        "https://pytest-workflow.readthedocs.io/"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "testing",
+        "workflow",
+        "bioinformatics"
+      ],
+      "id": 22
+    },
+    {
+      "name": "VistoSeg",
+      "one_line_profile": "Image processing pipeline for spatial transcriptomics",
+      "detailed_description": "A MATLAB-based image processing pipeline designed for segmentation and analysis of high-resolution images in spatial transcriptomics projects.",
+      "domains": [
+        "B3",
+        "B3-05"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "spatial_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/LieberInstitute/VistoSeg",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "image-processing",
+        "spatial",
+        "segmentation"
+      ],
+      "id": 23
+    },
+    {
+      "name": "scPipe",
+      "one_line_profile": "Pipeline for single-cell RNA-seq data analysis",
+      "detailed_description": "A Bioconductor package that provides a pipeline for processing single-cell RNA-seq data, including demultiplexing, alignment, and quality control.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "pipeline"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/LuyiTian/scPipe",
+      "help_website": [
+        "https://bioconductor.org/packages/release/bioc/html/scPipe.html"
+      ],
+      "license": null,
+      "tags": [
+        "bioconductor",
+        "single-cell",
+        "pipeline"
+      ],
+      "id": 24
+    },
+    {
+      "name": "HPCell",
+      "one_line_profile": "Parallel HPC workflows for single-cell analysis",
+      "detailed_description": "A tool to convert single-cell and spatial analysis scripts into parallel workflows compatible with HPC and cloud environments, streamlining large-scale data processing.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_optimization",
+        "hpc_computing"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/MangiolaLaboratory/HPCell",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "hpc",
+        "single-cell",
+        "parallel-computing"
+      ],
+      "id": 25
+    },
+    {
+      "name": "py-lmd",
+      "one_line_profile": "Python library for processing Leica LMD6 & LMD7 microscope cutting data and segmentation masks",
+      "detailed_description": "A Python library designed to read, create, and write cutting data for Leica LMD6 and LMD7 laser microdissection microscopes. It facilitates reproducible workflows for calibrating, importing SVG files, and converting single-cell segmentation masks into machine-readable cutting instructions.",
+      "domains": [
+        "B3",
+        "B3-08",
+        "Microscopy"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "segmentation",
+        "image_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MannLabs/py-lmd",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "microscopy",
+        "laser-microdissection",
+        "single-cell",
+        "segmentation"
+      ],
+      "id": 26
+    },
+    {
+      "name": "ReapTEC",
+      "one_line_profile": "Pipeline for simultaneous profiling of gene expression and enhancer activity in 5' scRNA-seq",
+      "detailed_description": "A bioinformatics pipeline designed to simultaneously profile gene expression and enhancer activity using 5' single-cell RNA sequencing datasets. It enables the analysis of cis-regulatory elements alongside transcriptional output in single cells.",
+      "domains": [
+        "B3",
+        "B3-08",
+        "Epigenomics"
+      ],
+      "subtask_category": [
+        "multi_omics_analysis",
+        "enhancer_profiling",
+        "gene_expression"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/MurakawaLab/ReapTEC",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "scRNA-seq",
+        "enhancer",
+        "pipeline",
+        "multi-omics"
+      ],
+      "id": 27
+    },
+    {
+      "name": "SCREW",
+      "one_line_profile": "Reproducible workflow for Single-Cell Epigenomics analysis using CWL",
+      "detailed_description": "SCREW (Single-Cell Reproducible Epigenomics Workflow) is a Common Workflow Language (CWL) based pipeline for analyzing single-cell epigenomic data. It ensures reproducibility and scalability for processing complex single-cell chromatin data.",
+      "domains": [
+        "B3",
+        "B3-08",
+        "Epigenomics"
+      ],
+      "subtask_category": [
+        "epigenomics_analysis",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/NCBI-Hackathons/Epigenomics_CWL",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cwl",
+        "single-cell",
+        "epigenomics",
+        "reproducibility"
+      ],
+      "id": 28
+    },
+    {
+      "name": "SCassist",
+      "one_line_profile": "AI-based workflow assistant for optimizing single-cell analysis parameters",
+      "detailed_description": "An AI-driven workflow assistant designed to help researchers optimize parameters and processing steps for single-cell data analysis, aiming to improve the robustness and reproducibility of scRNA-seq workflows.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_optimization",
+        "parameter_tuning"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/NIH-NEI/SCassist",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "single-cell",
+        "ai-assistant",
+        "workflow-optimization"
+      ],
+      "id": 29
+    },
+    {
+      "name": "scRNAseq_workflow_benchmark",
+      "one_line_profile": "Benchmark framework for scRNA-seq analysis workflows using R/Bioconductor",
+      "detailed_description": "A workflow designed to benchmark various single-cell RNA-seq analysis pipelines and methods using R and Bioconductor. It facilitates the evaluation of different analytical strategies for reproducibility and performance.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "workflow_evaluation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/Novartis/scRNAseq_workflow_benchmark",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "scRNA-seq",
+        "bioconductor",
+        "reproducibility"
+      ],
+      "id": 30
+    },
+    {
+      "name": "pgsc_calc",
+      "one_line_profile": "Nextflow pipeline for calculating polygenic scores (PGS) from genomic data",
+      "detailed_description": "A robust Nextflow pipeline developed by the PGS Catalog for calculating polygenic scores. It automates the matching of variants, handling of different genome builds, and scoring of individuals based on PGS Catalog definitions.",
+      "domains": [
+        "Genomics",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "polygenic_scoring",
+        "variant_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/PGScatalog/pgsc_calc",
+      "help_website": [
+        "https://pgsc-calc.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "nextflow",
+        "polygenic-scores",
+        "genomics",
+        "pgs-catalog"
+      ],
+      "id": 31
+    },
+    {
+      "name": "HiFi-16S-workflow",
+      "one_line_profile": "Nextflow pipeline for analyzing PacBio HiFi full-length 16S rRNA data",
+      "detailed_description": "A bioinformatics pipeline built with Nextflow for processing and analyzing PacBio HiFi full-length 16S rRNA sequencing data. It handles quality control, classification, and diversity analysis for metagenomic studies.",
+      "domains": [
+        "Metagenomics",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "16s_analysis",
+        "metagenomics",
+        "sequence_classification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/PacificBiosciences/HiFi-16S-workflow",
+      "help_website": [],
+      "license": "BSD-3-Clause-Clear",
+      "tags": [
+        "pacbio",
+        "hifi",
+        "16s",
+        "metagenomics"
+      ],
+      "id": 32
+    },
+    {
+      "name": "CATD_snakemake",
+      "one_line_profile": "Snakemake pipeline for benchmarking cell-type deconvolution methods",
+      "detailed_description": "A Snakemake workflow designed to benchmark various cell-type deconvolution methods. It uses single-cell RNA-seq datasets to simulate bulk data or as references to deconvolve real bulk RNA-seq data, facilitating method evaluation.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "deconvolution",
+        "benchmarking",
+        "bulk_deconvolution"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/Papatheodorou-Group/CATD_snakemake",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "snakemake",
+        "deconvolution",
+        "benchmark",
+        "rna-seq"
+      ],
+      "id": 33
+    },
+    {
+      "name": "PyPSA-Eur",
+      "one_line_profile": "Open optimization model of the European energy system",
+      "detailed_description": "PyPSA-Eur is a sector-coupled open optimization model of the European energy system. It covers electricity, transport, and heat sectors, allowing researchers to model and optimize energy transition scenarios.",
+      "domains": [
+        "Energy",
+        "Systems Modeling"
+      ],
+      "subtask_category": [
+        "energy_modeling",
+        "optimization",
+        "simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PyPSA/pypsa-eur",
+      "help_website": [
+        "https://pypsa-eur.readthedocs.io/"
+      ],
+      "license": null,
+      "tags": [
+        "energy-system",
+        "optimization",
+        "pypsa",
+        "modeling"
+      ],
+      "id": 34
+    },
+    {
+      "name": "VesselExpress",
+      "one_line_profile": "Automated analysis of blood vasculature in 3D light-sheet image volumes",
+      "detailed_description": "A tool for the automated analysis of blood vasculature structures in 3D light-sheet microscopy image volumes. It provides algorithms for segmentation, skeletonization, and quantification of vascular networks.",
+      "domains": [
+        "Bioimage Analysis",
+        "B3"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "segmentation",
+        "vasculature_quantification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RUB-Bioinf/VesselExpress",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "light-sheet",
+        "vasculature",
+        "3d-imaging",
+        "bioimage-analysis"
+      ],
+      "id": 35
+    },
+    {
+      "name": "reticulatus",
+      "one_line_profile": "Snakemake pipeline for assembling and polishing long genomes from nanopore reads",
+      "detailed_description": "A Snakemake-based bioinformatics pipeline for the assembly and polishing of genomes using long reads from Oxford Nanopore Technologies. It integrates assembly, polishing, and quality assessment steps.",
+      "domains": [
+        "Genomics",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "genome_assembly",
+        "polishing",
+        "long_read_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SamStudio8/reticulatus",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nanopore",
+        "assembly",
+        "snakemake",
+        "genomics"
+      ],
+      "id": 36
+    },
+    {
+      "name": "spatialone-pipeline",
+      "one_line_profile": "Pipeline for spatial transcriptomics analysis",
+      "detailed_description": "A pipeline developed by Sanofi for the analysis of spatial transcriptomics data. It likely includes steps for data processing, quality control, and spatial feature extraction.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "spatial_analysis",
+        "transcriptomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Sanofi-Public/spatialone-pipeline",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "spatial-transcriptomics",
+        "pipeline",
+        "sanofi"
+      ],
+      "id": 37
+    },
+    {
+      "name": "ScaleRna",
+      "one_line_profile": "Nextflow workflow for ScaleBio single-cell RNA sequencing data",
+      "detailed_description": "A Nextflow workflow specifically designed for processing single-cell RNA sequencing data generated using ScaleBio's technology. It handles demultiplexing, alignment, and quantification.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "scRNA-seq_processing",
+        "alignment",
+        "quantification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ScaleBio/ScaleRna",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "scalebio",
+        "scRNA-seq",
+        "nextflow",
+        "pipeline"
+      ],
+      "id": 38
+    },
+    {
+      "name": "Alexandria",
+      "one_line_profile": "Platform and workflows for single-cell data repository and analysis",
+      "detailed_description": "The Alexandria project provides a single-cell data repository along with associated workflows, notebooks, and scripts to facilitate accessible single-cell data analysis and sharing.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "data_repository",
+        "analysis_workflow",
+        "data_sharing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ShalekLab/alexandria",
+      "help_website": [
+        "https://alexandria.mit.edu/"
+      ],
+      "license": null,
+      "tags": [
+        "single-cell",
+        "repository",
+        "workflow",
+        "portal"
+      ],
+      "id": 39
+    },
+    {
+      "name": "scRNAseq_pipelines",
+      "one_line_profile": "Pipelines for processing scRNA-seq data from Sun Lab",
+      "detailed_description": "A collection of pipelines and scripts for processing single-cell RNA sequencing data, maintained by the Sun Lab. It provides tools for standard scRNA-seq analysis tasks.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "scRNA-seq_processing",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/Sun-lab/scRNAseq_pipelines",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scRNA-seq",
+        "pipeline",
+        "bioinformatics"
+      ],
+      "id": 40
+    },
+    {
+      "name": "ACES",
+      "one_line_profile": "Workflow to query small sequences in large sets of genomes",
+      "detailed_description": "ACES (Analysis of Conserved Elements and Sequences) is a workflow designed to query small sequences across a large set of genomes. It outputs BLAST results, multiple sequence alignments, graphical fragment assemblies, and phylogenetic trees.",
+      "domains": [
+        "Genomics",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "sequence_query",
+        "phylogenetics",
+        "comparative_genomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TNTurnerLab/ACES",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "genomics",
+        "blast",
+        "phylogeny",
+        "workflow"
+      ],
+      "id": 41
+    },
+    {
+      "name": "STQ",
+      "one_line_profile": "Spatial Transcriptomics Quantification pipeline for Visium and H&E images",
+      "detailed_description": "A pipeline for Spatial Transcriptomics Quantification (STQ) designed for 10x Visium and H&E-stained whole slide images. It processes imaging and sequencing data to quantify gene expression in a spatial context.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "spatial_quantification",
+        "image_processing",
+        "visium"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TheJacksonLaboratory/STQ",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spatial-transcriptomics",
+        "visium",
+        "quantification",
+        "pipeline"
+      ],
+      "id": 42
+    },
+    {
+      "name": "nf-tenx",
+      "one_line_profile": "Containerized Nextflow pipelines for 10x Genomics data processing",
+      "detailed_description": "A collection of containerized Nextflow pipelines for processing 10x Genomics single-cell data. It integrates various steps for scRNA-seq analysis into a unified, reproducible workflow.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "scRNA-seq_processing",
+        "10x_genomics",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Groovy",
+      "repo_url": "https://github.com/TheJacksonLaboratory/nf-tenx",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nextflow",
+        "10x-genomics",
+        "single-cell",
+        "container"
+      ],
+      "id": 43
+    },
+    {
+      "name": "SciCumulus",
+      "one_line_profile": "Scientific workflow engine for cloud environments",
+      "detailed_description": "SciCumulus is a workflow engine designed to execute scientific workflows in cloud computing environments. It manages the parallel execution and distribution of tasks for data-intensive scientific applications.",
+      "domains": [
+        "B3-08",
+        "Scientific Computing"
+      ],
+      "subtask_category": [
+        "workflow_execution",
+        "cloud_computing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/UFFeScience/SciCumulus",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "workflow-engine",
+        "cloud",
+        "scientific-computing"
+      ],
+      "id": 44
+    },
+    {
+      "name": "snk",
+      "one_line_profile": "CLI generation tool for Snakemake workflows",
+      "detailed_description": "A tool that automatically generates Command Line Interfaces (CLIs) for Snakemake workflows, making them easier to distribute and use as standalone applications.",
+      "domains": [
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "cli_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Wytamma/snk",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "snakemake",
+        "cli",
+        "workflow",
+        "reproducibility"
+      ],
+      "id": 45
+    },
+    {
+      "name": "SCENICprotocol",
+      "one_line_profile": "Scalable workflow for single-cell gene regulatory network analysis (SCENIC)",
+      "detailed_description": "A scalable implementation of the SCENIC (Single-Cell rEgulatory Network Inference and Clustering) workflow. It enables the reconstruction of gene regulatory networks and the identification of stable cell states from single-cell RNA-seq data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "grn_inference",
+        "network_analysis",
+        "single-cell"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aertslab/SCENICprotocol",
+      "help_website": [
+        "https://scenic.aertslab.org/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "scenic",
+        "grn",
+        "single-cell",
+        "regulatory-networks"
+      ],
+      "id": 46
+    },
+    {
+      "name": "SpatialNF",
+      "one_line_profile": "Nextflow pipelines for spatial transcriptomics analysis",
+      "detailed_description": "A set of Nextflow pipelines for processing and analyzing spatial transcriptomics data, developed by the Aerts Lab. It ensures reproducible analysis of spatial gene expression patterns.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "spatial_analysis",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aertslab/SpatialNF",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "spatial-transcriptomics",
+        "nextflow",
+        "pipeline"
+      ],
+      "id": 47
+    },
+    {
+      "name": "BindFlow",
+      "one_line_profile": "Snakemake workflow for FEP and MM/PBSA calculations with GROMACS",
+      "detailed_description": "A Snakemake-based automated workflow for performing Free Energy Perturbation (FEP) and MM/PBSA (Molecular Mechanics Poisson-Boltzmann Surface Area) calculations using GROMACS. It streamlines molecular dynamics simulations for binding energy estimation.",
+      "domains": [
+        "Chemistry",
+        "Molecular Dynamics"
+      ],
+      "subtask_category": [
+        "free_energy_calculation",
+        "molecular_dynamics",
+        "binding_affinity"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ale94mleon/BindFlow",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gromacs",
+        "snakemake",
+        "fep",
+        "molecular-dynamics"
+      ],
+      "id": 48
+    },
+    {
+      "name": "cromwell-client",
+      "one_line_profile": "Scala client for the Cromwell workflow engine",
+      "detailed_description": "A Scala library providing a client interface to interact with the Cromwell scientific workflow engine, facilitating workflow submission, status monitoring, and management.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "pipeline_execution"
+      ],
+      "application_level": "library",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/antonkulaga/cromwell-client",
+      "help_website": [],
+      "license": "MPL-2.0",
+      "tags": [
+        "cromwell",
+        "workflow",
+        "client",
+        "scala"
+      ],
+      "id": 49
+    },
+    {
+      "name": "nf-test",
+      "one_line_profile": "Test framework for Nextflow pipelines",
+      "detailed_description": "A simple and powerful testing framework designed specifically for Nextflow pipelines to ensure reproducibility and correctness of scientific workflows.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_testing",
+        "quality_assurance"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/askimed/nf-test",
+      "help_website": [
+        "https://www.nf-test.com"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nextflow",
+        "testing",
+        "pipeline",
+        "bioinformatics"
+      ],
+      "id": 50
+    },
+    {
+      "name": "FlowCraft",
+      "one_line_profile": "Component-based pipeline composer for omics analysis",
+      "detailed_description": "A tool for building and composing Nextflow pipelines for omics data analysis using a component-based architecture, allowing flexible assembly of bioinformatics tools.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "pipeline_composition",
+        "omics_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/assemblerflow/flowcraft",
+      "help_website": [
+        "https://flowcraft.readthedocs.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "nextflow",
+        "pipeline-builder",
+        "omics"
+      ],
+      "id": 51
+    },
+    {
+      "name": "Bactopia",
+      "one_line_profile": "Flexible pipeline for bacterial genome analysis",
+      "detailed_description": "A comprehensive and flexible Nextflow pipeline for the complete analysis of bacterial genomes, including assembly, annotation, and variant calling.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "bacterial_genomics",
+        "genome_assembly",
+        "annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/bactopia/bactopia",
+      "help_website": [
+        "https://bactopia.github.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "bacteria",
+        "genomics",
+        "nextflow",
+        "pipeline"
+      ],
+      "id": 52
+    },
+    {
+      "name": "Snaketool",
+      "one_line_profile": "Scaffolding tool for Snakemake-based bioinformatics tools",
+      "detailed_description": "A Cookiecutter profile and utility to streamline the creation of standardized, installable Snakemake-based bioinformatics workflows.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_development",
+        "pipeline_scaffolding"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/beardymcjohnface/Snaketool",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "snakemake",
+        "cookiecutter",
+        "bioinformatics-tool"
+      ],
+      "id": 53
+    },
+    {
+      "name": "kraken2_classification",
+      "one_line_profile": "Snakemake workflow for metagenomic classification",
+      "detailed_description": "A Snakemake workflow designed for performing metagenomic classification using Kraken2, facilitating taxonomic assignment of sequencing reads.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "metagenomics",
+        "taxonomic_classification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bhattlab/kraken2_classification",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "snakemake",
+        "kraken2",
+        "metagenomics"
+      ],
+      "id": 54
+    },
+    {
+      "name": "ABFE_workflow",
+      "one_line_profile": "Snakemake workflow for Absolute Binding Free Energy calculations",
+      "detailed_description": "A scalable Snakemake workflow for performing Absolute Binding Free Energy (ABFE) calculations, suitable for high-throughput molecular dynamics simulations.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "free_energy_calculation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bigginlab/ABFE_workflow",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "snakemake",
+        "molecular-dynamics",
+        "abfe"
+      ],
+      "id": 55
+    },
+    {
+      "name": "Master of Pores",
+      "one_line_profile": "Nextflow pipeline for direct RNA Nanopore analysis",
+      "detailed_description": "A Nextflow pipeline for the analysis of direct RNA sequencing data from Oxford Nanopore Technologies, covering preprocessing to modification detection.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "nanopore_sequencing",
+        "rna_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/biocorecrg/master_of_pores",
+      "help_website": [
+        "https://biocorecrg.github.io/master_of_pores/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nanopore",
+        "direct-rna",
+        "nextflow"
+      ],
+      "id": 56
+    },
+    {
+      "name": "scDAPP",
+      "one_line_profile": "End-to-end scRNA-seq analysis pipeline",
+      "detailed_description": "An R-based pipeline for end-to-end analysis of single-cell RNA-seq data, focusing on cross-group comparisons and visualization.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "scrnaseq_analysis",
+        "differential_expression"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/bioinfoDZ/scDAPP",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scrnaseq",
+        "pipeline",
+        "r"
+      ],
+      "id": 57
+    },
+    {
+      "name": "scdrake",
+      "one_line_profile": "Pipeline for scRNA-seq and spatial transcriptomics",
+      "detailed_description": "A scalable pipeline for droplet-based single-cell RNA-seq and spatial transcriptomics analysis, implemented using the `drake` workflow manager in R.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "scrnaseq_analysis",
+        "spatial_transcriptomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/bioinfocz/scdrake",
+      "help_website": [
+        "https://bioinfocz.github.io/scdrake/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "drake",
+        "scrnaseq",
+        "spatial-transcriptomics"
+      ],
+      "id": 58
+    },
+    {
+      "name": "cromshell",
+      "one_line_profile": "CLI for interacting with Cromwell servers",
+      "detailed_description": "A command-line interface tool for submitting workflows, monitoring status, and retrieving metadata from a Cromwell server.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "job_submission"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/broadinstitute/cromshell",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cromwell",
+        "cli",
+        "workflow"
+      ],
+      "id": 59
+    },
+    {
+      "name": "Cromwell",
+      "one_line_profile": "Scientific workflow engine for WDL",
+      "detailed_description": "A workflow management system designed to simplify the definition and execution of scientific workflows (WDL) at scale on various platforms.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_execution",
+        "pipeline_orchestration"
+      ],
+      "application_level": "platform",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/broadinstitute/cromwell",
+      "help_website": [
+        "https://cromwell.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "wdl",
+        "workflow-engine",
+        "bioinformatics"
+      ],
+      "id": 60
+    },
+    {
+      "name": "cromwell-tools",
+      "one_line_profile": "Python clients and scripts for Cromwell",
+      "detailed_description": "A collection of Python tools and libraries for interacting with the Cromwell workflow engine, including API clients and utility scripts.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "api_client"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/broadinstitute/cromwell-tools",
+      "help_website": [
+        "https://cromwell-tools.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cromwell",
+        "python",
+        "client"
+      ],
+      "id": 61
+    },
+    {
+      "name": "wdl-ide",
+      "one_line_profile": "IDE support for Workflow Description Language",
+      "detailed_description": "Tools and extensions to provide IDE features like syntax highlighting and validation for developing WDL scientific workflows.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_development",
+        "code_editing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/broadinstitute/wdl-ide",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "wdl",
+        "ide",
+        "vscode-extension"
+      ],
+      "id": 62
+    },
+    {
+      "name": "V-pipe",
+      "one_line_profile": "Pipeline for viral genome analysis",
+      "detailed_description": "A bioinformatics pipeline for the analysis of next-generation sequencing data derived from viral pathogens, supporting variant calling and haplotype reconstruction.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "viral_genomics",
+        "variant_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/cbg-ethz/V-pipe",
+      "help_website": [
+        "https://cbg-ethz.github.io/V-pipe/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "snakemake",
+        "virus",
+        "ngs"
+      ],
+      "id": 63
+    },
+    {
+      "name": "CompareM2",
+      "one_line_profile": "Microbial genomes-to-report pipeline",
+      "detailed_description": "A pipeline for comparative genomics of microbial organisms, generating comprehensive reports from genomic data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "comparative_genomics",
+        "microbial_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cmkobel/CompareM2",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "microbial",
+        "genomics",
+        "pipeline"
+      ],
+      "id": 64
+    },
+    {
+      "name": "scFlow",
+      "one_line_profile": "Toolkit and workflow for scRNA-seq analysis",
+      "detailed_description": "A comprehensive R package and workflow for the analysis of single-cell and single-nuclei RNA-sequencing data, covering QC to differential expression.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "scrnaseq_analysis",
+        "quality_control",
+        "clustering"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/combiz/scFlow",
+      "help_website": [
+        "https://combiz.github.io/scFlow/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "scrnaseq",
+        "r",
+        "pipeline"
+      ],
+      "id": 65
+    },
+    {
+      "name": "ncov2019-artic-nf",
+      "one_line_profile": "Nextflow pipeline for SARS-CoV-2 ARTIC data",
+      "detailed_description": "A Nextflow pipeline for processing SARS-CoV-2 sequencing data using the ARTIC network protocols and tools.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "viral_genomics",
+        "covid19_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/connor-lab/ncov2019-artic-nf",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "covid-19",
+        "artic",
+        "nextflow"
+      ],
+      "id": 66
+    },
+    {
+      "name": "pyflow-ATACseq",
+      "one_line_profile": "Snakemake pipeline for ATAC-seq",
+      "detailed_description": "A Snakemake-based pipeline for processing ATAC-seq data, including alignment, peak calling, and quality control.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "atac_seq",
+        "peak_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/crazyhottommy/pyflow-ATACseq",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "atac-seq",
+        "snakemake",
+        "pipeline"
+      ],
+      "id": 67
+    },
+    {
+      "name": "pyflow-ChIPseq",
+      "one_line_profile": "Snakemake pipeline for ChIP-seq",
+      "detailed_description": "A Snakemake pipeline for the analysis of ChIP-seq data, handling steps from raw reads to peak calling and visualization.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "chip_seq",
+        "peak_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/crazyhottommy/pyflow-ChIPseq",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "chip-seq",
+        "snakemake",
+        "pipeline"
+      ],
+      "id": 68
+    },
+    {
+      "name": "ARMOR",
+      "one_line_profile": "Snakemake workflow for RNA-seq analysis",
+      "detailed_description": "A lightweight and portable Snakemake workflow for preprocessing, quality control, and statistical analysis of bulk RNA-seq data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "rnaseq_analysis",
+        "differential_expression"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/csoneson/ARMOR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rnaseq",
+        "snakemake",
+        "workflow"
+      ],
+      "id": 69
+    },
+    {
+      "name": "dbMAP",
+      "one_line_profile": "Dimensionality reduction tool for single-cell data",
+      "detailed_description": "A Python tool for fast and accurate dimensionality reduction using diffusion harmonics, suitable for large-scale single-cell data visualization and clustering.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "dimensionality_reduction",
+        "visualization",
+        "clustering"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/davisidarta/dbMAP",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "single-cell",
+        "dimensionality-reduction",
+        "visualization"
+      ],
+      "id": 70
+    },
+    {
+      "name": "single-cell-nanopore",
+      "one_line_profile": "Workflow for Nanopore scRNA-seq",
+      "detailed_description": "A workflow for processing and analyzing single-cell RNA sequencing data generated using Oxford Nanopore Technologies.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "scrnaseq_analysis",
+        "nanopore_sequencing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/dieterich-lab/single-cell-nanopore",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "nanopore",
+        "single-cell",
+        "workflow"
+      ],
+      "id": 71
+    },
+    {
+      "name": "Dockstore",
+      "one_line_profile": "Platform for sharing scientific tools and workflows",
+      "detailed_description": "The source code for the Dockstore platform, which serves as a registry for sharing Docker-based scientific tools and workflows (CWL, WDL, Nextflow).",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_registry",
+        "tool_sharing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/dockstore/dockstore",
+      "help_website": [
+        "https://dockstore.org"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "workflow",
+        "registry",
+        "docker",
+        "bioinformatics"
+      ],
+      "id": 72
+    },
+    {
+      "name": "scxa-workflows",
+      "one_line_profile": "Single Cell Expression Atlas workflows",
+      "detailed_description": "A collection of workflow logic and pipelines used by the EBI Single Cell Expression Atlas for processing single-cell data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "scrnaseq_analysis",
+        "atlas_generation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/ebi-gene-expression-group/scxa-workflows",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ebi",
+        "single-cell",
+        "workflow"
+      ],
+      "id": 73
+    },
+    {
+      "name": "MrBiomics",
+      "one_line_profile": "Composable modules and recipes for automating multi-omics bioinformatics analyses",
+      "detailed_description": "A bioinformatics workflow framework that provides composable modules and recipes to automate multi-omics analyses, facilitating reproducibility and scalability.",
+      "domains": [
+        "Bioinfo",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "multi_omics_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/epigen/MrBiomics",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "workflow",
+        "multi-omics",
+        "snakemake",
+        "automation"
+      ],
+      "id": 74
+    },
+    {
+      "name": "atacseq_pipeline",
+      "one_line_profile": "Snakemake workflow for ATAC-seq data processing and quantification",
+      "detailed_description": "A comprehensive Snakemake workflow and MrBiomics module designed for the processing, quantification, and annotation of ATAC-seq data.",
+      "domains": [
+        "Bioinfo",
+        "Epigenetics"
+      ],
+      "subtask_category": [
+        "atac_seq_processing",
+        "quantification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/epigen/atacseq_pipeline",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "atac-seq",
+        "snakemake",
+        "pipeline"
+      ],
+      "id": 75
+    },
+    {
+      "name": "dea_limma",
+      "one_line_profile": "Snakemake workflow for differential expression analysis using limma",
+      "detailed_description": "A Snakemake workflow and MrBiomics module for performing and visualizing differential analyses of NGS data, powered by the R package limma.",
+      "domains": [
+        "Bioinfo"
+      ],
+      "subtask_category": [
+        "differential_expression_analysis",
+        "visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/epigen/dea_limma",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "limma",
+        "differential-expression",
+        "snakemake"
+      ],
+      "id": 76
+    },
+    {
+      "name": "dea_seurat",
+      "one_line_profile": "Snakemake workflow for single-cell differential expression analysis using Seurat",
+      "detailed_description": "A Snakemake workflow and MrBiomics module for performing differential expression analyses (DEA) on multimodal sc/snRNA-seq data using Seurat.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_analysis",
+        "differential_expression"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/epigen/dea_seurat",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "seurat",
+        "snakemake",
+        "dea"
+      ],
+      "id": 77
+    },
+    {
+      "name": "enrichment_analysis",
+      "one_line_profile": "Snakemake workflow for genomic region and gene set enrichment analyses",
+      "detailed_description": "A Snakemake workflow and MrBiomics module for performing genomic region set and gene set enrichment analyses using tools like LOLA, GREAT, and GSEApy.",
+      "domains": [
+        "Bioinfo"
+      ],
+      "subtask_category": [
+        "enrichment_analysis",
+        "functional_annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/epigen/enrichment_analysis",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "enrichment",
+        "gsea",
+        "snakemake"
+      ],
+      "id": 78
+    },
+    {
+      "name": "genome_tracks",
+      "one_line_profile": "Snakemake workflow for visualization of genome browser tracks",
+      "detailed_description": "A Snakemake workflow and MrBiomics module for generating and visualizing genome browser tracks from aligned BAM files using pyGenomeTracks and IGV-reports.",
+      "domains": [
+        "Bioinfo"
+      ],
+      "subtask_category": [
+        "visualization",
+        "genome_browser"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/epigen/genome_tracks",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "genome-tracks",
+        "snakemake"
+      ],
+      "id": 79
+    },
+    {
+      "name": "mixscape_seurat",
+      "one_line_profile": "Snakemake workflow for CRISPR screen perturbation analysis using Mixscape",
+      "detailed_description": "A Snakemake workflow and MrBiomics module for performing perturbation analyses of pooled CRISPR screens with sc/snRNA-seq read-out using Seurat's Mixscape method.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "crispr_screen_analysis",
+        "perturbation_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/epigen/mixscape_seurat",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "crispr",
+        "single-cell",
+        "mixscape",
+        "snakemake"
+      ],
+      "id": 80
+    },
+    {
+      "name": "scrnaseq_processing_seurat",
+      "one_line_profile": "Snakemake workflow for processing sc/snRNA-seq data with Seurat",
+      "detailed_description": "A Snakemake workflow and MrBiomics module for processing and visualizing multimodal sc/snRNA-seq data generated with 10X Genomics Kits or in MTX format.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_processing",
+        "visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/epigen/scrnaseq_processing_seurat",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "seurat",
+        "processing",
+        "snakemake"
+      ],
+      "id": 81
+    },
+    {
+      "name": "unsupervised_analysis",
+      "one_line_profile": "Snakemake workflow for dimensionality reduction and cluster analysis",
+      "detailed_description": "A general purpose Snakemake workflow and MrBiomics module to perform unsupervised analyses including dimensionality reduction and cluster analysis for high-dimensional data.",
+      "domains": [
+        "Bioinfo"
+      ],
+      "subtask_category": [
+        "dimensionality_reduction",
+        "clustering"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/epigen/unsupervised_analysis",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "unsupervised-learning",
+        "clustering",
+        "snakemake"
+      ],
+      "id": 82
+    },
+    {
+      "name": "bacannot",
+      "one_line_profile": "Comprehensive pipeline for prokaryotic genome annotation",
+      "detailed_description": "A generic but comprehensive Nextflow pipeline for prokaryotic genome annotation and interrogation, featuring interactive reports and a shiny app.",
+      "domains": [
+        "Bioinfo",
+        "Microbiology"
+      ],
+      "subtask_category": [
+        "genome_annotation",
+        "prokaryotic_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/fmalmeida/bacannot",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "genome-annotation",
+        "bacteria",
+        "nextflow"
+      ],
+      "id": 83
+    },
+    {
+      "name": "metaGEM",
+      "one_line_profile": "Workflow for generating genome-scale metabolic models from metagenomic data",
+      "detailed_description": "An easy-to-use workflow for generating context-specific genome-scale metabolic models and predicting metabolic interactions within microbial communities directly from metagenomic data.",
+      "domains": [
+        "Bioinfo",
+        "Metagenomics"
+      ],
+      "subtask_category": [
+        "metabolic_modeling",
+        "metagenomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/franciscozorrilla/metaGEM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "metagenomics",
+        "metabolic-modeling",
+        "workflow"
+      ],
+      "id": 84
+    },
+    {
+      "name": "mosaicatcher-pipeline",
+      "one_line_profile": "Workflow for SV calling from single-cell Strand-seq data",
+      "detailed_description": "An integrated workflow for structural variant (SV) calling from single-cell Strand-seq data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "structural_variation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/friendsofstrandseq/mosaicatcher-pipeline",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "strand-seq",
+        "sv-calling"
+      ],
+      "id": 85
+    },
+    {
+      "name": "hybracter",
+      "one_line_profile": "Automated long-read first bacterial genome assembly tool",
+      "detailed_description": "An automated long-read first bacterial genome assembly tool implemented in Snakemake using Snaketool.",
+      "domains": [
+        "Bioinfo",
+        "Microbiology"
+      ],
+      "subtask_category": [
+        "genome_assembly",
+        "bacterial_genomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gbouras13/hybracter",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "assembly",
+        "long-read",
+        "bacteria",
+        "snakemake"
+      ],
+      "id": 86
+    },
+    {
+      "name": "nanopype",
+      "one_line_profile": "Snakemake pipelines for nanopore sequencing data processing",
+      "detailed_description": "Snakemake pipelines for nanopore sequencing data archiving and processing.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "sequencing_processing",
+        "nanopore"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/giesselmann/nanopype",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nanopore",
+        "snakemake",
+        "pipeline"
+      ],
+      "id": 87
+    },
+    {
+      "name": "snpArcher",
+      "one_line_profile": "Snakemake workflow for highly parallel variant calling",
+      "detailed_description": "A Snakemake workflow for highly parallel variant calling designed for ease-of-use in non-model organisms.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "genomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/harvardinformatics/snpArcher",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "variant-calling",
+        "snakemake",
+        "non-model-organisms"
+      ],
+      "id": 88
+    },
+    {
+      "name": "rnaflow",
+      "one_line_profile": "Simple RNA-Seq differential gene expression pipeline using Nextflow",
+      "detailed_description": "A simple RNA-Seq differential gene expression pipeline implemented using Nextflow.",
+      "domains": [
+        "Bioinfo",
+        "Transcriptomics"
+      ],
+      "subtask_category": [
+        "rna_seq_analysis",
+        "differential_expression"
+      ],
+      "application_level": "workflow",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/hoelzer-lab/rnaflow",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "rna-seq",
+        "nextflow",
+        "pipeline"
+      ],
+      "id": 89
+    },
+    {
+      "name": "nextNEOpi",
+      "one_line_profile": "Comprehensive pipeline for computational neoantigen prediction",
+      "detailed_description": "A comprehensive pipeline for computational neoantigen prediction implemented in Nextflow.",
+      "domains": [
+        "Bioinfo",
+        "Immunoinformatics"
+      ],
+      "subtask_category": [
+        "neoantigen_prediction",
+        "immunology"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/icbi-lab/nextNEOpi",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "neoantigen",
+        "prediction",
+        "nextflow"
+      ],
+      "id": 90
+    },
+    {
+      "name": "scGEAToolbox",
+      "one_line_profile": "Matlab toolbox for single-cell gene expression analyses",
+      "detailed_description": "A Matlab toolbox providing functions for single-cell gene expression analyses.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_analysis",
+        "gene_expression"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/jamesjcai/scGEAToolbox",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "matlab",
+        "single-cell",
+        "toolbox"
+      ],
+      "id": 91
+    },
+    {
+      "name": "st_pipeline",
+      "one_line_profile": "Pipeline for processing Spatial Transcriptomics data",
+      "detailed_description": "Tools and scripts needed to process and analyze raw files generated with the Spatial Transcriptomics method in FASTQ format.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "spatial_transcriptomics",
+        "data_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jfnavarro/st_pipeline",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "spatial-transcriptomics",
+        "pipeline",
+        "fastq"
+      ],
+      "id": 92
+    },
+    {
+      "name": "multiPrime",
+      "one_line_profile": "Mismatch-tolerant minimal primer set design tool",
+      "detailed_description": "A mismatch-tolerant minimal primer set design tool for large and diverse sequences (e.g. Virus).",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "primer_design",
+        "genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/joybio/multiPrime",
+      "help_website": [
+        "http://multiPrime.cn"
+      ],
+      "license": "MIT",
+      "tags": [
+        "primer-design",
+        "virus",
+        "tool"
+      ],
+      "id": 93
+    },
+    {
+      "name": "dropEst",
+      "one_line_profile": "Pipeline for initial analysis of droplet-based single-cell RNA-seq data",
+      "detailed_description": "A pipeline for initial analysis of droplet-based single-cell RNA-seq data, including estimation of molecular counts.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_processing",
+        "quantification"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/kharchenkolab/dropEst",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "single-cell",
+        "droplet-seq",
+        "quantification"
+      ],
+      "id": 94
+    },
+    {
+      "name": "scrnaseq",
+      "one_line_profile": "Workflow for single-cell RNA-seq analysis using Seurat",
+      "detailed_description": "A workflow implementation for single-cell RNA-seq analysis using the Seurat package.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_analysis",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/ktrns/scrnaseq",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "seurat",
+        "workflow"
+      ],
+      "id": 95
+    },
+    {
+      "name": "LncPipe",
+      "one_line_profile": "Nextflow-based pipeline for lncRNA analysis",
+      "detailed_description": "A Nextflow-based pipeline for comprehensive analyses of long non-coding RNAs (lncRNAs) from RNA-seq datasets.",
+      "domains": [
+        "Bioinfo",
+        "Transcriptomics"
+      ],
+      "subtask_category": [
+        "lncrna_analysis",
+        "rna_seq"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Groovy",
+      "repo_url": "https://github.com/likelet/LncPipe",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "lncrna",
+        "nextflow",
+        "pipeline"
+      ],
+      "id": 96
+    },
+    {
+      "name": "cumulus",
+      "one_line_profile": "Cloud-based scalable single-cell genomics workflows",
+      "detailed_description": "A suite of cloud-based scalable and efficient single-cell genomics workflows (WDL) for processing large-scale datasets.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_processing",
+        "cloud_computing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "WDL",
+      "repo_url": "https://github.com/lilab-bcb/cumulus",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "single-cell",
+        "wdl",
+        "cloud",
+        "workflow"
+      ],
+      "id": 97
+    },
+    {
+      "name": "MAESTRO",
+      "one_line_profile": "Single-cell Transcriptome and Regulome Analysis Pipeline",
+      "detailed_description": "A comprehensive pipeline for Single-cell Transcriptome and Regulome Analysis, integrating scRNA-seq and scATAC-seq data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_analysis",
+        "multi_omics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "C",
+      "repo_url": "https://github.com/liulab-dfci/MAESTRO",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "single-cell",
+        "regulome",
+        "pipeline"
+      ],
+      "id": 98
+    },
+    {
+      "name": "GAGE-seq Workflow",
+      "one_line_profile": "Data processing and analysis workflow for GAGE-seq (single-cell HiC and RNA-seq co-assay)",
+      "detailed_description": "A bioinformatics workflow designed for the processing and analysis of GAGE-seq data, which co-assays single-cell Hi-C and single-cell RNA-seq.",
+      "domains": [
+        "B3",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "workflow",
+        "multi_omics_integration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ma-compbio/GAGE-seq",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "hic",
+        "rna-seq",
+        "workflow"
+      ],
+      "id": 99
+    },
+    {
+      "name": "bein",
+      "one_line_profile": "Miniature LIMS and workflow manager for bioinformatics",
+      "detailed_description": "A lightweight Laboratory Information Management System (LIMS) and workflow manager designed specifically for bioinformatics tasks, facilitating data tracking and process management.",
+      "domains": [
+        "B3-08",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "data_management",
+        "workflow_management"
+      ],
+      "application_level": "application",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/madhadron/bein",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "lims",
+        "workflow-manager",
+        "bioinformatics"
+      ],
+      "id": 100
+    },
+    {
+      "name": "WAT3R",
+      "one_line_profile": "Workflow for the Association of T-cell receptors from 3' single-cell RNA-seq",
+      "detailed_description": "A workflow designed to associate T-cell receptors (TCR) with 3' single-cell RNA-seq data, enabling the analysis of immune repertoire in single-cell studies.",
+      "domains": [
+        "B3",
+        "Immunology"
+      ],
+      "subtask_category": [
+        "sequence_analysis",
+        "tcr_repertoire"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/mainciburu/WAT3R",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scrnaseq",
+        "tcr",
+        "immunology",
+        "workflow"
+      ],
+      "id": 101
+    },
+    {
+      "name": "10X_snakepipe",
+      "one_line_profile": "Snakemake pipeline for 10X Genomics Cell Ranger",
+      "detailed_description": "A Snakemake-based pipeline for processing 10X Genomics single-cell data using Cell Ranger, developed by the Max Planck Institute.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "preprocessing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/maxplanck-ie/10X_snakepipe",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "snakemake",
+        "10x-genomics",
+        "single-cell"
+      ],
+      "id": 102
+    },
+    {
+      "name": "snakepipes",
+      "one_line_profile": "Customizable Snakemake workflows for NGS data analysis",
+      "detailed_description": "A collection of customizable workflows based on Snakemake and Python for the analysis of Next-Generation Sequencing (NGS) data, including RNA-seq, ChIP-seq, and ATAC-seq.",
+      "domains": [
+        "B3-08",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "ngs_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/maxplanck-ie/snakepipes",
+      "help_website": [
+        "https://snakepipes.readthedocs.io"
+      ],
+      "license": null,
+      "tags": [
+        "snakemake",
+        "ngs",
+        "workflow"
+      ],
+      "id": 103
+    },
+    {
+      "name": "ATLAS",
+      "one_line_profile": "Metagenome assembly and binning pipeline",
+      "detailed_description": "A comprehensive pipeline for metagenome data analysis, including quality control, assembly, binning, and annotation, designed for ease of use.",
+      "domains": [
+        "Metagenomics",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "metagenomics_assembly"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/metagenome-atlas/atlas",
+      "help_website": [
+        "https://metagenome-atlas.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "metagenomics",
+        "snakemake",
+        "assembly"
+      ],
+      "id": 104
+    },
+    {
+      "name": "CromwellOnAzure",
+      "one_line_profile": "Cromwell workflow engine implementation on Azure",
+      "detailed_description": "Microsoft Genomics implementation of the Broad Institute's Cromwell workflow engine, optimized for running scientific workflows on the Azure cloud platform.",
+      "domains": [
+        "B3-08",
+        "Cloud Computing"
+      ],
+      "subtask_category": [
+        "workflow_engine",
+        "cloud_infrastructure"
+      ],
+      "application_level": "platform",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/microsoft/CromwellOnAzure",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cromwell",
+        "azure",
+        "workflow"
+      ],
+      "id": 105
+    },
+    {
+      "name": "zinbwave-deseq2",
+      "one_line_profile": "Workflow for ZINB-WaVE and DESeq2 integration",
+      "detailed_description": "A workflow integrating ZINB-WaVE (Zero-Inflated Negative Binomial Wanted Variation Extraction) with DESeq2 for differential expression analysis in single-cell RNA-seq data.",
+      "domains": [
+        "B3",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "workflow",
+        "differential_expression"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/mikelove/zinbwave-deseq2",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "scrnaseq",
+        "zinb-wave",
+        "deseq2"
+      ],
+      "id": 106
+    },
+    {
+      "name": "ReductionWrappers",
+      "one_line_profile": "R wrappers for Python dimensional reduction tools",
+      "detailed_description": "A set of R wrappers to connect Python-based dimensional reduction tools (like UMAP, t-SNE implementations) with R single-cell data objects (Seurat, SingleCellExperiment).",
+      "domains": [
+        "B3",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "dimensionality_reduction",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/milescsmith/ReductionWrappers",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "r",
+        "python",
+        "dimensionality-reduction",
+        "seurat"
+      ],
+      "id": 107
+    },
+    {
+      "name": "grenepipe",
+      "one_line_profile": "Automated variant calling pipeline for population genomics",
+      "detailed_description": "A flexible and scalable pipeline for automating variant calling from raw sequence reads, supporting sampled individuals and pool sequencing.",
+      "domains": [
+        "Genomics",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "variant_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/moiexpositoalonsolab/grenepipe",
+      "help_website": [
+        "https://grenepipe.readthedocs.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "variant-calling",
+        "snakemake",
+        "population-genetics"
+      ],
+      "id": 108
+    },
+    {
+      "name": "Cumulus",
+      "one_line_profile": "Cloud-based data ingest, archive, and management framework",
+      "detailed_description": "A cloud-native framework developed by NASA for data ingest, archiving, distribution, and management, primarily used for Earth Science data workflows.",
+      "domains": [
+        "Earth Science",
+        "Scientific Data Management"
+      ],
+      "subtask_category": [
+        "data_management",
+        "workflow_framework"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/nasa/cumulus",
+      "help_website": [
+        "https://nasa.github.io/cumulus/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "nasa",
+        "cloud",
+        "data-management"
+      ],
+      "id": 109
+    },
+    {
+      "name": "PathogenTrack",
+      "one_line_profile": "Pipeline to identify pathogenic microorganisms from scRNA-seq data",
+      "detailed_description": "A computational pipeline designed to detect and identify pathogenic microorganisms within single-cell RNA sequencing raw data.",
+      "domains": [
+        "B3",
+        "Microbiology"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "pathogen_detection"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ncrna/PathogenTrack",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scrnaseq",
+        "pathogen",
+        "microbiome"
+      ],
+      "id": 110
+    },
+    {
+      "name": "MayomicsVC",
+      "one_line_profile": "Variant Calling Pipeline in Cromwell/WDL",
+      "detailed_description": "A variant calling pipeline implemented using WDL (Workflow Description Language) and Cromwell, developed by NCSA.",
+      "domains": [
+        "Genomics",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "variant_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/ncsa/MayomicsVC",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "wdl",
+        "cromwell",
+        "variant-calling"
+      ],
+      "id": 111
+    },
+    {
+      "name": "Nextflow",
+      "one_line_profile": "Data-driven computational pipeline engine",
+      "detailed_description": "A workflow management system and DSL that enables scalable and reproducible scientific workflows using software containers.",
+      "domains": [
+        "B3-08",
+        "General Science"
+      ],
+      "subtask_category": [
+        "workflow_engine",
+        "reproducibility"
+      ],
+      "application_level": "platform",
+      "primary_language": "Groovy",
+      "repo_url": "https://github.com/nextflow-io/nextflow",
+      "help_website": [
+        "https://www.nextflow.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "workflow",
+        "pipeline",
+        "reproducibility"
+      ],
+      "id": 112
+    },
+    {
+      "name": "nf-core/ampliseq",
+      "one_line_profile": "Amplicon sequencing analysis workflow",
+      "detailed_description": "A Nextflow pipeline for the analysis of amplicon sequencing data, utilizing DADA2 and QIIME2 for processing and taxonomic classification.",
+      "domains": [
+        "B3-08",
+        "Metagenomics"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "amplicon_sequencing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/ampliseq",
+      "help_website": [
+        "https://nf-co.re/ampliseq"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nf-core",
+        "amplicon",
+        "qiime2"
+      ],
+      "id": 113
+    },
+    {
+      "name": "nf-core/atacseq",
+      "one_line_profile": "ATAC-seq analysis pipeline",
+      "detailed_description": "A Nextflow pipeline for ATAC-seq data analysis, including quality control, alignment, peak calling, and differential accessibility analysis.",
+      "domains": [
+        "B3-08",
+        "Epigenomics"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "atac-seq"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/atacseq",
+      "help_website": [
+        "https://nf-co.re/atacseq"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nf-core",
+        "atac-seq",
+        "peak-calling"
+      ],
+      "id": 114
+    },
+    {
+      "name": "nf-core/bacass",
+      "one_line_profile": "Bacterial assembly and annotation pipeline",
+      "detailed_description": "A Nextflow pipeline for simple bacterial genome assembly and annotation.",
+      "domains": [
+        "B3-08",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "genome_assembly"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/bacass",
+      "help_website": [
+        "https://nf-co.re/bacass"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nf-core",
+        "bacteria",
+        "assembly"
+      ],
+      "id": 115
+    },
+    {
+      "name": "nf-core/chipseq",
+      "one_line_profile": "ChIP-seq analysis pipeline",
+      "detailed_description": "A Nextflow pipeline for ChIP-seq data analysis, covering QC, alignment, peak calling, and differential binding analysis.",
+      "domains": [
+        "B3-08",
+        "Epigenomics"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "chip-seq"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/chipseq",
+      "help_website": [
+        "https://nf-co.re/chipseq"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nf-core",
+        "chip-seq",
+        "peak-calling"
+      ],
+      "id": 116
+    },
+    {
+      "name": "nf-core/cutandrun",
+      "one_line_profile": "CUT&RUN and CUT&TAG analysis pipeline",
+      "detailed_description": "A Nextflow pipeline for the analysis of CUT&RUN and CUT&TAG experiments, including QC, spike-in normalization, and peak calling.",
+      "domains": [
+        "B3-08",
+        "Epigenomics"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "cut-and-run"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/cutandrun",
+      "help_website": [
+        "https://nf-co.re/cutandrun"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nf-core",
+        "cutandrun",
+        "epigenetics"
+      ],
+      "id": 117
+    },
+    {
+      "name": "nf-core/differentialabundance",
+      "one_line_profile": "Differential abundance analysis pipeline",
+      "detailed_description": "A Nextflow pipeline for differential abundance analysis of feature matrices (e.g., from RNA-seq), producing reports and visualizations.",
+      "domains": [
+        "B3-08",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "differential_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/differentialabundance",
+      "help_website": [
+        "https://nf-co.re/differentialabundance"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nf-core",
+        "rna-seq",
+        "differential-expression"
+      ],
+      "id": 118
+    },
+    {
+      "name": "nf-core/eager",
+      "one_line_profile": "Ancient DNA analysis pipeline",
+      "detailed_description": "A fully reproducible pipeline for ancient DNA (aDNA) analysis, handling specific characteristics of aDNA data such as damage patterns.",
+      "domains": [
+        "B3-08",
+        "Paleogenomics"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "ancient_dna"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/eager",
+      "help_website": [
+        "https://nf-co.re/eager"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nf-core",
+        "ancient-dna",
+        "paleogenomics"
+      ],
+      "id": 119
+    },
+    {
+      "name": "nf-core/fetchngs",
+      "one_line_profile": "Pipeline to fetch metadata and raw FastQ files",
+      "detailed_description": "A Nextflow pipeline to retrieve sequencing metadata and raw FastQ files from public databases like SRA, ENA, and DDBJ.",
+      "domains": [
+        "B3-08",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "data_retrieval"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/fetchngs",
+      "help_website": [
+        "https://nf-co.re/fetchngs"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nf-core",
+        "sra",
+        "data-download"
+      ],
+      "id": 120
+    },
+    {
+      "name": "nf-core/funcscan",
+      "one_line_profile": "Functional gene screening pipeline",
+      "detailed_description": "A pipeline for screening (meta-)genomes for functional and natural product gene sequences.",
+      "domains": [
+        "B3-08",
+        "Metagenomics"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "functional_annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/funcscan",
+      "help_website": [
+        "https://nf-co.re/funcscan"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nf-core",
+        "metagenomics",
+        "functional-screening"
+      ],
+      "id": 121
+    },
+    {
+      "name": "nf-core/hic",
+      "one_line_profile": "Hi-C analysis pipeline",
+      "detailed_description": "A Nextflow pipeline for the analysis of Chromosome Conformation Capture (Hi-C) data, including mapping, filtering, and contact map generation.",
+      "domains": [
+        "B3-08",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "hic_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/hic",
+      "help_website": [
+        "https://nf-co.re/hic"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nf-core",
+        "hic",
+        "3d-genome"
+      ],
+      "id": 122
+    },
+    {
+      "name": "nf-core/mag",
+      "one_line_profile": "Metagenome assembly and binning pipeline",
+      "detailed_description": "A pipeline for the assembly, binning, and annotation of metagenomes (MAGs).",
+      "domains": [
+        "B3-08",
+        "Metagenomics"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "metagenome_assembly"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/mag",
+      "help_website": [
+        "https://nf-co.re/mag"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nf-core",
+        "metagenomics",
+        "mag"
+      ],
+      "id": 123
+    },
+    {
+      "name": "nf-core/marsseq",
+      "one_line_profile": "MARS-seq v2 pre-processing pipeline",
+      "detailed_description": "A Nextflow pipeline for the pre-processing of MARS-seq v2 single-cell RNA-seq data, including RNA velocity support.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "scrnaseq_preprocessing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/marsseq",
+      "help_website": [
+        "https://nf-co.re/marsseq"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nf-core",
+        "mars-seq",
+        "single-cell"
+      ],
+      "id": 124
+    },
+    {
+      "name": "nf-core/mcmicro",
+      "one_line_profile": "Whole-slide image to single-cell data pipeline",
+      "detailed_description": "An end-to-end processing pipeline that transforms multi-channel whole-slide images into single-cell data, facilitating spatial omics analysis.",
+      "domains": [
+        "B3",
+        "Spatial Omics"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "image_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/mcmicro",
+      "help_website": [
+        "https://nf-co.re/mcmicro"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nf-core",
+        "spatial-omics",
+        "image-analysis"
+      ],
+      "id": 125
+    },
+    {
+      "name": "nf-core/methylseq",
+      "one_line_profile": "Methylation (Bisulfite-Sequencing) analysis pipeline",
+      "detailed_description": "A bioinformatics analysis pipeline for Methylation (Bisulfite-Sequencing) data using Bismark or bwa-meth with MethylDackel, supporting extensive quality control and reporting.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "methylation_analysis",
+        "alignment",
+        "quality_control"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/methylseq",
+      "help_website": [
+        "https://nf-co.re/methylseq"
+      ],
+      "license": "MIT",
+      "tags": [
+        "methylation",
+        "bisulfite-sequencing",
+        "epigenetics",
+        "pipeline"
+      ],
+      "id": 126
+    },
+    {
+      "name": "nf-core/molkart",
+      "one_line_profile": "Pipeline for Molecular Cartography data processing",
+      "detailed_description": "A pipeline for processing Molecular Cartography data from Resolve Bioscience, handling combinatorial FISH data for spatial transcriptomics.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "spatial_transcriptomics",
+        "image_processing",
+        "quantification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/molkart",
+      "help_website": [
+        "https://nf-co.re/molkart"
+      ],
+      "license": "MIT",
+      "tags": [
+        "spatial-omics",
+        "molecular-cartography",
+        "fish",
+        "pipeline"
+      ],
+      "id": 127
+    },
+    {
+      "name": "nf-core/nanoseq",
+      "one_line_profile": "Nanopore sequencing analysis pipeline",
+      "detailed_description": "A pipeline for analyzing Nanopore sequencing data, performing demultiplexing, quality control, and alignment.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "long_read_alignment",
+        "quality_control",
+        "demultiplexing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/nanoseq",
+      "help_website": [
+        "https://nf-co.re/nanoseq"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nanopore",
+        "long-read",
+        "sequencing",
+        "pipeline"
+      ],
+      "id": 128
+    },
+    {
+      "name": "nf-core/oncoanalyser",
+      "one_line_profile": "Comprehensive cancer DNA/RNA analysis pipeline",
+      "detailed_description": "A comprehensive bioinformatics pipeline for cancer DNA and RNA analysis, generating detailed reports for oncology research.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "cancer_genomics",
+        "variant_calling",
+        "rna_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/oncoanalyser",
+      "help_website": [
+        "https://nf-co.re/oncoanalyser"
+      ],
+      "license": "MIT",
+      "tags": [
+        "cancer",
+        "oncology",
+        "genomics",
+        "pipeline"
+      ],
+      "id": 129
+    },
+    {
+      "name": "nf-core/pangenome",
+      "one_line_profile": "Pangenome graph construction pipeline",
+      "detailed_description": "A pipeline that renders a collection of genomic sequences into a pangenome graph, facilitating comparative genomics and structural variant analysis.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "pangenomics",
+        "graph_construction",
+        "comparative_genomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/pangenome",
+      "help_website": [
+        "https://nf-co.re/pangenome"
+      ],
+      "license": "MIT",
+      "tags": [
+        "pangenome",
+        "graph-genome",
+        "bioinformatics",
+        "pipeline"
+      ],
+      "id": 130
+    },
+    {
+      "name": "nf-core/pixelator",
+      "one_line_profile": "Molecular Pixelation data analysis pipeline",
+      "detailed_description": "A pipeline designed to generate and process Molecular Pixelation data using Pixelator technology from Pixelgen Technologies AB for spatial proteomics/transcriptomics.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "spatial_omics",
+        "data_processing",
+        "molecular_pixelation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/pixelator",
+      "help_website": [
+        "https://nf-co.re/pixelator"
+      ],
+      "license": "MIT",
+      "tags": [
+        "spatial-omics",
+        "pixelator",
+        "single-cell",
+        "pipeline"
+      ],
+      "id": 131
+    },
+    {
+      "name": "nf-core/proteinfold",
+      "one_line_profile": "Protein 3D structure prediction pipeline",
+      "detailed_description": "A pipeline for protein 3D structure prediction, integrating tools like AlphaFold2 and ColabFold for automated structural biology workflows.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "protein_folding",
+        "structural_biology"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/proteinfold",
+      "help_website": [
+        "https://nf-co.re/proteinfold"
+      ],
+      "license": "MIT",
+      "tags": [
+        "protein-structure",
+        "alphafold",
+        "folding",
+        "pipeline"
+      ],
+      "id": 132
+    },
+    {
+      "name": "nf-core/raredisease",
+      "one_line_profile": "Rare disease variant calling pipeline",
+      "detailed_description": "A pipeline to call and score variants from Whole Genome Sequencing (WGS) or Whole Exome Sequencing (WES) data specifically for rare disease patients.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "rare_disease",
+        "genomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/raredisease",
+      "help_website": [
+        "https://nf-co.re/raredisease"
+      ],
+      "license": "MIT",
+      "tags": [
+        "rare-disease",
+        "wgs",
+        "wes",
+        "pipeline"
+      ],
+      "id": 133
+    },
+    {
+      "name": "nf-core/rnafusion",
+      "one_line_profile": "RNA-seq gene fusion detection pipeline",
+      "detailed_description": "An RNA-seq analysis pipeline dedicated to the detection and visualization of gene fusions using multiple fusion callers.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "fusion_detection",
+        "rna_seq",
+        "transcriptomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/rnafusion",
+      "help_website": [
+        "https://nf-co.re/rnafusion"
+      ],
+      "license": "MIT",
+      "tags": [
+        "gene-fusion",
+        "rna-seq",
+        "cancer",
+        "pipeline"
+      ],
+      "id": 134
+    },
+    {
+      "name": "nf-core/rnaseq",
+      "one_line_profile": "Comprehensive RNA sequencing analysis pipeline",
+      "detailed_description": "A standard RNA sequencing analysis pipeline that supports STAR, RSEM, HISAT2, and Salmon, providing gene/isoform counts and extensive quality control.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "rna_seq",
+        "quantification",
+        "quality_control",
+        "alignment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/rnaseq",
+      "help_website": [
+        "https://nf-co.re/rnaseq"
+      ],
+      "license": "MIT",
+      "tags": [
+        "rna-seq",
+        "transcriptomics",
+        "gene-expression",
+        "pipeline"
+      ],
+      "id": 135
+    },
+    {
+      "name": "nf-core/sarek",
+      "one_line_profile": "Germline and somatic variant calling pipeline",
+      "detailed_description": "An analysis pipeline to detect germline or somatic variants from Whole Genome Sequencing (WGS) or targeted sequencing data, including pre-processing, variant calling, and annotation.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "genomics",
+        "somatic_variant_detection"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/sarek",
+      "help_website": [
+        "https://nf-co.re/sarek"
+      ],
+      "license": "MIT",
+      "tags": [
+        "wgs",
+        "variant-calling",
+        "cancer",
+        "pipeline"
+      ],
+      "id": 136
+    },
+    {
+      "name": "nf-core/scdownstream",
+      "one_line_profile": "Single-cell transcriptomics downstream analysis pipeline",
+      "detailed_description": "A pipeline for downstream analysis of single-cell transcriptomics data, covering quality control, integration, and visualization.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_analysis",
+        "quality_control",
+        "data_integration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/scdownstream",
+      "help_website": [
+        "https://nf-co.re/scdownstream"
+      ],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "transcriptomics",
+        "downstream-analysis",
+        "pipeline"
+      ],
+      "id": 137
+    },
+    {
+      "name": "nf-core/scnanoseq",
+      "one_line_profile": "Single-cell Nanopore sequencing pipeline",
+      "detailed_description": "A pipeline for analyzing single-cell or single-nuclei data derived from Oxford Nanopore and 10X Genomics protocols.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_analysis",
+        "long_read_sequencing",
+        "nanopore"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/scnanoseq",
+      "help_website": [
+        "https://nf-co.re/scnanoseq"
+      ],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "nanopore",
+        "long-read",
+        "pipeline"
+      ],
+      "id": 138
+    },
+    {
+      "name": "nf-core/scrnaseq",
+      "one_line_profile": "Single-cell RNA-Seq processing pipeline",
+      "detailed_description": "A pipeline for processing single-cell RNA-Seq data from barcode-based protocols (e.g., 10x, DropSeq, SmartSeq), offering alignment, quantification, and empty-droplet detection.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_processing",
+        "quantification",
+        "alignment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/scrnaseq",
+      "help_website": [
+        "https://nf-co.re/scrnaseq"
+      ],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "rna-seq",
+        "10x-genomics",
+        "pipeline"
+      ],
+      "id": 139
+    },
+    {
+      "name": "nf-core/smrnaseq",
+      "one_line_profile": "Small-RNA sequencing analysis pipeline",
+      "detailed_description": "A bioinformatics pipeline for the analysis of small-RNA sequencing data, including miRNA identification and quantification.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "small_rna_analysis",
+        "mirna_detection",
+        "quantification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/smrnaseq",
+      "help_website": [
+        "https://nf-co.re/smrnaseq"
+      ],
+      "license": "MIT",
+      "tags": [
+        "small-rna",
+        "mirna",
+        "sequencing",
+        "pipeline"
+      ],
+      "id": 140
+    },
+    {
+      "name": "nf-core/sopa",
+      "one_line_profile": "Spatial omics pipeline and analysis",
+      "detailed_description": "A Nextflow implementation of the Sopa pipeline for processing and analyzing spatial omics data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "spatial_omics",
+        "image_processing",
+        "data_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/sopa",
+      "help_website": [
+        "https://nf-co.re/sopa"
+      ],
+      "license": "MIT",
+      "tags": [
+        "spatial-omics",
+        "pipeline",
+        "bioinformatics"
+      ],
+      "id": 141
+    },
+    {
+      "name": "nf-core/spatialvi",
+      "one_line_profile": "Spatial transcriptomics pipeline for Visium",
+      "detailed_description": "A pipeline for processing spatially-resolved gene counts with spatial coordinates and image data, specifically designed for 10x Genomics Visium transcriptomics.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "spatial_transcriptomics",
+        "visium_processing",
+        "image_alignment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/spatialvi",
+      "help_website": [
+        "https://nf-co.re/spatialvi"
+      ],
+      "license": "MIT",
+      "tags": [
+        "spatial-transcriptomics",
+        "visium",
+        "10x-genomics",
+        "pipeline"
+      ],
+      "id": 142
+    },
+    {
+      "name": "nf-core/taxprofiler",
+      "one_line_profile": "Multi-taxonomic profiling pipeline",
+      "detailed_description": "A highly parallelised pipeline for multi-taxonomic profiling of shotgun short- and long-read metagenomic data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "metagenomics",
+        "taxonomic_profiling",
+        "microbiome_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/taxprofiler",
+      "help_website": [
+        "https://nf-co.re/taxprofiler"
+      ],
+      "license": "MIT",
+      "tags": [
+        "metagenomics",
+        "taxonomy",
+        "profiling",
+        "pipeline"
+      ],
+      "id": 143
+    },
+    {
+      "name": "nf-core/viralrecon",
+      "one_line_profile": "Viral assembly and variant calling pipeline",
+      "detailed_description": "A pipeline for assembly and intrahost/low-frequency variant calling for viral samples, widely used for SARS-CoV-2 analysis.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "viral_genomics",
+        "assembly",
+        "variant_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/viralrecon",
+      "help_website": [
+        "https://nf-co.re/viralrecon"
+      ],
+      "license": "MIT",
+      "tags": [
+        "viral-genomics",
+        "covid-19",
+        "assembly",
+        "pipeline"
+      ],
+      "id": 144
+    },
+    {
+      "name": "DIscBIO",
+      "one_line_profile": "Single-cell biomarker discovery pipeline",
+      "detailed_description": "A user-friendly R pipeline for biomarker discovery in single-cell transcriptomics, facilitating data analysis and visualization.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "biomarker_discovery",
+        "single_cell_analysis",
+        "transcriptomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ocbe-uio/DIscBIO",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "single-cell",
+        "biomarker",
+        "r",
+        "pipeline"
+      ],
+      "id": 145
+    },
+    {
+      "name": "distiller-nf",
+      "one_line_profile": "Modular Hi-C mapping pipeline",
+      "detailed_description": "A modular Nextflow pipeline for processing Hi-C data, handling mapping, filtering, and matrix generation.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "hic_analysis",
+        "chromatin_structure",
+        "mapping"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Groovy",
+      "repo_url": "https://github.com/open2c/distiller-nf",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "hi-c",
+        "genomics",
+        "pipeline",
+        "nextflow"
+      ],
+      "id": 146
+    },
+    {
+      "name": "kallistobustools",
+      "one_line_profile": "Single-cell RNA-seq pre-processing workflow",
+      "detailed_description": "A workflow combining kallisto and bustools for fast and efficient pre-processing of single-cell RNA-seq data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_preprocessing",
+        "quantification",
+        "rna_seq"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pachterlab/kallistobustools",
+      "help_website": [
+        "https://www.kallistobus.tools/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "rna-seq",
+        "kallisto",
+        "bustools"
+      ],
+      "id": 147
+    },
+    {
+      "name": "kb_python",
+      "one_line_profile": "Wrapper for kallisto | bustools workflow",
+      "detailed_description": "A Python wrapper for the kallisto | bustools workflow, simplifying the pre-processing of single-cell RNA-seq data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_preprocessing",
+        "quantification",
+        "wrapper"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pachterlab/kb_python",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "single-cell",
+        "rna-seq",
+        "python",
+        "wrapper"
+      ],
+      "id": 148
+    },
+    {
+      "name": "chooseR",
+      "one_line_profile": "Clustering parameter selection framework for scRNA-seq",
+      "detailed_description": "An R framework designed to help choose optimal clustering parameters in single-cell RNA-seq analysis pipelines.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "clustering_analysis",
+        "parameter_optimization",
+        "single_cell"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/rbpatt2019/chooseR",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "single-cell",
+        "clustering",
+        "r",
+        "optimization"
+      ],
+      "id": 149
+    },
+    {
+      "name": "What_the_Phage",
+      "one_line_profile": "Phage identification pipeline",
+      "detailed_description": "A reproducible pipeline for bacteriophage identification and annotation using Nextflow and Docker/Singularity.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "phage_identification",
+        "annotation",
+        "microbiology"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/replikation/What_the_Phage",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "phage",
+        "pipeline",
+        "nextflow",
+        "bioinformatics"
+      ],
+      "id": 150
+    },
+    {
+      "name": "seurat-wrappers",
+      "one_line_profile": "Community extensions for Seurat",
+      "detailed_description": "A collection of community-provided wrappers and extensions for the Seurat package, enabling integration with other single-cell analysis tools.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_analysis",
+        "data_integration",
+        "extension"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/satijalab/seurat-wrappers",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "single-cell",
+        "seurat",
+        "r",
+        "extension"
+      ],
+      "id": 151
+    },
+    {
+      "name": "sc-toolbox",
+      "one_line_profile": "Helper functions for Scanpy analysis",
+      "detailed_description": "A collection of useful functions and project templates to facilitate single-cell data analysis workflows using Scanpy.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_analysis",
+        "workflow_utility",
+        "scanpy_extension"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/schillerlab/sc-toolbox",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "scanpy",
+        "python",
+        "utility"
+      ],
+      "id": 152
+    },
+    {
+      "name": "zUMIs",
+      "one_line_profile": "RNA-seq pipeline with UMI handling",
+      "detailed_description": "A fast and flexible pipeline to process RNA sequencing data, specifically designed to handle Unique Molecular Identifiers (UMIs).",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "rna_seq",
+        "umi_processing",
+        "quantification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/sdparekh/zUMIs",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "rna-seq",
+        "umi",
+        "pipeline",
+        "bioinformatics"
+      ],
+      "id": 153
+    },
+    {
+      "name": "sequana",
+      "one_line_profile": "Set of Snakemake NGS pipelines",
+      "detailed_description": "A collection of Snakemake pipelines for various NGS analysis tasks, including quality control, variant calling, and coverage analysis.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "ngs_analysis",
+        "quality_control",
+        "variant_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sequana/sequana",
+      "help_website": [
+        "https://sequana.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "snakemake",
+        "ngs",
+        "pipeline",
+        "python"
+      ],
+      "id": 154
+    },
+    {
+      "name": "single_cell_pipeline",
+      "one_line_profile": "Automated single cell analysis workflow",
+      "detailed_description": "An automated workflow for single-cell analysis, developed by Shah CompBio lab.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_analysis",
+        "automation",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shahcompbio/single_cell_pipeline",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "single-cell",
+        "pipeline",
+        "automation"
+      ],
+      "id": 155
+    },
+    {
+      "name": "hecatomb",
+      "one_line_profile": "Virome analysis pipeline",
+      "detailed_description": "A pipeline for the analysis of viral metagenomes (viromes) from Illumina sequence data, focusing on sensitivity and accuracy.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "virome_analysis",
+        "metagenomics",
+        "viral_detection"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shandley/hecatomb",
+      "help_website": [
+        "https://hecatomb.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "virome",
+        "metagenomics",
+        "pipeline",
+        "snakemake"
+      ],
+      "id": 156
+    },
+    {
+      "name": "TMExplorer",
+      "one_line_profile": "Tumour microenvironment single-cell dataset collection",
+      "detailed_description": "A curated collection of tumour microenvironment single-cell RNA sequencing datasets provided as an R package for easy access and integration.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "data_access",
+        "cancer_immunology",
+        "single_cell"
+      ],
+      "application_level": "dataset",
+      "primary_language": "R",
+      "repo_url": "https://github.com/shooshtarilab/TMExplorer",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "single-cell",
+        "cancer",
+        "dataset",
+        "r-package"
+      ],
+      "id": 157
+    },
+    {
+      "name": "Snakefiles",
+      "one_line_profile": "Collection of Snakemake workflows for RNA-seq data analysis",
+      "detailed_description": "A repository containing Snakefiles for common RNA-seq data analysis workflows, specifically implementing pipelines for STAR and Kallisto aligners.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "rna_seq_analysis",
+        "alignment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/slowkow/snakefiles",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "snakemake",
+        "rna-seq",
+        "star",
+        "kallisto"
+      ],
+      "id": 158
+    },
+    {
+      "name": "Cumulus ETL",
+      "one_line_profile": "ETL tool for processing FHIR medical data for analysis",
+      "detailed_description": "A tool to extract FHIR data, transform it using NLP and de-identification tools, and load it into a SQL database for downstream scientific and clinical analysis.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "data_etl",
+        "clinical_informatics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/smart-on-fhir/cumulus-etl",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "fhir",
+        "etl",
+        "nlp",
+        "medical-informatics"
+      ],
+      "id": 159
+    },
+    {
+      "name": "Snakemake GATK Workflow",
+      "one_line_profile": "Snakemake pipeline implementing GATK best-practices for DNA-seq",
+      "detailed_description": "A standardized Snakemake workflow that implements the GATK best-practices for germline variant calling from DNA sequencing data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "dna_seq_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/snakemake-workflows/dna-seq-gatk-variant-calling",
+      "help_website": [
+        "https://snakemake.github.io/snakemake-workflow-catalog"
+      ],
+      "license": "MIT",
+      "tags": [
+        "gatk",
+        "variant-calling",
+        "snakemake",
+        "dna-seq"
+      ],
+      "id": 160
+    },
+    {
+      "name": "Snakemake Varlociraptor Workflow",
+      "one_line_profile": "Unified variant calling workflow using Varlociraptor",
+      "detailed_description": "A Snakemake workflow for calling small and structural variants under various scenarios (tumor/normal, pedigree, etc.) using the Varlociraptor statistical model.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "dna_seq_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/snakemake-workflows/dna-seq-varlociraptor",
+      "help_website": [
+        "https://snakemake.github.io/snakemake-workflow-catalog"
+      ],
+      "license": "MIT",
+      "tags": [
+        "varlociraptor",
+        "variant-calling",
+        "snakemake"
+      ],
+      "id": 161
+    },
+    {
+      "name": "Snakemake Kallisto-Sleuth Workflow",
+      "one_line_profile": "RNA-seq differential expression workflow with Kallisto and Sleuth",
+      "detailed_description": "A Snakemake workflow designed for differential expression analysis of RNA-seq data, utilizing Kallisto for pseudo-alignment and Sleuth for statistical analysis.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "rna_seq_analysis",
+        "differential_expression"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/snakemake-workflows/rna-seq-kallisto-sleuth",
+      "help_website": [
+        "https://snakemake.github.io/snakemake-workflow-catalog"
+      ],
+      "license": "MIT",
+      "tags": [
+        "kallisto",
+        "sleuth",
+        "rna-seq",
+        "snakemake"
+      ],
+      "id": 162
+    },
+    {
+      "name": "Snakemake STAR-DESeq2 Workflow",
+      "one_line_profile": "Standard RNA-seq workflow using STAR and DESeq2",
+      "detailed_description": "A widely used Snakemake workflow for RNA-seq analysis that performs alignment with STAR and differential expression analysis with DESeq2.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "rna_seq_analysis",
+        "differential_expression"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/snakemake-workflows/rna-seq-star-deseq2",
+      "help_website": [
+        "https://snakemake.github.io/snakemake-workflow-catalog"
+      ],
+      "license": "MIT",
+      "tags": [
+        "star",
+        "deseq2",
+        "rna-seq",
+        "snakemake"
+      ],
+      "id": 163
+    },
+    {
+      "name": "Snakemake scRNA-seq Workflow",
+      "one_line_profile": "Workflow for single-cell RNA-seq analysis",
+      "detailed_description": "A Snakemake workflow for single-cell RNA-seq data analysis, covering steps from quality control and variable gene analysis to cell type assignment and differential expression.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_analysis",
+        "rna_seq_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/snakemake-workflows/single-cell-rna-seq",
+      "help_website": [
+        "https://snakemake.github.io/snakemake-workflow-catalog"
+      ],
+      "license": "MIT",
+      "tags": [
+        "scrna-seq",
+        "single-cell",
+        "snakemake"
+      ],
+      "id": 164
+    },
+    {
+      "name": "Snakemake",
+      "one_line_profile": "Scalable bioinformatics workflow management system",
+      "detailed_description": "A workflow management system that aims to reduce the complexity of creating facsimiles of data analysis to create reproducible and scalable data analyses.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "reproducibility"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/snakemake/snakemake",
+      "help_website": [
+        "https://snakemake.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "workflow-engine",
+        "pipeline",
+        "reproducibility"
+      ],
+      "id": 165
+    },
+    {
+      "name": "Snakemake Wrappers",
+      "one_line_profile": "Library of reusable wrappers for Snakemake workflows",
+      "detailed_description": "A repository of wrappers that allow Snakemake rules to directly call various bioinformatics tools and libraries without writing boilerplate shell scripts.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "tool_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/snakemake/snakemake-wrappers",
+      "help_website": [
+        "https://snakemake-wrappers.readthedocs.io"
+      ],
+      "license": null,
+      "tags": [
+        "snakemake",
+        "wrappers",
+        "bioinformatics-tools"
+      ],
+      "id": 166
+    },
+    {
+      "name": "St. Jude Cloud Workflows",
+      "one_line_profile": "Bioinformatics WDL workflows for St. Jude Cloud",
+      "detailed_description": "A collection of bioinformatics workflows written in WDL, developed for and used in the St. Jude Cloud project for genomic data analysis.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "genomics_analysis",
+        "workflow_collection"
+      ],
+      "application_level": "workflow",
+      "primary_language": "WDL",
+      "repo_url": "https://github.com/stjudecloud/workflows",
+      "help_website": [
+        "https://stjude.cloud"
+      ],
+      "license": "MIT",
+      "tags": [
+        "wdl",
+        "genomics",
+        "st-jude"
+      ],
+      "id": 167
+    },
+    {
+      "name": "Sunbeam",
+      "one_line_profile": "Extensible pipeline for metagenomics analysis",
+      "detailed_description": "A robust and extensible pipeline for metagenomics sequencing data analysis, designed to be easy to install and use while remaining customizable.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "metagenomics_analysis",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sunbeam-labs/sunbeam",
+      "help_website": [
+        "https://sunbeam.readthedocs.io"
+      ],
+      "license": null,
+      "tags": [
+        "metagenomics",
+        "pipeline",
+        "snakemake"
+      ],
+      "id": 168
+    },
+    {
+      "name": "scIB Pipeline",
+      "one_line_profile": "Pipeline for benchmarking single-cell integration methods",
+      "detailed_description": "A Snakemake pipeline that works with the scIB (Single-cell Integration Benchmark) package to automate the benchmarking of data integration methods.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "single_cell_integration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/theislab/scib-pipeline",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmarking",
+        "single-cell",
+        "integration",
+        "snakemake"
+      ],
+      "id": 169
+    },
+    {
+      "name": "seq2science",
+      "one_line_profile": "Automated preprocessing workflows for NGS data",
+      "detailed_description": "A collection of automated and customizable workflows for preprocessing Next-Generation Sequencing data, including ATAC-seq, ChIP-seq, and RNA-seq.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "ngs_preprocessing",
+        "alignment",
+        "qc"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/vanheeringen-lab/seq2science",
+      "help_website": [
+        "https://vanheeringen-lab.github.io/seq2science"
+      ],
+      "license": "MIT",
+      "tags": [
+        "ngs",
+        "preprocessing",
+        "snakemake",
+        "atac-seq",
+        "rna-seq"
+      ],
+      "id": 170
+    },
+    {
+      "name": "VSN Pipelines",
+      "one_line_profile": "Nextflow pipelines for single-cell data analysis",
+      "detailed_description": "A repository of modular pipelines for single-cell data analysis implemented in Nextflow DSL2, maintained by the VIB Single Cell Core.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_analysis",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/vib-singlecell-nf/vsn-pipelines",
+      "help_website": [
+        "https://vsn-pipelines.readthedocs.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "nextflow",
+        "single-cell",
+        "pipeline"
+      ],
+      "id": 171
+    },
+    {
+      "name": "Nano-Snakemake",
+      "one_line_profile": "Snakemake pipeline for Nanopore SV analysis",
+      "detailed_description": "A Snakemake pipeline designed for structural variant (SV) analysis from Oxford Nanopore genome sequencing data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "structural_variant_calling",
+        "nanopore_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wdecoster/nano-snakemake",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nanopore",
+        "structural-variants",
+        "snakemake"
+      ],
+      "id": 172
+    },
+    {
+      "name": "Scaff10X",
+      "one_line_profile": "Genome scaffolding tool using 10x Genomics linked-reads",
+      "detailed_description": "A pipeline/tool for scaffolding and breaking genome assemblies using 10x Genomics linked-reads data to improve assembly quality.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "genome_assembly",
+        "scaffolding"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/wtsi-hpag/Scaff10X",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "genome-assembly",
+        "10x-genomics",
+        "scaffolding"
+      ],
+      "id": 173
+    },
+    {
+      "name": "SCP",
+      "one_line_profile": "End-to-end Single-Cell Pipeline in R",
+      "detailed_description": "A comprehensive R package providing an end-to-end pipeline for single-cell data analysis, facilitating exploration and visualization of scRNA-seq data.",
+      "domains": [
+        "B3",
+        "B3-08"
+      ],
+      "subtask_category": [
+        "single_cell_analysis",
+        "visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/zhanghao-njmu/SCP",
+      "help_website": [
+        "https://zhanghao-njmu.github.io/SCP"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "single-cell",
+        "r-package",
+        "pipeline",
+        "visualization"
+      ],
+      "id": 174
+    }
+  ]
+}

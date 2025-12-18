@@ -1,0 +1,3305 @@
+{
+  "generated_at": "2025-12-16T16:48:34.846148+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "B2",
+      "leaf_cluster_name": "生信-变异检测与基因分型生态",
+      "domain": "Bioinfo",
+      "typical_objects": "BAM/CRAM/VCF",
+      "task_chain": "QC→calling→过滤/分型→注释→benchmark",
+      "tool_form": "CLI + 评测套件 + 数据集"
+    },
+    "unit": {
+      "unit_id": "B2-03",
+      "unit_name": "结构变异与拷贝数",
+      "target_scale": "200–450",
+      "coverage_tools": "SV/CNV callers、整合器、可视化"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] GridSS",
+        "[GH] Control-FREEC",
+        "[GH] SURVIVOR",
+        "[GH] CuteSV",
+        "[GH] Sniffles",
+        "[GH] CNVkit",
+        "[GH] CNVnator",
+        "[GH] Lumpy",
+        "[GH] Delly",
+        "[GH] Manta",
+        "[GH] structural variation caller",
+        "[GH] copy number variation detection",
+        "[GH] SV calling",
+        "[GH] CNV calling",
+        "[GH] structural variant analysis",
+        "[GH] CNV visualization",
+        "[GH] SV visualization",
+        "[GH] long read structural variation",
+        "[GH] structural variation integrator",
+        "[GH] copy number variation pipeline",
+        "[GH] structural variant merger",
+        "[GH] genomic structural variation",
+        "[WEB] structural variation calling tools github",
+        "[WEB] copy number variation detection algorithms github",
+        "[WEB] best SV CNV callers bioinformatics github",
+        "[WEB] long read structural variation caller github",
+        "[WEB] structural variant visualization tools github"
+      ],
+      "total_candidates": 892,
+      "tool_candidates": 361,
+      "final_tools": 131
+    }
+  },
+  "tools": [
+    {
+      "name": "AmpliconSuite-pipeline",
+      "one_line_profile": "Pipeline for AmpliconArchitect to detect CNVs and focal amplifications",
+      "detailed_description": "A quickstart tool for AmpliconArchitect. Enables all steps (alignment, CNV calling, seed interval detection) prior to running AmpliconArchitect, and invokes AmpliconClassifier.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "cnv_detection",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AmpliconSuite/AmpliconSuite-pipeline",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cnv",
+        "amplicon",
+        "genomics",
+        "bioinformatics"
+      ],
+      "id": 1
+    },
+    {
+      "name": "HMZDelFinder",
+      "one_line_profile": "CNV calling algorithm for homozygous/hemizygous deletions in WES data",
+      "detailed_description": "CNV calling algorithm for detection of homozygous and hemizygous deletions from whole exome sequencing data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "cnv_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/BCM-Lupskilab/HMZDelFinder",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "cnv",
+        "wes",
+        "exome-sequencing",
+        "deletion-detection"
+      ],
+      "id": 2
+    },
+    {
+      "name": "Control-FREEC",
+      "one_line_profile": "Copy number and genotype annotation tool for WGS/WES data",
+      "detailed_description": "Control-FREEC: Copy number and genotype annotation in whole genome and whole exome sequencing data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "cnv_detection",
+        "genotyping"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/BoevaLab/FREEC",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cnv",
+        "wgs",
+        "wes",
+        "genotyping"
+      ],
+      "id": 3
+    },
+    {
+      "name": "DeepSV",
+      "one_line_profile": "Deep learning based tool for deletion calling",
+      "detailed_description": "Calling deletions using deep convolutional neural networks.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "sv_detection",
+        "deep_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CSuperlei/DeepSV",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "structural-variants",
+        "deep-learning",
+        "deletion-calling"
+      ],
+      "id": 4
+    },
+    {
+      "name": "SMRTSV2",
+      "one_line_profile": "Structural variant caller for long-read sequencing data",
+      "detailed_description": "Structural variant caller designed for PacBio SMRT sequencing data, developed by Eichler Lab.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "sv_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EichlerLab/smrtsv2",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pacbio",
+        "long-read",
+        "structural-variants"
+      ],
+      "id": 5
+    },
+    {
+      "name": "aCNViewer",
+      "one_line_profile": "Genome-wide visualization of absolute copy number variations",
+      "detailed_description": "Comprehensive genome-wide visualization of absolute copy number and copy neutral variations.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "cnv_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FJD-CEPH/aCNViewer",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "visualization",
+        "cnv",
+        "genomics"
+      ],
+      "id": 6
+    },
+    {
+      "name": "SV_10X_analysis",
+      "one_line_profile": "Structural variation analysis tools for 10X Genomics data",
+      "detailed_description": "Structural variation analysis of 10X Genomics linked-read data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "sv_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/GavinHaLab/SV_10X_analysis",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "10x-genomics",
+        "linked-reads",
+        "structural-variants"
+      ],
+      "id": 7
+    },
+    {
+      "name": "TDScope",
+      "one_line_profile": "Somatic structural variation caller for long-read data",
+      "detailed_description": "A somatic structural variation caller based on long-read technology.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "sv_detection",
+        "somatic_variant"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Goatofmountain/TDScope",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "somatic-sv",
+        "long-read",
+        "structural-variants"
+      ],
+      "id": 8
+    },
+    {
+      "name": "sv-callers",
+      "one_line_profile": "Snakemake workflow for structural variant detection",
+      "detailed_description": "Snakemake-based workflow for detecting structural variants in genomic data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GooglingTheCancerGenome/sv-callers",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "snakemake",
+        "structural-variants",
+        "pipeline"
+      ],
+      "id": 9
+    },
+    {
+      "name": "SVsim",
+      "one_line_profile": "Synthetic Structural Variant generator for benchmarking",
+      "detailed_description": "SVsim: a tool that generates synthetic Structural Variant calls as benchmarks to test/evaluate SV calling pipelines.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "benchmarking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GregoryFaust/SVsim",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "simulation",
+        "structural-variants",
+        "benchmarking"
+      ],
+      "id": 10
+    },
+    {
+      "name": "CNVizard",
+      "one_line_profile": "Web-based tool for visualizing germline CNVs",
+      "detailed_description": "Browser-based tool for visualizing and analyzing germline copy number variants in genomic data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "cnv_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/IHGGM-Aachen/CNVizard",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "cnv",
+        "germline"
+      ],
+      "id": 11
+    },
+    {
+      "name": "Canvas",
+      "one_line_profile": "Copy number variant calling tool from Illumina",
+      "detailed_description": "Canvas - Copy number variant (CNV) calling from DNA sequencing data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "cnv_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/Illumina/canvas",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cnv",
+        "illumina",
+        "sequencing"
+      ],
+      "id": 12
+    },
+    {
+      "name": "Manta",
+      "one_line_profile": "Structural variant and indel caller for mapped sequencing data",
+      "detailed_description": "Structural variant and indel caller for mapped sequencing data, optimized for speed and accuracy.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "sv_detection",
+        "indel_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Illumina/manta",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "structural-variants",
+        "indel",
+        "illumina"
+      ],
+      "id": 13
+    },
+    {
+      "name": "HandyCNV",
+      "one_line_profile": "R package for CNV summary, annotation, and visualization",
+      "detailed_description": "An R package for Standardized Summary, Annotation, Comparison, and Visualization of CNV, CNVR and ROH.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "cnv_analysis",
+        "annotation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/JH-Zhou/HandyCNV",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cnv",
+        "r-package",
+        "visualization"
+      ],
+      "id": 14
+    },
+    {
+      "name": "ProjectSVR",
+      "one_line_profile": "R package for reference mapping and visualization",
+      "detailed_description": "A package for reference mapping and nice visualization, likely focused on structural variation analysis.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "mapping"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/JarningGau/ProjectSVR",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "visualization",
+        "mapping",
+        "r-package"
+      ],
+      "id": 15
+    },
+    {
+      "name": "ClinSV",
+      "one_line_profile": "Clinical structural and copy number variation detection",
+      "detailed_description": "Robust detection of clinically relevant structural and copy number variation from whole genome sequencing data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "sv_detection",
+        "cnv_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/KCCG/ClinSV",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "clinical-genomics",
+        "sv",
+        "cnv",
+        "wgs"
+      ],
+      "id": 16
+    },
+    {
+      "name": "Severus",
+      "one_line_profile": "Somatic structural variant caller using long reads",
+      "detailed_description": "A tool for somatic structural variant calling using long reads.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "sv_detection",
+        "somatic_variant"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KolmogorovLab/Severus",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "somatic-sv",
+        "long-read",
+        "structural-variants"
+      ],
+      "id": 17
+    },
+    {
+      "name": "hapdiff",
+      "one_line_profile": "Structural variant calling for diploid assemblies",
+      "detailed_description": "SV calling for diploid assemblies, enabling haplotype-resolved variant detection.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "sv_detection",
+        "assembly_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KolmogorovLab/hapdiff",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diploid-assembly",
+        "structural-variants",
+        "haplotype"
+      ],
+      "id": 18
+    },
+    {
+      "name": "Ribbon",
+      "one_line_profile": "Genome browser for complex structural variants and long reads",
+      "detailed_description": "A visualization tool designed to display complex structural variants and long-read sequencing alignments, helping researchers inspect genomic rearrangements.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "variant_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/MariaNattestad/Ribbon",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "structural-variants",
+        "long-reads"
+      ],
+      "id": 19
+    },
+    {
+      "name": "DeNovoSV",
+      "one_line_profile": "Pipeline for calling de novo structural variants from trio Nanopore data",
+      "detailed_description": "A bioinformatics pipeline designed to identify de novo structural variants in trio families using Nanopore long-read sequencing data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "de_novo_assembly"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/NCBI-Codeathons/DeNovoSV",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nanopore",
+        "structural-variants",
+        "trio-analysis"
+      ],
+      "id": 20
+    },
+    {
+      "name": "MoCCA-SV",
+      "one_line_profile": "Ensemble framework for structural variant analysis",
+      "detailed_description": "A flexible ensemble framework that integrates multiple structural variant callers to improve detection accuracy and analysis.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "ensemble_learning"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NCI-CGR/MoCCA-SV",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "structural-variants",
+        "ensemble-method",
+        "bioinformatics"
+      ],
+      "id": 21
+    },
+    {
+      "name": "DeepDock",
+      "one_line_profile": "Geometric Deep Learning for predicting molecular binding conformations",
+      "detailed_description": "A geometric deep learning approach to predict the binding conformations of bioactive molecules, useful in drug discovery and molecular modeling.",
+      "domains": [
+        "Drug Discovery",
+        "Molecular Modeling"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "binding_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/OptiMaL-PSE-Lab/DeepDock",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "molecular-docking",
+        "drug-discovery"
+      ],
+      "id": 22
+    },
+    {
+      "name": "HiFiCNV",
+      "one_line_profile": "Copy number variant caller for PacBio HiFi reads",
+      "detailed_description": "A tool for calling copy number variants (CNVs) and visualizing depth coverage specifically designed for PacBio HiFi sequencing data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "cnv_calling",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/PacificBiosciences/HiFiCNV",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "pacbio",
+        "hifi",
+        "cnv"
+      ],
+      "id": 23
+    },
+    {
+      "name": "SVTopo",
+      "one_line_profile": "Complex structural variant visualization for HiFi sequencing data",
+      "detailed_description": "A utility for visualizing complex structural variant topologies using PacBio HiFi reads.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "variant_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/PacificBiosciences/SVTopo",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "visualization",
+        "structural-variants",
+        "pacbio"
+      ],
+      "id": 24
+    },
+    {
+      "name": "pbsv",
+      "one_line_profile": "PacBio structural variant calling and analysis tool",
+      "detailed_description": "The official structural variant caller for PacBio reads, capable of identifying insertions, deletions, inversions, duplications, and translocations.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PacificBiosciences/pbsv",
+      "help_website": [],
+      "license": "BSD-3-Clause-Clear",
+      "tags": [
+        "pacbio",
+        "structural-variants",
+        "long-reads"
+      ],
+      "id": 25
+    },
+    {
+      "name": "svpack",
+      "one_line_profile": "Structural variant analysis and filtering tools",
+      "detailed_description": "A collection of tools for filtering, comparing, and processing structural variant calls in VCF format.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_filtering",
+        "annotation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PacificBiosciences/svpack",
+      "help_website": [],
+      "license": "BSD-3-Clause-Clear",
+      "tags": [
+        "vcf",
+        "structural-variants",
+        "filtering"
+      ],
+      "id": 26
+    },
+    {
+      "name": "StructuralVariantAnnotation",
+      "one_line_profile": "R package for structural variant analysis",
+      "detailed_description": "An R package designed to simplify the analysis and manipulation of structural variant calls, providing infrastructure for breakpoint annotation.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_analysis",
+        "annotation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/PapenfussLab/StructuralVariantAnnotation",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "r-package",
+        "structural-variants",
+        "bioinformatics"
+      ],
+      "id": 27
+    },
+    {
+      "name": "GRIDSS",
+      "one_line_profile": "Genomic Rearrangement IDentification Software Suite",
+      "detailed_description": "A high-sensitivity structural variant caller that detects genomic rearrangements using a combination of assembly, split-read, and read-pair evidence.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "rearrangement_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/PapenfussLab/gridss",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "structural-variants",
+        "genomics",
+        "variant-calling"
+      ],
+      "id": 28
+    },
+    {
+      "name": "CopywriteR",
+      "one_line_profile": "DNA copy number detection from off-target sequence data",
+      "detailed_description": "A tool for detecting DNA copy number variations (CNVs) by utilizing off-target sequence data from targeted sequencing experiments.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "cnv_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/PeeperLab/CopywriteR",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cnv",
+        "targeted-sequencing",
+        "off-target"
+      ],
+      "id": 29
+    },
+    {
+      "name": "lm-spanish",
+      "one_line_profile": "Spanish Language Models and resources",
+      "detailed_description": "A collection of Spanish language models and resources developed for Natural Language Processing research.",
+      "domains": [
+        "NLP"
+      ],
+      "subtask_category": [
+        "language_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PlanTL-GOB-ES/lm-spanish",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "nlp",
+        "language-model",
+        "spanish"
+      ],
+      "id": 30
+    },
+    {
+      "name": "cue",
+      "one_line_profile": "Deep learning framework for SV calling and genotyping",
+      "detailed_description": "A deep learning-based framework designed for the calling and genotyping of structural variants from sequencing data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "genotyping"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/PopicLab/cue",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "structural-variants",
+        "genotyping"
+      ],
+      "id": 31
+    },
+    {
+      "name": "CNView",
+      "one_line_profile": "Visualization and annotation of CNVs",
+      "detailed_description": "A tool for the visualization and annotation of Copy Number Variants (CNVs) derived from population-scale whole-genome sequencing data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/RCollins13/CNView",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cnv",
+        "visualization",
+        "wgs"
+      ],
+      "id": 32
+    },
+    {
+      "name": "DeviCNV",
+      "one_line_profile": "Detection and Visualization of Exon-Level CNVs",
+      "detailed_description": "A tool for detecting and visualizing exon-level Copy Number Variants in targeted Next Generation Sequencing data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "cnv_calling",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SD-Genomics/DeviCNV",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cnv",
+        "exon-level",
+        "targeted-sequencing"
+      ],
+      "id": 33
+    },
+    {
+      "name": "sigminer",
+      "one_line_profile": "Toolkit for genomic alteration signature analysis",
+      "detailed_description": "An R toolkit for the analysis and visualization of genomic alteration signatures (mutational signatures), supporting various genomic data types.",
+      "domains": [
+        "B2",
+        "Cancer Genomics"
+      ],
+      "subtask_category": [
+        "signature_analysis",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ShixiangWang/sigminer",
+      "help_website": [
+        "https://shixiangwang.github.io/sigminer/reference/index.html"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "mutational-signatures",
+        "genomics",
+        "visualization"
+      ],
+      "id": 34
+    },
+    {
+      "name": "MantaRay",
+      "one_line_profile": "Grasshopper plugin to connect with Radiance through SSH",
+      "detailed_description": "A plugin for Grasshopper that facilitates connection to Radiance for lighting simulation and analysis via SSH.",
+      "domains": [
+        "Architecture",
+        "Physics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "lighting_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/Sonderwoods/MantaRay",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "simulation",
+        "radiance",
+        "grasshopper"
+      ],
+      "id": 35
+    },
+    {
+      "name": "ConanVarvar",
+      "one_line_profile": "Tool for detection of large syndromic copy number variation from WGS data",
+      "detailed_description": "ConanVarvar is a versatile tool designed for the detection of large syndromic copy number variations (CNVs) from whole genome sequencing data, specifically targeting clinical diagnostics.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "cnv_detection",
+        "variant_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/VCCRI/ConanVarvar",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cnv",
+        "wgs",
+        "clinical-genomics"
+      ],
+      "id": 36
+    },
+    {
+      "name": "SVPV",
+      "one_line_profile": "Structural Variant Prediction Viewer for visualizing SVs",
+      "detailed_description": "SVPV (Structural Variant Prediction Viewer) is a tool for visualizing structural variants to assist in the manual curation and verification of SV calls.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "sv_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/VCCRI/SVPV",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "structural-variation",
+        "qc"
+      ],
+      "id": 37
+    },
+    {
+      "name": "PennCNV",
+      "one_line_profile": "Copy number variation detection from SNP genotyping arrays",
+      "detailed_description": "PennCNV is a software tool for Copy Number Variation (CNV) detection from SNP genotyping arrays. It uses a Hidden Markov Model (HMM) that integrates multiple sources of information.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "cnv_detection",
+        "genotyping"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/WGLab/PennCNV",
+      "help_website": [
+        "http://penncnv.openbioinformatics.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cnv",
+        "snp-array",
+        "hmm"
+      ],
+      "id": 38
+    },
+    {
+      "name": "intansv",
+      "one_line_profile": "R package for integrative analysis and visualization of structural variations",
+      "detailed_description": "intansv is an R package designed for the integrative analysis of structural variations (SVs). It provides functions for reading SV predictions from various software, annotating them with genomic elements, and visualizing the results.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "sv_annotation",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/YaoLab-Bioinfo/intansv",
+      "help_website": [
+        "https://bioconductor.org/packages/release/bioc/html/intansv.html"
+      ],
+      "license": "MIT",
+      "tags": [
+        "r-package",
+        "structural-variation",
+        "annotation"
+      ],
+      "id": 39
+    },
+    {
+      "name": "NGS_SV_CNV_Pipeline",
+      "one_line_profile": "Pipeline for germline and somatic SV/CNV detection and annotation",
+      "detailed_description": "A comprehensive genome Structural Variants Detection and Annotation Pipeline developed by ABCS at Frederick National Laboratory. It includes QC, detection of both germline and somatic SVs/CNVs, and annotation.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "workflow",
+        "sv_detection",
+        "cnv_detection"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/abcsFrederick/NGS_SV_CNV_Pipeline",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pipeline",
+        "ngs",
+        "structural-variation"
+      ],
+      "id": 40
+    },
+    {
+      "name": "CNVnator",
+      "one_line_profile": "Tool for CNV discovery and genotyping from read depth analysis",
+      "detailed_description": "CNVnator is a tool for CNV discovery and genotyping from depth-of-coverage by mapped reads. It uses a mean-shift approach with partitioning (circular binary segmentation) to discover CNVs.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "cnv_detection",
+        "genotyping"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/abyzovlab/CNVnator",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cnv",
+        "read-depth",
+        "wgs"
+      ],
+      "id": 41
+    },
+    {
+      "name": "CNVpytor",
+      "one_line_profile": "Python extension of CNVnator for CNV analysis from depth-of-coverage",
+      "detailed_description": "CNVpytor is a Python package and command line tool for CNV analysis from depth-of-coverage by mapped reads, serving as an extension and improvement over CNVnator.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "cnv_detection",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/abyzovlab/CNVpytor",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cnv",
+        "python",
+        "visualization"
+      ],
+      "id": 42
+    },
+    {
+      "name": "SpatialInferCNV",
+      "one_line_profile": "Tool for clone calling and CNV inference from spatial transcriptomics data",
+      "detailed_description": "SpatialInferCNV is designed for Clone Calling from Visium Spatial Transcriptomics of Cancer samples, enabling the inference of Copy Number Variations in a spatial context.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "cnv_inference",
+        "spatial_transcriptomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/aerickso/SpatialInferCNV",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "spatial-transcriptomics",
+        "cnv",
+        "cancer"
+      ],
+      "id": 43
+    },
+    {
+      "name": "lumpy-sv",
+      "one_line_profile": "Probabilistic framework for structural variant discovery",
+      "detailed_description": "Lumpy is a general probabilistic framework for structural variant discovery. It integrates multiple detection signals (read-pair, split-read, read-depth) to improve sensitivity and specificity.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "sv_detection",
+        "variant_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/arq5x/lumpy-sv",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variation",
+        "probabilistic-model",
+        "ngs"
+      ],
+      "id": 44
+    },
+    {
+      "name": "cnvetti",
+      "one_line_profile": "Robust and efficient clinical CNV calling from HTS data",
+      "detailed_description": "CNVetti is a tool designed for robust, efficient, and versatile clinical Copy Number Variation (CNV) calling from High-Throughput Sequencing (HTS) data, developed by BIH.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "cnv_calling",
+        "clinical_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/bihealth/cnvetti",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cnv",
+        "clinical",
+        "rust"
+      ],
+      "id": 45
+    },
+    {
+      "name": "BreakSeq2",
+      "one_line_profile": "Ultrafast nucleotide-resolution analysis of structural variants",
+      "detailed_description": "BreakSeq2 is an ultrafast and accurate tool for nucleotide-resolution analysis of structural variants. It is designed to detect SVs using a breakpoint mapping strategy.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "sv_detection",
+        "alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bioinform/breakseq2",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "structural-variation",
+        "breakpoint-detection",
+        "ngs"
+      ],
+      "id": 46
+    },
+    {
+      "name": "smoove",
+      "one_line_profile": "Simplified structural variant calling and genotyping pipeline",
+      "detailed_description": "Smoove simplifies the structural variant (SV) calling and genotyping process by wrapping existing tools like Lumpy and Svtyper. It handles parallelization, file management, and best-practice workflows to produce high-quality SV calls from short-read sequencing data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "structural_variant_calling",
+        "genotyping"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/brentp/smoove",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "bioinformatics",
+        "structural-variants",
+        "genotyping",
+        "lumpy",
+        "svtyper"
+      ],
+      "id": 47
+    },
+    {
+      "name": "smoove-nf",
+      "one_line_profile": "Nextflow implementation of the smoove structural variant calling workflow",
+      "detailed_description": "A Nextflow pipeline implementing the smoove workflow for structural variant calling. It orchestrates the execution of smoove across samples, providing scalability and reproducibility for large-scale genomic analysis.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "structural_variant_calling",
+        "workflow_orchestration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/brwnj/smoove-nf",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nextflow",
+        "bioinformatics",
+        "structural-variants",
+        "pipeline"
+      ],
+      "id": 48
+    },
+    {
+      "name": "svpluscnv",
+      "one_line_profile": "Integrative analysis and visualization of structural variants and copy number variants",
+      "detailed_description": "An R package designed for the integrative analysis of structural variants (SV) and copy number variants (CNV). It provides functionalities to validate SVs using CNV data, characterize complex events, and visualize the integration of these genomic alterations.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_analysis",
+        "visualization",
+        "integration"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ccbiolab/svpluscnv",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bioinformatics",
+        "R",
+        "structural-variants",
+        "cnv",
+        "visualization"
+      ],
+      "id": 49
+    },
+    {
+      "name": "benchmark_scrnaseq_cnv_callers",
+      "one_line_profile": "Benchmarking pipeline for scRNA-seq copy number variant callers",
+      "detailed_description": "An analysis pipeline developed to benchmark and evaluate the performance of various copy number variant (CNV) calling tools specifically designed for single-cell RNA sequencing (scRNA-seq) data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "cnv_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/colomemaria/benchmark_scrnaseq_cnv_callers",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bioinformatics",
+        "scRNA-seq",
+        "cnv",
+        "benchmarking"
+      ],
+      "id": 50
+    },
+    {
+      "name": "SVPG",
+      "one_line_profile": "Pangenome-based structural variation caller",
+      "detailed_description": "SVPG is a structural variation caller that utilizes pangenome graphs to improve the detection of SVs. It leverages the genetic diversity captured in a pangenome to identify variants that might be missed by reference-based methods.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "structural_variant_calling",
+        "pangenomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/coopsor/SVPG",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bioinformatics",
+        "structural-variants",
+        "pangenome",
+        "graph-genomics"
+      ],
+      "id": 51
+    },
+    {
+      "name": "CNVbench",
+      "one_line_profile": "Benchmarking framework for CNV calling tools",
+      "detailed_description": "CNVbench is an R package designed to facilitate the benchmarking and comparison of Copy Number Variation (CNV) calling tools, providing metrics and visualizations to assess their performance.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "cnv_calling"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/cphgeno/CNVbench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bioinformatics",
+        "cnv",
+        "benchmarking",
+        "R"
+      ],
+      "id": 52
+    },
+    {
+      "name": "BAdabouM",
+      "one_line_profile": "Genomic structural variations discovery tool",
+      "detailed_description": "BAdabouM is a tool for discovering genomic structural variations. It is written in C and aims to identify SVs from sequencing data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "structural_variant_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/cumtr/BAdabouM",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "bioinformatics",
+        "structural-variants",
+        "genomics"
+      ],
+      "id": 53
+    },
+    {
+      "name": "cloudbreak",
+      "one_line_profile": "Hadoop-based genomic structural variation caller",
+      "detailed_description": "Cloudbreak is a structural variation caller designed to run on Hadoop clusters. It leverages distributed computing to process large-scale genomic datasets for SV detection.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "structural_variant_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/cwhelan/cloudbreak",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bioinformatics",
+        "structural-variants",
+        "hadoop",
+        "big-data"
+      ],
+      "id": 54
+    },
+    {
+      "name": "PyBSASeq",
+      "one_line_profile": "Bulked Segregant Analysis (BSA) sequence data analysis tool",
+      "detailed_description": "PyBSASeq is a Python-based tool for analyzing Bulked Segregant Analysis (BSA) sequencing data. It implements a novel algorithm for detecting significant structural variants and quantitative trait loci (QTLs) associated with traits of interest.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_analysis",
+        "qtl_mapping"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dblhlx/PyBSASeq",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bioinformatics",
+        "bsa-seq",
+        "structural-variants",
+        "qtl"
+      ],
+      "id": 55
+    },
+    {
+      "name": "DELLY",
+      "one_line_profile": "Integrated structural variant discovery tool",
+      "detailed_description": "DELLY is an integrated structural variant (SV) prediction method that can discover, genotype, and visualize deletions, tandem duplications, inversions, and translocations at single-nucleotide resolution in short-read massively parallel sequencing data. It uses paired-ends, split-reads, and read-depth to sensitively and accurately delineate genomic rearrangements.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "structural_variant_calling",
+        "genotyping"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/dellytools/delly",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "bioinformatics",
+        "structural-variants",
+        "ngs",
+        "genotyping"
+      ],
+      "id": 56
+    },
+    {
+      "name": "Viola-SV",
+      "one_line_profile": "Analysis and visualization of genomic structural variant signatures",
+      "detailed_description": "Viola is a Python package designed for the analysis and visualization of genomic structural variant (SV) signatures. It facilitates the interpretation of complex SV patterns and their association with biological processes.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_analysis",
+        "visualization",
+        "signature_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dermasugita/Viola-SV",
+      "help_website": [
+        "https://dermasugita.github.io/Viola-SV/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "bioinformatics",
+        "structural-variants",
+        "visualization",
+        "python"
+      ],
+      "id": 57
+    },
+    {
+      "name": "cnvkit_pipeline",
+      "one_line_profile": "Pipeline for copy number calling from WES data using CNVkit",
+      "detailed_description": "A shell-based pipeline wrapper for CNVkit, specifically tailored for calling copy number variants (CNVs) from Whole Exome Sequencing (WES/WXS) data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "cnv_calling",
+        "workflow_orchestration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/ding-lab/cnvkit_pipeline",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bioinformatics",
+        "cnv",
+        "wes",
+        "pipeline"
+      ],
+      "id": 58
+    },
+    {
+      "name": "VarScan",
+      "one_line_profile": "Variant calling and somatic mutation/CNV detection",
+      "detailed_description": "VarScan is a platform-independent mutation caller for targeted, exome, and whole-genome resequencing data generated on Illumina, SOLiD, Life/PGM, Roche/454, and similar instruments. It employs a robust heuristic/statistic approach to call variants (SNVs and indels) and detect somatic mutations and copy number alterations (CNAs) in tumor-normal pairs.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "cnv_detection",
+        "somatic_mutation_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/dkoboldt/varscan",
+      "help_website": [
+        "http://dkoboldt.github.io/varscan/"
+      ],
+      "license": null,
+      "tags": [
+        "bioinformatics",
+        "variant-calling",
+        "cnv",
+        "somatic-mutations"
+      ],
+      "id": 59
+    },
+    {
+      "name": "SVHunter",
+      "one_line_profile": "Transformer-based structural variation detection for long reads",
+      "detailed_description": "SVHunter is a deep learning-based tool that uses a transformer model to detect and genotype structural variations (DEL, INS, DUP, INV, TRA) from long-read sequencing data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "structural_variant_calling",
+        "genotyping"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eioyuou/SVHunter",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bioinformatics",
+        "structural-variants",
+        "deep-learning",
+        "transformer",
+        "long-reads"
+      ],
+      "id": 60
+    },
+    {
+      "name": "SVIM",
+      "one_line_profile": "Structural Variant Identification Method using Long Reads",
+      "detailed_description": "SVIM (Structural Variant Identification Method) is a tool for the detection and classification of structural variants from long-read sequencing data (PacBio, Nanopore). It distinguishes between different SV classes including deletions, insertions, inversions, tandem duplications, and translocations.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "structural_variant_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eldariont/svim",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bioinformatics",
+        "structural-variants",
+        "long-reads",
+        "pacbio",
+        "nanopore"
+      ],
+      "id": 61
+    },
+    {
+      "name": "CNV-Z",
+      "one_line_profile": "Copy number caller for NGS data",
+      "detailed_description": "CNV-Z is a software tool for detecting copy number variations (CNVs) from next-generation sequencing data, implemented in Julia.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "cnv_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/eol017/CNV-Z",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bioinformatics",
+        "cnv",
+        "julia",
+        "ngs"
+      ],
+      "id": 62
+    },
+    {
+      "name": "CNVkit",
+      "one_line_profile": "Copy number variant detection from targeted DNA sequencing",
+      "detailed_description": "CNVkit is a Python library and command-line software toolkit to infer and visualize copy number from high-throughput DNA sequencing data. It is designed for use with hybrid capture, including whole-exome and custom target panels, and takes advantage of off-target reads to improve accuracy.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "cnv_calling",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/etal/cnvkit",
+      "help_website": [
+        "https://cnvkit.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "bioinformatics",
+        "cnv",
+        "wes",
+        "targeted-sequencing"
+      ],
+      "id": 63
+    },
+    {
+      "name": "Flowhub CNV",
+      "one_line_profile": "Copy Number Variation analysis component for Flowhub ecosystem",
+      "detailed_description": "A component or library designed for detecting or processing Copy Number Variations (CNV), likely within the Flowhub visual programming environment.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "cnv_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/flowhub-team/CNV",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cnv",
+        "genomics",
+        "flowhub"
+      ],
+      "id": 64
+    },
+    {
+      "name": "MosaiCatcher Pipeline",
+      "one_line_profile": "Workflow for SV calling from single-cell Strand-seq data",
+      "detailed_description": "An integrated pipeline designed to detect structural variants (SVs) using single-cell Strand-seq data, facilitating the analysis of genomic heterogeneity.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/friendsofstrandseq/mosaicatcher-pipeline",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "strand-seq",
+        "structural-variation"
+      ],
+      "id": 65
+    },
+    {
+      "name": "SURVIVOR",
+      "one_line_profile": "Toolset for SV simulation, comparison, and filtering",
+      "detailed_description": "A comprehensive toolset for simulating, comparing, merging, and filtering structural variant (SV) calls from various callers and sequencing technologies.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "filtering",
+        "comparison"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/fritzsedlazeck/SURVIVOR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variation",
+        "simulation",
+        "merging"
+      ],
+      "id": 66
+    },
+    {
+      "name": "Sniffles",
+      "one_line_profile": "Structural variation caller for third-generation sequencing data",
+      "detailed_description": "A structural variation caller designed for long-read sequencing data (PacBio/Oxford Nanopore), capable of detecting various types of SVs with high accuracy.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fritzsedlazeck/Sniffles",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "long-read",
+        "structural-variation",
+        "pacbio",
+        "nanopore"
+      ],
+      "id": 67
+    },
+    {
+      "name": "Segment Model Spy",
+      "one_line_profile": "Interactive visualization tool for GATK CNV analysis",
+      "detailed_description": "A web-based visualization tool designed to display modeled segments and raw read/allele counts from GATK Copy Number Variation (CNV) analysis results.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "cnv_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/genome-spy/segment-model-spy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "gatk",
+        "cnv"
+      ],
+      "id": 68
+    },
+    {
+      "name": "tso_cnv",
+      "one_line_profile": "CNV detection for TruSightOne capture data",
+      "detailed_description": "A specialized tool for detecting copy number variations (CNV) specifically in data generated using the TruSightOne capture panel.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "cnv_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/getiria-onsongo/tso_cnv",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cnv",
+        "clinical-genomics",
+        "trusightone"
+      ],
+      "id": 69
+    },
+    {
+      "name": "svpluscnv",
+      "one_line_profile": "Integrative analysis of Structural Variants and CNVs",
+      "detailed_description": "An R package for the integrative analysis of structural variants (SV) and copy number variations (CNV), aiming to provide a comprehensive view of genomic alterations.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "integration"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/gonzolgarcia/svpluscnv",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "r-package",
+        "structural-variation",
+        "cnv"
+      ],
+      "id": 70
+    },
+    {
+      "name": "long-read-validation",
+      "one_line_profile": "Validation of BEDPE structural variations using long reads",
+      "detailed_description": "A tool for validating structural variation calls in BEDPE format using long-read sequencing data, helping to assess the quality of SV predictions.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "validation",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hall-lab/long-read-validation",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "validation",
+        "long-read",
+        "structural-variation"
+      ],
+      "id": 71
+    },
+    {
+      "name": "ampliCNV",
+      "one_line_profile": "CNV detection for amplicon-based WES data",
+      "detailed_description": "A Python package for detecting copy number variations (CNV) in whole exome sequencing (WES) data obtained via amplicon-based enrichment technologies.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "cnv_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ip4-team/amplicnv",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cnv",
+        "wes",
+        "amplicon"
+      ],
+      "id": 72
+    },
+    {
+      "name": "dev-survivors",
+      "one_line_profile": "Reliable and interpretable survival analysis library",
+      "detailed_description": "A Python library dedicated to survival analysis, providing reliable and interpretable models for statistical analysis of time-to-event data.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "statistical_analysis",
+        "survival_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/iuliivasilev/dev-survivors",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "survival-analysis",
+        "statistics",
+        "python"
+      ],
+      "id": 73
+    },
+    {
+      "name": "SV-plaudit",
+      "one_line_profile": "Pipeline for structural variant image curation",
+      "detailed_description": "A pipeline designed to facilitate the manual curation and analysis of structural variant (SV) candidates by generating and managing visualization images.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "curation",
+        "visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/jbelyeu/SV-plaudit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "curation",
+        "structural-variation",
+        "visualization"
+      ],
+      "id": 74
+    },
+    {
+      "name": "PopSV",
+      "one_line_profile": "Population-based detection of structural variation",
+      "detailed_description": "An R package for detecting structural variations (SVs) from high-throughput sequencing data using population-based methods to improve accuracy.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/jmonlong/PopSV",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "structural-variation",
+        "population-genomics",
+        "r"
+      ],
+      "id": 75
+    },
+    {
+      "name": "GenomeSyn",
+      "one_line_profile": "Tool for constructing and visualizing genome synteny",
+      "detailed_description": "A tool developed for the construction and visualization of genome synteny, aiding in the study of genomic structural variations and comparative genomics.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "comparative_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/jmsong2/GenomeSyn",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "synteny",
+        "visualization",
+        "comparative-genomics"
+      ],
+      "id": 76
+    },
+    {
+      "name": "CNVfilteR",
+      "one_line_profile": "R package to remove false positive CNV calls using SNVs",
+      "detailed_description": "An R package that leverages single nucleotide variant (SNV) calls to identify and remove false positive copy number variation (CNV) calls from various tools.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "filtering",
+        "quality_control"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/jpuntomarcos/CNVfilteR",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cnv",
+        "filtering",
+        "snv"
+      ],
+      "id": 77
+    },
+    {
+      "name": "SVGene",
+      "one_line_profile": "SVG gene cluster visualization library",
+      "detailed_description": "A JavaScript library for generating SVG-based visualizations of gene clusters, useful for displaying genomic structures and variations.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/kblin/svgene",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "visualization",
+        "gene-cluster",
+        "svg"
+      ],
+      "id": 78
+    },
+    {
+      "name": "scSVA",
+      "one_line_profile": "Single-cell Scalable Visualization and Analytics",
+      "detailed_description": "A tool for the scalable visualization and analysis of single-cell data, potentially including structural variation analysis in single cells.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/klarman-cell-observatory/scSVA",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "single-cell",
+        "visualization",
+        "analytics"
+      ],
+      "id": 79
+    },
+    {
+      "name": "freec2gistic",
+      "one_line_profile": "Converter from CONTROL-freec output to GISTIC2 format",
+      "detailed_description": "A workflow utility to convert copy number calling output from CONTROL-freec into the format required by GISTIC2 for recurrent CNV analysis.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "format_conversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/kunstner/freec2gistic",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "format-conversion",
+        "cnv",
+        "gistic2"
+      ],
+      "id": 80
+    },
+    {
+      "name": "x11hts",
+      "one_line_profile": "X11 related utilities for HTS data visualization",
+      "detailed_description": "A collection of C++ utilities for visualizing High-Throughput Sequencing (HTS) data using the X11 window system.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/lindenb/x11hts",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "hts",
+        "x11"
+      ],
+      "id": 81
+    },
+    {
+      "name": "Aperture",
+      "one_line_profile": "Alignment-free detection of SVs and viral integrations in ctDNA",
+      "detailed_description": "A Java-based tool for the alignment-free detection of structural variations and viral integrations, specifically optimized for circulating tumor DNA (ctDNA) analysis.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/liuhc8/Aperture",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "ctdna",
+        "structural-variation",
+        "alignment-free"
+      ],
+      "id": 82
+    },
+    {
+      "name": "CAISC",
+      "one_line_profile": "Integration of SNV and CNV for single-cell subclone detection",
+      "detailed_description": "A software tool to integrate copy number variation (CNV) and single nucleotide mutations (SNV) for genetic heterogeneity profiling and subclone detection using single-cell RNA sequencing data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "integration"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/lizamathews/CAISC",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "single-cell",
+        "cnv",
+        "snv",
+        "subclone"
+      ],
+      "id": 83
+    },
+    {
+      "name": "MARS",
+      "one_line_profile": "Multiple Samples Alignment-based SV Calling and Refinement",
+      "detailed_description": "A Python package designed for structural variant (SV) calling and refinement by leveraging multiple sample alignments to improve detection accuracy.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "refinement"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/maiziex/MARS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variation",
+        "multi-sample",
+        "refinement"
+      ],
+      "id": 84
+    },
+    {
+      "name": "VolcanoSV",
+      "one_line_profile": "Long-read structural variant caller for diploid genomes",
+      "detailed_description": "A tool for accurate and robust structural variant calling in diploid genomes using single-molecule long-read sequencing data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/maiziezhoulab/VolcanoSV",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "long-read",
+        "structural-variation",
+        "diploid"
+      ],
+      "id": 85
+    },
+    {
+      "name": "CallSV",
+      "one_line_profile": "Long-read SV calling pipeline",
+      "detailed_description": "A pipeline designed for calling structural variants (SVs) from long-read sequencing data.",
+      "domains": [
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/malonge/CallSV",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "long-read",
+        "structural-variation",
+        "pipeline"
+      ],
+      "id": 86
+    },
+    {
+      "name": "iPsychCNV",
+      "one_line_profile": "Copy number variation detection method for dried blood spots using intensity data",
+      "detailed_description": "iPsychCNV is an R package designed to detect Copy Number Variations (CNVs) from hybridization intensity data, specifically optimized for DNA extracted from dried blood spots (DBS). It addresses the noise and variability inherent in DBS samples.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "cnv_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/mbertalan/iPsychCNV",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cnv",
+        "dried-blood-spots",
+        "microarray",
+        "r-package"
+      ],
+      "id": 87
+    },
+    {
+      "name": "VACmap",
+      "one_line_profile": "Long-read aligner optimized for complex structural variation discovery",
+      "detailed_description": "VACmap is a genome alignment tool specifically designed to handle long reads (PacBio/Nanopore) with a focus on improving the detection of complex structural variations (SVs) by preserving alignment information in complex regions.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "sequence_alignment",
+        "sv_discovery"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/micahvista/VACmap",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "long-reads",
+        "alignment",
+        "structural-variation"
+      ],
+      "id": 88
+    },
+    {
+      "name": "nanopore-SV-analysis",
+      "one_line_profile": "Scripts for structural variant filtering and analysis of Nanopore WGS data",
+      "detailed_description": "A collection of Python scripts and workflows for processing, filtering, and analyzing structural variants called from Nanopore human whole-genome sequencing data.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_filtering",
+        "sv_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mike-molnar/nanopore-SV-analysis",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nanopore",
+        "structural-variation",
+        "wgs"
+      ],
+      "id": 89
+    },
+    {
+      "name": "colorSV",
+      "one_line_profile": "Somatic structural variant calling on matched tumor-normal co-assembly graphs",
+      "detailed_description": "colorSV is a tool for detecting somatic structural variations by analyzing colored de Bruijn graphs constructed from matched tumor-normal sequencing data, enabling precise identification of cancer-specific variants.",
+      "domains": [
+        "Bioinfo",
+        "Cancer Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "somatic_sv"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mktle/colorSV",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "somatic-sv",
+        "tumor-normal",
+        "assembly-graph"
+      ],
+      "id": 90
+    },
+    {
+      "name": "knotAnnotSV",
+      "one_line_profile": "Visualization script for AnnotSV structural variant annotations",
+      "detailed_description": "A lightweight tool to convert AnnotSV output files into customizable HTML reports, facilitating the visualization and interpretation of annotated structural variants.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "reporting"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/mobidic/knotAnnotSV",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "annotsv",
+        "visualization",
+        "html-report"
+      ],
+      "id": 91
+    },
+    {
+      "name": "CoNVaDING",
+      "one_line_profile": "Copy Number Variation Detection In Next-generation sequencing Gene panels",
+      "detailed_description": "CoNVaDING is designed for detecting small (single-exon) copy number variations (CNVs) in high-coverage next-generation sequencing (NGS) gene panel data, offering high sensitivity for clinical diagnostics.",
+      "domains": [
+        "Bioinfo",
+        "Clinical Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "cnv_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/molgenis/CoNVaDING",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "cnv",
+        "gene-panels",
+        "ngs"
+      ],
+      "id": 92
+    },
+    {
+      "name": "combiSV",
+      "one_line_profile": "Tool to combine structural variation calls from long-read sequencing",
+      "detailed_description": "combiSV integrates structural variation (SV) calls from multiple long-read callers (like Sniffles, PBSV) to create a superior, consensus SV call set, improving recall and precision.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_integration",
+        "sv_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/ndierckx/combiSV",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "long-reads",
+        "consensus",
+        "structural-variation"
+      ],
+      "id": 93
+    },
+    {
+      "name": "exomecnv",
+      "one_line_profile": "Nextflow pipeline for calling exome CNVs",
+      "detailed_description": "A bioinformatics pipeline built with Nextflow for detecting Copy Number Variations (CNVs) from exome sequencing data, automating the analysis workflow.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "workflow",
+        "cnv_detection"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-cmgg/exomecnv",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nextflow",
+        "cnv",
+        "exome"
+      ],
+      "id": 94
+    },
+    {
+      "name": "structural",
+      "one_line_profile": "Best-practice pipeline for SV, CNV, and RRE calling from short reads",
+      "detailed_description": "A comprehensive Nextflow pipeline for calling Structural Variants (SVs), Copy Number Variants (CNVs), and Repeat Region Expansions (RREs) from short-read DNA sequencing data, following best practices.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "workflow",
+        "variant_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-cmgg/structural",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nextflow",
+        "sv",
+        "cnv",
+        "repeat-expansion"
+      ],
+      "id": 95
+    },
+    {
+      "name": "V-SVA",
+      "one_line_profile": "R Shiny app for detecting hidden variation in scRNA-seq data",
+      "detailed_description": "V-SVA is an interactive R Shiny application that performs Surrogate Variable Analysis (SVA) to detect and annotate hidden sources of variation (e.g., batch effects) in single-cell RNA-seq data.",
+      "domains": [
+        "Bioinfo",
+        "Transcriptomics"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "normalization"
+      ],
+      "application_level": "platform",
+      "primary_language": "R",
+      "repo_url": "https://github.com/nlawlor/V-SVA",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "scRNA-seq",
+        "shiny",
+        "batch-effect"
+      ],
+      "id": 96
+    },
+    {
+      "name": "cnvPlotteR",
+      "one_line_profile": "Plotting functions for CNV data from CNV-Seq and Control-FREEC",
+      "detailed_description": "An R package providing advanced plotting functions to visualize Copy Number Variation (CNV) data generated by tools like CNV-Seq and Control-FREEC.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "cnv_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/nriddiford/cnvPlotteR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "cnv",
+        "r-package"
+      ],
+      "id": 97
+    },
+    {
+      "name": "svParser",
+      "one_line_profile": "Tool to explore and filter structural variant calls from Lumpy and Delly",
+      "detailed_description": "A Perl-based utility for parsing, filtering, and exploring structural variant (SV) calls in VCF format produced by callers like Lumpy and Delly.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_filtering",
+        "data_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/nriddiford/svParser",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vcf",
+        "filtering",
+        "structural-variation"
+      ],
+      "id": 98
+    },
+    {
+      "name": "FindCSV",
+      "one_line_profile": "Long-read based method for detecting complex structural variations",
+      "detailed_description": "FindCSV is a computational method designed to detect complex structural variations (CSVs) using long-read sequencing data.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "sv_discovery"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/nwpuzhengyan/FindCSV",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "long-reads",
+        "complex-sv",
+        "structural-variation"
+      ],
+      "id": 99
+    },
+    {
+      "name": "rna-seq-diff-exprn",
+      "one_line_profile": "Comprehensive RNA-Seq differential expression and SV analysis pipeline",
+      "detailed_description": "A pipeline for RNA-Seq data analysis that performs genome coverage calculation, differential expression analysis (DESeq, NOISeq), structural variant detection (SVDetect), and differential exon usage analysis.",
+      "domains": [
+        "Bioinfo",
+        "Transcriptomics"
+      ],
+      "subtask_category": [
+        "workflow",
+        "rna_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/olgabot/rna-seq-diff-exprn",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rna-seq",
+        "differential-expression",
+        "structural-variation"
+      ],
+      "id": 100
+    },
+    {
+      "name": "exvar",
+      "one_line_profile": "R Package for Gene Expression and Genetic Variation Analysis",
+      "detailed_description": "exvar is an R package developed for the analysis and visualization of gene expression data alongside genetic variations, including SNPs, Indels, and CNVs.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/omicscodeathon/exvar",
+      "help_website": [],
+      "license": "Artistic-2.0",
+      "tags": [
+        "r-package",
+        "expression",
+        "cnv",
+        "snp"
+      ],
+      "id": 101
+    },
+    {
+      "name": "GSSplayground",
+      "one_line_profile": "Lightweight web-based tool for visualizing genome segments and features",
+      "detailed_description": "GSSplayground is a single-file HTML tool for visualizing genome features, synteny, and read mappings (short/long reads). It supports interactive modification of features and visualization of alignments.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "genome_browser"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/orangeSi/GSSplayground",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "visualization",
+        "genome-browser",
+        "synteny"
+      ],
+      "id": 102
+    },
+    {
+      "name": "HiNT",
+      "one_line_profile": "Hi-C for Copy Number Variation and Translocation detection",
+      "detailed_description": "HiNT is a computational method for detecting Copy Number Variations (CNVs) and Translocations using Hi-C interaction data, leveraging the spatial organization of the genome.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "sv_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/parklab/HiNT",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "hi-c",
+        "cnv",
+        "translocation"
+      ],
+      "id": 103
+    },
+    {
+      "name": "NGMLR",
+      "one_line_profile": "Long-read mapper for structural variation detection",
+      "detailed_description": "NGMLR is a long-read mapper designed to align PacBio or Oxford Nanopore reads to a reference genome with a specific focus on accurately mapping reads that span structural variations.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "sequence_alignment",
+        "sv_support"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/philres/ngmlr",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "long-reads",
+        "alignment",
+        "pacbio",
+        "nanopore"
+      ],
+      "id": 104
+    },
+    {
+      "name": "rCNV",
+      "one_line_profile": "R package for detecting copy number variants from SNP data",
+      "detailed_description": "rCNV is an R package designed to detect Copy Number Variants (CNVs) using data from Single Nucleotide Polymorphisms (SNPs), facilitating genetic variation analysis.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "cnv_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/piyalkarum/rCNV",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "cnv",
+        "snp",
+        "r-package"
+      ],
+      "id": 105
+    },
+    {
+      "name": "VisCap",
+      "one_line_profile": "Inference and visualization tool for germline copy number variants (CNVs)",
+      "detailed_description": "VisCap is a software program designed for clinical laboratories to infer and visualize germline copy number variants (CNVs) from targeted next-generation sequencing data. It aids in the analysis of targeted capture sequencing for detecting copy number changes.",
+      "domains": [
+        "Bioinformatics",
+        "Genetics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "visualization",
+        "copy_number_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/pughlab/VisCap",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cnv",
+        "visualization",
+        "ngs",
+        "germline",
+        "targeted-sequencing"
+      ],
+      "id": 106
+    },
+    {
+      "name": "svgling",
+      "one_line_profile": "Python library for drawing linguistics trees to SVG",
+      "detailed_description": "svgling is a pure Python package for rendering linguistics tree diagrams (syntax trees) as SVG images. It is designed for use in Jupyter notebooks and supports integration with various linguistic libraries.",
+      "domains": [
+        "Linguistics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "scientific_visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rawlins/svgling",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "linguistics",
+        "visualization",
+        "syntax-trees",
+        "svg",
+        "jupyter"
+      ],
+      "id": 107
+    },
+    {
+      "name": "reconCNV",
+      "one_line_profile": "Visualization tool for CNV data from targeted capture sequencing",
+      "detailed_description": "reconCNV is a Python-based tool for visualizing Copy Number Variation (CNV) data derived from targeted capture-based sequencing. It helps researchers inspect and interpret CNV calls visually.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "variant_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rghu/reconCNV",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cnv",
+        "visualization",
+        "targeted-sequencing",
+        "ngs"
+      ],
+      "id": 108
+    },
+    {
+      "name": "iAnnotateSV",
+      "one_line_profile": "Toolkit to annotate and visualize structural variants from NGS data",
+      "detailed_description": "iAnnotateSV is a Python library and command-line toolkit designed to annotate and visualize structural variants (SVs) detected from Next Generation DNA sequencing data. It provides detailed annotations to help interpret the functional impact of SVs.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "annotation",
+        "visualization",
+        "variant_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rhshah/iAnnotateSV",
+      "help_website": [
+        "https://iannotatesv.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "structural-variants",
+        "annotation",
+        "visualization",
+        "ngs",
+        "python"
+      ],
+      "id": 109
+    },
+    {
+      "name": "ProcaryaSV",
+      "one_line_profile": "Ensemble structural variant calling pipeline for prokaryotic genomes",
+      "detailed_description": "ProcaryaSV is an ensemble structural variant calling pipeline driven by Snakemake. It integrates multiple SV and CNV callers to improve detection accuracy in prokaryotic genomes.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "pipeline_orchestration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/robinjugas/ProcaryaSV",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "structural-variants",
+        "cnv",
+        "snakemake",
+        "ensemble-calling",
+        "prokaryotes"
+      ],
+      "id": 110
+    },
+    {
+      "name": "samplot",
+      "one_line_profile": "Structural variant signal visualization for BAMs and CRAMs",
+      "detailed_description": "samplot is a command-line tool for plotting structural variant signals from many BAM and CRAM files. It creates images that display the read depth and alignment characteristics supporting SV calls, facilitating manual review and curation.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "variant_validation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ryanlayer/samplot",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variants",
+        "visualization",
+        "bam",
+        "cram",
+        "genomics"
+      ],
+      "id": 111
+    },
+    {
+      "name": "blender-mantaflow",
+      "one_line_profile": "Mantaflow fluid simulation integration for Blender",
+      "detailed_description": "This repository contains the integration of the Mantaflow fluid simulation framework into Blender. It enables advanced fluid dynamics simulations (smoke, fire, liquid) within the Blender environment for scientific visualization and graphics.",
+      "domains": [
+        "Physics",
+        "Computer Graphics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "scientific_visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/sebbas/blender-mantaflow",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "fluid-simulation",
+        "mantaflow",
+        "blender",
+        "physics",
+        "cfd"
+      ],
+      "id": 112
+    },
+    {
+      "name": "FuSViz",
+      "one_line_profile": "Web-based visualization tool for genomic structural variations",
+      "detailed_description": "FuSViz is a web-browser application designed to visualize, interpret, and prioritize genomic and transcriptomic structural variations (SVs) across multiple samples. It aids in the analysis of complex SV events.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "variant_interpretation"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/senzhaocode/FuSViz",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variants",
+        "visualization",
+        "web-app",
+        "genomics",
+        "transcriptomics"
+      ],
+      "id": 113
+    },
+    {
+      "name": "kmerSV",
+      "one_line_profile": "Visualization and annotation tool for structural variants",
+      "detailed_description": "kmerSV is a tool for the visualization and annotation of structural variants (SVs). It leverages k-mer information to assist in the analysis of genomic structural variations.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "annotation",
+        "variant_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sgtc-stanford/kmerSV",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "structural-variants",
+        "k-mer",
+        "visualization",
+        "annotation"
+      ],
+      "id": 114
+    },
+    {
+      "name": "panz-SV-pipe",
+      "one_line_profile": "Structural variant calling and genotyping pipeline for pan-Zea",
+      "detailed_description": "panz-SV-pipe provides scripts for structural variant (SV) calling and genotyping, specifically tailored for pan-Zea (maize) genomic studies. It facilitates population-scale SV analysis.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics",
+        "Plant Science"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "genotyping",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/songtaogui/panz-SV-pipe",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variants",
+        "maize",
+        "genotyping",
+        "pipeline",
+        "zea"
+      ],
+      "id": 115
+    },
+    {
+      "name": "ximmer",
+      "one_line_profile": "CNV calling system for exome and targeted genomic sequencing",
+      "detailed_description": "Ximmer is a system designed for Copy Number Variation (CNV) calling on exome and targeted genomic sequencing data. It integrates multiple CNV calling methods and provides a framework for analysis.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "cnv_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/ssadedin/ximmer",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "cnv",
+        "exome-sequencing",
+        "targeted-sequencing",
+        "variant-calling"
+      ],
+      "id": 116
+    },
+    {
+      "name": "EvalSVcallers",
+      "one_line_profile": "Evaluation tool for structural variation callers",
+      "detailed_description": "EvalSVcallers is a tool to evaluate the performance (precision and recall) of various structural variation (SV) callers. It is used for benchmarking and validating SV detection methods.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/stat-lab/EvalSVcallers",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "structural-variants",
+        "benchmarking",
+        "evaluation",
+        "precision-recall"
+      ],
+      "id": 117
+    },
+    {
+      "name": "TRsv",
+      "one_line_profile": "Detection of tandem repeat variations and SVs using long reads",
+      "detailed_description": "TRsv is a tool for detecting tandem repeat copy number variations (TR-CNVs) and structural variations (SVs) using long-read sequencing data. It addresses the challenge of analyzing repetitive regions in genomes.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "repeat_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/stat-lab/TRsv",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "tandem-repeats",
+        "structural-variants",
+        "long-reads",
+        "cnv"
+      ],
+      "id": 118
+    },
+    {
+      "name": "svviz",
+      "one_line_profile": "Read visualizer for structural variants",
+      "detailed_description": "svviz is a tool for visualizing high-throughput sequencing reads supporting structural variants. It realigns reads to the reference and variant alleles to provide clear visual evidence of SVs.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "variant_validation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/svviz/svviz",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variants",
+        "visualization",
+        "sequencing-reads",
+        "re-alignment"
+      ],
+      "id": 119
+    },
+    {
+      "name": "mantaflow",
+      "one_line_profile": "Open-source framework for fluid simulation research",
+      "detailed_description": "mantaflow is an open-source framework targeted at fluid simulation research in Computer Graphics and Machine Learning. It provides a versatile environment for developing and testing fluid dynamics algorithms.",
+      "domains": [
+        "Physics",
+        "Computer Graphics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/thunil/mantaflow",
+      "help_website": [
+        "http://mantaflow.com"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "fluid-simulation",
+        "cfd",
+        "computer-graphics",
+        "physics"
+      ],
+      "id": 120
+    },
+    {
+      "name": "cuteSV",
+      "one_line_profile": "Long-read based human genomic structural variation detection",
+      "detailed_description": "cuteSV is a fast and accurate structural variation (SV) detection tool designed for long-read sequencing data (PacBio/ONT). It uses a stepwise refinement strategy to identify various types of SVs.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "long_read_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tjiangHIT/cuteSV",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variants",
+        "long-reads",
+        "pacbio",
+        "ont",
+        "variant-calling"
+      ],
+      "id": 121
+    },
+    {
+      "name": "ngsParalog",
+      "one_line_profile": "Copy number variation detection using NGS data",
+      "detailed_description": "ngsParalog is a tool for detecting copy number variations (CNVs) using Next-Generation Sequencing (NGS) data. It is designed to handle read depth information to infer copy numbers.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "cnv_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/tplinderoth/ngsParalog",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cnv",
+        "ngs",
+        "read-depth",
+        "genomics"
+      ],
+      "id": 122
+    },
+    {
+      "name": "iCopyDAV",
+      "one_line_profile": "Integrated platform for Copy Number Variation detection, annotation, and visualization",
+      "detailed_description": "iCopyDAV is an integrated platform designed for the comprehensive analysis of Copy Number Variations (CNVs). It combines detection, annotation, and visualization functionalities into a single workflow.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "annotation",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/vogetihrsh/icopydav",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cnv",
+        "pipeline",
+        "visualization",
+        "annotation"
+      ],
+      "id": 123
+    },
+    {
+      "name": "vortex-auv-simulator",
+      "one_line_profile": "AUV simulator extension for UUV-Simulator",
+      "detailed_description": "vortex-auv-simulator is an extension of the UUV-Simulator, designed for simulating Autonomous Underwater Vehicles (AUVs). It is used in robotics research for testing control algorithms and vehicle dynamics.",
+      "domains": [
+        "Robotics",
+        "Marine Science"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/vortexntnu/vortex-auv-simulator",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "simulation",
+        "auv",
+        "robotics",
+        "uuv-simulator",
+        "ros"
+      ],
+      "id": 124
+    },
+    {
+      "name": "surpyvor",
+      "one_line_profile": "Python wrapper for SURVIVOR structural variant tool",
+      "detailed_description": "surpyvor is a Python wrapper around the SURVIVOR tool, facilitating the manipulation, merging, and comparison of structural variant (SV) calls (VCF files) within Python workflows.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_processing",
+        "file_manipulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wdecoster/surpyvor",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variants",
+        "vcf",
+        "wrapper",
+        "survivor",
+        "python"
+      ],
+      "id": 125
+    },
+    {
+      "name": "CNVar",
+      "one_line_profile": "Knowledge-based copy number variation detection tool using maximum likelihood",
+      "detailed_description": "CNVar is a tool for accurate copy number variation (CNV) detection based on maximum likelihood estimation. It utilizes a knowledge-based approach to improve detection accuracy in high-throughput sequencing data.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "cnv_calling",
+        "variant_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wegene-llc/CNVar",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cnv",
+        "maximum-likelihood",
+        "ngs",
+        "genomics"
+      ],
+      "id": 126
+    },
+    {
+      "name": "duet",
+      "one_line_profile": "SNP-assisted structural variant calling and phasing using ONT data",
+      "detailed_description": "Duet is a tool designed for structural variant (SV) calling and phasing using Oxford Nanopore Technologies (ONT) sequencing data. It leverages Single Nucleotide Polymorphisms (SNPs) to assist in the accurate identification and phasing of structural variants.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "sv_calling",
+        "phasing",
+        "variant_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yekaizhou/duet",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "structural-variants",
+        "ont",
+        "nanopore",
+        "phasing",
+        "snp"
+      ],
+      "id": 127
+    },
+    {
+      "name": "TentacleSV",
+      "one_line_profile": "Snakemake-based workflow for structural variant analysis",
+      "detailed_description": "TentacleSV is a structural variant analysis workflow built on Snakemake. It leverages the capabilities of OctopusV to facilitate automated and reproducible SV analysis pipelines.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "workflow",
+        "sv_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ylab-hi/TentacleSV",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variants",
+        "snakemake",
+        "workflow",
+        "bioinformatics"
+      ],
+      "id": 128
+    },
+    {
+      "name": "CODEX2",
+      "one_line_profile": "Full-spectrum copy number variation detection and normalization",
+      "detailed_description": "CODEX2 is a statistical framework and R package for full-spectrum copy number variation (CNV) detection from high-throughput DNA sequencing data. It addresses normalization and system noise to improve CNV calling accuracy.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "cnv_calling",
+        "normalization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/yuchaojiang/CODEX2",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "cnv",
+        "normalization",
+        "dna-sequencing",
+        "r-package"
+      ],
+      "id": 129
+    },
+    {
+      "name": "smartie-sv",
+      "one_line_profile": "Structural variant caller for Blasr contig alignments",
+      "detailed_description": "Smartie-sv is a tool designed to call structural variants (SVs) from contig-level alignments generated by Blasr. It is particularly useful for analyzing long-read assembly alignments.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "sv_calling",
+        "alignment_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/zeeev/smartie-sv",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "structural-variants",
+        "blasr",
+        "contig-alignment",
+        "genomics"
+      ],
+      "id": 130
+    },
+    {
+      "name": "iCNV",
+      "one_line_profile": "Integrated copy number variation detection toolset",
+      "detailed_description": "iCNV is an integrated toolset for copy number variation detection. It combines data from multiple platforms or sequencing depths to improve the sensitivity and specificity of CNV calls.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-03"
+      ],
+      "subtask_category": [
+        "cnv_calling",
+        "data_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/zhouzilu/iCNV",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cnv",
+        "integration",
+        "genomics",
+        "r"
+      ],
+      "id": 131
+    }
+  ]
+}

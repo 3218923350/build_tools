@@ -1,0 +1,3655 @@
+{
+  "generated_at": "2025-12-16T06:20:30.529869+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "M3",
+      "leaf_cluster_name": "材料-性质预测与材料信息学生态",
+      "domain": "Materials",
+      "typical_objects": "tabular/graph",
+      "task_chain": "ETL→特征→预测→解释→评测",
+      "tool_form": "数据库 + 模型库 + benchmark"
+    },
+    "unit": {
+      "unit_id": "M3-01",
+      "unit_name": "材料数据库/ETL/清洗",
+      "target_scale": "200–450",
+      "coverage_tools": "databases、parsers、normalizers"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] matminer",
+        "[GH] atomate",
+        "[GH] MPRester",
+        "[GH] jarvis-tools",
+        "[GH] PyCIFRW",
+        "[GH] AiiDA",
+        "[GH] OPTIMADE",
+        "[GH] ASE",
+        "[GH] pymatgen",
+        "[GH] materials database",
+        "[GH] cif parser",
+        "[GH] vasp parser",
+        "[GH] materials project api",
+        "[GH] optimade",
+        "[GH] crystal structure normalization",
+        "[GH] materials informatics",
+        "[GH] structure matcher",
+        "[GH] ase atoms",
+        "[GH] materials data cleaning",
+        "[GH] computational materials science data",
+        "[GH] structure file converter",
+        "[WEB] materials informatics database tools github",
+        "[WEB] python cif parser library github",
+        "[WEB] materials project api client github",
+        "[WEB] optimade python client github",
+        "[WEB] crystal structure cleaning normalization github",
+        "[WEB] vasp output parser github"
+      ],
+      "total_candidates": 924,
+      "tool_candidates": 481,
+      "final_tools": 142
+    }
+  },
+  "tools": [
+    {
+      "name": "PPG",
+      "one_line_profile": "Heart rate estimation from PPG signals using Subspace Decomposition and Kalman filter",
+      "detailed_description": "A MATLAB implementation for estimating heart rate from Photoplethysmogram (PPG) signals. It utilizes Subspace Decomposition and Kalman smoothing techniques to process physiological signals, specifically designed for datasets like the 2015 IEEE Signal Processing Cup.",
+      "domains": [
+        "Biomedical",
+        "Signal_Processing"
+      ],
+      "subtask_category": [
+        "signal_processing",
+        "estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/AlessandraGalli/PPG",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "ppg",
+        "heart-rate",
+        "kalman-filter",
+        "signal-processing"
+      ],
+      "id": 1
+    },
+    {
+      "name": "aiida-gromacs",
+      "one_line_profile": "AiiDA plugin for GROMACS molecular dynamics simulations",
+      "detailed_description": "A plugin for the AiiDA workflow automation engine that interfaces with GROMACS, a widely used molecular dynamics package. It allows users to automate, manage, and reproduce GROMACS simulations within the AiiDA ecosystem.",
+      "domains": [
+        "Materials",
+        "Biomolecular_Simulation",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "molecular_dynamics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CCPBioSim/aiida-gromacs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "gromacs",
+        "molecular-dynamics",
+        "workflow"
+      ],
+      "id": 2
+    },
+    {
+      "name": "ChemParse",
+      "one_line_profile": "Parser for quantum chemistry output files (ORCA, GPAW)",
+      "detailed_description": "A Python library designed to parse output files from various quantum chemistry software packages, specifically supporting ORCA (.out) and GPAW (.txt) formats. It facilitates the extraction of structured data from computational chemistry logs.",
+      "domains": [
+        "Materials",
+        "Chemistry",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "parsing",
+        "etl"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ChemParse/ChemParse",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "parser",
+        "orca",
+        "gpaw",
+        "quantum-chemistry"
+      ],
+      "id": 3
+    },
+    {
+      "name": "crystmatch",
+      "one_line_profile": "Crystal structure matching analysis for phase transitions",
+      "detailed_description": "A tool for enumerating and analyzing crystal-structure matches, specifically focused on solid-solid phase transitions. It aids in understanding structural relationships and transformations in materials science.",
+      "domains": [
+        "Materials",
+        "Crystallography",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "structure_analysis",
+        "phase_transition"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Fangcheng-Wang/crystmatch",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "crystal-structure",
+        "phase-transition",
+        "materials-science"
+      ],
+      "id": 4
+    },
+    {
+      "name": "pymatgen-io-espresso",
+      "one_line_profile": "Pymatgen addon for parsing Quantum ESPRESSO files",
+      "detailed_description": "An extension for the pymatgen library dedicated to parsing input and output files from Quantum ESPRESSO, a suite for electronic-structure calculations. It enhances pymatgen's capability to handle QE data for materials informatics.",
+      "domains": [
+        "Materials",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "parsing",
+        "etl"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Griffin-Group/pymatgen-io-espresso",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pymatgen",
+        "quantum-espresso",
+        "parser",
+        "dft"
+      ],
+      "id": 5
+    },
+    {
+      "name": "vaspchg_rs",
+      "one_line_profile": "Rust library to parse VASP charge density files (CHGCAR)",
+      "detailed_description": "A high-performance Rust library designed to parse VASP charge density files (CHGCAR). It provides efficient I/O handling for large volumetric data generated by VASP calculations.",
+      "domains": [
+        "Materials",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "parsing",
+        "etl"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/Ionizing/vaspchg_rs",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "vasp",
+        "rust",
+        "parser",
+        "charge-density"
+      ],
+      "id": 6
+    },
+    {
+      "name": "wavecar_parser",
+      "one_line_profile": "C++ parser for VASP WAVECAR files",
+      "detailed_description": "A C++ library for parsing VASP WAVECAR files, which contain pseudo-wavefunction data. It allows for the extraction of wavefunction coefficients and plotting of pseudo-wavefunctions.",
+      "domains": [
+        "Materials",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "parsing",
+        "etl"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Ionizing/wavecar_parser",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vasp",
+        "wavecar",
+        "parser",
+        "cpp"
+      ],
+      "id": 7
+    },
+    {
+      "name": "aiida-fleur",
+      "one_line_profile": "AiiDA plugin for the FLEUR DFT code",
+      "detailed_description": "A plugin for the AiiDA workflow manager that interfaces with the FLEUR code (all-electron DFT), enabling high-throughput electronic structure calculations and data provenance tracking.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "electronic_structure",
+        "workflow_management",
+        "dft_calculation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JuDFTteam/aiida-fleur",
+      "help_website": [
+        "https://aiida-fleur.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "aiida",
+        "dft",
+        "fleur",
+        "high-throughput"
+      ],
+      "id": 8
+    },
+    {
+      "name": "aiida-kkr",
+      "one_line_profile": "AiiDA plugin for the JuKKR DFT code",
+      "detailed_description": "A plugin for the AiiDA workflow manager that interfaces with the JuKKR code (KKR Green function method), facilitating high-throughput density functional theory calculations.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "electronic_structure",
+        "workflow_management",
+        "dft_calculation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JuDFTteam/aiida-kkr",
+      "help_website": [
+        "https://aiida-kkr.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "dft",
+        "kkr",
+        "green-function"
+      ],
+      "id": 9
+    },
+    {
+      "name": "Materials-Design-Ontology",
+      "one_line_profile": "Ontology for the Materials Design Domain",
+      "detailed_description": "An ontology defining the semantic structure and relationships for the materials design domain, facilitating data interoperability and knowledge representation in materials science.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "ontology",
+        "knowledge_representation",
+        "data_standard"
+      ],
+      "application_level": "dataset",
+      "primary_language": "CSS",
+      "repo_url": "https://github.com/LiUSemWeb/Materials-Design-Ontology",
+      "help_website": [
+        "https://w3id.org/mdo"
+      ],
+      "license": "MIT",
+      "tags": [
+        "ontology",
+        "semantic-web",
+        "materials-design"
+      ],
+      "id": 10
+    },
+    {
+      "name": "Soft-Robotics-Materials-Database",
+      "one_line_profile": "Database of materials for soft robotics",
+      "detailed_description": "A database repository containing mechanical properties and characterization data of materials used in soft robotics applications.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "database",
+        "material_property_data"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LucMarechal/Soft-Robotics-Materials-Database",
+      "help_website": [],
+      "license": "ODbL-1.0",
+      "tags": [
+        "soft-robotics",
+        "materials-database",
+        "mechanical-properties"
+      ],
+      "id": 11
+    },
+    {
+      "name": "SuperalloyDigger",
+      "one_line_profile": "Toolkit for extracting superalloy data from literature",
+      "detailed_description": "A toolkit designed to batch download documents, locate target sentences, and automatically extract material-property-value triples from scientific literature, specifically for superalloys.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "information_extraction",
+        "text_mining",
+        "etl"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MGEdata/SuperalloyDigger",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nlp",
+        "materials-informatics",
+        "superalloys",
+        "data-extraction"
+      ],
+      "id": 12
+    },
+    {
+      "name": "optimade-gateway",
+      "one_line_profile": "Gateway for querying OPTIMADE APIs",
+      "detailed_description": "A gateway service that allows users to query multiple OPTIMADE-compliant materials databases through a single interface, facilitating federated search.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "federated_search",
+        "database_query",
+        "api_gateway"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Materials-Consortia/optimade-gateway",
+      "help_website": [
+        "https://optimade-gateway.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "optimade",
+        "materials-database",
+        "api-gateway"
+      ],
+      "id": 13
+    },
+    {
+      "name": "optimade-python-tools",
+      "one_line_profile": "Python tools for OPTIMADE API implementation",
+      "detailed_description": "A library providing tools for implementing and consuming OPTIMADE (Open Databases Integration for Materials Design) APIs, including validation and data conversion.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "api_client",
+        "data_validation",
+        "data_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Materials-Consortia/optimade-python-tools",
+      "help_website": [
+        "https://www.optimade.org/optimade-python-tools"
+      ],
+      "license": "MIT",
+      "tags": [
+        "optimade",
+        "materials-informatics",
+        "api-client"
+      ],
+      "id": 14
+    },
+    {
+      "name": "atomate2-lammps",
+      "one_line_profile": "LAMMPS workflows for atomate2",
+      "detailed_description": "An add-on package for atomate2 that implements workflows for running and managing LAMMPS molecular dynamics simulations.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "workflow_management",
+        "simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Matgenix/atomate2-lammps",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "lammps",
+        "molecular-dynamics",
+        "atomate2",
+        "workflow"
+      ],
+      "id": 15
+    },
+    {
+      "name": "matcher",
+      "one_line_profile": "Chemical structure optimization analysis tool",
+      "detailed_description": "A tool built around mmpdb for understanding how chemical structure optimization problems have been solved, enabling deep control over searching structure/activity relationships (SAR).",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "structure_activity_relationship",
+        "chemical_optimization",
+        "data_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Merck/matcher",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cheminformatics",
+        "sar",
+        "structure-optimization",
+        "mmpdb"
+      ],
+      "id": 16
+    },
+    {
+      "name": "nfp",
+      "one_line_profile": "Keras layers for molecular deep learning",
+      "detailed_description": "A library providing Keras layers for end-to-end deep learning on molecular and crystal structures, integrating with rdkit and pymatgen.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "deep_learning",
+        "property_prediction",
+        "molecular_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NREL/nfp",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "keras",
+        "gnn",
+        "materials-informatics",
+        "pymatgen"
+      ],
+      "id": 17
+    },
+    {
+      "name": "avogadrolibs",
+      "one_line_profile": "Libraries for molecular visualization and analysis",
+      "detailed_description": "A set of libraries providing 3D rendering, visualization, analysis, and data processing capabilities for computational chemistry, molecular modeling, and materials science.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "visualization",
+        "molecular_modeling",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenChemistry/avogadrolibs",
+      "help_website": [
+        "https://avogadro.cc/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "visualization",
+        "molecular-modeling",
+        "computational-chemistry"
+      ],
+      "id": 18
+    },
+    {
+      "name": "dfttk-20210211",
+      "one_line_profile": "DFT workflows for finite temperature thermodynamics (Archived)",
+      "detailed_description": "Density functional theory workflows for calculating finite temperature thermodynamics, based on atomate workflows. (Archived version).",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "thermodynamics",
+        "dft_workflow",
+        "simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PhasesResearchLab/ARCHIVED-dfttk-20210211",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dft",
+        "thermodynamics",
+        "atomate",
+        "workflow"
+      ],
+      "id": 19
+    },
+    {
+      "name": "dfttk",
+      "one_line_profile": "DFT workflows for finite temperature thermodynamics",
+      "detailed_description": "Density functional theory workflows for calculating finite temperature thermodynamics, built upon atomate workflows.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "thermodynamics",
+        "dft_workflow",
+        "simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PhasesResearchLab/dfttk-2021",
+      "help_website": [
+        "https://dfttk.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dft",
+        "thermodynamics",
+        "atomate",
+        "workflow"
+      ],
+      "id": 20
+    },
+    {
+      "name": "VASP_XDATCAR",
+      "one_line_profile": "Parser for VASP XDATCAR files",
+      "detailed_description": "A Python class designed to parse VASP XDATCAR output files generated from molecular dynamics simulations.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "parsing",
+        "molecular_dynamics",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/QijingZheng/VASP_XDATCAR",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vasp",
+        "molecular-dynamics",
+        "parser",
+        "xdatcar"
+      ],
+      "id": 21
+    },
+    {
+      "name": "VaspBandUnfolding",
+      "one_line_profile": "Scripts for VASP band unfolding analysis",
+      "detailed_description": "A collection of Python scripts for processing VASP outputs (WAVECAR, POTCAR) and performing band unfolding analysis.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "electronic_structure",
+        "data_analysis",
+        "band_unfolding"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/QijingZheng/VaspBandUnfolding",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vasp",
+        "band-structure",
+        "electronic-structure",
+        "post-processing"
+      ],
+      "id": 22
+    },
+    {
+      "name": "quacc",
+      "one_line_profile": "Flexible platform for computational materials science workflows and quantum chemistry",
+      "detailed_description": "A platform built for the big data era in computational materials science, enabling complex workflows and data management for quantum chemistry codes like VASP and ASE.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "simulation_orchestration"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Quantum-Accelerators/quacc",
+      "help_website": [
+        "https://quacc.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "materials-science",
+        "workflow",
+        "quantum-chemistry",
+        "ase",
+        "high-throughput"
+      ],
+      "id": 23
+    },
+    {
+      "name": "readcif",
+      "one_line_profile": "Fast C++ parser for CIF and mmCIF crystallographic files",
+      "detailed_description": "A high-performance C++ library for parsing Crystallographic Information Files (CIF) and macromolecular CIF (mmCIF), essential for structural biology and materials science data processing.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "data_parsing",
+        "structure_io"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/RBVI/readcif",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cif",
+        "mmcif",
+        "crystallography",
+        "parser",
+        "cpp"
+      ],
+      "id": 24
+    },
+    {
+      "name": "ShakeNBreak",
+      "one_line_profile": "Defect structure-searching method using chemically-guided bond distortions",
+      "detailed_description": "A Python package for generating defect structures by applying chemically-guided bond distortions to identify ground-state defect configurations in materials.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "defect_analysis",
+        "structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SMTG-Bham/ShakeNBreak",
+      "help_website": [
+        "https://shakenbreak.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "defects",
+        "materials-science",
+        "structure-search",
+        "dft",
+        "pymatgen"
+      ],
+      "id": 25
+    },
+    {
+      "name": "ThermoParser",
+      "one_line_profile": "Data analysis and visualization tool for thermoelectrics",
+      "detailed_description": "A tool designed to streamline the analysis and visualization of data related to thermoelectrics and charge carrier transport in computational materials science.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "visualization",
+        "transport_properties"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SMTG-Bham/ThermoParser",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "thermoelectrics",
+        "transport",
+        "materials-science",
+        "visualization"
+      ],
+      "id": 26
+    },
+    {
+      "name": "doped",
+      "one_line_profile": "Workflow for generation, processing, and analysis of defect supercell calculations",
+      "detailed_description": "A Python software implementing a reproducible and efficient workflow for defect simulation, including generation of supercells and pre-/post-processing of calculations.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "defect_analysis",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SMTG-Bham/doped",
+      "help_website": [
+        "https://doped.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "defects",
+        "supercells",
+        "materials-science",
+        "workflow",
+        "dft"
+      ],
+      "id": 27
+    },
+    {
+      "name": "surfaxe",
+      "one_line_profile": "Tool for generating and analyzing surface slabs for first-principles calculations",
+      "detailed_description": "A Python package for automating the generation of surface slabs from bulk structures and analyzing their properties for first-principles calculations.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "surface_modeling",
+        "structure_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/SMTG-Bham/surfaxe",
+      "help_website": [
+        "https://surfaxe.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "surfaces",
+        "slabs",
+        "dft",
+        "materials-science",
+        "pymatgen"
+      ],
+      "id": 28
+    },
+    {
+      "name": "VASP-DOS_extractor",
+      "one_line_profile": "Script to extract Density of States (DOS) from VASP outputs",
+      "detailed_description": "A Pymatgen-based Python script designed to extract total and projected density of states (DOS) data from VASP vasprun.xml files.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "data_extraction",
+        "electronic_structure"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ShinMaterials/VASP-DOS_extractor",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vasp",
+        "dos",
+        "pymatgen",
+        "electronic-structure",
+        "parser"
+      ],
+      "id": 29
+    },
+    {
+      "name": "VASP-Structural_Descriptors",
+      "one_line_profile": "Script to collect structural descriptors from atomic structures",
+      "detailed_description": "A Pymatgen-based script for generating and collecting structural descriptors/features from large sets of atomic structures for materials informatics.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "feature_extraction",
+        "structural_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ShinMaterials/VASP-Structural_Descriptors",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "descriptors",
+        "materials-informatics",
+        "pymatgen",
+        "structure"
+      ],
+      "id": 30
+    },
+    {
+      "name": "batterydatabase",
+      "one_line_profile": "Tools for auto-generating battery materials databases",
+      "detailed_description": "A set of tools designed to automate the generation and management of databases specifically for battery materials.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "database_generation",
+        "etl"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/ShuHuang/batterydatabase",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "batteries",
+        "database",
+        "materials-informatics",
+        "etl"
+      ],
+      "id": 31
+    },
+    {
+      "name": "aiida-champ",
+      "one_line_profile": "AiiDA plugin for the CHAMP Quantum Monte Carlo code",
+      "detailed_description": "A plugin for the AiiDA workflow platform to interface with and orchestrate calculations using the CHAMP Quantum Monte Carlo software.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "workflow_plugin",
+        "quantum_monte_carlo"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TREX-CoE/aiida-champ",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "champ",
+        "qmc",
+        "workflow",
+        "materials-science"
+      ],
+      "id": 32
+    },
+    {
+      "name": "aiida-qp2",
+      "one_line_profile": "AiiDA plugin for Quantum Package 2.0",
+      "detailed_description": "A plugin for the AiiDA workflow platform to manage calculations with Quantum Package 2.0, enabling automated quantum chemistry workflows.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "workflow_plugin",
+        "quantum_chemistry"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TREX-CoE/aiida-qp2",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "quantum-package",
+        "workflow",
+        "quantum-chemistry"
+      ],
+      "id": 33
+    },
+    {
+      "name": "SMACT",
+      "one_line_profile": "Semiconducting Materials by Analogy and Chemical Theory",
+      "detailed_description": "A Python package to aid materials design and informatics by applying chemical theory and analogy to identify potential semiconducting materials.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "materials_design",
+        "informatics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/WMD-group/SMACT",
+      "help_website": [
+        "https://smact.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "materials-design",
+        "semiconductors",
+        "informatics",
+        "chemical-theory"
+      ],
+      "id": 34
+    },
+    {
+      "name": "mcp-atomictoolkit",
+      "one_line_profile": "MCP server for atomistic simulation capabilities",
+      "detailed_description": "A server implementing the Model Context Protocol (MCP) to provide atomistic simulation capabilities (via ASE, pymatgen) to AI agents/LLMs.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "simulation_interface",
+        "ai_agent_tool"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/XirtamEsrevni/mcp-atomictoolkit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "ase",
+        "pymatgen",
+        "llm-tool",
+        "atomistic-simulation"
+      ],
+      "id": 35
+    },
+    {
+      "name": "memetic_thin_film_py",
+      "one_line_profile": "Thin-film optical structure design using memetic algorithms",
+      "detailed_description": "Python software for designing thin-film optical structures to match target spectral properties using memetic optimization algorithms.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "optical_design",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/YuJerryShi/memetic_thin_film_py",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "thin-film",
+        "optics",
+        "optimization",
+        "memetic-algorithm"
+      ],
+      "id": 36
+    },
+    {
+      "name": "thin_film_memetic_optimization",
+      "one_line_profile": "MATLAB tool for thin-film optical structure design",
+      "detailed_description": "MATLAB program for designing thin-film optical structures to match target spectral properties using memetic algorithms.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "optical_design",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/YuJerryShi/thin_film_memetic_optimization",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "thin-film",
+        "optics",
+        "matlab",
+        "optimization"
+      ],
+      "id": 37
+    },
+    {
+      "name": "aiida-cusp",
+      "one_line_profile": "Custodian-based VASP plugin for AiiDA",
+      "detailed_description": "A VASP plugin for AiiDA that leverages Custodian for error handling and robust calculation management.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "workflow_plugin",
+        "error_correction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiida-cusp/aiida-cusp",
+      "help_website": [
+        "https://aiida-cusp.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "vasp",
+        "custodian",
+        "workflow",
+        "dft"
+      ],
+      "id": 38
+    },
+    {
+      "name": "aiida-phonopy",
+      "one_line_profile": "AiiDA plugin for phonon calculations using Phonopy",
+      "detailed_description": "A plugin for the AiiDA workflow platform to perform phonon calculations using the Phonopy software package.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "workflow_plugin",
+        "phonon_calculations"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiida-phonopy/aiida-phonopy",
+      "help_website": [
+        "https://aiida-phonopy.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "phonopy",
+        "phonons",
+        "workflow",
+        "materials-science"
+      ],
+      "id": 39
+    },
+    {
+      "name": "aiida-trains-pot",
+      "one_line_profile": "AiiDA workflow for automated active learning training of neural network interatomic potentials",
+      "detailed_description": "A fully automated active learning workflow implemented in AiiDA to train neural network interatomic potentials, facilitating the generation of machine learning potentials for materials simulations.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "model_training"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiida-trieste-developers/aiida-trains-pot",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "aiida",
+        "active-learning",
+        "neural-networks",
+        "interatomic-potentials"
+      ],
+      "id": 40
+    },
+    {
+      "name": "aiida-vasp",
+      "one_line_profile": "AiiDA plugin for running VASP simulations",
+      "detailed_description": "A plugin for the AiiDA workflow engine that provides an interface to the VASP (Vienna Ab initio Simulation Package) code, enabling automated and reproducible density functional theory calculations.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiida-vasp/aiida-vasp",
+      "help_website": [
+        "https://aiida-vasp.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "aiida",
+        "vasp",
+        "dft",
+        "materials-science"
+      ],
+      "id": 41
+    },
+    {
+      "name": "parsevasp",
+      "one_line_profile": "General-purpose parser for VASP output files",
+      "detailed_description": "A Python library designed to parse various output files from the VASP code, extracting scientific data such as structures, energies, and electronic properties for downstream analysis.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "parsing",
+        "etl"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiida-vasp/parsevasp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vasp",
+        "parser",
+        "materials-data"
+      ],
+      "id": 42
+    },
+    {
+      "name": "aiidalab",
+      "one_line_profile": "Core platform for AiiDAlab web-based materials science environment",
+      "detailed_description": "Implements the core functionality for AiiDAlab, a web-based platform that allows researchers to access and run AiiDA workflows and applications through a Jupyter-based interface.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "platform",
+        "workflow_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiidalab/aiidalab",
+      "help_website": [
+        "https://aiidalab.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "jupyter",
+        "web-platform",
+        "materials-informatics"
+      ],
+      "id": 43
+    },
+    {
+      "name": "aiidalab-qe",
+      "one_line_profile": "AiiDAlab application for Quantum ESPRESSO simulations",
+      "detailed_description": "A graphical application within the AiiDAlab platform that simplifies the setup, execution, and analysis of Quantum ESPRESSO calculations for materials properties.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "gui"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiidalab/aiidalab-qe",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "quantum-espresso",
+        "aiidalab",
+        "gui",
+        "dft"
+      ],
+      "id": 44
+    },
+    {
+      "name": "aiida-ase",
+      "one_line_profile": "AiiDA plugin for the Atomic Simulation Environment (ASE)",
+      "detailed_description": "Integrates the Atomic Simulation Environment (ASE) with AiiDA, allowing users to leverage ASE's calculators and structure manipulation tools within AiiDA workflows.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiidaplugins/aiida-ase",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "ase",
+        "atomistic-simulation"
+      ],
+      "id": 45
+    },
+    {
+      "name": "aiida-lammps",
+      "one_line_profile": "AiiDA plugin for LAMMPS molecular dynamics code",
+      "detailed_description": "A plugin connecting AiiDA with LAMMPS, enabling the automation and provenance tracking of molecular dynamics simulations for materials research.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiidaplugins/aiida-lammps",
+      "help_website": [
+        "https://aiida-lammps.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "lammps",
+        "molecular-dynamics"
+      ],
+      "id": 46
+    },
+    {
+      "name": "aiida-common-workflows",
+      "one_line_profile": "Standardized workflow interfaces for materials science codes in AiiDA",
+      "detailed_description": "A library implementing common interfaces for workflows across different quantum engines (e.g., VASP, QE, CP2K) in AiiDA, facilitating cross-code verification and interoperability.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "standardization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiidateam/aiida-common-workflows",
+      "help_website": [
+        "https://aiida-common-workflows.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "workflows",
+        "interoperability"
+      ],
+      "id": 47
+    },
+    {
+      "name": "aiida-core",
+      "one_line_profile": "Workflow engine for reproducible materials science simulations",
+      "detailed_description": "The core AiiDA platform, an open-source workflow manager for computational science that handles provenance tracking, automation, and high-throughput calculations.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "provenance_tracking"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiidateam/aiida-core",
+      "help_website": [
+        "https://aiida.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "workflow-engine",
+        "provenance",
+        "high-throughput",
+        "materials-informatics"
+      ],
+      "id": 48
+    },
+    {
+      "name": "aiida-cp2k",
+      "one_line_profile": "AiiDA plugin for CP2K quantum chemistry code",
+      "detailed_description": "Enables the execution and management of CP2K calculations within the AiiDA framework, supporting atomistic simulations of solid state, liquid, and biological systems.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiidateam/aiida-cp2k",
+      "help_website": [
+        "https://aiida-cp2k.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "cp2k",
+        "dft",
+        "molecular-dynamics"
+      ],
+      "id": 49
+    },
+    {
+      "name": "aiida-hubbard",
+      "one_line_profile": "Workflows for calculating Hubbard U parameters",
+      "detailed_description": "AiiDA workflows for the automated calculation of self-consistent onsite and intersite Hubbard parameters from first-principles using linear response theory.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "parameter_estimation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiidateam/aiida-hubbard",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dft+u",
+        "hubbard-parameters",
+        "aiida",
+        "electronic-structure"
+      ],
+      "id": 50
+    },
+    {
+      "name": "aiida-quantumespresso",
+      "one_line_profile": "Official AiiDA plugin for Quantum ESPRESSO",
+      "detailed_description": "Provides a comprehensive interface to the Quantum ESPRESSO suite within AiiDA, enabling advanced workflows for electronic structure calculations, including PWscf, PHonon, and more.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiidateam/aiida-quantumespresso",
+      "help_website": [
+        "https://aiida-quantumespresso.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "aiida",
+        "quantum-espresso",
+        "dft",
+        "materials-science"
+      ],
+      "id": 51
+    },
+    {
+      "name": "aiida-wannier90",
+      "one_line_profile": "AiiDA plugin for Wannier90",
+      "detailed_description": "Connects AiiDA with the Wannier90 code, allowing for the automated calculation of maximally localized Wannier functions and related properties.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiidateam/aiida-wannier90",
+      "help_website": [
+        "https://aiida-wannier90.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "aiida",
+        "wannier90",
+        "electronic-structure",
+        "wannier-functions"
+      ],
+      "id": 52
+    },
+    {
+      "name": "aiida-wannier90-workflows",
+      "one_line_profile": "Automated workflows for Wannier90 calculations",
+      "detailed_description": "A collection of advanced, automated workflows for computing Wannier functions using AiiDA and Wannier90, designed to handle complex calculation sequences robustly.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiidateam/aiida-wannier90-workflows",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "aiida",
+        "wannier90",
+        "workflows",
+        "automation"
+      ],
+      "id": 53
+    },
+    {
+      "name": "aiida-workgraph",
+      "one_line_profile": "Interactive workflow manager and GUI for AiiDA",
+      "detailed_description": "A tool to efficiently design and manage flexible AiiDA workflows, featuring an interactive GUI, checkpointing, and provenance tracking capabilities.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "gui"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiidateam/aiida-workgraph",
+      "help_website": [
+        "https://aiida-workgraph.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "workflow-gui",
+        "graph-based",
+        "automation"
+      ],
+      "id": 54
+    },
+    {
+      "name": "JARVIS-Tools",
+      "one_line_profile": "Software package for data-driven atomistic materials design",
+      "detailed_description": "An open-source Python library for atomistic materials design, providing tools for high-throughput calculations, machine learning, and analysis of materials properties, associated with the NIST-JARVIS database.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "materials_design",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/atomgptlab/jarvis",
+      "help_website": [
+        "https://jarvis-tools.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "materials-design",
+        "dft",
+        "machine-learning",
+        "high-throughput"
+      ],
+      "id": 55
+    },
+    {
+      "name": "metis-gui",
+      "one_line_profile": "GUI for X-ray diffraction data simulations and analysis",
+      "detailed_description": "A modular standalone fat-client GUI designed for the simulation, analysis, and sharing of X-ray diffraction (XRD) data, facilitating materials characterization.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "analysis",
+        "visualization",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Svelte",
+      "repo_url": "https://github.com/basf/metis-gui",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "xrd",
+        "x-ray-diffraction",
+        "gui",
+        "materials-analysis"
+      ],
+      "id": 56
+    },
+    {
+      "name": "aiida-vibroscopy",
+      "one_line_profile": "AiiDA plugin for automated calculation of vibrational properties (IR/Raman spectra, phonons)",
+      "detailed_description": "A plugin for the AiiDA workflow engine that automates the calculation of vibrational properties such as infrared and Raman spectra, as well as phonon dispersions, using various density functional theory codes.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "simulation",
+        "property_prediction",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bastonero/aiida-vibroscopy",
+      "help_website": [
+        "https://aiida-vibroscopy.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "aiida",
+        "phonons",
+        "spectroscopy",
+        "materials-science",
+        "dft"
+      ],
+      "id": 57
+    },
+    {
+      "name": "beautiful-atoms",
+      "one_line_profile": "High-quality rendering of atoms and molecules using Blender",
+      "detailed_description": "A Python library that interfaces with Blender to generate publication-quality 3D renderings of atomic structures and molecules, supporting standard file formats like CIF and XYZ.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "visualization",
+        "rendering"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/beautiful-atoms/beautiful-atoms",
+      "help_website": [
+        "https://beautiful-atoms.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "visualization",
+        "blender",
+        "molecular-rendering",
+        "materials-science"
+      ],
+      "id": 58
+    },
+    {
+      "name": "LLaMP",
+      "one_line_profile": "Multi-modal RAG agent for materials informatics powered by LLMs",
+      "detailed_description": "A framework that integrates Large Language Models (LLMs) with high-fidelity materials informatics databases (like Materials Project) to perform agentic materials design, property prediction, and data retrieval.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "materials_design",
+        "property_prediction",
+        "data_retrieval"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/chiang-yuan/llamp",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "llm",
+        "rag",
+        "materials-informatics",
+        "agent"
+      ],
+      "id": 59
+    },
+    {
+      "name": "ase-notebook",
+      "one_line_profile": "Interactive 2D/3D visualization for atomic structures in Jupyter Notebooks",
+      "detailed_description": "A visualization tool designed for the Atomic Simulation Environment (ASE) and Pymatgen, enabling interactive 2D (SVG) and 3D (Three.js) rendering of crystal structures and molecules directly within Jupyter Notebooks.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "visualization",
+        "interactive_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chrisjsewell/ase-notebook",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ase",
+        "pymatgen",
+        "visualization",
+        "jupyter",
+        "crystallography"
+      ],
+      "id": 60
+    },
+    {
+      "name": "cod-tools",
+      "one_line_profile": "Tools for handling and parsing CIF files for the Crystallography Open Database",
+      "detailed_description": "A collection of Perl scripts and modules for parsing, checking, and manipulating Crystallographic Information Files (CIF), maintained by the developers of the Crystallography Open Database (COD).",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "parsing",
+        "data_cleaning",
+        "validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/cod-developers/cod-tools",
+      "help_website": [
+        "https://wiki.crystallography.net/cod-tools/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "cif",
+        "crystallography",
+        "parsing",
+        "cod",
+        "database-tools"
+      ],
+      "id": 61
+    },
+    {
+      "name": "DeepMD-kit",
+      "one_line_profile": "Deep learning package for many-body potential energy representation and MD",
+      "detailed_description": "A deep learning package that generates accurate many-body potential energy surfaces and force fields for molecular dynamics simulations, bridging the gap between ab initio accuracy and classical MD efficiency.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "potential_learning",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepmodeling/deepmd-kit",
+      "help_website": [
+        "http://www.deepmd.org/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "molecular-dynamics",
+        "deep-learning",
+        "potential-energy-surface",
+        "force-field"
+      ],
+      "id": 62
+    },
+    {
+      "name": "dftd4",
+      "one_line_profile": "Atomic-charge dependent London dispersion correction",
+      "detailed_description": "A generally applicable implementation of the D4 London dispersion correction for Density Functional Theory (DFT) calculations, improving the accuracy of non-covalent interaction energies.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "simulation",
+        "quantum_chemistry",
+        "correction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/dftd4/dftd4",
+      "help_website": [
+        "https://dftd4.readthedocs.io/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "dft",
+        "dispersion-correction",
+        "quantum-chemistry",
+        "electronic-structure"
+      ],
+      "id": 63
+    },
+    {
+      "name": "SciGlass",
+      "one_line_profile": "Database containing properties of glass materials",
+      "detailed_description": "A repository containing a vast set of data on the properties of glass materials, serving as a materials database.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "database",
+        "materials_property_data"
+      ],
+      "application_level": "dataset",
+      "primary_language": "N/A",
+      "repo_url": "https://github.com/epam/SciGlass",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "glass",
+        "materials-database",
+        "properties"
+      ],
+      "id": 64
+    },
+    {
+      "name": "aiida-defects",
+      "one_line_profile": "AiiDA plugin for point defect calculations",
+      "detailed_description": "A plugin for the AiiDA platform providing workflows for calculations with defects in materials.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "workflow",
+        "defect_calculation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/epfl-theos/aiida-defects",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "defects",
+        "workflows",
+        "materials-science"
+      ],
+      "id": 65
+    },
+    {
+      "name": "MPcat",
+      "one_line_profile": "Interface between Materials Project and Schrodinger API",
+      "detailed_description": "An interface between the Materials Project software suite and the Schrodinger Python API, designed to allow for high-throughput execution of Jaguar and AutoTS calculations for molecular thermodynamics and kinetics.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "interface",
+        "high_throughput_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/espottesmith/MPcat",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "materials-project",
+        "schrodinger",
+        "thermodynamics",
+        "kinetics"
+      ],
+      "id": 66
+    },
+    {
+      "name": "aiida-orca",
+      "one_line_profile": "AiiDA Plugin for ORCA quantum chemistry package",
+      "detailed_description": "AiiDA Plugin for ORCA, enabling the automation of ORCA calculations within the AiiDA workflow engine.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "workflow",
+        "quantum_chemistry"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ezpzbz/aiida-orca",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "orca",
+        "quantum-chemistry"
+      ],
+      "id": 67
+    },
+    {
+      "name": "p2ptrans",
+      "one_line_profile": "Algorithm to match crystal structures atom-to-atom",
+      "detailed_description": "An algorithm to match crystal structures atom-to-atom, useful for analyzing phase transitions or structural similarities.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "structure_analysis",
+        "structure_matching"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ftherrien/p2ptrans",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "crystal-structure",
+        "atom-matching",
+        "phase-transition"
+      ],
+      "id": 68
+    },
+    {
+      "name": "bandstructureplots",
+      "one_line_profile": "Band structure plotting tool using pymatgen",
+      "detailed_description": "Band structure plots using pymatgen and a rgb scale to look at atomic or orbital contributions.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "electronic_structure"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gVallverdu/bandstructureplots",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "band-structure",
+        "pymatgen",
+        "visualization"
+      ],
+      "id": 69
+    },
+    {
+      "name": "cif-parsers",
+      "one_line_profile": "PDBx/mmCIF parsers in Python & JavaScript",
+      "detailed_description": "PDBx/mmCIF parsers implemented in Python & JavaScript, facilitating the reading and processing of crystallographic information files.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "parsing",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/gjbekker/cif-parsers",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cif",
+        "pdbx",
+        "parser",
+        "crystallography"
+      ],
+      "id": 70
+    },
+    {
+      "name": "PDBeCIF",
+      "one_line_profile": "PDBe mmCif/CIF/STAR parser and API",
+      "detailed_description": "Protein Data Bank in Europe (PDBe) mmCif/CIF/STAR parser and API for handling macromolecular structure data.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "parsing",
+        "data_access"
+      ],
+      "application_level": "library",
+      "primary_language": "N/A",
+      "repo_url": "https://github.com/glenveegee/PDBeCIF",
+      "help_website": [
+        "http://pdbe.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "mmcif",
+        "pdb",
+        "parser",
+        "bioinformatics"
+      ],
+      "id": 71
+    },
+    {
+      "name": "chemml",
+      "one_line_profile": "Machine learning and informatics suite for chemical and materials sciences",
+      "detailed_description": "ChemML is a machine learning and informatics program suite for the chemical and materials sciences, providing tools for data mining and modeling.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "machine_learning",
+        "informatics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hachmannlab/chemml",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "machine-learning",
+        "materials-informatics",
+        "chemistry"
+      ],
+      "id": 72
+    },
+    {
+      "name": "atomate",
+      "one_line_profile": "Workflows for computational materials science",
+      "detailed_description": "atomate is a powerful software for computational materials science and contains pre-built workflows for running simulations (e.g., VASP, FireWorks).",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "workflow",
+        "simulation_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hackingmaterials/atomate",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "workflows",
+        "materials-science",
+        "vasp",
+        "fireworks"
+      ],
+      "id": 73
+    },
+    {
+      "name": "matminer",
+      "one_line_profile": "Data mining library for materials science",
+      "detailed_description": "Data mining for materials science, providing tools for data retrieval, feature extraction, and analysis.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "data_mining",
+        "feature_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/hackingmaterials/matminer",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "data-mining",
+        "materials-science",
+        "feature-extraction"
+      ],
+      "id": 74
+    },
+    {
+      "name": "robocrystallographer",
+      "one_line_profile": "Automatic generation of crystal structure descriptions",
+      "detailed_description": "A tool for automatic generation of crystal structure descriptions, converting structural data into human-readable text.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "structure_analysis",
+        "text_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hackingmaterials/robocrystallographer",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "crystallography",
+        "structure-description",
+        "materials-science"
+      ],
+      "id": 75
+    },
+    {
+      "name": "maptools",
+      "one_line_profile": "Materials simulation data processing tools",
+      "detailed_description": "A open source program for materials simulation data process, which is mainly based on Pymatgen code.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "simulation_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haidi-ustc/maptools",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pymatgen",
+        "data-processing",
+        "materials-simulation"
+      ],
+      "id": 76
+    },
+    {
+      "name": "hzdplugins",
+      "one_line_profile": "Toolbox for AiiDA structure construction and viewing",
+      "detailed_description": "A useful toolbox for using Aiida and constructing and viewing your initial structure for the simulation.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "structure_construction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hezhengda/hzdplugins",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "aiida",
+        "structure-viewing",
+        "materials-science"
+      ],
+      "id": 77
+    },
+    {
+      "name": "compchem_toolkit",
+      "one_line_profile": "Toolkit for AiiDA, Pymatgen and VASP",
+      "detailed_description": "Collection of python functions to work with aiida, pymatgen and VASP. Designed to speed up input setup and output analysis.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "workflow",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ireaml/compchem_toolkit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "pymatgen",
+        "vasp",
+        "computational-chemistry"
+      ],
+      "id": 78
+    },
+    {
+      "name": "ASE_ANI",
+      "one_line_profile": "ANI-1 neural net potential interface for ASE",
+      "detailed_description": "ANI-1 neural net potential with python interface (ASE), enabling machine learning potential calculations in atomic simulations.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "potential_energy_surface"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/isayev/ASE_ANI",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ase",
+        "ani-1",
+        "neural-network-potential",
+        "molecular-dynamics"
+      ],
+      "id": 79
+    },
+    {
+      "name": "aiidalab-ispg",
+      "one_line_profile": "Ab initio UV/vis spectroscopy workflows (ATMOSPEC)",
+      "detailed_description": "ATMOSPEC: ab initio UV/vis spectroscopy for everyone, implemented as an AiiDA Lab application.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "workflow",
+        "spectroscopy"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ispg-group/aiidalab-ispg",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spectroscopy",
+        "aiida",
+        "uv-vis",
+        "ab-initio"
+      ],
+      "id": 80
+    },
+    {
+      "name": "pymatviz",
+      "one_line_profile": "Visualization toolkit for materials informatics",
+      "detailed_description": "A toolkit for visualizations in materials informatics, providing specialized plotting functions for materials data.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "informatics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/janosh/pymatviz",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "materials-informatics",
+        "plotting"
+      ],
+      "id": 81
+    },
+    {
+      "name": "vasp-interface",
+      "one_line_profile": "ASE compliant Python interface to VASP",
+      "detailed_description": "New ASE compliant Python interface to VASP, facilitating the setup and execution of VASP calculations.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "interface",
+        "simulation_setup"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jkitchin/vasp",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vasp",
+        "ase",
+        "interface",
+        "dft"
+      ],
+      "id": 82
+    },
+    {
+      "name": "pourbaix",
+      "one_line_profile": "Method to generate Pourbaix diagrams using Python and pymatgen",
+      "detailed_description": "A Python tool that leverages pymatgen to calculate and generate Pourbaix diagrams (potential-pH diagrams) for analyzing the electrochemical stability of materials in aqueous environments.",
+      "domains": [
+        "M3",
+        "M3-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "thermodynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/karelplanken/pourbaix",
+      "help_website": [],
+      "license": "CC0-1.0",
+      "tags": [
+        "electrochemistry",
+        "pourbaix-diagram",
+        "pymatgen"
+      ],
+      "id": 83
+    },
+    {
+      "name": "Emap2sec",
+      "one_line_profile": "Computational tool to identify protein secondary structures from cryo-EM maps",
+      "detailed_description": "A deep learning-based tool designed to detect protein secondary structures (alpha helices, beta sheets, etc.) directly from electron microscopy (EM) density maps.",
+      "domains": [
+        "Bioinformatics",
+        "Structural Biology"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "image_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kiharalab/Emap2sec",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cryo-em",
+        "protein-structure",
+        "deep-learning"
+      ],
+      "id": 84
+    },
+    {
+      "name": "JARVIS-FF",
+      "one_line_profile": "Data and scripts for evaluation of interatomic potentials/force-fields",
+      "detailed_description": "A repository containing data and LAMMPS scripts for the evaluation of classical force-fields and interatomic potentials, part of the JARVIS infrastructure for materials design.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "force_field_evaluation",
+        "molecular_dynamics"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/knc6/JARVIS-FF",
+      "help_website": [
+        "https://jarvis.nist.gov/"
+      ],
+      "license": null,
+      "tags": [
+        "lammps",
+        "force-fields",
+        "materials-science"
+      ],
+      "id": 85
+    },
+    {
+      "name": "structuregraph-helpers",
+      "one_line_profile": "Helpers for working with pymatgen structure graphs",
+      "detailed_description": "A collection of utility functions to facilitate the manipulation and analysis of crystal structure graphs generated by pymatgen, aiding in structural analysis tasks.",
+      "domains": [
+        "M3",
+        "M3-03"
+      ],
+      "subtask_category": [
+        "structure_analysis",
+        "graph_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lamalab-org/structuregraph-helpers",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pymatgen",
+        "crystal-structure",
+        "graph-theory"
+      ],
+      "id": 86
+    },
+    {
+      "name": "perovskites-distortions",
+      "one_line_profile": "Functions to analyse structures of hybrid organic-inorganic perovskites",
+      "detailed_description": "A Python toolkit for analyzing structural distortions in hybrid organic-inorganic perovskites, providing specific metrics relevant to this class of materials.",
+      "domains": [
+        "M3",
+        "M3-03"
+      ],
+      "subtask_category": [
+        "structure_analysis",
+        "crystallography"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lcbc-epfl/perovskites-distortions",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "perovskites",
+        "structural-analysis",
+        "materials-science"
+      ],
+      "id": 87
+    },
+    {
+      "name": "construction_zone",
+      "one_line_profile": "Modules for generating nanoscale atomic scenes for S/TEM simulation",
+      "detailed_description": "A toolset for constructing complex atomic structures and scenes, primarily designed to generate inputs for Scanning Transmission Electron Microscopy (S/TEM) image simulations.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "structure_generation",
+        "microscopy_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lerandc/construction_zone",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "stem",
+        "microscopy",
+        "atomic-structure"
+      ],
+      "id": 88
+    },
+    {
+      "name": "aiida-lsmo",
+      "one_line_profile": "AiiDA workflows for the LSMO laboratory at EPFL",
+      "detailed_description": "A collection of AiiDA workflows and plugins developed for the LSMO laboratory, facilitating automated calculations for specific materials science tasks.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "high_throughput_computing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lsmo-epfl/aiida-lsmo",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "aiida",
+        "workflow",
+        "materials-science"
+      ],
+      "id": 89
+    },
+    {
+      "name": "aiida-raspa",
+      "one_line_profile": "The RASPA plugin for the AiiDA workflow engine",
+      "detailed_description": "An AiiDA plugin that interfaces with the RASPA code, enabling the simulation of adsorption and diffusion in porous materials within automated workflows.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "simulation_interface",
+        "molecular_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lsmo-epfl/aiida-raspa",
+      "help_website": [
+        "http://aiida-raspa.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "aiida",
+        "raspa",
+        "porous-materials"
+      ],
+      "id": 90
+    },
+    {
+      "name": "aiida-zeopp",
+      "one_line_profile": "AiiDA plugin for zeo++",
+      "detailed_description": "An AiiDA plugin for Zeo++, a software package for performing geometry-based analysis of porous materials (e.g., surface area, pore diameter).",
+      "domains": [
+        "M3",
+        "M3-03"
+      ],
+      "subtask_category": [
+        "structure_analysis",
+        "porous_materials"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lsmo-epfl/aiida-zeopp",
+      "help_website": [
+        "http://aiida-zeopp.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "aiida",
+        "zeopp",
+        "geometry-analysis"
+      ],
+      "id": 91
+    },
+    {
+      "name": "aiida-graph-render",
+      "one_line_profile": "Render complex AiiDA provenance graphs using GePhi",
+      "detailed_description": "A utility to export and render AiiDA provenance graphs using GePhi, aiding in the visualization of complex scientific workflows and data lineage.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "provenance_tracking"
+      ],
+      "application_level": "library",
+      "primary_language": null,
+      "repo_url": "https://github.com/ltalirz/aiida-graph-render",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "aiida",
+        "gephi",
+        "graph-visualization"
+      ],
+      "id": 92
+    },
+    {
+      "name": "aiida-explorer",
+      "one_line_profile": "Interactive provenance browser for AiiDA databases",
+      "detailed_description": "A web-based tool for exploring AiiDA databases, allowing users to visualize and navigate the provenance graph of scientific calculations.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "data_exploration",
+        "provenance_visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/materialscloud-org/aiida-explorer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "visualization",
+        "provenance"
+      ],
+      "id": 93
+    },
+    {
+      "name": "optimade-maker",
+      "one_line_profile": "Tools for making OPTIMADE APIs from structural data",
+      "detailed_description": "A library to facilitate the creation of OPTIMADE-compliant APIs from various structural data formats (e.g., CIF archives), promoting data interoperability.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "api_generation",
+        "data_interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialscloud-org/optimade-maker",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "optimade",
+        "materials-data",
+        "api"
+      ],
+      "id": 94
+    },
+    {
+      "name": "MPWorks",
+      "one_line_profile": "Custom workflow for Materials Project",
+      "detailed_description": "A package that integrates pymatgen, custodian, and FireWorks to define and manage the custom high-throughput workflows used by the Materials Project.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "high_throughput_computing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/MPWorks",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "materials-project",
+        "workflow",
+        "fireworks"
+      ],
+      "id": 95
+    },
+    {
+      "name": "mp-api",
+      "one_line_profile": "New API client for the Materials Project",
+      "detailed_description": "The official Python client for accessing the Materials Project API, enabling programmatic retrieval of materials data, properties, and structures.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "data_access",
+        "database_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/api",
+      "help_website": [
+        "https://next-gen.materialsproject.org/api"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "materials-project",
+        "api-client",
+        "materials-data"
+      ],
+      "id": 96
+    },
+    {
+      "name": "atomate2",
+      "one_line_profile": "Library of computational materials science workflows",
+      "detailed_description": "A modern library of computational materials science workflows, built on top of Jobflow and Pymatgen, designed for high-throughput computing.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "simulation_orchestration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/atomate2",
+      "help_website": [
+        "https://materialsproject.github.io/atomate2/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "workflows",
+        "high-throughput",
+        "materials-science"
+      ],
+      "id": 97
+    },
+    {
+      "name": "emmet",
+      "one_line_profile": "Builder of databases of material properties",
+      "detailed_description": "A core library for the Materials Project that handles the building of material property databases from raw calculation outputs (ETL pipelines).",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "etl",
+        "database_building"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/emmet",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "etl",
+        "materials-database",
+        "materials-project"
+      ],
+      "id": 98
+    },
+    {
+      "name": "mpmorph",
+      "one_line_profile": "Tools to run and analyze ab-initio molecular dynamics (AIMD)",
+      "detailed_description": "A collection of tools to facilitate the setup, execution, and analysis of ab-initio molecular dynamics (AIMD) calculations, leveraging the Materials Project infrastructure.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "simulation_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/mpmorph",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "aimd",
+        "molecular-dynamics",
+        "vasp"
+      ],
+      "id": 99
+    },
+    {
+      "name": "pymatgen",
+      "one_line_profile": "Robust materials analysis code for structures and molecules",
+      "detailed_description": "A core Python library for materials analysis, defining classes for structures and molecules, and providing support for input/output handling of many electronic structure codes.",
+      "domains": [
+        "M3",
+        "M3-01",
+        "M3-03"
+      ],
+      "subtask_category": [
+        "structure_analysis",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen",
+      "help_website": [
+        "https://pymatgen.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "materials-analysis",
+        "crystallography",
+        "electronic-structure"
+      ],
+      "id": 100
+    },
+    {
+      "name": "pymatgen-analysis-alloys",
+      "one_line_profile": "Pymatgen add-on for alloy system analysis",
+      "detailed_description": "An add-on package for pymatgen providing specialized classes and functions for describing and analyzing alloy systems.",
+      "domains": [
+        "M3",
+        "M3-03"
+      ],
+      "subtask_category": [
+        "alloy_analysis",
+        "materials_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-analysis-alloys",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "alloys",
+        "pymatgen",
+        "materials-science"
+      ],
+      "id": 101
+    },
+    {
+      "name": "pymatgen-analysis-defects",
+      "one_line_profile": "Defect analysis modules for pymatgen",
+      "detailed_description": "A pymatgen extension for analyzing point defects in materials, including formation energies and thermodynamic stability.",
+      "domains": [
+        "M3",
+        "M3-03"
+      ],
+      "subtask_category": [
+        "defect_analysis",
+        "thermodynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-analysis-defects",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "defects",
+        "semiconductors",
+        "pymatgen"
+      ],
+      "id": 102
+    },
+    {
+      "name": "pymatgen-db",
+      "one_line_profile": "Tools for creating Materials Project-style databases",
+      "detailed_description": "A library that facilitates the creation and management of MongoDB databases for materials data, following the schema and conventions of the Materials Project.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "database_management",
+        "data_storage"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-db",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "database",
+        "mongodb",
+        "materials-data"
+      ],
+      "id": 103
+    },
+    {
+      "name": "pymatgen-io-validation",
+      "one_line_profile": "Comprehensive input/output validator for VASP calculations",
+      "detailed_description": "A tool for validating VASP calculation inputs and outputs to ensure compatibility with Materials Project standards and data quality.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-io-validation",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "vasp",
+        "validation",
+        "quality-control"
+      ],
+      "id": 104
+    },
+    {
+      "name": "matgenie",
+      "one_line_profile": "Web interface to pymatgen",
+      "detailed_description": "A web-based user interface that exposes pymatgen functionalities, allowing users to perform materials analysis tasks through a browser.",
+      "domains": [
+        "M3",
+        "M3-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "interface"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialyzeai/matgenie",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "web-interface",
+        "pymatgen",
+        "visualization"
+      ],
+      "id": 105
+    },
+    {
+      "name": "pymatgen-analysis-diffusion",
+      "one_line_profile": "Tools for analyzing diffusion in materials",
+      "detailed_description": "An add-on to pymatgen providing algorithms and tools for analyzing diffusion pathways and mechanisms in materials, often used for battery materials research.",
+      "domains": [
+        "M3",
+        "M3-03"
+      ],
+      "subtask_category": [
+        "diffusion_analysis",
+        "battery_materials"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialyzeai/pymatgen-analysis-diffusion",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "diffusion",
+        "batteries",
+        "pymatgen"
+      ],
+      "id": 106
+    },
+    {
+      "name": "aiida-autocas",
+      "one_line_profile": "AiiDA plugin for automatic active space selection in multireference calculations",
+      "detailed_description": "A plugin for the AiiDA workflow manager that automates the selection of active spaces for multireference quantum chemical calculations, facilitating complex electronic structure simulations.",
+      "domains": [
+        "M3",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "electronic_structure_calculation"
+      ],
+      "application_level": "plugin",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/aiida-autocas",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "quantum-chemistry",
+        "active-space",
+        "workflow"
+      ],
+      "id": 107
+    },
+    {
+      "name": "aiida-dynamic-workflows",
+      "one_line_profile": "AiiDA plugin for defining dynamic workflows using Python functions",
+      "detailed_description": "An extension for AiiDA that allows users to define and execute dynamic workflows directly via Python functions, enhancing flexibility in computational materials science pipelines.",
+      "domains": [
+        "M3",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "pipeline_orchestration"
+      ],
+      "application_level": "plugin",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/aiida-dynamic-workflows",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "workflow",
+        "materials-informatics"
+      ],
+      "id": 108
+    },
+    {
+      "name": "aiida-pyscf",
+      "one_line_profile": "AiiDA plugin for PySCF quantum chemistry framework",
+      "detailed_description": "Integrates the PySCF (Python-based Simulations of Chemistry Framework) into the AiiDA ecosystem, enabling provenance tracking and workflow automation for quantum chemistry simulations.",
+      "domains": [
+        "M3",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "quantum_chemistry",
+        "simulation"
+      ],
+      "application_level": "plugin",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/aiida-pyscf",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "pyscf",
+        "quantum-chemistry",
+        "dft"
+      ],
+      "id": 109
+    },
+    {
+      "name": "mispr",
+      "one_line_profile": "Automation framework for materials science computations",
+      "detailed_description": "A software package designed to automate materials science computations, likely integrating with DFT codes and database infrastructures to streamline high-throughput screening.",
+      "domains": [
+        "M3",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "high_throughput_screening",
+        "workflow_automation"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/molmd/mispr",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "materials-science",
+        "automation",
+        "dft",
+        "workflow"
+      ],
+      "id": 110
+    },
+    {
+      "name": "abcv",
+      "one_line_profile": "Crystal structure viewer based on fresnel and pymatgen",
+      "detailed_description": "A Python-based visualization tool for crystal structures that leverages the fresnel ray-tracing library and pymatgen for structure manipulation, providing high-quality rendering for materials science.",
+      "domains": [
+        "M3",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "visualization",
+        "structure_rendering"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mturiansky/abcv",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "crystal-structure",
+        "pymatgen",
+        "rendering"
+      ],
+      "id": 111
+    },
+    {
+      "name": "aiida-gaussian",
+      "one_line_profile": "AiiDA plugin for Gaussian quantum chemistry software",
+      "detailed_description": "A plugin connecting the Gaussian quantum chemistry software package with the AiiDA workflow engine, enabling automated electronic structure calculations.",
+      "domains": [
+        "M3",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "quantum_chemistry",
+        "workflow_automation"
+      ],
+      "application_level": "plugin",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nanotech-empa/aiida-gaussian",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "gaussian",
+        "quantum-chemistry",
+        "dft"
+      ],
+      "id": 112
+    },
+    {
+      "name": "aiidalab-empa-surfaces",
+      "one_line_profile": "AiiDAlab application for on-surface chemistry",
+      "detailed_description": "An application designed for the AiiDAlab platform to simulate and analyze on-surface chemistry phenomena, developed at Empa.",
+      "domains": [
+        "M3",
+        "Surface Science"
+      ],
+      "subtask_category": [
+        "surface_chemistry_simulation",
+        "workflow_application"
+      ],
+      "application_level": "application",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/nanotech-empa/aiidalab-empa-surfaces",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aiidalab",
+        "surface-chemistry",
+        "materials-science"
+      ],
+      "id": 113
+    },
+    {
+      "name": "JAQPOT Quattro API",
+      "one_line_profile": "RESTful web service for toxicological predictions and nano-materials modeling",
+      "detailed_description": "A web service API for training machine learning models and generating toxicological predictions for chemical compounds and engineered nanomaterials (nanoinformatics).",
+      "domains": [
+        "M3",
+        "Toxicology",
+        "Nanoinformatics"
+      ],
+      "subtask_category": [
+        "toxicity_prediction",
+        "qsar_modeling"
+      ],
+      "application_level": "service",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/ntua-unit-of-control-and-informatics/jaqpot-api-archived",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "toxicology",
+        "nanomaterials",
+        "machine-learning",
+        "api"
+      ],
+      "id": 114
+    },
+    {
+      "name": "pymatgen-io-openmm",
+      "one_line_profile": "Pymatgen IO module for OpenMM simulations",
+      "detailed_description": "A Python module that facilitates the setup and execution of OpenMM molecular dynamics simulations using pymatgen data structures, bridging materials analysis and MD simulation.",
+      "domains": [
+        "M3",
+        "Molecular Dynamics"
+      ],
+      "subtask_category": [
+        "simulation_setup",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/orionarcher/pymatgen-io-openmm",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pymatgen",
+        "openmm",
+        "molecular-dynamics",
+        "io"
+      ],
+      "id": 115
+    },
+    {
+      "name": "widget-bandsplot",
+      "one_line_profile": "Jupyter widget for plotting electronic band structures and DOS",
+      "detailed_description": "A Jupyter interactive widget designed for visualizing electronic band structures and density of states (DOS) in computational materials science.",
+      "domains": [
+        "M3",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "visualization",
+        "electronic_structure_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/osscar-org/widget-bandsplot",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "jupyter-widget",
+        "band-structure",
+        "density-of-states",
+        "visualization"
+      ],
+      "id": 116
+    },
+    {
+      "name": "pyiron",
+      "one_line_profile": "Integrated development environment for computational materials science",
+      "detailed_description": "A workflow management framework and IDE for computational materials science that simplifies the setup, execution, and analysis of complex atomistic simulations.",
+      "domains": [
+        "M3",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "simulation_environment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/pyiron/pyiron",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "workflow",
+        "materials-science",
+        "ide",
+        "simulation"
+      ],
+      "id": 117
+    },
+    {
+      "name": "python-workflow-definition",
+      "one_line_profile": "Interoperability layer for scientific workflows (AiiDA, Jobflow, Pyiron)",
+      "detailed_description": "Defines a common Python interface for scientific workflows to enable interoperability between major materials science workflow engines like AiiDA, Jobflow, and Pyiron.",
+      "domains": [
+        "M3",
+        "Materials Informatics"
+      ],
+      "subtask_category": [
+        "workflow_interoperability",
+        "standardization"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/pythonworkflow/python-workflow-definition",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "workflow",
+        "interoperability",
+        "materials-science"
+      ],
+      "id": 118
+    },
+    {
+      "name": "mapp_api",
+      "one_line_profile": "Batch calculation tool for materials properties prediction",
+      "detailed_description": "A tool or API designed for batch processing and calculation of materials properties, likely supporting a specific prediction project or database.",
+      "domains": [
+        "M3",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "batch_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/qjhong/mapp_api",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "materials-prediction",
+        "batch-calculation",
+        "api"
+      ],
+      "id": 119
+    },
+    {
+      "name": "4d_plant_analysis",
+      "one_line_profile": "Space-time registration method for growing plant analysis",
+      "detailed_description": "A computational tool for the 4D (space-time) analysis of plant growth, using topological skeletons and geometric matching to register plant organs across time steps.",
+      "domains": [
+        "Biology",
+        "Plant Science"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "phenotyping",
+        "registration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/romi/4d_plant_analysis",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "plant-phenotyping",
+        "4d-analysis",
+        "registration",
+        "point-cloud"
+      ],
+      "id": 120
+    },
+    {
+      "name": "atomate2_ffforge",
+      "one_line_profile": "Active-learning workflow for building machine-learning interatomic potentials",
+      "detailed_description": "A workflow built on atomate2 and jobflow that automates the generation of machine-learning interatomic potentials (MLIPs) via active learning, targeting materials like batteries and catalysts.",
+      "domains": [
+        "M3",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "potential_generation",
+        "active_learning",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rsilvabuarque/atomate2_ffforge",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "atomate2",
+        "machine-learning-potentials",
+        "active-learning",
+        "jobflow"
+      ],
+      "id": 121
+    },
+    {
+      "name": "atomium",
+      "one_line_profile": "Python library for parsing, manipulating, and saving macromolecular structures (PDB, CIF, MMTF)",
+      "detailed_description": "A Python library designed for parsing and generating standard macromolecular file formats such as .pdb, .cif, and .mmtf. It provides an object model for manipulating molecular structures.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "parsing",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/samirelanduk/atomium",
+      "help_website": [
+        "https://atomium.samireland.com/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "pdb",
+        "cif",
+        "mmtf",
+        "macromolecular",
+        "parsing"
+      ],
+      "id": 122
+    },
+    {
+      "name": "pysktb",
+      "one_line_profile": "Scientific Python package for solving Slater Koster tight-binding topological hamiltonians",
+      "detailed_description": "A Python package for calculating electronic structure properties using the Slater-Koster tight-binding method, specifically focused on topological hamiltonians.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/santoshkumarradha/pysktb",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "tight-binding",
+        "hamiltonian",
+        "electronic-structure",
+        "physics"
+      ],
+      "id": 123
+    },
+    {
+      "name": "aiida-siesta",
+      "one_line_profile": "AiiDA plugin for the SIESTA DFT code",
+      "detailed_description": "A plugin for the AiiDA workflow management system that interfaces with the SIESTA density functional theory code, enabling automated high-throughput calculations.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/siesta-project/aiida_siesta_plugin",
+      "help_website": [
+        "https://aiida-siesta-plugin.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "aiida",
+        "siesta",
+        "dft",
+        "workflow",
+        "materials"
+      ],
+      "id": 124
+    },
+    {
+      "name": "materials_data_api_scripts",
+      "one_line_profile": "ETL scripts for aggregating data from ICSD, Materials Project, and OQMD",
+      "detailed_description": "A collection of scripts designed to query, download, and normalize materials data from major databases (ICSD, Materials Project, OQMD) for local analysis.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "etl",
+        "data_acquisition"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/simonverret/materials_data_api_scripts",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "materials-project",
+        "icsd",
+        "oqmd",
+        "etl",
+        "database"
+      ],
+      "id": 125
+    },
+    {
+      "name": "aiida-mlip",
+      "one_line_profile": "AiiDA plugin for Machine Learning Interatomic Potentials (MLIP)",
+      "detailed_description": "A plugin for the AiiDA framework to manage workflows involving Machine Learning Interatomic Potentials (MLIP), facilitating the training and usage of ML potentials in materials simulations.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "simulation",
+        "machine_learning"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stfc/aiida-mlip",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "aiida",
+        "mlip",
+        "interatomic-potentials",
+        "machine-learning"
+      ],
+      "id": 126
+    },
+    {
+      "name": "crystcif-parse",
+      "one_line_profile": "JavaScript parser for Crystallography CIF files",
+      "detailed_description": "A lightweight JavaScript library for parsing Crystallographic Information Files (CIF), enabling web-based applications to read and process crystal structure data.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "parsing",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/stur86/crystcif-parse",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cif",
+        "crystallography",
+        "parser",
+        "javascript"
+      ],
+      "id": 127
+    },
+    {
+      "name": "blase",
+      "one_line_profile": "Blender visualization for ASE atoms and molecules",
+      "detailed_description": "A Python module that interfaces between the Atomic Simulation Environment (ASE) and Blender to create high-quality 3D renderings and visualizations of atomic structures and molecules.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/superstar54/blase",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "blender",
+        "ase",
+        "visualization",
+        "molecular-rendering"
+      ],
+      "id": 128
+    },
+    {
+      "name": "ml_atomate",
+      "one_line_profile": "Machine learning-assisted Atomate workflows for materials screening",
+      "detailed_description": "An extension of the Atomate workflow library that integrates machine learning techniques to assist in autonomous computational materials screening and property prediction.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "screening",
+        "machine_learning"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/takahashi-akira-36m/ml_atomate",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "atomate",
+        "materials-screening",
+        "machine-learning",
+        "workflow"
+      ],
+      "id": 129
+    },
+    {
+      "name": "cifplayer",
+      "one_line_profile": "HTML5 visualization for chemical structures (CIF, POSCAR, OPTIMADE)",
+      "detailed_description": "A minimalistic and fast HTML5-based visualization tool for rendering chemical structures from various formats including CIF, POSCAR, and OPTIMADE JSON.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/tilde-lab/cifplayer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "cif",
+        "poscar",
+        "optimade",
+        "web-component"
+      ],
+      "id": 130
+    },
+    {
+      "name": "optimade-client",
+      "one_line_profile": "TypeScript client for aggregating OPTIMADE providers",
+      "detailed_description": "An isomorphic TypeScript/JavaScript client library designed to query and aggregate data from multiple official OPTIMADE (Open Databases Integration for Materials Design) providers.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "database_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/tilde-lab/optimade-client",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "optimade",
+        "client",
+        "materials-database",
+        "api"
+      ],
+      "id": 131
+    },
+    {
+      "name": "optimade.science",
+      "one_line_profile": "Browser-based GUI for searching OPTIMADE databases",
+      "detailed_description": "A web-based graphical user interface acting as a 'sky-scanner' for materials science databases, allowing users to search across multiple OPTIMADE-compliant repositories.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "search_interface"
+      ],
+      "application_level": "platform",
+      "primary_language": "Svelte",
+      "repo_url": "https://github.com/tilde-lab/optimade.science",
+      "help_website": [
+        "https://optimade.science"
+      ],
+      "license": "MIT",
+      "tags": [
+        "optimade",
+        "gui",
+        "search",
+        "materials-science"
+      ],
+      "id": 132
+    },
+    {
+      "name": "quantum_esperanto",
+      "one_line_profile": "Fast parser for VASP XML logs",
+      "detailed_description": "A high-performance parser written in Cython for processing XML output logs generated by the Vienna Ab initio Simulation Package (VASP).",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "parsing",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Cython",
+      "repo_url": "https://github.com/tilde-lab/quantum_esperanto",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vasp",
+        "parser",
+        "xml",
+        "dft"
+      ],
+      "id": 133
+    },
+    {
+      "name": "tilde",
+      "one_line_profile": "Materials informatics framework for ab initio data repositories",
+      "detailed_description": "A framework designed for managing and organizing ab initio materials science data, facilitating the creation and maintenance of data repositories.",
+      "domains": [
+        "M3",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "data_management",
+        "framework"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tilde-lab/tilde",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "materials-informatics",
+        "database",
+        "ab-initio",
+        "framework"
+      ],
+      "id": 134
+    },
+    {
+      "name": "SAMOSA",
+      "one_line_profile": "Protocol for generating activated crystal structures by removing solvents from experimental data",
+      "detailed_description": "Structural Activation via Metal Oxidation State Analysis (SAMOSA) is a tool designed to generate activated crystal structures from experimental crystallographic information, specifically focusing on solvent removal protocols.",
+      "domains": [
+        "Materials",
+        "Crystallography"
+      ],
+      "subtask_category": [
+        "structure_generation",
+        "data_cleaning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uowoolab/SAMOSA",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "crystallography",
+        "mof",
+        "structure-generation"
+      ],
+      "id": 135
+    },
+    {
+      "name": "JARVIS-Tools",
+      "one_line_profile": "Open-source software package for data-driven atomistic materials design",
+      "detailed_description": "JARVIS-Tools is a comprehensive software package developed by NIST for data-driven atomistic materials design. It provides tools for high-throughput calculations, materials informatics, and database management.",
+      "domains": [
+        "Materials",
+        "M3-01"
+      ],
+      "subtask_category": [
+        "materials_design",
+        "database_interface",
+        "high_throughput_calculation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/usnistgov/jarvis",
+      "help_website": [
+        "https://jarvis.nist.gov/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "materials-informatics",
+        "atomistic-simulation",
+        "dft"
+      ],
+      "id": 136
+    },
+    {
+      "name": "MAST",
+      "one_line_profile": "Materials Simulation Toolkit for automating electronic structure calculations",
+      "detailed_description": "MAST (MAterials Simulation Toolkit) is a workflow automation tool designed to work with pymatgen for managing and executing materials simulation tasks, particularly electronic structure calculations.",
+      "domains": [
+        "Materials",
+        "M3"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "simulation_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uw-cmg/MAST",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pymatgen",
+        "workflow",
+        "simulation"
+      ],
+      "id": 137
+    },
+    {
+      "name": "edf-converter",
+      "one_line_profile": "Converter for EyeLink 1000 EDF files to MATLAB structures",
+      "detailed_description": "A C++ utility to convert EyeLink 1000 EDF files (eye-tracking data) into MATLAB structures, facilitating data analysis in neuroscience and psychology research.",
+      "domains": [
+        "Neuroscience",
+        "Data_Processing"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "etl"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/uzh/edf-converter",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "eyelink",
+        "edf",
+        "matlab-converter"
+      ],
+      "id": 138
+    },
+    {
+      "name": "aiida-yambo",
+      "one_line_profile": "AiiDA plugin for the Yambo many-body perturbation theory code",
+      "detailed_description": "A plugin for the AiiDA workflow manager that interfaces with the Yambo code, enabling automated many-body perturbation theory calculations for materials science.",
+      "domains": [
+        "Materials",
+        "M3"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "calculation_interface"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yambo-code/aiida-yambo",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "aiida",
+        "yambo",
+        "dft",
+        "workflow"
+      ],
+      "id": 139
+    },
+    {
+      "name": "XenonPy",
+      "one_line_profile": "Python library for materials informatics and transfer learning",
+      "detailed_description": "XenonPy is a Python library designed for materials informatics, offering capabilities for descriptor generation, transfer learning, and machine learning model building specifically for materials science applications.",
+      "domains": [
+        "Materials",
+        "M3"
+      ],
+      "subtask_category": [
+        "materials_informatics",
+        "descriptor_generation",
+        "property_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/yoshida-lab/XenonPy",
+      "help_website": [
+        "https://xenonpy.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "materials-informatics",
+        "machine-learning",
+        "transfer-learning"
+      ],
+      "id": 140
+    },
+    {
+      "name": "ternary-diagram",
+      "one_line_profile": "Library for plotting ternary phase diagrams for materials science",
+      "detailed_description": "A Python package specifically designed to draw ternary diagrams (phase diagrams) easily, providing a lightweight alternative to larger frameworks like pymatgen for this specific visualization task.",
+      "domains": [
+        "Materials",
+        "M3"
+      ],
+      "subtask_category": [
+        "visualization",
+        "phase_diagram_plotting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yu9824/ternary-diagram",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ternary-plot",
+        "phase-diagram",
+        "visualization"
+      ],
+      "id": 141
+    },
+    {
+      "name": "aiida-castep",
+      "one_line_profile": "AiiDA plugin for automating CASTEP material calculations",
+      "detailed_description": "A plugin for the AiiDA workflow manager that provides an interface to the CASTEP DFT code, enabling automated and reproducible materials calculations and provenance tracking.",
+      "domains": [
+        "Materials",
+        "M3"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "calculation_interface"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhubonan/aiida-castep",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aiida",
+        "castep",
+        "dft",
+        "workflow"
+      ],
+      "id": 142
+    }
+  ]
+}

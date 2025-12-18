@@ -1,0 +1,4878 @@
+{
+  "generated_at": "2025-12-16T06:01:24.501283+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "H1",
+      "leaf_cluster_name": "医学影像-分割/检测/诊断生态",
+      "domain": "Med Imaging",
+      "typical_objects": "DICOM/images",
+      "task_chain": "预处理→训练/推理→评测→部署",
+      "tool_form": "框架 + 标注/数据 + 部署"
+    },
+    "unit": {
+      "unit_id": "H1-01",
+      "unit_name": "DICOM/预处理/标注与格式",
+      "target_scale": "200–450",
+      "coverage_tools": "IO、preprocess、labeling"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] MONAI",
+        "[GH] Cornerstone.js",
+        "[GH] TorchIO",
+        "[GH] dcm2niix",
+        "[GH] OHIF Viewer",
+        "[GH] 3D Slicer",
+        "[GH] ITK-SNAP",
+        "[GH] Nibabel",
+        "[GH] SimpleITK",
+        "[GH] Pydicom",
+        "[GH] dicom library",
+        "[GH] medical image annotation",
+        "[GH] nifti io",
+        "[GH] medical image preprocessing",
+        "[GH] dicom viewer",
+        "[GH] dicom anonymizer",
+        "[GH] medical image augmentation",
+        "[GH] dicom converter",
+        "[GH] radiology labeling",
+        "[GH] simpleitk",
+        "[GH] pydicom",
+        "[GH] dicom segmentation tool",
+        "[GH] medical imaging data loader",
+        "[WEB] medical image annotation tools github",
+        "[WEB] dicom preprocessing python library github",
+        "[WEB] open source dicom viewer github",
+        "[WEB] medical imaging data augmentation github",
+        "[WEB] dicom to nifti converter github"
+      ],
+      "total_candidates": 1063,
+      "tool_candidates": 491,
+      "final_tools": 191
+    }
+  },
+  "tools": [
+    {
+      "name": "DINOv2-3D-Med",
+      "one_line_profile": "3D implementation of DINOv2 for self-supervised pretraining on medical images",
+      "detailed_description": "A PyTorch implementation of DINOv2 adapted for 3D volumetric medical imaging, supporting self-supervised pretraining pipelines using Lightly and MONAI frameworks.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "self_supervised_learning",
+        "pretraining"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AIM-Harvard/DINOv2-3D-Med",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-imaging",
+        "3d-vision",
+        "self-supervised-learning",
+        "monai"
+      ],
+      "id": 1
+    },
+    {
+      "name": "pyradiomics",
+      "one_line_profile": "Comprehensive library for extraction of Radiomics features from medical images",
+      "detailed_description": "An open-source Python package for the extraction of Radiomics features from 2D and 3D medical images and binary masks, widely used for quantitative image analysis.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "feature_extraction",
+        "quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AIM-Harvard/pyradiomics",
+      "help_website": [
+        "https://pyradiomics.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "radiomics",
+        "feature-extraction",
+        "medical-imaging",
+        "bioinformatics"
+      ],
+      "id": 2
+    },
+    {
+      "name": "AlizaMS",
+      "one_line_profile": "High-performance DICOM viewer and medical image analyzer",
+      "detailed_description": "A DICOM viewer and medical image analysis tool written in C++, supporting 2D/3D visualization and basic measurement tasks.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_viewing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AlizaMedicalImaging/AlizaMS",
+      "help_website": [
+        "http://www.aliza-dicom-viewer.com/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "dicom-viewer",
+        "medical-visualization",
+        "cpp"
+      ],
+      "id": 3
+    },
+    {
+      "name": "ecg-dicom-web-viewer",
+      "one_line_profile": "Web-based viewer for ECG files in DICOM format",
+      "detailed_description": "A TypeScript library and viewer for rendering Electrocardiogram (ECG) data stored in DICOM format directly in web browsers.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "signal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/ArturRod/ecg-dicom-web-viewer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ecg",
+        "dicom",
+        "web-viewer",
+        "visualization"
+      ],
+      "id": 4
+    },
+    {
+      "name": "pydicer",
+      "one_line_profile": "Python tool for converting DICOM data to analysis-ready formats",
+      "detailed_description": "A tool to streamline the conversion of DICOM data into formats suitable for research (like NIfTI) and analysis, handling RTStructs and other radiotherapy specific data.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "data_preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AustralianCancerDataNetwork/pydicer",
+      "help_website": [
+        "https://pydicer.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "dicom",
+        "radiotherapy",
+        "conversion",
+        "nifti"
+      ],
+      "id": 5
+    },
+    {
+      "name": "brkraw",
+      "one_line_profile": "Tool to access and convert raw Bruker Biospin MRI data",
+      "detailed_description": "A comprehensive Python tool and library to access, read, and convert raw data from Bruker Biospin MRI scanners, facilitating integration into standard neuroimaging pipelines.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_io",
+        "format_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BrkRaw/brkraw",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "mri",
+        "bruker",
+        "data-conversion",
+        "neuroimaging"
+      ],
+      "id": 6
+    },
+    {
+      "name": "OHIF-AI",
+      "one_line_profile": "OHIF DICOM Viewer integrated with server-side AI segmentation models",
+      "detailed_description": "An extension of the OHIF DICOM Web viewer that integrates server-side AI models (like SAM2, medSAM) for advanced interactive segmentation and annotation.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "annotation",
+        "interactive_segmentation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CCI-Bonn/OHIF-AI",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ohif",
+        "dicom-viewer",
+        "ai-assisted-annotation",
+        "segmentation"
+      ],
+      "id": 7
+    },
+    {
+      "name": "SlicerAutomatedDentalTools",
+      "one_line_profile": "3D Slicer extension for automated dental image analysis",
+      "detailed_description": "A 3D Slicer extension providing automated tools for dental CBCT analysis, including segmentation and landmark detection.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "image_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DCBIA-OrthoLab/SlicerAutomatedDentalTools",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "3d-slicer",
+        "dental",
+        "segmentation",
+        "cbct"
+      ],
+      "id": 8
+    },
+    {
+      "name": "picai_prep",
+      "one_line_profile": "Preprocessing library for 3D prostate MRI data",
+      "detailed_description": "A Python library designed for preprocessing 3D medical images (specifically MRI) for prostate cancer detection tasks, handling resampling and standardization.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "normalization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DIAGNijmegen/picai_prep",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mri",
+        "prostate-cancer",
+        "preprocessing",
+        "medical-imaging"
+      ],
+      "id": 9
+    },
+    {
+      "name": "rse-grand-challenge-metrics",
+      "one_line_profile": "Utilities for creating evaluation metrics for Grand Challenge competitions",
+      "detailed_description": "A library (evalutils) to assist in creating evaluation containers and metrics for medical imaging challenges hosted on grand-challenge.org.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "metrics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DIAGNijmegen/rse-grand-challenge-metrics",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "evaluation",
+        "metrics",
+        "grand-challenge",
+        "medical-imaging"
+      ],
+      "id": 10
+    },
+    {
+      "name": "DICOMweb-js",
+      "one_line_profile": "JavaScript client for DICOM Web Services",
+      "detailed_description": "A JavaScript client library for consuming DICOM Web Services (QIDO-RS, WADO-RS, STOW-RS), enabling web-based medical imaging applications.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_io",
+        "connectivity"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/DICOMcloud/DICOMweb-js",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicomweb",
+        "javascript",
+        "medical-imaging",
+        "web-client"
+      ],
+      "id": 11
+    },
+    {
+      "name": "bidscoin",
+      "one_line_profile": "Framework for converting neuroimaging data to BIDS standard",
+      "detailed_description": "A user-friendly tool to convert source-level neuroimaging data (DICOM/PAR) into the Brain Imaging Data Structure (BIDS) standard, featuring a GUI and heuristics.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "data_standardization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Donders-Institute/bidscoin",
+      "help_website": [
+        "https://bidscoin.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "bids",
+        "neuroimaging",
+        "dicom-conversion",
+        "data-management"
+      ],
+      "id": 12
+    },
+    {
+      "name": "pypx",
+      "one_line_profile": "Python wrapper for PACS interaction",
+      "detailed_description": "A Python wrapper around DCMTK and PyDicom to facilitate interaction with PACS (Picture Archiving and Communication Systems) for querying and retrieving medical images.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_io",
+        "data_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FNNDSC/pypx",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pacs",
+        "dicom",
+        "medical-imaging",
+        "data-retrieval"
+      ],
+      "id": 13
+    },
+    {
+      "name": "TotalSegmentator-AIDE",
+      "one_line_profile": "TotalSegmentator packaged as a MONAI Application Package",
+      "detailed_description": "A packaging of the TotalSegmentator tool into the MONAI Application Package (MAP) format, enabling easy deployment and execution of whole-body segmentation tasks.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "workflow_automation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GSTT-CSC/TotalSegmentator-AIDE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "segmentation",
+        "monai",
+        "medical-imaging",
+        "deployment"
+      ],
+      "id": 14
+    },
+    {
+      "name": "Asclepios-DICOM-Viewer",
+      "one_line_profile": "Open-source DICOM viewer based on Qt and VTK",
+      "detailed_description": "A desktop DICOM viewer application developed in C++ using Qt and VTK, providing visualization capabilities for medical imaging data.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/GavriloviciEduard/Asclepios-DICOM-Viewer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom-viewer",
+        "vtk",
+        "qt",
+        "visualization"
+      ],
+      "id": 15
+    },
+    {
+      "name": "dicomweb-wsi-viewer",
+      "one_line_profile": "Web viewer for Whole Slide Imaging (WSI) via DICOMweb",
+      "detailed_description": "A proof-of-concept web viewer for Whole Slide Imaging (digital pathology) that consumes data via the Google Cloud Healthcare DICOM API.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "pathology"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/GoogleCloudPlatform/dicomweb-wsi-viewer",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "wsi",
+        "digital-pathology",
+        "dicomweb",
+        "visualization"
+      ],
+      "id": 16
+    },
+    {
+      "name": "go-dicom-parser",
+      "one_line_profile": "Efficient DICOM parsing library in Go",
+      "detailed_description": "A lightweight and efficient library written in Go for parsing and processing DICOM files, suitable for high-performance data ingestion pipelines.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_io",
+        "parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/GoogleCloudPlatform/go-dicom-parser",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dicom",
+        "go",
+        "parsing",
+        "high-performance"
+      ],
+      "id": 17
+    },
+    {
+      "name": "wsi-to-dicom-converter",
+      "one_line_profile": "Tool for converting Whole Slide Images to DICOM format",
+      "detailed_description": "A C++ tool and library for converting various Whole Slide Image (WSI) formats into the standard DICOM format, facilitating interoperability in digital pathology.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "data_standardization"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/GoogleCloudPlatform/wsi-to-dicom-converter",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "wsi",
+        "dicom",
+        "digital-pathology",
+        "conversion"
+      ],
+      "id": 18
+    },
+    {
+      "name": "iSEG",
+      "one_line_profile": "Fully integrated medical image segmentation toolbox",
+      "detailed_description": "The Medical Image Segmentation Tool Set (iSEG) is a fully integrated segmentation toolbox (including pre- and postprocessing) for the efficient, fast, and flexible generation of anatomical models from various types of imaging data.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "preprocessing",
+        "postprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ITISFoundation/osparc-iseg",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "medical-imaging",
+        "segmentation",
+        "anatomical-models"
+      ],
+      "id": 19
+    },
+    {
+      "name": "ImagePy",
+      "one_line_profile": "Image processing framework based on plugin architecture",
+      "detailed_description": "Image process framework based on plugin architecture like ImageJ. It is designed to be easy to glue with scipy.ndimage, scikit-image, opencv, simpleitk, mayavi, and other numpy-based libraries.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "analysis",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Image-Py/imagepy",
+      "help_website": [],
+      "license": "BSD-4-Clause",
+      "tags": [
+        "image-processing",
+        "framework",
+        "plugins"
+      ],
+      "id": 20
+    },
+    {
+      "name": "dicom-microscopy-viewer",
+      "one_line_profile": "Web-based DICOM slide microscopy viewer library",
+      "detailed_description": "A JavaScript library for viewing DICOM Slide Microscopy objects in web browsers, supporting visualization of whole slide images.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "microscopy"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/ImagingDataCommons/dicom-microscopy-viewer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "microscopy",
+        "viewer"
+      ],
+      "id": 21
+    },
+    {
+      "name": "dicomweb-client",
+      "one_line_profile": "Python client for DICOMweb RESTful services",
+      "detailed_description": "A Python client library for interacting with DICOMweb RESTful services, enabling search, retrieval, and storage of DICOM objects.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_access",
+        "io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ImagingDataCommons/dicomweb-client",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicomweb",
+        "client",
+        "medical-imaging"
+      ],
+      "id": 22
+    },
+    {
+      "name": "highdicom",
+      "one_line_profile": "High-level DICOM abstractions for Python",
+      "detailed_description": "A Python library providing high-level abstractions for creating and handling DICOM objects, simplifying the creation of complex DICOM IODs like Structured Reports and Segmentation.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_handling",
+        "io",
+        "structured_reporting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ImagingDataCommons/highdicom",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "python",
+        "abstraction"
+      ],
+      "id": 23
+    },
+    {
+      "name": "libdicom",
+      "one_line_profile": "C library for reading DICOM files",
+      "detailed_description": "A C library designed for reading DICOM files, providing low-level access to DICOM data structures.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/ImagingDataCommons/libdicom",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "c-library",
+        "parsing"
+      ],
+      "id": 24
+    },
+    {
+      "name": "slim",
+      "one_line_profile": "Web-based DICOM slide microscopy viewer and annotation tool",
+      "detailed_description": "An interoperable web-based viewer and annotation tool for DICOM slide microscopy, facilitating the visualization and labeling of whole slide images.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "annotation",
+        "microscopy"
+      ],
+      "application_level": "solver",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/ImagingDataCommons/slim",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dicom",
+        "microscopy",
+        "annotation"
+      ],
+      "id": 25
+    },
+    {
+      "name": "jsdicom",
+      "one_line_profile": "DICOM library and viewer in JavaScript",
+      "detailed_description": "A JavaScript library and viewer for handling and visualizing DICOM images in web environments.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "io"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/Infogosoft/jsdicom",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dicom",
+        "javascript",
+        "viewer"
+      ],
+      "id": 26
+    },
+    {
+      "name": "jsdicom-lib",
+      "one_line_profile": "DICOM library in JavaScript",
+      "detailed_description": "A JavaScript library for parsing and manipulating DICOM data.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/Infogosoft/jsdicom-lib",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dicom",
+        "javascript",
+        "parsing"
+      ],
+      "id": 27
+    },
+    {
+      "name": "simpleITK-Snap",
+      "one_line_profile": "Qt-based 3D data visualization tool",
+      "detailed_description": "A 3D data visualization tool built with Qt and SimpleITK, designed for viewing medical imaging data.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JamesQFreeman/simpleITK-Snap",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "simpleitk",
+        "3d"
+      ],
+      "id": 28
+    },
+    {
+      "name": "MedEye3d.jl",
+      "one_line_profile": "Julia library for medical image visualization and annotation",
+      "detailed_description": "A Julia library for visualization and annotation of medical images, specialized for rapid development of segmentation for 3D images like CT or PET/CT scans.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "annotation",
+        "segmentation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/JuliaHealth/MedEye3d.jl",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "julia",
+        "medical-imaging",
+        "visualization"
+      ],
+      "id": 29
+    },
+    {
+      "name": "VolView",
+      "one_line_profile": "Web-based 3D radiological viewer",
+      "detailed_description": "A 3D radiological viewer that runs in the browser, supporting DICOM, volume rendering, and annotations, ensuring data privacy by keeping data on the client side.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "rendering",
+        "annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/Kitware/VolView",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "visualization",
+        "dicom",
+        "web-based"
+      ],
+      "id": 30
+    },
+    {
+      "name": "ITKPOCUS",
+      "one_line_profile": "Library for point-of-care ultrasound video processing",
+      "detailed_description": "An open source library for streaming and preprocessing point-of-care ultrasound (POCUS) video data.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "streaming",
+        "ultrasound"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/KitwareMedical/ITKPOCUS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "ultrasound",
+        "preprocessing",
+        "itk"
+      ],
+      "id": 31
+    },
+    {
+      "name": "SlicerNNUnet",
+      "one_line_profile": "3D Slicer extension for nnUNet integration",
+      "detailed_description": "A 3D Slicer extension that integrates nnUNet to streamline the usage of nnUNet-based AI segmentation models within the Slicer environment.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "integration"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KitwareMedical/SlicerNNUnet",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "3d-slicer",
+        "nnunet",
+        "segmentation"
+      ],
+      "id": 32
+    },
+    {
+      "name": "dicom-anonymizer",
+      "one_line_profile": "Tool to anonymize DICOM files",
+      "detailed_description": "A Python tool designed to anonymize DICOM files according to the DICOM standard, ensuring patient privacy.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "anonymization",
+        "preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KitwareMedical/dicom-anonymizer",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "dicom",
+        "anonymization",
+        "privacy"
+      ],
+      "id": 33
+    },
+    {
+      "name": "dicom-exporter",
+      "one_line_profile": "DICOM file converter in Python",
+      "detailed_description": "A Python utility for converting DICOM files, facilitating data interoperability.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "conversion",
+        "io"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KitwareMedical/dicom-exporter",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "dicom",
+        "conversion",
+        "python"
+      ],
+      "id": 34
+    },
+    {
+      "name": "MEDIAR",
+      "one_line_profile": "Multi-Modality Microscopy Segmentation Framework",
+      "detailed_description": "A general medical image segmentation framework that harmonizes data-centric and model-centric approaches, winner of the NeurIPS 2022 CellSeg Challenge.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "microscopy"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Lee-Gihun/MEDIAR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "segmentation",
+        "microscopy",
+        "deep-learning"
+      ],
+      "id": 35
+    },
+    {
+      "name": "copper3d_visualisation",
+      "one_line_profile": "3D visualisation package based on Three.js",
+      "detailed_description": "A 3D visualisation package providing DICOM loading, NRRD segmentation tools, and GLTF export capabilities, built on Three.js.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "io",
+        "rendering"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/LinkunGao/copper3d_visualisation",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "visualization",
+        "dicom",
+        "threejs"
+      ],
+      "id": 36
+    },
+    {
+      "name": "dicom-fhir-converter",
+      "one_line_profile": "Converts DICOM Resources to FHIR Resources",
+      "detailed_description": "A tool for converting DICOM metadata and resources into FHIR (Fast Healthcare Interoperability Resources) format to support interoperability.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "conversion",
+        "interoperability"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LinuxForHealth/dicom-fhir-converter",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dicom",
+        "fhir",
+        "conversion"
+      ],
+      "id": 37
+    },
+    {
+      "name": "DicomVis",
+      "one_line_profile": "Simple DICOM series viewer",
+      "detailed_description": "A simple 4-pane viewer for visualising series of DICOM images, written in Python using VTK.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MKozuch/DicomVis",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "dicom",
+        "viewer",
+        "vtk"
+      ],
+      "id": 38
+    },
+    {
+      "name": "fastMONAI",
+      "one_line_profile": "Wrapper library simplifying MONAI for medical imaging",
+      "detailed_description": "A library that simplifies deep learning for medical imaging by wrapping MONAI functionalities, making it easier to develop and train models.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "deep_learning",
+        "training",
+        "segmentation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/MMIV-ML/fastMONAI",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "monai",
+        "deep-learning",
+        "medical-imaging"
+      ],
+      "id": 39
+    },
+    {
+      "name": "MedLabelMe",
+      "one_line_profile": "Segmentation annotation tool for 3D medical images",
+      "detailed_description": "A lightweight tool designed for annotating 3D medical images for segmentation tasks, facilitating the creation of ground truth datasets.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "annotation",
+        "segmentation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MeteorsHub/MedLabelMe",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "annotation",
+        "medical-imaging",
+        "segmentation",
+        "3d"
+      ],
+      "id": 40
+    },
+    {
+      "name": "Pytorch-Medical-Segmentation",
+      "one_line_profile": "Collection of PyTorch implementations for medical image segmentation models",
+      "detailed_description": "A repository providing implementations of various popular deep learning architectures (U-Net, V-Net, etc.) specifically adapted for 2D and 3D medical image segmentation tasks.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MontaEllis/Pytorch-Medical-Segmentation",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "medical-segmentation",
+        "deep-learning",
+        "unet"
+      ],
+      "id": 41
+    },
+    {
+      "name": "NBIA",
+      "one_line_profile": "National Biomedical Imaging Archive software for medical image storage and retrieval",
+      "detailed_description": "A software application enabling users to securely store, search, and download diagnostic medical images, integrating in vivo cancer images with clinical and genomic data.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_management",
+        "archiving"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/NCIP/national-biomedical-image-archive",
+      "help_website": [
+        "https://wiki.nci.nih.gov/display/NBIA/National+Biomedical+Imaging+Archive"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "dicom",
+        "archive",
+        "medical-imaging",
+        "cancer-research"
+      ],
+      "id": 42
+    },
+    {
+      "name": "MONAI Cloud API",
+      "one_line_profile": "Cloud API interfaces for MONAI imaging and learning tools",
+      "detailed_description": "Provides API developments to access MONAI's intelligent imaging and learning tools over the cloud, fostering innovation in AI-driven medical imaging services.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "inference",
+        "workflow_automation"
+      ],
+      "application_level": "service",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/NVIDIA/monai-cloud-api",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "monai",
+        "cloud-api",
+        "medical-imaging"
+      ],
+      "id": 43
+    },
+    {
+      "name": "OHIF Viewer",
+      "one_line_profile": "Extensible web-based medical image viewer and oncology lesion tracker",
+      "detailed_description": "A zero-footprint DICOM viewer and oncology-specific Lesion Tracker. It serves as a platform for viewing, annotating, and analyzing medical images in research and clinical contexts.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "annotation",
+        "diagnosis"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/OHIF/Viewers",
+      "help_website": [
+        "https://docs.ohif.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "viewer",
+        "medical-imaging",
+        "react"
+      ],
+      "id": 44
+    },
+    {
+      "name": "dicom-dimse",
+      "one_line_profile": "JavaScript library for DICOM DIMSE networking",
+      "detailed_description": "A library implementing the DICOM DIMSE (DICOM Message Service Element) protocol, enabling medical imaging applications to communicate with PACS and other DICOM nodes.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "networking"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/OHIF/dicom-dimse",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "networking",
+        "dimse",
+        "pacs"
+      ],
+      "id": 45
+    },
+    {
+      "name": "MedicalSeg",
+      "one_line_profile": "End-to-end 3D medical image segmentation toolkit based on PaddlePaddle",
+      "detailed_description": "An easy-to-use toolkit supporting the whole 3D medical image segmentation process, including data preprocessing acceleration, high-precision models, and 3D visualization.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "preprocessing",
+        "visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PaddleCV-SIG/MedicalSeg",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "paddlepaddle",
+        "medical-segmentation",
+        "3d-imaging"
+      ],
+      "id": 46
+    },
+    {
+      "name": "dcmjs-dimse",
+      "one_line_profile": "DICOM DIMSE implementation for Node.js using dcmjs",
+      "detailed_description": "Provides DICOM networking capabilities for Node.js applications, allowing integration with medical imaging infrastructure via the DIMSE protocol.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "networking"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/PantelisGeorgiadis/dcmjs-dimse",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "nodejs",
+        "networking"
+      ],
+      "id": 47
+    },
+    {
+      "name": "dcmjs-imaging",
+      "one_line_profile": "DICOM image and overlay rendering pipeline for Node.js and browser",
+      "detailed_description": "A rendering pipeline using dcmjs to visualize DICOM images and overlays, suitable for web-based medical imaging applications.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "rendering"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/PantelisGeorgiadis/dcmjs-imaging",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "rendering",
+        "visualization"
+      ],
+      "id": 48
+    },
+    {
+      "name": "MONAI Generative Models",
+      "one_line_profile": "Generative models toolkit for medical imaging",
+      "detailed_description": "A MONAI extension that facilitates training, evaluating, and deploying generative models (GANs, Diffusion Models) specifically for medical imaging applications like synthesis and augmentation.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "synthesis",
+        "augmentation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Project-MONAI/GenerativeModels",
+      "help_website": [
+        "https://monai.io/generative-models"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "generative-ai",
+        "medical-imaging",
+        "synthesis"
+      ],
+      "id": 49
+    },
+    {
+      "name": "MONAI",
+      "one_line_profile": "AI Toolkit for Healthcare Imaging",
+      "detailed_description": "A PyTorch-based, open-source framework for deep learning in healthcare imaging, providing domain-optimized foundational capabilities for developing medical AI workflows.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "classification",
+        "registration",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/MONAI",
+      "help_website": [
+        "https://monai.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "deep-learning",
+        "medical-imaging",
+        "pytorch",
+        "healthcare-ai"
+      ],
+      "id": 50
+    },
+    {
+      "name": "MONAI Label",
+      "one_line_profile": "Intelligent open source image labeling and learning tool",
+      "detailed_description": "A server-client system that facilitates AI-assisted annotation of medical imaging data, integrating active learning to accelerate the creation of labeled datasets.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "annotation",
+        "active_learning"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/MONAILabel",
+      "help_website": [
+        "https://monai.io/label.html"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "annotation",
+        "active-learning",
+        "medical-imaging"
+      ],
+      "id": 51
+    },
+    {
+      "name": "SlicerMONAIViz",
+      "one_line_profile": "MONAI visualization extension for 3D Slicer",
+      "detailed_description": "A 3D Slicer extension that integrates MONAI capabilities, allowing users to run MONAI models and visualize results directly within the Slicer environment.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/SlicerMONAIViz",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "3d-slicer",
+        "monai",
+        "visualization"
+      ],
+      "id": 52
+    },
+    {
+      "name": "MONAI VISTA",
+      "one_line_profile": "Versatile Imaging Segmentation and Annotation foundation model",
+      "detailed_description": "A framework and model for versatile imaging segmentation and annotation, designed to handle various medical imaging tasks using foundation model approaches.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "annotation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/VISTA",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "foundation-model",
+        "segmentation",
+        "medical-imaging"
+      ],
+      "id": 53
+    },
+    {
+      "name": "MONAI Model Zoo",
+      "one_line_profile": "Repository of pre-trained medical imaging models in MONAI Bundle format",
+      "detailed_description": "Hosts a collection of pre-trained models for various medical imaging tasks (segmentation, classification) packaged as MONAI Bundles for easy use and deployment.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "inference",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/model-zoo",
+      "help_website": [
+        "https://monai.io/model-zoo.html"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "model-zoo",
+        "pretrained-models",
+        "medical-imaging"
+      ],
+      "id": 54
+    },
+    {
+      "name": "MONAI Deploy",
+      "one_line_profile": "Framework for developing and deploying medical AI applications",
+      "detailed_description": "A framework aiming to standardize the development, packaging, testing, and deployment of medical AI applications in clinical production environments.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "deployment",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/Project-MONAI/monai-deploy",
+      "help_website": [
+        "https://monai.io/deploy.html"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "deployment",
+        "clinical-ai",
+        "mlops"
+      ],
+      "id": 55
+    },
+    {
+      "name": "MONAI Deploy App SDK",
+      "one_line_profile": "SDK for designing and developing AI-driven healthcare imaging applications",
+      "detailed_description": "Offers tools and a framework to design, develop, and verify AI applications (MAPs) for healthcare imaging, facilitating their deployment via MONAI Deploy.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "deployment",
+        "application_development"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Project-MONAI/monai-deploy-app-sdk",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "sdk",
+        "deployment",
+        "medical-ai"
+      ],
+      "id": 56
+    },
+    {
+      "name": "MONAI Deploy Informatics Gateway",
+      "one_line_profile": "DICOM integration gateway for MONAI Deploy",
+      "detailed_description": "Facilitates integration with DICOM systems, enabling imaging data ingestion, workflow triggering, and result pushing to PACS within the MONAI Deploy ecosystem.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "integration",
+        "networking"
+      ],
+      "application_level": "service",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/Project-MONAI/monai-deploy-informatics-gateway",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dicom",
+        "gateway",
+        "integration",
+        "pacs"
+      ],
+      "id": 57
+    },
+    {
+      "name": "MONAI Research Contributions",
+      "one_line_profile": "Implementations of research prototypes using MONAI",
+      "detailed_description": "A repository containing implementations of state-of-the-art research papers and prototypes built with MONAI, serving as a reference library for advanced medical imaging methods.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "modeling",
+        "segmentation",
+        "classification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/research-contributions",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "research",
+        "prototypes",
+        "medical-imaging"
+      ],
+      "id": 58
+    },
+    {
+      "name": "dcmqi",
+      "one_line_profile": "Library for converting imaging research formats to DICOM",
+      "detailed_description": "A C++ library (DICOM for Quantitative Imaging) that supports the conversion of image analysis results (segmentations, measurements) from research formats into standard DICOM objects.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "conversion",
+        "standardization"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/QIICR/dcmqi",
+      "help_website": [
+        "http://qiicr.org/dcmqi/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "dicom",
+        "conversion",
+        "quantitative-imaging"
+      ],
+      "id": 59
+    },
+    {
+      "name": "medio",
+      "one_line_profile": "Python package for medical image I/O",
+      "detailed_description": "A Python library designed to simplify the input/output operations for medical images, handling various formats and metadata.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RSIP-Vision/medio",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-imaging",
+        "io",
+        "python"
+      ],
+      "id": 60
+    },
+    {
+      "name": "RSNA DICOM Anonymizer",
+      "one_line_profile": "Tool for anonymizing DICOM files",
+      "detailed_description": "A tool provided by the RSNA for removing protected health information (PHI) from DICOM files to ensure patient privacy in research datasets.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "anonymization",
+        "preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RSNA/anonymizer",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dicom",
+        "anonymization",
+        "privacy"
+      ],
+      "id": 61
+    },
+    {
+      "name": "SimpleITK",
+      "one_line_profile": "Simplified interface to the Insight Toolkit (ITK) for medical image analysis",
+      "detailed_description": "SimpleITK provides a simplified interface to ITK, facilitating image analysis, segmentation, and registration in multiple languages including Python and R.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "segmentation",
+        "registration"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/SimpleITK/SimpleITK",
+      "help_website": [
+        "https://simpleitk.org/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-imaging",
+        "image-analysis",
+        "itk"
+      ],
+      "id": 62
+    },
+    {
+      "name": "SlicerJupyter",
+      "one_line_profile": "Integration of 3D Slicer with Jupyter notebooks",
+      "detailed_description": "An extension for 3D Slicer that enables the use of the application and its medical imaging modules directly from Jupyter notebooks.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Slicer/SlicerJupyter",
+      "help_website": [
+        "https://github.com/Slicer/SlicerJupyter"
+      ],
+      "license": "MIT",
+      "tags": [
+        "jupyter",
+        "3d-slicer",
+        "medical-imaging"
+      ],
+      "id": 63
+    },
+    {
+      "name": "SlicerLungCTAnalyzer",
+      "one_line_profile": "Lung CT segmentation and analysis extension for 3D Slicer",
+      "detailed_description": "A 3D Slicer extension designed for the segmentation and spatial reconstruction of infiltrated, collapsed, and emphysematous areas in lung CT scans.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "quantitative_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Slicer/SlicerLungCTAnalyzer",
+      "help_website": [
+        "https://github.com/Slicer/SlicerLungCTAnalyzer"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "lung-ct",
+        "covid-19",
+        "segmentation"
+      ],
+      "id": 64
+    },
+    {
+      "name": "SlicerDMRI",
+      "one_line_profile": "Diffusion MRI analysis and visualization platform",
+      "detailed_description": "An extension for 3D Slicer providing tools for diffusion MRI analysis, tractography, and visualization.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "diffusion_mri",
+        "tractography",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/SlicerDMRI/SlicerDMRI",
+      "help_website": [
+        "http://dmri.slicer.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "mri",
+        "diffusion-imaging",
+        "neuroimaging"
+      ],
+      "id": 65
+    },
+    {
+      "name": "SlicerHeart",
+      "one_line_profile": "Cardiac analysis extension for 3D Slicer",
+      "detailed_description": "A collection of tools for cardiac image analysis within 3D Slicer, supporting various modalities and structural assessments.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "cardiac_analysis",
+        "segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SlicerHeart/SlicerHeart",
+      "help_website": [
+        "https://github.com/SlicerHeart/SlicerHeart"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cardiology",
+        "medical-imaging",
+        "3d-slicer"
+      ],
+      "id": 66
+    },
+    {
+      "name": "SlicerIGT",
+      "one_line_profile": "Image-guided therapy tools for 3D Slicer",
+      "detailed_description": "Modules supporting image-guided interventions, tracking, and navigation in 3D Slicer.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "image_guided_therapy",
+        "navigation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/SlicerIGT/SlicerIGT",
+      "help_website": [
+        "http://www.slicerigt.org"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "igt",
+        "surgical-navigation",
+        "tracking"
+      ],
+      "id": 67
+    },
+    {
+      "name": "SlicerMorph",
+      "one_line_profile": "Geometric morphometrics toolkit for 3D Slicer",
+      "detailed_description": "An extension to import microCT data and conduct 3D geometric morphometrics analysis within Slicer.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "morphometrics",
+        "microct_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SlicerMorph/SlicerMorph",
+      "help_website": [
+        "https://slicermorph.github.io/"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "morphometrics",
+        "biology",
+        "micro-ct"
+      ],
+      "id": 68
+    },
+    {
+      "name": "SlicerRT",
+      "one_line_profile": "Radiation therapy research toolkit for 3D Slicer",
+      "detailed_description": "Open-source toolkit for radiation therapy research, featuring DICOM-RT import/export, dose volume histograms, and external beam planning.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "radiation_therapy",
+        "dose_calculation",
+        "treatment_planning"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/SlicerRt/SlicerRT",
+      "help_website": [
+        "http://www.slicerrt.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "radiotherapy",
+        "dicom-rt",
+        "medical-physics"
+      ],
+      "id": 69
+    },
+    {
+      "name": "SimpleElastix",
+      "one_line_profile": "Medical image registration library",
+      "detailed_description": "A multi-lingual medical image registration library that extends SimpleITK with the Elastix registration framework.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "image_registration"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/SuperElastix/SimpleElastix",
+      "help_website": [
+        "https://simpleelastix.github.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "registration",
+        "elastix",
+        "medical-imaging"
+      ],
+      "id": 70
+    },
+    {
+      "name": "prostatecancer.ai",
+      "one_line_profile": "AI-based medical image viewer for prostate cancer detection",
+      "detailed_description": "A zero-footprint medical image viewer integrated with AI models to identify clinically significant prostate cancer from imaging data.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "diagnosis",
+        "cancer_detection"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/Tesseract-MI/prostatecancer.ai",
+      "help_website": [
+        "https://prostatecancer.ai"
+      ],
+      "license": "MIT",
+      "tags": [
+        "prostate-cancer",
+        "viewer",
+        "ai-diagnosis"
+      ],
+      "id": 71
+    },
+    {
+      "name": "TorchIO",
+      "one_line_profile": "Medical imaging processing for deep learning",
+      "detailed_description": "A Python library for efficient loading, preprocessing, augmentation, and patch-based sampling of medical images for deep learning applications.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_augmentation",
+        "preprocessing",
+        "io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TorchIO-project/torchio",
+      "help_website": [
+        "https://torchio.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "deep-learning",
+        "augmentation",
+        "pytorch"
+      ],
+      "id": 72
+    },
+    {
+      "name": "Dcm2Bids",
+      "one_line_profile": "DICOM to BIDS converter",
+      "detailed_description": "A tool to reorganize NIfTI files generated by dcm2niix into the Brain Imaging Data Structure (BIDS).",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "standardization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UNFmontreal/Dcm2Bids",
+      "help_website": [
+        "https://unfmontreal.github.io/Dcm2Bids/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "bids",
+        "neuroimaging",
+        "dicom"
+      ],
+      "id": 73
+    },
+    {
+      "name": "dicom2mesh",
+      "one_line_profile": "DICOM/NIfTI to 3D mesh converter",
+      "detailed_description": "A utility to generate 3D meshes (.obj) from DICOM or NIfTI image stacks using the marching cubes algorithm.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "surface_reconstruction",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UdomkarnBoonyaprasert/dicom2mesh",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "mesh-generation",
+        "dicom",
+        "3d-reconstruction"
+      ],
+      "id": 74
+    },
+    {
+      "name": "WillowbendDICOM",
+      "one_line_profile": "DICOM to video converter",
+      "detailed_description": "A dialog-based utility to convert DICOM image series into video formats.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_conversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Tcl",
+      "repo_url": "https://github.com/YangChuan80/WillowbendDICOM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "video-conversion",
+        "visualization"
+      ],
+      "id": 75
+    },
+    {
+      "name": "STitch3D",
+      "one_line_profile": "3D whole organism spatial atlas construction",
+      "detailed_description": "A tool for constructing 3D whole organism spatial atlases by jointly modeling multiple tissue slices.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "spatial_modeling",
+        "atlas_construction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/YangLabHKUST/STitch3D",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spatial-transcriptomics",
+        "3d-reconstruction",
+        "atlas"
+      ],
+      "id": 76
+    },
+    {
+      "name": "pdf2dcm",
+      "one_line_profile": "PDF to DICOM conversion library",
+      "detailed_description": "A Python package designed to convert PDF documents into DICOM format, facilitating the integration of reports into medical imaging workflows.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/a-parida12/pdf2dcm",
+      "help_website": [
+        "https://pypi.org/project/pdf2dcm/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "pdf",
+        "conversion"
+      ],
+      "id": 77
+    },
+    {
+      "name": "DICAT",
+      "one_line_profile": "DICOM header anonymization tool",
+      "detailed_description": "A tool specifically designed to anonymize DICOM data headers for privacy protection in research datasets.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "anonymization",
+        "data_privacy"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aces/DICAT",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dicom",
+        "anonymization",
+        "privacy"
+      ],
+      "id": 78
+    },
+    {
+      "name": "LinaQA",
+      "one_line_profile": "Medical physics toolkit for radiotherapy QA",
+      "detailed_description": "A toolkit for quality assurance in radiotherapy, diagnostic radiology, and nuclear medicine, built on pylinac and pydicom.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "quality_assurance",
+        "radiotherapy"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/alanphys/LinaQA",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "medical-physics",
+        "qa",
+        "radiotherapy"
+      ],
+      "id": 79
+    },
+    {
+      "name": "medicat",
+      "one_line_profile": "Dataset of medical images and captions",
+      "detailed_description": "A large-scale dataset containing medical images, captions, subfigure-subcaption annotations, and inline textual references for research.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "dataset"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/allenai/medicat",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-dataset",
+        "nlp",
+        "image-captioning"
+      ],
+      "id": 80
+    },
+    {
+      "name": "pydcmview",
+      "one_line_profile": "Terminal-based viewer for DICOM, NRRD, and NIfTI medical images",
+      "detailed_description": "A lightweight, terminal-based image viewer designed for quick inspection of medical imaging formats like DICOM, NRRD, and NIfTI directly from the command line.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/apleynes/pydcmview",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom-viewer",
+        "terminal",
+        "nifti",
+        "visualization"
+      ],
+      "id": 81
+    },
+    {
+      "name": "Medical-Data-Visualization-3D",
+      "one_line_profile": "Standalone C++ program for 3D visualization of medical DICOM/MRI/CT data",
+      "detailed_description": "A C++ application for visualizing medical datasets (DICOM, MRI, CT) in 3D, including features for image scrolling, segmentation, and 3D model generation for brain and bone structures.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "reconstruction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ashahrior/Medical-Data-Visualization-3D",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "3d-visualization",
+        "dicom",
+        "mri",
+        "ct",
+        "cpp"
+      ],
+      "id": 82
+    },
+    {
+      "name": "Nextcloud DICOM Viewer",
+      "one_line_profile": "DICOM viewer integration for the Nextcloud platform",
+      "detailed_description": "A plugin for Nextcloud that enables users to view and manipulate DICOM medical images directly within the Nextcloud web interface, facilitating secure sharing and review of medical data.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/ayselafsar/dicomviewer",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "dicom-viewer",
+        "nextcloud",
+        "web-viewer",
+        "medical-imaging"
+      ],
+      "id": 83
+    },
+    {
+      "name": "dicompyler",
+      "one_line_profile": "Extensible radiation therapy research platform and DICOM RT viewer",
+      "detailed_description": "An extensible open-source platform for radiation therapy research, serving as a viewer for DICOM and DICOM RT data, allowing analysis of dose volume histograms (DVH) and other radiotherapy metrics.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "analysis",
+        "radiotherapy"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bastula/dicompyler",
+      "help_website": [
+        "https://www.dicompyler.com/"
+      ],
+      "license": null,
+      "tags": [
+        "radiation-therapy",
+        "dicom-rt",
+        "viewer",
+        "dvh"
+      ],
+      "id": 84
+    },
+    {
+      "name": "rocket_viewer",
+      "one_line_profile": "Generic viewer for medical images, 3D surfaces, and biological signals",
+      "detailed_description": "A versatile viewer developed by BCN MedTech for visualizing various types of biomedical data, including medical images, 3D surface meshes, and electric signals like ECGs.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/bcn-medtech/rocket_viewer",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "viewer",
+        "medical-imaging",
+        "ecg",
+        "3d-surface"
+      ],
+      "id": 85
+    },
+    {
+      "name": "SAMM (Segment Anything Model for Medical)",
+      "one_line_profile": "3D Slicer extension integrating Meta's Segment Anything Model (SAM)",
+      "detailed_description": "A 3D Slicer extension that integrates Meta's Segment Anything Model (SAM) to assist in the segmentation of medical images, allowing for interactive and automated segmentation workflows within Slicer.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/bingogome/samm",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "3d-slicer",
+        "segment-anything",
+        "segmentation",
+        "medical-imaging"
+      ],
+      "id": 86
+    },
+    {
+      "name": "dicognito",
+      "one_line_profile": "Library and CLI tool for anonymizing DICOM files",
+      "detailed_description": "A Python library and command-line tool designed to anonymize DICOM files by removing or replacing patient-identifying information, ensuring data privacy for research and sharing.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "anonymization",
+        "preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/blairconrad/dicognito",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "anonymization",
+        "privacy",
+        "cli"
+      ],
+      "id": 87
+    },
+    {
+      "name": "MedSAMSlicer",
+      "one_line_profile": "3D Slicer plugin for Segment Anything in Medical Images (MedSAM)",
+      "detailed_description": "A 3D Slicer plugin that integrates MedSAM (Segment Anything Model adapted for medical images), enabling efficient and accurate segmentation of medical images within the Slicer environment.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bowang-lab/MedSAMSlicer",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "3d-slicer",
+        "medsam",
+        "segmentation",
+        "deep-learning"
+      ],
+      "id": 88
+    },
+    {
+      "name": "Dicom_RT_and_Images_to_Mask",
+      "one_line_profile": "Tools for converting DICOM images and RT structures to Python objects",
+      "detailed_description": "A Python package that facilitates the conversion of DICOM images, RT Structure Sets, and Dose files into NumPy arrays and SimpleITK images, streamlining the preprocessing pipeline for radiotherapy research.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/brianmanderson/Dicom_RT_and_Images_to_Mask",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dicom-rt",
+        "conversion",
+        "numpy",
+        "simpleitk"
+      ],
+      "id": 89
+    },
+    {
+      "name": "dicom-anon",
+      "one_line_profile": "Python-based DICOM anonymization tool",
+      "detailed_description": "A Python tool developed by CHOP (Children's Hospital of Philadelphia) for anonymizing DICOM files, adhering to safe harbor standards for de-identification of medical imaging data.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "anonymization",
+        "preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chop-dbhi/dicom-anon",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "dicom",
+        "anonymization",
+        "de-identification"
+      ],
+      "id": 90
+    },
+    {
+      "name": "dicom-pipeline",
+      "one_line_profile": "Automated pipeline for reviewing and anonymizing research DICOM studies",
+      "detailed_description": "An automated pipeline tool from CHOP for managing the workflow of reviewing, anonymizing, and publishing DICOM studies for research purposes.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "anonymization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chop-dbhi/dicom-pipeline",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "pipeline",
+        "dicom",
+        "research-workflow"
+      ],
+      "id": 91
+    },
+    {
+      "name": "StudyCentric",
+      "one_line_profile": "Web-based research DICOM viewer",
+      "detailed_description": "A web-based DICOM viewer developed by CHOP specifically for research contexts, allowing for the visualization and review of medical imaging studies.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/chop-dbhi/studycentric",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dicom-viewer",
+        "web-viewer",
+        "research"
+      ],
+      "id": 92
+    },
+    {
+      "name": "SlicerNNInteractive",
+      "one_line_profile": "3D Slicer extension for interactive segmentation with nnInteractive",
+      "detailed_description": "A 3D Slicer extension that implements nnInteractive, enabling efficient, interactive deep learning-based segmentation of medical images directly within the Slicer interface.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/coendevente/SlicerNNInteractive",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "3d-slicer",
+        "interactive-segmentation",
+        "deep-learning"
+      ],
+      "id": 93
+    },
+    {
+      "name": "calculate-suv",
+      "one_line_profile": "Library for calculating Standardized Uptake Value (SUV) for PET/SPECT",
+      "detailed_description": "A specialized JavaScript/TypeScript library for calculating Standardized Uptake Values (SUV) from Nuclear Medicine data (PET/SPECT), essential for quantitative analysis in medical imaging.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "quantification",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/cornerstonejs/calculate-suv",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "suv",
+        "pet",
+        "spect",
+        "quantification"
+      ],
+      "id": 94
+    },
+    {
+      "name": "Cornerstone3D",
+      "one_line_profile": "JavaScript library for building interactive 3D medical imaging applications",
+      "detailed_description": "A comprehensive JavaScript library for rendering and interacting with 3D medical images in web browsers. It serves as the core rendering engine for many web-based radiology viewers and research tools.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "rendering"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/cornerstonejs/cornerstone3D",
+      "help_website": [
+        "https://www.cornerstonejs.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "webgl",
+        "medical-imaging",
+        "3d-rendering",
+        "dicom"
+      ],
+      "id": 95
+    },
+    {
+      "name": "ASCENT",
+      "one_line_profile": "Toolbox for cardiac ultrasound segmentation and color-Doppler dealiasing",
+      "detailed_description": "A Python toolbox (ASCENT) designed for the processing of cardiac ultrasound data, specifically offering tools for segmentation and dealiasing of color-Doppler images.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "denoising",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/creatis-myriad/ASCENT",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ultrasound",
+        "cardiac",
+        "segmentation",
+        "doppler"
+      ],
+      "id": 96
+    },
+    {
+      "name": "DVH-Analytics",
+      "one_line_profile": "DICOM database and analysis application for radiation oncology",
+      "detailed_description": "A desktop application for building a local database of DICOM radiation therapy data, enabling population-based analysis of Dose Volume Histograms (DVH) and treatment plans.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "analysis",
+        "data_management",
+        "radiotherapy"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cutright/DVH-Analytics",
+      "help_website": [
+        "http://dvh-analytics.com"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "radiation-oncology",
+        "dvh",
+        "dicom-rt",
+        "database"
+      ],
+      "id": 97
+    },
+    {
+      "name": "BlueLight",
+      "one_line_profile": "Lightweight browser-based DICOM viewer",
+      "detailed_description": "A pure JavaScript, browser-based DICOM viewer that requires no backend installation, providing a lightweight solution for viewing medical images on various devices.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/cylab-tw/bluelight",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom-viewer",
+        "web-viewer",
+        "javascript"
+      ],
+      "id": 98
+    },
+    {
+      "name": "Databricks Pixels",
+      "one_line_profile": "Library for processing medical images and documents on Databricks",
+      "detailed_description": "A library from Databricks Industry Solutions designed to facilitate large-scale processing of medical images (DICOM), documents, and other unstructured data within the Databricks Lakehouse platform.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "management"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/databricks-industry-solutions/pixels",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "databricks",
+        "medical-imaging",
+        "etl",
+        "dicom"
+      ],
+      "id": 99
+    },
+    {
+      "name": "dicom2stl",
+      "one_line_profile": "Script to extract STL surfaces from DICOM image series",
+      "detailed_description": "A Python tool that converts DICOM image series into STL surface meshes, enabling 3D printing and biomedical engineering applications from medical scan data.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "conversion",
+        "reconstruction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dave3d/dicom2stl",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dicom",
+        "stl",
+        "3d-printing",
+        "mesh-generation"
+      ],
+      "id": 100
+    },
+    {
+      "name": "SALMON",
+      "one_line_profile": "Deep learning segmentation software based on MONAI",
+      "detailed_description": "SALMON (Segmentation ALgorithm based on MONai) is a software package for single and multi-label segmentation of 3D medical images, built upon the MONAI framework.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/davidiommi/Pytorch--3D-Medical-Images-Segmentation--SALMON",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "segmentation",
+        "monai",
+        "deep-learning",
+        "medical-imaging"
+      ],
+      "id": 101
+    },
+    {
+      "name": "ECVL",
+      "one_line_profile": "European Computer Vision Library for healthcare applications",
+      "detailed_description": "A general-purpose computer vision library developed under the DeepHealth project, specifically optimized for healthcare use cases and integration of medical imaging workflows.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "computer_vision"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/deephealthproject/ecvl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "computer-vision",
+        "healthcare",
+        "deephealth",
+        "library"
+      ],
+      "id": 102
+    },
+    {
+      "name": "brainload",
+      "one_line_profile": "Python module for accessing FreeSurfer brain surface and morphometry data",
+      "detailed_description": "A Python library designed to facilitate the loading and parsing of FreeSurfer brain surface meshes and morphometry data files, reducing the complexity of handling these specific neuroimaging formats.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dfsp-spirit/brainload",
+      "help_website": [
+        "https://github.com/dfsp-spirit/brainload"
+      ],
+      "license": "MIT",
+      "tags": [
+        "freesurfer",
+        "neuroimaging",
+        "mesh-processing"
+      ],
+      "id": 103
+    },
+    {
+      "name": "MONAILabel-Apps",
+      "one_line_profile": "Collection of domain-specific applications for MONAI Label",
+      "detailed_description": "A repository containing a zoo of applications (radiology, pathology, etc.) for MONAI Label, providing pre-configured models and active learning strategies for medical image annotation tasks.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "labeling",
+        "segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/diazandr3s/MONAILabel-Apps",
+      "help_website": [
+        "https://github.com/diazandr3s/MONAILabel-Apps"
+      ],
+      "license": "MIT",
+      "tags": [
+        "monai",
+        "active-learning",
+        "annotation"
+      ],
+      "id": 104
+    },
+    {
+      "name": "ruby-dicom",
+      "one_line_profile": "Ruby library for handling DICOM files and network communication",
+      "detailed_description": "A comprehensive Ruby library for reading, editing, and writing DICOM files, as well as handling DICOM network communication (SCP/SCU).",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "communication"
+      ],
+      "application_level": "library",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/dicom/ruby-dicom",
+      "help_website": [
+        "http://dicom.github.io/ruby-dicom/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "dicom",
+        "ruby",
+        "medical-imaging"
+      ],
+      "id": 105
+    },
+    {
+      "name": "dicompyler-core",
+      "one_line_profile": "Core radiation therapy modules for DICOM RT",
+      "detailed_description": "A Python library providing core functionality for handling DICOM RT (Radiation Therapy) objects, including structures, doses, and plans, serving as the foundation for the dicompyler application.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dicompyler/dicompyler-core",
+      "help_website": [
+        "https://dicompyler-core.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "dicom-rt",
+        "radiation-therapy",
+        "medical-physics"
+      ],
+      "id": 106
+    },
+    {
+      "name": "TriDFusion",
+      "one_line_profile": "MATLAB-based medical imaging viewer and fusion tool",
+      "detailed_description": "A medical imaging viewer and fusion software written in MATLAB, supporting DICOM and other formats for 3D visualization and image analysis.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_fusion"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/dicomtools/TriDFusion",
+      "help_website": [
+        "https://github.com/dicomtools/TriDFusion"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "matlab",
+        "viewer",
+        "image-fusion"
+      ],
+      "id": 107
+    },
+    {
+      "name": "OnkoDICOM",
+      "one_line_profile": "DICOM RT research platform for radiation oncology",
+      "detailed_description": "An open-source, cross-platform software designed for Radiation Oncologists to research DICOM standard image sets (DICOM-RT, CT, MRI, PET), leveraging technologies like pydicom and dicompyler-core.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "analysis",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/didymo/OnkoDICOM",
+      "help_website": [
+        "https://github.com/didymo/OnkoDICOM"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "radiation-oncology",
+        "dicom-rt",
+        "research-platform"
+      ],
+      "id": 108
+    },
+    {
+      "name": "dcmpandas",
+      "one_line_profile": "Library for loading DICOM datasets into Pandas DataFrames",
+      "detailed_description": "A Python utility library that facilitates the loading of DICOM directories and metadata into Pandas DataFrames, enabling tabular analysis of medical image datasets.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "data_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dov/dcmpandas",
+      "help_website": [
+        "https://github.com/dov/dcmpandas"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "dicom",
+        "pandas",
+        "metadata"
+      ],
+      "id": 109
+    },
+    {
+      "name": "pyslm",
+      "one_line_profile": "Python library for 3D printing and additive manufacturing",
+      "detailed_description": "A library for generating and processing data for Additive Manufacturing (3D Printing), specifically Selective Laser Melting (SLM), including slicing and hatching algorithms.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "manufacturing",
+        "geometry_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/drlukeparry/pyslm",
+      "help_website": [
+        "https://pyslm.readthedocs.io/"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "3d-printing",
+        "additive-manufacturing",
+        "slicing"
+      ],
+      "id": 110
+    },
+    {
+      "name": "obj2voxel",
+      "one_line_profile": "Command-line tool to convert OBJ/STL meshes to voxels",
+      "detailed_description": "A fast C++ tool for converting 3D mesh files (OBJ, STL) into voxel representations, useful for geometry processing and simulation setup.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "geometry_processing",
+        "simulation_setup"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/eisenwave/obj2voxel",
+      "help_website": [
+        "https://github.com/eisenwave/obj2voxel"
+      ],
+      "license": "MIT",
+      "tags": [
+        "voxelization",
+        "mesh",
+        "3d-geometry"
+      ],
+      "id": 111
+    },
+    {
+      "name": "spycer",
+      "one_line_profile": "G-code viewer for 5-axis 3D printing",
+      "detailed_description": "A visualization tool for viewing G-code paths generated for 5-axis 3D printers, aiding in the verification of manufacturing processes.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "manufacturing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/epit3d/spycer",
+      "help_website": [
+        "https://github.com/epit3d/spycer"
+      ],
+      "license": "MIT",
+      "tags": [
+        "g-code",
+        "3d-printing",
+        "visualization"
+      ],
+      "id": 112
+    },
+    {
+      "name": "DicomBrowser",
+      "one_line_profile": "Lightweight portable DICOM browser application",
+      "detailed_description": "A portable Python-based application for browsing and inspecting DICOM files and their metadata.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "io"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ericspod/DicomBrowser",
+      "help_website": [
+        "https://github.com/ericspod/DicomBrowser"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "dicom",
+        "viewer",
+        "metadata"
+      ],
+      "id": 113
+    },
+    {
+      "name": "3DCurator",
+      "one_line_profile": "3D Viewer for CT scans of cultural heritage objects",
+      "detailed_description": "A specialized 3D viewer designed for analyzing CT scans of polychromed wood sculptures, supporting specific visualization needs in cultural heritage science.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/fblupi/3DCurator",
+      "help_website": [
+        "https://github.com/fblupi/3DCurator"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "ct",
+        "cultural-heritage",
+        "viewer"
+      ],
+      "id": 114
+    },
+    {
+      "name": "SlicerTomoSAM",
+      "one_line_profile": "3D Slicer extension using Segment Anything Model (SAM)",
+      "detailed_description": "An extension for 3D Slicer that integrates the Segment Anything Model (SAM) to assist in the segmentation of 3D tomography data.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fedesemeraro/SlicerTomoSAM",
+      "help_website": [
+        "https://github.com/fedesemeraro/SlicerTomoSAM"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "3d-slicer",
+        "sam",
+        "segmentation"
+      ],
+      "id": 115
+    },
+    {
+      "name": "SlicerTorchIO",
+      "one_line_profile": "3D Slicer module for TorchIO integration",
+      "detailed_description": "A 3D Slicer module that provides an interface to TorchIO, enabling data augmentation and preprocessing workflows directly within Slicer.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "augmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fepegar/SlicerTorchIO",
+      "help_website": [
+        "https://github.com/fepegar/SlicerTorchIO"
+      ],
+      "license": "MIT",
+      "tags": [
+        "3d-slicer",
+        "torchio",
+        "augmentation"
+      ],
+      "id": 116
+    },
+    {
+      "name": "mDCM",
+      "one_line_profile": "DICOM library for C#",
+      "detailed_description": "A C# library for handling DICOM files and communication, serving as a foundation for .NET based medical imaging applications.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "communication"
+      ],
+      "application_level": "library",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/fo-dicom/mdcm",
+      "help_website": [
+        "https://github.com/fo-dicom/mdcm"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "dicom",
+        "c-sharp",
+        "dotnet"
+      ],
+      "id": 117
+    },
+    {
+      "name": "slicer",
+      "one_line_profile": "Fast 3D mesh slicer library",
+      "detailed_description": "A high-performance library written in Go for slicing 3D meshes, useful for 3D printing preparation and computational geometry tasks.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "geometry_processing",
+        "manufacturing"
+      ],
+      "application_level": "library",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/fogleman/slicer",
+      "help_website": [
+        "https://github.com/fogleman/slicer"
+      ],
+      "license": "MIT",
+      "tags": [
+        "slicing",
+        "3d-printing",
+        "geometry"
+      ],
+      "id": 118
+    },
+    {
+      "name": "SL1toPhoton",
+      "one_line_profile": "Converter for 3D printing file formats (SL1 to Photon)",
+      "detailed_description": "A utility tool to convert SL1 3D printing files to Photon format, facilitating interoperability between different 3D printer ecosystems.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "io",
+        "manufacturing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fookatchu/SL1toPhoton",
+      "help_website": [
+        "https://github.com/fookatchu/SL1toPhoton"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "3d-printing",
+        "file-conversion",
+        "sl1"
+      ],
+      "id": 119
+    },
+    {
+      "name": "GalaxySlicer",
+      "one_line_profile": "G-code generator for 3D printers",
+      "detailed_description": "A slicing software that generates G-code for various 3D printers, supporting the translation of 3D models into manufacturing instructions.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "manufacturing",
+        "geometry_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/fr3ak2402/GalaxySlicer",
+      "help_website": [
+        "https://github.com/fr3ak2402/GalaxySlicer"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "slicer",
+        "3d-printing",
+        "g-code"
+      ],
+      "id": 120
+    },
+    {
+      "name": "dicomgraphics",
+      "one_line_profile": "DICOM graphics viewer and utility applications",
+      "detailed_description": "A set of applications and libraries for viewing and manipulating DICOM graphics, built with Go.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "io"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/fynelabs/dicomgraphics",
+      "help_website": [
+        "https://github.com/fynelabs/dicomgraphics"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "dicom",
+        "viewer",
+        "go"
+      ],
+      "id": 121
+    },
+    {
+      "name": "SlicerDentalSegmentator",
+      "one_line_profile": "3D Slicer extension for dental CT segmentation",
+      "detailed_description": "A 3D Slicer extension designed for the fully automatic segmentation of teeth and jaws from CT and CBCT dental volumes.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "dental_imaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gaudot/SlicerDentalSegmentator",
+      "help_website": [
+        "https://github.com/gaudot/SlicerDentalSegmentator"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "3d-slicer",
+        "dental",
+        "segmentation"
+      ],
+      "id": 122
+    },
+    {
+      "name": "ginkgocadx",
+      "one_line_profile": "Advanced open-source DICOM viewer",
+      "detailed_description": "A cross-platform DICOM viewer and PACS workstation, providing advanced visualization and diagnostic tools for medical imaging professionals.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "diagnosis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/gerddie/ginkgocadx",
+      "help_website": [
+        "http://ginkgo-cadx.com/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "dicom",
+        "pacs",
+        "viewer"
+      ],
+      "id": 123
+    },
+    {
+      "name": "gsSlicer",
+      "one_line_profile": "Open-source 3D printing slicer",
+      "detailed_description": "A 3D printing slicer application written in C#, capable of generating instructions for additive manufacturing from 3D models.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "manufacturing",
+        "geometry_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/gradientspace/gsSlicer",
+      "help_website": [
+        "https://github.com/gradientspace/gsSlicer"
+      ],
+      "license": "MIT",
+      "tags": [
+        "slicer",
+        "3d-printing",
+        "c-sharp"
+      ],
+      "id": 124
+    },
+    {
+      "name": "go-netdicom",
+      "one_line_profile": "DICOM network protocol library for Go",
+      "detailed_description": "A Golang implementation of the DICOM network protocol, enabling the creation of DICOM service class providers (SCP) and users (SCU).",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "communication",
+        "io"
+      ],
+      "application_level": "library",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/grailbio/go-netdicom",
+      "help_website": [
+        "https://godoc.org/github.com/grailbio/go-netdicom"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "dicom",
+        "network",
+        "go"
+      ],
+      "id": 125
+    },
+    {
+      "name": "napari-simpleitk-image-processing",
+      "one_line_profile": "Napari plugin for SimpleITK image processing",
+      "detailed_description": "A plugin for the napari viewer that exposes SimpleITK image processing functions, allowing users to apply filters and transformations directly within the viewer.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haesleinhuepf/napari-simpleitk-image-processing",
+      "help_website": [
+        "https://github.com/haesleinhuepf/napari-simpleitk-image-processing"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "napari",
+        "simpleitk",
+        "image-processing"
+      ],
+      "id": 126
+    },
+    {
+      "name": "MedicalViewer",
+      "one_line_profile": "Desktop DICOM viewer using Qt, ITK, and VTK",
+      "detailed_description": "A desktop application for 2D and 3D visualization of DICOM images, built using the Qt framework and scientific libraries ITK and VTK.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/helloyou2012/MedicalViewer",
+      "help_website": [
+        "https://github.com/helloyou2012/MedicalViewer"
+      ],
+      "license": null,
+      "tags": [
+        "dicom",
+        "vtk",
+        "itk",
+        "qt"
+      ],
+      "id": 127
+    },
+    {
+      "name": "SlicerBatchAnonymize",
+      "one_line_profile": "3D Slicer extension for batch DICOM anonymization",
+      "detailed_description": "An extension for 3D Slicer that enables the batch anonymization of DICOM images, a critical step for data sharing and privacy in medical research.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "data_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hina-shah/SlicerBatchAnonymize",
+      "help_website": [
+        "https://github.com/hina-shah/SlicerBatchAnonymize"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "anonymization",
+        "dicom",
+        "3d-slicer"
+      ],
+      "id": 128
+    },
+    {
+      "name": "imageio",
+      "one_line_profile": "Python library for reading and writing image data including scientific formats",
+      "detailed_description": "Imageio is a Python library that provides an easy interface to read and write a wide range of image data, including animated images, volumetric data, and scientific formats like DICOM and TIFF.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/imageio/imageio",
+      "help_website": [
+        "https://imageio.readthedocs.io"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "image-io",
+        "dicom",
+        "medical-imaging",
+        "python"
+      ],
+      "id": 129
+    },
+    {
+      "name": "wsidicomizer",
+      "one_line_profile": "Library for converting Whole Slide Imaging (WSI) files to DICOM",
+      "detailed_description": "A Python library designed to convert various Whole Slide Image (WSI) formats into standard DICOM format, facilitating interoperability in digital pathology workflows.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "standardization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/imi-bigpicture/wsidicomizer",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "wsi",
+        "dicom",
+        "pathology",
+        "converter"
+      ],
+      "id": 130
+    },
+    {
+      "name": "DICOMClient",
+      "one_line_profile": "Utilities for anonymizing, viewing, and uploading DICOM files to PACS",
+      "detailed_description": "A set of Java-based utilities designed for clinical workflows, enabling users to anonymize DICOM data, view images, and upload them to Picture Archiving and Communication Systems (PACS).",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "anonymization",
+        "data_management",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/irrer/DICOMClient",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dicom",
+        "pacs",
+        "anonymization",
+        "java"
+      ],
+      "id": 131
+    },
+    {
+      "name": "zViewer",
+      "one_line_profile": "DICOM viewer based on DCMTK and OpenGL",
+      "detailed_description": "A C++ based DICOM viewer application utilizing DCMTK for DICOM handling and OpenGL for rendering, providing PACS connectivity and image review capabilities.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_review"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/isyisy/zViewer",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "dicom-viewer",
+        "dcmtk",
+        "opengl",
+        "pacs"
+      ],
+      "id": 132
+    },
+    {
+      "name": "dwv",
+      "one_line_profile": "Zero footprint DICOM Web Viewer library",
+      "detailed_description": "A JavaScript library for parsing and displaying DICOM images in web browsers, enabling the creation of zero-footprint medical image viewers.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/ivmartel/dwv",
+      "help_website": [
+        "https://ivmartel.github.io/dwv/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "dicom",
+        "web-viewer",
+        "javascript",
+        "medical-imaging"
+      ],
+      "id": 133
+    },
+    {
+      "name": "pydiq",
+      "one_line_profile": "Simple DICOM browser and viewer in Python",
+      "detailed_description": "A lightweight Python application for browsing and viewing DICOM files, built on top of pydicom and PyQt.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_exploration"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/janpipek/pydiq",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "viewer",
+        "python",
+        "gui"
+      ],
+      "id": 134
+    },
+    {
+      "name": "medview",
+      "one_line_profile": "HTML5/Javascript based DICOM image viewer",
+      "detailed_description": "A web-based medical image viewer supporting DICOM format, implemented in HTML5 and JavaScript for browser-based visualization.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/jap1968/medview",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dicom",
+        "viewer",
+        "html5",
+        "javascript"
+      ],
+      "id": 135
+    },
+    {
+      "name": "dicomweb-proxy",
+      "one_line_profile": "Proxy to translate between DICOMWeb and DIMSE services",
+      "detailed_description": "A middleware tool that acts as a proxy to translate requests between modern DICOMWeb standards and traditional DICOM DIMSE services, facilitating integration with legacy PACS.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_communication",
+        "interoperability"
+      ],
+      "application_level": "service",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/knopkem/dicomweb-proxy",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dicomweb",
+        "dimse",
+        "pacs",
+        "proxy"
+      ],
+      "id": 136
+    },
+    {
+      "name": "dicomifier",
+      "one_line_profile": "Tool for converting DICOM data to NIfTI and HDF5 formats",
+      "detailed_description": "Dicomifier is a set of tools and libraries to convert DICOM series into NIfTI or HDF5 files, aiming to preserve metadata and structure during conversion.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "format_interoperability"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lamyj/dicomifier",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dicom",
+        "nifti",
+        "hdf5",
+        "converter"
+      ],
+      "id": 137
+    },
+    {
+      "name": "odil",
+      "one_line_profile": "C++11 library for the DICOM standard",
+      "detailed_description": "Odil is a C++ library that provides a comprehensive implementation of the DICOM standard, supporting various protocols and data structures for medical imaging applications.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "protocol_implementation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/lamyj/odil",
+      "help_website": [
+        "https://odil.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "dicom",
+        "cpp",
+        "medical-imaging",
+        "network-protocol"
+      ],
+      "id": 138
+    },
+    {
+      "name": "SlicerMONAIAuto3DSeg",
+      "one_line_profile": "3D Slicer extension for running MONAI Auto3DSeg models",
+      "detailed_description": "An extension for the 3D Slicer platform that integrates MONAI's Auto3DSeg functionality, allowing users to run automated 3D segmentation models directly within the Slicer environment.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "inference"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lassoan/SlicerMONAIAuto3DSeg",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "3d-slicer",
+        "monai",
+        "segmentation",
+        "medical-imaging"
+      ],
+      "id": 139
+    },
+    {
+      "name": "SlicerTotalSegmentator",
+      "one_line_profile": "3D Slicer extension for fully automatic total body segmentation",
+      "detailed_description": "A 3D Slicer extension that wraps the TotalSegmentator AI model, enabling fully automatic segmentation of anatomical structures in whole-body CT scans.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "inference"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lassoan/SlicerTotalSegmentator",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "3d-slicer",
+        "segmentation",
+        "totalsegmentator",
+        "ct"
+      ],
+      "id": 140
+    },
+    {
+      "name": "PreProcPipe",
+      "one_line_profile": "Pipeline for medical image preprocessing with LLM automation",
+      "detailed_description": "A pipeline tool designed to automate the preprocessing of medical images, incorporating Large Language Model (LLM) capabilities to streamline workflow configuration and execution.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/lgy112112/PreProcPipe",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "preprocessing",
+        "pipeline",
+        "medical-imaging",
+        "automation"
+      ],
+      "id": 141
+    },
+    {
+      "name": "medpy",
+      "one_line_profile": "Library for medical image processing in Python",
+      "detailed_description": "MedPy is an open-source library for medical image processing in Python, providing basic functionalities for reading, writing, and manipulating high-dimensional medical image data.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/loli/medpy",
+      "help_website": [
+        "http://loli.github.io/medpy/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "medical-imaging",
+        "image-processing",
+        "python",
+        "library"
+      ],
+      "id": 142
+    },
+    {
+      "name": "dicom-ecg-plot",
+      "one_line_profile": "Viewer and converter for DICOM ECG data",
+      "detailed_description": "A Python tool to read, plot, and convert DICOM ECG waveforms into various image formats (PDF, PNG, SVG), facilitating the visualization and sharing of electrocardiogram data.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_conversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/marcodebe/dicom-ecg-plot",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "ecg",
+        "visualization",
+        "converter"
+      ],
+      "id": 143
+    },
+    {
+      "name": "OCT-Converter",
+      "one_line_profile": "Tools for extracting raw OCT and fundus data from proprietary formats",
+      "detailed_description": "A Python library for extracting raw Optical Coherence Tomography (OCT) and fundus image data from various proprietary manufacturer file formats, enabling research access to raw data.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_extraction",
+        "io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/marksgraham/OCT-Converter",
+      "help_website": [
+        "https://oct-converter.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "oct",
+        "ophthalmology",
+        "data-extraction",
+        "medical-imaging"
+      ],
+      "id": 144
+    },
+    {
+      "name": "SlicerSegmentWithSAM",
+      "one_line_profile": "3D Slicer extension integrating Segment Anything Model (SAM) for medical image segmentation",
+      "detailed_description": "A 3D Slicer extension that enables users to use Meta's Segment Anything Model (SAM) directly within the Slicer environment for efficient medical image segmentation.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "labeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mazurowski-lab/SlicerSegmentWithSAM",
+      "help_website": [
+        "https://github.com/mazurowski-lab/SlicerSegmentWithSAM"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "3d-slicer",
+        "sam",
+        "segmentation",
+        "medical-imaging"
+      ],
+      "id": 145
+    },
+    {
+      "name": "webDICOM",
+      "one_line_profile": "Web-based DICOM viewer for medical image visualization",
+      "detailed_description": "A web-based viewer for DICOM files, allowing users to visualize medical images directly in a browser environment.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "CSS",
+      "repo_url": "https://github.com/mi-kas/webDICOM",
+      "help_website": [
+        "https://github.com/mi-kas/webDICOM"
+      ],
+      "license": null,
+      "tags": [
+        "dicom",
+        "viewer",
+        "web",
+        "visualization"
+      ],
+      "id": 146
+    },
+    {
+      "name": "InnerEye-CreateDataset",
+      "one_line_profile": "Tool to transform DICOM data into masks for deep learning training",
+      "detailed_description": "A dataset creation tool designed for the InnerEye-DeepLearning library that converts DICOM data into NIfTI masks suitable for training deep learning models.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "format_conversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/microsoft/InnerEye-CreateDataset",
+      "help_website": [
+        "https://github.com/microsoft/InnerEye-CreateDataset"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "dataset",
+        "deep-learning",
+        "preprocessing"
+      ],
+      "id": 147
+    },
+    {
+      "name": "dicom.el",
+      "one_line_profile": "DICOM viewer for Emacs",
+      "detailed_description": "A DICOM viewer implementation for the Emacs text editor, allowing users to view medical images within the Emacs environment.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Emacs Lisp",
+      "repo_url": "https://github.com/minad/dicom",
+      "help_website": [
+        "https://github.com/minad/dicom"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "emacs",
+        "dicom",
+        "viewer"
+      ],
+      "id": 148
+    },
+    {
+      "name": "Physics-ArX",
+      "one_line_profile": "Physics-based data augmentation library for CT and CBCT images",
+      "detailed_description": "A library for physics-based data augmentation specifically designed for quantifying CT and CBCT images in radiotherapy, supporting robust model training.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_augmentation",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nadeemlab/Physics-ArX",
+      "help_website": [
+        "https://github.com/nadeemlab/Physics-ArX"
+      ],
+      "license": null,
+      "tags": [
+        "ct",
+        "cbct",
+        "augmentation",
+        "radiotherapy"
+      ],
+      "id": 149
+    },
+    {
+      "name": "nibabel",
+      "one_line_profile": "Library to access neuro-imaging file formats",
+      "detailed_description": "A comprehensive Python package to provide read and write access to some common medical and neuroimaging file formats, including NIfTI1, NIfTI2, MINC1, MINC2, and others.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "format_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nipy/nibabel",
+      "help_website": [
+        "https://nipy.org/nibabel/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "neuroimaging",
+        "nifti",
+        "io",
+        "file-formats"
+      ],
+      "id": 150
+    },
+    {
+      "name": "nitransforms",
+      "one_line_profile": "Geometric transformations for neuroimaging",
+      "detailed_description": "A library for handling geometric transformations in neuroimaging, allowing for the manipulation and application of spatial transforms to medical images.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "registration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nipy/nitransforms",
+      "help_website": [
+        "https://github.com/nipy/nitransforms"
+      ],
+      "license": "MIT",
+      "tags": [
+        "neuroimaging",
+        "transformations",
+        "registration"
+      ],
+      "id": 151
+    },
+    {
+      "name": "neuropythy",
+      "one_line_profile": "Neuroscience library for Python complementing nibabel",
+      "detailed_description": "A Python library dedicated to neuroscience research, designed to work alongside nibabel for analyzing and processing neuroimaging data, particularly for cortical surface analysis.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/noahbenson/neuropythy",
+      "help_website": [
+        "https://github.com/noahbenson/neuropythy"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "neuroscience",
+        "cortex",
+        "analysis",
+        "mri"
+      ],
+      "id": 152
+    },
+    {
+      "name": "Weasis",
+      "one_line_profile": "Web-based DICOM viewer for advanced medical imaging",
+      "detailed_description": "A comprehensive web-based DICOM viewer that integrates with PACS systems, offering advanced visualization tools for medical imaging analysis.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "diagnosis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/nroduit/Weasis",
+      "help_website": [
+        "https://weasis.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "dicom",
+        "viewer",
+        "pacs",
+        "visualization"
+      ],
+      "id": 153
+    },
+    {
+      "name": "STU-Net",
+      "one_line_profile": "Large-scale pre-trained medical image segmentation model",
+      "detailed_description": "A large-scale pre-trained model (1.4B parameters) for medical image segmentation, trained on a massive collection of public datasets, offering state-of-the-art performance.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openmedlab/STU-Net",
+      "help_website": [
+        "https://github.com/openmedlab/STU-Net"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "segmentation",
+        "foundation-model",
+        "medical-imaging",
+        "deep-learning"
+      ],
+      "id": 154
+    },
+    {
+      "name": "PET2BIDS",
+      "one_line_profile": "Tool to convert PET data into BIDS format",
+      "detailed_description": "A utility library and command-line tool to convert raw PET scanner files (e.g., ECAT, DICOM) into the Brain Imaging Data Structure (BIDS) standard.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "data_standardization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openneuropet/PET2BIDS",
+      "help_website": [
+        "https://github.com/openneuropet/PET2BIDS"
+      ],
+      "license": "MIT",
+      "tags": [
+        "pet",
+        "bids",
+        "dicom",
+        "conversion"
+      ],
+      "id": 155
+    },
+    {
+      "name": "Aeskulap",
+      "one_line_profile": "Medical image viewer and DICOM network client",
+      "detailed_description": "An open-source medical image viewer capable of loading a series of special images stored in DICOM format and querying PACS servers.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pipelka/aeskulap",
+      "help_website": [
+        "https://github.com/pipelka/aeskulap"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "dicom",
+        "viewer",
+        "pacs"
+      ],
+      "id": 156
+    },
+    {
+      "name": "OsiriX",
+      "one_line_profile": "Advanced DICOM viewer for medical imaging",
+      "detailed_description": "A widely used DICOM viewer for MacOS, providing advanced visualization, processing, and analysis capabilities for medical images.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pixmeo/osirix",
+      "help_website": [
+        "https://www.osirix-viewer.com/"
+      ],
+      "license": null,
+      "tags": [
+        "dicom",
+        "viewer",
+        "macos",
+        "visualization"
+      ],
+      "id": 157
+    },
+    {
+      "name": "OsiriX Plugins",
+      "one_line_profile": "Collection of plugins for OsiriX DICOM Viewer",
+      "detailed_description": "A repository containing various plugins to extend the functionality of the OsiriX DICOM viewer, enabling custom processing and analysis workflows.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pixmeo/osirixplugins",
+      "help_website": [
+        "https://github.com/pixmeo/osirixplugins"
+      ],
+      "license": null,
+      "tags": [
+        "osirix",
+        "plugins",
+        "dicom"
+      ],
+      "id": 158
+    },
+    {
+      "name": "Vega",
+      "one_line_profile": "C++ library for reading, writing, and editing DICOM files",
+      "detailed_description": "A C++ library designed for efficient reading, writing, and editing of DICOM files, facilitating medical image data manipulation.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/project-eutopia/vega",
+      "help_website": [
+        "https://github.com/project-eutopia/vega"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "cpp",
+        "io"
+      ],
+      "id": 159
+    },
+    {
+      "name": "contrib-pydicom",
+      "one_line_profile": "Community contributions and plugins for pydicom",
+      "detailed_description": "A collection of community-contributed plugins, tutorials, and extensions for the pydicom library, enhancing its capabilities for DICOM data handling.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pydicom/contrib-pydicom",
+      "help_website": [
+        "https://github.com/pydicom/contrib-pydicom"
+      ],
+      "license": null,
+      "tags": [
+        "dicom",
+        "python",
+        "plugins"
+      ],
+      "id": 160
+    },
+    {
+      "name": "deid",
+      "one_line_profile": "Best effort anonymization for medical images",
+      "detailed_description": "A Python library for de-identifying (anonymizing) medical images, particularly DICOM files, to support privacy-compliant research and data sharing.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "anonymization",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pydicom/deid",
+      "help_website": [
+        "https://pydicom.github.io/deid/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "anonymization",
+        "privacy",
+        "de-identification"
+      ],
+      "id": 161
+    },
+    {
+      "name": "pydicom",
+      "one_line_profile": "A pure Python package for working with DICOM files",
+      "detailed_description": "pydicom is a pure Python package for parsing and modifying DICOM files. It allows easy reading and writing of DICOM data elements and is a foundational library for medical image processing in Python.",
+      "domains": [
+        "Med Imaging",
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "data_processing",
+        "metadata_handling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pydicom/pydicom",
+      "help_website": [
+        "https://pydicom.github.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "medical-imaging",
+        "python"
+      ],
+      "id": 162
+    },
+    {
+      "name": "pylibjpeg",
+      "one_line_profile": "Python framework for decoding JPEG images with DICOM support",
+      "detailed_description": "A Python framework for decoding JPEG images, specifically designed to support the various JPEG transfer syntaxes used in DICOM medical imaging data.",
+      "domains": [
+        "Med Imaging",
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "image_decoding",
+        "decompression"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pydicom/pylibjpeg",
+      "help_website": [
+        "https://github.com/pydicom/pylibjpeg"
+      ],
+      "license": "MIT",
+      "tags": [
+        "jpeg",
+        "dicom",
+        "decoding"
+      ],
+      "id": 163
+    },
+    {
+      "name": "pynetdicom",
+      "one_line_profile": "Python implementation of the DICOM networking protocol",
+      "detailed_description": "A Python implementation of the DICOM networking protocol (Service Class User and Service Class Provider). It allows users to create DICOM applications that can query, retrieve, and send medical images.",
+      "domains": [
+        "Med Imaging",
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "networking",
+        "data_transfer",
+        "pacs_communication"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pydicom/pynetdicom",
+      "help_website": [
+        "https://pydicom.github.io/pynetdicom/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "networking",
+        "scu",
+        "scp"
+      ],
+      "id": 164
+    },
+    {
+      "name": "pymedphys",
+      "one_line_profile": "Open standard library for Medical Physics",
+      "detailed_description": "A community-driven open-source library for Medical Physics, providing tools for quality assurance, DICOM manipulation, dosimetry, and gamma analysis.",
+      "domains": [
+        "Med Imaging",
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "medical_physics",
+        "quality_assurance",
+        "dosimetry"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pymedphys/pymedphys",
+      "help_website": [
+        "https://docs.pymedphys.com/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-physics",
+        "dicom",
+        "radiotherapy"
+      ],
+      "id": 165
+    },
+    {
+      "name": "ITK-SNAP",
+      "one_line_profile": "Interactive software for medical image segmentation",
+      "detailed_description": "A software application used to segment structures in 3D medical images. It provides semi-automatic segmentation using active contour methods as well as manual delineation and image navigation.",
+      "domains": [
+        "Med Imaging",
+        "H1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pyushkevich/itksnap",
+      "help_website": [
+        "http://www.itksnap.org/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "segmentation",
+        "medical-imaging",
+        "3d-visualization"
+      ],
+      "id": 166
+    },
+    {
+      "name": "cuda_spatial_deform",
+      "one_line_profile": "GPU-accelerated image augmentation for medical imaging",
+      "detailed_description": "A fast CUDA-based tool for performing spatial deformations (elastic deformation) on medical images, primarily used for data augmentation in deep learning pipelines.",
+      "domains": [
+        "Med Imaging",
+        "H1"
+      ],
+      "subtask_category": [
+        "augmentation",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Cuda",
+      "repo_url": "https://github.com/qsyao/cuda_spatial_deform",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cuda",
+        "augmentation",
+        "elastic-deformation"
+      ],
+      "id": 167
+    },
+    {
+      "name": "rt-utils",
+      "one_line_profile": "Library for creating and manipulating DICOM RTStructs",
+      "detailed_description": "A minimal Python library designed to facilitate the creation, manipulation, and conversion of DICOM RTStruct (Radiotherapy Structure Set) files, often used for segmentation masks in radiotherapy.",
+      "domains": [
+        "Med Imaging",
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "rtstruct_handling",
+        "mask_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/qurit/rt-utils",
+      "help_website": [
+        "https://rt-utils.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dicom-rt",
+        "radiotherapy",
+        "segmentation"
+      ],
+      "id": 168
+    },
+    {
+      "name": "pydicom-seg",
+      "one_line_profile": "Library for DICOM-SEG reading and writing",
+      "detailed_description": "A Python package for reading and writing DICOM-SEG (Segmentation) objects, bridging the gap between DICOM standards and scientific computing arrays (numpy).",
+      "domains": [
+        "Med Imaging",
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "io",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/razorx89/pydicom-seg",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom-seg",
+        "segmentation",
+        "pydicom"
+      ],
+      "id": 169
+    },
+    {
+      "name": "Evil-DICOM",
+      "one_line_profile": "C# DICOM Library",
+      "detailed_description": "A lightweight C# library for reading, manipulating, and writing DICOM files, serving as a .NET alternative for DICOM processing.",
+      "domains": [
+        "Med Imaging",
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "io",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/rexcardan/Evil-DICOM",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "c-sharp",
+        "dicom",
+        "dotnet"
+      ],
+      "id": 170
+    },
+    {
+      "name": "dcm2niix",
+      "one_line_profile": "DICOM to NIfTI converter",
+      "detailed_description": "A robust and widely used tool for converting medical images from DICOM format to NIfTI format, preserving BIDS-compatible metadata (JSON sidecars). Essential for neuroimaging and general medical image analysis pipelines.",
+      "domains": [
+        "Med Imaging",
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "io"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rordenlab/dcm2niix",
+      "help_website": [
+        "https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "dicom",
+        "nifti",
+        "conversion",
+        "neuroimaging"
+      ],
+      "id": 171
+    },
+    {
+      "name": "CheXbert",
+      "one_line_profile": "Automatic radiology report labeler using BERT",
+      "detailed_description": "A BERT-based model and tool for automatically extracting structured labels (presence of observations) from radiology reports, achieving performance comparable to expert radiologists.",
+      "domains": [
+        "Med Imaging",
+        "H1"
+      ],
+      "subtask_category": [
+        "labeling",
+        "nlp",
+        "report_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stanfordmlgroup/CheXbert",
+      "help_website": [
+        "https://stanfordmlgroup.github.io/projects/chexbert/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "nlp",
+        "radiology",
+        "labeling",
+        "bert"
+      ],
+      "id": 172
+    },
+    {
+      "name": "Starviewer",
+      "one_line_profile": "Cross-platform medical imaging software",
+      "detailed_description": "A cross-platform open-source medical imaging software dedicated to DICOM image viewing, navigation, and analysis, supporting various modalities and providing advanced visualization tools.",
+      "domains": [
+        "Med Imaging",
+        "H1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "analysis",
+        "diagnosis"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/starviewer-medical/starviewer",
+      "help_website": [
+        "http://www.starviewer.org/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "dicom-viewer",
+        "medical-imaging",
+        "visualization"
+      ],
+      "id": 173
+    },
+    {
+      "name": "arc-overhang",
+      "one_line_profile": "3D printer slicing algorithm for printing 90° overhangs without support",
+      "detailed_description": "A 3D printer slicing algorithm that enables printing of 90° overhangs without support material by using arc movements.",
+      "domains": [
+        "Manufacturing",
+        "3D Printing"
+      ],
+      "subtask_category": [
+        "slicing",
+        "manufacturing_process"
+      ],
+      "application_level": "solver",
+      "primary_language": "G-code",
+      "repo_url": "https://github.com/stmcculloch/arc-overhang",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "3d-printing",
+        "slicing",
+        "g-code"
+      ],
+      "id": 174
+    },
+    {
+      "name": "radiomics-tools",
+      "one_line_profile": "Image processing tools for radiomics analysis",
+      "detailed_description": "A collection of image processing tools designed for radiomics analysis, facilitating feature extraction from medical images.",
+      "domains": [
+        "H1",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "radiomics",
+        "feature_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/taznux/radiomics-tools",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "radiomics",
+        "medical-imaging",
+        "image-processing"
+      ],
+      "id": 175
+    },
+    {
+      "name": "WSI-analysis",
+      "one_line_profile": "Automatic Whole-Slide Image (WSI) preprocessing scripts",
+      "detailed_description": "Python scripts for automatic preprocessing of Whole-Slide Images (WSI), useful for pathology image analysis pipelines.",
+      "domains": [
+        "H1",
+        "Pathology"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "wsi_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tcxxxx/WSI-analysis",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "wsi",
+        "pathology",
+        "preprocessing"
+      ],
+      "id": 176
+    },
+    {
+      "name": "dicom-viewer",
+      "one_line_profile": "3D medical dataset viewer",
+      "detailed_description": "A tool for viewing medical datasets in 3D, supporting DICOM formats.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "dicom_viewing"
+      ],
+      "application_level": "platform",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/termijn/dicom-viewer",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dicom",
+        "visualization",
+        "3d-viewer"
+      ],
+      "id": 177
+    },
+    {
+      "name": "VR-DICOM-viewer",
+      "one_line_profile": "Virtual Reality DICOM viewer for CT scans",
+      "detailed_description": "A Virtual Reality project designed for interacting with DICOM data, specifically from CT scanned fractures.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "vr_interaction"
+      ],
+      "application_level": "platform",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/tobias2912/VR-DICOM-viewer",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "vr",
+        "dicom",
+        "visualization"
+      ],
+      "id": 178
+    },
+    {
+      "name": "dicomsdl",
+      "one_line_profile": "DICOM Software Development Library",
+      "detailed_description": "A library for developing software that interacts with DICOM files, providing low-level access and manipulation capabilities.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "data_handling",
+        "dicom_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/tsangel/dicomsdl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dicom",
+        "library",
+        "c"
+      ],
+      "id": 179
+    },
+    {
+      "name": "STU-Net",
+      "one_line_profile": "Large-scale pre-trained medical image segmentation model",
+      "detailed_description": "The largest pre-trained medical image segmentation model (1.4B parameters) based on a massive public dataset, enabling high-performance segmentation tasks.",
+      "domains": [
+        "H1",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uni-medical/STU-Net",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "segmentation",
+        "deep-learning",
+        "pre-trained-model"
+      ],
+      "id": 180
+    },
+    {
+      "name": "SliceBeam",
+      "one_line_profile": "3D Model slicer for Android devices",
+      "detailed_description": "A mobile application for slicing 3D models directly on Android devices, facilitating 3D printing workflows.",
+      "domains": [
+        "Manufacturing",
+        "3D Printing"
+      ],
+      "subtask_category": [
+        "slicing",
+        "manufacturing_process"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/utkabobr/SliceBeam",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "3d-printing",
+        "android",
+        "slicer"
+      ],
+      "id": 181
+    },
+    {
+      "name": "BoostMIS",
+      "one_line_profile": "Semi-supervised medical image segmentation with adaptive pseudo labeling",
+      "detailed_description": "Implementation of BoostMIS, a method for boosting medical image semi-supervised learning using adaptive pseudo labeling and informative active annotation.",
+      "domains": [
+        "H1",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "semi-supervised_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wannature/BoostMIS",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "segmentation",
+        "semi-supervised",
+        "active-learning"
+      ],
+      "id": 182
+    },
+    {
+      "name": "u-dicom-viewer",
+      "one_line_profile": "Web-based DICOM viewer",
+      "detailed_description": "A simple and accessible web browser-based DICOM viewer compatible with various devices.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "dicom_viewing"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/webnamics/u-dicom-viewer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "web-viewer",
+        "visualization"
+      ],
+      "id": 183
+    },
+    {
+      "name": "Dicom-Viewer",
+      "one_line_profile": "2D/3D DICOM display application",
+      "detailed_description": "A Python-based application for displaying and interacting with 2D and 3D DICOM medical images.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "dicom_viewing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wenyalintw/Dicom-Viewer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "visualization",
+        "python"
+      ],
+      "id": 184
+    },
+    {
+      "name": "brainstorm",
+      "one_line_profile": "Data augmentation using learned transforms for one-shot segmentation",
+      "detailed_description": "A tool implementing data augmentation techniques using learned transforms, specifically designed for one-shot medical image segmentation tasks.",
+      "domains": [
+        "H1",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "augmentation",
+        "segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xamyzhao/brainstorm",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-augmentation",
+        "one-shot-learning",
+        "segmentation"
+      ],
+      "id": 185
+    },
+    {
+      "name": "Slice3D",
+      "one_line_profile": "Multi-slice single view 3D reconstruction tool",
+      "detailed_description": "Slice3D performs multi-slice, occlusion-revealing, single-view 3D reconstruction, useful for recovering 3D structures from limited views.",
+      "domains": [
+        "H1",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "reconstruction",
+        "3d_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yizhiwang96/Slice3D",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "3d-reconstruction",
+        "computer-vision",
+        "medical-imaging"
+      ],
+      "id": 186
+    },
+    {
+      "name": "dicom2jpg",
+      "one_line_profile": "DICOM to image format converter",
+      "detailed_description": "A simple Python tool to convert DICOM files into common image formats (jpg, png, bmp, tiff) and numpy arrays for analysis.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ykuo2/dicom2jpg",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "conversion",
+        "python"
+      ],
+      "id": 187
+    },
+    {
+      "name": "S3_DeformFDM",
+      "one_line_profile": "General slicing framework for multi-axis 3D printing",
+      "detailed_description": "S^3-Slicer is a general slicing framework designed for multi-axis 3D printing, enabling complex fabrication tasks.",
+      "domains": [
+        "Manufacturing",
+        "3D Printing"
+      ],
+      "subtask_category": [
+        "slicing",
+        "manufacturing_process"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/zhangty019/S3_DeformFDM",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "3d-printing",
+        "slicing",
+        "multi-axis"
+      ],
+      "id": 188
+    },
+    {
+      "name": "ImageViewer",
+      "one_line_profile": "Simple C# DICOM image viewer",
+      "detailed_description": "A simple DICOM image viewer control implemented in C#, suitable for embedding in applications or simple viewing tasks.",
+      "domains": [
+        "H1",
+        "H1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "dicom_viewing"
+      ],
+      "application_level": "platform",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/zhaotianff/ImageViewer",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dicom",
+        "viewer",
+        "c#"
+      ],
+      "id": 189
+    },
+    {
+      "name": "Patho-GAN",
+      "one_line_profile": "GAN for retinal image generation and augmentation",
+      "detailed_description": "Patho-GAN provides tools for explainable diabetic retinopathy detection and retinal image generation (augmentation) using Generative Adversarial Networks.",
+      "domains": [
+        "H1",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "augmentation",
+        "generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zzdyyy/Patho-GAN",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gan",
+        "data-augmentation",
+        "retinal-images"
+      ],
+      "id": 190
+    },
+    {
+      "name": "Dual-Normalization",
+      "one_line_profile": "Cross-modality medical image segmentation tool",
+      "detailed_description": "Implementation of a generalizable cross-modality medical image segmentation method using style augmentation and dual normalization.",
+      "domains": [
+        "H1",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "domain_adaptation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zzzqzhou/Dual-Normalization",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "segmentation",
+        "domain-adaptation",
+        "medical-imaging"
+      ],
+      "id": 191
+    }
+  ]
+}

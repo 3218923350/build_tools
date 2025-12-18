@@ -1,0 +1,2410 @@
+{
+  "generated_at": "2025-12-16T06:38:02.648696+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "E2",
+      "leaf_cluster_name": "气候-数值模式与数据同化生态",
+      "domain": "Climate",
+      "typical_objects": "NetCDF/GRIB grids",
+      "task_chain": "模式→同化→评估→后处理→复现",
+      "tool_form": "模式组件 + 同化库 + 评测"
+    },
+    "unit": {
+      "unit_id": "E2-04",
+      "unit_name": "代理模式/ML天气气候",
+      "target_scale": "200–450",
+      "coverage_tools": "ML surrogates、operator learning"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] FuXi",
+        "[GH] MetNet",
+        "[GH] FengWu",
+        "[GH] ClimateLearn",
+        "[GH] NeuralGCM",
+        "[GH] Modulus",
+        "[GH] ClimaX",
+        "[GH] FourCastNet",
+        "[GH] Pangu-Weather",
+        "[GH] GraphCast",
+        "[GH] weather forecasting machine learning",
+        "[GH] climate modeling deep learning",
+        "[GH] neural operator",
+        "[GH] fourier neural operator",
+        "[GH] graph neural network weather",
+        "[GH] precipitation nowcasting",
+        "[GH] climate downscaling",
+        "[GH] surrogate model physics",
+        "[GH] earth system modeling ml",
+        "[GH] weather prediction transformer",
+        "[GH] atmospheric science ai",
+        "[GH] pde surrogate",
+        "[GH] physics-ml weather",
+        "[GH] data-driven weather prediction",
+        "[WEB] deep learning weather prediction github",
+        "[WEB] ai climate modeling tools github",
+        "[WEB] neural operator surrogate model github",
+        "[WEB] machine learning precipitation nowcasting github",
+        "[WEB] physics informed machine learning weather github",
+        "[WEB] climate downscaling deep learning github"
+      ],
+      "total_candidates": 1042,
+      "tool_candidates": 412,
+      "final_tools": 95
+    }
+  },
+  "tools": [
+    {
+      "name": "Pangu-Weather",
+      "one_line_profile": "Official implementation of the Pangu-Weather global weather forecasting model",
+      "detailed_description": "An official implementation of Pangu-Weather, a 3D high-resolution global weather forecasting model based on deep learning. It provides the model architecture and inference code for generating weather forecasts from reanalysis data.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "weather_forecasting",
+        "surrogate_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/198808xc/Pangu-Weather",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "weather-forecasting",
+        "deep-learning",
+        "pangu",
+        "meteorology"
+      ],
+      "id": 1
+    },
+    {
+      "name": "Super-Resolution-Neural-Operator",
+      "one_line_profile": "Neural operator framework for super-resolution of PDE solutions",
+      "detailed_description": "Implementation of the Super-Resolution Neural Operator (SRNO), a method designed to upscale low-resolution partial differential equation (PDE) solutions to high resolution, applicable in climate modeling and fluid dynamics.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "super_resolution",
+        "pde_solving"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/2y7c3/Super-Resolution-Neural-Operator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operator",
+        "super-resolution",
+        "pde",
+        "downscaling"
+      ],
+      "id": 2
+    },
+    {
+      "name": "BENO",
+      "one_line_profile": "Boundary-Embedded Neural Operator for PDEs with complex geometries",
+      "detailed_description": "A Boundary-Embedded Neural Operator (BENO) designed to solve partial differential equations on complex geometries with inhomogeneous boundary conditions, improving accuracy near boundaries.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "surrogate_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AI4Science-WestlakeU/beno",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operator",
+        "pde",
+        "boundary-conditions",
+        "complex-geometry"
+      ],
+      "id": 3
+    },
+    {
+      "name": "LE-PDE-UQ",
+      "one_line_profile": "Uncertainty quantification framework for deep learning-based PDE surrogates",
+      "detailed_description": "A framework that endows deep learning-based surrogate models with robust and efficient uncertainty quantification capabilities for both forward and inverse PDE problems.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/AI4Science-WestlakeU/le-pde-uq",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "uncertainty-quantification",
+        "pde",
+        "surrogate-model"
+      ],
+      "id": 4
+    },
+    {
+      "name": "WDNO",
+      "one_line_profile": "Wavelet Diffusion Neural Operator for generative PDE simulation",
+      "detailed_description": "Wavelet Diffusion Neural Operator (WDNO) utilizes diffusion models within wavelet space to perform generative simulation and control of partial differential equations.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "generative_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AI4Science-WestlakeU/wdno",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-model",
+        "wavelet",
+        "neural-operator",
+        "pde"
+      ],
+      "id": 5
+    },
+    {
+      "name": "ClimODE",
+      "one_line_profile": "Physics-informed Neural ODEs for climate and weather forecasting",
+      "detailed_description": "A climate and weather forecasting model that integrates physics-informed inductive biases using Neural Ordinary Differential Equations (ODEs) to model atmospheric dynamics.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "weather_forecasting",
+        "climate_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Aalto-QuML/ClimODE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-ode",
+        "weather-forecasting",
+        "physics-informed"
+      ],
+      "id": 6
+    },
+    {
+      "name": "TopoPyScale",
+      "one_line_profile": "Climate downscaling library for hillslope scale applications",
+      "detailed_description": "A Python library designed to perform climate downscaling of atmospheric forcing data to the hillslope scale, accounting for topographic effects.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "climate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ArcticSnow/TopoPyScale",
+      "help_website": [
+        "https://topopyscale.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "downscaling",
+        "topography",
+        "climate-data"
+      ],
+      "id": 7
+    },
+    {
+      "name": "FactFormer",
+      "one_line_profile": "Scalable Transformer for PDE surrogate modeling",
+      "detailed_description": "Official implementation of FactFormer, a factorized transformer architecture designed for scalable and efficient surrogate modeling of partial differential equations.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "pde_solving"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BaratiLab/FactFormer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "transformer",
+        "pde",
+        "surrogate-model"
+      ],
+      "id": 8
+    },
+    {
+      "name": "EFDO",
+      "one_line_profile": "Neural operator for magnetotelluric data forward modeling",
+      "detailed_description": "A neural operator network (EFDO) designed for fast forward modeling of magnetotelluric data in complex media, facilitating geophysical exploration.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "forward_modeling",
+        "geophysics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/CUG-EMI/EFDO",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "magnetotellurics",
+        "neural-operator",
+        "geophysics"
+      ],
+      "id": 9
+    },
+    {
+      "name": "pangu-weather-verify",
+      "one_line_profile": "Verification tool for Pangu-Weather model predictions",
+      "detailed_description": "A tool for validating the Pangu Weather Forecasting Model against real-world meteorological observations, aiding in model assessment and quality control.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "validation",
+        "model_evaluation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Clarmy/pangu-weather-verify",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "verification",
+        "pangu-weather",
+        "meteorology"
+      ],
+      "id": 10
+    },
+    {
+      "name": "dodola",
+      "one_line_profile": "Workflow tool for CMIP6 bias-adjustment and downscaling",
+      "detailed_description": "A containerized application designed to run individual tasks within a larger orchestrated workflow for CMIP6 climate data bias-adjustment and downscaling.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "bias_correction",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ClimateImpactLab/dodola",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cmip6",
+        "downscaling",
+        "bias-adjustment"
+      ],
+      "id": 11
+    },
+    {
+      "name": "NowcastingGPT",
+      "one_line_profile": "Transformer-based generative model for extreme precipitation nowcasting",
+      "detailed_description": "Implementation of a Transformer-based generative model specifically designed for nowcasting extreme precipitation events.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "nowcasting",
+        "precipitation_forecasting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Cmeo97/NowcastingGPT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nowcasting",
+        "transformer",
+        "precipitation"
+      ],
+      "id": 12
+    },
+    {
+      "name": "GPTCast",
+      "one_line_profile": "Generative pre-trained transformer for precipitation nowcasting",
+      "detailed_description": "A generative model based on GPT architecture adapted for precipitation nowcasting tasks.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "nowcasting",
+        "precipitation_forecasting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/DSIP-FBK/GPTCast",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gpt",
+        "nowcasting",
+        "precipitation"
+      ],
+      "id": 13
+    },
+    {
+      "name": "PyESD",
+      "one_line_profile": "Python package for Empirical Statistical Downscaling of climate data",
+      "detailed_description": "A Python package for Empirical Statistical Downscaling (ESD) of climate variables (e.g., precipitation, temperature) using predictors from reanalysis datasets and machine learning transfer functions.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "statistical_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Dan-Boat/PyESD",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "downscaling",
+        "climate-data",
+        "statistical-modeling"
+      ],
+      "id": 14
+    },
+    {
+      "name": "DiffCast",
+      "one_line_profile": "Residual diffusion framework for precipitation nowcasting",
+      "detailed_description": "A unified framework utilizing residual diffusion models for high-fidelity precipitation nowcasting, as presented at CVPR 2024.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "nowcasting",
+        "precipitation_forecasting",
+        "generative_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DeminYu98/DiffCast",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "diffusion-model",
+        "nowcasting",
+        "precipitation"
+      ],
+      "id": 15
+    },
+    {
+      "name": "Allen-Cahn-FNO",
+      "one_line_profile": "Fourier Neural Operators for solving Allen-Cahn equations",
+      "detailed_description": "An implementation of Fourier Neural Operators specifically tailored to solve the Allen-Cahn partial differential equations, often used in phase-field modeling.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "phase_field_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Duke-MG-Lab/Allen-Cahn-FNO",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "allen-cahn",
+        "fno",
+        "pde"
+      ],
+      "id": 16
+    },
+    {
+      "name": "CLT-material-properties",
+      "one_line_profile": "Calculator for composite laminate material properties",
+      "detailed_description": "A tool to calculate properties of composite laminate materials, including Young's modulus, stiffness matrix, and failure criteria application.",
+      "domains": [
+        "E4"
+      ],
+      "subtask_category": [
+        "material_property_calculation",
+        "mechanics_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Eacaen/CLT-material-properties",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "materials-science",
+        "composite-materials",
+        "mechanics"
+      ],
+      "id": 17
+    },
+    {
+      "name": "OpenCastKit",
+      "one_line_profile": "Open-source toolkit for running AI weather models like FourCastNet and GraphCast",
+      "detailed_description": "An open-source solution providing implementations and workflows for state-of-the-art AI weather forecasting models, including FourCastNet and GraphCast, facilitating their use in research and production.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "weather_forecasting",
+        "model_inference"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HFAiLab/OpenCastKit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "weather-forecasting",
+        "fourcastnet",
+        "graphcast",
+        "ai-weather"
+      ],
+      "id": 18
+    },
+    {
+      "name": "SmaAt-UNet",
+      "one_line_profile": "Small Attentive U-Net architecture for precipitation nowcasting",
+      "detailed_description": "A PyTorch implementation of SmaAt-UNet, a deep learning model designed for efficient precipitation nowcasting using attention mechanisms within a U-Net structure.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "precipitation_nowcasting",
+        "weather_forecasting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HansBambel/SmaAt-UNet",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "precipitation-nowcasting",
+        "unet",
+        "attention-mechanism",
+        "pytorch"
+      ],
+      "id": 19
+    },
+    {
+      "name": "Pangu-Weather-ReadyToGo",
+      "one_line_profile": "Unofficial workflow for running Huawei's Pangu Weather Model",
+      "detailed_description": "A demonstration and workflow tool for the Pangu Weather Model, covering the entire process from input data preparation to forecasting and result visualization.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "weather_forecasting",
+        "data_visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HaxyMoly/Pangu-Weather-ReadyToGo",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pangu-weather",
+        "inference",
+        "visualization",
+        "meteorology"
+      ],
+      "id": 20
+    },
+    {
+      "name": "Precipitation-Nowcasting (TrajGRU)",
+      "one_line_profile": "PyTorch implementation of TrajGRU for precipitation nowcasting",
+      "detailed_description": "A widely used PyTorch implementation of the Trajectory GRU (TrajGRU) model for precipitation nowcasting, serving as a reference solver for this task.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "precipitation_nowcasting",
+        "deep_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Hzzone/Precipitation-Nowcasting",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "trajgru",
+        "nowcasting",
+        "precipitation",
+        "pytorch"
+      ],
+      "id": 21
+    },
+    {
+      "name": "JAX-DIPS",
+      "one_line_profile": "Differentiable interfacial PDE solver based on JAX",
+      "detailed_description": "A JAX-based library for solving partial differential equations (PDEs) with interfaces, supporting differentiability for optimization and inverse problems.",
+      "domains": [
+        "E2-04"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "scientific_computing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JAX-DIPS/JAX-DIPS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "jax",
+        "pde-solver",
+        "differentiable-programming"
+      ],
+      "id": 22
+    },
+    {
+      "name": "PinnDE",
+      "one_line_profile": "Python library for solving differential equations with PINNs and DeepONets",
+      "detailed_description": "A library designed to solve differential equations using Physics-Informed Neural Networks (PINNs) and Deep Operator Networks (DeepONets), facilitating physics-ML integration.",
+      "domains": [
+        "E2-04"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JB55Matthews/PinnDE",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "pinn",
+        "deeponet",
+        "differential-equations",
+        "physics-ml"
+      ],
+      "id": 23
+    },
+    {
+      "name": "fldgen",
+      "one_line_profile": "Generator for global climate fields consistent with ESM pathways",
+      "detailed_description": "An R package developed by JGCRI that generates random global climate fields consistent with a given global mean temperature pathway and spatial/temporal correlations from Earth System Models.",
+      "domains": [
+        "E2"
+      ],
+      "subtask_category": [
+        "climate_modeling",
+        "data_synthesis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/JGCRI/fldgen",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "climate-change",
+        "esm",
+        "field-generation",
+        "r-package"
+      ],
+      "id": 24
+    },
+    {
+      "name": "NeurOLight",
+      "one_line_profile": "Neural Operator-based simulation framework for photonic devices",
+      "detailed_description": "A simulation framework leveraging Neural Operators for modeling integrated photonic devices, enabling fast and accurate physics simulations.",
+      "domains": [
+        "E2-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "operator_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JeremieMelo/NeurOLight",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operator",
+        "photonics",
+        "simulation",
+        "physics-ml"
+      ],
+      "id": 25
+    },
+    {
+      "name": "ConvLSTM-Pytorch",
+      "one_line_profile": "PyTorch implementation of Convolutional LSTM",
+      "detailed_description": "A reusable implementation of Convolutional LSTM in PyTorch, widely used for spatiotemporal forecasting tasks like precipitation nowcasting.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "precipitation_nowcasting",
+        "spatiotemporal_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KimUyen/ConvLSTM-Pytorch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "convlstm",
+        "pytorch",
+        "nowcasting",
+        "deep-learning"
+      ],
+      "id": 26
+    },
+    {
+      "name": "KoopmanLab",
+      "one_line_profile": "Library for Koopman Neural Operators with PyTorch",
+      "detailed_description": "A PyTorch-based library for implementing and training Koopman Neural Operators, facilitating the modeling of dynamical systems.",
+      "domains": [
+        "E2-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "dynamical_systems"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Koopman-Laboratory/KoopmanLab",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "koopman-operator",
+        "neural-operator",
+        "pytorch",
+        "dynamics"
+      ],
+      "id": 27
+    },
+    {
+      "name": "ldcast",
+      "one_line_profile": "Latent diffusion models for generative precipitation nowcasting",
+      "detailed_description": "A library by MeteoSwiss implementing latent diffusion models specifically for generative precipitation nowcasting, enabling high-resolution probabilistic forecasting.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "precipitation_nowcasting",
+        "generative_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MeteoSwiss/ldcast",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "diffusion-models",
+        "nowcasting",
+        "meteoswiss",
+        "generative-ai"
+      ],
+      "id": 28
+    },
+    {
+      "name": "GARD",
+      "one_line_profile": "Generalized Analog Regression Downscaling tool",
+      "detailed_description": "A Fortran-based tool developed by NCAR for statistical downscaling of climate data using generalized analog regression techniques.",
+      "domains": [
+        "E2"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "climate_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/NCAR/GARD",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "downscaling",
+        "ncar",
+        "climate-data",
+        "regression"
+      ],
+      "id": 29
+    },
+    {
+      "name": "ICAR",
+      "one_line_profile": "Intermediate Complexity Atmospheric Research model",
+      "detailed_description": "A simplified atmospheric model developed by NCAR that allows for computationally efficient downscaling and atmospheric research compared to full physics models.",
+      "domains": [
+        "E2"
+      ],
+      "subtask_category": [
+        "atmospheric_modeling",
+        "downscaling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/NCAR/icar",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "atmospheric-model",
+        "ncar",
+        "downscaling",
+        "meteorology"
+      ],
+      "id": 30
+    },
+    {
+      "name": "NVIDIA Modulus",
+      "one_line_profile": "Physics-ML framework for building and training physics-informed models",
+      "detailed_description": "An open-source deep learning framework by NVIDIA (formerly SimNet) for building, training, and fine-tuning physics-ML models, including PINNs and Neural Operators.",
+      "domains": [
+        "E2-04"
+      ],
+      "subtask_category": [
+        "physics_ml",
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NVIDIA/physicsnemo",
+      "help_website": [
+        "https://developer.nvidia.com/modulus"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "physics-ml",
+        "digital-twin",
+        "nvidia",
+        "pinn"
+      ],
+      "id": 31
+    },
+    {
+      "name": "FourCastNet",
+      "one_line_profile": "Global weather forecasting model using Fourier Neural Operators",
+      "detailed_description": "The official implementation of FourCastNet, a data-driven global weather forecasting model that leverages Fourier Neural Operators for high-resolution predictions.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "weather_forecasting",
+        "operator_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NVlabs/FourCastNet",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "weather-forecasting",
+        "fno",
+        "deep-learning",
+        "climate"
+      ],
+      "id": 32
+    },
+    {
+      "name": "FengWu-4DVar",
+      "one_line_profile": "4DVar data assimilation integrated with large weather models",
+      "detailed_description": "A tool integrating the FengWu large weather model with 4DVar data assimilation techniques to improve global weather forecasting accuracy and initial condition estimation.",
+      "domains": [
+        "Climate",
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "weather_forecasting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenEarthLab/FengWu-4DVar",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "data-assimilation",
+        "weather-model",
+        "4dvar",
+        "fengwu"
+      ],
+      "id": 33
+    },
+    {
+      "name": "DINOZAUR",
+      "one_line_profile": "Diffusion multiplier and uncertainty quantification for FNOs",
+      "detailed_description": "Official implementation of the DINOZAUR method, providing a light-weight diffusion multiplier for uncertainty quantification in Fourier Neural Operators, developed by PhysicsX.",
+      "domains": [
+        "Physics",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "operator_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PhysicsXLtd/DINOZAUR",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "diffusion-model",
+        "fno",
+        "uncertainty-quantification",
+        "physics-ml"
+      ],
+      "id": 34
+    },
+    {
+      "name": "MPP (Multiple Physics Pretraining)",
+      "one_line_profile": "Pretraining framework for physical surrogate models",
+      "detailed_description": "A library for Multiple Physics Pretraining (MPP), enabling the training of foundation models across diverse physical systems to improve surrogate modeling performance.",
+      "domains": [
+        "Physics",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "pretraining",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PolymathicAI/multiple_physics_pretraining",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "foundation-model",
+        "physics-ml",
+        "pretraining",
+        "surrogate"
+      ],
+      "id": 35
+    },
+    {
+      "name": "Constrained Downscaling",
+      "one_line_profile": "Physics-constrained deep learning for climate downscaling",
+      "detailed_description": "A framework for incorporating physical constraints into deep learning architectures for climate data downscaling and super-resolution tasks.",
+      "domains": [
+        "Climate",
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "super_resolution"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RolnickLab/constrained-downscaling",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "physics-constrained",
+        "downscaling",
+        "climate-change",
+        "super-resolution"
+      ],
+      "id": 36
+    },
+    {
+      "name": "downscaleR",
+      "one_line_profile": "R package for climate data bias correction and downscaling",
+      "detailed_description": "An R package providing tools for bias correction and statistical downscaling of climate data, part of the climate4R bundle.",
+      "domains": [
+        "Climate",
+        "E2"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "bias_correction"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/SantanderMetGroup/downscaleR",
+      "help_website": [
+        "https://github.com/SantanderMetGroup/downscaleR/wiki"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "climate-data",
+        "downscaling",
+        "bias-correction",
+        "climate4r"
+      ],
+      "id": 37
+    },
+    {
+      "name": "FluxNeuralOperators.jl",
+      "one_line_profile": "Neural Operator library for Julia (Flux ecosystem)",
+      "detailed_description": "A Julia library implementing DeepONets, Fourier Neural Operators, and Physics-Informed Neural Operators within the Flux ML ecosystem for solving PDEs.",
+      "domains": [
+        "Physics",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/FluxNeuralOperators.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operators",
+        "fno",
+        "deeponet",
+        "sciml"
+      ],
+      "id": 38
+    },
+    {
+      "name": "NeuralOperators.jl",
+      "one_line_profile": "Comprehensive Neural Operator library for Julia",
+      "detailed_description": "A Julia library for training and evaluating neural operators, including FNOs and DeepONets, for solving partial differential equations.",
+      "domains": [
+        "Physics",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/NeuralOperators.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operators",
+        "scientific-ml",
+        "julia",
+        "pde"
+      ],
+      "id": 39
+    },
+    {
+      "name": "DGMR",
+      "one_line_profile": "Deep Generative Models of Radar for precipitation nowcasting",
+      "detailed_description": "An implementation of DeepMind's DGMR model for skillful short-term precipitation nowcasting using radar data.",
+      "domains": [
+        "Climate",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "nowcasting",
+        "precipitation_forecasting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TQRTQ/DGMR",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "precipitation",
+        "nowcasting",
+        "generative-model",
+        "radar"
+      ],
+      "id": 40
+    },
+    {
+      "name": "WNO",
+      "one_line_profile": "Wavelet Neural Operator for parametric PDEs",
+      "detailed_description": "Implementation of the Wavelet Neural Operator for solving parametric partial differential equations in computational mechanics.",
+      "domains": [
+        "Physics",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "pde_solving"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TapasTripura/WNO",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "wavelet-neural-operator",
+        "pde",
+        "mechanics"
+      ],
+      "id": 41
+    },
+    {
+      "name": "TSDB",
+      "one_line_profile": "Time Series Data Bean for loading public datasets",
+      "detailed_description": "A Python toolbox that provides unified loading for 172 public time series datasets, including weather and environmental data, facilitating benchmarking and analysis.",
+      "domains": [
+        "Data Science",
+        "Climate"
+      ],
+      "subtask_category": [
+        "data_loading",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/WenjieDu/TSDB",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "time-series",
+        "datasets",
+        "weather-data",
+        "benchmarking"
+      ],
+      "id": 42
+    },
+    {
+      "name": "UniWeat",
+      "one_line_profile": "Unified Framework for Weather Prediction",
+      "detailed_description": "A unified deep learning framework designed for weather prediction tasks, supporting various models and datasets, developed by Westlake AI.",
+      "domains": [
+        "Climate",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "weather_prediction",
+        "forecasting"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Westlake-AI/UniWeat",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "weather-forecasting",
+        "deep-learning",
+        "framework"
+      ],
+      "id": 43
+    },
+    {
+      "name": "Deep-DeePC",
+      "one_line_profile": "Data-enabled predictive control using deep learning",
+      "detailed_description": "A tool for learning the DeePC operator using neural networks to bypass online optimization in data-enabled predictive control, applicable to physical systems.",
+      "domains": [
+        "Physics",
+        "Control"
+      ],
+      "subtask_category": [
+        "predictive_control",
+        "operator_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Zhang-Xuewen/Deep-DeePC",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "control-theory",
+        "deepc",
+        "predictive-control",
+        "physics-informed"
+      ],
+      "id": 44
+    },
+    {
+      "name": "continuiti",
+      "one_line_profile": "Library for learning function operators with neural networks",
+      "detailed_description": "A Python library designed for learning function operators using neural networks, facilitating the development of operator learning models for scientific computing tasks.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aai-institute/continuiti",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "operator-learning",
+        "neural-operators",
+        "pde-solving"
+      ],
+      "id": 45
+    },
+    {
+      "name": "ClimateLearn",
+      "one_line_profile": "Python library for accessing climate data and benchmarking machine learning models",
+      "detailed_description": "A library that standardizes the process of accessing climate data, processing it, and benchmarking various machine learning models for weather and climate forecasting tasks.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "forecasting",
+        "downscaling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aditya-grover/climate-learn",
+      "help_website": [
+        "https://climatelearn.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "climate-modeling",
+        "benchmarking",
+        "weather-forecasting"
+      ],
+      "id": 46
+    },
+    {
+      "name": "pyClim-SDM",
+      "one_line_profile": "Statistical Downscaling for Climate Change Projections with GUI",
+      "detailed_description": "A tool providing statistical downscaling methods for climate change projections, featuring a Graphical User Interface to facilitate usage by researchers.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "climate_projection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ahernanzl/pyClim-SDM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "downscaling",
+        "climate-change",
+        "gui"
+      ],
+      "id": 47
+    },
+    {
+      "name": "FourierFlow",
+      "one_line_profile": "Framework for benchmarking Fourier Neural Operators",
+      "detailed_description": "A framework designed to develop, train, and benchmark various Fourier Neural Operator architectures for solving partial differential equations.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/alasdairtran/fourierflow",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fno",
+        "pde-solving",
+        "neural-operators"
+      ],
+      "id": 48
+    },
+    {
+      "name": "geo_neural_op",
+      "one_line_profile": "Geometric Neural Operators for tasks on point-cloud representations",
+      "detailed_description": "A library implementing Geometric Neural Operators (GNPs) for machine learning tasks on point-cloud representations, including solvers for geometric PDEs and curvature estimation.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "pde_solving",
+        "geometric_deep_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/atzberg/geo_neural_op",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "geometric-deep-learning",
+        "point-clouds",
+        "pde"
+      ],
+      "id": 49
+    },
+    {
+      "name": "DDRP",
+      "one_line_profile": "Degree-Day, Risk, and Pest event mapping system",
+      "detailed_description": "A platform for predicting phenology and climate suitability of invasive species and pests, capable of using historical, real-time, or future downscaled climate data.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "impact_modeling",
+        "phenology_prediction",
+        "risk_mapping"
+      ],
+      "application_level": "platform",
+      "primary_language": "R",
+      "repo_url": "https://github.com/bbarker505/ddrp_v2",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ecology",
+        "climate-impact",
+        "pest-modeling"
+      ],
+      "id": 50
+    },
+    {
+      "name": "climr",
+      "one_line_profile": "R package for downscaling monthly climate data for North America",
+      "detailed_description": "An R package developed by the BC Government for downscaling monthly climate data, facilitating high-resolution climate analysis for North America.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "climate_data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/bcgov/climr",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "downscaling",
+        "climate-data",
+        "r-package"
+      ],
+      "id": 51
+    },
+    {
+      "name": "cmip6-downscaling",
+      "one_line_profile": "Pipelines for downscaling CMIP6 climate data",
+      "detailed_description": "A set of tools and pipelines for performing statistical and dynamical downscaling on CMIP6 climate model outputs, developed by CarbonPlan.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "data_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/carbonplan/cmip6-downscaling",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cmip6",
+        "downscaling",
+        "climate-data"
+      ],
+      "id": 52
+    },
+    {
+      "name": "pde-surrogate",
+      "one_line_profile": "Physics-constrained deep learning for surrogate modeling",
+      "detailed_description": "A library for creating high-dimensional surrogate models using physics-constrained deep learning, enabling uncertainty quantification without labeled data.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "uncertainty_quantification",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cics-nd/pde-surrogate",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pinn",
+        "surrogate-model",
+        "uncertainty-quantification"
+      ],
+      "id": 53
+    },
+    {
+      "name": "nircam_grism",
+      "one_line_profile": "Data processing codes for JWST NIRCam/WFSS Grism data",
+      "detailed_description": "A collection of codes and data tools for processing and analyzing Grism data from the James Webb Space Telescope (JWST) NIRCam instrument, supporting astronomical research.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/fengwusun/nircam_grism",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "jwst",
+        "astronomy",
+        "data-reduction"
+      ],
+      "id": 54
+    },
+    {
+      "name": "FMI-PPN",
+      "one_line_profile": "Operational probabilistic precipitation nowcasting system",
+      "detailed_description": "The Finnish Meteorological Institute Probabilistic Precipitation Nowcasting system (FMI-PPN) is an operational software package for generating short-term precipitation forecasts.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "nowcasting",
+        "operational_forecasting"
+      ],
+      "application_level": "platform",
+      "primary_language": "C",
+      "repo_url": "https://github.com/fmidev/fmippn-oper",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "precipitation-nowcasting",
+        "meteorology",
+        "operational-system"
+      ],
+      "id": 55
+    },
+    {
+      "name": "PreDiff",
+      "one_line_profile": "Precipitation nowcasting using Latent Diffusion Models",
+      "detailed_description": "Official implementation of PreDiff, a model leveraging Latent Diffusion Models for high-resolution precipitation nowcasting, capable of generating probabilistic forecasts.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "nowcasting",
+        "generative_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gaozhihan/PreDiff",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "diffusion-models",
+        "precipitation-nowcasting",
+        "deep-learning"
+      ],
+      "id": 56
+    },
+    {
+      "name": "U-FNO",
+      "one_line_profile": "Enhanced Fourier Neural Operator for multiphase flow",
+      "detailed_description": "U-FNO is a deep learning model based on Fourier Neural Operators, optimized for simulating and predicting multiphase flow dynamics in porous media.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "surrogate_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/gegewen/ufno",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "fno",
+        "multiphase-flow",
+        "pde-solver"
+      ],
+      "id": 57
+    },
+    {
+      "name": "ConvLSTM-2",
+      "one_line_profile": "Convolutional LSTM implementation for precipitation nowcasting",
+      "detailed_description": "A widely used implementation of the Convolutional LSTM (ConvLSTM) architecture specifically tailored for precipitation nowcasting tasks.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "nowcasting",
+        "sequence_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/giserh/ConvLSTM-2",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "convlstm",
+        "precipitation-nowcasting",
+        "deep-learning"
+      ],
+      "id": 58
+    },
+    {
+      "name": "hippyflow",
+      "one_line_profile": "Surrogate construction for parametric PDE maps",
+      "detailed_description": "A library for constructing dimension-reduced surrogates for parametric Partial Differential Equation (PDE) maps, part of the hippylib ecosystem for inverse problems.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "dimension_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hippylib/hippyflow",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pde",
+        "surrogate-modeling",
+        "inverse-problems"
+      ],
+      "id": 59
+    },
+    {
+      "name": "RainNet",
+      "one_line_profile": "Convolutional neural network for radar-based precipitation nowcasting",
+      "detailed_description": "A deep learning model (CNN) designed for precipitation nowcasting using radar data, providing a robust baseline for weather prediction tasks.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "nowcasting",
+        "radar_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hydrogo/rainnet",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "precipitation",
+        "radar",
+        "cnn"
+      ],
+      "id": 60
+    },
+    {
+      "name": "rainymotion",
+      "one_line_profile": "Optical flow library for radar-based precipitation nowcasting",
+      "detailed_description": "A Python library implementing various optical flow techniques for tracking and forecasting precipitation movement based on radar imagery.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "nowcasting",
+        "optical_flow"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hydrogo/rainymotion",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "optical-flow",
+        "precipitation",
+        "radar"
+      ],
+      "id": 61
+    },
+    {
+      "name": "Weather4cast",
+      "one_line_profile": "Benchmark and toolkit for the IARAI Weather4cast Challenge",
+      "detailed_description": "The official codebase for the Weather4cast competition, providing data loaders, baseline models, and evaluation tools for high-resolution weather prediction.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "forecasting"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/iarai/weather4cast",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "competition",
+        "benchmark",
+        "weather-forecasting"
+      ],
+      "id": 62
+    },
+    {
+      "name": "DLWP",
+      "one_line_profile": "Deep Learning Weather Prediction framework",
+      "detailed_description": "A Python framework for building and training deep learning models for global weather prediction, supporting various data processing and modeling tasks.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "weather_forecasting",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jweyn/DLWP",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "weather-prediction",
+        "climate-modeling"
+      ],
+      "id": 63
+    },
+    {
+      "name": "DLWP-CS",
+      "one_line_profile": "Deep Learning Weather Prediction on Cubed Sphere",
+      "detailed_description": "An extension of the DLWP framework specifically designed for global weather prediction models operating on cubed-sphere grids.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "weather_forecasting",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jweyn/DLWP-CS",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cubed-sphere",
+        "weather-prediction",
+        "deep-learning"
+      ],
+      "id": 64
+    },
+    {
+      "name": "metnet3-pytorch (kyegomez)",
+      "one_line_profile": "PyTorch implementation of MetNet-3 for weather forecasting",
+      "detailed_description": "An open-source implementation of Google DeepMind's MetNet-3 model, providing a neural network architecture for high-resolution precipitation nowcasting.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "precipitation_nowcasting",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kyegomez/metnet3",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "metnet3",
+        "precipitation",
+        "nowcasting",
+        "pytorch"
+      ],
+      "id": 65
+    },
+    {
+      "name": "WeatherLearn",
+      "one_line_profile": "PyTorch-based Weather Deep Learning Model Zoo",
+      "detailed_description": "A comprehensive library providing implementations of various deep learning models for weather forecasting, facilitating benchmarking and research.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "weather_forecasting",
+        "modeling",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lizhuoq/WeatherLearn",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "model-zoo",
+        "weather-forecasting",
+        "deep-learning"
+      ],
+      "id": 66
+    },
+    {
+      "name": "metnet3-pytorch (lucidrains)",
+      "one_line_profile": "High-quality PyTorch implementation of MetNet-3",
+      "detailed_description": "A robust and reusable PyTorch implementation of the MetNet-3 neural weather model, designed for easy integration into weather forecasting pipelines.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "precipitation_nowcasting",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lucidrains/metnet3-pytorch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "metnet3",
+        "weather-model",
+        "pytorch",
+        "deepmind"
+      ],
+      "id": 67
+    },
+    {
+      "name": "esd",
+      "one_line_profile": "Empirical-Statistical Downscaling tool for climate data",
+      "detailed_description": "An R package designed for climate and weather data analysis, empirical-statistical downscaling, and visualization, maintained by the Norwegian Meteorological Institute.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "data_analysis",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/metno/esd",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "downscaling",
+        "climate-analysis",
+        "meteorology"
+      ],
+      "id": 68
+    },
+    {
+      "name": "ClimaX",
+      "one_line_profile": "Foundation model for weather and climate",
+      "detailed_description": "A foundation model for weather and climate science that can be fine-tuned for various downstream tasks such as forecasting and downscaling.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "foundation_model",
+        "weather_forecasting",
+        "climate_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/ClimaX",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "foundation-model",
+        "climate-ai",
+        "weather-forecasting"
+      ],
+      "id": 69
+    },
+    {
+      "name": "climate_learn",
+      "one_line_profile": "Deep learning library for climate modeling",
+      "detailed_description": "A Python library that standardizes data access, model training, and evaluation for applying deep learning to climate science problems.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "climate_modeling",
+        "benchmarking",
+        "data_loading"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/monocongo/climate_learn",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "climate-modeling",
+        "deep-learning",
+        "benchmark"
+      ],
+      "id": 70
+    },
+    {
+      "name": "coordax",
+      "one_line_profile": "JAX-based library for managing coordinate systems and fields in physics models",
+      "detailed_description": "A library designed to handle coordinate axes and fields for JAX-based physical simulations, serving as a foundational component for the NeuralGCM climate model.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "scientific_data_processing",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neuralgcm/coordax",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "jax",
+        "coordinates",
+        "physics-modeling",
+        "neuralgcm"
+      ],
+      "id": 71
+    },
+    {
+      "name": "dinosaur",
+      "one_line_profile": "Differentiable dynamical core for atmospheric modeling in JAX",
+      "detailed_description": "A differentiable dynamical core (dycore) implemented in JAX, designed for atmospheric modeling and serving as the physics backbone for NeuralGCM.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/neuralgcm/dinosaur",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dynamical-core",
+        "atmospheric-model",
+        "jax",
+        "differentiable-physics"
+      ],
+      "id": 72
+    },
+    {
+      "name": "NeuralGCM",
+      "one_line_profile": "Hybrid machine learning and physics model for Earth's atmosphere",
+      "detailed_description": "A state-of-the-art climate model that combines a differentiable physics-based dynamical core with machine learning components to simulate Earth's atmosphere efficiently.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling",
+        "weather_forecasting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neuralgcm/neuralgcm",
+      "help_website": [
+        "https://neuralgcm.github.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "climate-modeling",
+        "hybrid-model",
+        "weather-forecasting",
+        "jax"
+      ],
+      "id": 73
+    },
+    {
+      "name": "neuraloperator",
+      "one_line_profile": "Comprehensive library for training neural operators (FNO, DeepONet) for PDEs",
+      "detailed_description": "A library for learning operators in infinite-dimensional spaces, providing implementations of Fourier Neural Operators (FNO) and other architectures for solving partial differential equations (PDEs).",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "modeling",
+        "operator_learning",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neuraloperator/neuraloperator",
+      "help_website": [
+        "https://neuraloperator.github.io/neuraloperator/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fno",
+        "pde",
+        "operator-learning",
+        "deep-learning"
+      ],
+      "id": 74
+    },
+    {
+      "name": "graph_weather",
+      "one_line_profile": "PyTorch implementation of GraphCast and other graph-based weather models",
+      "detailed_description": "An open-source implementation of graph-based global weather forecasting models, including the architecture described in the 'Forecasting Global Weather with Graph Neural Networks' paper.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "weather_forecasting",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openclimatefix/graph_weather",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "graph-neural-networks",
+        "weather-forecasting",
+        "pytorch",
+        "graphcast"
+      ],
+      "id": 75
+    },
+    {
+      "name": "metnet",
+      "one_line_profile": "PyTorch implementation of MetNet and MetNet-2 for precipitation forecasting",
+      "detailed_description": "A PyTorch implementation of Google Research's MetNet family of models, designed for high-resolution precipitation nowcasting.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "weather_forecasting",
+        "nowcasting",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openclimatefix/metnet",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "metnet",
+        "precipitation",
+        "nowcasting",
+        "pytorch"
+      ],
+      "id": 76
+    },
+    {
+      "name": "ClimDown",
+      "one_line_profile": "R library for daily climate model downscaling",
+      "detailed_description": "A library provided by the Pacific Climate Impacts Consortium (PCIC) for statistical downscaling of daily climate model data, implementing methods like BCCAQ.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "scientific_data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/pacificclimate/ClimDown",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "climate-downscaling",
+        "r-package",
+        "climate-data"
+      ],
+      "id": 77
+    },
+    {
+      "name": "scikit-downscale",
+      "one_line_profile": "Statistical climate downscaling library compatible with Scikit-learn",
+      "detailed_description": "A Python library for statistical climate downscaling that integrates with the Pangeo ecosystem and Scikit-learn, providing various correction and downscaling utilities.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "scientific_data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pangeo-data/scikit-downscale",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "downscaling",
+        "climate",
+        "scikit-learn",
+        "pangeo"
+      ],
+      "id": 78
+    },
+    {
+      "name": "pysteps",
+      "one_line_profile": "Python framework for short-term ensemble precipitation nowcasting",
+      "detailed_description": "A modular open-source library for short-term ensemble prediction systems (nowcasting) of precipitation, offering various optical flow and stochastic noise generation methods.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "nowcasting",
+        "weather_forecasting",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pySTEPS/pysteps",
+      "help_website": [
+        "https://pysteps.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "nowcasting",
+        "precipitation",
+        "weather",
+        "ensemble-prediction"
+      ],
+      "id": 79
+    },
+    {
+      "name": "ClimateDiffuse",
+      "one_line_profile": "Diffusion models for climate downscaling",
+      "detailed_description": "A Python implementation of diffusion models specifically tailored for climate data downscaling tasks, enabling high-resolution climate projections from lower-resolution inputs.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "climate_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/robbiewatt1/ClimateDiffuse",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "diffusion-models",
+        "downscaling",
+        "climate-science"
+      ],
+      "id": 80
+    },
+    {
+      "name": "torch-cfd",
+      "one_line_profile": "Neural Operator-Assisted Computational Fluid Dynamics in PyTorch",
+      "detailed_description": "A library for implementing Neural Operator-assisted Computational Fluid Dynamics (CFD) simulations using PyTorch, facilitating the integration of ML surrogates into fluid dynamics workflows.",
+      "domains": [
+        "E2",
+        "E2-04",
+        "Physics"
+      ],
+      "subtask_category": [
+        "cfd_simulation",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scaomath/torch-cfd",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cfd",
+        "neural-operators",
+        "pytorch",
+        "fluid-dynamics"
+      ],
+      "id": 81
+    },
+    {
+      "name": "Climate2Weather",
+      "one_line_profile": "Generative framework for probabilistic climate downscaling",
+      "detailed_description": "A generative framework designed for probabilistic, spatiotemporally coherent downscaling of climate simulations, bridging the gap between coarse climate models and local weather impacts.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "generative_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/schmidtjonathan/Climate2Weather",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "downscaling",
+        "generative-models",
+        "climate-simulation"
+      ],
+      "id": 82
+    },
+    {
+      "name": "Data-driven-Precipitation-Nowcasting",
+      "one_line_profile": "Satellite imagery-based precipitation nowcasting model",
+      "detailed_description": "Official implementation of a data-driven precipitation nowcasting model using satellite imagery, presented at AAAI 2025, providing tools for short-term weather prediction.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "nowcasting",
+        "precipitation_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/seominseok0429/Data-driven-Precipitation-Nowcasting-Using-Satellite-Imagery",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nowcasting",
+        "satellite-imagery",
+        "precipitation"
+      ],
+      "id": 83
+    },
+    {
+      "name": "FNO4CO2",
+      "one_line_profile": "Fourier Neural Operators for carbon sequestration monitoring",
+      "detailed_description": "A framework using Fourier Neural Operators (FNO) for learned coupled inversion in carbon sequestration monitoring and forecasting, developed by the SLIM group.",
+      "domains": [
+        "E2",
+        "E2-04",
+        "Geophysics"
+      ],
+      "subtask_category": [
+        "inverse_problem",
+        "carbon_sequestration",
+        "surrogate_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/slimgroup/FNO4CO2",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fno",
+        "carbon-sequestration",
+        "inversion",
+        "geophysics"
+      ],
+      "id": 84
+    },
+    {
+      "name": "dfno",
+      "one_line_profile": "Distributed Fourier Neural Operators library",
+      "detailed_description": "A Python library for implementing Distributed Fourier Neural Operators, enabling the training of large-scale FNO models across distributed computing resources.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "model_training",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/slimgroup/dfno",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "distributed-computing",
+        "fno",
+        "neural-operators"
+      ],
+      "id": 85
+    },
+    {
+      "name": "PhaseNO",
+      "one_line_profile": "Phase Neural Operator implementation",
+      "detailed_description": "Implementation of the Phase Neural Operator, a specialized neural operator architecture for solving partial differential equations, particularly useful in physics and climate modeling.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "operator_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/sun-hongyu/PhaseNO",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operators",
+        "pde",
+        "phase-neural-operator"
+      ],
+      "id": 86
+    },
+    {
+      "name": "HKO-7",
+      "one_line_profile": "Benchmark model for precipitation nowcasting (ConvLSTM/TrajGRU)",
+      "detailed_description": "Source code for the influential 'Deep Learning for Precipitation Nowcasting' paper, providing implementations of ConvLSTM and TrajGRU models which serve as benchmarks in the field.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "nowcasting",
+        "precipitation_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sxjscience/HKO-7",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nowcasting",
+        "convlstm",
+        "trajgru",
+        "benchmark"
+      ],
+      "id": 87
+    },
+    {
+      "name": "metnet_pytorch",
+      "one_line_profile": "PyTorch implementation of MetNet for weather forecasting",
+      "detailed_description": "A PyTorch and fastai implementation of the MetNet architecture, a deep neural network for precipitation forecasting originally developed by Google Research.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "weather_forecasting",
+        "precipitation_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/tcapelle/metnet_pytorch",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "metnet",
+        "weather-forecasting",
+        "pytorch"
+      ],
+      "id": 88
+    },
+    {
+      "name": "neurop_invdes",
+      "one_line_profile": "Neural operator surrogates for electromagnetic inverse design",
+      "detailed_description": "A library providing neural operator surrogates specifically for electromagnetic inverse design problems, facilitating rapid simulation and optimization in photonics.",
+      "domains": [
+        "E2-04",
+        "Physics"
+      ],
+      "subtask_category": [
+        "inverse_design",
+        "surrogate_modeling",
+        "electromagnetics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tfp-photonics/neurop_invdes",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operators",
+        "inverse-design",
+        "photonics",
+        "surrogate"
+      ],
+      "id": 89
+    },
+    {
+      "name": "NUNO",
+      "one_line_profile": "Non-Uniform Neural Operator implementation",
+      "detailed_description": "Implementation of the Non-Uniform Neural Operator (NUNO), designed to handle non-uniform grids in operator learning tasks for solving PDEs.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "operator_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/thu-ml/NUNO",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operators",
+        "pde",
+        "non-uniform-grids"
+      ],
+      "id": 90
+    },
+    {
+      "name": "bcsd-python",
+      "one_line_profile": "Bias Correction Spatial Disaggregation (BCSD) tool",
+      "detailed_description": "A Python tool that utilizes CDO to apply daily climate downscaling using the Bias Correction Spatial Disaggregation (BCSD) method.",
+      "domains": [
+        "E2"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "bias_correction"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tjvandal/bcsd-python",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "downscaling",
+        "bcsd",
+        "climate-data"
+      ],
+      "id": 91
+    },
+    {
+      "name": "DeepSD",
+      "one_line_profile": "Super-resolution for climate downscaling",
+      "detailed_description": "Implementation of DeepSD, a deep learning-based super-resolution approach for climate downscaling, enabling high-resolution precipitation and temperature projections.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "downscaling",
+        "super_resolution"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tjvandal/deepsd",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "downscaling",
+        "super-resolution",
+        "deep-learning"
+      ],
+      "id": 92
+    },
+    {
+      "name": "FuXi",
+      "one_line_profile": "Cascade ML system for 15-day global weather forecasting",
+      "detailed_description": "A state-of-the-art cascade machine learning forecasting system capable of providing 15-day global weather forecasts with high accuracy.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "weather_forecasting",
+        "global_circulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tpys/FuXi",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "weather-forecasting",
+        "machine-learning",
+        "global-weather"
+      ],
+      "id": 93
+    },
+    {
+      "name": "AI-VarDA",
+      "one_line_profile": "Modular data assimilation framework for AI-based and traditional variational algorithms",
+      "detailed_description": "A modular data assimilation framework supporting both traditional and AI-based variational algorithms (FengWu-4DVar, VAE-Var, LoRA-EnVar). It features pluggable interfaces for forecast models, background error representations, and observation operators, facilitating research in hybrid AI-physics data assimilation.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "weather_forecasting",
+        "variational_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xiaoyi018/AI-VarDA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "data-assimilation",
+        "4dvar",
+        "ai-weather",
+        "lora",
+        "variational-methods"
+      ],
+      "id": 94
+    },
+    {
+      "name": "FuXi-DA",
+      "one_line_profile": "Deep learning data assimilation framework for satellite observations",
+      "detailed_description": "A generalized deep learning data assimilation framework specifically designed for assimilating satellite observations. It likely serves as the data assimilation component or extension for the FuXi weather forecasting model ecosystem.",
+      "domains": [
+        "E2",
+        "E2-04"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "satellite_data_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xuxiaoze/FuXi-DA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "data-assimilation",
+        "satellite-observations",
+        "deep-learning",
+        "fuxi"
+      ],
+      "id": 95
+    }
+  ]
+}

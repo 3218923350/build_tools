@@ -1,0 +1,2305 @@
+{
+  "generated_at": "2025-12-16T03:55:06.210479+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "P1",
+      "leaf_cluster_name": "物理仿真-CFD 求解器与湍流生态",
+      "domain": "Physics/CFD",
+      "typical_objects": "meshes/fields",
+      "task_chain": "网格→求解→模型→后处理→验证→UQ",
+      "tool_form": "solver + pre/post + UQ"
+    },
+    "unit": {
+      "unit_id": "P1-06",
+      "unit_name": "AI4CFD：神经PDE/算子学习/ROM/代理",
+      "target_scale": "250–600",
+      "coverage_tools": "PINN、FNO、DeepONet、ROM"
+    },
+    "search": {
+      "target_candidates": 600,
+      "queries": [
+        "[GH] MindScience",
+        "[GH] JAX-CFD",
+        "[GH] PaddleScience",
+        "[GH] PhiFlow",
+        "[GH] neuraloperator",
+        "[GH] NeuralPDE.jl",
+        "[GH] NVIDIA Modulus",
+        "[GH] DeepXDE",
+        "[GH] physics informed neural network",
+        "[GH] neural operator",
+        "[GH] fourier neural operator",
+        "[GH] deeponet",
+        "[GH] reduced order model cfd",
+        "[GH] surrogate model cfd",
+        "[GH] neural pde solver",
+        "[GH] ai4cfd",
+        "[GH] physics ml",
+        "[GH] fluid dynamics deep learning",
+        "[GH] pinn solver",
+        "[GH] data driven cfd",
+        "[WEB] physics informed neural networks framework github",
+        "[WEB] neural operator learning cfd github",
+        "[WEB] deep learning fluid dynamics solver github",
+        "[WEB] reduced order model cfd surrogate github",
+        "[WEB] ai4cfd open source tools github"
+      ],
+      "total_candidates": 703,
+      "tool_candidates": 376,
+      "final_tools": 91
+    }
+  },
+  "tools": [
+    {
+      "name": "Super-Resolution-Neural-Operator",
+      "one_line_profile": "Neural operator framework for super-resolution in PDE simulations",
+      "detailed_description": "Super-Resolution Neural Operator, in CVPR 2023. A deep learning method to enhance the resolution of partial differential equation solutions.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "super_resolution",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/2y7c3/Super-Resolution-Neural-Operator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "super-resolution",
+        "neural-operator",
+        "pde"
+      ],
+      "id": 1
+    },
+    {
+      "name": "BENO",
+      "one_line_profile": "Boundary-embedded neural operator for complex boundary shapes",
+      "detailed_description": "[ICLR24] A boundary-embedded neural operator that incorporates complex boundary shape and inhomogeneous boundary values for PDE solving.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "boundary_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AI4Science-WestlakeU/beno",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operator",
+        "boundary-conditions",
+        "pde"
+      ],
+      "id": 2
+    },
+    {
+      "name": "WDNO",
+      "one_line_profile": "Wavelet Diffusion Neural Operator for generative PDE simulation",
+      "detailed_description": "[ICLR 2025] Wavelet Diffusion Neural Operator (WDNO) uses diffusion models on wavelet space for generative PDE simulation and control.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "generative_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AI4Science-WestlakeU/wdno",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-model",
+        "wavelet",
+        "neural-operator"
+      ],
+      "id": 3
+    },
+    {
+      "name": "NSFnets",
+      "one_line_profile": "Physics-Informed Neural Networks for Navier-Stokes equations",
+      "detailed_description": "PINN implementation specifically designed for solving Navier–Stokes equations in fluid dynamics.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Alexzihaohu/NSFnets",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pinn",
+        "navier-stokes",
+        "cfd"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Conservative PINNs",
+      "one_line_profile": "Conservative Physics-Informed Neural Networks for conservation laws",
+      "detailed_description": "A conservative physics-informed neural network (cPINN) on decomposed domains for nonlinear conservation laws, enforcing flux continuity.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "conservation_laws"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AmeyaJagtap/Conservative_PINNs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cpinn",
+        "conservation-laws",
+        "domain-decomposition"
+      ],
+      "id": 5
+    },
+    {
+      "name": "XPINNs",
+      "one_line_profile": "Extended Physics-Informed Neural Networks for domain decomposition",
+      "detailed_description": "Extended Physics-Informed Neural Networks (XPINNs): A Generalized Space-Time Domain Decomposition Based Deep Learning Framework for Nonlinear Partial Differential Equations.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "domain_decomposition"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AmeyaJagtap/XPINNs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "xpinn",
+        "domain-decomposition",
+        "pde"
+      ],
+      "id": 6
+    },
+    {
+      "name": "pyLowOrder",
+      "one_line_profile": "High performance parallel Low Order Modelling library",
+      "detailed_description": "High performance parallel Low Order Modelling library by BSC - UPM, designed for reduced order modeling in physics simulations.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ArnauMiro/pyLowOrder",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rom",
+        "model-reduction",
+        "hpc"
+      ],
+      "id": 7
+    },
+    {
+      "name": "XLB",
+      "one_line_profile": "Accelerated Lattice Boltzmann library for Physics-based ML",
+      "detailed_description": "XLB: Accelerated Lattice Boltzmann (XLB) for Physics-based ML. A JAX-based differentiable fluid simulation library.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "fluid_simulation",
+        "lattice_boltzmann"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Autodesk/XLB",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "lbm",
+        "jax",
+        "cfd"
+      ],
+      "id": 8
+    },
+    {
+      "name": "MeshDQN",
+      "one_line_profile": "Deep reinforcement learning for CFD mesh refinement",
+      "detailed_description": "Using deep reinforcement learning for refining meshes in computational fluid dynamics, automating the mesh generation process.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "mesh_refinement",
+        "mesh_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BaratiLab/MeshDQN",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "mesh-refinement",
+        "reinforcement-learning",
+        "cfd"
+      ],
+      "id": 9
+    },
+    {
+      "name": "FlamePINN-1D",
+      "one_line_profile": "PINN solver for 1D laminar flames",
+      "detailed_description": "Physics-informed neural networks to solve forward and inverse problems of 1D laminar flames, developed by CAME-THU.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "combustion_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CAME-THU/FlamePINN-1D",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pinn",
+        "combustion",
+        "inverse-problem"
+      ],
+      "id": 10
+    },
+    {
+      "name": "EFDO",
+      "one_line_profile": "Neural operator for magnetotelluric data forward modeling",
+      "detailed_description": "The EFDO neural operator network is used for fast forward modeling of magnetotelluric data in complex media.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "forward_modeling",
+        "geophysics_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/CUG-EMI/EFDO",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "neural-operator",
+        "geophysics",
+        "magnetotelluric"
+      ],
+      "id": 11
+    },
+    {
+      "name": "PINNs_wave_equation",
+      "one_line_profile": "PINN solver for 1D wave equations",
+      "detailed_description": "An implementation of Physics-Informed Neural Networks (PINNs) to solve various forward and inverse problems for the 1 dimensional wave equation.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "wave_propagation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DCN-FAU-AvH/PINNs_wave_equation",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pinn",
+        "wave-equation",
+        "inverse-problem"
+      ],
+      "id": 12
+    },
+    {
+      "name": "Stiff-PINN",
+      "one_line_profile": "Physics-Informed Neural Network for Stiff Chemical Kinetics",
+      "detailed_description": "Stiff-PINN: Physics-Informed Neural Network designed to handle stiff chemical kinetics problems.",
+      "domains": [
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "chemical_kinetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DENG-MIT/Stiff-PINN",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "stiff-pinn",
+        "chemical-kinetics",
+        "stiff-ode"
+      ],
+      "id": 13
+    },
+    {
+      "name": "graph-physics",
+      "one_line_profile": "GNN training framework for physics simulation on meshes",
+      "detailed_description": "This repo lets you train GNN (MeshGraphNet, transformers, etc) to simulate physics on unstructured grids like meshes.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "physics_simulation",
+        "gnn_training"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DonsetPG/graph-physics",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gnn",
+        "meshgraphnet",
+        "physics-simulation"
+      ],
+      "id": 14
+    },
+    {
+      "name": "Allen-Cahn-FNO",
+      "one_line_profile": "Fourier Neural Operators for Allen Cahn PDE",
+      "detailed_description": "Fourier Neural Operators implementation specifically to solve for Allen Cahn PDE equations.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "phase_field_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Duke-MG-Lab/Allen-Cahn-FNO",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "fno",
+        "allen-cahn",
+        "pde"
+      ],
+      "id": 15
+    },
+    {
+      "name": "pinn-pytorch",
+      "one_line_profile": "Deep learning library for solving differential equations",
+      "detailed_description": "Deep learning library for solving differential equations on top of PyTorch.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "deep_learning_framework"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EdgeLLM/pinn-pytorch",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pinn",
+        "pytorch",
+        "pde"
+      ],
+      "id": 16
+    },
+    {
+      "name": "ED-HNN",
+      "one_line_profile": "Equivariant Hypergraph Diffusion Neural Operators",
+      "detailed_description": "[ICLR 2023] Equivariant Hypergraph Diffusion Neural Operators implementation for geometric deep learning on physics systems.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "hypergraph_diffusion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Graph-COM/ED-HNN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "equivariant-nn",
+        "hypergraph",
+        "neural-operator"
+      ],
+      "id": 17
+    },
+    {
+      "name": "Separable Operator Networks",
+      "one_line_profile": "Extreme-scale operator learning library for parametric PDEs",
+      "detailed_description": "A library implementing separable operator networks for learning operators associated with parametric partial differential equations, designed for extreme-scale applications.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HewlettPackard/separable-operator-networks",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "operator-learning",
+        "pde",
+        "parametric-pde"
+      ],
+      "id": 18
+    },
+    {
+      "name": "PINNICLE",
+      "one_line_profile": "PINN framework for ice sheet modeling",
+      "detailed_description": "A general Physics-Informed Neural Network (PINN) framework specifically designed for solving ice sheet modeling problems, integrating fluid dynamics principles.",
+      "domains": [
+        "P1",
+        "P1-06",
+        "Earth Science"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ISSMteam/PINNICLE",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "pinn",
+        "ice-sheet-modeling",
+        "glaciology"
+      ],
+      "id": 19
+    },
+    {
+      "name": "AccelerateCFD CE",
+      "one_line_profile": "Platform for creating reduced order models from high fidelity CFD",
+      "detailed_description": "Community Edition of the AccelerateCFD platform, providing tools to generate reduced order models (ROMs) from high-fidelity Computational Fluid Dynamics (CFD) data.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "surrogate_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/IllinoisRocstar/AccelerateCFD_CE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "rom",
+        "reduced-order-model"
+      ],
+      "id": 20
+    },
+    {
+      "name": "JAX-DIPS",
+      "one_line_profile": "Differentiable interfacial PDE solver using JAX",
+      "detailed_description": "A differentiable solver for partial differential equations involving interfaces, built on JAX to enable gradient-based optimization and learning.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JAX-DIPS/JAX-DIPS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "jax",
+        "pde-solver",
+        "differentiable-physics"
+      ],
+      "id": 21
+    },
+    {
+      "name": "PinnDE",
+      "one_line_profile": "Library for solving differential equations with PINNs and DeepONets",
+      "detailed_description": "A Python library providing implementations of Physics-Informed Neural Networks (PINNs) and Deep Operator Networks (DeepONets) for solving differential equations.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JB55Matthews/PinnDE",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "pinn",
+        "deeponet",
+        "differential-equations"
+      ],
+      "id": 22
+    },
+    {
+      "name": "NeurOLight",
+      "one_line_profile": "Neural Operator-based photonic device simulation framework",
+      "detailed_description": "A simulation framework utilizing neural operators for modeling and simulating integrated photonic devices, offering faster inference than traditional solvers.",
+      "domains": [
+        "P1",
+        "P1-06",
+        "Photonics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "surrogate_modeling"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JeremieMelo/NeurOLight",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operator",
+        "photonics",
+        "simulation"
+      ],
+      "id": 23
+    },
+    {
+      "name": "graphGalerkin",
+      "one_line_profile": "Physics-informed graph neural Galerkin networks for PDEs",
+      "detailed_description": "A unified framework using physics-informed graph neural networks based on the Galerkin method to solve forward and inverse PDE problems.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "inverse_problem"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Jianxun-Wang/graphGalerkin",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gnn",
+        "galerkin-method",
+        "pde"
+      ],
+      "id": 24
+    },
+    {
+      "name": "PhyGeoNet",
+      "one_line_profile": "Geometry-adaptive physics-informed CNNs for parametric PDEs",
+      "detailed_description": "A physics-informed deep learning framework using geometry-adaptive convolutional neural networks to solve parametric PDEs on irregular domains.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "surrogate_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Jianxun-Wang/phygeonet",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cnn",
+        "irregular-domain",
+        "parametric-pde"
+      ],
+      "id": 25
+    },
+    {
+      "name": "PINNs-based-MPC",
+      "one_line_profile": "Nonlinear model predictive control using PINNs",
+      "detailed_description": "A framework for nonlinear model predictive control (NMPC) of multi-body dynamics that utilizes Physics-Informed Neural Networks (PINNs) to approximate system dynamics.",
+      "domains": [
+        "P1",
+        "P1-06",
+        "Control"
+      ],
+      "subtask_category": [
+        "control",
+        "dynamics_modeling"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Jonas-Nicodemus/PINNs-based-MPC",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mpc",
+        "pinn",
+        "control-theory"
+      ],
+      "id": 26
+    },
+    {
+      "name": "KoopmanLab",
+      "one_line_profile": "PyTorch library for Koopman Neural Operators",
+      "detailed_description": "A deep learning library for implementing Koopman Neural Operators to model nonlinear dynamical systems using PyTorch.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "dynamics_modeling",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Koopman-Laboratory/KoopmanLab",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "koopman-operator",
+        "dynamical-systems",
+        "pytorch"
+      ],
+      "id": 27
+    },
+    {
+      "name": "xPINNs",
+      "one_line_profile": "Extended Physics-Informed Neural Networks library",
+      "detailed_description": "A library implementing extended Physics-Informed Neural Networks (xPINNs), including Bayesian variants, for modeling real-world nonlinear dynamical systems.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "uncertainty_quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/LivingMatterLab/xPINNs",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bayesian-pinn",
+        "xpinn",
+        "dynamical-systems"
+      ],
+      "id": 28
+    },
+    {
+      "name": "disruption-py",
+      "one_line_profile": "Framework for disruption analysis of fusion plasmas",
+      "detailed_description": "An open-source physics-based scientific framework designed for the analysis and prediction of disruptions in fusion plasmas, tailored for AI/ML applications.",
+      "domains": [
+        "P1",
+        "Plasma Physics"
+      ],
+      "subtask_category": [
+        "analysis",
+        "prediction"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MIT-PSFC/disruption-py",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fusion",
+        "plasma-physics",
+        "disruption-analysis"
+      ],
+      "id": 29
+    },
+    {
+      "name": "DAS",
+      "one_line_profile": "Deep adaptive sampling method for high-dimensional PDEs",
+      "detailed_description": "Implementation of a deep adaptive sampling method designed to efficiently solve high-dimensional partial differential equations.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "sampling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MJfadeaway/DAS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "adaptive-sampling",
+        "high-dimensional-pde",
+        "deep-learning"
+      ],
+      "id": 30
+    },
+    {
+      "name": "ml4gw",
+      "one_line_profile": "Torch utilities for gravitational wave physics",
+      "detailed_description": "A collection of PyTorch utilities and tools specifically designed for applying machine learning techniques to gravitational wave physics data and problems.",
+      "domains": [
+        "Physics",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "signal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ML4GW/ml4gw",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gravitational-waves",
+        "pytorch",
+        "physics-ml"
+      ],
+      "id": 31
+    },
+    {
+      "name": "EGNO",
+      "one_line_profile": "Equivariant Graph Neural Operator for 3D Dynamics",
+      "detailed_description": "Implementation of the Equivariant Graph Neural Operator (EGNO), a model for simulating 3D dynamics that respects physical symmetries.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "dynamics_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MinkaiXu/EGNO",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "graph-neural-operator",
+        "equivariance",
+        "3d-dynamics"
+      ],
+      "id": 32
+    },
+    {
+      "name": "DrivAerNet",
+      "one_line_profile": "Large-scale multimodal car dataset with CFD simulations",
+      "detailed_description": "A large-scale dataset containing 3D car models and their corresponding Computational Fluid Dynamics (CFD) simulation data, designed for benchmarking deep learning models in aerodynamics.",
+      "domains": [
+        "P1",
+        "Automotive"
+      ],
+      "subtask_category": [
+        "dataset",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Mohamedelrefaie/DrivAerNet",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "dataset",
+        "aerodynamics"
+      ],
+      "id": 33
+    },
+    {
+      "name": "NVIDIA Modulus (physicsnemo)",
+      "one_line_profile": "Deep learning framework for physics-ML models",
+      "detailed_description": "A comprehensive deep learning framework (formerly SimNet, referenced here as physicsnemo) for building, training, and fine-tuning physics-informed machine learning models and neural operators.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling",
+        "pde_solving"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NVIDIA/physicsnemo",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "physics-ml",
+        "digital-twin",
+        "simulation"
+      ],
+      "id": 34
+    },
+    {
+      "name": "PF-PINNs",
+      "one_line_profile": "PINN framework for phase field equations",
+      "detailed_description": "A Physics-Informed Neural Networks (PINN) framework specifically tailored for solving coupled Allen-Cahn and Cahn-Hilliard phase field equations.",
+      "domains": [
+        "P1",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "simulation"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NanxiiChen/PF-PINNs",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "phase-field",
+        "pinn",
+        "allen-cahn"
+      ],
+      "id": 35
+    },
+    {
+      "name": "neurodiffeq",
+      "one_line_profile": "Library for solving differential equations with neural networks",
+      "detailed_description": "A PyTorch-based library for solving ordinary and partial differential equations (ODEs/PDEs) using neural networks, designed for ease of use in research and education.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "ode_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NeuroDiffGym/neurodiffeq",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "differential-equations",
+        "pytorch",
+        "neural-networks"
+      ],
+      "id": 36
+    },
+    {
+      "name": "PML-UCF PINN",
+      "one_line_profile": "Physics-informed neural networks package",
+      "detailed_description": "A Python package for implementing and training Physics-Informed Neural Networks (PINNs) for solving forward and inverse problems in physics.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "inverse_problem"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PML-UCF/pinn",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pinn",
+        "physics-informed",
+        "solver"
+      ],
+      "id": 37
+    },
+    {
+      "name": "PaddleCFD",
+      "one_line_profile": "Deep learning toolkit for fluid mechanics",
+      "detailed_description": "A deep learning toolkit based on PaddlePaddle for surrogate modeling, equation discovery, and flow control in fluid mechanics.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "equation_discovery",
+        "flow_control"
+      ],
+      "application_level": "toolkit",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PaddlePaddle/PaddleCFD",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cfd",
+        "paddlepaddle",
+        "fluid-mechanics"
+      ],
+      "id": 38
+    },
+    {
+      "name": "PaddleScience",
+      "one_line_profile": "AI-driven scientific computing SDK",
+      "detailed_description": "An SDK and library for developing AI-driven scientific computing applications, supporting various physics-informed learning tasks.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "scientific_computing",
+        "simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PaddlePaddle/PaddleScience",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ai4science",
+        "paddlepaddle",
+        "scientific-computing"
+      ],
+      "id": 39
+    },
+    {
+      "name": "NeuralSolvers",
+      "one_line_profile": "Neural network based solvers for partial differential equations and inverse problems",
+      "detailed_description": "A PyTorch library implementing physics-informed neural networks (PINNs) for solving partial differential equations and inverse problems, featuring various neural network architectures and training strategies.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "inverse_problem"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Photon-AI-Research/NeuralSolvers",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pinn",
+        "pde-solver",
+        "pytorch",
+        "inverse-problems"
+      ],
+      "id": 40
+    },
+    {
+      "name": "PINN-elastodynamics",
+      "one_line_profile": "Physics-informed neural network for elastodynamics problems",
+      "detailed_description": "A specific implementation of Physics-Informed Neural Networks (PINN) designed to solve elastodynamics problems, serving as a reference solver for solid mechanics simulations.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Raocp/PINN-elastodynamics",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pinn",
+        "elastodynamics",
+        "solid-mechanics"
+      ],
+      "id": 41
+    },
+    {
+      "name": "PINN-laminar-flow",
+      "one_line_profile": "Physics-informed neural network for solving fluid dynamics problems",
+      "detailed_description": "A PINN-based solver specifically tailored for laminar flow problems in fluid dynamics, providing a reference implementation for AI-driven CFD tasks.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "cfd_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Raocp/PINN-laminar-flow",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pinn",
+        "fluid-dynamics",
+        "laminar-flow",
+        "cfd"
+      ],
+      "id": 42
+    },
+    {
+      "name": "PINN-pBTE",
+      "one_line_profile": "PINN solver for Multiscale Mode-Resolved Phonon Boltzmann Transport Equation",
+      "detailed_description": "A specialized Physics-Informed Neural Network solver for the Phonon Boltzmann Transport Equation (pBTE), addressing multiscale heat transport problems.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RuiyangLi6/PINN-pBTE",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pinn",
+        "boltzmann-transport",
+        "heat-transfer",
+        "multiscale"
+      ],
+      "id": 43
+    },
+    {
+      "name": "DiffEqFlux.jl",
+      "one_line_profile": "Scientific machine learning (SciML) library for Julia",
+      "detailed_description": "A comprehensive Julia library for Scientific Machine Learning (SciML), integrating differential equation solvers with neural networks (Neural ODEs, SDEs, DAEs) for physics-informed modeling and simulation.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "modeling",
+        "pde_solving",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DiffEqFlux.jl",
+      "help_website": [
+        "https://docs.sciml.ai/DiffEqFlux/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "sciml",
+        "julia",
+        "neural-ode",
+        "pde-solver"
+      ],
+      "id": 44
+    },
+    {
+      "name": "FluxNeuralOperators.jl",
+      "one_line_profile": "Neural Operator library for Julia (DeepONet, FNO)",
+      "detailed_description": "A Julia library providing implementations of various neural operators including DeepONets and Fourier Neural Operators (FNO) for operator learning and surrogate modeling in physics.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/FluxNeuralOperators.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operator",
+        "fno",
+        "deeponet",
+        "julia"
+      ],
+      "id": 45
+    },
+    {
+      "name": "NeuralOperators.jl",
+      "one_line_profile": "Neural Operators in Julia",
+      "detailed_description": "A SciML library for training neural operators (like FNO, DeepONet) in Julia, facilitating data-driven operator learning for PDEs.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/NeuralOperators.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operator",
+        "sciml",
+        "julia"
+      ],
+      "id": 46
+    },
+    {
+      "name": "NeuralPDE.jl",
+      "one_line_profile": "Physics-Informed Neural Networks (PINN) Solvers for Julia",
+      "detailed_description": "A robust library for solving partial differential equations using Physics-Informed Neural Networks (PINNs) within the Julia SciML ecosystem, supporting automated discretization and training.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/NeuralPDE.jl",
+      "help_website": [
+        "https://docs.sciml.ai/NeuralPDE/stable/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "pinn",
+        "pde-solver",
+        "julia",
+        "sciml"
+      ],
+      "id": 47
+    },
+    {
+      "name": "OperatorLearning.jl",
+      "one_line_profile": "Operator Learning library for Julia",
+      "detailed_description": "A Julia library focused on operator learning techniques for scientific machine learning, enabling the learning of mappings between infinite-dimensional function spaces.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/OperatorLearning.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "operator-learning",
+        "sciml",
+        "julia"
+      ],
+      "id": 48
+    },
+    {
+      "name": "PINN-for-NS-equation",
+      "one_line_profile": "PyTorch implementation of PINN for 2D Navier-Stokes equations",
+      "detailed_description": "A widely-starred PyTorch implementation of Physics-Informed Neural Networks specifically for solving the two-dimensional Navier-Stokes equations, serving as a standard reference solver.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "cfd_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Shengfeng233/PINN-for-NS-equation",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pinn",
+        "navier-stokes",
+        "cfd",
+        "pytorch"
+      ],
+      "id": 49
+    },
+    {
+      "name": "PI-DeepONet",
+      "one_line_profile": "Physics-informed DeepONet implementation",
+      "detailed_description": "An implementation of Physics-Informed DeepONet (Deep Operator Network) from scratch, enabling operator learning with physical constraints.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "surrogate_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ShuaiGuo16/PI-DeepONet",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deeponet",
+        "physics-informed",
+        "operator-learning"
+      ],
+      "id": 50
+    },
+    {
+      "name": "WNO",
+      "one_line_profile": "Wavelet Neural Operator for solving parametric PDEs",
+      "detailed_description": "Implementation of the Wavelet Neural Operator (WNO) for solving parametric partial differential equations in computational mechanics.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "pde_solving"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TapasTripura/WNO",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "wno",
+        "wavelet-neural-operator",
+        "computational-mechanics"
+      ],
+      "id": 51
+    },
+    {
+      "name": "SNO",
+      "one_line_profile": "Spectral Neural Operator implementation",
+      "detailed_description": "Implementation of the Spectral Neural Operator (SNO) for solving partial differential equations, offering an alternative spectral method to FNO.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "pde_solving"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/VLSF/SNO",
+      "help_website": [],
+      "license": "CC0-1.0",
+      "tags": [
+        "sno",
+        "spectral-neural-operator",
+        "pde-solver"
+      ],
+      "id": 52
+    },
+    {
+      "name": "PararealML",
+      "one_line_profile": "Machine learning boosted parallel-in-time differential equation solver",
+      "detailed_description": "A framework combining the Parareal algorithm with machine learning to accelerate parallel-in-time solving of differential equations.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "acceleration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ViktorC/PararealML",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "parareal",
+        "parallel-computing",
+        "ml-solver"
+      ],
+      "id": 53
+    },
+    {
+      "name": "PINN-Battery-Prognostics",
+      "one_line_profile": "PINN for Li-ion Battery State of Health and RUL prediction",
+      "detailed_description": "A Physics-Informed Neural Network application for predicting the State of Health (SoH) and Remaining Useful Life (RUL) of Li-ion batteries, integrating electrochemical physics with data-driven modeling.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "prognostics",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/WenPengfei0823/PINN-Battery-Prognostics",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pinn",
+        "battery",
+        "prognostics",
+        "rul"
+      ],
+      "id": 54
+    },
+    {
+      "name": "AttnPINN-for-RUL-Estimation",
+      "one_line_profile": "Self-Attention and PINN framework for RUL prediction",
+      "detailed_description": "A framework combining self-attention mechanisms with Physics-Informed Neural Networks for estimating the Remaining Useful Life (RUL) of systems.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "prognostics",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/XinyuanLiao/AttnPINN-for-RUL-Estimation",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pinn",
+        "attention-mechanism",
+        "rul",
+        "prognostics"
+      ],
+      "id": 55
+    },
+    {
+      "name": "Sophon.jl",
+      "one_line_profile": "Efficient training of Physics-Informed Neural Networks in Julia",
+      "detailed_description": "A Julia library designed to streamline and accelerate the training of Physics-Informed Neural Networks (PINNs), offering optimized performance for scientific machine learning tasks.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "training_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/YichengDWu/Sophon.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pinn",
+        "julia",
+        "sciml",
+        "optimization"
+      ],
+      "id": 56
+    },
+    {
+      "name": "continuiti",
+      "one_line_profile": "Learning function operators with neural networks",
+      "detailed_description": "A Python library for learning function operators (like Neural Operators) using neural networks, facilitating data-driven modeling of continuous systems.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aai-institute/continuiti",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "neural-operator",
+        "function-learning",
+        "pde-solver"
+      ],
+      "id": 57
+    },
+    {
+      "name": "twophasePINN",
+      "one_line_profile": "Physics-informed neural networks for two-phase flow problems",
+      "detailed_description": "A specialized PINN implementation for solving complex two-phase flow problems in fluid dynamics.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "cfd_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aaronbuhendwa/twophasePINN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pinn",
+        "two-phase-flow",
+        "cfd"
+      ],
+      "id": 58
+    },
+    {
+      "name": "Fourier-Neural-Operator",
+      "one_line_profile": "Implementation of Fourier Neural Operator using PyTorch",
+      "detailed_description": "A PyTorch implementation of the Fourier Neural Operator (FNO) for solving partial differential equations, serving as a reusable component for operator learning tasks.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/abelsr/Fourier-Neural-Operator",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "fno",
+        "fourier-neural-operator",
+        "pytorch"
+      ],
+      "id": 59
+    },
+    {
+      "name": "FourierFlow",
+      "one_line_profile": "Pipeline framework for training Factorized Fourier Neural Operators",
+      "detailed_description": "A framework built on PyTorch Lightning and Hydra for training and evaluating Fourier Neural Operators (specifically Factorized FNOs) on PDE datasets. It provides a structured workflow for model configuration, training, and experimentation.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "model_training",
+        "pde_surrogate"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/alasdairtran/fourierflow",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fno",
+        "neural-operator",
+        "pde-solver",
+        "pytorch-lightning"
+      ],
+      "id": 60
+    },
+    {
+      "name": "PyDEns",
+      "one_line_profile": "Framework for solving ODEs and PDEs using neural networks",
+      "detailed_description": "A Python framework designed for solving Ordinary and Partial Differential Equations using neural networks. It allows users to define differential equations and boundary conditions in a symbolic-like manner and solves them via optimization.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "ode_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/analysiscenter/pydens",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pde",
+        "ode",
+        "neural-network",
+        "solver"
+      ],
+      "id": 61
+    },
+    {
+      "name": "TensorFlowFoam",
+      "one_line_profile": "Integration of TensorFlow C-API into OpenFOAM for data-driven CFD",
+      "detailed_description": "A library that integrates TensorFlow's C-API directly into OpenFOAM, enabling the coupling of deep learning models with traditional CFD solvers for tasks like turbulence modeling and flow control.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "cfd_simulation",
+        "turbulence_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/argonne-lcf/TensorFlowFoam",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "openfoam",
+        "tensorflow",
+        "cfd",
+        "coupling"
+      ],
+      "id": 62
+    },
+    {
+      "name": "hep_ml",
+      "one_line_profile": "Machine Learning library for High Energy Physics",
+      "detailed_description": "A python library providing specific machine learning tools for High Energy Physics (HEP), including reweighting algorithms, uniform boosting, and other techniques for analyzing particle physics data.",
+      "domains": [
+        "Physics",
+        "High Energy Physics"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "statistical_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/arogozhnikov/hep_ml",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "hep",
+        "physics",
+        "machine-learning",
+        "boosting"
+      ],
+      "id": 63
+    },
+    {
+      "name": "geo_neural_op",
+      "one_line_profile": "Geometric Neural Operators for PDEs on point clouds",
+      "detailed_description": "A library implementing Geometric Neural Operators (GNPs) for performing machine learning tasks on point-cloud representations, including curvature estimation, shape deformation, and solving geometric PDEs.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "geometric_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/atzberg/geo_neural_op",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "geometric-deep-learning",
+        "pde",
+        "point-cloud",
+        "neural-operator"
+      ],
+      "id": 64
+    },
+    {
+      "name": "pinnfactory",
+      "one_line_profile": "Lightweight framework for building Physics-Informed Neural Networks",
+      "detailed_description": "A framework for constructing PINNs using symbolic PDE definitions with SymPy and PyTorch. It automates loss generation and supports flexible neural architectures for forward and inverse problems.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "inverse_problem"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/barrosyan/pinnfactory",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pinn",
+        "sympy",
+        "pytorch",
+        "pde"
+      ],
+      "id": 65
+    },
+    {
+      "name": "FBPINNs",
+      "one_line_profile": "Finite Basis Physics-Informed Neural Networks solver",
+      "detailed_description": "A library implementing Finite Basis Physics-Informed Neural Networks (FBPINNs) for solving forward and inverse PDE problems. It uses domain decomposition and local basis functions to improve scalability and accuracy.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "domain_decomposition"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/benmoseley/FBPINNs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pinn",
+        "domain-decomposition",
+        "pde",
+        "solver"
+      ],
+      "id": 66
+    },
+    {
+      "name": "PYRO-NN",
+      "one_line_profile": "Python Reconstruction Operators in Neural Networks",
+      "detailed_description": "A high-level Python API for reconstruction operators (like Radon transform) in neural networks, primarily used for medical imaging and physics-based reconstruction tasks.",
+      "domains": [
+        "Physics",
+        "Medical Imaging"
+      ],
+      "subtask_category": [
+        "image_reconstruction",
+        "inverse_problem"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/csyben/PYRO-NN",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "reconstruction",
+        "radon-transform",
+        "medical-physics",
+        "ct"
+      ],
+      "id": 67
+    },
+    {
+      "name": "AL4PDE",
+      "one_line_profile": "Benchmark for Active Learning for Neural PDE Solvers",
+      "detailed_description": "A benchmarking suite designed to evaluate active learning strategies for neural PDE solvers. It provides a standardized environment for testing how different data sampling strategies affect the performance of neural PDE models.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "active_learning"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dmusekamp/al4pde",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "benchmark",
+        "active-learning",
+        "pde",
+        "neural-solver"
+      ],
+      "id": 68
+    },
+    {
+      "name": "hp-VPINNs",
+      "one_line_profile": "Variational Physics-Informed Neural Networks framework with domain decomposition",
+      "detailed_description": "A general framework implementing hp-Variational Physics-Informed Neural Networks (hp-VPINNs) which utilizes domain decomposition and projection-based loss functions to solve differential equations.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "variational_method"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ehsankharazmi/hp-VPINNs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vpinn",
+        "domain-decomposition",
+        "pde",
+        "variational-inference"
+      ],
+      "id": 69
+    },
+    {
+      "name": "JAX-CFD",
+      "one_line_profile": "Computational Fluid Dynamics solver library in JAX",
+      "detailed_description": "A library for writing computational fluid dynamics (CFD) solvers using JAX. It enables differentiable fluid simulations and seamless integration with machine learning models for physics-based deep learning.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "cfd_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/google/jax-cfd",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cfd",
+        "jax",
+        "fluid-dynamics",
+        "differentiable-physics"
+      ],
+      "id": 70
+    },
+    {
+      "name": "PINNacle",
+      "one_line_profile": "Comprehensive benchmark suite for Physics-Informed Neural Networks",
+      "detailed_description": "A comprehensive benchmark dataset and evaluation platform for Physics-Informed Neural Networks (PINNs). It provides diverse PDE problems and standardized evaluation metrics to compare different PINN variants.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "model_evaluation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/i207M/PINNacle",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "pinn",
+        "pde",
+        "dataset"
+      ],
+      "id": 71
+    },
+    {
+      "name": "IDRLnet",
+      "one_line_profile": "Physics-Informed Neural Network (PINN) toolbox",
+      "detailed_description": "A Python toolbox for modeling and solving differential equations using Physics-Informed Neural Networks (PINNs). It provides a systematic framework for defining geometry, physics constraints, and training neural solvers.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/idrl-lab/idrlnet",
+      "help_website": [
+        "https://idrlnet.readthedocs.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "pinn",
+        "solver",
+        "pde",
+        "scientific-machine-learning"
+      ],
+      "id": 72
+    },
+    {
+      "name": "GlobalTomo",
+      "one_line_profile": "Global synthetic dataset for seismic wavefield modeling and inversion",
+      "detailed_description": "The first global synthetic dataset designed for physics-ML seismic wavefield modeling and full-waveform inversion (FWI), providing a benchmark for geophysical AI models.",
+      "domains": [
+        "Geophysics",
+        "Seismology"
+      ],
+      "subtask_category": [
+        "data_generation",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lishiqianhugh/GlobalTomo",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "seismic-data",
+        "fwi",
+        "geophysics",
+        "synthetic-dataset"
+      ],
+      "id": 73
+    },
+    {
+      "name": "DeepONet",
+      "one_line_profile": "Implementation of Deep Operator Networks for learning nonlinear operators",
+      "detailed_description": "A standalone implementation of Deep Operator Networks (DeepONet) for learning nonlinear operators from data, serving as a foundational codebase for operator learning before integration into larger libraries.",
+      "domains": [
+        "P1-06",
+        "Scientific Machine Learning"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "surrogate_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lululxvi/deeponet",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "deeponet",
+        "operator-learning",
+        "pde-solver"
+      ],
+      "id": 74
+    },
+    {
+      "name": "DeepXDE",
+      "one_line_profile": "Comprehensive library for physics-informed machine learning and scientific computing",
+      "detailed_description": "A powerful and widely used library for scientific machine learning, offering extensive support for Physics-Informed Neural Networks (PINNs), DeepONets, and other neural PDE solvers across various backends (TensorFlow, PyTorch, JAX, PaddlePaddle).",
+      "domains": [
+        "P1-06",
+        "Scientific Machine Learning"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "inverse_problem",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lululxvi/deepxde",
+      "help_website": [
+        "https://deepxde.readthedocs.io"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "pinn",
+        "sciml",
+        "deeponet",
+        "pde-solver"
+      ],
+      "id": 75
+    },
+    {
+      "name": "PINA",
+      "one_line_profile": "Physics-Informed Neural networks for Advanced modeling",
+      "detailed_description": "A Python package providing an intuitive interface for solving differential equations using Physics-Informed Neural Networks (PINNs), featuring various architectures and optimization strategies.",
+      "domains": [
+        "P1-06",
+        "Scientific Machine Learning"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mathLab/PINA",
+      "help_website": [
+        "https://mathlab.github.io/PINA/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "pinn",
+        "torch",
+        "differential-equations"
+      ],
+      "id": 76
+    },
+    {
+      "name": "ml4chem",
+      "one_line_profile": "Machine Learning for Chemistry and Materials",
+      "detailed_description": "A library for implementing machine learning models in chemistry and materials science, providing tools for atomistic simulations and property prediction.",
+      "domains": [
+        "Chemistry",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "molecular_modeling",
+        "property_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/muammar/ml4chem",
+      "help_website": [
+        "https://ml4chem.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "chemistry",
+        "materials-science",
+        "atomistic-simulation"
+      ],
+      "id": 77
+    },
+    {
+      "name": "NeuralGCM",
+      "one_line_profile": "Hybrid ML + physics model of the Earth's atmosphere",
+      "detailed_description": "A general circulation model (GCM) that combines physics-based modeling with machine learning components to simulate the Earth's atmosphere efficiently and accurately.",
+      "domains": [
+        "Earth Science",
+        "Climate Modeling"
+      ],
+      "subtask_category": [
+        "climate_simulation",
+        "weather_forecasting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neuralgcm/neuralgcm",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "climate-model",
+        "gcm",
+        "atmospheric-physics"
+      ],
+      "id": 78
+    },
+    {
+      "name": "neuraloperator",
+      "one_line_profile": "Comprehensive library for learning infinite-dimensional neural operators",
+      "detailed_description": "The official implementation of Fourier Neural Operator (FNO) and other neural operator architectures. It provides a framework for learning mappings between infinite-dimensional function spaces, widely used for solving partial differential equations (PDEs) in physics and engineering.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling",
+        "scientific_machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neuraloperator/neuraloperator",
+      "help_website": [
+        "https://neuraloperator.github.io/neuraloperator/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fno",
+        "neural-operator",
+        "pde-solver",
+        "deep-learning"
+      ],
+      "id": 79
+    },
+    {
+      "name": "NodeLab",
+      "one_line_profile": "MATLAB repository for node generation and meshfree method implementation",
+      "detailed_description": "A MATLAB-based tool for generating nodes and performing adaptive refinement, specifically designed to support the implementation and testing of meshfree methods such as Physics-Informed Neural Networks (PINNs) and DeepONet for solving PDEs.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "mesh_generation",
+        "preprocessing",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/pankajkmishra/NodeLab",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "matlab",
+        "meshfree",
+        "pinn",
+        "node-generation"
+      ],
+      "id": 80
+    },
+    {
+      "name": "PINNs-TF2.0",
+      "one_line_profile": "TensorFlow 2.0 implementation of Physics Informed Neural Networks",
+      "detailed_description": "A widely used reference implementation and solver framework for Physics Informed Neural Networks (PINNs) using TensorFlow 2.0, porting the original TensorFlow 1.x codebase to the modern ecosystem.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "solver",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Mathematica",
+      "repo_url": "https://github.com/pierremtb/PINNs-TF2.0",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pinn",
+        "tensorflow",
+        "pde-solver"
+      ],
+      "id": 81
+    },
+    {
+      "name": "pinns-tf2",
+      "one_line_profile": "TensorFlow V2 framework for Physics-informed Neural Networks",
+      "detailed_description": "A structured implementation of Physics-informed Neural Networks (PINNs) in TensorFlow V2, serving as a reusable solver framework for solving forward and inverse PDE problems.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "solver",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rezaakb/pinns-tf2",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "pinn",
+        "tensorflow",
+        "pde-solver"
+      ],
+      "id": 82
+    },
+    {
+      "name": "pinns-torch",
+      "one_line_profile": "PyTorch framework for Physics-informed Neural Networks",
+      "detailed_description": "A comprehensive PyTorch implementation of Physics-informed Neural Networks (PINNs), providing a robust codebase for researchers to solve partial differential equations using deep learning.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "solver",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rezaakb/pinns-torch",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "pinn",
+        "pytorch",
+        "pde-solver"
+      ],
+      "id": 83
+    },
+    {
+      "name": "torch-cfd",
+      "one_line_profile": "Neural Operator-Assisted CFD library in PyTorch",
+      "detailed_description": "A PyTorch library designed to accelerate Computational Fluid Dynamics (CFD) simulations using Neural Operators. It provides tools for coupling deep learning models with traditional CFD solvers.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling",
+        "acceleration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scaomath/torch-cfd",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cfd",
+        "neural-operator",
+        "pytorch",
+        "acceleration"
+      ],
+      "id": 84
+    },
+    {
+      "name": "neurop_invdes",
+      "one_line_profile": "Neural operator surrogates for electromagnetic inverse design optimization",
+      "detailed_description": "A Python library providing neural operator-based surrogate models specifically designed for electromagnetic inverse design tasks, enabling faster optimization compared to traditional simulation methods.",
+      "domains": [
+        "P1",
+        "P1-06",
+        "Photonics"
+      ],
+      "subtask_category": [
+        "inverse_design",
+        "surrogate_modeling",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tfp-photonics/neurop_invdes",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operator",
+        "inverse-design",
+        "electromagnetics",
+        "surrogate-model"
+      ],
+      "id": 85
+    },
+    {
+      "name": "NUNO",
+      "one_line_profile": "Non-Uniform Neural Operator for solving PDEs on non-uniform grids",
+      "detailed_description": "Implementation of the Non-Uniform Neural Operator (NUNO), a deep learning architecture designed to efficiently solve partial differential equations on non-uniform discretization grids.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/thu-ml/NUNO",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operator",
+        "pde-solver",
+        "non-uniform-grid",
+        "deep-learning"
+      ],
+      "id": 86
+    },
+    {
+      "name": "Neural-Solver-Library",
+      "one_line_profile": "Comprehensive library for advanced neural PDE solvers and benchmarking",
+      "detailed_description": "A library aggregating various neural network-based PDE solvers, providing a unified interface for training, evaluation, and benchmarking of AI4Science models.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "benchmarking",
+        "model_training"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/thuml/Neural-Solver-Library",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pde-solver",
+        "neural-network",
+        "benchmark",
+        "scientific-computing"
+      ],
+      "id": 87
+    },
+    {
+      "name": "RoPINN",
+      "one_line_profile": "Region Optimized Physics-Informed Neural Networks for efficient PDE solving",
+      "detailed_description": "An implementation of Region Optimized PINN (RoPINN) that improves training efficiency and accuracy by dynamically optimizing the sampling regions during the physics-informed training process.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/thuml/RoPINN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pinn",
+        "optimization",
+        "pde-solver",
+        "physics-informed"
+      ],
+      "id": 88
+    },
+    {
+      "name": "PhiFlow",
+      "one_line_profile": "Differentiable PDE solving framework for machine learning and physics simulations",
+      "detailed_description": "A powerful open-source simulation toolkit built for optimization and machine learning applications. It provides differentiable solvers for fluid dynamics and other physical systems, integrating seamlessly with PyTorch, TensorFlow, and Jax.",
+      "domains": [
+        "P1",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tum-pbs/PhiFlow",
+      "help_website": [
+        "https://tum-pbs.github.io/PhiFlow/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "differentiable-physics",
+        "cfd",
+        "fluid-simulation",
+        "machine-learning"
+      ],
+      "id": 89
+    },
+    {
+      "name": "magellan",
+      "one_line_profile": "Earth observation software for visualizing and processing satellite data",
+      "detailed_description": "A MATLAB-based software tool for Earth observation tasks, leveraging machine learning for data processing and providing visualization capabilities compatible with Google Maps and WebGL Earth.",
+      "domains": [
+        "Earth_Science",
+        "Remote_Sensing"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/ultralytics/magellan",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "earth-observation",
+        "satellite-imagery",
+        "visualization",
+        "matlab"
+      ],
+      "id": 90
+    },
+    {
+      "name": "PINN4SOH",
+      "one_line_profile": "Physics-informed neural network model for battery State of Health estimation",
+      "detailed_description": "A specialized Physics-Informed Neural Network (PINN) implementation designed for estimating the State of Health (SOH) of batteries, combining electrochemical models with data-driven approaches.",
+      "domains": [
+        "Energy",
+        "P1-06"
+      ],
+      "subtask_category": [
+        "estimation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wang-fujin/PINN4SOH",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "battery",
+        "state-of-health",
+        "pinn",
+        "physics-informed"
+      ],
+      "id": 91
+    }
+  ]
+}

@@ -1,0 +1,1563 @@
+{
+  "generated_at": "2025-12-16T06:01:04.835260+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "C3",
+      "leaf_cluster_name": "化学-反应预测与逆合成生态",
+      "domain": "Chemistry",
+      "typical_objects": "reaction SMILES/templates",
+      "task_chain": "清洗→预测→规划→路线评估→benchmark",
+      "tool_form": "预测/规划器 + 数据/评测"
+    },
+    "unit": {
+      "unit_id": "C3-02",
+      "unit_name": "反应预测模型（forward）",
+      "target_scale": "200–450",
+      "coverage_tools": "transformers、GNN、toolkits"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] RxnMapper",
+        "[GH] Augmented Transformer",
+        "[GH] NERF",
+        "[GH] Chemformer",
+        "[GH] MEGAN",
+        "[GH] Graph2SMILES",
+        "[GH] LocalTransform",
+        "[GH] WLDN",
+        "[GH] Molecular Transformer",
+        "[GH] reaction prediction",
+        "[GH] forward synthesis",
+        "[GH] chemical reaction prediction",
+        "[GH] molecular transformer",
+        "[GH] reaction product prediction",
+        "[GH] graph neural network reaction",
+        "[GH] template-free reaction",
+        "[GH] template-based reaction",
+        "[GH] seq2seq chemistry",
+        "[GH] reaction SMILES",
+        "[GH] atom mapping prediction",
+        "[GH] chemical yield prediction",
+        "[GH] WLN chemistry",
+        "[GH] graph2smiles",
+        "[WEB] chemical reaction prediction deep learning github",
+        "[WEB] molecular transformer forward synthesis github",
+        "[WEB] graph neural network reaction prediction github",
+        "[WEB] template-free reaction prediction model github",
+        "[WEB] chemical yield prediction github",
+        "[WEB] forward reaction prediction benchmark github"
+      ],
+      "total_candidates": 554,
+      "tool_candidates": 273,
+      "final_tools": 62
+    }
+  },
+  "tools": [
+    {
+      "name": "Reagents",
+      "one_line_profile": "Reagent prediction model using Molecular Transformer",
+      "detailed_description": "A tool for predicting reagents in chemical reactions using a Molecular Transformer architecture, improving data for reaction product prediction in a self-supervised fashion.",
+      "domains": [
+        "Chemistry",
+        "C3",
+        "C3-02"
+      ],
+      "subtask_category": [
+        "reaction_prediction",
+        "reagent_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Academich/reagents",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reaction-prediction",
+        "transformer",
+        "reagents"
+      ],
+      "id": 1
+    },
+    {
+      "name": "AutoWRFChem-Base",
+      "one_line_profile": "Automation workflow for running WRF-Chem simulations",
+      "detailed_description": "Stand-alone code to automatically run WRF-Chem simulations with NEI and MEGAN emissions and MOZART boundary conditions, facilitating atmospheric chemistry modeling.",
+      "domains": [
+        "Earth Science",
+        "Atmospheric Chemistry"
+      ],
+      "subtask_category": [
+        "simulation",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CohenBerkeleyLab/AutoWRFChem-Base",
+      "help_website": [],
+      "license": "Unlicense",
+      "tags": [
+        "wrf-chem",
+        "atmospheric-chemistry",
+        "automation"
+      ],
+      "id": 2
+    },
+    {
+      "name": "Reaction Condition Recommendation",
+      "one_line_profile": "Machine learning model for reaction condition prediction",
+      "detailed_description": "Code for training and deploying machine learning models specifically designed to recommend reaction conditions for organic chemistry reactions.",
+      "domains": [
+        "Chemistry",
+        "C3",
+        "C3-02"
+      ],
+      "subtask_category": [
+        "reaction_condition_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Coughy1991/Reaction_condition_recommendation",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "reaction-conditions",
+        "machine-learning",
+        "organic-chemistry"
+      ],
+      "id": 3
+    },
+    {
+      "name": "Equivariant-Graph-Transformer",
+      "one_line_profile": "Hybrid EGNN and Transformer for molecular property prediction",
+      "detailed_description": "A deep neural network architecture combining Equivariant Graph Neural Networks (EGNN) and Transformers for accurate prediction of molecular properties.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "property_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Curtis-Wu/Equivariant-Graph-Transformer",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "egnn",
+        "transformer",
+        "molecular-properties"
+      ],
+      "id": 4
+    },
+    {
+      "name": "SMILES Transformer",
+      "one_line_profile": "Pre-trained molecular fingerprinting using Transformers",
+      "detailed_description": "Implementation of the SMILES Transformer for generating pre-trained molecular fingerprints, useful for low-data drug discovery tasks.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "representation_learning",
+        "fingerprinting"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/DSPsleeporg/smiles-transformer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "smiles",
+        "transformer",
+        "fingerprint",
+        "drug-discovery"
+      ],
+      "id": 5
+    },
+    {
+      "name": "MPerformer",
+      "one_line_profile": "SE(3) Transformer-based Molecular Perceptron",
+      "detailed_description": "An SE(3) Transformer-based model designed for molecular property prediction, leveraging geometric deep learning.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "geometric_deep_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FanmengWang/MPerformer",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "se3-transformer",
+        "molecular-property",
+        "geometric-dl"
+      ],
+      "id": 6
+    },
+    {
+      "name": "WGFormer",
+      "one_line_profile": "SE(3)-Transformer for molecular conformation prediction",
+      "detailed_description": "An SE(3)-Transformer driven by Wasserstein Gradient Flows for predicting molecular ground-state conformations.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "conformation_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FanmengWang/WGFormer",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "conformation",
+        "se3-transformer",
+        "wasserstein"
+      ],
+      "id": 7
+    },
+    {
+      "name": "Llamol",
+      "one_line_profile": "Dynamic multi-conditional generative transformer for molecular design",
+      "detailed_description": "A generative transformer model capable of de novo molecular design conditioned on multiple dynamic properties.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "molecular_generation",
+        "de_novo_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Fraunhofer-SCAI/llamol",
+      "help_website": [
+        "https://doi.org/10.1186/s13321-024-00863-8"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "generative-model",
+        "molecular-design",
+        "transformer"
+      ],
+      "id": 8
+    },
+    {
+      "name": "t5chem",
+      "one_line_profile": "Transformer-based model for chemical reaction tasks",
+      "detailed_description": "A unified Transformer-based model (T5) for various chemical reaction tasks including reaction prediction, retrosynthesis, and property prediction.",
+      "domains": [
+        "Chemistry",
+        "C3",
+        "C3-02"
+      ],
+      "subtask_category": [
+        "reaction_prediction",
+        "retrosynthesis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HelloJocelynLu/t5chem",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "t5",
+        "reaction-prediction",
+        "retrosynthesis"
+      ],
+      "id": 9
+    },
+    {
+      "name": "HeadTailAssign",
+      "one_line_profile": "Head and tail atom assignment for monomers/polymers",
+      "detailed_description": "A utility to assign head and tail atom positions in monomeric units or polymerization reactions represented in SMILES format, facilitating polymer informatics.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "polymer_informatics",
+        "smiles_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/IBM/HeadTailAssign",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "polymer",
+        "smiles",
+        "informatics"
+      ],
+      "id": 10
+    },
+    {
+      "name": "ChemCoTBench",
+      "one_line_profile": "LLM Reasoning Benchmark & Dataset for Chemistry",
+      "detailed_description": "A benchmark and Chain-of-Thoughts dataset designed to evaluate Large Language Models on chemistry reasoning tasks.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "reasoning"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/IDEA-XL/ChemCoTBench",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "llm",
+        "benchmark",
+        "chemistry-reasoning"
+      ],
+      "id": 11
+    },
+    {
+      "name": "ABT-MPNN",
+      "one_line_profile": "Atom-bond transformer-based MPNN for molecular properties",
+      "detailed_description": "An Atom-Bond Transformer-based Message Passing Neural Network (ABT-MPNN) for accurate molecular property prediction.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "property_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LCY02/ABT-MPNN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mpnn",
+        "transformer",
+        "molecular-property"
+      ],
+      "id": 12
+    },
+    {
+      "name": "TyphoFormer",
+      "one_line_profile": "LLM-Augmented Transformer for Typhoon Track Prediction",
+      "detailed_description": "A spatial-temporal transformer model augmented with LLMs for predicting typhoon tracks, serving the domain of meteorology and earth science.",
+      "domains": [
+        "Earth Science",
+        "Meteorology"
+      ],
+      "subtask_category": [
+        "weather_prediction",
+        "track_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LabRAI/TyphoFormer",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "typhoon",
+        "transformer",
+        "meteorology"
+      ],
+      "id": 13
+    },
+    {
+      "name": "Organic Reaction Prediction NMT",
+      "one_line_profile": "NMT-based organic reaction prediction",
+      "detailed_description": "An implementation of Neural Machine Translation (NMT) with attention mechanisms for predicting organic chemistry reactions.",
+      "domains": [
+        "Chemistry",
+        "C3",
+        "C3-02"
+      ],
+      "subtask_category": [
+        "reaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ManzoorElahi/organic-chemistry-reaction-prediction-using-NMT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nmt",
+        "reaction-prediction",
+        "organic-chemistry"
+      ],
+      "id": 14
+    },
+    {
+      "name": "Levenshtein SMILES Augmentation",
+      "one_line_profile": "Data augmentation tool for chemical reaction datasets using Levenshtein distance",
+      "detailed_description": "A Python utility for augmenting reaction SMILES datasets by applying Levenshtein distance-based modifications, developed by MolecularAI (AstraZeneca) to improve robustness of chemical reaction models.",
+      "domains": [
+        "Chemistry",
+        "C3",
+        "C3-02"
+      ],
+      "subtask_category": [
+        "data_augmentation",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MolecularAI/Levenshtein",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "smiles",
+        "data-augmentation",
+        "chemistry"
+      ],
+      "id": 15
+    },
+    {
+      "name": "Deep Molecular Optimization",
+      "one_line_profile": "Molecular optimization framework using Seq2Seq and Transformers",
+      "detailed_description": "A deep learning framework for molecular optimization that captures chemical intuition using Sequence-to-Sequence models with attention mechanisms and Transformers, facilitating de novo molecular design.",
+      "domains": [
+        "Chemistry",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "molecular_design",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MolecularAI/deep-molecular-optimization",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "molecular-optimization",
+        "transformer",
+        "seq2seq"
+      ],
+      "id": 16
+    },
+    {
+      "name": "EvalRetro",
+      "one_line_profile": "Benchmarking framework for single-step retrosynthesis algorithms",
+      "detailed_description": "A comprehensive repository for evaluating and benchmarking various single-step retrosynthesis prediction algorithms, providing standardized metrics and datasets for chemical synthesis research.",
+      "domains": [
+        "Chemistry",
+        "C3",
+        "C3-02"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "retrosynthesis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OptiMaL-PSE-Lab/EvalRetro",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "retrosynthesis",
+        "benchmarking",
+        "chemistry"
+      ],
+      "id": 17
+    },
+    {
+      "name": "SiGra",
+      "one_line_profile": "Single-cell spatial elucidation using image-augmented graph transformers",
+      "detailed_description": "A tool for single-cell spatial analysis that integrates histology images and gene expression data using a graph transformer model to elucidate spatial domains and cell-cell interactions.",
+      "domains": [
+        "Biology",
+        "Spatial Transcriptomics"
+      ],
+      "subtask_category": [
+        "spatial_analysis",
+        "single_cell"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/QSong-github/SiGra",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "spatial-transcriptomics",
+        "graph-transformer"
+      ],
+      "id": 18
+    },
+    {
+      "name": "GET",
+      "one_line_profile": "Generalist Equivariant Transformer for 3D molecular interaction learning",
+      "detailed_description": "Implementation of the Generalist Equivariant Transformer (GET) for modeling 3D molecular interactions, applicable to tasks like protein-ligand binding and molecular property prediction.",
+      "domains": [
+        "Chemistry",
+        "Biology"
+      ],
+      "subtask_category": [
+        "molecular_interaction",
+        "structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/THUNLP-MT/GET",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-interaction",
+        "equivariant-transformer",
+        "3d-structure"
+      ],
+      "id": 19
+    },
+    {
+      "name": "MEGANet",
+      "one_line_profile": "Multi-scale Edge-Guided Attention Network for polyp segmentation",
+      "detailed_description": "A deep learning model for medical image segmentation, specifically designed for polyp detection in colonoscopy images using multi-scale edge-guided attention mechanisms.",
+      "domains": [
+        "Medical Imaging",
+        "Biology"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "medical_diagnosis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UARK-AICV/MEGANet",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "medical-imaging",
+        "segmentation",
+        "polyp-detection"
+      ],
+      "id": 20
+    },
+    {
+      "name": "Meganet.m",
+      "one_line_profile": "MATLAB library for Deep Learning as Optimal Control (SciML)",
+      "detailed_description": "A MATLAB framework implementing deep learning architectures as discretized optimal control problems (ODEs), widely used in scientific machine learning and inverse problems.",
+      "domains": [
+        "Scientific Machine Learning",
+        "Physics"
+      ],
+      "subtask_category": [
+        "modeling",
+        "inverse_problems"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/XtractOpen/Meganet.m",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "sciml",
+        "ode",
+        "optimal-control"
+      ],
+      "id": 21
+    },
+    {
+      "name": "EnvRtype",
+      "one_line_profile": "R toolkit for environmental characterization and genomic prediction",
+      "detailed_description": "An R package for collecting environmental data from GIS platforms and performing environmental characterization, specifically designed for genomic prediction of reaction norms in ecology and breeding.",
+      "domains": [
+        "Ecology",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "environmental_analysis",
+        "genomic_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/allogamous/EnvRtype",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ecology",
+        "genomics",
+        "gis"
+      ],
+      "id": 22
+    },
+    {
+      "name": "Rexgen Direct",
+      "one_line_profile": "Template-free prediction of organic reaction outcomes using graph neural networks",
+      "detailed_description": "A data-driven, template-free approach for predicting the outcomes of organic chemical reactions. It treats reaction prediction as a graph-to-graph translation problem, identifying reaction centers and generating product structures directly from reactant graphs without relying on predefined reaction templates.",
+      "domains": [
+        "Chemistry",
+        "C3",
+        "C3-02"
+      ],
+      "subtask_category": [
+        "reaction_prediction",
+        "forward_synthesis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/connorcoley/rexgen_direct",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "reaction-prediction",
+        "organic-chemistry",
+        "graph-neural-networks",
+        "template-free"
+      ],
+      "id": 23
+    },
+    {
+      "name": "SolTranNet",
+      "one_line_profile": "Aqueous solubility prediction using molecular transformers",
+      "detailed_description": "A deep learning tool for predicting the aqueous solubility of organic molecules. It utilizes a Transformer-based architecture adapted for SMILES strings to estimate LogS values, aiding in drug discovery and chemical property screening.",
+      "domains": [
+        "Chemistry",
+        "C2",
+        "C2-01"
+      ],
+      "subtask_category": [
+        "solubility_prediction",
+        "property_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gnina/SolTranNet",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "solubility",
+        "molecular-transformer",
+        "property-prediction",
+        "drug-discovery"
+      ],
+      "id": 24
+    },
+    {
+      "name": "MALT",
+      "one_line_profile": "High-throughput sequence alignment tool for metagenomics",
+      "detailed_description": "MALT (MEGAN Alignment Tool) is a sequence alignment and analysis tool designed for processing high-throughput sequencing data, specifically for metagenomic analysis.",
+      "domains": [
+        "Bioinformatics",
+        "Metagenomics"
+      ],
+      "subtask_category": [
+        "sequence_alignment",
+        "metagenomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/husonlab/malt",
+      "help_website": [
+        "https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/algorithms-in-bioinformatics/software/malt/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "alignment",
+        "metagenomics",
+        "sequencing"
+      ],
+      "id": 25
+    },
+    {
+      "name": "MEGAN Community Edition",
+      "one_line_profile": "Interactive tool for metagenomic data analysis and visualization",
+      "detailed_description": "MEGAN (MEtaGenome ANalyzer) is a comprehensive toolbox for interactively analyzing and comparing microbiome data, allowing users to explore the taxonomic and functional content of their data.",
+      "domains": [
+        "Bioinformatics",
+        "Metagenomics"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "visualization",
+        "taxonomic_profiling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/husonlab/megan-ce",
+      "help_website": [
+        "https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/algorithms-in-bioinformatics/software/megan6/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "metagenomics",
+        "visualization",
+        "microbiome"
+      ],
+      "id": 26
+    },
+    {
+      "name": "GREAD",
+      "one_line_profile": "Graph Neural Reaction-Diffusion Networks for modeling dynamic systems",
+      "detailed_description": "GREAD implements a graph neural network framework designed to model reaction-diffusion processes, applicable to physics and chemical dynamics simulations.",
+      "domains": [
+        "Physics",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "dynamic_modeling",
+        "reaction_diffusion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jeongwhanchoi/GREAD",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "reaction-diffusion",
+        "graph-neural-networks",
+        "dynamics"
+      ],
+      "id": 27
+    },
+    {
+      "name": "synthesis-dags",
+      "one_line_profile": "Search algorithm over molecule synthesis DAGs for retrosynthesis",
+      "detailed_description": "Implements an approach to search over molecule synthesis Directed Acyclic Graphs (DAGs), facilitating single-step and multi-step retrosynthesis planning.",
+      "domains": [
+        "C3",
+        "C3-02"
+      ],
+      "subtask_category": [
+        "retrosynthesis",
+        "synthesis_planning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/john-bradshaw/synthesis-dags",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "retrosynthesis",
+        "dag-search",
+        "planning"
+      ],
+      "id": 28
+    },
+    {
+      "name": "LocalTransform",
+      "one_line_profile": "Predicting organic reaction outcomes using local graph transformations",
+      "detailed_description": "LocalTransform is a template-free reaction prediction model that predicts organic reactivity by learning local graph transformations.",
+      "domains": [
+        "C3",
+        "C3-02"
+      ],
+      "subtask_category": [
+        "reaction_prediction",
+        "forward_synthesis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kaist-amsg/LocalTransform",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "reaction-prediction",
+        "organic-chemistry",
+        "graph-neural-networks"
+      ],
+      "id": 29
+    },
+    {
+      "name": "MolTrans",
+      "one_line_profile": "Molecular Interaction Transformer for Drug-Target Interaction Prediction",
+      "detailed_description": "MolTrans is a deep learning framework that uses substructure pattern mining and interaction modeling to predict drug-target interactions.",
+      "domains": [
+        "Drug Discovery",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "dti"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kexinhuang12345/MolTrans",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "drug-target-interaction",
+        "transformer",
+        "molecular-interaction"
+      ],
+      "id": 30
+    },
+    {
+      "name": "Deep-Synthesis",
+      "one_line_profile": "Deep learning framework for chemical synthesis prediction",
+      "detailed_description": "A framework utilizing sequence-to-sequence models for predicting chemical reaction outcomes and retrosynthetic pathways.",
+      "domains": [
+        "C3",
+        "C3-02"
+      ],
+      "subtask_category": [
+        "reaction_prediction",
+        "retrosynthesis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kheyer/Deep-Synthesis",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "chemical-synthesis",
+        "seq2seq",
+        "deep-learning"
+      ],
+      "id": 31
+    },
+    {
+      "name": "Retrosynthesis-Prediction",
+      "one_line_profile": "Transformer-based retrosynthesis prediction with data augmentation",
+      "detailed_description": "Implements Transformer sequence-to-sequence models for retrosynthesis prediction, incorporating SMILES-based data augmentation techniques.",
+      "domains": [
+        "C3",
+        "C3-02"
+      ],
+      "subtask_category": [
+        "retrosynthesis",
+        "data_augmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kheyer/Retrosynthesis-Prediction",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "retrosynthesis",
+        "transformer",
+        "smiles"
+      ],
+      "id": 32
+    },
+    {
+      "name": "MoleculeDiffusionTransformer",
+      "one_line_profile": "Molecular generation using diffusion and autoregressive transformers",
+      "detailed_description": "A model for generating molecular structures combining diffusion models with autoregressive transformer architectures, developed at MIT.",
+      "domains": [
+        "C3"
+      ],
+      "subtask_category": [
+        "molecular_generation",
+        "generative_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/lamm-mit/MoleculeDiffusionTransformer",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "diffusion-model",
+        "molecular-generation",
+        "transformer"
+      ],
+      "id": 33
+    },
+    {
+      "name": "RXNGraphormer",
+      "one_line_profile": "Unified framework for reaction performance prediction and synthesis planning",
+      "detailed_description": "Official implementation of RXNGraphormer, a pre-trained deep learning framework designed for cross-task chemical reaction performance prediction and synthesis planning.",
+      "domains": [
+        "C3",
+        "C3-02"
+      ],
+      "subtask_category": [
+        "reaction_prediction",
+        "synthesis_planning",
+        "yield_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/licheng-xu-echo/RXNGraphormer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "graphormer",
+        "synthesis-planning",
+        "reaction-yield"
+      ],
+      "id": 34
+    },
+    {
+      "name": "Graph-DiT",
+      "one_line_profile": "Graph Diffusion Transformer for Multi-Conditional Molecular Generation",
+      "detailed_description": "Implementation of Graph Diffusion Transformer (Graph-DiT) for generating molecular graphs under multiple conditions.",
+      "domains": [
+        "C3"
+      ],
+      "subtask_category": [
+        "molecular_generation",
+        "conditional_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/liugangcode/Graph-DiT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "diffusion-transformer",
+        "molecular-generation",
+        "graph-neural-networks"
+      ],
+      "id": 35
+    },
+    {
+      "name": "Transformer-M",
+      "one_line_profile": "Transformer model for understanding 2D and 3D molecular data",
+      "detailed_description": "Transformer-M is a versatile molecular model that can process and understand both 2D topology and 3D geometric structures of molecules.",
+      "domains": [
+        "C3"
+      ],
+      "subtask_category": [
+        "molecular_representation",
+        "property_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lsj2408/Transformer-M",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-representation",
+        "3d-geometry",
+        "transformer"
+      ],
+      "id": 36
+    },
+    {
+      "name": "OChemR",
+      "one_line_profile": "Optical Chemical Recognition for converting reaction images to SMILES",
+      "detailed_description": "OChemR uses Vision Transformers (DETR) to detect and classify molecules, text, and arrows in chemical reaction images, converting them into SMILES representations.",
+      "domains": [
+        "C3"
+      ],
+      "subtask_category": [
+        "optical_chemical_recognition",
+        "image_to_structure"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/markmartorilopez/OChemR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ocr",
+        "chemical-images",
+        "vision-transformer"
+      ],
+      "id": 37
+    },
+    {
+      "name": "Graphormer",
+      "one_line_profile": "General-purpose deep learning backbone for molecular modeling",
+      "detailed_description": "Graphormer is a graph transformer model designed as a general-purpose backbone for various molecular modeling tasks, including property prediction and conformational analysis.",
+      "domains": [
+        "C3",
+        "Materials"
+      ],
+      "subtask_category": [
+        "molecular_modeling",
+        "property_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/Graphormer",
+      "help_website": [
+        "https://graphormer.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "graph-transformer",
+        "molecular-modeling",
+        "deep-learning"
+      ],
+      "id": 38
+    },
+    {
+      "name": "MEGAN (Molecule Edit Graph Attention Network)",
+      "one_line_profile": "Modeling chemical reactions as sequences of graph edits",
+      "detailed_description": "MEGAN models chemical reactions by predicting a sequence of graph edits to transform reactants into products, useful for reaction prediction.",
+      "domains": [
+        "C3",
+        "C3-02"
+      ],
+      "subtask_category": [
+        "reaction_prediction",
+        "graph_edit"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/molecule-one/megan",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reaction-prediction",
+        "graph-neural-networks",
+        "graph-edit"
+      ],
+      "id": 39
+    },
+    {
+      "name": "MolecularTransformerEmbeddings",
+      "one_line_profile": "Transformer for translating molecular text representations and embeddings",
+      "detailed_description": "A Transformer neural network trained to translate between different molecular text representations (e.g., SMILES, IUPAC) and generate molecular embeddings.",
+      "domains": [
+        "C3"
+      ],
+      "subtask_category": [
+        "molecular_representation",
+        "embedding",
+        "translation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/mpcrlab/MolecularTransformerEmbeddings",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-embeddings",
+        "transformer",
+        "smiles"
+      ],
+      "id": 40
+    },
+    {
+      "name": "citationchaser",
+      "one_line_profile": "Tool for forward and backward citation chasing in systematic reviews",
+      "detailed_description": "An R package and Shiny app for performing forward and backward citation chasing as part of an evidence synthesis project, helping researchers identify relevant literature.",
+      "domains": [
+        "Scientometrics",
+        "Evidence Synthesis"
+      ],
+      "subtask_category": [
+        "literature_review",
+        "citation_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/nealhaddaway/citationchaser",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "systematic-review",
+        "citation-chasing",
+        "evidence-synthesis"
+      ],
+      "id": 41
+    },
+    {
+      "name": "nerfacc",
+      "one_line_profile": "General NeRF acceleration toolbox",
+      "detailed_description": "A PyTorch toolbox for accelerating Neural Radiance Fields (NeRF) training and rendering, providing efficient sampling and rendering modules for 3D reconstruction research.",
+      "domains": [
+        "Computer Vision",
+        "3D Reconstruction"
+      ],
+      "subtask_category": [
+        "novel_view_synthesis",
+        "rendering_acceleration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nerfstudio-project/nerfacc",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nerf",
+        "pytorch",
+        "acceleration",
+        "3d-reconstruction"
+      ],
+      "id": 42
+    },
+    {
+      "name": "nerfstudio",
+      "one_line_profile": "Modular framework for Neural Radiance Fields development",
+      "detailed_description": "A collaboration-friendly studio for NeRFs, providing a modular API to create, train, and visualize NeRFs, standardizing the workflow for 3D reconstruction research.",
+      "domains": [
+        "Computer Vision",
+        "3D Reconstruction"
+      ],
+      "subtask_category": [
+        "novel_view_synthesis",
+        "3d_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nerfstudio-project/nerfstudio",
+      "help_website": [
+        "https://docs.nerf.studio"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "nerf",
+        "3d-vision",
+        "framework"
+      ],
+      "id": 43
+    },
+    {
+      "name": "Difix3D",
+      "one_line_profile": "3D reconstruction improvement using diffusion models",
+      "detailed_description": "A tool for improving 3D reconstructions using single-step diffusion models, specifically addressing artifacts in 3D geometry generation.",
+      "domains": [
+        "Computer Vision",
+        "3D Reconstruction"
+      ],
+      "subtask_category": [
+        "3d_reconstruction",
+        "geometry_refinement"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nv-tlabs/Difix3D",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "diffusion-models",
+        "3d-reconstruction",
+        "cvpr"
+      ],
+      "id": 44
+    },
+    {
+      "name": "TransVAE",
+      "one_line_profile": "Transformer-based VAE for molecular design",
+      "detailed_description": "A Transformer-based Variational Autoencoder (VAE) architecture designed for de novo molecular design, enabling the generation of novel chemical structures.",
+      "domains": [
+        "Chemistry",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "molecular_generation",
+        "de_novo_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/oriondollar/TransVAE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vae",
+        "transformer",
+        "molecular-design",
+        "generative-models"
+      ],
+      "id": 45
+    },
+    {
+      "name": "PDEBench",
+      "one_line_profile": "Benchmark suite for scientific machine learning (PDEs)",
+      "detailed_description": "An extensive benchmark for Scientific Machine Learning (SciML), providing datasets and code for solving Partial Differential Equations (PDEs) using various neural network architectures.",
+      "domains": [
+        "Physics",
+        "Scientific Machine Learning"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pdebench/PDEBench",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "pde",
+        "sciml",
+        "benchmark",
+        "physics"
+      ],
+      "id": 46
+    },
+    {
+      "name": "MultiStepRetrosynthesisTTL",
+      "one_line_profile": "Multi-step retrosynthesis prediction tool",
+      "detailed_description": "A tool for multi-step retrosynthesis planning based on Augmented Disconnection Aware Triple Transformer Loop Predictions, facilitating synthetic route design.",
+      "domains": [
+        "Chemistry",
+        "Retrosynthesis"
+      ],
+      "subtask_category": [
+        "retrosynthesis_planning",
+        "reaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/reymond-group/MultiStepRetrosynthesisTTL",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "retrosynthesis",
+        "transformer",
+        "chemistry"
+      ],
+      "id": 47
+    },
+    {
+      "name": "rxn_yields",
+      "one_line_profile": "Chemical reaction yield prediction and data augmentation",
+      "detailed_description": "A library for predicting chemical reaction yields using machine learning models, including data augmentation strategies to improve prediction accuracy.",
+      "domains": [
+        "Chemistry",
+        "Reaction Prediction"
+      ],
+      "subtask_category": [
+        "yield_prediction",
+        "data_augmentation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/rxn4chemistry/rxn_yields",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reaction-yield",
+        "machine-learning",
+        "chemistry"
+      ],
+      "id": 48
+    },
+    {
+      "name": "rxnaamapper",
+      "one_line_profile": "Reaction atom-mapping via language modelling",
+      "detailed_description": "A tool for mapping atoms between reactants and products in chemical reactions using language models, essential for reaction mechanism understanding.",
+      "domains": [
+        "Chemistry",
+        "Reaction Analysis"
+      ],
+      "subtask_category": [
+        "atom_mapping",
+        "reaction_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rxn4chemistry/rxnaamapper",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "atom-mapping",
+        "smiles",
+        "language-models"
+      ],
+      "id": 49
+    },
+    {
+      "name": "rxnmapper",
+      "one_line_profile": "Unsupervised attention-guided atom-mapping tool",
+      "detailed_description": "An unsupervised tool for extracting atom-mapping information from chemical reactions using attention mechanisms in Transformers, aiding in reaction grammar extraction.",
+      "domains": [
+        "Chemistry",
+        "Reaction Analysis"
+      ],
+      "subtask_category": [
+        "atom_mapping",
+        "grammar_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rxn4chemistry/rxnmapper",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "atom-mapping",
+        "transformer",
+        "unsupervised-learning"
+      ],
+      "id": 50
+    },
+    {
+      "name": "mist",
+      "one_line_profile": "MS/MS spectra encoder for molecular property inference",
+      "detailed_description": "A tool for encoding Mass Spectrometry (MS/MS) spectra using formula transformers to infer molecular properties, aiding in metabolite identification.",
+      "domains": [
+        "Chemistry",
+        "Metabolomics"
+      ],
+      "subtask_category": [
+        "spectra_encoding",
+        "property_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/samgoldman97/mist",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mass-spectrometry",
+        "molecular-properties",
+        "transformer"
+      ],
+      "id": 51
+    },
+    {
+      "name": "reaction_yield_nn",
+      "one_line_profile": "Uncertainty-aware chemical reaction yield prediction",
+      "detailed_description": "A graph neural network implementation for predicting chemical reaction yields with uncertainty quantification.",
+      "domains": [
+        "Chemistry",
+        "Reaction Prediction"
+      ],
+      "subtask_category": [
+        "yield_prediction",
+        "uncertainty_quantification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/seokhokang/reaction_yield_nn",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gnn",
+        "reaction-yield",
+        "uncertainty"
+      ],
+      "id": 52
+    },
+    {
+      "name": "egt",
+      "one_line_profile": "Edge-Augmented Graph Transformer library",
+      "detailed_description": "Implementation of Edge-Augmented Graph Transformers, a neural network architecture effective for modeling molecular graphs and other structured scientific data.",
+      "domains": [
+        "Graph Learning",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "molecular_modeling",
+        "graph_representation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shamim-hussain/egt",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "graph-transformer",
+        "gnn",
+        "molecular-graphs"
+      ],
+      "id": 53
+    },
+    {
+      "name": "egt_pytorch",
+      "one_line_profile": "PyTorch implementation of Edge-Augmented Graph Transformer",
+      "detailed_description": "PyTorch implementation of the Edge-Augmented Graph Transformer, facilitating its application in tasks like molecular property prediction.",
+      "domains": [
+        "Graph Learning",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "molecular_modeling",
+        "graph_representation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shamim-hussain/egt_pytorch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "graph-transformer",
+        "molecular-graphs"
+      ],
+      "id": 54
+    },
+    {
+      "name": "UnboundedNeRFPytorch",
+      "one_line_profile": "Unbounded and large-scale NeRF implementation",
+      "detailed_description": "A PyTorch implementation for training Neural Radiance Fields (NeRF) on unbounded 360-degree scenes, useful for large-scale 3D environment reconstruction.",
+      "domains": [
+        "Computer Vision",
+        "3D Reconstruction"
+      ],
+      "subtask_category": [
+        "novel_view_synthesis",
+        "large_scale_reconstruction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sjtuytc/UnboundedNeRFPytorch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nerf",
+        "unbounded-scenes",
+        "pytorch"
+      ],
+      "id": 55
+    },
+    {
+      "name": "DirectVoxGO",
+      "one_line_profile": "Fast radiance field reconstruction via voxel grid optimization",
+      "detailed_description": "A tool for fast Neural Radiance Field (NeRF) reconstruction using direct voxel grid optimization, significantly speeding up training and rendering times.",
+      "domains": [
+        "Computer Vision",
+        "3D Reconstruction"
+      ],
+      "subtask_category": [
+        "novel_view_synthesis",
+        "fast_reconstruction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sunset1995/DirectVoxGO",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nerf",
+        "voxel-grid",
+        "acceleration"
+      ],
+      "id": 56
+    },
+    {
+      "name": "ORDerly",
+      "one_line_profile": "Cleaning and extraction tool for Open Reaction Database",
+      "detailed_description": "A library for extracting, cleaning, and benchmarking chemical reaction data from the Open Reaction Database (ORD), facilitating data-driven chemistry research.",
+      "domains": [
+        "Chemistry",
+        "Data Engineering"
+      ],
+      "subtask_category": [
+        "data_cleaning",
+        "dataset_creation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sustainable-processes/ORDerly",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ord",
+        "reaction-data",
+        "benchmark"
+      ],
+      "id": 57
+    },
+    {
+      "name": "pixel-nerf",
+      "one_line_profile": "NeRF from one or few images",
+      "detailed_description": "An implementation of PixelNeRF, a learning framework that predicts continuous neural scene representations from one or a few input images.",
+      "domains": [
+        "Computer Vision",
+        "3D Reconstruction"
+      ],
+      "subtask_category": [
+        "novel_view_synthesis",
+        "few_shot_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sxyu/pixel-nerf",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "nerf",
+        "few-shot",
+        "3d-reconstruction"
+      ],
+      "id": 58
+    },
+    {
+      "name": "linchemin",
+      "one_line_profile": "Toolkit for linked chemical information and route analysis",
+      "detailed_description": "A Python toolkit for processing linked chemical reaction data, providing interfaces to computer-aided synthesis prediction (CASP) tools and metrics for synthetic route analysis.",
+      "domains": [
+        "Chemistry",
+        "Retrosynthesis"
+      ],
+      "subtask_category": [
+        "route_analysis",
+        "casp_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/syngenta/linchemin",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "casp",
+        "synthetic-routes",
+        "cheminformatics"
+      ],
+      "id": 59
+    },
+    {
+      "name": "ReLM",
+      "one_line_profile": "Language models for chemical reaction prediction",
+      "detailed_description": "A framework leveraging pre-trained language models to enhance chemical reaction prediction tasks, demonstrating the application of NLP techniques in chemistry.",
+      "domains": [
+        "Chemistry",
+        "Reaction Prediction"
+      ],
+      "subtask_category": [
+        "reaction_prediction",
+        "language_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/syr-cn/ReLM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "llm",
+        "reaction-prediction",
+        "nlp-for-chemistry"
+      ],
+      "id": 60
+    },
+    {
+      "name": "taichi-nerfs",
+      "one_line_profile": "High-performance NeRF implementations using Taichi",
+      "detailed_description": "A collection of Neural Radiance Field (NeRF) variants implemented using Taichi and PyTorch, focusing on high-performance rendering and training.",
+      "domains": [
+        "Computer Vision",
+        "High Performance Computing"
+      ],
+      "subtask_category": [
+        "novel_view_synthesis",
+        "rendering_acceleration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/taichi-dev/taichi-nerfs",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "taichi",
+        "nerf",
+        "acceleration"
+      ],
+      "id": 61
+    },
+    {
+      "name": "grover",
+      "one_line_profile": "Self-supervised graph transformer for molecular data",
+      "detailed_description": "A PyTorch implementation of GROVER, a self-supervised graph transformer pre-trained on large-scale molecular data for learning rich molecular representations.",
+      "domains": [
+        "Chemistry",
+        "Molecular Representation"
+      ],
+      "subtask_category": [
+        "molecular_embedding",
+        "property_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tencent-ailab/grover",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "graph-transformer",
+        "self-supervised-learning",
+        "molecular-data"
+      ],
+      "id": 62
+    }
+  ]
+}

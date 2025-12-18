@@ -1,0 +1,1269 @@
+{
+  "generated_at": "2025-12-16T08:46:48.253910+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "M4",
+      "leaf_cluster_name": "材料-晶体/结构生成与逆向设计生态",
+      "domain": "Materials",
+      "typical_objects": "crystal/graph",
+      "task_chain": "生成→筛选→验证→多目标优化→闭环",
+      "tool_form": "生成模型 + 筛选器 + 工作流"
+    },
+    "unit": {
+      "unit_id": "M4-02",
+      "unit_name": "约束满足/可行性检查/筛选",
+      "target_scale": "200–450",
+      "coverage_tools": "validators、stability screens"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] ALIGNN",
+        "[GH] Matminer",
+        "[GH] Atomate",
+        "[GH] SYBA",
+        "[GH] CHGNet",
+        "[GH] M3GNet",
+        "[GH] CGCNN",
+        "[GH] MEGNet",
+        "[GH] SMACT",
+        "[GH] pymatgen",
+        "[GH] crystal structure validation",
+        "[GH] material stability prediction",
+        "[GH] high-throughput screening materials",
+        "[GH] formation energy prediction",
+        "[GH] synthesizability score",
+        "[GH] structure filter materials",
+        "[GH] convex hull construction",
+        "[GH] charge neutrality check",
+        "[GH] geometry validity check",
+        "[GH] materials discovery workflow",
+        "[GH] dft surrogate model",
+        "[GH] crystal graph neural network screening",
+        "[GH] structure relaxation check",
+        "[WEB] crystal structure validity check github",
+        "[WEB] materials stability screening machine learning github",
+        "[WEB] synthesizability prediction tools github",
+        "[WEB] high-throughput structure screening github",
+        "[WEB] dft surrogate model screening github",
+        "[WEB] materials project structure matcher github"
+      ],
+      "total_candidates": 657,
+      "tool_candidates": 136,
+      "final_tools": 48
+    }
+  },
+  "tools": [
+    {
+      "name": "CHGNet",
+      "one_line_profile": "Pretrained universal neural network potential for charge-informed atomistic modeling",
+      "detailed_description": "A pretrained universal neural network potential for charge-informed atomistic modeling. It enables molecular dynamics simulations and structure relaxation with charge awareness.",
+      "domains": [
+        "M4",
+        "M4-01"
+      ],
+      "subtask_category": [
+        "potential_learning",
+        "molecular_dynamics",
+        "structure_relaxation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CederGroupHub/chgnet",
+      "help_website": [
+        "https://chgnet.lbl.gov"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "machine-learning-potential",
+        "materials-science",
+        "molecular-dynamics"
+      ],
+      "id": 1
+    },
+    {
+      "name": "pymatgen-io-espresso",
+      "one_line_profile": "Pymatgen addon for parsing Quantum ESPRESSO files",
+      "detailed_description": "An add-on for pymatgen that provides input/output handling and parsing capabilities for Quantum ESPRESSO calculation files.",
+      "domains": [
+        "M4"
+      ],
+      "subtask_category": [
+        "data_parsing",
+        "io",
+        "dft_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Griffin-Group/pymatgen-io-espresso",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pymatgen",
+        "quantum-espresso",
+        "dft"
+      ],
+      "id": 2
+    },
+    {
+      "name": "atomate2-lammps",
+      "one_line_profile": "Atomate2 workflows for LAMMPS molecular dynamics",
+      "detailed_description": "An add-on package for atomate2 that implements workflows for the LAMMPS molecular dynamics code, enabling automated MD simulations.",
+      "domains": [
+        "M4"
+      ],
+      "subtask_category": [
+        "workflow",
+        "molecular_dynamics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Matgenix/atomate2-lammps",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "lammps",
+        "atomate2",
+        "molecular-dynamics"
+      ],
+      "id": 3
+    },
+    {
+      "name": "nfp",
+      "one_line_profile": "Keras layers for end-to-end learning with rdkit and pymatgen",
+      "detailed_description": "A library providing Keras layers and utilities for building end-to-end deep learning models for molecules and crystals, integrating with RDKit and Pymatgen.",
+      "domains": [
+        "M4"
+      ],
+      "subtask_category": [
+        "modeling",
+        "deep_learning",
+        "graph_neural_networks"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NREL/nfp",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "keras",
+        "gnn",
+        "materials-informatics"
+      ],
+      "id": 4
+    },
+    {
+      "name": "dfttk",
+      "one_line_profile": "DFT workflows for finite temperature thermodynamics",
+      "detailed_description": "Density functional theory workflows for calculating finite temperature thermodynamics properties, built upon the atomate workflow framework.",
+      "domains": [
+        "M4"
+      ],
+      "subtask_category": [
+        "thermodynamics",
+        "workflow",
+        "dft"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PhasesResearchLab/dfttk-2021",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "thermodynamics",
+        "atomate",
+        "dft"
+      ],
+      "id": 5
+    },
+    {
+      "name": "ShakeNBreak",
+      "one_line_profile": "Defect structure-searching employing chemically-guided bond distortions",
+      "detailed_description": "A package for defect structure-searching that employs chemically-guided bond distortions to identify ground-state defect structures in materials.",
+      "domains": [
+        "M4"
+      ],
+      "subtask_category": [
+        "defect_analysis",
+        "structure_search",
+        "structure_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SMTG-Bham/ShakeNBreak",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "defects",
+        "structure-prediction",
+        "materials-science"
+      ],
+      "id": 6
+    },
+    {
+      "name": "doped",
+      "one_line_profile": "Generation, processing and analysis of defect supercell calculations",
+      "detailed_description": "A Python software for the generation, pre-/post-processing, and analysis of defect supercell calculations, implementing efficient and reproducible defect simulation workflows.",
+      "domains": [
+        "M4"
+      ],
+      "subtask_category": [
+        "defect_analysis",
+        "workflow",
+        "structure_generation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SMTG-Bham/doped",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "defects",
+        "supercells",
+        "dft"
+      ],
+      "id": 7
+    },
+    {
+      "name": "surfaxe",
+      "one_line_profile": "Utilities for first principles calculations of surfaces",
+      "detailed_description": "A Python package for generating and analyzing slabs for first-principles calculations of surfaces, facilitating surface science workflows.",
+      "domains": [
+        "M4"
+      ],
+      "subtask_category": [
+        "surface_analysis",
+        "structure_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/SMTG-Bham/surfaxe",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "surfaces",
+        "slabs",
+        "dft"
+      ],
+      "id": 8
+    },
+    {
+      "name": "Surrogates.jl",
+      "one_line_profile": "Surrogate modeling and optimization for scientific machine learning",
+      "detailed_description": "A library for surrogate modeling and optimization, providing various surrogate models (Kriging, Radial Basis Functions, etc.) for scientific machine learning applications.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "optimization",
+        "surrogate_modeling",
+        "sciml"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/Surrogates.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "sciml",
+        "surrogate-models",
+        "optimization"
+      ],
+      "id": 9
+    },
+    {
+      "name": "SMACT",
+      "one_line_profile": "Semiconducting Materials by Analogy and Chemical Theory",
+      "detailed_description": "A Python package to aid materials design and informatics, focusing on semiconducting materials and chemical theory-based screening.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "materials_design",
+        "screening",
+        "chemical_theory"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/WMD-group/SMACT",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "materials-design",
+        "semiconductors",
+        "informatics"
+      ],
+      "id": 10
+    },
+    {
+      "name": "xtalmet",
+      "one_line_profile": "Distance functions and evaluation metrics for crystals",
+      "detailed_description": "A Python package containing a variety of distance functions for crystals and evaluation metrics for crystal generation models, useful for validating generative models.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "metrics",
+        "structure_comparison"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/WMD-group/xtalmet",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "crystal-generation",
+        "metrics",
+        "materials-informatics"
+      ],
+      "id": 11
+    },
+    {
+      "name": "beautiful-atoms",
+      "one_line_profile": "Drawing and rendering atoms and molecules using Blender",
+      "detailed_description": "A Python module for drawing and rendering high-quality images of atoms and molecules using the Blender 3D creation suite.",
+      "domains": [
+        "M4"
+      ],
+      "subtask_category": [
+        "visualization",
+        "rendering"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/beautiful-atoms/beautiful-atoms",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "visualization",
+        "blender",
+        "molecular-rendering"
+      ],
+      "id": 12
+    },
+    {
+      "name": "uMLIP-Interactive",
+      "one_line_profile": "GUI for running simulations with universal machine learning interatomic potentials",
+      "detailed_description": "A graphical user interface for running molecular dynamics and relaxation simulations using various universal machine learning interatomic potentials (MACE, CHGNet, SevenNet, etc.), facilitating interactive exploration of material properties.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "simulation",
+        "atomistic_simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bracerino/uMLIP-Interactive",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gui",
+        "machine-learning-potentials",
+        "molecular-dynamics",
+        "ase"
+      ],
+      "id": 13
+    },
+    {
+      "name": "ase-notebook",
+      "one_line_profile": "Advanced 2D/3D visualization of crystal structures in Jupyter Notebooks",
+      "detailed_description": "A highly configurable visualization tool for ASE and Pymatgen structures within Jupyter Notebooks, supporting SVG (2D) and Three.js (3D) rendering for inspecting atomic configurations.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "visualization",
+        "structure_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chrisjsewell/ase-notebook",
+      "help_website": [
+        "https://ase-notebook.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "jupyter",
+        "crystallography",
+        "ase"
+      ],
+      "id": 14
+    },
+    {
+      "name": "bandstructureplots",
+      "one_line_profile": "Plotting tools for electronic band structures with orbital contributions",
+      "detailed_description": "A plotting utility using pymatgen to generate electronic band structure plots with RGB scales representing atomic or orbital contributions, aiding in electronic structure analysis.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "visualization",
+        "electronic_structure_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gVallverdu/bandstructureplots",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "band-structure",
+        "dft",
+        "visualization",
+        "pymatgen"
+      ],
+      "id": 15
+    },
+    {
+      "name": "fusion_surrogates",
+      "one_line_profile": "Surrogate transport models for tokamak fusion simulation",
+      "detailed_description": "A library providing surrogate models for transport simulations in tokamak fusion reactors, enabling faster prediction of plasma properties compared to high-fidelity physics simulators.",
+      "domains": [
+        "Physics",
+        "M4"
+      ],
+      "subtask_category": [
+        "simulation",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/google-deepmind/fusion_surrogates",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "nuclear-fusion",
+        "tokamak",
+        "surrogate-model",
+        "plasma-physics"
+      ],
+      "id": 16
+    },
+    {
+      "name": "ChemHTPS",
+      "one_line_profile": "Automated high-throughput screening platform for materials and chemicals",
+      "detailed_description": "An automated platform for high-throughput screening (HTS) that manages the generation, simulation, and analysis of materials and chemical data, developed by the Hachmann Lab.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "high_throughput_screening"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hachmannlab/chemhtps",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "high-throughput",
+        "materials-discovery",
+        "workflow",
+        "automation"
+      ],
+      "id": 17
+    },
+    {
+      "name": "atomate",
+      "one_line_profile": "Pre-built workflows for computational materials science",
+      "detailed_description": "A library of computational materials science workflows that works with FireWorks to automate and manage high-throughput calculations (e.g., VASP, FEFF) for materials property prediction.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hackingmaterials/atomate",
+      "help_website": [
+        "https://atomate.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "workflows",
+        "high-throughput",
+        "dft",
+        "vasp"
+      ],
+      "id": 18
+    },
+    {
+      "name": "matminer",
+      "one_line_profile": "Data mining and feature extraction library for materials science",
+      "detailed_description": "A library for data mining in materials science, providing tools to retrieve data from databases and generate descriptors (features) from composition and crystal structures for machine learning.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "feature_extraction",
+        "data_mining"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/hackingmaterials/matminer",
+      "help_website": [
+        "https://hackingmaterials.github.io/matminer/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "materials-informatics",
+        "feature-engineering",
+        "machine-learning",
+        "descriptors"
+      ],
+      "id": 19
+    },
+    {
+      "name": "maptools",
+      "one_line_profile": "Materials simulation data processing tools based on Pymatgen",
+      "detailed_description": "A collection of tools for processing materials simulation data, built upon Pymatgen, facilitating data analysis and manipulation tasks in computational materials science.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haidi-ustc/maptools",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pymatgen",
+        "data-processing",
+        "materials-science"
+      ],
+      "id": 20
+    },
+    {
+      "name": "matbench-discovery",
+      "one_line_profile": "Evaluation framework for materials discovery ML models",
+      "detailed_description": "A framework for evaluating machine learning models in the context of high-throughput materials discovery, simulating realistic discovery campaigns to benchmark model performance.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "validation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/janosh/matbench-discovery",
+      "help_website": [
+        "https://matbench-discovery.materialsproject.org"
+      ],
+      "license": "MIT",
+      "tags": [
+        "benchmarking",
+        "materials-discovery",
+        "machine-learning",
+        "evaluation"
+      ],
+      "id": 21
+    },
+    {
+      "name": "structuregraph-helpers",
+      "one_line_profile": "Helpers for manipulating Pymatgen structure graphs",
+      "detailed_description": "A utility library providing helper functions for working with structure graphs in Pymatgen, facilitating graph-based analysis of crystal structures.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "graph_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lamalab-org/structuregraph-helpers",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pymatgen",
+        "structure-graph",
+        "crystallography"
+      ],
+      "id": 22
+    },
+    {
+      "name": "perovskites-distortions",
+      "one_line_profile": "Analysis tools for hybrid organic-inorganic perovskite structures",
+      "detailed_description": "A collection of functions to manipulate and analyze the structural distortions of hybrid organic-inorganic perovskites, developed by LCBC-EPFL.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "structure_analysis",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lcbc-epfl/perovskites-distortions",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "perovskites",
+        "crystallography",
+        "structural-analysis"
+      ],
+      "id": 23
+    },
+    {
+      "name": "construction_zone",
+      "one_line_profile": "Generators for nanoscale atomic scenes for microscopy simulation",
+      "detailed_description": "A library for generating nanoscale atomic scenes and structures, primarily designed for setting up Scanning Transmission Electron Microscopy (S/TEM) image simulations.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "simulation_setup",
+        "structure_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lerandc/construction_zone",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "microscopy",
+        "stem",
+        "structure-generation",
+        "nanostructures"
+      ],
+      "id": 24
+    },
+    {
+      "name": "syba",
+      "one_line_profile": "Synthetic Bayesian Classification algorithm",
+      "detailed_description": "Implementation of the Synthetic Bayesian Classification (Syba) algorithm, likely used for classifying materials or chemical data based on synthetic priors.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "classification",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lich-uct/syba",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bayesian",
+        "classification",
+        "machine-learning"
+      ],
+      "id": 25
+    },
+    {
+      "name": "MALA",
+      "one_line_profile": "Materials Learning Algorithms framework",
+      "detailed_description": "A framework for machine learning materials properties from first-principles data, enabling the acceleration of electronic structure calculations.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "modeling",
+        "property_prediction"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mala-project/mala",
+      "help_website": [
+        "https://mala-project.github.io/mala/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "machine-learning",
+        "dft",
+        "electronic-structure",
+        "materials-science"
+      ],
+      "id": 26
+    },
+    {
+      "name": "MPWorks",
+      "one_line_profile": "Custom workflows for the Materials Project",
+      "detailed_description": "A package that merges Pymatgen, Custodian, and FireWorks into custom workflows specifically designed for the Materials Project's high-throughput infrastructure.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "high_throughput_computing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/MPWorks",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "materials-project",
+        "workflow",
+        "high-throughput"
+      ],
+      "id": 27
+    },
+    {
+      "name": "atomate2",
+      "one_line_profile": "Next-generation workflows for computational materials science",
+      "detailed_description": "The successor to Atomate, providing a modern library of computational materials science workflows for running and managing high-throughput calculations with improved flexibility and performance.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/atomate2",
+      "help_website": [
+        "https://materialsproject.github.io/atomate2/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "workflows",
+        "jobflow",
+        "materials-science",
+        "high-throughput"
+      ],
+      "id": 28
+    },
+    {
+      "name": "MPmorph",
+      "one_line_profile": "Tools for running and analyzing ab-initio molecular dynamics",
+      "detailed_description": "A collection of tools to run and analyze ab-initio molecular dynamics (AIMD) calculations, leveraging the Materials Project stack (Pymatgen, Custodian, FireWorks).",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "simulation_analysis",
+        "molecular_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/mpmorph",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "aimd",
+        "molecular-dynamics",
+        "materials-project",
+        "analysis"
+      ],
+      "id": 29
+    },
+    {
+      "name": "pymatgen",
+      "one_line_profile": "Robust materials analysis and structure manipulation library",
+      "detailed_description": "Python Materials Genomics (pymatgen) is a core library for materials analysis, defining classes for structures and molecules, and providing support for input/output handling of many electronic structure codes.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "structure_analysis",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen",
+      "help_website": [
+        "https://pymatgen.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "materials-genomics",
+        "crystallography",
+        "electronic-structure",
+        "thermodynamics"
+      ],
+      "id": 30
+    },
+    {
+      "name": "pymatgen-analysis-alloys",
+      "one_line_profile": "Alloy system analysis add-on for Pymatgen",
+      "detailed_description": "An add-on package for Pymatgen containing classes and functions specifically for describing and analyzing alloy systems.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "analysis",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-analysis-alloys",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "alloys",
+        "pymatgen",
+        "materials-analysis"
+      ],
+      "id": 31
+    },
+    {
+      "name": "pymatgen-analysis-defects",
+      "one_line_profile": "Defect analysis modules for Pymatgen",
+      "detailed_description": "A specialized add-on for Pymatgen focused on the analysis of point defects in materials, including formation energy calculations and thermodynamic analysis.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "analysis",
+        "defect_chemistry"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-analysis-defects",
+      "help_website": [
+        "https://materialsproject.github.io/pymatgen-analysis-defects/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "defects",
+        "semiconductors",
+        "thermodynamics",
+        "pymatgen"
+      ],
+      "id": 32
+    },
+    {
+      "name": "pymatgen-db",
+      "one_line_profile": "Database management tool for Materials Project style databases",
+      "detailed_description": "An addon to Pymatgen that facilitates the creation and management of MongoDB databases for storing materials data in the Materials Project format.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "data_management",
+        "database_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-db",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "database",
+        "mongodb",
+        "materials-informatics",
+        "pymatgen"
+      ],
+      "id": 33
+    },
+    {
+      "name": "pymatgen-io-validation",
+      "one_line_profile": "Input/output validator for VASP calculations",
+      "detailed_description": "A comprehensive validator for VASP calculation inputs and outputs, ensuring compatibility with Materials Project data standards and quality control.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-io-validation",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "validation",
+        "vasp",
+        "quality-control",
+        "pymatgen"
+      ],
+      "id": 34
+    },
+    {
+      "name": "m3gnet",
+      "one_line_profile": "Materials graph network for property prediction and relaxation",
+      "detailed_description": "A materials graph neural network incorporating 3-body interactions, serving as a DFT surrogate for crystal structure relaxation and property prediction.",
+      "domains": [
+        "M4",
+        "M4-02"
+      ],
+      "subtask_category": [
+        "modeling",
+        "structure_prediction",
+        "property_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialyzeai/m3gnet",
+      "help_website": [
+        "https://materialyze-labs.github.io/m3gnet/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "graph-neural-network",
+        "machine-learning-potentials",
+        "crystal-structure",
+        "dft-surrogate"
+      ],
+      "id": 35
+    },
+    {
+      "name": "MEGNet",
+      "one_line_profile": "Graph Networks as a Universal Machine Learning Framework for Molecules and Crystals",
+      "detailed_description": "MatErials Graph Network (MEGNet) is an implementation of deep learning models for materials science, specifically designed to predict properties of molecules and crystals using graph neural networks.",
+      "domains": [
+        "Materials",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "structure_property_mapping"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialyzeai/megnet",
+      "help_website": [
+        "https://github.com/materialyzeai/megnet"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "graph-neural-networks",
+        "materials-science",
+        "property-prediction"
+      ],
+      "id": 36
+    },
+    {
+      "name": "pymatgen-analysis-diffusion",
+      "one_line_profile": "Pymatgen add-on for analyzing diffusion in materials",
+      "detailed_description": "A specialized module extending pymatgen to provide tools for analyzing diffusion pathways and properties in materials simulations, such as molecular dynamics trajectories.",
+      "domains": [
+        "Materials"
+      ],
+      "subtask_category": [
+        "dynamics_analysis",
+        "diffusion_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialyzeai/pymatgen-analysis-diffusion",
+      "help_website": [
+        "https://github.com/materialyzeai/pymatgen-analysis-diffusion"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "diffusion",
+        "molecular-dynamics",
+        "pymatgen"
+      ],
+      "id": 37
+    },
+    {
+      "name": "eToxPred",
+      "one_line_profile": "Toxicity and synthetic accessibility prediction tool for small molecules",
+      "detailed_description": "A tool designed to predict the general toxicity and calculate the synthetic accessibility (SA) score for small molecules, aiding in drug discovery and safety assessment.",
+      "domains": [
+        "Chemistry",
+        "Pharmacology"
+      ],
+      "subtask_category": [
+        "toxicity_prediction",
+        "synthesis_accessibility"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pulimeng/eToxPred",
+      "help_website": [
+        "https://github.com/pulimeng/eToxPred"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "toxicity",
+        "drug-discovery",
+        "small-molecules"
+      ],
+      "id": 38
+    },
+    {
+      "name": "MOF-CGCNN",
+      "one_line_profile": "CGCNN variant for predicting methane uptake in MOFs",
+      "detailed_description": "A modified Crystal Graph Convolutional Neural Network (CGCNN) tailored for Metal-Organic Frameworks (MOFs) to predict volumetric methane uptake, incorporating specific structural features like pore limiting diameter.",
+      "domains": [
+        "Materials",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "adsorption_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ruihwang/MOF-CGCNN",
+      "help_website": [
+        "https://github.com/ruihwang/MOF-CGCNN"
+      ],
+      "license": "MIT",
+      "tags": [
+        "mofs",
+        "methane-uptake",
+        "cgcnn"
+      ],
+      "id": 39
+    },
+    {
+      "name": "pysktb",
+      "one_line_profile": "Slater Koster tight-binding topological hamiltonian solver",
+      "detailed_description": "A scientific Python package for solving Slater-Koster tight-binding Hamiltonians, useful for calculating electronic band structures and topological properties of materials.",
+      "domains": [
+        "Physics",
+        "Materials"
+      ],
+      "subtask_category": [
+        "electronic_structure",
+        "hamiltonian_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/santoshkumarradha/pysktb",
+      "help_website": [
+        "https://github.com/santoshkumarradha/pysktb"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "tight-binding",
+        "electronic-structure",
+        "physics"
+      ],
+      "id": 40
+    },
+    {
+      "name": "MT-CGCNN",
+      "one_line_profile": "Multitask Learning with Crystal Graph Convolutional Neural Networks",
+      "detailed_description": "An integration of Crystal Graph Convolutional Neural Networks with multitask learning techniques to improve material property prediction performance.",
+      "domains": [
+        "Materials"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "multitask_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/soumyasanyal/mt-cgcnn",
+      "help_website": [
+        "https://github.com/soumyasanyal/mt-cgcnn"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "multitask-learning",
+        "cgcnn",
+        "materials-informatics"
+      ],
+      "id": 41
+    },
+    {
+      "name": "matbench-genmetrics",
+      "one_line_profile": "Benchmarking metrics for generative materials models",
+      "detailed_description": "A Python library providing standardized metrics for evaluating generative models in materials science, inspired by Guacamol and CDVAE benchmarks.",
+      "domains": [
+        "Materials"
+      ],
+      "subtask_category": [
+        "validation",
+        "benchmarking",
+        "generative_model_evaluation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/sparks-baird/matbench-genmetrics",
+      "help_website": [
+        "https://github.com/sparks-baird/matbench-genmetrics"
+      ],
+      "license": "MIT",
+      "tags": [
+        "generative-models",
+        "benchmarking",
+        "metrics"
+      ],
+      "id": 42
+    },
+    {
+      "name": "CSLLM",
+      "one_line_profile": "LLM system for crystal synthesizability prediction",
+      "detailed_description": "A Large Language Model based system designed for high-accuracy prediction of the synthesizability and precursors of crystal structures.",
+      "domains": [
+        "Materials"
+      ],
+      "subtask_category": [
+        "synthesis_prediction",
+        "feasibility_check"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/szl666/CSLLM",
+      "help_website": [
+        "https://github.com/szl666/CSLLM"
+      ],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "synthesis-prediction",
+        "materials-science"
+      ],
+      "id": 43
+    },
+    {
+      "name": "CGCNN",
+      "one_line_profile": "Crystal Graph Convolutional Neural Networks",
+      "detailed_description": "The original implementation of Crystal Graph Convolutional Neural Networks (CGCNN), a deep learning framework for predicting material properties directly from crystal structures.",
+      "domains": [
+        "Materials"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "structure_encoding"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/txie-93/cgcnn",
+      "help_website": [
+        "https://github.com/txie-93/cgcnn"
+      ],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "crystal-structure",
+        "deep-learning"
+      ],
+      "id": 44
+    },
+    {
+      "name": "ALIGNN",
+      "one_line_profile": "Atomistic Line Graph Neural Network",
+      "detailed_description": "A graph neural network architecture that explicitly models bond angles and interactions using line graphs, achieving high accuracy in predicting material properties.",
+      "domains": [
+        "Materials"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "interatomic_potential"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/usnistgov/alignn",
+      "help_website": [
+        "https://github.com/usnistgov/alignn"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "gnn",
+        "atomistic-modeling",
+        "nist"
+      ],
+      "id": 45
+    },
+    {
+      "name": "MAST",
+      "one_line_profile": "MAterials Simulation Toolkit",
+      "detailed_description": "A workflow automation tool for managing high-throughput computational materials science simulations, particularly with VASP and pymatgen. (Developed by UW-CMG)",
+      "domains": [
+        "Materials"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "high_throughput_simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uw-cmg/MAST",
+      "help_website": [
+        "https://github.com/uw-cmg/MAST"
+      ],
+      "license": null,
+      "tags": [
+        "workflow",
+        "high-throughput",
+        "materials-simulation"
+      ],
+      "id": 46
+    },
+    {
+      "name": "InvDesFlow",
+      "one_line_profile": "Inverse design workflow for high-temperature superconductors",
+      "detailed_description": "An integrated workflow for the inverse design of high-temperature superconducting materials, combining generative models, stability checks, and critical temperature prediction.",
+      "domains": [
+        "Materials"
+      ],
+      "subtask_category": [
+        "inverse_design",
+        "generative_model",
+        "superconductivity"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xqh19970407/InvDesFlow",
+      "help_website": [
+        "https://github.com/xqh19970407/InvDesFlow"
+      ],
+      "license": null,
+      "tags": [
+        "inverse-design",
+        "superconductors",
+        "generative-ai"
+      ],
+      "id": 47
+    },
+    {
+      "name": "ternary-diagram",
+      "one_line_profile": "Tool for drawing ternary diagrams",
+      "detailed_description": "A Python package specifically designed for creating ternary diagrams (phase diagrams) for materials science without heavy dependencies like pymatgen.",
+      "domains": [
+        "Materials"
+      ],
+      "subtask_category": [
+        "visualization",
+        "phase_diagram"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yu9824/ternary-diagram",
+      "help_website": [
+        "https://github.com/yu9824/ternary-diagram"
+      ],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "ternary-plot",
+        "phase-diagram"
+      ],
+      "id": 48
+    }
+  ]
+}

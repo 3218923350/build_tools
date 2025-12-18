@@ -1,0 +1,3507 @@
+{
+  "generated_at": "2025-12-16T04:44:03.285780+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "D1",
+      "leaf_cluster_name": "科研数据格式/解析/转换生态",
+      "domain": "Data/Workflow",
+      "typical_objects": "domain formats",
+      "task_chain": "解析→转换→校验→ETL→版本",
+      "tool_form": "解析器 + 验证器 + ETL"
+    },
+    "unit": {
+      "unit_id": "D1-05",
+      "unit_name": "AI辅助解析/自动映射",
+      "target_scale": "100–250",
+      "coverage_tools": "schema inference、LLM parsing"
+    },
+    "search": {
+      "target_candidates": 250,
+      "queries": [
+        "[GH] OmniParser",
+        "[GH] DeepDoctection",
+        "[GH] LayoutParser",
+        "[GH] Instructor",
+        "[GH] Marker",
+        "[GH] Grobid",
+        "[GH] Nougat",
+        "[GH] LlamaParse",
+        "[GH] Unstructured",
+        "[GH] llm parsing",
+        "[GH] schema inference",
+        "[GH] unstructured to structured",
+        "[GH] scientific document parsing",
+        "[GH] automatic data mapping",
+        "[GH] pdf to json ai",
+        "[GH] table extraction llm",
+        "[GH] layout analysis",
+        "[GH] semantic parsing",
+        "[GH] document intelligence",
+        "[GH] json schema generator",
+        "[GH] data extraction agent",
+        "[GH] ocr post processing",
+        "[WEB] llm unstructured data parsing github",
+        "[WEB] ai schema inference tools github",
+        "[WEB] scientific pdf extraction llm github",
+        "[WEB] automatic data mapping ai github",
+        "[WEB] document layout analysis deep learning github"
+      ],
+      "total_candidates": 1182,
+      "tool_candidates": 760,
+      "final_tools": 137
+    }
+  },
+  "tools": [
+    {
+      "name": "rgbd360",
+      "one_line_profile": "Omnidirectional RGB-D sensor data acquisition and SLAM tool",
+      "detailed_description": "A tool for image acquisition, localization, and mapping using an omnidirectional RGB-D sensor. It supports data serialization, frame registration, loop closure detection, and PbMap-based hybrid SLAM (Simultaneous Localization and Mapping).",
+      "domains": [
+        "D1"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "slam",
+        "localization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/EduFdez/rgbd360",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "slam",
+        "rgb-d",
+        "robotics",
+        "computer-vision"
+      ],
+      "id": 1
+    },
+    {
+      "name": "open-parse",
+      "one_line_profile": "Improved file parsing library for LLM data preparation",
+      "detailed_description": "A library designed to parse complex documents (PDFs, etc.) into structured chunks suitable for Large Language Models (LLMs), facilitating RAG (Retrieval-Augmented Generation) workflows in scientific literature analysis.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "data_chunking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Filimoa/open-parse",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pdf-parsing",
+        "llm",
+        "rag",
+        "document-processing"
+      ],
+      "id": 2
+    },
+    {
+      "name": "ArUCo-Markers-Pose-Estimation-Generation-Python",
+      "one_line_profile": "Pose estimation tool using ArUCo markers",
+      "detailed_description": "A Python tool for generating ArUCo markers and estimating pose, commonly used in robotics, computer vision research, and laboratory automation for object tracking.",
+      "domains": [
+        "D1"
+      ],
+      "subtask_category": [
+        "pose_estimation",
+        "computer_vision"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GSNCodes/ArUCo-Markers-Pose-Estimation-Generation-Python",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aruco",
+        "pose-estimation",
+        "computer-vision",
+        "robotics"
+      ],
+      "id": 3
+    },
+    {
+      "name": "detectron2-publaynet",
+      "one_line_profile": "Document layout analysis models trained on PubLayNet",
+      "detailed_description": "Provides trained Detectron2 models for document layout analysis, specifically optimized for scientific publications (PubLayNet dataset). Essential for extracting structure from scientific PDFs.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "layout_analysis",
+        "document_parsing"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JPLeoRX/detectron2-publaynet",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "layout-analysis",
+        "publaynet",
+        "detectron2",
+        "pdf-parsing"
+      ],
+      "id": 4
+    },
+    {
+      "name": "YuzuMarker.FontDetection",
+      "one_line_profile": "CJK font recognition and style extraction model",
+      "detailed_description": "A deep learning model and tool for recognizing Chinese, Japanese, and Korean (CJK) fonts and extracting styles from document images, aiding in detailed document layout analysis and OCR.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "font_recognition",
+        "document_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JeffersonQin/YuzuMarker.FontDetection",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "font-recognition",
+        "ocr",
+        "document-analysis",
+        "cjk"
+      ],
+      "id": 5
+    },
+    {
+      "name": "TopOpt.jl",
+      "one_line_profile": "Topology optimization library for Julia",
+      "detailed_description": "A Julia package for binary and continuous topology optimization on unstructured meshes using automatic differentiation. Used for structural design and physics simulations.",
+      "domains": [
+        "D1"
+      ],
+      "subtask_category": [
+        "topology_optimization",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaTopOpt/TopOpt.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "topology-optimization",
+        "julia",
+        "fem",
+        "automatic-differentiation"
+      ],
+      "id": 6
+    },
+    {
+      "name": "parsetron",
+      "one_line_profile": "Natural language semantic parsing library",
+      "detailed_description": "A library for semantic parsing of natural language, capable of mapping text to structured representations, applicable in scientific text mining and command parsing.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "semantic_parsing",
+        "nlp"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Kitt-AI/parsetron",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "semantic-parsing",
+        "nlp",
+        "grammar"
+      ],
+      "id": 7
+    },
+    {
+      "name": "markify",
+      "one_line_profile": "File to Markdown converter for RAG/LLM",
+      "detailed_description": "A tool to convert various file formats (PDF, etc.) into Markdown, specifically optimized to help RAG systems and LLMs understand document structure and content.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_conversion",
+        "rag_preparation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KylinMountain/markify",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "markdown",
+        "pdf-conversion",
+        "rag",
+        "llm"
+      ],
+      "id": 8
+    },
+    {
+      "name": "layout-model-training",
+      "one_line_profile": "Training scripts for LayoutParser models",
+      "detailed_description": "Scripts and utilities for training Detectron2-based document layout analysis models, supporting the LayoutParser ecosystem for custom scientific document parsing.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "model_training",
+        "layout_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Layout-Parser/layout-model-training",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "layout-analysis",
+        "training-scripts",
+        "detectron2",
+        "document-parsing"
+      ],
+      "id": 9
+    },
+    {
+      "name": "layout-parser",
+      "one_line_profile": "Unified toolkit for deep learning based document image analysis",
+      "detailed_description": "A comprehensive toolkit for document image analysis, providing pre-trained models and tools for layout detection, character recognition, and structural analysis of scientific documents.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "layout_analysis",
+        "ocr",
+        "document_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Layout-Parser/layout-parser",
+      "help_website": [
+        "https://layout-parser.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "document-analysis",
+        "deep-learning",
+        "ocr",
+        "layout-parsing"
+      ],
+      "id": 10
+    },
+    {
+      "name": "MetaConfigurator",
+      "one_line_profile": "A schema editor and form generator for JSON schemas and research data",
+      "detailed_description": "MetaConfigurator is a web-based tool designed to facilitate the creation and editing of JSON schemas and configuration files. It is particularly useful for managing metadata and structured research data, allowing researchers to define and validate data formats visually.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "schema_management",
+        "data_formatting"
+      ],
+      "application_level": "solver",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/MetaConfigurator/meta-configurator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "json-schema",
+        "metadata",
+        "configuration-management"
+      ],
+      "id": 11
+    },
+    {
+      "name": "Arabic Nougat",
+      "one_line_profile": "Fine-tuned Nougat model for parsing Arabic scientific documents",
+      "detailed_description": "This tool provides an implementation of the Nougat (Neural Optical Understanding for Academic Documents) model, specifically fine-tuned for Arabic text. It converts PDF documents into Markdown, enabling the extraction of structured text and layout information from Arabic scientific literature.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "ocr"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MohamedAliRashad/arabic-nougat",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pdf-parsing",
+        "ocr",
+        "arabic-nlp",
+        "nougat"
+      ],
+      "id": 12
+    },
+    {
+      "name": "NanoNets docext",
+      "one_line_profile": "Toolkit for OCR-free unstructured data extraction and benchmarking",
+      "detailed_description": "docext is a toolkit designed for extracting structured data from unstructured documents without relying on traditional OCR pipelines. It supports converting documents to Markdown and includes benchmarking tools to evaluate extraction performance, suitable for processing scientific literature and reports.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "layout_analysis",
+        "benchmarking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NanoNets/docext",
+      "help_website": [
+        "https://idp-leaderboard.org/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "document-extraction",
+        "pdf-to-markdown",
+        "unstructured-data"
+      ],
+      "id": 13
+    },
+    {
+      "name": "NeurboParser",
+      "one_line_profile": "Neural TurboSemanticParser for semantic dependency parsing",
+      "detailed_description": "NeurboParser is a C++ implementation of a neural semantic dependency parser. It is used in Natural Language Processing (NLP) to extract semantic structures from text, which is a critical step in mining structured information from scientific literature.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "semantic_parsing",
+        "nlp"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Noahs-ARK/NeurboParser",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "semantic-parsing",
+        "dependency-parsing",
+        "nlp"
+      ],
+      "id": 14
+    },
+    {
+      "name": "Layout2Graph",
+      "one_line_profile": "GNN-based framework for document layout analysis",
+      "detailed_description": "Layout2Graph is an implementation of the Paragraph2Graph framework, which uses Graph Neural Networks (GNNs) to perform language-independent layout analysis. This tool is essential for understanding the structure of scientific documents and extracting logical sections.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "layout_analysis",
+        "document_parsing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NormXU/Layout2Graph",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "layout-analysis",
+        "gnn",
+        "document-structure"
+      ],
+      "id": 15
+    },
+    {
+      "name": "nougat-latex-ocr",
+      "one_line_profile": "Nougat-based image to LaTeX generation tool",
+      "detailed_description": "This repository provides code for fine-tuning and evaluating Nougat-based models specifically for the task of converting images (such as mathematical formulas and scientific text) into LaTeX code, facilitating the digitization of scientific content.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "ocr",
+        "latex_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NormXU/nougat-latex-ocr",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "image-to-latex",
+        "nougat",
+        "ocr",
+        "scientific-notation"
+      ],
+      "id": 16
+    },
+    {
+      "name": "LAREX",
+      "one_line_profile": "Layout Analysis and Region Extraction tool for early printed books",
+      "detailed_description": "LAREX is a semi-automatic tool designed for the layout analysis and region extraction of early printed books and historical documents. It helps researchers in digital humanities and history of science to digitize and structure complex historical layouts.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "layout_analysis",
+        "document_parsing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/OCR4all/LAREX",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "layout-analysis",
+        "historical-documents",
+        "ocr"
+      ],
+      "id": 17
+    },
+    {
+      "name": "General-Documents-Layout-parser",
+      "one_line_profile": "General document layout analysis and parsing tool",
+      "detailed_description": "A tool for general document layout analysis, capable of parsing the structure of documents (including Chinese documents). It aids in extracting content from diverse document formats, supporting downstream scientific data mining tasks.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "layout_analysis",
+        "document_parsing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OKC13/General-Documents-Layout-parser",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "layout-analysis",
+        "document-parsing",
+        "chinese-nlp"
+      ],
+      "id": 18
+    },
+    {
+      "name": "Oxen",
+      "one_line_profile": "Data version control system for machine learning datasets",
+      "detailed_description": "Oxen is a fast data version control system optimized for structured and unstructured machine learning datasets. It enables researchers to version control large scientific datasets (images, text, audio) similarly to how code is versioned, ensuring reproducibility in AI4S workflows.",
+      "domains": [
+        "D1"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "workflow_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/Oxen-AI/Oxen",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-version-control",
+        "machine-learning",
+        "dataset-management"
+      ],
+      "id": 19
+    },
+    {
+      "name": "MegaParse",
+      "one_line_profile": "File parser optimized for LLM ingestion of documents",
+      "detailed_description": "MegaParse is a robust file parsing tool designed to convert unstructured documents (PDF, Docx, PPTx) into clean, structured formats ideal for Large Language Model (LLM) ingestion. It is highly relevant for processing scientific literature and reports in AI4S pipelines.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "data_conversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/QuivrHQ/MegaParse",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pdf-parsing",
+        "llm-ingestion",
+        "unstructured-data"
+      ],
+      "id": 20
+    },
+    {
+      "name": "RapidLayout",
+      "one_line_profile": "Layout analysis tool for Chinese and English documents",
+      "detailed_description": "A tool for analyzing document layouts, specifically optimized for Chinese and English, capable of identifying regions like text, headers, and figures, which is essential for parsing unstructured scientific documents.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "layout_analysis",
+        "document_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RapidAI/RapidLayout",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "layout-analysis",
+        "ocr",
+        "document-parsing"
+      ],
+      "id": 21
+    },
+    {
+      "name": "TableStructureRec",
+      "one_line_profile": "Table structure recognition and extraction tool",
+      "detailed_description": "A collection of optimized models for table structure recognition, including pre- and post-processing pipelines and ONNX conversion, facilitating the extraction of structured data from scientific papers and reports.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "table_extraction",
+        "structure_recognition"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RapidAI/TableStructureRec",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "table-recognition",
+        "ocr",
+        "onnx"
+      ],
+      "id": 22
+    },
+    {
+      "name": "Spotlight",
+      "one_line_profile": "Interactive visualization and curation tool for unstructured data",
+      "detailed_description": "A tool for interactively exploring and curating unstructured datasets (images, audio, text) directly from dataframes, supporting data-centric AI workflows in scientific research.",
+      "domains": [
+        "D1"
+      ],
+      "subtask_category": [
+        "data_visualization",
+        "data_curation",
+        "exploratory_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/Renumics/spotlight",
+      "help_website": [
+        "https://renumics.com/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "data-curation",
+        "visualization",
+        "unstructured-data"
+      ],
+      "id": 23
+    },
+    {
+      "name": "SCOREC Core",
+      "one_line_profile": "Parallel unstructured mesh management library",
+      "detailed_description": "A set of C++ libraries for managing parallel unstructured meshes, supporting adaptive mesh refinement and partition, essential for finite element simulations in physics and engineering.",
+      "domains": [
+        "D1"
+      ],
+      "subtask_category": [
+        "mesh_generation",
+        "simulation",
+        "finite_element_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/SCOREC/core",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "mesh",
+        "fem",
+        "hpc"
+      ],
+      "id": 24
+    },
+    {
+      "name": "SPECFEM3D Cartesian",
+      "one_line_profile": "Seismic wave propagation simulation software",
+      "detailed_description": "Simulates acoustic, elastic, coupled acoustic/elastic, or poroelastic seismic wave propagation in any type of conforming mesh of hexahedra, widely used in geophysics and seismology.",
+      "domains": [
+        "D1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "seismic_modeling",
+        "wave_propagation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/SPECFEM/specfem3d",
+      "help_website": [
+        "https://specfem3d.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "seismology",
+        "geophysics",
+        "simulation"
+      ],
+      "id": 25
+    },
+    {
+      "name": "GravitasML",
+      "one_line_profile": "XML parser optimized for LLM data ingestion",
+      "detailed_description": "A lightweight XML parsing library designed to simplify the processing of XML data for Large Language Models, facilitating the ingestion of structured scientific data into AI workflows.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "xml_parsing",
+        "data_ingestion",
+        "llm_preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Significant-Gravitas/gravitasml",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "xml",
+        "llm",
+        "parsing"
+      ],
+      "id": 26
+    },
+    {
+      "name": "Merlin",
+      "one_line_profile": "3D Vision-Language Model for medical imaging",
+      "detailed_description": "A 3D Vision-Language Model (VLM) specifically designed for computed tomography (CT) scans, leveraging structured EHR and unstructured radiology reports for pretraining to assist in medical diagnosis and analysis.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "medical_imaging",
+        "structure_prediction",
+        "multimodal_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/StanfordMIMI/Merlin",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "medical-ai",
+        "ct-scan",
+        "vlm"
+      ],
+      "id": 27
+    },
+    {
+      "name": "Table Transformer",
+      "one_line_profile": "OCR and vision-based table extraction tool",
+      "detailed_description": "An open-source tool combining OCR and computer vision to extract structured tabular data from images, suitable for preprocessing scientific documents for LLMs and data analysis.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "table_extraction",
+        "ocr",
+        "document_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Sudhanshu1304/table-transformer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "table-extraction",
+        "ocr",
+        "computer-vision"
+      ],
+      "id": 28
+    },
+    {
+      "name": "OCR Correction",
+      "one_line_profile": "Seq2seq model for post-processing OCR errors",
+      "detailed_description": "A tool using sequence-to-sequence models to correct errors in Optical Character Recognition (OCR) output, improving the quality of digitized scientific texts and historical documents.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "ocr_correction",
+        "text_processing",
+        "data_cleaning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TurkuNLP/ocr-correction",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ocr",
+        "nlp",
+        "seq2seq"
+      ],
+      "id": 29
+    },
+    {
+      "name": "UXarray",
+      "one_line_profile": "Xarray extension for unstructured climate data",
+      "detailed_description": "An extension to Xarray that provides analysis and visualization capabilities for unstructured grid data, specifically designed for climate and global weather datasets.",
+      "domains": [
+        "D1"
+      ],
+      "subtask_category": [
+        "climate_analysis",
+        "data_visualization",
+        "unstructured_grid"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UXARRAY/uxarray",
+      "help_website": [
+        "https://uxarray.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "climate",
+        "weather",
+        "xarray"
+      ],
+      "id": 30
+    },
+    {
+      "name": "Fiducials",
+      "one_line_profile": "Simultaneous localization and mapping using fiducial markers",
+      "detailed_description": "A system for simultaneous localization and mapping (SLAM) using fiducial markers, enabling robots to determine their position and orientation in an environment, widely used in robotics research.",
+      "domains": [
+        "D1"
+      ],
+      "subtask_category": [
+        "slam",
+        "localization",
+        "robotics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/UbiquityRobotics/fiducials",
+      "help_website": [
+        "http://wiki.ros.org/fiducials"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "slam",
+        "robotics",
+        "localization"
+      ],
+      "id": 31
+    },
+    {
+      "name": "Unstructured",
+      "one_line_profile": "Open-source ETL library for ingesting and processing unstructured documents for LLMs",
+      "detailed_description": "A library that provides components for ingesting and processing unstructured documents (PDF, HTML, Word, etc.) into structured formats suitable for Large Language Models (LLMs). It handles partitioning, cleaning, and extracting text/metadata from complex document layouts.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "etl",
+        "data_cleaning"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/Unstructured-IO/unstructured",
+      "help_website": [
+        "https://unstructured.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "etl",
+        "pdf-parsing",
+        "llm-preprocessing",
+        "unstructured-data"
+      ],
+      "id": 32
+    },
+    {
+      "name": "ViTLP",
+      "one_line_profile": "Visually Guided Generative Text-Layout Pre-training for Document Intelligence",
+      "detailed_description": "An implementation of a visually guided generative text-layout pre-training framework for document intelligence. It is designed to handle document understanding tasks by leveraging both visual and layout information.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_intelligence",
+        "layout_analysis",
+        "pretraining"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Veason-silverbullet/ViTLP",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "document-understanding",
+        "layout-analysis",
+        "generative-model"
+      ],
+      "id": 33
+    },
+    {
+      "name": "Document-Layout-Analysis",
+      "one_line_profile": "Tools for extracting figures, tables, and text from PDF documents",
+      "detailed_description": "A collection of tools designed to analyze the layout of PDF documents and extract structured components such as figures, tables, and text blocks, facilitating downstream data processing.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "pdf_extraction",
+        "layout_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Wild-Rift/Document-Layout-Analysis",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pdf-extraction",
+        "layout-analysis",
+        "data-mining"
+      ],
+      "id": 34
+    },
+    {
+      "name": "csv-schema-inference",
+      "one_line_profile": "Automatic schema and data type inference for CSV files",
+      "detailed_description": "A tool that automatically infers column data types and generates schemas for CSV files, aiding in the preprocessing and validation of tabular data.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "schema_inference",
+        "data_profiling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Wittline/csv-schema-inference",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "csv",
+        "schema-inference",
+        "data-preprocessing"
+      ],
+      "id": 35
+    },
+    {
+      "name": "GEM",
+      "one_line_profile": "Online globally consistent dense elevation mapping for unstructured terrain",
+      "detailed_description": "A system for creating globally consistent dense elevation maps of unstructured terrain in real-time, useful for robotics navigation and geological surface analysis.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "mapping",
+        "slam",
+        "terrain_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ZJU-Robotics-Lab/GEM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "robotics",
+        "elevation-mapping",
+        "slam",
+        "unstructured-terrain"
+      ],
+      "id": 36
+    },
+    {
+      "name": "llmwhisperer-table-extraction",
+      "one_line_profile": "PDF table extraction pipeline using LLMWhisperer and Langchain",
+      "detailed_description": "A workflow for extracting tabular data from PDFs using LLMWhisperer and structuring the information using Langchain, specifically targeting the conversion of unstructured document tables into structured formats.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "table_extraction",
+        "pdf_parsing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Zipstack/llmwhisperer-table-extraction",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "table-extraction",
+        "pdf",
+        "llm",
+        "structured-data"
+      ],
+      "id": 37
+    },
+    {
+      "name": "Unstract",
+      "one_line_profile": "No-code LLM platform for structuring unstructured documents via ETL pipelines",
+      "detailed_description": "A platform that enables the creation of ETL pipelines to extract structured data from unstructured documents using Large Language Models, providing APIs and a no-code interface for document processing workflows.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "etl",
+        "document_structuring",
+        "pipeline_orchestration"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Zipstack/unstract",
+      "help_website": [
+        "https://unstract.com"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "etl",
+        "llm",
+        "document-processing",
+        "no-code"
+      ],
+      "id": 38
+    },
+    {
+      "name": "OmniParse",
+      "one_line_profile": "Universal data ingestion and parsing tool for GenAI compatibility",
+      "detailed_description": "A tool designed to ingest, parse, and optimize various unstructured data formats (documents, multimedia) into structured formats optimized for Generative AI frameworks.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "data_ingestion",
+        "parsing",
+        "multimodal_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/adithya-s-k/omniparse",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "data-ingestion",
+        "parsing",
+        "genai",
+        "unstructured-data"
+      ],
+      "id": 39
+    },
+    {
+      "name": "CCTag",
+      "one_line_profile": "Library for detecting concentric circle markers for photogrammetry",
+      "detailed_description": "A computer vision library for the detection and identification of CCTag markers, which are used for reliable tracking and calibration in photogrammetry and 3D reconstruction workflows.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "marker_detection",
+        "photogrammetry",
+        "calibration"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/alicevision/CCTag",
+      "help_website": [
+        "https://alicevision.org"
+      ],
+      "license": "MPL-2.0",
+      "tags": [
+        "computer-vision",
+        "photogrammetry",
+        "fiducial-markers"
+      ],
+      "id": 40
+    },
+    {
+      "name": "AllenNLP Semparse",
+      "one_line_profile": "Framework for building semantic parsers with AllenNLP",
+      "detailed_description": "A library built on AllenNLP for developing semantic parsers, which convert natural language into logical forms or executable code, facilitating the extraction of structured meaning from text.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "semantic_parsing",
+        "nlp"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/allenai/allennlp-semparse",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "semantic-parsing",
+        "nlp",
+        "allennlp"
+      ],
+      "id": 41
+    },
+    {
+      "name": "ROSGPT",
+      "one_line_profile": "Interface for controlling robots using natural language via ChatGPT",
+      "detailed_description": "A tool that integrates ChatGPT with ROS (Robot Operating System) to convert unstructured human language commands into actionable robotic instructions, enabling natural language interaction with robots.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "human_robot_interaction",
+        "instruction_parsing",
+        "robot_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aniskoubaa/rosgpt",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ros",
+        "robotics",
+        "llm",
+        "natural-language-control"
+      ],
+      "id": 42
+    },
+    {
+      "name": "Marker",
+      "one_line_profile": "High-accuracy PDF to Markdown/JSON converter for scientific documents",
+      "detailed_description": "A powerful pipeline that converts PDF documents (including scientific papers) into Markdown and JSON formats. It handles equations, tables, and layout analysis with high accuracy, making it essential for ingesting scientific literature into LLMs or data workflows.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "parsing",
+        "layout_analysis",
+        "ocr"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/datalab-to/marker",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "pdf-parsing",
+        "ocr",
+        "scientific-literature",
+        "markdown"
+      ],
+      "id": 43
+    },
+    {
+      "name": "Surya",
+      "one_line_profile": "Multilingual OCR and layout analysis toolkit",
+      "detailed_description": "A comprehensive OCR and document layout analysis tool that supports over 90 languages. It performs text detection, reading order determination, and table recognition, serving as a foundational tool for digitizing and structuring scientific documents.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "ocr",
+        "layout_analysis",
+        "table_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/datalab-to/surya",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "ocr",
+        "layout-analysis",
+        "document-understanding"
+      ],
+      "id": 44
+    },
+    {
+      "name": "Probable People",
+      "one_line_profile": "Parser for unstructured western names into structured components",
+      "detailed_description": "A library using conditional random fields to parse unstructured name strings into structured components (e.g., given name, surname, title). It is widely used in bibliometrics and scientific data cleaning to normalize author names from citation data.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "data_cleaning",
+        "normalization",
+        "parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/datamade/probablepeople",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "name-parsing",
+        "bibliometrics",
+        "data-cleaning"
+      ],
+      "id": 45
+    },
+    {
+      "name": "usaddress",
+      "one_line_profile": "Parser for unstructured US address strings",
+      "detailed_description": "A probabilistic parser that converts unstructured US address strings into structured components. It is valuable for geospatial scientific data processing, epidemiology, and social science research where location data normalization is required.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "data_cleaning",
+        "normalization",
+        "parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/datamade/usaddress",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "address-parsing",
+        "geospatial",
+        "data-cleaning"
+      ],
+      "id": 46
+    },
+    {
+      "name": "deepdoctection",
+      "one_line_profile": "Document AI package for analyzing and extracting data from documents",
+      "detailed_description": "A comprehensive Document AI library that orchestrates OCR, layout analysis, and table extraction. It is specifically designed to handle complex document structures like scientific papers, enabling the extraction of structured data from PDFs.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "parsing",
+        "layout_analysis",
+        "table_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepdoctection/deepdoctection",
+      "help_website": [
+        "https://deepdoctection.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "document-ai",
+        "pdf-parsing",
+        "ocr"
+      ],
+      "id": 47
+    },
+    {
+      "name": "ScienceBeam Parser",
+      "one_line_profile": "Tool suite for converting scientific PDFs to XML",
+      "detailed_description": "Developed by eLife Sciences, this tool converts scientific PDF documents into structured XML (JATS) formats. It uses computer vision and machine learning to parse layout and content, facilitating the semantic processing of scientific literature.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "parsing",
+        "format_conversion",
+        "xml_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/elifesciences/sciencebeam-parser",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pdf-to-xml",
+        "jats",
+        "scientific-publishing"
+      ],
+      "id": 48
+    },
+    {
+      "name": "ExtractThinker",
+      "one_line_profile": "Document Intelligence library for LLM-based extraction",
+      "detailed_description": "A library that provides an ORM-style interaction for document workflows using LLMs. It facilitates the extraction of structured data from unstructured documents, enabling flexible and powerful document intelligence applications in scientific research.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "parsing",
+        "information_extraction",
+        "llm_workflow"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/enoch3712/ExtractThinker",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "document-intelligence",
+        "extraction"
+      ],
+      "id": 49
+    },
+    {
+      "name": "TaBERT",
+      "one_line_profile": "Pre-trained language model for learning joint representations of natural language and structured tables",
+      "detailed_description": "A pre-trained language model designed to learn joint representations of natural language utterances and semi-structured tables. It is trained on a massive corpus of web tables and can be used for semantic parsing tasks, enabling the conversion of natural language into structured queries or representations by understanding tabular data context.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "semantic_parsing",
+        "table_understanding"
+      ],
+      "application_level": "model",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/facebookresearch/TaBERT",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nlp",
+        "semantic-parsing",
+        "table-understanding",
+        "representation-learning"
+      ],
+      "id": 50
+    },
+    {
+      "name": "Nougat",
+      "one_line_profile": "Neural Optical Understanding for Academic Documents",
+      "detailed_description": "A Visual Transformer model that understands academic documents and converts them into markup language (Markdown). It is specifically designed to handle the complex layout and formatting of scientific papers, enabling the extraction of structured text, equations, and tables from PDF documents for downstream scientific data processing.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "ocr",
+        "layout_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/facebookresearch/nougat",
+      "help_website": [
+        "https://facebookresearch.github.io/nougat/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "ocr",
+        "pdf-parsing",
+        "academic-documents",
+        "transformer"
+      ],
+      "id": 51
+    },
+    {
+      "name": "LangExtract",
+      "one_line_profile": "Library for extracting structured information from unstructured text using LLMs",
+      "detailed_description": "A Python library designed to extract structured information from unstructured text using Large Language Models (LLMs). It features precise source grounding and interactive visualization, making it suitable for scientific knowledge extraction, schema inference, and structuring data from scientific literature or reports.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "information_extraction",
+        "schema_inference",
+        "text_structuring"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/google/langextract",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "information-extraction",
+        "structured-data",
+        "nlp"
+      ],
+      "id": 52
+    },
+    {
+      "name": "Gretel Synthetics",
+      "one_line_profile": "Synthetic data generators for structured and unstructured text with differential privacy",
+      "detailed_description": "A library for generating synthetic data for structured and unstructured text, incorporating differentially private learning techniques. It is used in data science and research to create privacy-preserving datasets for training models, simulating scientific data, or sharing sensitive information safely.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "data_generation",
+        "synthetic_data",
+        "privacy_preserving"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gretelai/gretel-synthetics",
+      "help_website": [
+        "https://gretel-synthetics.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "synthetic-data",
+        "differential-privacy",
+        "data-generation",
+        "nlp"
+      ],
+      "id": 53
+    },
+    {
+      "name": "HanLP",
+      "one_line_profile": "Multilingual Natural Language Processing library",
+      "detailed_description": "A comprehensive Natural Language Processing (NLP) library supporting multiple languages. It provides functionalities such as tokenization, part-of-speech tagging, named entity recognition, and syntactic/semantic dependency parsing. It is widely used as a foundational tool for text mining and information extraction in scientific literature analysis.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "nlp",
+        "text_mining",
+        "parsing",
+        "ner"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hankcs/HanLP",
+      "help_website": [
+        "https://hanlp.hankcs.com/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "nlp",
+        "tokenization",
+        "ner",
+        "dependency-parsing"
+      ],
+      "id": 54
+    },
+    {
+      "name": "fAIr",
+      "one_line_profile": "AI-assisted mapping tool for humanitarian and geographic data",
+      "detailed_description": "An open-source AI-assisted mapping tool developed by the Humanitarian OpenStreetMap Team (HOT). It leverages AI models to detect features (like buildings and roads) from satellite imagery, assisting researchers and mappers in generating structured geographic data for humanitarian and scientific analysis.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "mapping",
+        "feature_extraction",
+        "geospatial_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/hotosm/fAIr",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "mapping",
+        "gis",
+        "ai-assisted",
+        "satellite-imagery"
+      ],
+      "id": 55
+    },
+    {
+      "name": "pdf-document-layout-analysis",
+      "one_line_profile": "Docker-powered service for PDF document layout analysis and segmentation",
+      "detailed_description": "A service designed to perform layout analysis on PDF documents. It segments and classifies different parts of PDF pages, identifying elements such as text blocks, titles, images, and tables. This tool is essential for preprocessing scientific literature and reports to extract structured data.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_analysis",
+        "layout_segmentation",
+        "pdf_parsing"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/huridocs/pdf-document-layout-analysis",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pdf-analysis",
+        "layout-analysis",
+        "document-processing",
+        "docker"
+      ],
+      "id": 56
+    },
+    {
+      "name": "pdf-text-extraction",
+      "one_line_profile": "Tool for extracting text from PDFs using layout analysis outputs",
+      "detailed_description": "A utility that leverages the outputs of the pdf-document-layout-analysis service to extract text from PDF files. It uses the segmentation and classification information to accurately extract and structure text content from complex documents, facilitating downstream text mining and analysis.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "text_extraction",
+        "pdf_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Makefile",
+      "repo_url": "https://github.com/huridocs/pdf-text-extraction",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pdf",
+        "text-extraction",
+        "document-processing"
+      ],
+      "id": 57
+    },
+    {
+      "name": "vision-parse",
+      "one_line_profile": "PDF to Markdown converter using Vision LLMs for document parsing",
+      "detailed_description": "A tool that leverages Vision Language Models (VLMs) to parse PDF documents (including scientific papers) into structured Markdown format, preserving layout and content structure.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "ocr",
+        "unstructured_data_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/iamarunbrahma/vision-parse",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pdf-parsing",
+        "vision-llm",
+        "markdown",
+        "document-intelligence"
+      ],
+      "id": 58
+    },
+    {
+      "name": "schemer",
+      "one_line_profile": "Schema registry and inference tool for CSV, JSON, Avro, and Parquet",
+      "detailed_description": "A schema registry service that supports schema inference for common data formats (CSV, JSON, etc.), facilitating data management and validation in data workflows.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "schema_inference",
+        "data_validation"
+      ],
+      "application_level": "service",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/indix/schemer",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "schema-inference",
+        "csv",
+        "parquet",
+        "data-management"
+      ],
+      "id": 59
+    },
+    {
+      "name": "layout_analysis",
+      "one_line_profile": "Document layout analysis tool using YOLOv8",
+      "detailed_description": "A tool for detecting and analyzing the layout of documents (specifically Chinese documents, but applicable to others) using YOLOv8, essential for extracting structured information from scientific literature.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "layout_analysis",
+        "document_parsing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jiangnanboy/layout_analysis",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "yolov8",
+        "layout-analysis",
+        "document-understanding"
+      ],
+      "id": 60
+    },
+    {
+      "name": "layout_analysis4j",
+      "one_line_profile": "Java implementation of document layout analysis using YOLOv8",
+      "detailed_description": "The Java version of the layout_analysis tool, enabling document layout detection and analysis in Java-based scientific workflows.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "layout_analysis",
+        "document_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/jiangnanboy/layout_analysis4j",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "java",
+        "yolov8",
+        "layout-analysis"
+      ],
+      "id": 61
+    },
+    {
+      "name": "json-typedef-infer",
+      "one_line_profile": "CLI tool for inferring JSON Typedef schemas from data",
+      "detailed_description": "A command-line tool that generates JSON Typedef schemas from example data, aiding in schema inference and data structure discovery for JSON-based scientific datasets.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "schema_inference",
+        "data_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/jsontypedef/json-typedef-infer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "schema-inference",
+        "json-typedef",
+        "cli"
+      ],
+      "id": 62
+    },
+    {
+      "name": "genson-rs",
+      "one_line_profile": "High-performance JSON Schema inference engine",
+      "detailed_description": "A Rust-based engine for inferring JSON Schemas from data, providing fast schema discovery for large JSON datasets in scientific data pipelines.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "schema_inference",
+        "data_profiling"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/junyu-w/genson-rs",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "rust",
+        "json-schema",
+        "inference"
+      ],
+      "id": 63
+    },
+    {
+      "name": "byte-vision",
+      "one_line_profile": "Privacy-first document intelligence platform with RAG",
+      "detailed_description": "A platform for transforming static documents into an interactive knowledge base using OCR, parsing, and RAG (Retrieval-Augmented Generation), suitable for scientific literature management.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "ocr",
+        "rag"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/kbrisso/byte-vision",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "document-intelligence",
+        "ocr",
+        "rag",
+        "elasticsearch"
+      ],
+      "id": 64
+    },
+    {
+      "name": "GROBID",
+      "one_line_profile": "Machine learning software for extracting information from scholarly documents",
+      "detailed_description": "A leading library for extracting, parsing, and restructuring raw documents (PDF) such as scientific publications into structured XML/TEI encoded data, focusing on bibliographic data and full text.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "information_extraction",
+        "bibliographic_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/kermitt2/grobid",
+      "help_website": [
+        "https://grobid.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "pdf-parsing",
+        "scientific-literature",
+        "tei",
+        "crf",
+        "deep-learning"
+      ],
+      "id": 65
+    },
+    {
+      "name": "grobid-astro",
+      "one_line_profile": "GROBID module for extracting astronomical entities",
+      "detailed_description": "A specialized module for GROBID designed to recognize and extract astronomical entities (such as celestial objects) from scientific papers.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "entity_extraction",
+        "document_parsing"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/kermitt2/grobid-astro",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "astronomy",
+        "ner",
+        "grobid-module"
+      ],
+      "id": 66
+    },
+    {
+      "name": "grobid-client-java",
+      "one_line_profile": "Java client for GROBID REST services",
+      "detailed_description": "The official Java client library for interacting with the GROBID service, facilitating the integration of scientific document parsing into Java applications.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/kermitt2/grobid-client-java",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "client",
+        "java",
+        "grobid"
+      ],
+      "id": 67
+    },
+    {
+      "name": "grobid-client-node",
+      "one_line_profile": "Node.js client for GROBID REST services",
+      "detailed_description": "The official Node.js client library for interacting with the GROBID service, enabling scientific document parsing in JavaScript/Node.js environments.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/kermitt2/grobid-client-node",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "client",
+        "node.js",
+        "grobid"
+      ],
+      "id": 68
+    },
+    {
+      "name": "grobid-client-python",
+      "one_line_profile": "Python client for GROBID Web services",
+      "detailed_description": "The official Python client library for interacting with the GROBID service, widely used in Python-based scientific data pipelines for literature mining.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kermitt2/grobid-client-python",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "client",
+        "python",
+        "grobid"
+      ],
+      "id": 69
+    },
+    {
+      "name": "grobid-ner",
+      "one_line_profile": "Named-Entity Recognition module based on Grobid for scientific text",
+      "detailed_description": "A Named-Entity Recogniser (NER) built on top of Grobid, designed to extract entities from scientific documents. It leverages Grobid's cascading CRF models to identify and classify entities within the structure of academic papers.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "named_entity_recognition",
+        "text_mining"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/kermitt2/grobid-ner",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ner",
+        "grobid",
+        "scientific-text-mining"
+      ],
+      "id": 70
+    },
+    {
+      "name": "grobid-quantities",
+      "one_line_profile": "Grobid extension for extracting physical quantities from scientific text",
+      "detailed_description": "A module for Grobid that identifies, parses, and normalizes physical quantities and measurements in scientific and technical documents. It handles values, units, and their normalization.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "entity_extraction",
+        "normalization"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/lfoppiano/grobid-quantities",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "grobid",
+        "physical-quantities",
+        "measurement-extraction"
+      ],
+      "id": 71
+    },
+    {
+      "name": "grobid-superconductors",
+      "one_line_profile": "Grobid module for superconductor material and property extraction",
+      "detailed_description": "A specialized Grobid module designed to extract information about superconductor materials, their properties (like critical temperature), and related experimental conditions from scientific literature.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "material_extraction",
+        "property_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/lfoppiano/grobid-superconductors",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "materials-science",
+        "superconductors",
+        "text-mining"
+      ],
+      "id": 72
+    },
+    {
+      "name": "material-parsers",
+      "one_line_profile": "Parsers and utilities for materials science data extraction",
+      "detailed_description": "A collection of parsers and scripts developed to support the extraction of materials science data, particularly in the context of the Grobid Superconductors project. It includes utilities for handling material names and properties.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "parsing",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lfoppiano/material-parsers",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "materials-science",
+        "parsing",
+        "grobid-utils"
+      ],
+      "id": 73
+    },
+    {
+      "name": "structure-vision",
+      "one_line_profile": "Visualizer for Grobid-extracted document structure",
+      "detailed_description": "A viewer tool designed to visualize the structured data extracted by Grobid from PDF documents. It helps researchers and developers inspect and validate the parsing results of scientific publications.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "visualization",
+        "validation"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lfoppiano/structure-vision",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "visualization",
+        "grobid",
+        "pdf-structure"
+      ],
+      "id": 74
+    },
+    {
+      "name": "linkml-datalog",
+      "one_line_profile": "Translator from LinkML schemas to Datalog for validation",
+      "detailed_description": "A tool that translates LinkML (Linked Data Modeling Language) schemas into Datalog programs. It enables advanced validation and inference over instance data using the Souffle Datalog engine, supporting complex scientific data modeling.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "schema_validation",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/linkml/linkml-datalog",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "linkml",
+        "datalog",
+        "schema-validation"
+      ],
+      "id": 75
+    },
+    {
+      "name": "P2PaLA",
+      "one_line_profile": "Layout analysis tool for historical documents (PAGE format)",
+      "detailed_description": "Page to PAGE Layout Analysis Tool. A software for analyzing the layout of documents, particularly historical ones, and generating output in the PAGE XML format, which is a standard in document analysis research.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "layout_analysis",
+        "document_processing"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lquirosd/P2PaLA",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "layout-analysis",
+        "page-xml",
+        "historical-documents"
+      ],
+      "id": 76
+    },
+    {
+      "name": "iFEM",
+      "one_line_profile": "MATLAB package for adaptive finite element methods",
+      "detailed_description": "A MATLAB software package containing robust and efficient codes for adaptive finite element methods (FEM) on unstructured simplicial grids. It is used for scientific simulation and modeling in 2D and 3D.",
+      "domains": [
+        "Scientific Computing",
+        "Simulation"
+      ],
+      "subtask_category": [
+        "simulation",
+        "finite_element_method"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/lyc102/ifem",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "fem",
+        "simulation",
+        "matlab"
+      ],
+      "id": 77
+    },
+    {
+      "name": "tesseract-recognize",
+      "one_line_profile": "Layout analysis and OCR tool exporting to Page XML format",
+      "detailed_description": "A C++ tool that performs layout analysis and text recognition using Tesseract, specifically designed to output results in Page XML format, which is a standard for document image analysis and digital archiving workflows.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "ocr",
+        "layout_analysis",
+        "document_parsing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mauvilsa/tesseract-recognize",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ocr",
+        "page-xml",
+        "layout-analysis",
+        "tesseract"
+      ],
+      "id": 78
+    },
+    {
+      "name": "llm-document-ocr",
+      "one_line_profile": "LLM-based OCR and document parsing library",
+      "detailed_description": "A TypeScript library that leverages Large Language Models (LLMs) to perform OCR and parse unstructured documents into structured formats, facilitating data extraction from scientific or technical documents.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "ocr",
+        "document_parsing",
+        "information_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/mercoa-finance/llm-document-ocr",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "ocr",
+        "document-parsing",
+        "typescript"
+      ],
+      "id": 79
+    },
+    {
+      "name": "semantic-csv",
+      "one_line_profile": "Higher-level semantic tools for CSV data manipulation",
+      "detailed_description": "A Clojure library providing higher-level abstractions for working with CSV data, enabling semantic mapping and processing of tabular data commonly used in scientific research.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "csv_parsing",
+        "data_normalization"
+      ],
+      "application_level": "library",
+      "primary_language": "Clojure",
+      "repo_url": "https://github.com/metasoarous/semantic-csv",
+      "help_website": [],
+      "license": "EPL-1.0",
+      "tags": [
+        "csv",
+        "clojure",
+        "data-processing"
+      ],
+      "id": 80
+    },
+    {
+      "name": "AIDocIntelligence",
+      "one_line_profile": "Client for AI Document Intelligence service",
+      "detailed_description": "A Python tool/client for interacting with AI Document Intelligence services, enabling the extraction of text, key-value pairs, tables, and structures from unstructured scientific or technical documents.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "information_extraction",
+        "table_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/AIDocIntelligence",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "document-intelligence",
+        "extraction",
+        "parsing"
+      ],
+      "id": 81
+    },
+    {
+      "name": "Document-Knowledge-Mining-Solution-Accelerator",
+      "one_line_profile": "Workflow for mining knowledge from unstructured documents",
+      "detailed_description": "A solution accelerator that integrates Azure OpenAI and Document Intelligence to process, summarize, and extract entities/metadata from unstructured multi-modal documents, facilitating knowledge discovery in research.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "knowledge_mining",
+        "document_summarization",
+        "entity_extraction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/microsoft/Document-Knowledge-Mining-Solution-Accelerator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "knowledge-mining",
+        "rag",
+        "document-processing"
+      ],
+      "id": 82
+    },
+    {
+      "name": "OmniParser",
+      "one_line_profile": "Screen parsing tool for vision-based GUI agents",
+      "detailed_description": "A pure vision-based screen parsing tool designed to convert GUI screenshots into structured elements. While primarily for agents, its capability to parse visual information into structured data is relevant for AI-assisted data extraction and automation in research workflows.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "visual_parsing",
+        "gui_automation",
+        "screen_parsing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/microsoft/OmniParser",
+      "help_website": [],
+      "license": "CC-BY-4.0",
+      "tags": [
+        "vision-parsing",
+        "gui-agent",
+        "screen-parsing"
+      ],
+      "id": 83
+    },
+    {
+      "name": "data-formulator",
+      "one_line_profile": "AI-powered data visualization creation tool",
+      "detailed_description": "A tool that uses AI to transform data and create rich visualizations, assisting researchers in exploring and presenting scientific data effectively.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "data_visualization",
+        "data_transformation",
+        "exploratory_analysis"
+      ],
+      "application_level": "tool",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/microsoft/data-formulator",
+      "help_website": [
+        "https://microsoft.github.io/data-formulator"
+      ],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "ai-assisted",
+        "data-analysis"
+      ],
+      "id": 84
+    },
+    {
+      "name": "dstoolkit-text2sql-and-imageprocessing",
+      "one_line_profile": "Toolkit for RAG, Text2SQL, and document processing",
+      "detailed_description": "A development toolkit accelerating RAG applications by integrating SQL Warehouses and document analysis via Azure Document Intelligence, facilitating complex data querying and extraction for research.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "text2sql",
+        "rag",
+        "document_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/dstoolkit-text2sql-and-imageprocessing",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rag",
+        "text2sql",
+        "document-intelligence"
+      ],
+      "id": 85
+    },
+    {
+      "name": "openscraping-lib-csharp",
+      "one_line_profile": "Library for structured data extraction from HTML",
+      "detailed_description": "A C# library designed to turn unstructured HTML pages into structured data using JSON configuration and XPath rules, capable of handling complex objects like tables, useful for scientific data collection from web sources.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "web_scraping",
+        "data_extraction",
+        "html_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/microsoft/openscraping-lib-csharp",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "scraping",
+        "structured-data",
+        "xpath"
+      ],
+      "id": 86
+    },
+    {
+      "name": "rat-sql",
+      "one_line_profile": "Relation-aware semantic parsing model (Text-to-SQL)",
+      "detailed_description": "A relation-aware semantic parsing model that translates natural language questions into SQL queries, facilitating natural language interfaces for scientific databases.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "semantic_parsing",
+        "text2sql",
+        "natural_language_interface"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/rat-sql",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "semantic-parsing",
+        "text2sql",
+        "nlp"
+      ],
+      "id": 87
+    },
+    {
+      "name": "table-transformer",
+      "one_line_profile": "Deep learning model for table extraction from documents",
+      "detailed_description": "Table Transformer (TATR) is a deep learning model specifically designed to extract and structure tables from unstructured documents like PDFs and images, a critical task in scientific literature mining.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "table_extraction",
+        "document_parsing",
+        "structure_recognition"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/table-transformer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "table-extraction",
+        "deep-learning",
+        "pdf-parsing"
+      ],
+      "id": 88
+    },
+    {
+      "name": "YOLOv10-Document-Layout-Analysis",
+      "one_line_profile": "YOLOv10 model for document layout analysis",
+      "detailed_description": "A YOLOv10 model trained on the DocLayNet dataset for performing document layout analysis, enabling the segmentation and classification of document elements (text, tables, figures) in scientific papers.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "layout_analysis",
+        "document_parsing",
+        "computer_vision"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/moured/YOLOv10-Document-Layout-Analysis",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "yolo",
+        "layout-analysis",
+        "doclaynet"
+      ],
+      "id": 89
+    },
+    {
+      "name": "YOLOv11-Document-Layout-Analysis",
+      "one_line_profile": "YOLOv11 model for document layout analysis",
+      "detailed_description": "A YOLOv11 model trained on the DocLayNet dataset for performing document layout analysis, providing updated performance for segmenting scientific document structures.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "layout_analysis",
+        "document_parsing",
+        "computer_vision"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/moured/YOLOv11-Document-Layout-Analysis",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "yolo",
+        "layout-analysis",
+        "doclaynet"
+      ],
+      "id": 90
+    },
+    {
+      "name": "ccg2lambda",
+      "one_line_profile": "Semantic parsing tool for natural language inference",
+      "detailed_description": "A tool for semantic parsing that converts Combinatory Categorial Grammar (CCG) derivations into lambda calculus expressions, supporting natural language inference and logic-based semantics research.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "semantic_parsing",
+        "natural_language_inference",
+        "logic_representation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mynlp/ccg2lambda",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "semantic-parsing",
+        "nlp",
+        "logic"
+      ],
+      "id": 91
+    },
+    {
+      "name": "LLM Graph Builder",
+      "one_line_profile": "Neo4j graph construction from unstructured data using LLMs",
+      "detailed_description": "A tool that utilizes Large Language Models (LLMs) to extract nodes and relationships from unstructured text data and construct knowledge graphs in Neo4j. It supports schema inference and automated mapping, facilitating the conversion of scientific literature or reports into structured knowledge bases.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "knowledge_extraction",
+        "graph_construction",
+        "schema_inference"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/neo4j-labs/llm-graph-builder",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "knowledge-graph",
+        "llm",
+        "unstructured-data",
+        "neo4j"
+      ],
+      "id": 92
+    },
+    {
+      "name": "SPARQA",
+      "one_line_profile": "Skeleton-based Semantic Parsing for Complex Questions over Knowledge Bases",
+      "detailed_description": "A semantic parsing framework designed to handle complex questions over knowledge bases (KBQA). It uses a skeleton-based approach to map natural language queries into SPARQL or logical forms, facilitating the interrogation of structured scientific data.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "semantic_parsing",
+        "kbqa",
+        "query_mapping"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nju-websoft/SPARQA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "semantic-parsing",
+        "knowledge-base",
+        "nlp",
+        "sparql"
+      ],
+      "id": 93
+    },
+    {
+      "name": "arucogen",
+      "one_line_profile": "Online ArUco markers generator for computer vision",
+      "detailed_description": "A utility tool for generating ArUco markers, which are essential for camera pose estimation, robotics navigation, and augmented reality experiments in computer vision research.",
+      "domains": [
+        "D1",
+        "D1-01"
+      ],
+      "subtask_category": [
+        "data_generation",
+        "computer_vision_setup"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/okalachev/arucogen",
+      "help_website": [
+        "http://chev.me/arucogen/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "aruco",
+        "computer-vision",
+        "robotics",
+        "marker-generation"
+      ],
+      "id": 94
+    },
+    {
+      "name": "Open Politics HQ",
+      "one_line_profile": "OSINT infrastructure for structured insights from unstructured data",
+      "detailed_description": "A platform for Open Source Intelligence (OSINT) that ingests content, defines analytical frameworks, and visualizes patterns. It is designed for researchers in social and political sciences to turn domain expertise into structured insights from large volumes of documents.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "osint",
+        "text_analysis",
+        "pattern_recognition"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/open-politics/open-politics-hq",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "osint",
+        "social-science",
+        "data-analysis",
+        "visualization"
+      ],
+      "id": 95
+    },
+    {
+      "name": "DocLayout-YOLO",
+      "one_line_profile": "Document Layout Analysis using YOLO",
+      "detailed_description": "A deep learning model based on YOLO designed for document layout analysis. It detects and segments different components of a document (e.g., text blocks, tables, figures), which is a critical step in parsing scientific literature and technical documents.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_layout_analysis",
+        "parsing",
+        "segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/opendatalab/DocLayout-YOLO",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "document-analysis",
+        "yolo",
+        "layout-analysis",
+        "pdf-parsing"
+      ],
+      "id": 96
+    },
+    {
+      "name": "MinerU",
+      "one_line_profile": "High-quality PDF to Markdown/JSON converter for LLM agents",
+      "detailed_description": "A comprehensive tool designed to transform complex documents (like scientific PDFs) into LLM-ready formats (Markdown/JSON). It handles layout analysis, formula extraction, and table parsing to support downstream AI agent workflows.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "pdf_parsing",
+        "format_conversion",
+        "data_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/opendatalab/MinerU",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "pdf-to-markdown",
+        "llm-preprocessing",
+        "document-intelligence"
+      ],
+      "id": 97
+    },
+    {
+      "name": "PDF-Extract-Kit",
+      "one_line_profile": "Comprehensive Toolkit for High-Quality PDF Content Extraction",
+      "detailed_description": "A toolkit focused on extracting high-quality content from PDFs, including text, tables, and formulas. It serves as a preprocessing engine for scientific document analysis and knowledge base construction.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "pdf_extraction",
+        "ocr",
+        "layout_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/opendatalab/PDF-Extract-Kit",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "pdf-extraction",
+        "ocr",
+        "document-parsing"
+      ],
+      "id": 98
+    },
+    {
+      "name": "semantic-bot",
+      "one_line_profile": "Semi-Automatic Tool to generate RDF mappings",
+      "detailed_description": "A tool designed to assist in generating RDF mappings for datasets. It helps in the semantic enrichment of data, facilitating the integration of datasets into the Semantic Web or knowledge graphs.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "rdf_mapping",
+        "semantic_enrichment",
+        "schema_mapping"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/opendatasoft/semantic-bot",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rdf",
+        "semantic-web",
+        "data-mapping"
+      ],
+      "id": 99
+    },
+    {
+      "name": "GeoAI",
+      "one_line_profile": "Artificial Intelligence for Geospatial Data",
+      "detailed_description": "A Python library for applying artificial intelligence and machine learning techniques to geospatial data. It supports tasks such as image segmentation, object detection, and data analysis in the context of geography and earth sciences.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "geospatial_analysis",
+        "image_segmentation",
+        "remote_sensing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/opengeos/geoai",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "geospatial",
+        "ai",
+        "gis",
+        "remote-sensing"
+      ],
+      "id": 100
+    },
+    {
+      "name": "openalex-pdf-parser",
+      "one_line_profile": "PDF parser powered by grobid for OpenAlex",
+      "detailed_description": "A specialized PDF parsing tool used within the OpenAlex ecosystem, leveraging Grobid to extract structured metadata and full text from scientific publications.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "pdf_parsing",
+        "metadata_extraction",
+        "bibliometrics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ourresearch/openalex-pdf-parser",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "grobid",
+        "openalex",
+        "pdf-parsing",
+        "scientific-literature"
+      ],
+      "id": 101
+    },
+    {
+      "name": "aruco_ros",
+      "one_line_profile": "ROS wrappers for Aruco Augmented Reality marker detector",
+      "detailed_description": "A ROS package that provides wrappers for the Aruco library, enabling the detection of augmented reality markers. This is widely used in robotics research for localization, calibration, and object tracking.",
+      "domains": [
+        "D1",
+        "D1-01"
+      ],
+      "subtask_category": [
+        "marker_detection",
+        "robotics_perception",
+        "localization"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pal-robotics/aruco_ros",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ros",
+        "robotics",
+        "computer-vision",
+        "aruco"
+      ],
+      "id": 102
+    },
+    {
+      "name": "papercast",
+      "one_line_profile": "Pipeline tool for processing technical documents (arXiv, PDF)",
+      "detailed_description": "A pipeline tool designed to process technical documents from sources like arXiv and SemanticScholar. It uses GROBID and LangChain to parse papers and can convert them into audio (podcast format) or other structured representations for analysis.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "literature_processing",
+        "pdf_parsing",
+        "audio_synthesis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/papercast-dev/papercast",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "arxiv",
+        "pdf-processing",
+        "grobid",
+        "langchain"
+      ],
+      "id": 103
+    },
+    {
+      "name": "View-Parsing-Network",
+      "one_line_profile": "Cross-view Semantic Segmentation for Sensing Surroundings",
+      "detailed_description": "Implementation of the View Parsing Network (VPN) for cross-view semantic segmentation. This tool is used in robotics and autonomous driving research to transform first-person view images into top-down semantic maps.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "semantic_segmentation",
+        "view_transformation",
+        "robotics_perception"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pbw-Berwin/View-Parsing-Network",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "computer-vision",
+        "semantic-segmentation",
+        "robotics",
+        "view-parsing"
+      ],
+      "id": 104
+    },
+    {
+      "name": "tranX",
+      "one_line_profile": "Neural semantic parser for mapping natural language to code",
+      "detailed_description": "A general-purpose neural semantic parser that maps natural language queries into machine-executable code or logical forms. It is widely used in NLP research for tasks like code generation and semantic parsing of complex queries.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "semantic_parsing",
+        "code_generation",
+        "nlp"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pcyin/tranX",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "semantic-parsing",
+        "nlp",
+        "code-generation"
+      ],
+      "id": 105
+    },
+    {
+      "name": "pdfix-autotag-deepdoctection",
+      "one_line_profile": "Autotag PDF documents using deepdoctection",
+      "detailed_description": "A tool that uses the deepdoctection AI model to automatically analyze and tag the structure of PDF documents. This aids in making PDFs accessible and machine-readable for further data extraction.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "pdf_tagging",
+        "document_structure_analysis",
+        "accessibility"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pdfix/pdfix-autotag-deepdoctection",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pdf",
+        "deepdoctection",
+        "autotagging"
+      ],
+      "id": 106
+    },
+    {
+      "name": "OCRIntegrator",
+      "one_line_profile": "Integrated solution for OCR, layout analysis, and table parsing",
+      "detailed_description": "A unified interface combining multiple open-source OCR models, layout analysis tools, and table parsers. It streamlines the process of extracting structured information from various document types.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "ocr",
+        "layout_analysis",
+        "table_extraction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/peakhell/OCRIntegrator",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ocr",
+        "document-processing",
+        "layout-analysis"
+      ],
+      "id": 107
+    },
+    {
+      "name": "SEMPRE",
+      "one_line_profile": "Semantic Parser with Execution",
+      "detailed_description": "A toolkit for training semantic parsers that map natural language to logical forms. It is a foundational tool in NLP research for building systems that can understand and execute natural language commands against knowledge bases.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "semantic_parsing",
+        "nlp",
+        "logical_form_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/percyliang/sempre",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "semantic-parsing",
+        "nlp",
+        "stanford"
+      ],
+      "id": 108
+    },
+    {
+      "name": "geodict",
+      "one_line_profile": "Library for pulling location information from unstructured text",
+      "detailed_description": "A simple Python library for geoparsing, allowing the extraction of location names and coordinates from unstructured text. Useful for geospatial analysis and social science research.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "geoparsing",
+        "text_mining",
+        "location_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/petewarden/geodict",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "geoparsing",
+        "nlp",
+        "location-extraction"
+      ],
+      "id": 109
+    },
+    {
+      "name": "yolo-doclaynet",
+      "one_line_profile": "YOLO models trained on DocLayNet for document layout analysis",
+      "detailed_description": "Provides YOLO models trained on the DocLayNet dataset specifically for document layout analysis. This tool enables the segmentation and classification of document elements (headers, paragraphs, tables) in scientific and technical documents.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "layout_analysis",
+        "document_segmentation",
+        "computer_vision"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ppaanngggg/yolo-doclaynet",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "yolo",
+        "doclaynet",
+        "document-analysis"
+      ],
+      "id": 110
+    },
+    {
+      "name": "Advanced Deep Research",
+      "one_line_profile": "Automated Deep Research agent with paper parsing",
+      "detailed_description": "An AI agent designed to conduct deep research by performing web searches, parsing scientific papers, and generating didactic summaries. It automates the literature review and information synthesis process.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "literature_review",
+        "paper_parsing",
+        "automated_research"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/prodesk98/advanced-deep-research",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ai-agent",
+        "research-automation",
+        "paper-parsing"
+      ],
+      "id": 111
+    },
+    {
+      "name": "gds2Para",
+      "one_line_profile": "GDSII layout file parsing and parameter extraction tool",
+      "detailed_description": "A tool for parsing GDSII files (standard format for IC layout data), performing layout analysis, and extracting parameters for semiconductor engineering and physics simulations.",
+      "domains": [
+        "D1",
+        "D1-01"
+      ],
+      "subtask_category": [
+        "layout_analysis",
+        "parameter_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/purdue-onchip/gds2Para",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "gdsii",
+        "eda",
+        "semiconductor",
+        "layout-analysis"
+      ],
+      "id": 112
+    },
+    {
+      "name": "QMiner",
+      "one_line_profile": "Real-time large-scale data analytics platform",
+      "detailed_description": "An analytics platform for processing real-time large-scale streams containing structured and unstructured data, suitable for data mining, sensor data analysis, and text mining tasks.",
+      "domains": [
+        "D1",
+        "D1-04"
+      ],
+      "subtask_category": [
+        "data_mining",
+        "stream_analytics",
+        "statistics"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/qminer/qminer",
+      "help_website": [
+        "http://qminer.github.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "data-mining",
+        "stream-processing",
+        "analytics",
+        "cpp"
+      ],
+      "id": 113
+    },
+    {
+      "name": "eynollah",
+      "one_line_profile": "Document layout analysis and segmentation tool",
+      "detailed_description": "A tool for document layout analysis, capable of segmenting pages into regions (text, images, tables) and extracting structure, often used in OCR pipelines for scientific literature or historical documents.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_layout_analysis",
+        "ocr_post_processing",
+        "structure_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/qurator-spk/eynollah",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "layout-analysis",
+        "ocr",
+        "document-processing",
+        "deep-learning"
+      ],
+      "id": 114
+    },
+    {
+      "name": "document-layout-analysis",
+      "one_line_profile": "Simple document layout analysis using OpenCV",
+      "detailed_description": "A Python-OpenCV based tool for analyzing document layouts, identifying blocks of text and images, useful for preprocessing scientific documents for data extraction.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_layout_analysis",
+        "image_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rbaguila/document-layout-analysis",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "opencv",
+        "layout-analysis",
+        "document-processing"
+      ],
+      "id": 115
+    },
+    {
+      "name": "llm_data_parser",
+      "one_line_profile": "LLM-based web data extraction tool",
+      "detailed_description": "A proof-of-concept tool leveraging LLMs to identify and extract meaningful structured data from HTML content without heavy parsing, facilitating data collection for analysis.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "data_extraction",
+        "html_parsing",
+        "llm_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/repollo/llm_data_parser",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "llm",
+        "web-scraping",
+        "data-extraction"
+      ],
+      "id": 116
+    },
+    {
+      "name": "BotanicGarden",
+      "one_line_profile": "Dataset for robot navigation in unstructured natural environments",
+      "detailed_description": "A high-quality dataset designed for training and evaluating robot navigation algorithms in unstructured natural environments (botanic gardens), supporting robotics research.",
+      "domains": [
+        "D4",
+        "D1"
+      ],
+      "subtask_category": [
+        "robot_navigation",
+        "dataset_access"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/robot-pesg/BotanicGarden",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "robotics",
+        "dataset",
+        "navigation",
+        "unstructured-environment"
+      ],
+      "id": 117
+    },
+    {
+      "name": "semtools",
+      "one_line_profile": "Command line tools for semantic search and document parsing",
+      "detailed_description": "A collection of CLI tools for semantic search, RAG (Retrieval-Augmented Generation), and document parsing, facilitating the processing of unstructured text for AI applications.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "semantic_search",
+        "document_parsing",
+        "rag"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/run-llama/semtools",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "semantic-search",
+        "rag",
+        "document-parsing",
+        "rust"
+      ],
+      "id": 118
+    },
+    {
+      "name": "TabularSemanticParsing",
+      "one_line_profile": "Natural language to SQL semantic parsing model",
+      "detailed_description": "Research code for translating natural language questions into structured query language (SQL), supporting semantic parsing tasks on tabular data.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "semantic_parsing",
+        "text_to_sql",
+        "nlp"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/salesforce/TabularSemanticParsing",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "nlp",
+        "semantic-parsing",
+        "sql",
+        "deep-learning"
+      ],
+      "id": 119
+    },
+    {
+      "name": "WikiSQL",
+      "one_line_profile": "Large annotated semantic parsing corpus for Text-to-SQL",
+      "detailed_description": "A large-scale dataset for developing natural language interfaces for relational databases, specifically for the task of semantic parsing (Text-to-SQL).",
+      "domains": [
+        "D4",
+        "D1"
+      ],
+      "subtask_category": [
+        "dataset_access",
+        "semantic_parsing"
+      ],
+      "application_level": "dataset",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/salesforce/WikiSQL",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "dataset",
+        "nlp",
+        "text-to-sql",
+        "semantic-parsing"
+      ],
+      "id": 120
+    },
+    {
+      "name": "ingest",
+      "one_line_profile": "CLI tool to parse files and websites for LLM ingestion",
+      "detailed_description": "A command-line tool designed to parse code repositories and websites into a format suitable for ingestion by Large Language Models (LLMs), streamlining the data preparation workflow for AI.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "data_ingestion",
+        "preprocessing",
+        "llm_context_preparation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/sammcj/ingest",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "data-ingestion",
+        "cli",
+        "parsing"
+      ],
+      "id": 121
+    },
+    {
+      "name": "HybridRAG",
+      "one_line_profile": "Hybrid retrieval system combining vector and graph search",
+      "detailed_description": "A Retrieval-Augmented Generation (RAG) system that integrates vector search with knowledge graph search to handle both structured and unstructured data for accurate LLM response generation.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "information_retrieval",
+        "rag",
+        "knowledge_graph"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/sarabesh/HybridRAG",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rag",
+        "knowledge-graph",
+        "llm",
+        "hybrid-search"
+      ],
+      "id": 122
+    },
+    {
+      "name": "ACL-anthology-corpus",
+      "one_line_profile": "ACL Anthology corpus data and extraction scripts",
+      "detailed_description": "A repository providing the ACL Anthology corpus (computational linguistics research papers), including metadata, PDFs, and Grobid extractions, serving as a dataset for NLP research.",
+      "domains": [
+        "D4",
+        "D1"
+      ],
+      "subtask_category": [
+        "dataset_access",
+        "nlp_corpus_processing"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/shauryr/ACL-anthology-corpus",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nlp",
+        "dataset",
+        "acl-anthology",
+        "corpus"
+      ],
+      "id": 123
+    },
+    {
+      "name": "graph-parser",
+      "one_line_profile": "Semantic parser for converting natural language to logical forms",
+      "detailed_description": "A semantic parsing tool capable of converting natural language sentences into logical forms and graphs, supporting research in computational linguistics and knowledge representation.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "semantic_parsing",
+        "knowledge_representation",
+        "nlp"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/sivareddyg/graph-parser",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "semantic-parsing",
+        "nlp",
+        "logical-forms",
+        "graphs"
+      ],
+      "id": 124
+    },
+    {
+      "name": "SUQL",
+      "one_line_profile": "Conversational search interface over hybrid structured and unstructured data",
+      "detailed_description": "A formal language and framework for building conversational interfaces that can query both structured databases (SQL) and unstructured text corpora, useful for scientific knowledge retrieval.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "semantic_parsing",
+        "text_to_sql",
+        "information_retrieval"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stanford-oval/suql",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "semantic-parsing",
+        "nlp",
+        "hybrid-retrieval"
+      ],
+      "id": 125
+    },
+    {
+      "name": "TOUGH2Viewer",
+      "one_line_profile": "3D visualization tool for TOUGH2 simulation grids",
+      "detailed_description": "A Java-based visualization tool specifically designed for displaying structured and unstructured Voronoi grids used in TOUGH2 groundwater and heat flow simulations.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "scientific_visualization",
+        "mesh_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/stebond/TOUGH2Viewer",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "visualization",
+        "geoscience",
+        "tough2",
+        "voronoi-grid"
+      ],
+      "id": 126
+    },
+    {
+      "name": "Stencila",
+      "one_line_profile": "Platform for executable and reproducible scientific documents",
+      "detailed_description": "A platform and set of tools for creating, converting, and executing scientific documents, supporting conversion between formats like JATS XML, JSON-LD, Markdown, and Jupyter Notebooks.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "reproducible_research",
+        "document_parsing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/stencila/stencila",
+      "help_website": [
+        "https://stencila.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "reproducible-research",
+        "document-conversion",
+        "jats-xml",
+        "scientific-publishing"
+      ],
+      "id": 127
+    },
+    {
+      "name": "Galactic",
+      "one_line_profile": "Data cleaning and curation tool for massive unstructured text datasets",
+      "detailed_description": "A library designed for processing, cleaning, and curating large-scale unstructured text data, commonly used for preparing scientific literature datasets for LLM training.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "data_cleaning",
+        "text_normalization",
+        "dataset_curation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/taylorai/galactic",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-cleaning",
+        "nlp",
+        "llm-training",
+        "unstructured-data"
+      ],
+      "id": 128
+    },
+    {
+      "name": "scipdf_parser",
+      "one_line_profile": "Python parser for scientific publications to extract content and figures",
+      "detailed_description": "A Python library that parses scientific PDF files using Grobid to extract title, abstract, sections, and figures into structured JSON data, specifically designed for scientific literature mining.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "information_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/titipata/scipdf_parser",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pdf-parser",
+        "scientific-literature",
+        "grobid"
+      ],
+      "id": 129
+    },
+    {
+      "name": "UCNS3D",
+      "one_line_profile": "Unstructured Compressible Navier-Stokes 3D CFD solver",
+      "detailed_description": "A high-order accurate Computational Fluid Dynamics (CFD) code for solving unstructured compressible Navier-Stokes equations, used for scientific simulations in aerodynamics and fluid mechanics.",
+      "domains": [
+        "Physics",
+        "Fluid Dynamics"
+      ],
+      "subtask_category": [
+        "cfd_simulation",
+        "fluid_dynamics_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/ucns3d-team/UCNS3D",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cfd",
+        "navier-stokes",
+        "simulation"
+      ],
+      "id": 130
+    },
+    {
+      "name": "GraphGPT",
+      "one_line_profile": "Tool for extrapolating knowledge graphs from unstructured text using LLMs",
+      "detailed_description": "A tool that leverages GPT models to convert unstructured text into structured knowledge graphs, facilitating the extraction of relationships and entities for scientific knowledge management.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "knowledge_graph_construction",
+        "information_extraction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/varunshenoy/GraphGPT",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "knowledge-graph",
+        "llm",
+        "unstructured-data"
+      ],
+      "id": 131
+    },
+    {
+      "name": "ocrsegment",
+      "one_line_profile": "Deep learning model for page layout analysis and segmentation",
+      "detailed_description": "A deep learning based model specifically designed for document layout analysis and page segmentation, enabling the structural parsing of document images.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "layout_analysis",
+        "document_segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/watersink/ocrsegment",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "layout-analysis",
+        "ocr",
+        "segmentation"
+      ],
+      "id": 132
+    },
+    {
+      "name": "knowledge-table",
+      "one_line_profile": "Library for extracting structured data from unstructured documents",
+      "detailed_description": "An open-source package designed to simplify the process of extracting structured data (tables, entities) from unstructured documents, facilitating data harmonization in scientific workflows.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "information_extraction",
+        "structured_data_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/whyhow-ai/knowledge-table",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "extraction",
+        "unstructured-data",
+        "parsing"
+      ],
+      "id": 133
+    },
+    {
+      "name": "e2m",
+      "one_line_profile": "Universal document to Markdown converter for LLM processing",
+      "detailed_description": "A comprehensive tool to convert various file formats (PDF, DOCX, EPUB, etc.) into Markdown, specifically optimized for feeding unstructured data into LLMs for analysis and parsing.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_conversion",
+        "text_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/wisupai/e2m",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "markdown-converter",
+        "document-parsing",
+        "llm-preprocessing"
+      ],
+      "id": 134
+    },
+    {
+      "name": "extractous",
+      "one_line_profile": "High-performance unstructured data extraction library",
+      "detailed_description": "A fast and efficient library written in Rust for extracting text and metadata from various unstructured data formats, serving as a foundational tool for scientific data ingestion pipelines.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "data_extraction",
+        "etl"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/yobix-ai/extractous",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-extraction",
+        "rust",
+        "unstructured-data"
+      ],
+      "id": 135
+    },
+    {
+      "name": "RoDLA",
+      "one_line_profile": "Benchmark toolkit for Document Layout Analysis robustness",
+      "detailed_description": "A benchmarking toolkit and dataset designed to evaluate the robustness of Document Layout Analysis (DLA) models, essential for validating tools used in scientific document parsing.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "layout_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yufanchen96/RoDLA",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "document-layout-analysis",
+        "robustness"
+      ],
+      "id": 136
+    },
+    {
+      "name": "faster-nougat",
+      "one_line_profile": "Optimized local implementation of the Nougat model for parsing academic PDFs",
+      "detailed_description": "An efficient, local implementation of the Nougat (Neural Optical Understanding for Academic Documents) model. It utilizes Transformer-based architecture to parse unstructured scientific documents (PDFs) and convert them into structured Markdown or LaTeX formats, specifically handling mathematical formulas and tables found in academic literature.",
+      "domains": [
+        "D1",
+        "D1-05"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "optical_character_recognition",
+        "formula_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhuzilin/faster-nougat",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pdf-parsing",
+        "scientific-literature",
+        "ocr",
+        "academic-documents",
+        "nougat"
+      ],
+      "id": 137
+    }
+  ]
+}

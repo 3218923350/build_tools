@@ -1,0 +1,1041 @@
+{
+  "generated_at": "2025-12-16T10:51:35.962093+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "H2",
+      "leaf_cluster_name": "数字健康-临床文本与多模态生态",
+      "domain": "Digital Health",
+      "typical_objects": "EHR/text+image",
+      "task_chain": "抽取→标准化→检索→问答→评测",
+      "tool_form": "NLP/检索 + 合规/脱敏"
+    },
+    "unit": {
+      "unit_id": "H2-06",
+      "unit_name": "评测与安全",
+      "target_scale": "150–300",
+      "coverage_tools": "eval harness、safety checks"
+    },
+    "search": {
+      "target_candidates": 300,
+      "queries": [
+        "[GH] Raiders",
+        "[GH] BLUE",
+        "[GH] CMB",
+        "[GH] MedAlign",
+        "[GH] SafetyBench",
+        "[GH] DoNoHarm",
+        "[GH] PromptCBLUE",
+        "[GH] MultiMedQA",
+        "[GH] Med-HALT",
+        "[GH] medical llm evaluation",
+        "[GH] clinical benchmark harness",
+        "[GH] biomedical nlp metrics",
+        "[GH] healthcare ai safety",
+        "[GH] medqa evaluation",
+        "[GH] medical hallucination detection",
+        "[GH] ehr privacy auditing",
+        "[GH] clinical text summarization eval",
+        "[GH] medical vqa benchmark",
+        "[GH] adversarial medical ai",
+        "[GH] red teaming healthcare models",
+        "[GH] medical fact checking",
+        "[WEB] medical llm evaluation harness github",
+        "[WEB] clinical foundation model safety github",
+        "[WEB] biomedical nlp benchmark tools github",
+        "[WEB] healthcare ai hallucination detection github",
+        "[WEB] ehr synthetic data evaluation github"
+      ],
+      "total_candidates": 452,
+      "tool_candidates": 221,
+      "final_tools": 40
+    }
+  },
+  "tools": [
+    {
+      "name": "MedSafetyBench",
+      "one_line_profile": "Benchmark suite for evaluating the medical safety of Large Language Models",
+      "detailed_description": "MedSafetyBench is an evaluation framework designed to assess and improve the safety of LLMs in medical contexts, focusing on preventing harmful or incorrect medical advice.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "safety_evaluation",
+        "model_benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AI4LIFE-GROUP/med-safety-bench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "medical-safety",
+        "llm-evaluation",
+        "benchmark"
+      ],
+      "id": 1
+    },
+    {
+      "name": "MedEQBench",
+      "one_line_profile": "Evaluation suite for emotional perception and empathy in medical LLMs",
+      "detailed_description": "MedEQBench assesses Large Language Models' capabilities in emotional perception and empathic expression within medical contexts, ensuring supportive and context-aware responses.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "emotional_intelligence_eval",
+        "model_benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AQ-MedAI/MedEQBench",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "medical-llm",
+        "empathy",
+        "evaluation"
+      ],
+      "id": 2
+    },
+    {
+      "name": "GEMeX",
+      "one_line_profile": "Benchmark for groundable and explainable medical visual question answering",
+      "detailed_description": "GEMeX is a large-scale benchmark designed for Chest X-ray diagnosis, focusing on evaluating the groundability and explainability of medical VQA models.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "medical_vqa",
+        "model_benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Awenbocc/GEMeX-Project",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "chest-x-ray",
+        "vqa",
+        "explainable-ai"
+      ],
+      "id": 3
+    },
+    {
+      "name": "Biomedical-NLP-Benchmarks",
+      "one_line_profile": "Collection of benchmark datasets for Biomedical NLP tasks",
+      "detailed_description": "A repository containing various benchmark datasets specifically curated for evaluating Biomedical Natural Language Processing models and tasks.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "model_benchmarking",
+        "dataset_collection"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BIDS-Xu-Lab/Biomedical-NLP-Benchmarks",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "bionlp",
+        "benchmark",
+        "datasets"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Commander",
+      "one_line_profile": "Gibbs sampling framework for CMB posterior exploration",
+      "detailed_description": "Commander is an Optimal Monte-carlo Markov chAiN Driven EstimatoR implementing fast and efficient end-to-end Cosmic Microwave Background (CMB) posterior exploration through Gibbs sampling.",
+      "domains": [
+        "Physics",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "posterior_estimation",
+        "signal_separation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/Cosmoglobe/Commander",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cmb",
+        "gibbs-sampling",
+        "astrophysics"
+      ],
+      "id": 5
+    },
+    {
+      "name": "AMEGA-LLM",
+      "one_line_profile": "Autonomous evaluation framework for medical guideline adherence",
+      "detailed_description": "AMEGA-LLM (Autonomous Medical Evaluation for Guideline Adherence) is a benchmark and evaluation tool designed to assess how well Large Language Models adhere to medical guidelines.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "guideline_adherence",
+        "model_evaluation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DATEXIS/AMEGA-benchmark",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-guidelines",
+        "llm-evaluation",
+        "clinical-nlp"
+      ],
+      "id": 6
+    },
+    {
+      "name": "Hybrid-RAG",
+      "one_line_profile": "Enterprise-grade RAG system for healthcare AI with safety checks",
+      "detailed_description": "A full-stack RAG system designed for healthcare AI, featuring hybrid retrieval, multi-dimensional conflict detection, and dual-layer safety checks to ensure reliable medical information processing.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "information_retrieval",
+        "safety_verification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EasonWong0327/Hybrid-RAG-System",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rag",
+        "healthcare-ai",
+        "safety"
+      ],
+      "id": 7
+    },
+    {
+      "name": "lm-evaluation-harness",
+      "one_line_profile": "Framework for few-shot evaluation of language models",
+      "detailed_description": "A widely used framework for evaluating Large Language Models on a variety of tasks. It serves as the foundation for many domain-specific benchmarks, including scientific and medical LLM evaluations.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "benchmarking"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "evaluation",
+        "few-shot"
+      ],
+      "id": 8
+    },
+    {
+      "name": "CMB",
+      "one_line_profile": "Comprehensive Medical Benchmark in Chinese",
+      "detailed_description": "A comprehensive benchmark dataset and evaluation suite designed to assess the capabilities of Large Language Models in Chinese medical contexts.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "medical_benchmarking",
+        "model_evaluation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FreedomIntelligence/CMB",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "chinese-medical",
+        "benchmark",
+        "llm"
+      ],
+      "id": 9
+    },
+    {
+      "name": "candl",
+      "one_line_profile": "Differentiable Likelihood for CMB Analysis",
+      "detailed_description": "A tool for Cosmic Microwave Background (CMB) analysis providing differentiable likelihoods, useful for cosmological inference and parameter estimation.",
+      "domains": [
+        "Physics",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "likelihood_analysis",
+        "cosmological_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Lbalkenhol/candl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cmb",
+        "cosmology",
+        "differentiable-programming"
+      ],
+      "id": 10
+    },
+    {
+      "name": "medplexity",
+      "one_line_profile": "Evaluation framework for Large Language Models in medical applications",
+      "detailed_description": "A Python library designed to evaluate the performance of Large Language Models (LLMs) on various medical benchmarks and tasks, facilitating the assessment of medical reasoning and knowledge.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/MaksymPetyak/medplexity",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "medical-llm",
+        "evaluation",
+        "benchmark"
+      ],
+      "id": 11
+    },
+    {
+      "name": "med-lm-envs",
+      "one_line_profile": "Automated evaluation suite for medical language model tasks",
+      "detailed_description": "A suite of environments and tools for automating the evaluation of Large Language Models on medical tasks, supporting various datasets and metrics.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "benchmarking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MedARC-AI/med-lm-envs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "medical-ai",
+        "llm-evaluation",
+        "automation"
+      ],
+      "id": 12
+    },
+    {
+      "name": "Omni-SafetyBench",
+      "one_line_profile": "Benchmark for safety evaluation of audio-visual large language models",
+      "detailed_description": "A comprehensive benchmark designed to evaluate the safety of Audio-Visual Large Language Models (AV-LLMs), covering various safety dimensions and multimodal inputs.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "safety_evaluation",
+        "multimodal_benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/THU-BPM/Omni-SafetyBench",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "multimodal",
+        "safety",
+        "benchmark"
+      ],
+      "id": 13
+    },
+    {
+      "name": "MultiCogEval",
+      "one_line_profile": "Benchmark for evaluating LLMs across multi-cognitive levels in medicine",
+      "detailed_description": "A benchmark suite for assessing Large Language Models' capabilities in the medical domain, ranging from knowledge mastery to scenario-based problem solving.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "cognitive_assessment"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/THUMLP/MultiCogEval",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "medical-llm",
+        "cognitive-evaluation",
+        "benchmark"
+      ],
+      "id": 14
+    },
+    {
+      "name": "PretexEval",
+      "one_line_profile": "Evaluation framework for assessing medical knowledge mastery in LLMs",
+      "detailed_description": "A tool and dataset for the reliable and diverse evaluation of Large Language Models' mastery of medical knowledge, focusing on pre-clinical and clinical contexts.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "knowledge_assessment"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/THUMLP/PretexEval",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "medical-knowledge",
+        "llm-evaluation",
+        "benchmark"
+      ],
+      "id": 15
+    },
+    {
+      "name": "Adversarial Robustness Toolbox (ART)",
+      "one_line_profile": "Python library for machine learning security and robustness evaluation",
+      "detailed_description": "A Python library for machine learning security that provides tools for developers and researchers to defend and evaluate Machine Learning models and applications against adversarial threats (evasion, poisoning, extraction, and inference).",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "safety_checks",
+        "adversarial_robustness"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Trusted-AI/adversarial-robustness-toolbox",
+      "help_website": [
+        "https://adversarial-robustness-toolbox.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "security",
+        "adversarial-ml",
+        "robustness"
+      ],
+      "id": 16
+    },
+    {
+      "name": "MedKGEval",
+      "one_line_profile": "Benchmark for evaluating medical knowledge coverage in LLMs",
+      "detailed_description": "A benchmark designed to evaluate the coverage and accuracy of medical knowledge within Large Language Models using Knowledge Graphs as a reference.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "knowledge_graph_evaluation",
+        "model_benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ZihengZZH/MedKGEval",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "knowledge-graph",
+        "medical-llm",
+        "evaluation"
+      ],
+      "id": 17
+    },
+    {
+      "name": "MedEvalKit",
+      "one_line_profile": "Unified framework for evaluating medical large language models",
+      "detailed_description": "A comprehensive toolkit for evaluating medical Large Language Models across various tasks and datasets, aiming to standardize the assessment of medical AI systems.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "benchmarking"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/alibaba-damo-academy/MedEvalKit",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "medical-ai",
+        "evaluation-framework",
+        "llm"
+      ],
+      "id": 18
+    },
+    {
+      "name": "PySM",
+      "one_line_profile": "Software for simulating the Galactic microwave sky for CMB experiments",
+      "detailed_description": "PySM generates full-sky simulations of Galactic emissions in intensity and polarization, relevant for Cosmic Microwave Background (CMB) experiments.",
+      "domains": [
+        "Physics",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "data_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/b-thorne/PySM_public",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cmb",
+        "astrophysics",
+        "simulation",
+        "microwave-sky"
+      ],
+      "id": 19
+    },
+    {
+      "name": "SynthEHRella",
+      "one_line_profile": "Benchmarking package for evaluating synthetic Electronic Health Records (EHR) generation methods",
+      "detailed_description": "SynthEHRella provides a suite of metrics and tools to assess the quality, utility, and privacy of synthetic electronic health records generated by various algorithms.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "benchmarking",
+        "synthetic_data"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chenxran/synthEHRella",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ehr",
+        "synthetic-data",
+        "evaluation",
+        "healthcare"
+      ],
+      "id": 20
+    },
+    {
+      "name": "UQLM",
+      "one_line_profile": "Uncertainty Quantification for Language Models to detect hallucinations",
+      "detailed_description": "UQLM is a Python package designed to detect hallucinations in Large Language Models (LLMs) using uncertainty quantification techniques, applicable in high-stakes domains like healthcare.",
+      "domains": [
+        "H2",
+        "H2-06",
+        "Computer Science"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "hallucination_detection",
+        "safety_check"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cvs-health/uqlm",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "uncertainty-quantification",
+        "hallucination",
+        "safety"
+      ],
+      "id": 21
+    },
+    {
+      "name": "quicklens",
+      "one_line_profile": "Flat-sky code for Cosmic Microwave Background (CMB) lensing estimation",
+      "detailed_description": "A library for estimating gravitational lensing of the Cosmic Microwave Background (CMB) using flat-sky approximations, used in cosmological data analysis.",
+      "domains": [
+        "Physics",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "estimation",
+        "lensing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dhanson/quicklens",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cmb",
+        "lensing",
+        "cosmology",
+        "astrophysics"
+      ],
+      "id": 22
+    },
+    {
+      "name": "clinical-llm-evaluation",
+      "one_line_profile": "Framework for evaluating Causal Language Models on medical datasets",
+      "detailed_description": "A general framework to evaluate Large Language Models (LLMs) on clinical tasks including Question-Answer (QA), Summarization, NER, and Relation Extraction.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "qa",
+        "ner",
+        "relation_extraction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/dsi-clinical-llm/clinical-llm-evaluation",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "clinical-llm",
+        "evaluation",
+        "nlp",
+        "medical-ai"
+      ],
+      "id": 23
+    },
+    {
+      "name": "Video-SafetyBench",
+      "one_line_profile": "Benchmark for safety evaluation of Video Large Vision-Language Models",
+      "detailed_description": "A comprehensive benchmark designed to evaluate the safety of video-based Large Vision-Language Models (LVLMs), covering various safety dimensions.",
+      "domains": [
+        "H2-06",
+        "Computer Science"
+      ],
+      "subtask_category": [
+        "safety_evaluation",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/flageval-baai/Video-SafetyBench",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "video-llm",
+        "safety",
+        "benchmark",
+        "lvlm"
+      ],
+      "id": 24
+    },
+    {
+      "name": "MM-SafetyBench",
+      "one_line_profile": "Safety evaluation benchmark for multimodal large language models",
+      "detailed_description": "A benchmark framework for evaluating the safety of Multimodal Large Language Models (MLLMs) against various types of unsafe queries and inputs.",
+      "domains": [
+        "H2-06",
+        "Computer Science"
+      ],
+      "subtask_category": [
+        "safety_evaluation",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/isXinLiu/MM-SafetyBench",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "multimodal",
+        "safety",
+        "benchmark",
+        "llm"
+      ],
+      "id": 25
+    },
+    {
+      "name": "Pynkowski",
+      "one_line_profile": "Tool to compute Minkowski Functionals for random fields in cosmology",
+      "detailed_description": "A Python package to compute Minkowski Functionals and their expected values for different fields, primarily used in cosmological data analysis (e.g., CMB, Large Scale Structure).",
+      "domains": [
+        "Physics",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "topology",
+        "statistics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/javicarron/pynkowski",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cosmology",
+        "minkowski-functionals",
+        "topology",
+        "random-fields"
+      ],
+      "id": 26
+    },
+    {
+      "name": "HealthFC",
+      "one_line_profile": "Framework for verifying health claims using evidence-based medical fact-checking",
+      "detailed_description": "HealthFC is a tool and dataset for verifying health claims by retrieving and reasoning over evidence-based medical information.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "fact_checking",
+        "verification",
+        "information_retrieval"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jvladika/HealthFC",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "fact-checking",
+        "medical-nlp",
+        "health-claims",
+        "evidence-based"
+      ],
+      "id": 27
+    },
+    {
+      "name": "NorMedQA",
+      "one_line_profile": "Benchmark for evaluating medical knowledge and reasoning of LLMs in Norwegian",
+      "detailed_description": "NorMedQA is a benchmark dataset and evaluation suite designed to assess the medical knowledge and reasoning capabilities of Large Language Models in the Norwegian context.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "qa",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kelkalot/normedqa",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "medical-qa",
+        "benchmark",
+        "llm",
+        "norwegian"
+      ],
+      "id": 28
+    },
+    {
+      "name": "CMBLensing.jl",
+      "one_line_profile": "Julia toolkit for Cosmic Microwave Background (CMB) lensing analysis",
+      "detailed_description": "A next-generation tool for analysis of the Cosmic Microwave Background (CMB) lensing, written in Julia. It provides automatic differentiation and GPU compatibility for cosmological analysis.",
+      "domains": [
+        "Physics",
+        "Cosmology"
+      ],
+      "subtask_category": [
+        "simulation",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/marius311/CMBLensing.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cosmology",
+        "cmb",
+        "lensing",
+        "julia",
+        "differentiable-programming"
+      ],
+      "id": 29
+    },
+    {
+      "name": "PromptCBLUE",
+      "one_line_profile": "Instruction-tuning benchmark dataset for Chinese medical LLMs",
+      "detailed_description": "A large-scale instruction-tuning dataset and benchmark for multi-task and few-shot learning in the Chinese medical domain. It transforms the CBLUE benchmark into prompt-based formats to evaluate Large Language Models.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "benchmark"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/michael-wzhu/PromptCBLUE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "medical-nlp",
+        "benchmark",
+        "instruction-tuning",
+        "llm-evaluation"
+      ],
+      "id": 30
+    },
+    {
+      "name": "medical_hallucination",
+      "one_line_profile": "Evaluation framework for hallucination in medical foundation models",
+      "detailed_description": "A research toolkit associated with the study 'Medical Hallucination in Foundation Models and Their Impact on Healthcare', providing resources to evaluate and analyze hallucinations in Large Language Models within the medical domain.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "safety_check"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mitmedialab/medical_hallucination",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "hallucination",
+        "medical-llm",
+        "safety",
+        "evaluation"
+      ],
+      "id": 31
+    },
+    {
+      "name": "pyfisher",
+      "one_line_profile": "Fisher matrix forecasting for cosmological surveys",
+      "detailed_description": "A Python library for calculating Fisher matrices to forecast the performance of cosmological surveys, specifically for CMB and large-scale structure analysis.",
+      "domains": [
+        "Physics",
+        "Cosmology"
+      ],
+      "subtask_category": [
+        "forecasting",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/msyriac/pyfisher",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cosmology",
+        "fisher-matrix",
+        "forecasting"
+      ],
+      "id": 32
+    },
+    {
+      "name": "cmb_footprint",
+      "one_line_profile": "Visualization library for cosmological survey footprints",
+      "detailed_description": "A Python library designed to plot and visualize the observation footprints of various cosmological surveys (CMB experiments) on the sky.",
+      "domains": [
+        "Physics",
+        "Cosmology"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nasa-lambda/cmb_footprint",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cosmology",
+        "visualization",
+        "survey-footprint"
+      ],
+      "id": 33
+    },
+    {
+      "name": "BLUE_Benchmark",
+      "one_line_profile": "Biomedical Language Understanding Evaluation benchmark",
+      "detailed_description": "A comprehensive benchmark suite for evaluating biomedical text-mining models. It consists of five different tasks with ten corpora, covering named entity recognition, relation extraction, and other NLP tasks in biomedicine.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "benchmark"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ncbi-nlp/BLUE_Benchmark",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "biomedical-nlp",
+        "benchmark",
+        "text-mining"
+      ],
+      "id": 34
+    },
+    {
+      "name": "MedCalc-Bench",
+      "one_line_profile": "Benchmark for evaluating medical calculations in LLMs",
+      "detailed_description": "A dataset and benchmark designed to evaluate the capability of Large Language Models to perform medical calculations, addressing the need for numerical reasoning in clinical contexts.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "benchmark"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ncbi-nlp/MedCalc-Bench",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "medical-calculation",
+        "llm-evaluation",
+        "clinical-reasoning"
+      ],
+      "id": 35
+    },
+    {
+      "name": "med-eval",
+      "one_line_profile": "Evaluation pipeline for medical NLP tasks",
+      "detailed_description": "A pipeline designed to streamline the evaluation of models on various medical tasks, facilitating standardized testing and metric calculation.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nii-nlp/med-eval",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "medical-nlp",
+        "evaluation-pipeline"
+      ],
+      "id": 36
+    },
+    {
+      "name": "JMED-LLM",
+      "one_line_profile": "Japanese Medical Evaluation Dataset for Large Language Models",
+      "detailed_description": "A benchmark dataset designed to evaluate the performance of Large Language Models on Japanese medical tasks, supporting the development of multilingual medical AI.",
+      "domains": [
+        "H2",
+        "H2-06"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "benchmark"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sociocom/JMED-LLM",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "medical-llm",
+        "japanese-nlp",
+        "benchmark"
+      ],
+      "id": 37
+    },
+    {
+      "name": "MedAlign",
+      "one_line_profile": "Clinician-generated dataset for instruction following with electronic medical records",
+      "detailed_description": "MedAlign is a dataset and benchmark designed to evaluate instruction-following capabilities of Large Language Models (LLMs) in the context of Electronic Medical Records (EMRs). It includes clinician-generated instructions and ground truth data to assess how well AI models interpret and execute clinical tasks.",
+      "domains": [
+        "Digital Health",
+        "Clinical NLP"
+      ],
+      "subtask_category": [
+        "instruction_following",
+        "clinical_evaluation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/som-shahlab/medalign",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ehr",
+        "medical-nlp",
+        "instruction-following",
+        "benchmark"
+      ],
+      "id": 38
+    },
+    {
+      "name": "SafetyBench",
+      "one_line_profile": "Comprehensive benchmark for evaluating the safety of Large Language Models",
+      "detailed_description": "SafetyBench is a comprehensive benchmark suite designed to evaluate the safety of Large Language Models (LLMs). It covers multiple safety dimensions and provides a framework for testing models against adversarial inputs and unsafe content generation, facilitating the development of safer AI systems.",
+      "domains": [
+        "AI Safety",
+        "LLM Evaluation"
+      ],
+      "subtask_category": [
+        "safety_evaluation",
+        "adversarial_testing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/thu-coai/SafetyBench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm-safety",
+        "benchmark",
+        "evaluation",
+        "trustworthy-ai"
+      ],
+      "id": 39
+    },
+    {
+      "name": "GMAI-MMBench",
+      "one_line_profile": "Comprehensive multimodal evaluation benchmark for General Medical AI",
+      "detailed_description": "GMAI-MMBench is a benchmark designed to evaluate General Medical AI (GMAI) models across various multimodal tasks. It assesses capabilities in medical visual question answering, reasoning, and information retrieval, supporting the development of robust multimodal medical AI systems.",
+      "domains": [
+        "Digital Health",
+        "Multimodal AI"
+      ],
+      "subtask_category": [
+        "multimodal_evaluation",
+        "medical_vqa"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uni-medical/GMAI-MMBench",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-ai",
+        "multimodal",
+        "benchmark",
+        "evaluation"
+      ],
+      "id": 40
+    }
+  ]
+}

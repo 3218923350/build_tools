@@ -1,0 +1,574 @@
+{
+  "generated_at": "2025-12-16T05:26:07.993482+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "M2",
+      "leaf_cluster_name": "材料-分子动力学与力场生态",
+      "domain": "Materials",
+      "typical_objects": "trajectories/force fields",
+      "task_chain": "力场→模拟→分析→可视化→闭环",
+      "tool_form": "MD引擎 + 势模型 + 分析"
+    },
+    "unit": {
+      "unit_id": "M2-05",
+      "unit_name": "主动学习采样与闭环",
+      "target_scale": "150–300",
+      "coverage_tools": "AL loops、uncertainty sampling"
+    },
+    "search": {
+      "target_candidates": 300,
+      "queries": [
+        "[GH] Janus-Core",
+        "[GH] uf3",
+        "[GH] Auto-Force",
+        "[GH] Amp",
+        "[GH] PyXtal_FF",
+        "[GH] psiflow",
+        "[GH] FLARE",
+        "[GH] DP-GEN",
+        "[GH] active learning molecular dynamics",
+        "[GH] adaptive sampling force field",
+        "[GH] machine learning potential active learning",
+        "[GH] concurrent learning atomistic",
+        "[GH] uncertainty quantification interatomic potentials",
+        "[GH] on-the-fly machine learning MD",
+        "[GH] automated force field training",
+        "[GH] Bayesian force field learning",
+        "[GH] active learning structure generation",
+        "[GH] closed-loop materials simulation",
+        "[GH] uncertainty sampling molecular dynamics",
+        "[GH] MLIP training loop",
+        "[WEB] active learning molecular dynamics github",
+        "[WEB] adaptive sampling machine learning potentials github",
+        "[WEB] concurrent learning scheme materials github",
+        "[WEB] uncertainty quantification force fields github",
+        "[WEB] automated training set generation molecular dynamics github",
+        "[WEB] closed-loop atomistic simulations github"
+      ],
+      "total_candidates": 394,
+      "tool_candidates": 220,
+      "final_tools": 20
+    }
+  },
+  "tools": [
+    {
+      "name": "ProSim",
+      "one_line_profile": "Promptable closed-loop traffic simulation framework",
+      "detailed_description": "A closed-loop traffic simulation framework that allows for promptable agent behaviors, designed for evaluating autonomous driving policies and traffic modeling in transportation research.",
+      "domains": [
+        "Transportation",
+        "Engineering"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Ariostgx/ProSim",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "traffic-simulation",
+        "autonomous-driving",
+        "closed-loop"
+      ],
+      "id": 1
+    },
+    {
+      "name": "MultiAxis3DPrinting_ToolpathGenerator",
+      "one_line_profile": "Toolpath generator for multi-axis 3D printing",
+      "detailed_description": "A C++ based toolpath generation algorithm for hybrid printing on curved working surfaces, supporting multi-axis additive manufacturing processes in engineering research.",
+      "domains": [
+        "Manufacturing",
+        "Engineering"
+      ],
+      "subtask_category": [
+        "modeling",
+        "process_planning"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/GuoxinFang/MultiAxis3DPrinting_ToolpathGenerator",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "3d-printing",
+        "toolpath-generation",
+        "additive-manufacturing"
+      ],
+      "id": 2
+    },
+    {
+      "name": "PyXtal_FF",
+      "one_line_profile": "Machine learning interatomic potential predictions library",
+      "detailed_description": "A Python library for developing machine learning interatomic potentials (MLIP) for materials simulations. It supports various descriptors and regression models to predict energy, forces, and stress tensors of crystals.",
+      "domains": [
+        "Materials",
+        "Physics"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MaterSim/PyXtal_FF",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "machine-learning",
+        "interatomic-potentials",
+        "materials-science"
+      ],
+      "id": 3
+    },
+    {
+      "name": "AutoForce",
+      "one_line_profile": "Sparse Gaussian Process Potentials for atomistic simulations",
+      "detailed_description": "A Python package for generating machine learning interatomic potentials using Sparse Gaussian Processes. It facilitates the creation of force fields for molecular dynamics simulations.",
+      "domains": [
+        "M2",
+        "Materials"
+      ],
+      "subtask_category": [
+        "force_field_generation",
+        "potential_fitting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/amirhajibabaei/AutoForce",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gaussian-process",
+        "force-field",
+        "molecular-dynamics",
+        "machine-learning"
+      ],
+      "id": 4
+    },
+    {
+      "name": "arcann_training",
+      "one_line_profile": "Automated enhanced sampling generation of training sets for ML potentials",
+      "detailed_description": "A workflow tool for the automated generation of training sets for chemically reactive machine learning interatomic potentials using enhanced sampling techniques.",
+      "domains": [
+        "M2",
+        "M2-05"
+      ],
+      "subtask_category": [
+        "active_learning",
+        "dataset_generation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/arcann-chem/arcann_training",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "active-learning",
+        "molecular-dynamics",
+        "training-set",
+        "enhanced-sampling"
+      ],
+      "id": 5
+    },
+    {
+      "name": "active-learning-md",
+      "one_line_profile": "Active learning workflow for MLIP generation",
+      "detailed_description": "An active learning workflow developed for generating Machine Learning Inter-Atomic Potentials (MLIPs), demonstrated on systems like Hafnium dioxide.",
+      "domains": [
+        "M2",
+        "M2-05"
+      ],
+      "subtask_category": [
+        "active_learning",
+        "potential_fitting"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/argonne-lcf/active-learning-md",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "active-learning",
+        "molecular-dynamics",
+        "mlip",
+        "workflow"
+      ],
+      "id": 6
+    },
+    {
+      "name": "jax_fdm",
+      "one_line_profile": "Auto-differentiable and hardware-accelerated force density method",
+      "detailed_description": "A library for structural form-finding using the Force Density Method (FDM), implemented in JAX to enable automatic differentiation and hardware acceleration.",
+      "domains": [
+        "Mechanics"
+      ],
+      "subtask_category": [
+        "structural_analysis",
+        "form_finding"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/arpastrana/jax_fdm",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "jax",
+        "structural-engineering",
+        "optimization",
+        "form-finding"
+      ],
+      "id": 7
+    },
+    {
+      "name": "mdgen",
+      "one_line_profile": "Generative modeling of molecular dynamics trajectories",
+      "detailed_description": "A library for generating molecular dynamics trajectories using generative models, enabling simulation and sampling of molecular systems.",
+      "domains": [
+        "M2"
+      ],
+      "subtask_category": [
+        "trajectory_generation",
+        "generative_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bjing2016/mdgen",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-dynamics",
+        "generative-model",
+        "diffusion",
+        "simulation"
+      ],
+      "id": 8
+    },
+    {
+      "name": "Cairn.jl",
+      "one_line_profile": "Enhanced sampling algorithms for active learning of ML-IPs",
+      "detailed_description": "A Julia library implementing enhanced sampling algorithms specifically designed for the active learning of machine learning interatomic potentials (ML-IPs).",
+      "domains": [
+        "M2",
+        "M2-05"
+      ],
+      "subtask_category": [
+        "active_learning",
+        "sampling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/cesmix-mit/Cairn.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "active-learning",
+        "interatomic-potentials",
+        "sampling"
+      ],
+      "id": 9
+    },
+    {
+      "name": "DeepMD-kit",
+      "one_line_profile": "Deep learning package for many-body potential energy representation and molecular dynamics",
+      "detailed_description": "A deep learning package designed to generate many-body potential energy representations for molecular dynamics simulations. It combines the accuracy of ab initio methods with the efficiency of classical force fields, enabling large-scale simulations of complex systems.",
+      "domains": [
+        "Materials",
+        "M2"
+      ],
+      "subtask_category": [
+        "force_field_training",
+        "molecular_dynamics_simulation",
+        "potential_energy_surface_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepmodeling/deepmd-kit",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "deep-learning",
+        "molecular-dynamics",
+        "force-field",
+        "ab-initio",
+        "materials-science"
+      ],
+      "id": 10
+    },
+    {
+      "name": "ALF",
+      "one_line_profile": "Active Learning Framework for training machine-learned interatomic potentials",
+      "detailed_description": "A framework designed to facilitate active learning for training machine-learned interatomic potentials (MLIPs). It automates the sampling of configurations and training loops to improve potential accuracy efficiently.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-05"
+      ],
+      "subtask_category": [
+        "active_learning_loop",
+        "force_field_training",
+        "uncertainty_sampling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lanl/ALF",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "active-learning",
+        "interatomic-potential",
+        "machine-learning",
+        "materials-science"
+      ],
+      "id": 11
+    },
+    {
+      "name": "NeuralForceField",
+      "one_line_profile": "PyTorch-based implementation of neural network force fields",
+      "detailed_description": "A library for training and evaluating neural network-based force fields for molecular simulations, implemented in PyTorch. It provides tools for modeling potential energy surfaces.",
+      "domains": [
+        "Materials",
+        "M2"
+      ],
+      "subtask_category": [
+        "force_field_training",
+        "potential_energy_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/learningmatter-mit/NeuralForceField",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "force-field",
+        "neural-network",
+        "molecular-simulation"
+      ],
+      "id": 12
+    },
+    {
+      "name": "DEAL",
+      "one_line_profile": "Data efficient active learning framework for machine learning potentials",
+      "detailed_description": "DEAL (Data Efficient Active Learning) is a Python framework designed to optimize the training of machine learning interatomic potentials. It implements active learning strategies to select the most informative atomic configurations, minimizing the need for expensive quantum mechanical calculations during force field development.",
+      "domains": [
+        "M2",
+        "M2-05"
+      ],
+      "subtask_category": [
+        "active_learning",
+        "sampling",
+        "force_field_training"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/luigibonati/DEAL",
+      "help_website": [
+        "https://github.com/luigibonati/DEAL"
+      ],
+      "license": "MIT",
+      "tags": [
+        "active-learning",
+        "machine-learning-potentials",
+        "molecular-dynamics",
+        "sampling"
+      ],
+      "id": 13
+    },
+    {
+      "name": "FLARE",
+      "one_line_profile": "Fast Learning of Atomistic Rare Events for creating interatomic potentials",
+      "detailed_description": "FLARE is an open-source Python package designed for creating fast and accurate interatomic potentials using machine learning (specifically Gaussian Process Regression). It supports active learning to automatically collect training data during molecular dynamics simulations, enabling the modeling of complex materials and rare events.",
+      "domains": [
+        "M2",
+        "M2-05"
+      ],
+      "subtask_category": [
+        "force_field_generation",
+        "molecular_dynamics",
+        "active_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mir-group/flare",
+      "help_website": [
+        "https://flare.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "interatomic-potentials",
+        "gaussian-processes",
+        "active-learning",
+        "molecular-dynamics"
+      ],
+      "id": 14
+    },
+    {
+      "name": "psiflow",
+      "one_line_profile": "Scalable workflow library for molecular simulation and ML potential generation",
+      "detailed_description": "psiflow is a Python library designed for scalable molecular simulations and the automated generation of machine learning potentials. It facilitates the orchestration of quantum chemistry calculations and model training, supporting the development of robust force fields for molecular systems.",
+      "domains": [
+        "M2",
+        "M2-05"
+      ],
+      "subtask_category": [
+        "molecular_simulation",
+        "workflow_automation",
+        "force_field_training"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/molmod/psiflow",
+      "help_website": [
+        "https://github.com/molmod/psiflow"
+      ],
+      "license": "MIT",
+      "tags": [
+        "molecular-simulation",
+        "machine-learning-potentials",
+        "workflow",
+        "hpc"
+      ],
+      "id": 15
+    },
+    {
+      "name": "atomate2_ffforge",
+      "one_line_profile": "Active learning workflow for building MLIPs using atomate2",
+      "detailed_description": "atomate2_ffforge is a DIRECT-driven, active-learning workflow designed to autonomously build machine-learning interatomic potentials (MLIPs) for diverse material systems such as batteries and catalysts. It is fully integrated with the atomate2 and jobflow ecosystems, enabling high-throughput computational materials science.",
+      "domains": [
+        "M2",
+        "M2-05"
+      ],
+      "subtask_category": [
+        "force_field_generation",
+        "active_learning",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rsilvabuarque/atomate2_ffforge",
+      "help_website": [
+        "https://github.com/rsilvabuarque/atomate2_ffforge"
+      ],
+      "license": null,
+      "tags": [
+        "mlip",
+        "active-learning",
+        "atomate2",
+        "materials-science"
+      ],
+      "id": 16
+    },
+    {
+      "name": "Uncertainpy",
+      "one_line_profile": "Uncertainty quantification and sensitivity analysis toolbox for computational neuroscience",
+      "detailed_description": "Uncertainpy is a Python toolbox for performing uncertainty quantification and sensitivity analysis, tailored towards computational neuroscience models. It allows researchers to determine how parameters affect model output without requiring extensive changes to the underlying model code.",
+      "domains": [
+        "Neuroscience",
+        "Computational Modeling"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "sensitivity_analysis",
+        "statistical_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/simetenn/uncertainpy",
+      "help_website": [
+        "https://uncertainpy.readthedocs.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "uncertainty-quantification",
+        "sensitivity-analysis",
+        "computational-neuroscience",
+        "modeling"
+      ],
+      "id": 17
+    },
+    {
+      "name": "janus-core",
+      "one_line_profile": "Tools for machine learnt interatomic potentials development and usage",
+      "detailed_description": "janus-core provides a collection of tools and utilities to support the development, training, and deployment of machine learnt interatomic potentials (MLIPs). It is designed to facilitate atomistic simulations in materials science.",
+      "domains": [
+        "M2"
+      ],
+      "subtask_category": [
+        "force_field_generation",
+        "molecular_simulation",
+        "mlip_utilities"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stfc/janus-core",
+      "help_website": [
+        "https://github.com/stfc/janus-core"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "machine-learning-potentials",
+        "materials-science",
+        "atomistic-simulation"
+      ],
+      "id": 18
+    },
+    {
+      "name": "UF3",
+      "one_line_profile": "Ultra-Fast Force Fields library for generating interatomic potentials",
+      "detailed_description": "A Python library for generating ultra-fast interatomic potentials using B-spline basis functions. It focuses on effective two- and three-body potentials that are linear in parameters, enabling rapid evaluation and fitting for molecular dynamics simulations.",
+      "domains": [
+        "Materials",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "force_field_generation",
+        "potential_fitting",
+        "molecular_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uf3/uf3",
+      "help_website": [
+        "https://uf3.readthedocs.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "interatomic-potentials",
+        "force-fields",
+        "molecular-dynamics",
+        "b-splines"
+      ],
+      "id": 19
+    },
+    {
+      "name": "Finetuna",
+      "one_line_profile": "Active learning framework for machine learning potentials",
+      "detailed_description": "A Python package designed to facilitate active learning workflows for training and fine-tuning machine learning interatomic potentials (MLIPs). It automates the selection of configurations for DFT calculations to improve potential accuracy efficiently.",
+      "domains": [
+        "Materials",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "active_learning",
+        "potential_fitting",
+        "sampling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ulissigroup/finetuna",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "active-learning",
+        "machine-learning-potentials",
+        "ase",
+        "catalysis"
+      ],
+      "id": 20
+    }
+  ]
+}

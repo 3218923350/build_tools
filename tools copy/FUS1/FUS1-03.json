@@ -1,0 +1,1402 @@
+{
+  "generated_at": "2025-12-17T11:23:30.678511+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "FUS1",
+      "leaf_cluster_name": "核科学与核聚变计算生态",
+      "domain": "Nuclear / Fusion / Plasma",
+      "typical_objects": "等离子体场, 粒子分布, 磁约束几何, 诊断信号, 输运方程",
+      "task_chain": "建模→仿真→诊断/反演→控制/优化→验证→工作流",
+      "tool_form": "大型仿真器 + 诊断/反演工具 + 控制/优化 + HPC"
+    },
+    "unit": {
+      "unit_id": "FUS1-03",
+      "unit_name": "输运、稳定性与湍流模型库",
+      "target_scale": "200–450",
+      "coverage_tools": "transport solvers、stability analysis、closure/models"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] JOREK",
+        "[GH] TRINITY",
+        "[GH] Aurora",
+        "[GH] GKW",
+        "[GH] RAPTOR",
+        "[GH] ASTRA",
+        "[GH] TGLF",
+        "[GH] GS2",
+        "[GH] GENE",
+        "[GH] BOUT++",
+        "[GH] plasma transport",
+        "[GH] neoclassical transport",
+        "[GH] gyrokinetic turbulence",
+        "[GH] MHD stability",
+        "[GH] linear stability analysis",
+        "[GH] tokamak transport",
+        "[GH] turbulence simulation plasma",
+        "[GH] drift wave",
+        "[GH] flux tube",
+        "[GH] gyrofluid",
+        "[GH] tearing mode",
+        "[GH] ballooning mode",
+        "[GH] quasilinear transport model",
+        "[GH] impurity transport",
+        "[WEB] plasma transport solver github",
+        "[WEB] MHD stability analysis code github",
+        "[WEB] gyrokinetic turbulence simulation github",
+        "[WEB] neoclassical transport model github",
+        "[WEB] tokamak integrated modeling transport github",
+        "[WEB] plasma turbulence code github"
+      ],
+      "total_candidates": 804,
+      "tool_candidates": 388,
+      "final_tools": 52
+    }
+  },
+  "tools": [
+    {
+      "name": "TextRecognitionDataGenerator",
+      "one_line_profile": "Synthetic data generator for text recognition (OCR) model training",
+      "detailed_description": "A widely used tool for generating synthetic text images to train OCR models. It supports multi-language text generation, various background augmentations, and distortion effects, serving as a critical data synthesis tool in computer vision research.",
+      "domains": [
+        "Computer Vision",
+        "OCR"
+      ],
+      "subtask_category": [
+        "data_generation",
+        "synthesis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Belval/TextRecognitionDataGenerator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ocr",
+        "synthetic-data",
+        "computer-vision",
+        "data-augmentation"
+      ],
+      "id": 1
+    },
+    {
+      "name": "GKV",
+      "one_line_profile": "Gyrokinetic Vlasov simulation code for plasma turbulence",
+      "detailed_description": "GKV (GyroKinetic Vlasov) is a simulation code designed for studying plasma turbulence and transport using the gyrokinetic Vlasov equation. It is a specialized tool in nuclear fusion research for analyzing flux-tube geometry and kinetic instabilities.",
+      "domains": [
+        "FUS1",
+        "FUS1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "turbulence_modeling",
+        "transport_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/GKV-developers/gkvp",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "plasma-physics",
+        "gyrokinetics",
+        "vlasov-equation",
+        "turbulence",
+        "fusion"
+      ],
+      "id": 2
+    },
+    {
+      "name": "Genesis",
+      "one_line_profile": "Generative physical world simulator for embodied AI and robotics",
+      "detailed_description": "Genesis is a physics-based simulation platform designed for general-purpose robotics and embodied AI learning. It provides a generative environment for simulating physical interactions, enabling the training and validation of AI agents in realistic scenarios.",
+      "domains": [
+        "Robotics",
+        "Embodied AI",
+        "Physics Simulation"
+      ],
+      "subtask_category": [
+        "simulation",
+        "environment_generation",
+        "physical_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Genesis-Embodied-AI/Genesis",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "robotics",
+        "simulation",
+        "embodied-ai",
+        "physics-engine",
+        "generative-world"
+      ],
+      "id": 3
+    },
+    {
+      "name": "MONKES",
+      "one_line_profile": "Neoclassical transport evaluation code for stellarators",
+      "detailed_description": "MONKES is a scientific code specifically developed for evaluating neoclassical transport in stellarator fusion devices. It calculates transport coefficients and analyzes stability, contributing to the optimization of magnetic confinement configurations.",
+      "domains": [
+        "FUS1",
+        "FUS1-03"
+      ],
+      "subtask_category": [
+        "transport_analysis",
+        "stability_analysis",
+        "numerical_calculation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/JavierEscoto/MONKES",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "stellarator",
+        "neoclassical-transport",
+        "plasma-physics",
+        "fusion",
+        "scientific-computing"
+      ],
+      "id": 4
+    },
+    {
+      "name": "StokesFlowAxisymmetricBoundaryIntegralMethod",
+      "one_line_profile": "Solver for droplet and particle motion in Stokes flows using Boundary Element Methods",
+      "detailed_description": "A MATLAB-based solver for computing the motion of droplets and particles in Stokes flows within axisymmetric domains. It utilizes Boundary Element Method (BEM) and Spectral Boundary Integral Method (SBIM) and includes capabilities for direct numerical simulations (DNS), linear stability analysis, and edge tracking.",
+      "domains": [
+        "Physics",
+        "Fluid Dynamics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "numerical_solver",
+        "stability_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/Mu-cq/StokesFlowAxisymmetricBoundaryIntegralMethod",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "stokes-flow",
+        "boundary-element-method",
+        "fluid-dynamics",
+        "simulation"
+      ],
+      "id": 5
+    },
+    {
+      "name": "GITR",
+      "one_line_profile": "Global Impurity Transport code for fusion devices",
+      "detailed_description": "GITR (Global Impurity Transport) is a C++ code developed by ORNL for simulating the transport of impurities in fusion devices. It models particle interactions with plasma and plasma-facing components, crucial for understanding erosion, deposition, and plasma contamination in tokamaks.",
+      "domains": [
+        "FUS1",
+        "FUS1-03"
+      ],
+      "subtask_category": [
+        "transport_simulation",
+        "impurity_transport",
+        "plasma_surface_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ORNL-Fusion/GITR",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "fusion",
+        "impurity-transport",
+        "plasma-physics",
+        "ornl"
+      ],
+      "id": 6
+    },
+    {
+      "name": "TGLFNN.jl",
+      "one_line_profile": "Julia interface for running TGLF and TGLFNN turbulence models",
+      "detailed_description": "A Julia package designed to run TGLF (Trapped Gyro-Landau Fluid) and its neural network surrogate (TGLFNN) models. It facilitates the calculation of turbulent transport fluxes in fusion plasmas, supporting both the original physics code and accelerated neural network approximations.",
+      "domains": [
+        "FUS1",
+        "FUS1-03"
+      ],
+      "subtask_category": [
+        "turbulence_modeling",
+        "transport_simulation",
+        "surrogate_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/ProjectTorreyPines/archived__TGLFNN.jl__2",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "fusion",
+        "turbulence",
+        "tglf",
+        "neural-network",
+        "julia"
+      ],
+      "id": 7
+    },
+    {
+      "name": "MedTrinity-25M",
+      "one_line_profile": "Large-scale multimodal medical dataset with multigranular annotations",
+      "detailed_description": "A comprehensive medical AI dataset and codebase providing 25 million multimodal entries with multigranular annotations. It is designed to support the development of large multimodal models for medicine, facilitating tasks such as medical image analysis and report generation.",
+      "domains": [
+        "Medicine",
+        "Medical AI"
+      ],
+      "subtask_category": [
+        "dataset",
+        "medical_analysis",
+        "multimodal_learning"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UCSC-VLAA/MedTrinity-25M",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "medical-ai",
+        "dataset",
+        "multimodal",
+        "deep-learning"
+      ],
+      "id": 8
+    },
+    {
+      "name": "PLASMA",
+      "one_line_profile": "Fast and interpretable protein substructure alignment via optimal transport",
+      "detailed_description": "PLASMA (Protein Local Alignment via Substructure Matching and Alignment) is a tool for aligning protein substructures using optimal transport theory. It provides fast and interpretable alignments, useful for structural biology and protein function prediction.",
+      "domains": [
+        "Biology",
+        "Structural Biology"
+      ],
+      "subtask_category": [
+        "structure_alignment",
+        "protein_analysis",
+        "optimal_transport"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ZW471/PLASMA-Protein-Local-Alignment",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "protein-alignment",
+        "structural-biology",
+        "optimal-transport",
+        "bioinformatics"
+      ],
+      "id": 9
+    },
+    {
+      "name": "BOLOS",
+      "one_line_profile": "Boltzmann Equation Solver for Low Temperature Plasmas",
+      "detailed_description": "An open source Python solver for the Boltzmann equation, typically used in plasma physics to calculate electron energy distribution functions (EEDF) and transport coefficients.",
+      "domains": [
+        "FUS1",
+        "Plasma Physics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "transport_modeling",
+        "boltzmann_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aluque/bolos",
+      "help_website": [
+        "https://github.com/aluque/bolos"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "plasma",
+        "boltzmann",
+        "solver",
+        "physics"
+      ],
+      "id": 10
+    },
+    {
+      "name": "RAPter",
+      "one_line_profile": "Rebuilding Man-made Scenes with Regular Arrangements of Planes",
+      "detailed_description": "A C++ implementation for 3D scene reconstruction and geometry processing, focusing on regular arrangements of planes in man-made scenes.",
+      "domains": [
+        "Computer Vision",
+        "Geometry Processing"
+      ],
+      "subtask_category": [
+        "3d_reconstruction",
+        "geometry_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/amonszpart/RAPter",
+      "help_website": [
+        "http://raptor.is.tue.mpg.de/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "3d-reconstruction",
+        "point-cloud",
+        "geometry"
+      ],
+      "id": 11
+    },
+    {
+      "name": "ASTRA-sim",
+      "one_line_profile": "Distributed Deep Learning System Simulator",
+      "detailed_description": "A simulator for modeling hierarchical networks and disaggregated systems to analyze performance of large-model training at scale.",
+      "domains": [
+        "Computer Architecture",
+        "AI Systems"
+      ],
+      "subtask_category": [
+        "system_simulation",
+        "performance_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/astra-sim/astra-sim",
+      "help_website": [
+        "https://github.com/astra-sim/astra-sim"
+      ],
+      "license": "MIT",
+      "tags": [
+        "simulation",
+        "hpc",
+        "deep-learning-systems"
+      ],
+      "id": 12
+    },
+    {
+      "name": "ASTRA Toolbox",
+      "one_line_profile": "High-performance GPU primitives for 2D and 3D tomography",
+      "detailed_description": "A MATLAB and Python toolbox of high-performance GPU primitives for 2D and 3D tomography, used in X-ray CT and electron tomography.",
+      "domains": [
+        "Imaging",
+        "Physics"
+      ],
+      "subtask_category": [
+        "tomography",
+        "image_reconstruction"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/astra-toolbox/astra-toolbox",
+      "help_website": [
+        "http://www.astra-toolbox.com"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "tomography",
+        "gpu",
+        "reconstruction"
+      ],
+      "id": 13
+    },
+    {
+      "name": "BOUT++",
+      "one_line_profile": "Plasma fluid finite-difference simulation framework",
+      "detailed_description": "A framework for writing fluid and plasma simulations in curvilinear geometry, primarily used for fusion plasma edge turbulence simulations.",
+      "domains": [
+        "FUS1",
+        "Plasma Physics"
+      ],
+      "subtask_category": [
+        "plasma_simulation",
+        "fluid_dynamics",
+        "transport_solver"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/boutproject/BOUT-dev",
+      "help_website": [
+        "https://boutproject.github.io/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "plasma",
+        "fusion",
+        "cfd",
+        "simulation"
+      ],
+      "id": 14
+    },
+    {
+      "name": "Hermes",
+      "one_line_profile": "Plasma transport and turbulence model library for BOUT++",
+      "detailed_description": "A library of plasma transport and turbulence models (2D and 3D) built on the BOUT++ framework.",
+      "domains": [
+        "FUS1",
+        "FUS1-03"
+      ],
+      "subtask_category": [
+        "transport_modeling",
+        "turbulence_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/boutproject/hermes",
+      "help_website": [
+        "https://github.com/boutproject/hermes"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "plasma-transport",
+        "turbulence",
+        "model-library"
+      ],
+      "id": 15
+    },
+    {
+      "name": "Hypnotoad",
+      "one_line_profile": "Grid generator for BOUT++ simulations",
+      "detailed_description": "A Python-based grid generation tool specifically designed for creating curvilinear meshes for BOUT++ plasma simulations.",
+      "domains": [
+        "FUS1",
+        "Plasma Physics"
+      ],
+      "subtask_category": [
+        "mesh_generation",
+        "pre_processing"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/boutproject/hypnotoad",
+      "help_website": [
+        "https://hypnotoad.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "grid-generation",
+        "mesh",
+        "plasma"
+      ],
+      "id": 16
+    },
+    {
+      "name": "xBOUT",
+      "one_line_profile": "Xarray interface for BOUT++ data",
+      "detailed_description": "A Python library to collect, analyze, and visualize data from parallelized BOUT++ simulations using the xarray data structures.",
+      "domains": [
+        "FUS1",
+        "Plasma Physics"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "visualization",
+        "post_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/boutproject/xBOUT",
+      "help_website": [
+        "https://xbout.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-analysis",
+        "xarray",
+        "visualization"
+      ],
+      "id": 17
+    },
+    {
+      "name": "dnaPipeTE",
+      "one_line_profile": "De-novo assembly & annotation Pipeline for Transposable Elements",
+      "detailed_description": "A bioinformatics pipeline designed to find, annotate, and quantify Transposable Elements in small samples of NGS datasets without requiring genome assembly.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "sequence_assembly",
+        "annotation",
+        "quantification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/clemgoub/dnaPipeTE",
+      "help_website": [
+        "https://github.com/clemgoub/dnaPipeTE"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "ngs",
+        "transposable-elements",
+        "assembly"
+      ],
+      "id": 18
+    },
+    {
+      "name": "adept",
+      "one_line_profile": "Automatic-Differentiation-Enabled Plasma Transport solver using JAX",
+      "detailed_description": "A Python library for simulating plasma transport phenomena using automatic differentiation via JAX. It is designed to facilitate gradient-based optimization and sensitivity analysis in plasma physics modeling.",
+      "domains": [
+        "FUS1",
+        "FUS1-03"
+      ],
+      "subtask_category": [
+        "transport_simulation",
+        "plasma_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ergodicio/adept",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "plasma-physics",
+        "transport",
+        "jax",
+        "automatic-differentiation"
+      ],
+      "id": 19
+    },
+    {
+      "name": "Aurora",
+      "one_line_profile": "Toolbox for impurity transport, neutrals, and radiation modeling in fusion plasmas",
+      "detailed_description": "A Python package designed for modeling particle transport, neutral dynamics, and radiation in magnetically confined plasmas. It provides tools for analyzing impurity behavior in fusion devices.",
+      "domains": [
+        "FUS1",
+        "FUS1-03"
+      ],
+      "subtask_category": [
+        "impurity_transport",
+        "radiation_modeling",
+        "plasma_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fsciortino/Aurora",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fusion",
+        "plasma",
+        "impurity-transport",
+        "radiation"
+      ],
+      "id": 20
+    },
+    {
+      "name": "gacode",
+      "one_line_profile": "General Atomics Turbulence and Transport Codes Suite",
+      "detailed_description": "A suite of physics codes for simulating turbulence and transport in fusion plasmas, maintained by General Atomics. It includes industry-standard codes like TGLF (Trapped Gyro-Landau Fluid), NEO, and CGYRO.",
+      "domains": [
+        "FUS1",
+        "FUS1-03"
+      ],
+      "subtask_category": [
+        "turbulence_simulation",
+        "transport_modeling",
+        "gyrokinetic_simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/gafusion/gacode",
+      "help_website": [
+        "https://gafusion.github.io/doc/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "fusion",
+        "turbulence",
+        "transport",
+        "general-atomics",
+        "tglf",
+        "cgyro"
+      ],
+      "id": 21
+    },
+    {
+      "name": "fusion_surrogates",
+      "one_line_profile": "Library of surrogate transport models for tokamak fusion simulations",
+      "detailed_description": "A Python library providing pre-trained surrogate models for tokamak plasma transport, designed to accelerate fusion simulations by replacing computationally expensive physics codes with fast neural network approximations.",
+      "domains": [
+        "FUS1",
+        "FUS1-03"
+      ],
+      "subtask_category": [
+        "transport_modeling",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/google-deepmind/fusion_surrogates",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "fusion",
+        "tokamak",
+        "surrogate-model",
+        "transport",
+        "plasma-physics"
+      ],
+      "id": 22
+    },
+    {
+      "name": "TORAX",
+      "one_line_profile": "Differentiable tokamak transport simulator built on JAX",
+      "detailed_description": "A differentiable core transport simulator for tokamaks, written in JAX. It enables fast, gradient-based optimization and simulation of plasma transport profiles, supporting research in fusion reactor control and design.",
+      "domains": [
+        "FUS1",
+        "FUS1-03"
+      ],
+      "subtask_category": [
+        "transport_simulation",
+        "physics_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/google-deepmind/torax",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "fusion",
+        "tokamak",
+        "jax",
+        "differentiable-programming",
+        "transport-solver"
+      ],
+      "id": 23
+    },
+    {
+      "name": "Raptor",
+      "one_line_profile": "Graph-based sequence mapping tool for long reads",
+      "detailed_description": "A bioinformatics tool for mapping long DNA sequences (such as those from PacBio or Nanopore) using a graph-based approach. It is designed to handle noisy or HiFi reads efficiently.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "sequence_alignment",
+        "read_mapping"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/isovic/raptor",
+      "help_website": [],
+      "license": "BSD-3-Clause-Clear",
+      "tags": [
+        "bioinformatics",
+        "ngs",
+        "sequence-alignment",
+        "long-reads"
+      ],
+      "id": 24
+    },
+    {
+      "name": "RaptorX-3DModeling",
+      "one_line_profile": "Protein structure prediction system using deep learning",
+      "detailed_description": "A software package for protein structure prediction, utilizing deep learning and threading techniques to predict 3D models from protein sequences. Part of the RaptorX suite.",
+      "domains": [
+        "Bioinformatics",
+        "Structural Biology"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "protein_folding"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/j3xugit/RaptorX-3DModeling",
+      "help_website": [
+        "http://raptorx.uchicago.edu/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-structure",
+        "deep-learning",
+        "bioinformatics",
+        "folding"
+      ],
+      "id": 25
+    },
+    {
+      "name": "RaptorX-Contact",
+      "one_line_profile": "Deep residual neural network for protein contact prediction",
+      "detailed_description": "A deep learning tool for predicting protein contact maps and distance matrices, which are critical for accurate 3D structure reconstruction.",
+      "domains": [
+        "Bioinformatics",
+        "Structural Biology"
+      ],
+      "subtask_category": [
+        "contact_prediction",
+        "structure_inference"
+      ],
+      "application_level": "model",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/j3xugit/RaptorX-Contact",
+      "help_website": [
+        "http://raptorx.uchicago.edu/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-contact",
+        "deep-learning",
+        "bioinformatics",
+        "residual-networks"
+      ],
+      "id": 26
+    },
+    {
+      "name": "Generative Agents",
+      "one_line_profile": "Simulation framework for interactive simulacra of human behavior",
+      "detailed_description": "A research platform for simulating believable human behavior using generative agents powered by large language models. It enables computational social science experiments and behavioral modeling.",
+      "domains": [
+        "Social Science",
+        "AI"
+      ],
+      "subtask_category": [
+        "agent_based_simulation",
+        "behavioral_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/joonspk-research/generative_agents",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "agent-simulation",
+        "llm",
+        "social-science",
+        "behavioral-science"
+      ],
+      "id": 27
+    },
+    {
+      "name": "GATT_DNS",
+      "one_line_profile": "Direct Numerical Simulation code for compressible Navier-Stokes equations with stability analysis",
+      "detailed_description": "A DNS code for compressible Navier-Stokes equations featuring Jacobian-free time-stepping for linear stability analysis (LST), developed by the Group of Aeroacoustics, Transition and Turbulence.",
+      "domains": [
+        "Fluid Dynamics",
+        "FUS1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "stability_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/marlonsmathias/GATT_DNS",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dns",
+        "navier-stokes",
+        "stability-analysis",
+        "turbulence"
+      ],
+      "id": 28
+    },
+    {
+      "name": "RT_GS2",
+      "one_line_profile": "Implementation of the GS2 gyrokinetic solver for fusion plasma turbulence",
+      "detailed_description": "An implementation of the GS2 code, a gyrokinetic flux tube code used for studying turbulence and transport in magnetized fusion plasmas.",
+      "domains": [
+        "FUS1",
+        "FUS1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "turbulence_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mbjurca/RT_GS2",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "plasma-physics",
+        "gyrokinetics",
+        "turbulence",
+        "fusion"
+      ],
+      "id": 29
+    },
+    {
+      "name": "AMoRE",
+      "one_line_profile": "Hybrid Vlasov-Fokker-Planck code for relativistic electron beam transport simulations",
+      "detailed_description": "A hybrid Vlasov-Fokker-Planck code designed for fast simulations of relativistic electron beam transport in denser solids or plasmas.",
+      "domains": [
+        "FUS1",
+        "FUS1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "transport_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/michaeltouati/AMoRE",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "plasma-physics",
+        "vlasov-fokker-planck",
+        "electron-transport",
+        "simulation"
+      ],
+      "id": 30
+    },
+    {
+      "name": "Aurora",
+      "one_line_profile": "Foundation model for high-resolution Earth system forecasting and weather prediction",
+      "detailed_description": "Implementation of the Aurora model, a large-scale foundation model designed for Earth system forecasting and weather prediction tasks.",
+      "domains": [
+        "Earth Science",
+        "Meteorology"
+      ],
+      "subtask_category": [
+        "forecasting",
+        "modeling"
+      ],
+      "application_level": "model",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/aurora",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "earth-system",
+        "weather-forecasting",
+        "foundation-model",
+        "ai4s"
+      ],
+      "id": 31
+    },
+    {
+      "name": "neural-gyrokinetics",
+      "one_line_profile": "Machine learning tools to accelerate high-dimensional plasma turbulence simulations",
+      "detailed_description": "A collection of machine learning tools and models designed to accelerate high-dimensional gyrokinetic plasma turbulence simulations.",
+      "domains": [
+        "FUS1",
+        "FUS1-03",
+        "AI4S"
+      ],
+      "subtask_category": [
+        "simulation_acceleration",
+        "turbulence_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ml-jku/neural-gyrokinetics",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "plasma-turbulence",
+        "machine-learning",
+        "gyrokinetics",
+        "acceleration"
+      ],
+      "id": 32
+    },
+    {
+      "name": "RAPT",
+      "one_line_profile": "Read Assembly and Annotation Pipeline Tool for microbial genomes",
+      "detailed_description": "NCBI's pipeline tool for the assembly and annotation of microbial genomic reads.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "assembly",
+        "annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": null,
+      "repo_url": "https://github.com/ncbi/rapt",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "genome-assembly",
+        "annotation",
+        "microbial-genomics",
+        "ncbi"
+      ],
+      "id": 33
+    },
+    {
+      "name": "nekStab",
+      "one_line_profile": "Global linear stability analysis toolbox for the Nek5000 spectral element solver",
+      "detailed_description": "An open-source toolbox based on Krylov methods for performing highly parallel global linear stability analysis of incompressible flow problems using Nek5000.",
+      "domains": [
+        "Fluid Dynamics",
+        "FUS1-03"
+      ],
+      "subtask_category": [
+        "stability_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/nekStab/nekStab",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cfd",
+        "stability-analysis",
+        "nek5000",
+        "krylov-methods"
+      ],
+      "id": 34
+    },
+    {
+      "name": "ramsesGPU",
+      "one_line_profile": "GPU-optimized Magnetohydrodynamics (MHD) simulation code for astrophysics",
+      "detailed_description": "A code designed for astrophysics MHD simulations, optimized for large GPU clusters. It solves the equations of magnetohydrodynamics to model astrophysical plasmas.",
+      "domains": [
+        "Astrophysics",
+        "Plasma Physics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "mhd_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pkestene/ramsesGPU",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "mhd",
+        "gpu",
+        "astrophysics",
+        "simulation"
+      ],
+      "id": 35
+    },
+    {
+      "name": "Trinity",
+      "one_line_profile": "Programmable 3D fluid dynamics simulator in WebGL",
+      "detailed_description": "A real-time, programmable 3D fluid simulator that runs in the browser using WebGL, allowing for visualization and experimentation with fluid dynamics equations.",
+      "domains": [
+        "Fluid Dynamics",
+        "Visualization"
+      ],
+      "subtask_category": [
+        "simulation",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/portsmouth/Trinity",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fluid-simulation",
+        "webgl",
+        "cfd",
+        "visualization"
+      ],
+      "id": 36
+    },
+    {
+      "name": "Raptor",
+      "one_line_profile": "High-performance algebraic multigrid (AMG) solver",
+      "detailed_description": "A general-purpose, high-performance algebraic multigrid (AMG) solver library designed for scalable scientific computing and solving large sparse linear systems.",
+      "domains": [
+        "Scientific Computing",
+        "HPC"
+      ],
+      "subtask_category": [
+        "linear_algebra_solver",
+        "hpc"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/raptor-library/raptor",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "amg",
+        "multigrid",
+        "solver",
+        "hpc",
+        "sparse-matrices"
+      ],
+      "id": 37
+    },
+    {
+      "name": "Raptor (RL-Tools)",
+      "one_line_profile": "Foundation policy and control framework for quadrotors",
+      "detailed_description": "A foundation policy and reinforcement learning framework for robust and adaptive quadrotor control, enabling agile flight in challenging environments.",
+      "domains": [
+        "Robotics",
+        "Control Theory"
+      ],
+      "subtask_category": [
+        "control_policy",
+        "reinforcement_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/rl-tools/raptor",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "robotics",
+        "quadrotor",
+        "reinforcement-learning",
+        "control"
+      ],
+      "id": 38
+    },
+    {
+      "name": "RAPTOR (RoahmLab)",
+      "one_line_profile": "Rapid and Robust Trajectory Optimization for Robots",
+      "detailed_description": "A trajectory optimization library for robots, focusing on rapid and robust path planning and control.",
+      "domains": [
+        "Robotics"
+      ],
+      "subtask_category": [
+        "trajectory_optimization",
+        "path_planning"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/roahmlab/RAPTOR",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "robotics",
+        "trajectory-optimization",
+        "path-planning"
+      ],
+      "id": 39
+    },
+    {
+      "name": "Raptor (SeqAn)",
+      "one_line_profile": "Fast pre-filter for querying large collections of nucleotide sequences",
+      "detailed_description": "A fast and space-efficient pre-filter designed for querying very large collections of nucleotide sequences, useful in bioinformatics for sequence search and analysis.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "sequence_search",
+        "filtering"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/seqan/raptor",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "bioinformatics",
+        "k-mer",
+        "sequence-analysis",
+        "pre-filter"
+      ],
+      "id": 40
+    },
+    {
+      "name": "Astral",
+      "one_line_profile": "Calculations for the position of the sun and moon",
+      "detailed_description": "A Python library for calculating the position of the sun and moon, as well as moon phases, useful for astronomical and environmental applications.",
+      "domains": [
+        "Astronomy",
+        "Environmental Science"
+      ],
+      "subtask_category": [
+        "astronomical_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sffjunkie/astral",
+      "help_website": [
+        "https://astral.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "astronomy",
+        "sun-position",
+        "moon-phase",
+        "python"
+      ],
+      "id": 41
+    },
+    {
+      "name": "ASTRAL",
+      "one_line_profile": "Accurate Species TRee ALgorithm for phylogenetics",
+      "detailed_description": "A tool for estimating a species tree from a set of unrooted gene trees, widely used in phylogenetics and evolutionary biology.",
+      "domains": [
+        "Bioinformatics",
+        "Phylogenetics"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "species_tree_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/smirarab/ASTRAL",
+      "help_website": [
+        "https://github.com/smirarab/ASTRAL/blob/master/README.md"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "phylogenetics",
+        "species-tree",
+        "evolutionary-biology",
+        "gene-tree"
+      ],
+      "id": 42
+    },
+    {
+      "name": "stella",
+      "one_line_profile": "Flux tube gyrokinetic code for plasma turbulence simulations",
+      "detailed_description": "A flux tube gyrokinetic code designed for micro-stability and turbulence simulations of strongly magnetised plasmas, relevant to nuclear fusion research.",
+      "domains": [
+        "FUS1",
+        "FUS1-03",
+        "Plasma Physics"
+      ],
+      "subtask_category": [
+        "turbulence_simulation",
+        "stability_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/stellaGK/stella",
+      "help_website": [
+        "https://stella.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "plasma-physics",
+        "gyrokinetics",
+        "turbulence",
+        "fusion"
+      ],
+      "id": 43
+    },
+    {
+      "name": "AlphaZero General",
+      "one_line_profile": "General implementation of AlphaZero for reinforcement learning research",
+      "detailed_description": "A clean, general-purpose implementation of the AlphaZero algorithm, serving as a framework for reinforcement learning research across various game environments.",
+      "domains": [
+        "Artificial Intelligence",
+        "Reinforcement Learning"
+      ],
+      "subtask_category": [
+        "reinforcement_learning",
+        "game_solving"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/suragnair/alpha-zero-general",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "alphazero",
+        "reinforcement-learning",
+        "ai-research"
+      ],
+      "id": 44
+    },
+    {
+      "name": "Trinity IE",
+      "one_line_profile": "Information extraction pipeline for NLP",
+      "detailed_description": "An information extraction pipeline that includes coreference resolution, named entity linking, and relationship extraction, used for NLP research and data processing.",
+      "domains": [
+        "Natural Language Processing",
+        "Artificial Intelligence"
+      ],
+      "subtask_category": [
+        "information_extraction",
+        "entity_linking"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tomasonjo/trinity-ie",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nlp",
+        "information-extraction",
+        "knowledge-graph"
+      ],
+      "id": 45
+    },
+    {
+      "name": "Transit Routing",
+      "one_line_profile": "Algorithms and data structures for public transit routing optimization",
+      "detailed_description": "A repository containing implementations of public transit routing algorithms (such as CSA and RAPTOR) and data handling utilities, developed by the Transportation Networks Lab.",
+      "domains": [
+        "Transportation Science",
+        "Operations Research"
+      ],
+      "subtask_category": [
+        "routing_optimization",
+        "network_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/transnetlab/transit-routing",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "transit-routing",
+        "csa",
+        "raptor",
+        "transportation"
+      ],
+      "id": 46
+    },
+    {
+      "name": "Trinity XAI",
+      "one_line_profile": "Explainable AI analysis and 3D visualization tool",
+      "detailed_description": "A tool for analyzing and visualizing the behavior of AI models to enhance explainability, featuring 3D visualization capabilities for complex model structures or data.",
+      "domains": [
+        "Computer Science",
+        "Artificial Intelligence"
+      ],
+      "subtask_category": [
+        "model_explainability",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/trinity-xai/Trinity",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "xai",
+        "visualization",
+        "explainable-ai"
+      ],
+      "id": 47
+    },
+    {
+      "name": "Trinity RNA-Seq",
+      "one_line_profile": "De novo transcriptome assembler for RNA-Seq data",
+      "detailed_description": "A comprehensive method for de novo reconstruction of transcriptomes from RNA-Seq data, capable of resolving alternative splicing isoforms without a reference genome.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "transcriptome_assembly",
+        "sequence_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/trinityrnaseq/trinityrnaseq",
+      "help_website": [
+        "https://github.com/trinityrnaseq/trinityrnaseq/wiki"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "rna-seq",
+        "transcriptome",
+        "assembly",
+        "bioinformatics"
+      ],
+      "id": 48
+    },
+    {
+      "name": "SPECTRUM",
+      "one_line_profile": "Space Plasma and Energetic Charged particle Transport on Unstructured Meshes",
+      "detailed_description": "A C++ code for simulating the transport of energetic charged particles in space plasmas using unstructured meshes, relevant for heliospheric and astrophysical plasma research.",
+      "domains": [
+        "FUS1",
+        "FUS1-03",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "particle_transport",
+        "plasma_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/vflorins/SPECTRUM",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "plasma-physics",
+        "particle-transport",
+        "unstructured-mesh",
+        "space-physics"
+      ],
+      "id": 49
+    },
+    {
+      "name": "TM",
+      "one_line_profile": "MHD code for simulating tearing mode instability",
+      "detailed_description": "A full Magnetohydrodynamics (MHD) code designed to simulate tearing mode instabilities in slab geometry, used for studying plasma stability.",
+      "domains": [
+        "FUS1",
+        "FUS1-03"
+      ],
+      "subtask_category": [
+        "stability_analysis",
+        "mhd_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/victowne/TM",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "mhd",
+        "tearing-mode",
+        "plasma-stability",
+        "fortran"
+      ],
+      "id": 50
+    },
+    {
+      "name": "ST-Raptor",
+      "one_line_profile": "LLM-Powered Semi-Structured Table Question Answering",
+      "detailed_description": "A system leveraging Large Language Models to perform question answering on semi-structured tables, facilitating data extraction and analysis from tabular data sources.",
+      "domains": [
+        "Computer Science",
+        "NLP"
+      ],
+      "subtask_category": [
+        "table_qa",
+        "data_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/weAIDB/ST-Raptor",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "table-qa",
+        "nlp"
+      ],
+      "id": 51
+    },
+    {
+      "name": "GS2Mesh",
+      "one_line_profile": "Surface Reconstruction from Gaussian Splatting",
+      "detailed_description": "Official implementation of the ECCV 2024 paper 'GS2Mesh', providing a method for surface reconstruction from Gaussian Splatting via novel stereo views.",
+      "domains": [
+        "Computer Vision",
+        "Computer Graphics"
+      ],
+      "subtask_category": [
+        "surface_reconstruction",
+        "3d_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yanivw12/gs2mesh",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gaussian-splatting",
+        "surface-reconstruction",
+        "eccv-2024"
+      ],
+      "id": 52
+    }
+  ]
+}

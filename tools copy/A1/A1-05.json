@@ -1,0 +1,1137 @@
+{
+  "generated_at": "2025-12-16T13:02:55.607576+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "A1",
+      "leaf_cluster_name": "天文-观测数据处理与源检测生态",
+      "domain": "Astronomy",
+      "typical_objects": "FITS/images",
+      "task_chain": "校准→源检测→测光→匹配→平台",
+      "tool_form": "管线 + 库 + 平台"
+    },
+    "unit": {
+      "unit_id": "A1-05",
+      "unit_name": "Benchmark与复现",
+      "target_scale": "100–250",
+      "coverage_tools": "datasets、metrics"
+    },
+    "search": {
+      "target_candidates": 250,
+      "queries": [
+        "[GH] OpSim",
+        "[GH] SynPipe",
+        "[GH] Mirage",
+        "[GH] Lenstronomy",
+        "[GH] GREAT3",
+        "[GH] SkyMaker",
+        "[GH] ArtPop",
+        "[GH] Balrog",
+        "[GH] GalSim",
+        "[GH] astronomy benchmark",
+        "[GH] source detection metrics",
+        "[GH] photometry evaluation",
+        "[GH] astronomical image simulation",
+        "[GH] mock catalog generator",
+        "[GH] injection recovery test",
+        "[GH] galaxy classification dataset",
+        "[GH] reproducible astronomy",
+        "[GH] synthetic astronomical images",
+        "[GH] completeness purity astronomy",
+        "[GH] data challenge astronomy",
+        "[GH] FITS image quality assessment",
+        "[WEB] astronomy source detection benchmark github",
+        "[WEB] photometry accuracy evaluation github",
+        "[WEB] astronomical image simulation tools github",
+        "[WEB] galaxy morphology dataset github",
+        "[WEB] reproducible research astronomy github"
+      ],
+      "total_candidates": 527,
+      "tool_candidates": 136,
+      "final_tools": 45
+    }
+  },
+  "tools": [
+    {
+      "name": "ArtPop",
+      "one_line_profile": "Stellar population and galaxy image synthesizer",
+      "detailed_description": "ArtPop is a Python package for synthesizing stellar populations and simulating realistic images of galaxies. It allows users to generate artificial galaxies star-by-star, enabling detailed study of surface brightness fluctuations and other stellar population properties.",
+      "domains": [
+        "A1",
+        "A1-05"
+      ],
+      "subtask_category": [
+        "simulation",
+        "synthetic_data_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ArtificialStellarPopulations/ArtPop",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "simulation",
+        "galaxies",
+        "stellar-populations"
+      ],
+      "id": 1
+    },
+    {
+      "name": "ScopeSim",
+      "one_line_profile": "Telescope observation simulator",
+      "detailed_description": "ScopeSim is a flexible telescope observation simulator that generates simulated data based on the optical properties of the telescope, the detector, and the astronomical source. It is designed to support the development of data reduction pipelines and observation planning.",
+      "domains": [
+        "A1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "observation_planning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AstarVienna/ScopeSim",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "astronomy",
+        "telescope-simulation",
+        "optics"
+      ],
+      "id": 2
+    },
+    {
+      "name": "GalFlow",
+      "one_line_profile": "Differentiable galaxy image simulation in TensorFlow",
+      "detailed_description": "GalFlow is a reimplementation of the GalSim galaxy image simulation toolkit using TensorFlow. It enables differentiable galaxy simulations, allowing for gradient-based optimization and integration with deep learning frameworks.",
+      "domains": [
+        "A1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "differentiable_physics"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/DifferentiableUniverseInitiative/GalFlow",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "tensorflow",
+        "differentiable-programming",
+        "simulation"
+      ],
+      "id": 3
+    },
+    {
+      "name": "GalSim",
+      "one_line_profile": "Modular galaxy image simulation toolkit",
+      "detailed_description": "GalSim is a modular software library for simulating images of galaxies and stars. It is widely used in the weak lensing community for testing shear measurement algorithms and generating realistic astronomical images with accurate PSF handling.",
+      "domains": [
+        "A1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "image_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GalSim-developers/GalSim",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "astronomy",
+        "weak-lensing",
+        "simulation",
+        "image-processing"
+      ],
+      "id": 4
+    },
+    {
+      "name": "JAX-GalSim",
+      "one_line_profile": "GPU-accelerated differentiable GalSim in JAX",
+      "detailed_description": "JAX-GalSim is a port of the GalSim library to JAX, providing GPU acceleration and automatic differentiation capabilities. It is designed for high-performance galaxy image simulation and analysis in differentiable cosmology workflows.",
+      "domains": [
+        "A1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "differentiable_physics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GalSim-developers/JAX-GalSim",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "astronomy",
+        "jax",
+        "gpu",
+        "simulation"
+      ],
+      "id": 5
+    },
+    {
+      "name": "STAR",
+      "one_line_profile": "Benchmark for Astronomical Star Fields Super-Resolution",
+      "detailed_description": "STAR is a benchmark dataset and codebase for evaluating super-resolution algorithms on astronomical star field images. It provides a standardized environment for testing image restoration techniques in astronomy.",
+      "domains": [
+        "A1",
+        "A1-05"
+      ],
+      "subtask_category": [
+        "super_resolution",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GuoCheng12/STAR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "super-resolution",
+        "benchmark",
+        "image-restoration"
+      ],
+      "id": 6
+    },
+    {
+      "name": "imSim",
+      "one_line_profile": "Rubin Observatory image simulation package",
+      "detailed_description": "imSim is a high-fidelity image simulation package for the Vera C. Rubin Observatory, built on top of GalSim. It simulates the specific optical and detector characteristics of the LSST to generate realistic survey data.",
+      "domains": [
+        "A1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "instrument_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LSSTDESC/imSim",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "astronomy",
+        "lsst",
+        "simulation",
+        "rubin-observatory"
+      ],
+      "id": 7
+    },
+    {
+      "name": "psf-weather-station",
+      "one_line_profile": "Atmospheric parameter generator for PSF simulations",
+      "detailed_description": "psf-weather-station is a tool designed to generate realistic atmospheric input parameters for Point Spread Function (PSF) simulations within the GalSim ecosystem, supporting accurate modeling of atmospheric effects on astronomical images.",
+      "domains": [
+        "A1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "atmospheric_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LSSTDESC/psf-weather-station",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "psf",
+        "atmosphere",
+        "simulation"
+      ],
+      "id": 8
+    },
+    {
+      "name": "deep_galaxy_models",
+      "one_line_profile": "Deep generative models for GalSim",
+      "detailed_description": "This repository hosts code and models for integrating deep generative models (such as GANs or VAEs) into GalSim, allowing for the simulation of galaxy morphologies based on learned distributions.",
+      "domains": [
+        "A1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "generative_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/McWilliamsCenter/deep_galaxy_models",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "astronomy",
+        "deep-learning",
+        "generative-models",
+        "galsim"
+      ],
+      "id": 9
+    },
+    {
+      "name": "galsim_hub",
+      "one_line_profile": "TensorFlow modules interface for GalSim",
+      "detailed_description": "galsim_hub provides a collection of TensorFlow modules and an interface to easily use them within GalSim. It facilitates the use of deep learning-based galaxy models in standard simulation pipelines.",
+      "domains": [
+        "A1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "integration"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/McWilliamsCenter/galsim_hub",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "tensorflow",
+        "galsim",
+        "hub"
+      ],
+      "id": 10
+    },
+    {
+      "name": "AstroVisBench",
+      "one_line_profile": "Benchmark for astronomy visualization",
+      "detailed_description": "AstroVisBench is a benchmark suite designed to evaluate the performance and quality of scientific visualization techniques specifically for astronomical data.",
+      "domains": [
+        "A1",
+        "A1-05"
+      ],
+      "subtask_category": [
+        "visualization",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SebaJoe/AstroVisBench",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "astronomy",
+        "visualization",
+        "benchmark"
+      ],
+      "id": 11
+    },
+    {
+      "name": "skymaker_pythonwrapper",
+      "one_line_profile": "Python wrapper for SkyMaker",
+      "detailed_description": "A Python wrapper for the SkyMaker software, enabling users to generate simulated astronomical images of stars and galaxies directly from Python scripts.",
+      "domains": [
+        "A1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "image_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/afaisst/skymaker_pythonwrapper",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "astronomy",
+        "skymaker",
+        "simulation",
+        "wrapper"
+      ],
+      "id": 12
+    },
+    {
+      "name": "dolphin",
+      "one_line_profile": "Automated lens modelling pipeline",
+      "detailed_description": "Dolphin is an automated pipeline for gravitational lens modelling built upon the Lenstronomy package. It streamlines the process of modeling lens systems from imaging data.",
+      "domains": [
+        "A1"
+      ],
+      "subtask_category": [
+        "modeling",
+        "gravitational_lensing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ajshajib/dolphin",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "astronomy",
+        "lensing",
+        "pipeline",
+        "automation"
+      ],
+      "id": 13
+    },
+    {
+      "name": "astropy",
+      "one_line_profile": "Core package for Astronomy in Python",
+      "detailed_description": "Astropy is a community-driven core python package for Astronomy. It provides common tools such as units, coordinates, FITS file handling, and modeling frameworks essential for astronomical data analysis.",
+      "domains": [
+        "A1"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/astropy/astropy",
+      "help_website": [
+        "https://www.astropy.org/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "astronomy",
+        "fits",
+        "coordinates",
+        "units"
+      ],
+      "id": 14
+    },
+    {
+      "name": "SLITronomy",
+      "one_line_profile": "Sparse Lens Inversion Technique for Lenstronomy",
+      "detailed_description": "SLITronomy is a plugin for the Lenstronomy package that implements the Sparse Lens Inversion Technique (SLIT). It enables pixel-based source reconstruction for gravitational lensing analysis.",
+      "domains": [
+        "A1"
+      ],
+      "subtask_category": [
+        "modeling",
+        "gravitational_lensing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aymgal/SLITronomy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "lensing",
+        "inversion",
+        "sparse-modeling"
+      ],
+      "id": 15
+    },
+    {
+      "name": "great3-public",
+      "one_line_profile": "GREAT3 Challenge toolkit",
+      "detailed_description": "This repository contains the code and tools used for the Third Gravitational Lensing Accuracy Testing (GREAT3) challenge, including simulation scripts and metric evaluation tools.",
+      "domains": [
+        "A1",
+        "A1-05"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "simulation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/barnabytprowe/great3-public",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "astronomy",
+        "lensing",
+        "challenge",
+        "benchmark"
+      ],
+      "id": 16
+    },
+    {
+      "name": "galight",
+      "one_line_profile": "Tool for decomposing astronomical light sources into PSF and Sersic profiles",
+      "detailed_description": "A Python package that decomposes light profiles into Point Spread Function (PSF) and Sersic components, utilizing lenstronomy for fitting, primarily for galaxy morphology analysis.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "source_decomposition",
+        "morphology_fitting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dartoon/galight",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "galaxy-morphology",
+        "light-decomposition",
+        "lenstronomy-wrapper"
+      ],
+      "id": 17
+    },
+    {
+      "name": "synpipe",
+      "one_line_profile": "Synthetic object injection pipeline for Hyper Suprime-Cam data",
+      "detailed_description": "A pipeline designed to inject synthetic astronomical objects into Hyper Suprime-Cam (HSC) data to assess detection efficiency and measurement accuracy.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "simulation",
+        "data_augmentation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dr-guangtou/synpipe",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "hsc",
+        "synthetic-data",
+        "pipeline"
+      ],
+      "id": 18
+    },
+    {
+      "name": "Astrometry.net",
+      "one_line_profile": "Automatic astrometric calibration and recognition of astronomical images",
+      "detailed_description": "A reliable and robust system for astrometric calibration that takes an astronomical image and returns the astrometric solution (coordinates) without needing prior information.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "astrometry",
+        "image_calibration"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/dstndstn/astrometry.net",
+      "help_website": [
+        "http://astrometry.net"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "astrometry",
+        "calibration",
+        "wcs"
+      ],
+      "id": 19
+    },
+    {
+      "name": "The Tractor",
+      "one_line_profile": "Probabilistic inference engine for measuring astronomical sources",
+      "detailed_description": "A modeling framework that performs probabilistic inference to measure properties of astronomical sources by optimizing likelihoods of image models.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "source_measurement",
+        "probabilistic_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dstndstn/tractor",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "inference",
+        "photometry",
+        "modeling"
+      ],
+      "id": 20
+    },
+    {
+      "name": "BALROG-MON",
+      "one_line_profile": "Pipeline for antimicrobial resistance exploration in metagenomic samples",
+      "detailed_description": "A Nextflow pipeline designed for the exploration and analysis of Antimicrobial Resistance (AMR) genes within metagenomic sequencing data.",
+      "domains": [
+        "Biology",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "genomics_analysis",
+        "variant_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/edwardbirdlab/BALROG-MON",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "metagenomics",
+        "amr",
+        "nextflow"
+      ],
+      "id": 21
+    },
+    {
+      "name": "Balrog",
+      "one_line_profile": "Image simulation software for the Dark Energy Survey (DES)",
+      "detailed_description": "A software pipeline used by the Dark Energy Survey to embed simulated objects into real images to characterize measurement biases and selection effects.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "simulation",
+        "bias_correction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/emhuff/Balrog",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "des",
+        "simulation",
+        "cosmology"
+      ],
+      "id": 22
+    },
+    {
+      "name": "morgoth",
+      "one_line_profile": "Pipeline for automatic Gamma-ray Burst Monitor (GBM) localizations",
+      "detailed_description": "A pipeline designed to automate the localization process for Gamma-ray Burst Monitor (GBM) data, facilitating rapid analysis of high-energy astrophysical events.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "event_localization",
+        "data_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/grburgess/morgoth",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "gbm",
+        "gamma-ray",
+        "localization"
+      ],
+      "id": 23
+    },
+    {
+      "name": "photerr",
+      "one_line_profile": "Photometric error model for astronomical imaging surveys",
+      "detailed_description": "A Python library that provides photometric error models to simulate noise and uncertainties in astronomical imaging surveys.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "error_modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jfcrenshaw/photerr",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "photometry",
+        "error-analysis",
+        "simulation"
+      ],
+      "id": 24
+    },
+    {
+      "name": "baobab",
+      "one_line_profile": "Training data generator for strong lensing hierarchical inference",
+      "detailed_description": "A tool to generate training data for Bayesian neural networks aimed at performing hierarchical inference on strongly-lensed systems.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "data_generation",
+        "strong_lensing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jiwoncpark/baobab",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "strong-lensing",
+        "machine-learning",
+        "simulation"
+      ],
+      "id": 25
+    },
+    {
+      "name": "galaxies_datasets",
+      "one_line_profile": "Collection of extragalactic astronomy datasets for machine learning",
+      "detailed_description": "A Python package providing ready-to-use extragalactic astronomy datasets formatted for use with TensorFlow and other machine learning frameworks.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "data_loading",
+        "dataset_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lbignone/galaxies_datasets",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "datasets",
+        "machine-learning",
+        "galaxies"
+      ],
+      "id": 26
+    },
+    {
+      "name": "JAXtronomy",
+      "one_line_profile": "JAX-based differentiable gravitational lensing simulation tool",
+      "detailed_description": "A JAX port of the lenstronomy package, enabling parallelized, GPU-accelerated, and differentiable gravitational lensing and image simulations.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "lens_modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lenstronomy/JAXtronomy",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "jax",
+        "gravitational-lensing",
+        "differentiable-programming"
+      ],
+      "id": 27
+    },
+    {
+      "name": "lenstronomy",
+      "one_line_profile": "Multi-purpose gravitational lens modeling software",
+      "detailed_description": "A comprehensive software package for modeling gravitational lenses, capable of image simulation, source reconstruction, and cosmological inference.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "lens_modeling",
+        "image_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lenstronomy/lenstronomy",
+      "help_website": [
+        "https://lenstronomy.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "gravitational-lensing",
+        "modeling",
+        "cosmology"
+      ],
+      "id": 28
+    },
+    {
+      "name": "legacy_sims_GalSimInterface",
+      "one_line_profile": "Interface for generating LSST simulated images using GalSim",
+      "detailed_description": "A software interface that connects LSST catalog simulations (CatSim) with GalSim to generate high-fidelity simulated astronomical images.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "simulation",
+        "image_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lsst-sims/legacy_sims_GalSimInterface",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "lsst",
+        "galsim",
+        "simulation"
+      ],
+      "id": 29
+    },
+    {
+      "name": "legacy_sims_operations",
+      "one_line_profile": "LSST Operations Simulator (OpSim) package",
+      "detailed_description": "A package for the LSST Operations Simulator (OpSim), used to simulate and plan the survey strategy and scheduling for the Rubin Observatory.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "survey_simulation",
+        "scheduling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lsst-sims/legacy_sims_operations",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "lsst",
+        "opsim",
+        "survey-strategy"
+      ],
+      "id": 30
+    },
+    {
+      "name": "OPSim (Geant4)",
+      "one_line_profile": "Additions to Geant4 toolkit for optical photon simulation applications",
+      "detailed_description": "OpSim is a set of libraries and additions to the Geant4 simulation toolkit designed to simplify the implementation of optical photon applications and enhance flexibility in particle physics simulations.",
+      "domains": [
+        "Physics",
+        "Instrumentation"
+      ],
+      "subtask_category": [
+        "simulation",
+        "particle_physics"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mkandemirr/OPSim",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "geant4",
+        "optical-photons",
+        "simulation",
+        "physics"
+      ],
+      "id": 31
+    },
+    {
+      "name": "photometrypipeline",
+      "one_line_profile": "Automated photometry pipeline for small to medium-sized observatories",
+      "detailed_description": "An automated pipeline for performing photometry on astronomical images, designed to handle data from small to medium-sized observatories for scientific analysis.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "photometry",
+        "image_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mommermi/photometrypipeline",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "photometry",
+        "astronomy",
+        "pipeline",
+        "observatory"
+      ],
+      "id": 32
+    },
+    {
+      "name": "galaxy-datasets",
+      "one_line_profile": "Machine learning datasets and loaders for galaxy images",
+      "detailed_description": "A library providing easy access to machine-learning-friendly datasets of galaxy images and labels, facilitating astronomical deep learning research.",
+      "domains": [
+        "Astronomy",
+        "A1-05"
+      ],
+      "subtask_category": [
+        "data_loading",
+        "dataset_access"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/mwalmsley/galaxy-datasets",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "galaxy",
+        "datasets",
+        "machine-learning",
+        "astronomy"
+      ],
+      "id": 33
+    },
+    {
+      "name": "analosis",
+      "one_line_profile": "Analysis tools for investigating line-of-sight effects in strong lensing",
+      "detailed_description": "A toolkit designed to work with lenstronomy for analyzing line-of-sight effects in strong gravitational lensing systems.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "lensing_analysis",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/nataliehogg/analosis",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "strong-lensing",
+        "lenstronomy",
+        "cosmology"
+      ],
+      "id": 34
+    },
+    {
+      "name": "OpSim (Chemical Engineering)",
+      "one_line_profile": "Open source Chemical Engineering Process Simulator",
+      "detailed_description": "A chemical engineering process simulator featuring a graphical user interface and a high-performance simulation engine for modeling chemical processes.",
+      "domains": [
+        "Chemistry",
+        "Engineering"
+      ],
+      "subtask_category": [
+        "process_simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Pascal",
+      "repo_url": "https://github.com/opsim/opsim",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "chemical-engineering",
+        "process-simulation",
+        "thermodynamics"
+      ],
+      "id": 35
+    },
+    {
+      "name": "cabaret",
+      "one_line_profile": "Simulation of astronomical images using Gaia catalog",
+      "detailed_description": "A Python package to simulate astronomical images based on star data from the Gaia catalog, useful for instrument calibration and observation planning.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "image_simulation",
+        "synthetic_data"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ppp-one/cabaret",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gaia",
+        "simulation",
+        "astronomy",
+        "synthetic-images"
+      ],
+      "id": 36
+    },
+    {
+      "name": "OpenTestability",
+      "one_line_profile": "Structural analysis tool for digital circuits and netlists",
+      "detailed_description": "An open-source tool for structural analysis of digital circuits, computing metrics like SCOAP and COP from Verilog netlists for hardware engineering and testing.",
+      "domains": [
+        "Electronic Engineering"
+      ],
+      "subtask_category": [
+        "circuit_analysis",
+        "testability_metrics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ranaumarnadeem/OpenTestability",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "verilog",
+        "circuit-analysis",
+        "eda",
+        "testability"
+      ],
+      "id": 37
+    },
+    {
+      "name": "Balrog (Bio)",
+      "one_line_profile": "Bacterial Annotation by Learned Representation of Genes",
+      "detailed_description": "A tool for bacterial gene annotation using learned representations, designed to predict gene functions in prokaryotic genomes.",
+      "domains": [
+        "Biology",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "gene_annotation",
+        "function_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/salzberg-lab/Balrog",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bacteria",
+        "gene-annotation",
+        "bioinformatics",
+        "machine-learning"
+      ],
+      "id": 38
+    },
+    {
+      "name": "BalrogCPP",
+      "one_line_profile": "C++ implementation of Balrog for bacterial gene annotation",
+      "detailed_description": "The C++ version of the Balrog tool for efficient bacterial gene annotation and representation learning.",
+      "domains": [
+        "Biology",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "gene_annotation",
+        "function_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/salzberg-lab/BalrogCPP",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bacteria",
+        "gene-annotation",
+        "cpp",
+        "bioinformatics"
+      ],
+      "id": 39
+    },
+    {
+      "name": "hierArc",
+      "one_line_profile": "Hierarchical inference of cosmological parameters from strong lensing",
+      "detailed_description": "A Python package for performing hierarchical inference of cosmological parameters using data from strong gravitational lensing systems.",
+      "domains": [
+        "Astronomy",
+        "Cosmology"
+      ],
+      "subtask_category": [
+        "parameter_inference",
+        "cosmology"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sibirrer/hierArc",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cosmology",
+        "strong-lensing",
+        "inference",
+        "hierarchical-modeling"
+      ],
+      "id": 40
+    },
+    {
+      "name": "psfr",
+      "one_line_profile": "Point Spread Function reconstruction tool",
+      "detailed_description": "A tool for reconstructing the Point Spread Function (PSF) from astronomical images, essential for accurate image analysis and source characterization.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "psf_reconstruction",
+        "image_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/sibirrer/psfr",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "psf",
+        "astronomy",
+        "image-processing",
+        "reconstruction"
+      ],
+      "id": 41
+    },
+    {
+      "name": "Mirage (JWST)",
+      "one_line_profile": "Simulator for JWST NIRCam, NIRISS, and FGS data",
+      "detailed_description": "A Python tool developed by STScI to generate simulated data for the NIRCam, NIRISS, and FGS instruments on the James Webb Space Telescope (JWST).",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "data_simulation",
+        "instrument_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spacetelescope/mirage",
+      "help_website": [
+        "https://mirage-data-simulator.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "jwst",
+        "simulation",
+        "astronomy",
+        "nircam"
+      ],
+      "id": 42
+    },
+    {
+      "name": "Balrog-GalSim",
+      "one_line_profile": "GalSim modules for the DES Balrog pipeline",
+      "detailed_description": "A set of modules for GalSim designed to support the Balrog pipeline for the Dark Energy Survey (DES), enabling the injection of synthetic objects into real astronomical images.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "image_simulation",
+        "synthetic_injection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sweverett/Balrog-GalSim",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "galsim",
+        "des",
+        "simulation",
+        "astronomy"
+      ],
+      "id": 43
+    },
+    {
+      "name": "silkscreen",
+      "one_line_profile": "Distance measurement to galaxies using ArtPop and SBI",
+      "detailed_description": "A tool that combines ArtPop (stellar population synthesis) and Simulation-Based Inference (SBI) to measure distances to galaxies directly from their images.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "distance_measurement",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tbmiller-astro/silkscreen",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "distance-measurement",
+        "sbi",
+        "artpop",
+        "astronomy"
+      ],
+      "id": 44
+    },
+    {
+      "name": "online_photometric_calibration",
+      "one_line_profile": "Implementation of online photometric calibration for vision systems",
+      "detailed_description": "An implementation of online photometric calibration algorithms, useful for computer vision and robotic visual SLAM systems to handle lighting variations.",
+      "domains": [
+        "Computer Vision",
+        "Robotics"
+      ],
+      "subtask_category": [
+        "photometric_calibration",
+        "slam"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/tum-vision/online_photometric_calibration",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "photometry",
+        "calibration",
+        "slam",
+        "computer-vision"
+      ],
+      "id": 45
+    }
+  ]
+}

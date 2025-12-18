@@ -1,0 +1,2671 @@
+{
+  "generated_at": "2025-12-16T02:02:17.549733+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "S1",
+      "leaf_cluster_name": "结构生物-结构预测与评估生态",
+      "domain": "StructBio",
+      "typical_objects": "PDB/mmCIF, 3D structures",
+      "task_chain": "预测→精修→对齐→质量评估→可视化",
+      "tool_form": "推理框架 + 结构工具 + 可视化"
+    },
+    "unit": {
+      "unit_id": "S1-03",
+      "unit_name": "对齐/比较/聚类",
+      "target_scale": "150–350",
+      "coverage_tools": "structural alignment、similarity search"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] RuPEE",
+        "[GH] mTM-align",
+        "[GH] CE",
+        "[GH] DALI",
+        "[GH] MM-align",
+        "[GH] DeepAlign",
+        "[GH] FATCAT",
+        "[GH] US-align",
+        "[GH] Foldseek",
+        "[GH] TM-align",
+        "[GH] protein structure alignment",
+        "[GH] structural alignment",
+        "[GH] structure superposition",
+        "[GH] structure comparison",
+        "[GH] RMSD calculation",
+        "[GH] TM-score",
+        "[GH] structural clustering",
+        "[GH] structure similarity search",
+        "[GH] pdb alignment",
+        "[GH] 3D structure alignment",
+        "[GH] contact map alignment",
+        "[GH] fold search",
+        "[GH] structural motif search",
+        "[WEB] protein structure alignment tools github",
+        "[WEB] structural similarity search algorithms github",
+        "[WEB] TM-score calculator github",
+        "[WEB] fast protein structure clustering github",
+        "[WEB] 3D structure superposition library github",
+        "[WEB] PDB structure comparison github"
+      ],
+      "total_candidates": 954,
+      "tool_candidates": 396,
+      "final_tools": 106
+    }
+  },
+  "tools": [
+    {
+      "name": "Long Ranger",
+      "one_line_profile": "Analysis pipeline for 10x Genomics Linked-Read data",
+      "detailed_description": "A set of analysis pipelines that processes Chromium-prepared sequencing data to align reads, call variants, and phase SNPs, indels, and structural variants.",
+      "domains": [
+        "Genomics"
+      ],
+      "subtask_category": [
+        "alignment",
+        "variant_calling",
+        "phasing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/10XGenomics/longranger",
+      "help_website": [
+        "https://support.10xgenomics.com/genome-exome/software/pipelines/latest/what-is-long-ranger"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "genomics",
+        "bioinformatics",
+        "linked-reads",
+        "structural-variants"
+      ],
+      "id": 1
+    },
+    {
+      "name": "ZEAL",
+      "one_line_profile": "Shape-based protein structure alignment tool using Zernike descriptors",
+      "detailed_description": "Software to perform shape-based protein structure alignment, utilizing Zernike descriptors for efficient comparison of protein shapes.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_alignment",
+        "shape_comparison"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Andre-lab/ZEAL",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "protein-structure",
+        "alignment",
+        "zernike-descriptors",
+        "structural-biology"
+      ],
+      "id": 2
+    },
+    {
+      "name": "JAR3D",
+      "one_line_profile": "Java-based alignment of RNA using 3D structure",
+      "detailed_description": "A tool for aligning RNA sequences to 3D structural motifs, aiding in the identification and analysis of recurrent RNA 3D structures.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_alignment",
+        "rna_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/BGSU-RNA/JAR3D",
+      "help_website": [
+        "http://jar3d.bgsu.edu/"
+      ],
+      "license": null,
+      "tags": [
+        "rna",
+        "structural-alignment",
+        "3d-motifs",
+        "bioinformatics"
+      ],
+      "id": 3
+    },
+    {
+      "name": "GraphClust-2",
+      "one_line_profile": "Pipeline for structural clustering of RNA secondary structures",
+      "detailed_description": "A scalable pipeline for clustering RNA sequences based on their secondary structures, utilizing graph kernel methods for efficient structural comparison.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_clustering",
+        "rna_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BackofenLab/GraphClust-2",
+      "help_website": [
+        "http://www.bioinf.uni-freiburg.de/Software/GraphClust/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "rna",
+        "clustering",
+        "secondary-structure",
+        "graph-kernel"
+      ],
+      "id": 4
+    },
+    {
+      "name": "DeeplyTough",
+      "one_line_profile": "Deep learning model for structural comparison of protein binding sites",
+      "detailed_description": "A convolutional neural network-based method for quantifying the similarity of protein binding sites, enabling structure-based drug design tasks.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_comparison",
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BenevolentAI/DeeplyTough",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "protein-binding-sites",
+        "deep-learning",
+        "structural-similarity",
+        "drug-discovery"
+      ],
+      "id": 5
+    },
+    {
+      "name": "CesiumJS",
+      "one_line_profile": "Open-source JavaScript library for world-class 3D globes and maps",
+      "detailed_description": "A JavaScript library for creating 3D globes and 2D maps in a web browser without a plugin, widely used for geospatial scientific visualization.",
+      "domains": [
+        "Earth_Science"
+      ],
+      "subtask_category": [
+        "visualization",
+        "geospatial_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/CesiumGS/cesium",
+      "help_website": [
+        "https://cesium.com/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "geospatial",
+        "3d-globe",
+        "visualization",
+        "gis"
+      ],
+      "id": 6
+    },
+    {
+      "name": "DALI-SLAM",
+      "one_line_profile": "Degeneracy-aware LiDAR-inertial SLAM system",
+      "detailed_description": "A LiDAR-inertial SLAM system designed to handle degeneracy in environments, featuring distortion correction and multi-constraint pose graph optimization.",
+      "domains": [
+        "Robotics"
+      ],
+      "subtask_category": [
+        "slam",
+        "pose_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/DCSI2022/DALI_SLAM",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "slam",
+        "lidar",
+        "robotics",
+        "localization"
+      ],
+      "id": 7
+    },
+    {
+      "name": "ICARUS",
+      "one_line_profile": "Flexible protein structural alignment based on Protein Units",
+      "detailed_description": "A tool for flexible protein structure alignment that uses Protein Units (PUs) to handle structural variations and flexibility.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/DSIMB/ICARUS",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "protein-structure",
+        "alignment",
+        "flexible-alignment",
+        "protein-units"
+      ],
+      "id": 8
+    },
+    {
+      "name": "PoincareMSA",
+      "one_line_profile": "Visualization of multiple sequence alignments using Poincaré maps",
+      "detailed_description": "A strategy for visualizing and interpreting multiple sequence alignments (MSA) using Poincaré maps to detect hierarchical organization in protein families.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "msa_analysis"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/DSIMB/PoincareMSA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "msa",
+        "visualization",
+        "poincare-maps",
+        "bioinformatics"
+      ],
+      "id": 9
+    },
+    {
+      "name": "Kluster",
+      "one_line_profile": "Structural clustering algorithm for CBP60 protein family",
+      "detailed_description": "Implementation of a novel structural clustering algorithm developed for the CBP60-DB, an AlphaFold-predicted plant kingdom-wide database.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_clustering"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Danialgharaie/Kluster",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "clustering",
+        "protein-structure",
+        "alphafold",
+        "plant-biology"
+      ],
+      "id": 10
+    },
+    {
+      "name": "tmscoring",
+      "one_line_profile": "Python implementation of the TM-score structural similarity metric",
+      "detailed_description": "A Python package to calculate the TM-score (Template Modeling score) for assessing the topological similarity of protein structures.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_evaluation",
+        "scoring"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Dapid/tmscoring",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "tm-score",
+        "protein-structure",
+        "similarity-metric",
+        "python"
+      ],
+      "id": 11
+    },
+    {
+      "name": "snakedali",
+      "one_line_profile": "Snakemake implementation of protein structure alignment software DaliLite v5",
+      "detailed_description": "A Snakemake workflow wrapper for the DaliLite v5 software, facilitating automated protein structure alignment pipelines.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_alignment",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Doudna-lab/snakedali",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "snakemake",
+        "dalilite",
+        "protein-structure",
+        "alignment"
+      ],
+      "id": 12
+    },
+    {
+      "name": "ssu-align",
+      "one_line_profile": "Structural alignment of SSU rRNA sequences",
+      "detailed_description": "A tool for the structural alignment of Small Subunit (SSU) ribosomal RNA sequences, useful in phylogenetic and structural analysis.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_alignment",
+        "rna_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "PostScript",
+      "repo_url": "https://github.com/EddyRivasLab/ssu-align",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rrna",
+        "alignment",
+        "ssu",
+        "phylogenetics"
+      ],
+      "id": 13
+    },
+    {
+      "name": "Organisms",
+      "one_line_profile": "Genetic algorithm for global optimization of nanoclusters",
+      "detailed_description": "The Otago Research Genetic Algorithm for Nanoclusters, Including Structural Methods and Similarity (Organisms) program is designed to globally optimise nanoclusters and nanoparticles.",
+      "domains": [
+        "Materials_Science"
+      ],
+      "subtask_category": [
+        "structure_optimization",
+        "nanocluster_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GardenGroupUO/Organisms",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "genetic-algorithm",
+        "nanoclusters",
+        "optimization",
+        "materials-science"
+      ],
+      "id": 14
+    },
+    {
+      "name": "REGAL",
+      "one_line_profile": "Representation learning-based graph alignment using structural embeddings",
+      "detailed_description": "A framework for graph alignment based on implicit matrix factorization and structural embeddings, applicable to network alignment tasks in various domains including bioinformatics.",
+      "domains": [
+        "Network_Science"
+      ],
+      "subtask_category": [
+        "graph_alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GemsLab/REGAL",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "graph-alignment",
+        "representation-learning",
+        "network-science",
+        "embeddings"
+      ],
+      "id": 15
+    },
+    {
+      "name": "DaLiTI",
+      "one_line_profile": "Degeneration-aware LiDAR-Thermal-Inertial SLAM system",
+      "detailed_description": "A SLAM system integrating LiDAR, Thermal, and Inertial sensors, designed to be robust against degeneration in challenging environments.",
+      "domains": [
+        "Robotics"
+      ],
+      "subtask_category": [
+        "slam",
+        "sensor_fusion"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/HITSZ-NRSL/DaLiTI",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "slam",
+        "lidar",
+        "thermal-imaging",
+        "robotics"
+      ],
+      "id": 16
+    },
+    {
+      "name": "DALiuGE",
+      "one_line_profile": "Data-driven workflow execution engine for radio astronomy",
+      "detailed_description": "The DALiuGE (Data Activated Liu Graph Engine) Execution Engine is a workflow management system designed for the high-throughput data processing requirements of radio astronomy.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "workflow_execution",
+        "data_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ICRAR/daliuge",
+      "help_website": [
+        "https://daliuge.readthedocs.io/"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "workflow-engine",
+        "radio-astronomy",
+        "high-performance-computing",
+        "data-processing"
+      ],
+      "id": 17
+    },
+    {
+      "name": "Daline",
+      "one_line_profile": "Data-driven Power Flow Linearization Toolbox for Power Systems",
+      "detailed_description": "A MATLAB toolbox for data-driven power flow linearization in power systems research and education. It facilitates the analysis and modeling of power grids.",
+      "domains": [
+        "Energy",
+        "Physics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/JarvisETHZ/Daline",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "power-systems",
+        "power-flow",
+        "linearization",
+        "matlab"
+      ],
+      "id": 18
+    },
+    {
+      "name": "CLoNe",
+      "one_line_profile": "Clustering tool for biomolecular structural ensembles",
+      "detailed_description": "CLoNe is a clustering tool designed for biomolecular structural ensembles and general data. It is particularly useful for analyzing molecular dynamics simulation trajectories to identify distinct conformational states.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "clustering",
+        "structure_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/LBM-EPFL/CLoNe",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "clustering",
+        "molecular-dynamics",
+        "structural-biology",
+        "ensembles"
+      ],
+      "id": 19
+    },
+    {
+      "name": "LinearTurboFold",
+      "one_line_profile": "Linear-time algorithm for RNA structural alignment and conserved structure prediction",
+      "detailed_description": "An end-to-end linear-time algorithm for structural alignment and conserved structure prediction of RNA homologs. It enables the analysis of long RNA sequences and multiple sequences efficiently.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_alignment",
+        "structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/LinearFold/LinearTurboFold",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rna",
+        "structure-prediction",
+        "alignment",
+        "linear-time"
+      ],
+      "id": 20
+    },
+    {
+      "name": "MISA SCD",
+      "one_line_profile": "Parallel Stochastic Cluster Dynamics Simulation for Reactor Materials",
+      "detailed_description": "MISA SCD is a parallel stochastic cluster dynamics simulation software designed for studying the evolution of defects in reactor structural materials under irradiation.",
+      "domains": [
+        "Materials",
+        "Physics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "dynamics_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/MISA-SCD/misa-scd",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "materials-science",
+        "cluster-dynamics",
+        "reactor-materials",
+        "simulation"
+      ],
+      "id": 21
+    },
+    {
+      "name": "sarst",
+      "one_line_profile": "Efficient protein structural alignment search algorithm",
+      "detailed_description": "SARST (Structure Alignment by Ramachandran Stabilized Torsion) is an algorithm for efficient protein structural alignment search, utilizing Ramachandran codes to represent protein structures.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_alignment",
+        "similarity_search"
+      ],
+      "application_level": "solver",
+      "primary_language": null,
+      "repo_url": "https://github.com/NYCU-10lab/sarst",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "protein-structure",
+        "structural-alignment",
+        "bioinformatics"
+      ],
+      "id": 22
+    },
+    {
+      "name": "RNA_assessment",
+      "one_line_profile": "Basic RNA 3D structure comparison metrics",
+      "detailed_description": "A collection of tools and scripts for assessing RNA 3D structures, including metrics like Interaction Network Fidelity (INF), Deformation Index (DI), and RMSD. Developed for the RNA-Puzzles challenges.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_comparison",
+        "quality_assessment"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/RNA-Puzzles/RNA_assessment",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rna",
+        "structure-evaluation",
+        "rmsd",
+        "rna-puzzles"
+      ],
+      "id": 23
+    },
+    {
+      "name": "MUM&Co",
+      "one_line_profile": "Structural Variation detection using Whole Genome Alignment",
+      "detailed_description": "MUM&Co is a bash script that leverages Whole Genome Alignment information provided by MUMmer (v4) to detect Structural Variations (SVs) such as insertions, deletions, inversions, and translocations.",
+      "domains": [
+        "Genomics",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_variation_detection",
+        "genome_alignment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/SAMtoBAM/MUMandCo",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "structural-variation",
+        "genome-alignment",
+        "mummer",
+        "bioinformatics"
+      ],
+      "id": 24
+    },
+    {
+      "name": "mican",
+      "one_line_profile": "Non-sequential structural alignment program for protein structures",
+      "detailed_description": "A tool for protein structure alignment that handles non-sequential alignments, useful for detecting structural similarities in proteins with different topologies.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_alignment",
+        "protein_comparison"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/ShintaroMinami/mican",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-structure",
+        "alignment",
+        "structural-biology"
+      ],
+      "id": 25
+    },
+    {
+      "name": "SlicerRT",
+      "one_line_profile": "Open-source toolkit for radiation therapy research within 3D Slicer",
+      "detailed_description": "An extension for 3D Slicer providing tools for radiation therapy research, including DICOM-RT import/export, dose volume histograms, and structure comparison.",
+      "domains": [
+        "Medical Physics",
+        "Radiotherapy"
+      ],
+      "subtask_category": [
+        "radiation_therapy_planning",
+        "structure_comparison",
+        "dose_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/SlicerRt/SlicerRT",
+      "help_website": [
+        "http://www.slicerrt.org"
+      ],
+      "license": null,
+      "tags": [
+        "radiation-therapy",
+        "dicom-rt",
+        "medical-imaging"
+      ],
+      "id": 26
+    },
+    {
+      "name": "Valx",
+      "one_line_profile": "Tool for extracting numeric lab test comparisons from clinical text",
+      "detailed_description": "A Python tool designed to extract and structure numeric laboratory test comparison statements from unstructured clinical text for biomedical research.",
+      "domains": [
+        "Biomedical Informatics",
+        "NLP"
+      ],
+      "subtask_category": [
+        "information_extraction",
+        "clinical_data_mining"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Tony-Hao/Valx",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "clinical-nlp",
+        "information-extraction",
+        "biomedical"
+      ],
+      "id": 27
+    },
+    {
+      "name": "caretta",
+      "one_line_profile": "Multiple protein structure alignment and feature extraction suite",
+      "detailed_description": "A software suite for performing multiple protein structure alignment and extracting structural features, useful for structural biology analysis.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "multiple_structure_alignment",
+        "feature_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TurtleTools/caretta",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "protein-structure",
+        "alignment",
+        "structural-biology"
+      ],
+      "id": 28
+    },
+    {
+      "name": "geometricus",
+      "one_line_profile": "Structure-based, alignment-free embedding approach for proteins",
+      "detailed_description": "A tool for generating alignment-free embeddings of protein structures using moment invariants, suitable for machine learning applications in structural biology.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_embedding",
+        "similarity_search"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TurtleTools/geometricus",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-embedding",
+        "machine-learning",
+        "structural-biology"
+      ],
+      "id": 29
+    },
+    {
+      "name": "cath-tools",
+      "one_line_profile": "Protein structure comparison tools from the CATH group",
+      "detailed_description": "A collection of tools for protein structure comparison, including SSAP and SNAP algorithms, developed by the CATH database group.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_comparison",
+        "structural_alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/UCLOrengoGroup/cath-tools",
+      "help_website": [
+        "http://cathdb.info"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "cath",
+        "protein-structure",
+        "comparison"
+      ],
+      "id": 30
+    },
+    {
+      "name": "AGE",
+      "one_line_profile": "Optimal alignment of sequences with structural variants",
+      "detailed_description": "A tool that implements an algorithm for the optimal alignment of genomic sequences containing structural variants (SVs).",
+      "domains": [
+        "Genomics",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "sequence_alignment",
+        "variant_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/abyzovlab/AGE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "genomics",
+        "structural-variants",
+        "alignment"
+      ],
+      "id": 31
+    },
+    {
+      "name": "mini3di",
+      "one_line_profile": "NumPy port of foldseek code for encoding protein structures to 3di",
+      "detailed_description": "A Python library that ports the Foldseek 3di encoding algorithm, allowing for efficient encoding of protein structures into 3di sequences for structure comparison.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_encoding",
+        "structural_alignment"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/althonos/mini3di",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "foldseek",
+        "protein-structure",
+        "3di"
+      ],
+      "id": 32
+    },
+    {
+      "name": "LIGSIFT",
+      "one_line_profile": "Tool for ligand structural alignment and virtual screening",
+      "detailed_description": "An open-source tool designed for the structural alignment of ligands and virtual screening applications in drug discovery.",
+      "domains": [
+        "S1",
+        "S1-03",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "ligand_alignment",
+        "virtual_screening"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ambrishroy/LIGSIFT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ligand",
+        "alignment",
+        "virtual-screening"
+      ],
+      "id": 33
+    },
+    {
+      "name": "AnchorWave",
+      "one_line_profile": "Sensitive alignment of genomes with high sequence diversity",
+      "detailed_description": "A tool for sensitive alignment of genomes, capable of handling high sequence diversity, structural polymorphisms, and whole-genome duplication variations.",
+      "domains": [
+        "Genomics",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "genome_alignment",
+        "comparative_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/baoxingsong/AnchorWave",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "genome-alignment",
+        "bioinformatics",
+        "genomics"
+      ],
+      "id": 34
+    },
+    {
+      "name": "biozernike",
+      "one_line_profile": "Protein structure descriptors and alignment based on 3D Zernike moments",
+      "detailed_description": "A library for calculating 3D Zernike descriptors for protein structures and performing structural alignment based on these descriptors.",
+      "domains": [
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_descriptor",
+        "structural_alignment"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/biocryst/biozernike",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "zernike-moments",
+        "protein-structure",
+        "alignment"
+      ],
+      "id": 35
+    },
+    {
+      "name": "rmsd",
+      "one_line_profile": "Tool to calculate Root-mean-square deviation (RMSD) of two molecules",
+      "detailed_description": "A Python script that calculates the Root-mean-square deviation (RMSD) of two molecules (XYZ or PDB format), using rotation to minimize the distance.",
+      "domains": [
+        "StructBio"
+      ],
+      "subtask_category": [
+        "structural_alignment",
+        "similarity_calculation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/charnley/rmsd",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "rmsd",
+        "bioinformatics",
+        "structural-biology",
+        "pdb",
+        "molecule-alignment"
+      ],
+      "id": 36
+    },
+    {
+      "name": "AHoJ",
+      "one_line_profile": "Tool for searching APO (unbound) protein structures from HOLO (bound) forms",
+      "detailed_description": "A webserver and command-line tool designed to search for APO (unbound) protein structures based on HOLO (bound) forms and vice versa, aiding in the study of protein conformational changes.",
+      "domains": [
+        "StructBio"
+      ],
+      "subtask_category": [
+        "structure_search",
+        "apo_holo_alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cusbg/AHoJ-project",
+      "help_website": [
+        "http://apoholo.cz"
+      ],
+      "license": null,
+      "tags": [
+        "protein-structure",
+        "apo-holo",
+        "bioinformatics",
+        "structural-alignment"
+      ],
+      "id": 37
+    },
+    {
+      "name": "psrfits_utils",
+      "one_line_profile": "Utility library for working with PSRFITS pulsar data files",
+      "detailed_description": "A C library and set of utilities for reading, writing, and manipulating pulsar data in the PSRFITS format, commonly used in radio astronomy.",
+      "domains": [
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "file_manipulation"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/demorest/psrfits_utils",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "astronomy",
+        "pulsar",
+        "psrfits",
+        "data-processing"
+      ],
+      "id": 38
+    },
+    {
+      "name": "pSCAN",
+      "one_line_profile": "Fast and exact structural graph clustering algorithm implementation",
+      "detailed_description": "An efficient implementation of the pSCAN algorithm for structural graph clustering, designed to handle large-scale networks and detect clusters with overlaps. It focuses on optimizing the structural clustering of networks based on node similarity.",
+      "domains": [
+        "Network Science",
+        "Data Mining"
+      ],
+      "subtask_category": [
+        "clustering",
+        "network_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/eXascaleInfolab/pSCAN",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "graph-clustering",
+        "network-analysis",
+        "structural-clustering"
+      ],
+      "id": 39
+    },
+    {
+      "name": "dHCP_template_alignment",
+      "one_line_profile": "Surface alignment script for the Developing Human Connectome Project",
+      "detailed_description": "A script derived from the dHCP structural pipeline for aligning cortical surfaces to the dHCP surface template space. It facilitates the registration of neuroimaging data for developing human brains.",
+      "domains": [
+        "Medical Imaging",
+        "Neuroscience"
+      ],
+      "subtask_category": [
+        "image_registration",
+        "surface_alignment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/ecr05/dHCP_template_alignment",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neuroimaging",
+        "dhcp",
+        "surface-alignment",
+        "mri"
+      ],
+      "id": 40
+    },
+    {
+      "name": "Faiss",
+      "one_line_profile": "Library for efficient similarity search and clustering of dense vectors",
+      "detailed_description": "A library for efficient similarity search and clustering of dense vectors. It contains algorithms that search in sets of vectors of any size, up to ones that possibly do not fit in RAM. Widely used in bioinformatics for embedding search and clustering.",
+      "domains": [
+        "Machine Learning",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "similarity_search",
+        "clustering",
+        "vector_indexing"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/facebookresearch/faiss",
+      "help_website": [
+        "https://github.com/facebookresearch/faiss/wiki"
+      ],
+      "license": "MIT",
+      "tags": [
+        "similarity-search",
+        "clustering",
+        "vector-search",
+        "gpu",
+        "knn"
+      ],
+      "id": 41
+    },
+    {
+      "name": "LoCoHD",
+      "one_line_profile": "Metric for protein-protein structure comparison",
+      "detailed_description": "Implementation of the LoCoHD (Local Composition Hellinger Distance) metric for comparing protein-protein structures. It provides a measure of similarity between protein structures based on their local composition.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_comparison",
+        "similarity_metric"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fazekaszs/loco_hd",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-structure",
+        "structure-comparison",
+        "metric"
+      ],
+      "id": 42
+    },
+    {
+      "name": "DALI Dataset",
+      "one_line_profile": "Dataset of synchronised audio, lyrics, and vocal notes",
+      "detailed_description": "A large dataset of synchronised audio, lyrics, and vocal notes designed for music information retrieval research, specifically for tasks like singing voice analysis and lyrics alignment.",
+      "domains": [
+        "Audio Processing",
+        "Music Information Retrieval"
+      ],
+      "subtask_category": [
+        "dataset",
+        "audio_alignment"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gabolsgabs/DALI",
+      "help_website": [
+        "https://github.com/gabolsgabs/DALI"
+      ],
+      "license": null,
+      "tags": [
+        "dataset",
+        "audio",
+        "lyrics",
+        "synchronization"
+      ],
+      "id": 43
+    },
+    {
+      "name": "SCAN-Python",
+      "one_line_profile": "Python implementation of the SCAN structural clustering algorithm",
+      "detailed_description": "A Python implementation of the SCAN (Structural Clustering Algorithm for Networks) algorithm, which detects clusters, hubs, and outliers in networks based on structural similarity.",
+      "domains": [
+        "Network Science"
+      ],
+      "subtask_category": [
+        "clustering",
+        "network_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gombaniro/SCAN-A-Structural-Clustering-Algorithm-for-Networks",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "graph-clustering",
+        "scan-algorithm",
+        "network-analysis"
+      ],
+      "id": 44
+    },
+    {
+      "name": "RNAStructViz",
+      "one_line_profile": "GUI for visualization and comparison of RNA secondary structures",
+      "detailed_description": "A cross-platform GUI tool for the visualization, comparison, and analysis of RNA secondary structures. It supports various visualization modes and structural comparison tasks.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "structure_comparison",
+        "rna_structure"
+      ],
+      "application_level": "platform",
+      "primary_language": "C",
+      "repo_url": "https://github.com/gtDMMB/RNAStructViz",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "rna",
+        "visualization",
+        "secondary-structure",
+        "gui"
+      ],
+      "id": 45
+    },
+    {
+      "name": "Arctic3D",
+      "one_line_profile": "Clustering of protein-protein interfaces from 3D structures",
+      "detailed_description": "Arctic3D (Automatic Retrieval and ClusTering of Interfaces in Complexes from 3D structural information) is a tool for analyzing and clustering protein-protein interfaces based on 3D structural data.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "clustering",
+        "interface_analysis",
+        "structure_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haddocking/arctic3d",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "protein-interface",
+        "clustering",
+        "structural-biology",
+        "docking"
+      ],
+      "id": 46
+    },
+    {
+      "name": "OpenBNSL",
+      "one_line_profile": "Framework for Bayesian Network Structure Learning algorithms",
+      "detailed_description": "A unified framework for fair, reproducible, and transparent comparison of Bayesian Network Structure Learning (BNSL) algorithms. It provides implementations of various algorithms for learning the structure of Bayesian networks from data.",
+      "domains": [
+        "Machine Learning",
+        "Causal Inference"
+      ],
+      "subtask_category": [
+        "structure_learning",
+        "causal_discovery"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/hal-lab-u-tokyo/OpenBNSL",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bayesian-networks",
+        "structure-learning",
+        "causal-inference"
+      ],
+      "id": 47
+    },
+    {
+      "name": "HIV-1 TAR QSAR",
+      "one_line_profile": "QSAR models for HIV-1 TAR RNA small molecule binders",
+      "detailed_description": "Quantitative Structure-Activity Relationship (QSAR) models developed to predict thermodynamic and kinetic binding parameters of small molecules to the HIV-1 TAR RNA model system. Includes scripts for multiple linear regression and feature selection.",
+      "domains": [
+        "Chemoinformatics",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "qsar",
+        "binding_affinity_prediction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/hargrove-lab/QSAR",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "qsar",
+        "rna-binding",
+        "drug-discovery",
+        "hiv-1"
+      ],
+      "id": 48
+    },
+    {
+      "name": "ConsAlifold",
+      "one_line_profile": "Consensus RNA secondary structure predictor using structural alignment",
+      "detailed_description": "A consensus secondary structure predictor for RNA that engages structural alignment-based error correction to improve prediction accuracy.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "structural_alignment",
+        "rna_structure"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/heartsh/consalifold",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rna",
+        "secondary-structure",
+        "alignment",
+        "consensus"
+      ],
+      "id": 49
+    },
+    {
+      "name": "ConsProb",
+      "one_line_profile": "Probability inference engine for RNA structural alignment",
+      "detailed_description": "A quick probability inference engine designed for RNA structural alignment tasks, facilitating the analysis of RNA sequence and structure conservation.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_alignment",
+        "probability_inference",
+        "rna_structure"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/heartsh/consprob",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rna",
+        "alignment",
+        "probability",
+        "rust"
+      ],
+      "id": 50
+    },
+    {
+      "name": "Temporal-Action-Alignment-USFGW",
+      "one_line_profile": "Weakly-supervised temporal action alignment using USFGW distance",
+      "detailed_description": "Implementation of a weakly-supervised temporal action alignment method driven by Unbalanced Spectral Fused Gromov-Wasserstein (USFGW) distance, as presented at ACMMM 2022.",
+      "domains": [
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "action_alignment",
+        "temporal_alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hhhh1138/Temporal-Action-Alignment-USFGW",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "temporal-alignment",
+        "computer-vision",
+        "optimal-transport"
+      ],
+      "id": 51
+    },
+    {
+      "name": "AD-Prediction-CNN",
+      "one_line_profile": "Alzheimer's Disease prediction using CNNs on MRI images",
+      "detailed_description": "A deep learning project implementing Convolutional Neural Networks (CNNs) and transfer learning (AlexNet, 3D Autoencoder) for predicting Alzheimer's Disease from brain MRI images using ADNI data.",
+      "domains": [
+        "Medical Imaging",
+        "Neuroscience"
+      ],
+      "subtask_category": [
+        "disease_prediction",
+        "image_classification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/himanshub1007/Alzhimers-Disease-Prediction-Using-Deep-learning",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "alzheimers",
+        "mri",
+        "deep-learning",
+        "cnn"
+      ],
+      "id": 52
+    },
+    {
+      "name": "cnnLSV",
+      "one_line_profile": "Structural variant detection using CNNs and long-read alignment",
+      "detailed_description": "A tool for detecting structural variants (SVs) by encoding long-read alignment information into images and using a convolutional neural network (CNN) for classification.",
+      "domains": [
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "structural_variant_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/huidong-ma/cnnLSV",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "genomics",
+        "structural-variants",
+        "long-read",
+        "cnn"
+      ],
+      "id": 53
+    },
+    {
+      "name": "H-SRDC",
+      "one_line_profile": "Structurally Regularized Deep Clustering for Domain Adaptation",
+      "detailed_description": "Implementation of 'Towards Uncovering the Intrinsic Data Structures for Unsupervised Domain Adaptation using Structurally Regularized Deep Clustering', a method for discovering intrinsic data structures in domain adaptation tasks.",
+      "domains": [
+        "Machine Learning"
+      ],
+      "subtask_category": [
+        "clustering",
+        "domain_adaptation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/huitangtang/H-SRDC",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "domain-adaptation",
+        "deep-clustering",
+        "machine-learning"
+      ],
+      "id": 54
+    },
+    {
+      "name": "Fundus Vessel Segmentation TBME",
+      "one_line_profile": "Retinal vessel segmentation using CRF and structured SVM",
+      "detailed_description": "A method for blood vessel segmentation in fundus images based on a discriminatively trained, fully connected conditional random field (CRF) model and structured output support vector machine.",
+      "domains": [
+        "Medical Imaging"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "image_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/ignaciorlando/fundus-vessel-segmentation-tbme",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "retinal-vessel-segmentation",
+        "fundus-images",
+        "crf",
+        "svm"
+      ],
+      "id": 55
+    },
+    {
+      "name": "chocula",
+      "one_line_profile": "Journal-level metadata processing tool for Fatcat",
+      "detailed_description": "A tool for munging and processing journal-level metadata, used as part of the Fatcat project to manage scholarly publication records.",
+      "domains": [
+        "Scientometrics"
+      ],
+      "subtask_category": [
+        "metadata_processing",
+        "data_cleaning"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/internetarchive/chocula",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "metadata",
+        "scholarly-publishing",
+        "fatcat"
+      ],
+      "id": 56
+    },
+    {
+      "name": "Fatcat",
+      "one_line_profile": "Versioned catalog of scholarly publications",
+      "detailed_description": "A scalable, versioned, open catalog of bibliographic entities (papers, containers, creators, files, etc.) representing the scholarly record. It serves as a backend for archiving and accessing research outputs.",
+      "domains": [
+        "Scientometrics"
+      ],
+      "subtask_category": [
+        "cataloging",
+        "archiving"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/internetarchive/fatcat",
+      "help_website": [
+        "https://fatcat.wiki"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "bibliometrics",
+        "open-access",
+        "archiving",
+        "scholarly-data"
+      ],
+      "id": 57
+    },
+    {
+      "name": "Fatcat Scholar",
+      "one_line_profile": "Search interface for the Fatcat scholarly catalog",
+      "detailed_description": "The web search interface and discovery layer for the Fatcat catalog, allowing users to search and access millions of scholarly works preserved by the Internet Archive.",
+      "domains": [
+        "Scientometrics"
+      ],
+      "subtask_category": [
+        "search",
+        "discovery"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/internetarchive/fatcat-scholar",
+      "help_website": [
+        "https://scholar.archive.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "search-engine",
+        "scholarly-search",
+        "open-access"
+      ],
+      "id": 58
+    },
+    {
+      "name": "Sandcrawler",
+      "one_line_profile": "Crawling and processing backend for scholarly web content",
+      "detailed_description": "Backend tools used by the Internet Archive for crawling, processing, and ingesting scholarly web content and metadata into the Fatcat catalog.",
+      "domains": [
+        "Scientometrics"
+      ],
+      "subtask_category": [
+        "web_crawling",
+        "data_ingestion"
+      ],
+      "application_level": "workflow",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/internetarchive/sandcrawler",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "crawling",
+        "scholarly-data",
+        "archiving"
+      ],
+      "id": 59
+    },
+    {
+      "name": "SPOT-1D-LM",
+      "one_line_profile": "Protein property prediction using language models without alignment",
+      "detailed_description": "A method for predicting protein secondary and tertiary structural properties (like secondary structure, solvent accessibility, contact maps) using protein language model embeddings, achieving high accuracy without requiring multiple sequence alignments (MSA).",
+      "domains": [
+        "StructBio",
+        "S1"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "property_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jas-preet/SPOT-1D-LM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "protein-structure",
+        "language-models",
+        "deep-learning",
+        "secondary-structure"
+      ],
+      "id": 60
+    },
+    {
+      "name": "SAT",
+      "one_line_profile": "Structural Analysis Toolkit for structural data and alignments",
+      "detailed_description": "A Python package for the manipulation and analysis of structural data and structural alignments, likely focused on biological macromolecules or materials.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_alignment",
+        "data_manipulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jnoms/SAT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "structural-analysis",
+        "alignment",
+        "python"
+      ],
+      "id": 61
+    },
+    {
+      "name": "ProteinClusterTools",
+      "one_line_profile": "Pipeline for exploring and clustering protein families",
+      "detailed_description": "A pipeline for exploring protein families using homology-based or vector representation-based methods to generate clusters in sequence space, aiding in the analysis of protein diversity and evolution.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "clustering",
+        "sequence_analysis",
+        "homology_search"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/johnchen93/ProteinClusterTools",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-clustering",
+        "homology",
+        "sequence-space"
+      ],
+      "id": 62
+    },
+    {
+      "name": "SSIM",
+      "one_line_profile": "Implementation of Structural Similarity (SSIM) index",
+      "detailed_description": "MATLAB implementation of the Structural Similarity (SSIM) index algorithm for measuring the similarity between two images, widely used in image processing and quality assessment.",
+      "domains": [
+        "Image Processing"
+      ],
+      "subtask_category": [
+        "image_quality_assessment",
+        "similarity_metric"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/josejuansanchez/ssim",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ssim",
+        "image-quality",
+        "matlab"
+      ],
+      "id": 63
+    },
+    {
+      "name": "tmtools",
+      "one_line_profile": "Python bindings for TM-align protein structure comparison algorithm",
+      "detailed_description": "A Python package that provides bindings for the TM-align algorithm, a standard method for protein structure alignment and comparison. It allows efficient calculation of TM-scores and structural superposition within Python workflows.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_alignment",
+        "structure_comparison",
+        "similarity_scoring"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jvkersch/tmtools",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-structure",
+        "tm-align",
+        "structural-alignment",
+        "python-binding"
+      ],
+      "id": 64
+    },
+    {
+      "name": "EMBER2",
+      "one_line_profile": "Alignment-free protein structure prediction using language models",
+      "detailed_description": "A tool for predicting protein structures from sequences without the need for multiple sequence alignments (MSAs). It leverages protein language models to achieve fast and efficient structure prediction.",
+      "domains": [
+        "StructBio",
+        "S1-01"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "protein_language_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kWeissenow/EMBER2",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "structure-prediction",
+        "plm",
+        "alignment-free",
+        "deep-learning"
+      ],
+      "id": 65
+    },
+    {
+      "name": "qs-align",
+      "one_line_profile": "Scalable algorithm for protein quaternary structure alignment",
+      "detailed_description": "A Java-based tool designed for the alignment of protein quaternary structures (complexes). It addresses the computational challenges of aligning multi-chain protein assemblies to identify structural similarities.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "quaternary_structure_alignment",
+        "complex_alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/lafita/qs-align",
+      "help_website": [],
+      "license": "Unlicense",
+      "tags": [
+        "protein-complex",
+        "quaternary-structure",
+        "structural-alignment"
+      ],
+      "id": 66
+    },
+    {
+      "name": "DeepFold",
+      "one_line_profile": "Learning structural motif representations for protein search",
+      "detailed_description": "A deep learning approach for learning representations of protein structural motifs. It enables efficient search and comparison of protein structures based on learned embeddings of local structural features.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_search",
+        "motif_discovery",
+        "representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/largelymfs/DeepFold",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-motif",
+        "embedding",
+        "protein-search"
+      ],
+      "id": 67
+    },
+    {
+      "name": "Aperture",
+      "one_line_profile": "Alignment-free detection of structural variations in ctDNA",
+      "detailed_description": "A bioinformatics tool for detecting structural variations (SVs) and viral integrations in circulating tumor DNA (ctDNA) using an alignment-free approach, suitable for liquid biopsy analysis.",
+      "domains": [
+        "Genomics",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "structural_variation_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/liuhc8/Aperture",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "ctdna",
+        "structural-variation",
+        "alignment-free",
+        "cancer-genomics"
+      ],
+      "id": 68
+    },
+    {
+      "name": "MSEABOARD",
+      "one_line_profile": "Dashboard for visualization of MSAs, trees, and structures",
+      "detailed_description": "A web-based interactive dashboard for visualizing and analyzing multiple sequence alignments (MSA), phylogenetic trees, and associated protein structures. It integrates various data types to facilitate comparative analysis.",
+      "domains": [
+        "StructBio",
+        "Bioinformatics",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "msa_analysis",
+        "phylogenetic_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/lucanest/mseaboard",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "visualization",
+        "msa",
+        "phylogeny",
+        "protein-structure"
+      ],
+      "id": 69
+    },
+    {
+      "name": "GTalign",
+      "one_line_profile": "High-performance protein structure alignment and search",
+      "detailed_description": "A CUDA-accelerated tool for high-performance protein structure alignment, superposition, and database search. It is designed to handle large-scale structural comparisons efficiently.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_alignment",
+        "structure_search",
+        "superposition"
+      ],
+      "application_level": "solver",
+      "primary_language": "Cuda",
+      "repo_url": "https://github.com/minmarg/gtalign_alpha",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cuda",
+        "high-performance",
+        "structure-alignment",
+        "protein-search"
+      ],
+      "id": 70
+    },
+    {
+      "name": "EvoClustRNA",
+      "one_line_profile": "RNA 3D structure prediction using evolutionary information",
+      "detailed_description": "A tool for predicting RNA 3D structures by utilizing co-evolutionary information derived from multiple sequence alignments (MSAs). It aims to improve structure prediction accuracy for RNA molecules.",
+      "domains": [
+        "StructBio",
+        "S1-01"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "rna_folding"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/mmagnus/EvoClustRNA",
+      "help_website": [
+        "http://EvoClustRNA.rtfd.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "rna",
+        "structure-prediction",
+        "evolutionary-information"
+      ],
+      "id": 71
+    },
+    {
+      "name": "Mol*",
+      "one_line_profile": "Comprehensive macromolecular visualization and analysis library",
+      "detailed_description": "A modern, web-based open-source toolkit for visualization and analysis of large-scale macromolecular data. It serves as a core viewer for PDB and other structural databases, supporting high-performance rendering and data delivery.",
+      "domains": [
+        "StructBio",
+        "S1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "structure_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/molstar/molstar",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "webgl",
+        "macromolecules",
+        "pdb"
+      ],
+      "id": 72
+    },
+    {
+      "name": "iCn3D",
+      "one_line_profile": "Web-based 3D structure viewer and analysis tool",
+      "detailed_description": "A web-based 3D viewer for visualizing and analyzing molecular structures. It supports interactive exploration of proteins, DNA/RNA, and chemicals, and allows for sharing of structural views via URLs.",
+      "domains": [
+        "StructBio",
+        "S1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "structure_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/ncbi/icn3d",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "visualization",
+        "web-viewer",
+        "molecular-structure",
+        "ncbi"
+      ],
+      "id": 73
+    },
+    {
+      "name": "MRFy",
+      "one_line_profile": "Structural motif search using random fields",
+      "detailed_description": "A Haskell implementation for searching structural motifs in proteins using random fields and stochastic search algorithms. It provides a method for identifying structural patterns.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "motif_search",
+        "structure_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Haskell",
+      "repo_url": "https://github.com/ndaniels/MRFy",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "structural-motif",
+        "random-fields",
+        "haskell",
+        "stochastic-search"
+      ],
+      "id": 74
+    },
+    {
+      "name": "3diphy",
+      "one_line_profile": "Maximum likelihood structural phylogenetics using Foldseek 3Di",
+      "detailed_description": "An R package for performing structural phylogenetics analysis. It utilizes Foldseek's 3Di structural alphabet characters to infer phylogenetic relationships based on protein structures using maximum likelihood methods.",
+      "domains": [
+        "StructBio",
+        "Phylogenetics",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "phylogenetic_analysis",
+        "structure_based_phylogeny"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/nmatzke/3diphy",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "phylogenetics",
+        "foldseek",
+        "structural-evolution",
+        "3di"
+      ],
+      "id": 75
+    },
+    {
+      "name": "NGMLR",
+      "one_line_profile": "Long-read mapper for PacBio and Oxford Nanopore reads",
+      "detailed_description": "NGMLR is a long-read mapper designed to align PacBio or Oxford Nanopore (standard and ultra-long) reads to a reference genome with a focus on reads that span structural variations.",
+      "domains": [
+        "Genomics",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "sequence_alignment",
+        "long_read_mapping"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/philres/ngmlr",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bioinformatics",
+        "long-reads",
+        "alignment",
+        "structural-variation"
+      ],
+      "id": 76
+    },
+    {
+      "name": "SimSite3D",
+      "one_line_profile": "Tool for searching protein-ligand binding sites in 3D structures",
+      "detailed_description": "The SimSite3D Software tools are designed to quickly search a database of three dimensional structures, in Protein Data Bank format, with protein-ligand binding sites to determine which binding sites in the database have steric and chemical similarities to the query binding site.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "binding_site_search",
+        "structural_similarity"
+      ],
+      "application_level": "solver",
+      "primary_language": "GLSL",
+      "repo_url": "https://github.com/psa-lab/SimSite3D",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "protein-structure",
+        "binding-sites",
+        "similarity-search"
+      ],
+      "id": 77
+    },
+    {
+      "name": "DMPfold",
+      "one_line_profile": "De novo protein structure prediction using iteratively predicted constraints",
+      "detailed_description": "De novo protein structure prediction using iteratively predicted structural constraints.",
+      "domains": [
+        "StructBio",
+        "S1"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "folding"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/psipred/DMPfold",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-folding",
+        "structure-prediction",
+        "deep-learning"
+      ],
+      "id": 78
+    },
+    {
+      "name": "DMPfold2",
+      "one_line_profile": "Fast and accurate protein structure prediction",
+      "detailed_description": "Fast and accurate protein structure prediction tool, successor to DMPfold.",
+      "domains": [
+        "StructBio",
+        "S1"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "folding"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/psipred/DMPfold2",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-folding",
+        "structure-prediction",
+        "deep-learning"
+      ],
+      "id": 79
+    },
+    {
+      "name": "USalign",
+      "one_line_profile": "Universal Structure Alignment of Nucleic Acids and Proteins",
+      "detailed_description": "Universal Structure Alignment of Monomeric and Complex Structure of Nucleic Acids and Proteins. It provides a unified framework for aligning 3D structures of macromolecules.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_alignment",
+        "structure_comparison"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pylelab/USalign",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "structure-alignment",
+        "protein",
+        "rna",
+        "dna",
+        "tm-score"
+      ],
+      "id": 80
+    },
+    {
+      "name": "PyMod 3",
+      "one_line_profile": "PyMOL plugin for sequence similarity searches and homology modeling",
+      "detailed_description": "PyMod 3 - sequence similarity searches, multiple sequence/structure alignments, and homology modeling within PyMOL.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "homology_modeling",
+        "sequence_alignment",
+        "visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pymodproject/pymod",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "pymol-plugin",
+        "homology-modeling",
+        "alignment"
+      ],
+      "id": 81
+    },
+    {
+      "name": "RUPEE",
+      "one_line_profile": "Fast and accurate purely geometric protein structure search",
+      "detailed_description": "RUPEE: A fast and accurate purely geometric protein structure search tool.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_search",
+        "geometric_search"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/rayoub/rupee",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-structure",
+        "structure-search",
+        "geometric-hashing"
+      ],
+      "id": 82
+    },
+    {
+      "name": "reseek",
+      "one_line_profile": "Protein structure alignment and search algorithm",
+      "detailed_description": "Protein structure alignment and search algorithm.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_alignment",
+        "structure_search"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rcedgar/reseek",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-structure",
+        "alignment",
+        "search"
+      ],
+      "id": 83
+    },
+    {
+      "name": "rcsb-embedding-model",
+      "one_line_profile": "Embedding model for structure similarity search",
+      "detailed_description": "Embedding model for structure similarity search, likely used for retrieving similar protein structures from RCSB PDB.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "similarity_search",
+        "embedding"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rcsb/rcsb-embedding-model",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "pdb",
+        "structure-similarity",
+        "embedding"
+      ],
+      "id": 84
+    },
+    {
+      "name": "DeepAlign",
+      "one_line_profile": "Protein structure analysis toolkit",
+      "detailed_description": "DeepAlign: the protein structure analysis toolkit, focusing on alignment and comparison.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structural_alignment",
+        "structure_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Objective-C",
+      "repo_url": "https://github.com/realbigws/DeepAlign",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-structure",
+        "alignment",
+        "deep-learning"
+      ],
+      "id": 85
+    },
+    {
+      "name": "esmologs",
+      "one_line_profile": "Local homology search powered by ESM-2 language model",
+      "detailed_description": "Local homology search powered by ESM-2 language model, foldseek, hhsuite, and hmmer. It leverages protein language models for sensitive homology detection.",
+      "domains": [
+        "Bioinformatics",
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "homology_search",
+        "sequence_alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/seanrjohnson/esmologs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "esm-2",
+        "homology-search",
+        "protein-language-model"
+      ],
+      "id": 86
+    },
+    {
+      "name": "lncRNA-folding",
+      "one_line_profile": "Secondary structure prediction of long non-coding RNA",
+      "detailed_description": "Repository associated with the review and experimental comparison of existing approaches for secondary structure prediction of long non-coding RNA. While primarily a benchmark, it provides scripts/framework for running these predictions.",
+      "domains": [
+        "StructBio",
+        "RNA"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "benchmarking"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/sinc-lab/lncRNA-folding",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "lncrna",
+        "rna-folding",
+        "structure-prediction"
+      ],
+      "id": 87
+    },
+    {
+      "name": "MMseqs2",
+      "one_line_profile": "Ultra fast and sensitive search and clustering suite",
+      "detailed_description": "MMseqs2: ultra fast and sensitive search and clustering suite for protein and nucleotide sequences. Widely used for metagenomics and generating MSAs for structure prediction.",
+      "domains": [
+        "Bioinformatics",
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "sequence_clustering",
+        "sequence_search",
+        "msa_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/soedinglab/MMseqs2",
+      "help_website": [
+        "https://mmseqs.com"
+      ],
+      "license": "MIT",
+      "tags": [
+        "clustering",
+        "sequence-search",
+        "metagenomics"
+      ],
+      "id": 88
+    },
+    {
+      "name": "MMseqs2-App",
+      "one_line_profile": "Desktop application for MMseqs2",
+      "detailed_description": "MMseqs2 app to run on your workstation or servers, providing a GUI/interface for the MMseqs2 suite.",
+      "domains": [
+        "Bioinformatics",
+        "StructBio"
+      ],
+      "subtask_category": [
+        "sequence_search",
+        "clustering"
+      ],
+      "application_level": "platform",
+      "primary_language": "Vue",
+      "repo_url": "https://github.com/soedinglab/MMseqs2-App",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gui",
+        "bioinformatics",
+        "mmseqs2"
+      ],
+      "id": 89
+    },
+    {
+      "name": "map_align",
+      "one_line_profile": "Contact map alignment tool",
+      "detailed_description": "Tool for aligning protein contact maps, useful for detecting structural similarity even with low sequence identity.",
+      "domains": [
+        "StructBio",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "contact_map_alignment",
+        "structure_comparison"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/sokrypton/map_align",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "contact-map",
+        "alignment",
+        "protein-structure"
+      ],
+      "id": 90
+    },
+    {
+      "name": "Structty",
+      "one_line_profile": "Terminal-based viewer for PDB protein structure files",
+      "detailed_description": "A lightweight terminal viewer for PDB files, allowing users to visualize protein structures directly in the command line interface.",
+      "domains": [
+        "StructBio",
+        "S1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "structure_viewing"
+      ],
+      "application_level": "application",
+      "primary_language": "C",
+      "repo_url": "https://github.com/sooyoung-cha/Structty",
+      "license": "GPL-3.0",
+      "tags": [
+        "pdb",
+        "visualization",
+        "terminal",
+        "protein-structure"
+      ],
+      "id": 91
+    },
+    {
+      "name": "FoldDisco",
+      "one_line_profile": "Fast indexing and search of discontinuous motifs in protein structures",
+      "detailed_description": "A tool for fast indexing and searching of discontinuous motifs in protein structures, enabling efficient structural mining.",
+      "domains": [
+        "StructBio",
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_search",
+        "motif_discovery"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/steineggerlab/folddisco",
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-structure",
+        "structural-motifs",
+        "indexing",
+        "search"
+      ],
+      "id": 92
+    },
+    {
+      "name": "FoldMason",
+      "one_line_profile": "Multiple Protein Structure Alignment at Scale",
+      "detailed_description": "A tool for performing multiple protein structure alignment efficiently at scale, suitable for large datasets.",
+      "domains": [
+        "StructBio",
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_alignment",
+        "msa"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/steineggerlab/foldmason",
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-structure",
+        "alignment",
+        "multiple-structure-alignment"
+      ],
+      "id": 93
+    },
+    {
+      "name": "Foldseek",
+      "one_line_profile": "Fast and sensitive comparisons of large structure sets",
+      "detailed_description": "Enables fast and sensitive comparisons of large protein structure sets, revolutionizing structural similarity search.",
+      "domains": [
+        "StructBio",
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_comparison",
+        "structure_search"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/steineggerlab/foldseek",
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-structure",
+        "structural-alignment",
+        "similarity-search"
+      ],
+      "id": 94
+    },
+    {
+      "name": "Unicore",
+      "one_line_profile": "Structure-based core gene phylogeny with Foldseek and ProstT5",
+      "detailed_description": "Universal and efficient structure-based core gene phylogeny inference tool leveraging Foldseek and ProstT5.",
+      "domains": [
+        "StructBio",
+        "EvolutionaryBio",
+        "S1"
+      ],
+      "subtask_category": [
+        "phylogeny_inference",
+        "structure_comparison"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/steineggerlab/unicore",
+      "license": "GPL-3.0",
+      "tags": [
+        "phylogeny",
+        "protein-structure",
+        "evolution"
+      ],
+      "id": 95
+    },
+    {
+      "name": "DALIGNER",
+      "one_line_profile": "Local alignment tool for DNA reads",
+      "detailed_description": "Finds all significant local alignments between reads, widely used in genome assembly pipelines.",
+      "domains": [
+        "Genomics",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "sequence_alignment",
+        "read_alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/thegenemyers/DALIGNER",
+      "license": "NOASSERTION",
+      "tags": [
+        "genomics",
+        "alignment",
+        "dna-reads"
+      ],
+      "id": 96
+    },
+    {
+      "name": "SPfast",
+      "one_line_profile": "Fast geometric protein structure comparison",
+      "detailed_description": "A C++ implementation for fast geometric comparison of protein structures.",
+      "domains": [
+        "StructBio",
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_comparison"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/tlitfin/SPfast",
+      "license": null,
+      "tags": [
+        "protein-structure",
+        "geometric-comparison"
+      ],
+      "id": 97
+    },
+    {
+      "name": "nRex",
+      "one_line_profile": "Germline and somatic variant calling tool",
+      "detailed_description": "Performs germline and somatic single-nucleotide, short indel, and structural variant calling.",
+      "domains": [
+        "Genomics",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "variant_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tobiasrausch/nRex",
+      "license": "MIT",
+      "tags": [
+        "variant-calling",
+        "genomics",
+        "indel",
+        "snv"
+      ],
+      "id": 98
+    },
+    {
+      "name": "clfd",
+      "one_line_profile": "Smart RFI removal algorithms for pulsar data",
+      "detailed_description": "Implements smart Radio Frequency Interference (RFI) removal algorithms to be used on folded pulsar search and timing data.",
+      "domains": [
+        "Astronomy",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "data_cleaning",
+        "signal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/v-morello/clfd",
+      "license": "MIT",
+      "tags": [
+        "pulsar",
+        "astronomy",
+        "rfi-removal"
+      ],
+      "id": 99
+    },
+    {
+      "name": "pyProCT",
+      "one_line_profile": "Cluster analysis software for structural proteomics",
+      "detailed_description": "Open source cluster analysis software especially adapted for jobs related with structural proteomics and trajectory analysis.",
+      "domains": [
+        "StructBio",
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "clustering",
+        "trajectory_analysis"
+      ],
+      "application_level": "application",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/victor-gil-sepulveda/pyProCT",
+      "license": "NOASSERTION",
+      "tags": [
+        "clustering",
+        "proteomics",
+        "molecular-dynamics"
+      ],
+      "id": 100
+    },
+    {
+      "name": "pyRMSD",
+      "one_line_profile": "Efficient RMSD calculations for large structure sets",
+      "detailed_description": "A Python package tuned for fast collective RMSD calculations and pairwise RMSD matrices of large sets of structures.",
+      "domains": [
+        "StructBio",
+        "S1",
+        "S1-03"
+      ],
+      "subtask_category": [
+        "structure_comparison",
+        "rmsd_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/victor-gil-sepulveda/pyRMSD",
+      "license": "NOASSERTION",
+      "tags": [
+        "rmsd",
+        "structural-biology",
+        "matrix-calculation"
+      ],
+      "id": 101
+    },
+    {
+      "name": "scASDC",
+      "one_line_profile": "Attention enhanced structural deep clustering for scRNA-seq",
+      "detailed_description": "A structural deep clustering method for scRNA-seq cell clustering enhanced by attention mechanisms.",
+      "domains": [
+        "Bioinformatics",
+        "SingleCell"
+      ],
+      "subtask_category": [
+        "clustering",
+        "cell_type_identification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wenwenmin/scASDC",
+      "license": null,
+      "tags": [
+        "scrna-seq",
+        "clustering",
+        "deep-learning"
+      ],
+      "id": 102
+    },
+    {
+      "name": "SaProt",
+      "one_line_profile": "Protein Language Model with Structural Alphabet",
+      "detailed_description": "A Protein Language Model incorporating a structural alphabet (AA+3Di) for enhanced protein representation and design.",
+      "domains": [
+        "StructBio",
+        "ProteinDesign",
+        "S1"
+      ],
+      "subtask_category": [
+        "protein_modeling",
+        "representation_learning"
+      ],
+      "application_level": "model",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/westlake-repl/SaProt",
+      "license": "MIT",
+      "tags": [
+        "protein-language-model",
+        "structural-alphabet",
+        "deep-learning"
+      ],
+      "id": 103
+    },
+    {
+      "name": "pdbcolor",
+      "one_line_profile": "Color PDB structures based on MSA parameters",
+      "detailed_description": "Python code to color a PDB structure based on parameters from a multiple sequence alignment, aiding in structural visualization and annotation.",
+      "domains": [
+        "StructBio",
+        "S1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "structure_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wrf/pdbcolor",
+      "license": null,
+      "tags": [
+        "pdb",
+        "visualization",
+        "msa"
+      ],
+      "id": 104
+    },
+    {
+      "name": "LvaHAl",
+      "one_line_profile": "Discriminative band selection for hyperspectral images",
+      "detailed_description": "A local-view-assisted discriminative band selection method with hypergraph autolearning for hyperspectral image processing.",
+      "domains": [
+        "RemoteSensing",
+        "Imaging"
+      ],
+      "subtask_category": [
+        "dimensionality_reduction",
+        "band_selection"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/xhweei/hypergraph-learning-based-discriminative-band-selection",
+      "license": "MIT",
+      "tags": [
+        "hyperspectral-imaging",
+        "hypergraph",
+        "band-selection"
+      ],
+      "id": 105
+    },
+    {
+      "name": "AccFG",
+      "one_line_profile": "Functional Group Extraction and Molecular Structure Comparison",
+      "detailed_description": "A tool for extracting functional groups and comparing molecular structures, useful in cheminformatics.",
+      "domains": [
+        "Cheminformatics",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "structure_comparison",
+        "feature_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/xuanliugit/AccFG",
+      "license": "MIT",
+      "tags": [
+        "molecular-structure",
+        "functional-groups",
+        "cheminformatics"
+      ],
+      "id": 106
+    }
+  ]
+}

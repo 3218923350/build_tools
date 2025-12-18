@@ -1,0 +1,966 @@
+{
+  "generated_at": "2025-12-17T11:36:57.811437+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "FUS1",
+      "leaf_cluster_name": "核科学与核聚变计算生态",
+      "domain": "Nuclear / Fusion / Plasma",
+      "typical_objects": "等离子体场, 粒子分布, 磁约束几何, 诊断信号, 输运方程",
+      "task_chain": "建模→仿真→诊断/反演→控制/优化→验证→工作流",
+      "tool_form": "大型仿真器 + 诊断/反演工具 + 控制/优化 + HPC"
+    },
+    "unit": {
+      "unit_id": "FUS1-04",
+      "unit_name": "诊断数据处理与反演（成像/谱/信号）",
+      "target_scale": "200–500",
+      "coverage_tools": "diagnostics pipelines、tomography、spectroscopy inversion"
+    },
+    "search": {
+      "target_candidates": 500,
+      "queries": [
+        "[GH] PyAbel",
+        "[GH] FIDASIM",
+        "[GH] Calcam",
+        "[GH] Minerva",
+        "[GH] EFIT",
+        "[GH] OMFIT",
+        "[GH] Raysect",
+        "[GH] Cherab",
+        "[GH] ToFu",
+        "[GH] plasma diagnostics",
+        "[GH] tomography inversion",
+        "[GH] plasma spectroscopy",
+        "[GH] thomson scattering analysis",
+        "[GH] bolometry reconstruction",
+        "[GH] interferometry plasma",
+        "[GH] magnetic diagnostics",
+        "[GH] soft x-ray tomography",
+        "[GH] charge exchange recombination spectroscopy",
+        "[GH] plasma signal processing",
+        "[GH] Bayesian inversion plasma",
+        "[GH] ECE diagnostics",
+        "[GH] Langmuir probe analysis",
+        "[GH] plasma profile reconstruction",
+        "[WEB] plasma diagnostics data analysis tools github",
+        "[WEB] tokamak tomography inversion code github",
+        "[WEB] fusion spectroscopy simulation and analysis github",
+        "[WEB] plasma thomson scattering processing github",
+        "[WEB] magnetic equilibrium reconstruction code github",
+        "[WEB] Bayesian inference for plasma diagnostics github"
+      ],
+      "total_candidates": 539,
+      "tool_candidates": 183,
+      "final_tools": 34
+    }
+  },
+  "tools": [
+    {
+      "name": "FIDASIM",
+      "one_line_profile": "Neutral beam and fast-ion diagnostic modeling suite for fusion plasmas",
+      "detailed_description": "A code that simulates the signals collected by fast-ion diagnostics in tokamak fusion devices. It models Neutral Beam Injection (NBI) and the resulting fast-ion distribution to predict diagnostic signals.",
+      "domains": [
+        "FUS1",
+        "FUS1-04"
+      ],
+      "subtask_category": [
+        "diagnostic_modeling",
+        "synthetic_diagnostics",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/D3DEnergetic/FIDASIM",
+      "help_website": [
+        "https://d3denergetic.github.io/FIDASIM/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "fusion",
+        "diagnostics",
+        "fast-ion",
+        "nbi",
+        "simulation"
+      ],
+      "id": 1
+    },
+    {
+      "name": "BME-X (Brain MRI Enhancement)",
+      "one_line_profile": "Foundation model for brain MRI enhancement and downstream tasks",
+      "detailed_description": "A foundation model designed to enhance magnetic resonance images (MRI) of the brain, supporting downstream tasks such as segmentation, registration, and diagnosis.",
+      "domains": [
+        "MED",
+        "BIO"
+      ],
+      "subtask_category": [
+        "image_enhancement",
+        "segmentation",
+        "medical_imaging"
+      ],
+      "application_level": "model",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DBC-Lab/Brain_MRI_Enhancement",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mri",
+        "medical-imaging",
+        "deep-learning",
+        "segmentation"
+      ],
+      "id": 2
+    },
+    {
+      "name": "hiperseis",
+      "one_line_profile": "High-performance seismologic data and metadata processing system",
+      "detailed_description": "A system for processing large-scale seismological data and metadata, developed by Geoscience Australia, facilitating high-performance analysis of seismic signals.",
+      "domains": [
+        "GEO"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "seismic_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/GeoscienceAustralia/hiperseis",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "seismology",
+        "geoscience",
+        "data-processing",
+        "hpc"
+      ],
+      "id": 3
+    },
+    {
+      "name": "MuRAT",
+      "one_line_profile": "Multi-resolution seismic attenuation tomography code",
+      "detailed_description": "A MATLAB-based code for performing multi-resolution seismic attenuation tomography, allowing for the imaging of subsurface attenuation structures.",
+      "domains": [
+        "GEO"
+      ],
+      "subtask_category": [
+        "tomography",
+        "inversion",
+        "seismic_imaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/LucaDeSiena/MuRAT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "seismology",
+        "tomography",
+        "attenuation",
+        "geophysics"
+      ],
+      "id": 4
+    },
+    {
+      "name": "eqtools",
+      "one_line_profile": "Tools for magnetic equilibria in tokamak plasmas",
+      "detailed_description": "A Python package developed by PSFC for working with magnetic equilibrium data from tokamak plasmas, supporting data reading, coordinate mapping, and flux surface analysis.",
+      "domains": [
+        "FUS1"
+      ],
+      "subtask_category": [
+        "equilibrium_reconstruction",
+        "data_processing",
+        "coordinate_mapping"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PSFCPlasmaTools/eqtools",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "tokamak",
+        "plasma-physics",
+        "magnetic-equilibrium",
+        "fusion"
+      ],
+      "id": 5
+    },
+    {
+      "name": "Minerva (Land Cover)",
+      "one_line_profile": "Neural network model fitting and testing for land cover data",
+      "detailed_description": "A package designed to aid in the fitting and testing of neural network models for land cover data, including pre- and post-processing utilities, compatible with torchgeo datasets.",
+      "domains": [
+        "GEO"
+      ],
+      "subtask_category": [
+        "remote_sensing",
+        "model_fitting",
+        "land_cover_classification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Pale-Blue-Dot-97/Minerva",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "remote-sensing",
+        "deep-learning",
+        "torchgeo",
+        "land-cover"
+      ],
+      "id": 6
+    },
+    {
+      "name": "PlasmaPy",
+      "one_line_profile": "Community-developed Python package for plasma physics",
+      "detailed_description": "An open-source community-driven Python package for plasma research and education, providing common functionality for plasma parameter calculation, transport analysis, and simulation interfaces.",
+      "domains": [
+        "FUS1",
+        "PHY"
+      ],
+      "subtask_category": [
+        "plasma_physics",
+        "simulation",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PlasmaPy/PlasmaPy",
+      "help_website": [
+        "https://docs.plasmapy.org/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "plasma",
+        "physics",
+        "fusion",
+        "science-tool"
+      ],
+      "id": 7
+    },
+    {
+      "name": "PyAbel",
+      "one_line_profile": "Python package for Abel and inverse Abel transforms",
+      "detailed_description": "A Python package dedicated to performing Abel and inverse Abel transforms, which are essential for analyzing projected images of cylindrically or spherically symmetric objects (e.g., in plasma diagnostics, combustion, or photoelectron spectroscopy).",
+      "domains": [
+        "FUS1",
+        "PHY",
+        "FUS1-04"
+      ],
+      "subtask_category": [
+        "inverse_abel_transform",
+        "image_reconstruction",
+        "spectroscopy_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PyAbel/PyAbel",
+      "help_website": [
+        "https://pyabel.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "abel-transform",
+        "inversion",
+        "spectroscopy",
+        "imaging"
+      ],
+      "id": 8
+    },
+    {
+      "name": "tofu",
+      "one_line_profile": "Tomography for Fusion: Synthetic diagnostics and tomography library",
+      "detailed_description": "An open-source Python library designed for synthetic diagnostics (creating simulated diagnostic data from plasma models) and tomography (inverting experimental data to reconstruct plasma profiles) in nuclear fusion devices.",
+      "domains": [
+        "FUS1",
+        "FUS1-04"
+      ],
+      "subtask_category": [
+        "tomography",
+        "synthetic_diagnostics",
+        "inversion",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ToFuProject/tofu",
+      "help_website": [
+        "https://tofuproject.github.io/tofu/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fusion",
+        "tomography",
+        "diagnostics",
+        "inversion",
+        "tokamak"
+      ],
+      "id": 9
+    },
+    {
+      "name": "SeisFlows",
+      "one_line_profile": "Automated workflow for full waveform inversion and adjoint tomography",
+      "detailed_description": "A Python-based workflow package for seismic inversion, specifically designed for full waveform inversion (FWI) and adjoint tomography. It handles the interaction between the optimization engine and the numerical solver (like SPECFEM).",
+      "domains": [
+        "Earth Science",
+        "Geophysics",
+        "Seismology"
+      ],
+      "subtask_category": [
+        "tomography",
+        "inversion",
+        "waveform_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/adjtomo/seisflows",
+      "help_website": [
+        "https://seisflows.readthedocs.io/"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "seismology",
+        "tomography",
+        "inversion",
+        "workflow"
+      ],
+      "id": 10
+    },
+    {
+      "name": "CHERAB Core",
+      "one_line_profile": "Framework for modelling plasma radiation emission and diagnostics",
+      "detailed_description": "A Python framework designed for fusion plasma spectroscopy. It provides tools for modelling the emission and sensing of plasma radiation, supporting various diagnostic configurations and physics models.",
+      "domains": [
+        "FUS1",
+        "FUS1-04",
+        "Plasma Physics"
+      ],
+      "subtask_category": [
+        "spectroscopy",
+        "plasma_modelling",
+        "diagnostics_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cherab/core",
+      "help_website": [
+        "https://cherab.github.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "plasma",
+        "spectroscopy",
+        "fusion",
+        "diagnostics"
+      ],
+      "id": 11
+    },
+    {
+      "name": "CHERAB JET",
+      "one_line_profile": "JET tokamak machine configuration for CHERAB",
+      "detailed_description": "The machine-specific configuration package for the CHERAB framework, providing geometry and diagnostic setups for the JET (Joint European Torus) tokamak.",
+      "domains": [
+        "FUS1",
+        "FUS1-04"
+      ],
+      "subtask_category": [
+        "machine_configuration",
+        "diagnostics_setup"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cherab/jet",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "jet",
+        "tokamak",
+        "configuration",
+        "plasma"
+      ],
+      "id": 12
+    },
+    {
+      "name": "ChiantiPy",
+      "one_line_profile": "Python interface for the CHIANTI atomic database",
+      "detailed_description": "A Python package to calculate the radiative properties of astrophysical and laboratory plasmas using the CHIANTI atomic database. It allows for the analysis of spectral lines and continuum emission.",
+      "domains": [
+        "Astrophysics",
+        "Plasma Physics",
+        "FUS1-04"
+      ],
+      "subtask_category": [
+        "spectroscopy",
+        "atomic_data",
+        "radiative_properties"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chianti-atomic/ChiantiPy",
+      "help_website": [
+        "http://chiantipy.readthedocs.io/"
+      ],
+      "license": "ISC",
+      "tags": [
+        "chianti",
+        "atomic-physics",
+        "spectroscopy",
+        "plasma"
+      ],
+      "id": 13
+    },
+    {
+      "name": "pyEQUIB",
+      "one_line_profile": "Plasma diagnostics and abundance analysis package",
+      "detailed_description": "A Python port of the IDL 'equib' code, used for plasma diagnostics and abundance analysis in astrophysics and plasma physics. It calculates physical conditions from spectral line intensities.",
+      "domains": [
+        "Astrophysics",
+        "Plasma Physics",
+        "FUS1-04"
+      ],
+      "subtask_category": [
+        "plasma_diagnostics",
+        "abundance_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/equib/pyEQUIB",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "plasma",
+        "diagnostics",
+        "astrophysics",
+        "idl-port"
+      ],
+      "id": 14
+    },
+    {
+      "name": "Calcam",
+      "one_line_profile": "Spatial calibration tools for scientific camera systems",
+      "detailed_description": "A Python package for spatial calibration of camera systems, specifically designed for fusion diagnostics and engineering. It handles complex geometries and provides tools for mapping 2D images to 3D coordinates.",
+      "domains": [
+        "FUS1",
+        "FUS1-04",
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "calibration",
+        "spatial_mapping",
+        "diagnostics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/euratom-software/calcam",
+      "help_website": [
+        "https://euratom-software.github.io/calcam/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "calibration",
+        "camera",
+        "fusion",
+        "diagnostics"
+      ],
+      "id": 15
+    },
+    {
+      "name": "SeisLib",
+      "one_line_profile": "Seismic imaging library for local to global scales",
+      "detailed_description": "A Python library for seismic imaging, offering tools for surface wave tomography, receiver functions, and other seismological analysis methods at various scales.",
+      "domains": [
+        "Earth Science",
+        "Geophysics",
+        "Seismology"
+      ],
+      "subtask_category": [
+        "seismic_imaging",
+        "tomography",
+        "surface_waves"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fmagrini/seislib",
+      "help_website": [
+        "https://seislib.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "seismology",
+        "imaging",
+        "tomography"
+      ],
+      "id": 16
+    },
+    {
+      "name": "Fusion Neutronics Workflow",
+      "one_line_profile": "Automated workflow for fusion neutronics analysis",
+      "detailed_description": "A workflow tool that combines open-source packages (like OpenMC, Paramak) to produce automated fusion-specific neutronics simulations and analysis.",
+      "domains": [
+        "FUS1",
+        "Nuclear Engineering"
+      ],
+      "subtask_category": [
+        "neutronics",
+        "simulation",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fusion-energy/fusion_neutronics_workflow",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fusion",
+        "neutronics",
+        "openmc",
+        "simulation"
+      ],
+      "id": 17
+    },
+    {
+      "name": "OMAS",
+      "one_line_profile": "Ordered Multidimensional Array Structure for Fusion Data",
+      "detailed_description": "A Python library designed to simplify the interface with the ITER Integrated Modeling and Analysis Suite (IMAS) data structure. It facilitates data storage, manipulation, and transfer for fusion experiments and simulations.",
+      "domains": [
+        "FUS1",
+        "Data Science"
+      ],
+      "subtask_category": [
+        "data_management",
+        "imas_interface",
+        "data_structure"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gafusion/omas",
+      "help_website": [
+        "https://gafusion.github.io/omas/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fusion",
+        "imas",
+        "iter",
+        "data-handling"
+      ],
+      "id": 18
+    },
+    {
+      "name": "TOFU-MAaPO",
+      "one_line_profile": "Nextflow pipeline for metagenomic short read analysis",
+      "detailed_description": "A bioinformatics pipeline built with Nextflow for the analysis of metagenomic short reads, including quality control, assembly, and taxonomic classification.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "metagenomics",
+        "pipeline",
+        "sequence_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/ikmb/TOFU-MAaPO",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "metagenomics",
+        "nextflow",
+        "bioinformatics"
+      ],
+      "id": 19
+    },
+    {
+      "name": "Minerva",
+      "one_line_profile": "Client/server platform for scientific analysis and visualization",
+      "detailed_description": "A platform developed by Kitware for geospatial and scientific data analysis and visualization. It provides services for managing datasets and running analysis pipelines.",
+      "domains": [
+        "Scientific Visualization",
+        "Data Analysis"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_management",
+        "analysis_platform"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kitware-data-solutions/minerva",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "visualization",
+        "kitware",
+        "geospatial",
+        "analysis"
+      ],
+      "id": 20
+    },
+    {
+      "name": "Minerva Author",
+      "one_line_profile": "Configuration and data preparation tool for Minerva Story visualizations",
+      "detailed_description": "A utility tool designed to create configuration files and process images for Minerva Story, facilitating the visualization of complex tissue images and biomedical data.",
+      "domains": [
+        "Bioimaging",
+        "Life Sciences"
+      ],
+      "subtask_category": [
+        "data_preparation",
+        "visualization_setup"
+      ],
+      "application_level": "utility",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/labsyspharm/minerva-author",
+      "help_website": [
+        "https://github.com/labsyspharm/minerva-author"
+      ],
+      "license": "MIT",
+      "tags": [
+        "bioimaging",
+        "histology",
+        "data-processing"
+      ],
+      "id": 21
+    },
+    {
+      "name": "Minerva Story",
+      "one_line_profile": "Interactive viewer for complex high-dimensional tissue images",
+      "detailed_description": "A specialized image viewer designed to enable non-expert users to interact with and explore complex, high-dimensional tissue images (e.g., CyCIF, CODEX) with narrative guidance.",
+      "domains": [
+        "Bioimaging",
+        "Life Sciences"
+      ],
+      "subtask_category": [
+        "scientific_visualization",
+        "image_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/labsyspharm/minerva-story",
+      "help_website": [
+        "https://github.com/labsyspharm/minerva-story"
+      ],
+      "license": "MIT",
+      "tags": [
+        "histology",
+        "microscopy",
+        "visualization"
+      ],
+      "id": 22
+    },
+    {
+      "name": "MinervaChem",
+      "one_line_profile": "Cheminformatics and machine learning library from LANL",
+      "detailed_description": "A Python library developed by Los Alamos National Laboratory for cheminformatics tasks and machine learning applications in chemistry, supporting molecular data processing and analysis.",
+      "domains": [
+        "Chemistry",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "scientific_modeling",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lanl/minervachem",
+      "help_website": [
+        "https://github.com/lanl/minervachem"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cheminformatics",
+        "machine-learning",
+        "molecular-modeling"
+      ],
+      "id": 23
+    },
+    {
+      "name": "SimNDT",
+      "one_line_profile": "Ultrasonic Non-Destructive Testing Simulator",
+      "detailed_description": "A simulation tool for ultrasonic Non-Destructive Testing (NDT) based on the Elastodynamic Finite Integration Technique (EFIT), used for modeling wave propagation in materials.",
+      "domains": [
+        "Physics",
+        "Materials Science",
+        "FUS1"
+      ],
+      "subtask_category": [
+        "scientific_simulation",
+        "wave_propagation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mmolero/SimNDT",
+      "help_website": [
+        "https://github.com/mmolero/SimNDT"
+      ],
+      "license": null,
+      "tags": [
+        "ultrasound",
+        "ndt",
+        "simulation",
+        "efit"
+      ],
+      "id": 24
+    },
+    {
+      "name": "JDSurfG",
+      "one_line_profile": "Joint Inversion of Direct Surface Wave Tomography and Bouguer Gravity",
+      "detailed_description": "A Fortran-based tool for the joint inversion of direct surface wave tomography and Bouguer gravity data, used in geophysical exploration and subsurface modeling.",
+      "domains": [
+        "Geophysics",
+        "Earth Science"
+      ],
+      "subtask_category": [
+        "scientific_inversion",
+        "tomography"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/nqdu/JDSurfG",
+      "help_website": [
+        "https://github.com/nqdu/JDSurfG"
+      ],
+      "license": "MIT",
+      "tags": [
+        "inversion",
+        "gravity",
+        "seismology",
+        "tomography"
+      ],
+      "id": 25
+    },
+    {
+      "name": "RADIS",
+      "one_line_profile": "Fast line-by-line code for high-resolution infrared molecular spectra",
+      "detailed_description": "A high-performance Python library for calculating and analyzing high-resolution infrared molecular spectra, widely used in plasma physics, combustion, and planetary science for diagnostics and radiative transfer modeling.",
+      "domains": [
+        "FUS1",
+        "FUS1-04",
+        "Physics",
+        "Spectroscopy"
+      ],
+      "subtask_category": [
+        "scientific_simulation",
+        "spectral_analysis",
+        "diagnostics_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/radis/radis",
+      "help_website": [
+        "https://radis.readthedocs.io"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "spectroscopy",
+        "plasma-physics",
+        "radiative-transfer",
+        "molecular-spectra"
+      ],
+      "id": 26
+    },
+    {
+      "name": "Raysect",
+      "one_line_profile": "Ray-tracing framework for optical and non-optical physics simulations",
+      "detailed_description": "A ray-tracing framework designed for scientific simulations, particularly in fusion plasma diagnostics (e.g., bolometry, spectroscopy) and optical physics, supporting complex 3D geometries and spectral radiance calculations.",
+      "domains": [
+        "FUS1",
+        "FUS1-04",
+        "Physics",
+        "Optics"
+      ],
+      "subtask_category": [
+        "scientific_simulation",
+        "ray_tracing",
+        "diagnostics_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/raysect/source",
+      "help_website": [
+        "http://www.raysect.org"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "ray-tracing",
+        "fusion",
+        "plasma-diagnostics",
+        "optics"
+      ],
+      "id": 27
+    },
+    {
+      "name": "FWI-USCT",
+      "one_line_profile": "Full Waveform Inversion for Ultrasound Computed Tomography",
+      "detailed_description": "An implementation of Full Waveform Inversion (FWI) for Transmission Ultrasound Computed Tomography (USCT) using the Angular Spectrum Method, designed for medical imaging reconstruction.",
+      "domains": [
+        "Medical Imaging",
+        "Acoustics"
+      ],
+      "subtask_category": [
+        "scientific_inversion",
+        "image_reconstruction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rehmanali1994/FullWaveformInversionUSCT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ultrasound",
+        "tomography",
+        "full-waveform-inversion"
+      ],
+      "id": 28
+    },
+    {
+      "name": "WI-UST",
+      "one_line_profile": "Frequency-Domain Waveform Inversion for Ultrasound Tomography",
+      "detailed_description": "A MATLAB-based tool for Frequency-Domain Waveform Inversion in Ultrasound Tomography (UST) using ring-array transducers, applicable to medical imaging and non-destructive testing.",
+      "domains": [
+        "Medical Imaging",
+        "Acoustics"
+      ],
+      "subtask_category": [
+        "scientific_inversion",
+        "image_reconstruction"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/rehmanali1994/WaveformInversionUST",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ultrasound",
+        "inversion",
+        "tomography"
+      ],
+      "id": 29
+    },
+    {
+      "name": "Tofu (Biobank)",
+      "one_line_profile": "Synthetic data generator for UK Biobank datasets",
+      "detailed_description": "A Python tool designed to generate synthetic data that mimics the structure and statistical properties of the UK Biobank dataset, facilitating research and software development without compromising privacy.",
+      "domains": [
+        "Bioinformatics",
+        "Data Science"
+      ],
+      "subtask_category": [
+        "scientific_data_generation",
+        "privacy_preservation"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spiros/tofu",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "synthetic-data",
+        "biobank",
+        "data-generation"
+      ],
+      "id": 30
+    },
+    {
+      "name": "Minerva (takuseno)",
+      "one_line_profile": "Out-of-the-box GUI tool for offline deep reinforcement learning",
+      "detailed_description": "A graphical user interface tool designed for offline deep reinforcement learning (d3rlpy), facilitating the training, evaluation, and visualization of RL agents without extensive coding.",
+      "domains": [
+        "AI_General",
+        "Machine_Learning"
+      ],
+      "subtask_category": [
+        "reinforcement_learning",
+        "policy_optimization",
+        "model_training"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/takuseno/minerva",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reinforcement-learning",
+        "gui",
+        "offline-rl",
+        "deep-learning"
+      ],
+      "id": 31
+    },
+    {
+      "name": "ufo-kit/tofu",
+      "one_line_profile": "Helper scripts for tomographic reconstruction workflows",
+      "detailed_description": "A collection of scripts and tools to facilitate tomographic reconstruction tasks, designed to work with the UFO (Ultra-fast X-ray imaging) framework.",
+      "domains": [
+        "Imaging",
+        "Tomography"
+      ],
+      "subtask_category": [
+        "tomographic_reconstruction",
+        "image_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ufo-kit/tofu",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "tomography",
+        "reconstruction",
+        "x-ray-imaging"
+      ],
+      "id": 32
+    },
+    {
+      "name": "2DNoise_Adjoint_tomography",
+      "one_line_profile": "2D ambient noise adjoint tomography and joint inversion code",
+      "detailed_description": "A Fortran-based package for performing 2D ambient noise adjoint tomography and joint inversion of ambient noise and teleseismic body-waves, used in geophysical subsurface imaging.",
+      "domains": [
+        "Geophysics",
+        "Seismology"
+      ],
+      "subtask_category": [
+        "adjoint_tomography",
+        "inversion",
+        "seismic_imaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/ustcchaozhang/2DNoise_Adjoint_tomography",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "tomography",
+        "inversion",
+        "seismology",
+        "adjoint-method"
+      ],
+      "id": 33
+    },
+    {
+      "name": "VIP (Variational Inversion Package)",
+      "one_line_profile": "Variational Full-waveform Inversion and Tomography package",
+      "detailed_description": "A Python package for variational full-waveform inversion and tomography, enabling high-resolution geophysical subsurface modeling and imaging.",
+      "domains": [
+        "Geophysics",
+        "Seismology"
+      ],
+      "subtask_category": [
+        "full_waveform_inversion",
+        "tomography",
+        "geophysical_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xin2zhang/VIP",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "fwi",
+        "inversion",
+        "tomography",
+        "seismology"
+      ],
+      "id": 34
+    }
+  ]
+}

@@ -1,0 +1,1795 @@
+{
+  "generated_at": "2025-12-16T10:17:05.536223+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "H2",
+      "leaf_cluster_name": "数字健康-临床文本与多模态生态",
+      "domain": "Digital Health",
+      "typical_objects": "EHR/text+image",
+      "task_chain": "抽取→标准化→检索→问答→评测",
+      "tool_form": "NLP/检索 + 合规/脱敏"
+    },
+    "unit": {
+      "unit_id": "H2-04",
+      "unit_name": "脱敏/合规/审计",
+      "target_scale": "150–300",
+      "coverage_tools": "de-id、policy tools"
+    },
+    "search": {
+      "target_candidates": 300,
+      "queries": [
+        "[GH] DeID",
+        "[GH] Amnesia",
+        "[GH] TiDE",
+        "[GH] DicomCleaner",
+        "[GH] CTP (Clinical Trial Processor)",
+        "[GH] MIST",
+        "[GH] NLM Scrubber",
+        "[GH] ARX",
+        "[GH] Philter",
+        "[GH] Presidio",
+        "[GH] clinical de-identification",
+        "[GH] medical text anonymization",
+        "[GH] PHI scrubber",
+        "[GH] EHR privacy",
+        "[GH] HIPAA compliance tools",
+        "[GH] DICOM anonymizer",
+        "[GH] patient data de-identification",
+        "[GH] medical redaction",
+        "[GH] privacy preserving NLP",
+        "[GH] clinical NER PHI",
+        "[GH] healthcare data audit",
+        "[GH] GDPR medical tools",
+        "[GH] PII removal healthcare",
+        "[GH] medical image de-identification",
+        "[WEB] clinical text de-identification tools github",
+        "[WEB] open source PHI scrubber github",
+        "[WEB] dicom anonymization library github",
+        "[WEB] medical data privacy compliance github",
+        "[WEB] microsoft presidio healthcare github",
+        "[WEB] EHR anonymization framework github"
+      ],
+      "total_candidates": 777,
+      "tool_candidates": 342,
+      "final_tools": 68
+    }
+  },
+  "tools": [
+    {
+      "name": "Philter (UCSF)",
+      "one_line_profile": "Open-source clinical text de-identification and PHI redaction tool",
+      "detailed_description": "A Python-based clinical text de-identification software that removes Protected Health Information (PHI) from clinical notes. It uses a combination of regular expressions and dictionary-based lookups to identify and redact sensitive information.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de_identification",
+        "text_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BCHSI/philter-ucsf",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "nlp",
+        "de-identification",
+        "phi",
+        "clinical-text"
+      ],
+      "id": 1
+    },
+    {
+      "name": "DiSMed",
+      "one_line_profile": "De-identification tool specifically for Spanish medical texts",
+      "detailed_description": "A tool designed to de-identify Spanish medical texts, developed by the BIMCV (Medical Imaging Databank of the Valencia Region). It addresses the specific linguistic challenges of Spanish clinical narratives.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de_identification",
+        "text_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BIMCV-CSUSP/DiSMed",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nlp",
+        "spanish",
+        "medical-records",
+        "anonymization"
+      ],
+      "id": 2
+    },
+    {
+      "name": "Tide",
+      "one_line_profile": "Tiled Interactive Display Environment for large-scale scientific visualization",
+      "detailed_description": "Software developed by the Blue Brain Project for clustering display screens to create large-scale, high-resolution interactive visualization environments, commonly used for visualizing complex neurological data.",
+      "domains": [
+        "Neuroscience",
+        "Visualization"
+      ],
+      "subtask_category": [
+        "scientific_visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/BlueBrain/Tide",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "visualization",
+        "neuroscience",
+        "display-wall"
+      ],
+      "id": 3
+    },
+    {
+      "name": "FES (Finite Element Solution)",
+      "one_line_profile": "Global tide model based on hydrodynamic equations and data assimilation",
+      "detailed_description": "The Finite Element Solution (FES) tide model code, developed by CNES/LEGOS, used for computing global ocean tides. It is essential for oceanography and satellite altimetry data correction.",
+      "domains": [
+        "Earth Science",
+        "Oceanography"
+      ],
+      "subtask_category": [
+        "scientific_modeling",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/CNES/aviso-fes",
+      "help_website": [
+        "https://www.aviso.altimetry.fr/en/data/products/auxiliary-products/global-tide-fes.html"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "tides",
+        "oceanography",
+        "finite-element",
+        "modeling"
+      ],
+      "id": 4
+    },
+    {
+      "name": "DSA-WSI-DeID",
+      "one_line_profile": "Workflow for redacting PHI from Whole Slide Images (WSI)",
+      "detailed_description": "A tool integrated with the Digital Slide Archive ecosystem to detect and redact Protected Health Information (PHI) from the label regions of Whole Slide Images (pathology slides).",
+      "domains": [
+        "H2",
+        "H2-04",
+        "Pathology"
+      ],
+      "subtask_category": [
+        "de_identification",
+        "image_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DigitalSlideArchive/DSA-WSI-DeID",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "wsi",
+        "pathology",
+        "de-identification",
+        "medical-imaging"
+      ],
+      "id": 5
+    },
+    {
+      "name": "TMD Matlab Toolbox",
+      "one_line_profile": "Tide Model Driver (TMD) for accessing polar tide models",
+      "detailed_description": "A Matlab toolbox provided by Earth & Space Research (ESR) to access specific polar tide models, output harmonic constants, and make tidal predictions. It is a standard tool in polar oceanography.",
+      "domains": [
+        "Earth Science",
+        "Oceanography"
+      ],
+      "subtask_category": [
+        "scientific_modeling",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/EarthAndSpaceResearch/TMD_Matlab_Toolbox_v2.5",
+      "help_website": [
+        "https://www.esr.org/research/polar-tide-models/tmd-software/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "tides",
+        "matlab",
+        "oceanography",
+        "polar-science"
+      ],
+      "id": 6
+    },
+    {
+      "name": "pii-codex",
+      "one_line_profile": "Tool for detecting, categorizing, and assessing PII severity",
+      "detailed_description": "A research package designed to detect Personally Identifiable Information (PII) in text and assess its severity. It provides a framework for evaluating PII detection tools and managing data privacy risks.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de_identification",
+        "risk_assessment"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EdyVision/pii-codex",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "pii",
+        "privacy",
+        "nlp",
+        "security"
+      ],
+      "id": 7
+    },
+    {
+      "name": "noaa_coops",
+      "one_line_profile": "Python wrapper for NOAA CO-OPS Tides & Currents Data API",
+      "detailed_description": "A Python library that facilitates the retrieval of oceanographic data (tides, currents, water levels) from the NOAA CO-OPS API, enabling data acquisition for ocean science research.",
+      "domains": [
+        "Earth Science",
+        "Oceanography"
+      ],
+      "subtask_category": [
+        "data_retrieval"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GClunies/noaa_coops",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "noaa",
+        "oceanography",
+        "tides",
+        "data-mining"
+      ],
+      "id": 8
+    },
+    {
+      "name": "eo-tides",
+      "one_line_profile": "Tide modelling tools for satellite Earth observation analysis",
+      "detailed_description": "A Python toolkit developed by Geoscience Australia for modeling tides specifically in the context of large-scale satellite Earth observation (EO) data analysis, helping to correct or analyze tidal effects in satellite imagery.",
+      "domains": [
+        "Earth Science",
+        "Remote Sensing"
+      ],
+      "subtask_category": [
+        "scientific_modeling",
+        "data_correction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GeoscienceAustralia/eo-tides",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "tides",
+        "earth-observation",
+        "satellite",
+        "geoscience"
+      ],
+      "id": 9
+    },
+    {
+      "name": "Dataflow DLP De-identification",
+      "one_line_profile": "Scalable data tokenization workflow using Cloud Dataflow and DLP",
+      "detailed_description": "A reference implementation and tool for creating a scalable de-identification pipeline using Google Cloud Dataflow and Cloud DLP. It is designed for processing large datasets containing sensitive information (PII/PHI) in a compliant manner.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de_identification",
+        "data_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/GoogleCloudPlatform/dlp-dataflow-deidentification",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cloud-dlp",
+        "de-identification",
+        "tokenization",
+        "dataflow"
+      ],
+      "id": 10
+    },
+    {
+      "name": "Google Healthcare De-id Tools",
+      "one_line_profile": "Tools for de-identifying medical records (DICOM/FHIR) on GCP",
+      "detailed_description": "A collection of tools and scripts provided by Google Cloud Platform to facilitate the de-identification of healthcare data standards like DICOM and FHIR, ensuring compliance with regulations like HIPAA.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de_identification",
+        "data_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GoogleCloudPlatform/healthcare-deid",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dicom",
+        "fhir",
+        "healthcare",
+        "de-identification"
+      ],
+      "id": 11
+    },
+    {
+      "name": "Kitware DICOM Anonymizer",
+      "one_line_profile": "Tool to anonymize DICOM files according to DICOM standards",
+      "detailed_description": "A Python-based tool developed by Kitware Medical to anonymize DICOM files. It allows for customizable replacement of DICOM tags to ensure patient privacy while maintaining data integrity for research.",
+      "domains": [
+        "H2",
+        "H2-04",
+        "Medical Imaging"
+      ],
+      "subtask_category": [
+        "de_identification",
+        "image_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KitwareMedical/dicom-anonymizer",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "dicom",
+        "anonymization",
+        "medical-imaging",
+        "kitware"
+      ],
+      "id": 12
+    },
+    {
+      "name": "MIDRC Deidentifier",
+      "one_line_profile": "Medical imaging de-identification pipeline for MIDRC",
+      "detailed_description": "A comprehensive de-identification pipeline developed by Stanford and Penn for the Medical Imaging and Data Resource Center (MIDRC). It handles the cleaning and redaction of DICOM metadata and pixel data for large-scale public datasets.",
+      "domains": [
+        "H2",
+        "H2-04",
+        "Medical Imaging"
+      ],
+      "subtask_category": [
+        "de_identification",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MIDRC/Stanford_Penn_MIDRC_Deidentifier",
+      "help_website": [
+        "https://www.midrc.org/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "midrc",
+        "dicom",
+        "de-identification",
+        "medical-imaging"
+      ],
+      "id": 13
+    },
+    {
+      "name": "CVD Prevent Tool",
+      "one_line_profile": "Pipeline for linking and curating cardiovascular disease audit data",
+      "detailed_description": "A data processing pipeline used to link and curate CVD PREVENT audit data with Hospital Episode Statistics (HES) and death registration data, facilitating analysis and publication for public health auditing.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "data_curation",
+        "data_linkage",
+        "audit"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NHSDigital/cvd-prevent-tool",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nhs",
+        "cardiovascular-disease",
+        "audit",
+        "data-pipeline"
+      ],
+      "id": 14
+    },
+    {
+      "name": "OpenSanitizer",
+      "one_line_profile": "Privacy-focused module for scrubbing PII/PHI from screen data",
+      "detailed_description": "A module designed to detect and redact Personally Identifiable Information (PII) and Protected Health Information (PHI) from screen data and user actions, supporting privacy compliance in data collection.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de-identification",
+        "pii_redaction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenAdaptAI/OpenSanitizer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "privacy",
+        "pii",
+        "phi",
+        "redaction"
+      ],
+      "id": 15
+    },
+    {
+      "name": "SyferText",
+      "one_line_profile": "Privacy-preserving NLP framework",
+      "detailed_description": "A library for performing Natural Language Processing (NLP) tasks while preserving data privacy, enabling secure text analysis and processing in compliance with privacy standards.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "privacy_preserving_nlp",
+        "text_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenMined/SyferText",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "nlp",
+        "privacy",
+        "secure-computation",
+        "openmined"
+      ],
+      "id": 16
+    },
+    {
+      "name": "deidentify",
+      "one_line_profile": "HIPAA-compliant PHI de-identification library",
+      "detailed_description": "A JavaScript library for de-identifying Protected Health Information (PHI) in accordance with the HIPAA Privacy Rule, suitable for clinical data processing in web environments.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de-identification",
+        "compliance"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/Planeshifter/deidentify",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "hipaa",
+        "phi",
+        "de-identification",
+        "javascript"
+      ],
+      "id": 17
+    },
+    {
+      "name": "RSNA DICOM Anonymizer",
+      "one_line_profile": "DICOM anonymization tool by RSNA",
+      "detailed_description": "A tool developed by the Radiological Society of North America (RSNA) to anonymize DICOM medical imaging files, ensuring patient privacy for research and data sharing.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "image_anonymization",
+        "dicom_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RSNA/anonymizer",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dicom",
+        "rsna",
+        "medical-imaging",
+        "anonymization"
+      ],
+      "id": 18
+    },
+    {
+      "name": "PteRedactyl",
+      "one_line_profile": "Clinical free-text PII redaction tool",
+      "detailed_description": "A Python module built on Presidio for redacting Personally Identifiable Information (PII) specifically in clinical free-text, designed for ease of use in healthcare data de-identification workflows.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "text_redaction",
+        "clinical_nlp"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SETT-Centre-Data-and-AI/PteRedactyl",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "clinical-text",
+        "pii",
+        "redaction",
+        "presidio"
+      ],
+      "id": 19
+    },
+    {
+      "name": "DicomAnonymizer",
+      "one_line_profile": "Windows application for DICOM anonymization",
+      "detailed_description": "A Windows application that anonymizes DICOM files and generates PNG and TIF versions, facilitating the safe sharing and visualization of medical imaging data.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "image_anonymization",
+        "format_conversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/SoapySoftware/DicomAnonymizer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "windows",
+        "anonymization",
+        "medical-imaging"
+      ],
+      "id": 20
+    },
+    {
+      "name": "Canonym",
+      "one_line_profile": "Data anonymization package by Statistics Canada",
+      "detailed_description": "A Python package for data anonymization developed by Statistics Canada, providing tools to protect confidentiality in statistical datasets.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "data_anonymization",
+        "statistical_disclosure_control"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/StatCan/Canonym",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "statistics-canada",
+        "anonymization",
+        "privacy"
+      ],
+      "id": 21
+    },
+    {
+      "name": "Medical Image De-identification",
+      "one_line_profile": "Comprehensive tool for medical image de-identification",
+      "detailed_description": "A tool designed for the de-identification of medical imaging data, ensuring patient privacy and compliance with data protection regulations for research datasets.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "image_de-identification",
+        "privacy_protection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TIO-IKIM/medical_image_deidentification",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "medical-imaging",
+        "de-identification",
+        "privacy"
+      ],
+      "id": 22
+    },
+    {
+      "name": "MedGuard",
+      "one_line_profile": "HIPAA compliance library for healthcare LLM agents",
+      "detailed_description": "A production-grade Python library that ensures HIPAA compliance for large language model (LLM) agents in healthcare, providing security and privacy frameworks for AI workflows.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "compliance",
+        "llm_security",
+        "hipaa"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/The-Swarm-Corporation/MedGuard",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "healthcare",
+        "hipaa",
+        "security"
+      ],
+      "id": 23
+    },
+    {
+      "name": "Excel-Anonymizer",
+      "one_line_profile": "Script for anonymizing Excel datasets",
+      "detailed_description": "A Python script that anonymizes Excel files by replacing sensitive data with synthesized new data, useful for preparing datasets for sharing or analysis.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "data_anonymization",
+        "synthetic_data_generation"
+      ],
+      "application_level": "script",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Welding-Torch/Excel-Anonymizer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "excel",
+        "anonymization",
+        "synthetic-data"
+      ],
+      "id": 24
+    },
+    {
+      "name": "dicomedit",
+      "one_line_profile": "JavaScript DICOM modification and anonymization library",
+      "detailed_description": "A JavaScript library for modifying and anonymizing DICOM tags, suitable for use in web-based medical imaging applications and Node.js environments.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "dicom_editing",
+        "anonymization"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/WoonchanCho/dicomedit",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dicom",
+        "javascript",
+        "anonymization"
+      ],
+      "id": 25
+    },
+    {
+      "name": "DICAT",
+      "one_line_profile": "Tool to anonymize DICOM data headers",
+      "detailed_description": "A Python-based tool designed to anonymize DICOM data headers, supporting the de-identification process for medical imaging research.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "deidentification",
+        "medical_imaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aces/DICAT",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dicom",
+        "anonymization",
+        "medical-imaging"
+      ],
+      "id": 26
+    },
+    {
+      "name": "deidentify",
+      "one_line_profile": "CLI tool for identifying and anonymizing personal information",
+      "detailed_description": "A simple yet powerful command-line tool written in Go for identifying and anonymizing personal information (PII) in various text formats.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "deidentification",
+        "pii_masking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/aliengiraffe/deidentify",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "anonymization",
+        "pii"
+      ],
+      "id": 27
+    },
+    {
+      "name": "bert-deid",
+      "one_line_profile": "Patient notes de-identification using pre-trained BERT",
+      "detailed_description": "A library for de-identifying clinical patient notes using pre-trained BERT models, developed by researchers associated with PhysioNet/MIMIC.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "deidentification",
+        "clinical_nlp"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/alistairewj/bert-deid",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bert",
+        "nlp",
+        "clinical-notes",
+        "deid"
+      ],
+      "id": 28
+    },
+    {
+      "name": "ARX",
+      "one_line_profile": "Comprehensive open source data anonymization tool",
+      "detailed_description": "A comprehensive tool for data anonymization supporting various techniques like k-anonymity, l-diversity, t-closeness, and differential privacy, with risk analysis capabilities.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "deidentification",
+        "privacy_risk_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/arx-deidentifier/arx",
+      "help_website": [
+        "https://arx.deidentifier.org"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "anonymization",
+        "privacy",
+        "k-anonymity",
+        "differential-privacy"
+      ],
+      "id": 29
+    },
+    {
+      "name": "ControlSystemIdentification.jl",
+      "one_line_profile": "System Identification toolbox for Julia",
+      "detailed_description": "A system identification toolbox for Julia, compatible with ControlSystems.jl, used for estimating models of dynamic systems from input-output data.",
+      "domains": [
+        "Physics",
+        "Engineering"
+      ],
+      "subtask_category": [
+        "system_identification",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/baggepinnen/ControlSystemIdentification.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "system-identification",
+        "control-theory",
+        "julia"
+      ],
+      "id": 30
+    },
+    {
+      "name": "Philter (UCSF)",
+      "one_line_profile": "Clinical free text de-identification software",
+      "detailed_description": "A clinical free-text de-identification software developed at UCSF to remove Protected Health Information (PHI) from clinical notes.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "deidentification",
+        "clinical_nlp"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/beaunorgeot/philter_ucsf",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phi",
+        "clinical-text",
+        "deid"
+      ],
+      "id": 31
+    },
+    {
+      "name": "dicognito",
+      "one_line_profile": "Library and CLI for anonymizing DICOM files",
+      "detailed_description": "A Python library and command-line tool for anonymizing DICOM files, ensuring patient privacy in medical imaging datasets.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "deidentification",
+        "medical_imaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/blairconrad/dicognito",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "anonymization",
+        "cli"
+      ],
+      "id": 32
+    },
+    {
+      "name": "Maskwise",
+      "one_line_profile": "Sensitive data redaction for LLM training datasets",
+      "detailed_description": "A tool powered by Microsoft Presidio to detect, redact, mask, and anonymize sensitive data across text, images, and structured data, specifically for LLM training datasets.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "deidentification",
+        "data_cleaning"
+      ],
+      "application_level": "solver",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/bluewave-labs/maskwise",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "llm",
+        "pii",
+        "redaction",
+        "presidio"
+      ],
+      "id": 33
+    },
+    {
+      "name": "Tide Model Driver",
+      "one_line_profile": "Tide Model Driver for MATLAB",
+      "detailed_description": "A MATLAB toolbox for accessing and using ocean tide models, essential for oceanographic and geophysical research.",
+      "domains": [
+        "Earth Science",
+        "Oceanography"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/chadagreene/Tide-Model-Driver",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "tides",
+        "oceanography",
+        "matlab"
+      ],
+      "id": 34
+    },
+    {
+      "name": "dicom-anon",
+      "one_line_profile": "Python DICOM Anonymizer",
+      "detailed_description": "A Python tool for anonymizing DICOM files, developed by the Department of Biomedical and Health Informatics at CHOP.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "deidentification",
+        "medical_imaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chop-dbhi/dicom-anon",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "dicom",
+        "anonymization",
+        "chop"
+      ],
+      "id": 35
+    },
+    {
+      "name": "dicom-pipeline",
+      "one_line_profile": "Pipeline for reviewing and anonymizing DICOM studies",
+      "detailed_description": "An automated pipeline for reviewing, anonymizing, and publishing research DICOM studies, developed by CHOP.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "deidentification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chop-dbhi/dicom-pipeline",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "dicom",
+        "pipeline",
+        "research-data-management"
+      ],
+      "id": 36
+    },
+    {
+      "name": "image-deid-etl",
+      "one_line_profile": "ETL pipeline for DICOM image de-identification and conversion",
+      "detailed_description": "A tool developed by the Center for Data Driven Discovery in Biomedicine (D3b) to assist with reading DICOM images from Orthanc, converting them to anonymized NIfTI images, and uploading them to Flywheel, facilitating secure medical imaging research workflows.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de-identification",
+        "image_conversion",
+        "etl"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/d3b-center/image-deid-etl",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dicom",
+        "de-identification",
+        "nifti",
+        "medical-imaging"
+      ],
+      "id": 37
+    },
+    {
+      "name": "Amnesia",
+      "one_line_profile": "Data anonymization tool for k-anonymity and km-anonymity",
+      "detailed_description": "Amnesia is a data anonymization tool that transforms relational and transactional data to statistical guarantees (like k-anonymity and km-anonymity) by generalizing or suppressing values, allowing data sharing while preserving privacy.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "anonymization",
+        "privacy_preservation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/dTsitsigkos/Amnesia",
+      "help_website": [
+        "https://amnesia.openaire.eu/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "anonymization",
+        "k-anonymity",
+        "privacy",
+        "gdpr"
+      ],
+      "id": 38
+    },
+    {
+      "name": "TIDE",
+      "one_line_profile": "General Toolbox for Identifying Object Detection Errors",
+      "detailed_description": "A general toolbox for analyzing the sources of error in object detection and instance segmentation algorithms. It provides a detailed breakdown of error types (e.g., classification, localization, background) to help researchers improve computer vision models.",
+      "domains": [
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "error_analysis",
+        "model_evaluation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dbolya/tide",
+      "help_website": [
+        "https://dbolya.github.io/tide/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "object-detection",
+        "error-analysis",
+        "computer-vision",
+        "evaluation"
+      ],
+      "id": 39
+    },
+    {
+      "name": "deid2-runtime",
+      "one_line_profile": "Runtime environment for NIST De-ID2 competition",
+      "detailed_description": "The code execution runtime environment designed for the NIST De-ID2 competition, providing a standardized containerized setup for running and evaluating de-identification algorithms on clinical text data.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de-identification",
+        "evaluation_environment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/drivendataorg/deid2-runtime",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "de-identification",
+        "nlp",
+        "clinical-text",
+        "benchmarking"
+      ],
+      "id": 40
+    },
+    {
+      "name": "SlicerBatchAnonymize",
+      "one_line_profile": "3D Slicer extension for batch DICOM anonymization",
+      "detailed_description": "A 3D Slicer extension designed to perform batch anonymization of DICOM images, enabling researchers to process large datasets of medical imaging for privacy compliance directly within the Slicer environment.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "anonymization",
+        "image_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hina-shah/SlicerBatchAnonymize",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "3d-slicer",
+        "dicom",
+        "anonymization",
+        "medical-imaging"
+      ],
+      "id": 41
+    },
+    {
+      "name": "pygtide",
+      "one_line_profile": "Python wrapper for ETERNA PREDICT to compute gravitational tides",
+      "detailed_description": "A Python module and wrapper for the ETERNA PREDICT program, used to compute gravitational tides on Earth, supporting geophysics and earth science research.",
+      "domains": [
+        "Earth Science",
+        "Geophysics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/hydrogeoscience/pygtide",
+      "help_website": [],
+      "license": "MPL-2.0",
+      "tags": [
+        "tides",
+        "geophysics",
+        "gravity",
+        "eterna"
+      ],
+      "id": 42
+    },
+    {
+      "name": "PySolid",
+      "one_line_profile": "Python wrapper for solid Earth tides calculation",
+      "detailed_description": "A Python wrapper for computing solid Earth tides, used in geodetic and geophysical applications to model deformations caused by tidal forces.",
+      "domains": [
+        "Earth Science",
+        "Geophysics"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/insarlab/PySolid",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "solid-earth-tides",
+        "geodesy",
+        "geophysics",
+        "deformation"
+      ],
+      "id": 43
+    },
+    {
+      "name": "presidio-cli",
+      "one_line_profile": "CLI tool for PII analysis using Microsoft Presidio",
+      "detailed_description": "A command-line interface tool developed by Insights Engineering to analyze text for Personally Identifiable Information (PII) entities using the Microsoft Presidio framework, facilitating integration into data processing pipelines.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "pii_detection",
+        "de-identification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/insightsengineering/presidio-cli",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "presidio",
+        "pii",
+        "nlp",
+        "cli"
+      ],
+      "id": 44
+    },
+    {
+      "name": "DICOMClient",
+      "one_line_profile": "DICOM utilities for anonymizing, viewing, and uploading",
+      "detailed_description": "A set of Java-based utilities for handling DICOM files, including functionality for anonymization, viewing, and uploading to PACS systems, supporting medical imaging data management.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "anonymization",
+        "data_management",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/irrer/DICOMClient",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dicom",
+        "anonymization",
+        "pacs",
+        "medical-imaging"
+      ],
+      "id": 45
+    },
+    {
+      "name": "deidentification",
+      "one_line_profile": "Tool to deidentify names and gender-specific pronouns",
+      "detailed_description": "A Python tool designed to de-identify text by detecting and replacing people's names and gender-specific pronouns, useful for basic text anonymization tasks.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de-identification",
+        "text_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jftuga/deidentification",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nlp",
+        "anonymization",
+        "privacy",
+        "text-mining"
+      ],
+      "id": 46
+    },
+    {
+      "name": "CDISC-SDTM-deidentify-SAS-phuse",
+      "one_line_profile": "SAS macros for de-identifying CDISC SDTM data",
+      "detailed_description": "A collection of SAS macros to de-identify CDISC SDTM clinical trial data according to PhUSE rules, supporting regulatory compliance and data sharing in clinical research.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de-identification",
+        "compliance"
+      ],
+      "application_level": "library",
+      "primary_language": "SAS",
+      "repo_url": "https://github.com/jmangori/CDISC-SDTM-deidentify-SAS-phuse",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sas",
+        "cdisc",
+        "sdtm",
+        "clinical-trials",
+        "phuse"
+      ],
+      "id": 47
+    },
+    {
+      "name": "CTP",
+      "one_line_profile": "Clinical Trial Processor for medical imaging data management and de-identification",
+      "detailed_description": "A highly configurable, extensible application designed for processing and routing medical imaging data. It is widely used in clinical trials for secure transfer and comprehensive de-identification of DICOM objects.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de_identification",
+        "data_transfer",
+        "dicom_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/johnperry/CTP",
+      "help_website": [
+        "http://mircwiki.rsna.org/index.php?title=CTP_The_Clinical_Trial_Processor"
+      ],
+      "license": null,
+      "tags": [
+        "dicom",
+        "de-identification",
+        "clinical-trials",
+        "medical-imaging"
+      ],
+      "id": 48
+    },
+    {
+      "name": "DicomAnonymizerTool",
+      "one_line_profile": "Command-line utility for DICOM de-identification",
+      "detailed_description": "A standalone command-line tool that invokes the MIRC DICOM Anonymizer engine on individual files, facilitating batch processing and automation of medical image anonymization tasks.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de_identification",
+        "dicom_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/johnperry/DicomAnonymizerTool",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dicom",
+        "anonymization",
+        "cli"
+      ],
+      "id": 49
+    },
+    {
+      "name": "Tools for Health Data Anonymization",
+      "one_line_profile": "Tools for anonymizing FHIR health data",
+      "detailed_description": "A comprehensive set of tools designed to facilitate the anonymization of health data, with a specific focus on the FHIR standard. It supports configuration-based anonymization rules to ensure compliance and privacy.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de_identification",
+        "fhir_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/microsoft/Tools-for-Health-Data-Anonymization",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fhir",
+        "anonymization",
+        "health-data",
+        "privacy"
+      ],
+      "id": 50
+    },
+    {
+      "name": "Presidio Evaluation Toolkit",
+      "one_line_profile": "End-to-end toolkit for evaluating PII detection models",
+      "detailed_description": "A toolkit designed to streamline the evaluation of PII detection frameworks, specifically Presidio. It integrates with Azure Language Service and AzureML to provide end-to-end assessment pipelines for different PII recognizers.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "pii_detection"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/dstoolkit-e2e-presidio-evaluation",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "evaluation",
+        "pii",
+        "presidio",
+        "nlp"
+      ],
+      "id": 51
+    },
+    {
+      "name": "Presidio",
+      "one_line_profile": "Context-aware PII detection and anonymization framework",
+      "detailed_description": "An open-source framework for detecting, redacting, masking, and anonymizing sensitive data (PII) in text and images. It utilizes NLP and pattern matching to provide customizable and context-aware PII recognition.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de_identification",
+        "pii_detection",
+        "text_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/presidio",
+      "help_website": [
+        "https://microsoft.github.io/presidio/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "pii",
+        "de-identification",
+        "nlp",
+        "privacy",
+        "security"
+      ],
+      "id": 52
+    },
+    {
+      "name": "Presidio Research",
+      "one_line_profile": "Research library for developing Presidio PII recognizers",
+      "detailed_description": "A package dedicated to data science tasks for developing and evaluating new PII recognizers for the Presidio framework. It facilitates the creation of datasets, training of models, and benchmarking of detection performance.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "model_development",
+        "model_evaluation",
+        "pii_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/microsoft/presidio-research",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "research",
+        "pii",
+        "evaluation",
+        "data-science"
+      ],
+      "id": 53
+    },
+    {
+      "name": "DICOMAnonymizer",
+      "one_line_profile": "Multi-threaded anonymizer for DICOM files implementing DICOM PS 3.15 AnnexE",
+      "detailed_description": "A C++ based tool designed for the anonymization of DICOM medical imaging files. It implements the standards set forth in DICOM PS 3.15 Annex E, ensuring compliance with de-identification protocols suitable for clinical and research data sharing.",
+      "domains": [
+        "H2",
+        "H2-04",
+        "Medical Imaging"
+      ],
+      "subtask_category": [
+        "de-identification",
+        "anonymization",
+        "data_cleaning"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mmiv-center/DICOMAnonymizer",
+      "help_website": [],
+      "license": "Unlicense",
+      "tags": [
+        "dicom",
+        "anonymization",
+        "medical-imaging",
+        "cpp"
+      ],
+      "id": 54
+    },
+    {
+      "name": "ttide_py",
+      "one_line_profile": "Python implementation of the T_Tide harmonic tidal analysis package",
+      "detailed_description": "A direct conversion of the classic T_Tide MATLAB toolbox to Python. It performs classical harmonic analysis of tidal currents and sea levels, widely used in oceanography and geophysics for analyzing tidal data.",
+      "domains": [
+        "Oceanography",
+        "Geophysics"
+      ],
+      "subtask_category": [
+        "tidal_analysis",
+        "harmonic_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/moflaher/ttide_py",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "tides",
+        "oceanography",
+        "harmonic-analysis",
+        "python"
+      ],
+      "id": 55
+    },
+    {
+      "name": "deidentify",
+      "one_line_profile": "Python library for de-identifying medical records using NLP methods",
+      "detailed_description": "A library designed to automatically de-identify free-text medical records. It utilizes state-of-the-art Natural Language Processing (NLP) techniques to detect and redact Protected Health Information (PHI), facilitating privacy-preserving data usage in healthcare research.",
+      "domains": [
+        "H2",
+        "H2-04",
+        "Natural Language Processing"
+      ],
+      "subtask_category": [
+        "de-identification",
+        "named_entity_recognition",
+        "phi_redaction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nedap/deidentify",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nlp",
+        "de-identification",
+        "medical-records",
+        "privacy"
+      ],
+      "id": 56
+    },
+    {
+      "name": "ehr_deidentification",
+      "one_line_profile": "De-identification of medical notes using transformer architectures",
+      "detailed_description": "A Python-based tool leveraging transformer models (like BERT/RoBERTa) to perform robust de-identification of electronic health record (EHR) notes. It focuses on identifying and masking sensitive entities to ensure patient privacy in clinical text data.",
+      "domains": [
+        "H2",
+        "H2-04",
+        "Natural Language Processing"
+      ],
+      "subtask_category": [
+        "de-identification",
+        "ner",
+        "clinical_nlp"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/obi-ml-public/ehr_deidentification",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ehr",
+        "transformers",
+        "de-identification",
+        "medical-nlp"
+      ],
+      "id": 57
+    },
+    {
+      "name": "svs-deidentifier",
+      "one_line_profile": "Tool to strip identifying labels from Aperio SVS whole slide images",
+      "detailed_description": "A Python utility specifically designed for digital pathology. It removes potentially identifying label and macro images from Aperio SVS whole slide image files, ensuring that pathological slides can be shared or analyzed without compromising patient anonymity.",
+      "domains": [
+        "H2",
+        "H2-04",
+        "Digital Pathology"
+      ],
+      "subtask_category": [
+        "image_anonymization",
+        "metadata_stripping"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pearcetm/svs-deidentifier",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pathology",
+        "svs",
+        "whole-slide-imaging",
+        "anonymization"
+      ],
+      "id": 58
+    },
+    {
+      "name": "EDF_deidentify_toolbox",
+      "one_line_profile": "Matlab and Python toolbox for de-identifying EDF (EEG) files",
+      "detailed_description": "A toolbox developed by the Prerau Lab for de-identifying European Data Format (EDF) files, commonly used for EEG and sleep data. It allows researchers to strip headers and metadata to share physiological data compliantly.",
+      "domains": [
+        "H2",
+        "H2-04",
+        "Neuroscience"
+      ],
+      "subtask_category": [
+        "signal_processing",
+        "de-identification",
+        "data_cleaning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/preraulab/EDF_deidentify_toolbox",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "eeg",
+        "edf",
+        "sleep-research",
+        "de-identification"
+      ],
+      "id": 59
+    },
+    {
+      "name": "Mist",
+      "one_line_profile": "Adversarial watermarking tool to protect images from diffusion model mimicry",
+      "detailed_description": "A preprocessing tool that applies adversarial watermarks to images (artworks) to disrupt the learning process of latent diffusion models (like Stable Diffusion). It is used in AI security and data protection research to prevent unauthorized style mimicry.",
+      "domains": [
+        "Computer Vision",
+        "AI Security"
+      ],
+      "subtask_category": [
+        "adversarial_attack",
+        "data_protection",
+        "image_preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/psyker-team/mist",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "adversarial-ml",
+        "watermarking",
+        "diffusion-models",
+        "protection"
+      ],
+      "id": 60
+    },
+    {
+      "name": "Mist-v2",
+      "one_line_profile": "Improved watermarking tool for protecting artwork from synthetic mimicry",
+      "detailed_description": "The second version of the Mist tool, providing enhanced adversarial watermarking capabilities to protect human artworks from being effectively used to train synthetic media generation models.",
+      "domains": [
+        "Computer Vision",
+        "AI Security"
+      ],
+      "subtask_category": [
+        "adversarial_attack",
+        "data_protection",
+        "image_preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/psyker-team/mist-v2",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "adversarial-ml",
+        "watermarking",
+        "diffusion-models",
+        "protection"
+      ],
+      "id": 61
+    },
+    {
+      "name": "pydicom-deid",
+      "one_line_profile": "Best-effort anonymization library for medical images (DICOM) in Python",
+      "detailed_description": "A Python library built on top of pydicom for de-identifying DICOM files. It provides a framework for defining anonymization recipes and cleaning metadata to support medical imaging research and compliance.",
+      "domains": [
+        "H2",
+        "H2-04",
+        "Medical Imaging"
+      ],
+      "subtask_category": [
+        "anonymization",
+        "metadata_cleaning",
+        "dicom_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pydicom/deid",
+      "help_website": [
+        "https://pydicom.github.io/deid/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "anonymization",
+        "medical-imaging",
+        "python"
+      ],
+      "id": 62
+    },
+    {
+      "name": "dicom-cleaner",
+      "one_line_profile": "Tool for detecting and cleaning burned-in pixels in DICOM images using OCR",
+      "detailed_description": "A development tool associated with pydicom for detecting and removing burned-in text (pixel data) from DICOM images using Optical Character Recognition (OCR), addressing a critical gap in metadata-only anonymization.",
+      "domains": [
+        "H2",
+        "H2-04",
+        "Medical Imaging"
+      ],
+      "subtask_category": [
+        "ocr",
+        "pixel_anonymization",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "Limbo",
+      "repo_url": "https://github.com/pydicom/dicom-cleaner",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dicom",
+        "ocr",
+        "burned-in-text",
+        "anonymization"
+      ],
+      "id": 63
+    },
+    {
+      "name": "Pytides",
+      "one_line_profile": "Python package for tidal analysis and prediction",
+      "detailed_description": "A Python library for analyzing and predicting tides. It allows for the decomposition of tide levels into constituent components and the prediction of future tide heights, used in oceanographic research.",
+      "domains": [
+        "Oceanography"
+      ],
+      "subtask_category": [
+        "tidal_prediction",
+        "harmonic_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sam-cox/pytides",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "tides",
+        "oceanography",
+        "prediction",
+        "python"
+      ],
+      "id": 64
+    },
+    {
+      "name": "Cumulus ETL",
+      "one_line_profile": "ETL pipeline for extracting, de-identifying, and loading FHIR clinical data",
+      "detailed_description": "A tool designed to extract FHIR data from healthcare systems, transform it using NLP and de-identification tools, and load it into a SQL database for research and analysis. Developed by the SMART on FHIR team.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "de_identification",
+        "nlp"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/smart-on-fhir/cumulus-etl",
+      "help_website": [
+        "https://github.com/smart-on-fhir/cumulus-etl"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "fhir",
+        "etl",
+        "de-identification",
+        "nlp",
+        "clinical-data"
+      ],
+      "id": 65
+    },
+    {
+      "name": "Stanford MIRC-CTP Scripts",
+      "one_line_profile": "DICOM anonymization scripts based on MIRC CTP",
+      "detailed_description": "A set of scripts and Docker configurations used by Stanford IRT/RIT for anonymizing medical imaging data (DICOM) using the MIRC Clinical Trial Processor (CTP).",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de_identification",
+        "image_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Dockerfile",
+      "repo_url": "https://github.com/susom/mirc-ctp",
+      "help_website": [
+        "https://github.com/susom/mirc-ctp"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "dicom",
+        "anonymization",
+        "medical-imaging",
+        "ctp"
+      ],
+      "id": 66
+    },
+    {
+      "name": "Tideline",
+      "one_line_profile": "Visualization library for diabetes data timelines",
+      "detailed_description": "A JavaScript library developed by Tidepool for visualizing diabetes device data (e.g., blood glucose, bolus, basal rates) in a timeline format, supporting clinical data analysis.",
+      "domains": [
+        "H2"
+      ],
+      "subtask_category": [
+        "scientific_visualization",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/tidepool-org/tideline",
+      "help_website": [
+        "https://developer.tidepool.org/tideline/"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "diabetes",
+        "visualization",
+        "clinical-data",
+        "health-informatics"
+      ],
+      "id": 67
+    },
+    {
+      "name": "deidentifyr",
+      "one_line_profile": "R package for de-identifying datasets with PII",
+      "detailed_description": "An R package designed to identify and remove personally identifiable information (PII) from datasets, supporting data privacy compliance in research.",
+      "domains": [
+        "H2",
+        "H2-04"
+      ],
+      "subtask_category": [
+        "de_identification",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/wilkox/deidentifyr",
+      "help_website": [
+        "https://github.com/wilkox/deidentifyr"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "r-package",
+        "de-identification",
+        "privacy",
+        "pii"
+      ],
+      "id": 68
+    }
+  ]
+}

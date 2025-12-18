@@ -1,0 +1,4298 @@
+{
+  "generated_at": "2025-12-17T04:07:19.856461+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "AI6",
+      "leaf_cluster_name": "可复现运行时与加速生态（容器/HPC）",
+      "domain": "Infra/HPC",
+      "typical_objects": "jobs/artifacts",
+      "task_chain": "环境→调度→缓存→追踪→加速",
+      "tool_form": "容器/调度 + 追踪/成本"
+    },
+    "unit": {
+      "unit_id": "AI6-03",
+      "unit_name": "缓存/数据版本/Artifact 管理",
+      "target_scale": "150–350",
+      "coverage_tools": "caching、artifact stores"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] Git LFS",
+        "[GH] Delta Lake",
+        "[GH] Fluid",
+        "[GH] Alluxio",
+        "[GH] JuiceFS",
+        "[GH] MLflow",
+        "[GH] LakeFS",
+        "[GH] Pachyderm",
+        "[GH] DVC",
+        "[GH] data version control",
+        "[GH] artifact store",
+        "[GH] model registry",
+        "[GH] dataset caching",
+        "[GH] mlops storage",
+        "[GH] data lineage",
+        "[GH] content addressable storage",
+        "[GH] distributed caching",
+        "[GH] checkpoint management",
+        "[GH] reproducible experiments",
+        "[GH] hpc data management",
+        "[GH] object storage cache",
+        "[GH] feature store",
+        "[WEB] open source data version control tools github",
+        "[WEB] machine learning artifact store github",
+        "[WEB] high performance data caching for ai github",
+        "[WEB] mlops model registry tools github",
+        "[WEB] reproducible data pipeline github"
+      ],
+      "total_candidates": 1262,
+      "tool_candidates": 861,
+      "final_tools": 165
+    }
+  },
+  "tools": [
+    {
+      "name": "Spline",
+      "one_line_profile": "Data lineage tracking and visualization solution for data processing engines like Spark",
+      "detailed_description": "Spline is a data lineage tracking and visualization tool that captures and stores lineage information from data processing pipelines (e.g., Apache Spark), enabling reproducibility and auditing in data-intensive scientific workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_lineage",
+        "provenance_tracking"
+      ],
+      "application_level": "service",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/AbsaOSS/spline",
+      "help_website": [
+        "https://absaoss.github.io/spline/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-lineage",
+        "spark",
+        "provenance",
+        "visualization"
+      ],
+      "id": 1
+    },
+    {
+      "name": "Alluxio",
+      "one_line_profile": "Data orchestration platform for analytics and machine learning in hybrid cloud environments",
+      "detailed_description": "Alluxio is a data orchestration layer that brings data closer to compute for analytics and machine learning workloads. It provides a unified file system namespace and caching to accelerate data access across heterogeneous storage systems in HPC and AI pipelines.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_orchestration",
+        "caching",
+        "storage_abstraction"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/Alluxio/alluxio",
+      "help_website": [
+        "https://www.alluxio.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-orchestration",
+        "distributed-cache",
+        "hpc",
+        "machine-learning"
+      ],
+      "id": 2
+    },
+    {
+      "name": "Alluxio Python Client",
+      "one_line_profile": "Python client library for interacting with the Alluxio data orchestration system",
+      "detailed_description": "The Alluxio Python client enables Python-based data science and machine learning applications to interact with the Alluxio file system, facilitating efficient data access and management within Python workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_access",
+        "client_library"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Alluxio/alluxio-py",
+      "help_website": [
+        "https://docs.alluxio.io/os/user/stable/en/api/Python-API.html"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "python",
+        "alluxio",
+        "client",
+        "data-access"
+      ],
+      "id": 3
+    },
+    {
+      "name": "FedHeteroBench",
+      "one_line_profile": "Benchmark framework for handling data heterogeneity in federated learning",
+      "detailed_description": "FedHeteroBench is a repository and framework designed to evaluate and handle data heterogeneity in federated learning (Non-IID settings). It provides unified implementations and reproducible experiments for researching federated learning algorithms.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "federated_learning",
+        "benchmarking",
+        "reproducibility"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AntonioZC666/FedHeteroBench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "federated-learning",
+        "benchmark",
+        "non-iid",
+        "heterogeneity"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Deep AutoViML",
+      "one_line_profile": "AutoML library for building TensorFlow Keras model pipelines with MLflow tracking",
+      "detailed_description": "Deep AutoViML is an automated machine learning library that simplifies the process of building deep learning models using TensorFlow and Keras. It includes built-in integration with MLflow for experiment tracking and reproducibility.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "automl",
+        "model_training",
+        "experiment_tracking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AutoViML/deep_autoviml",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "automl",
+        "tensorflow",
+        "keras",
+        "mlflow",
+        "deep-learning"
+      ],
+      "id": 5
+    },
+    {
+      "name": "RD-CDM",
+      "one_line_profile": "Ontology-based common data model for rare diseases",
+      "detailed_description": "RD-CDM (Rare Disease Common Data Model) is an ontology-based framework for harmonizing international registries, FHIR, and Phenopackets, facilitating data interoperability and standardization in rare disease research.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_modeling",
+        "ontology_alignment",
+        "data_harmonization"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BIH-CEI/rd-cdm",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rare-disease",
+        "common-data-model",
+        "ontology",
+        "fhir"
+      ],
+      "id": 6
+    },
+    {
+      "name": "Lite Tracer",
+      "one_line_profile": "Lightweight experiment reproducibility toolset for ML",
+      "detailed_description": "Lite Tracer is a lightweight toolset designed to facilitate experiment reproducibility in machine learning by tracking and managing experiment configurations and artifacts.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "reproducibility"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BorealisAI/lite_tracer",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "reproducibility",
+        "experiment-tracking",
+        "ml-ops"
+      ],
+      "id": 7
+    },
+    {
+      "name": "HPC DME APIs",
+      "one_line_profile": "APIs for NCI High Performance Computing Data Management Services",
+      "detailed_description": "This repository contains the Common APIs for the National Cancer Institute (NCI) High Performance Computing (HPC) Data Management Services (DME), enabling researchers to programmatically interact with scientific data archives.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_management",
+        "archive_access",
+        "hpc_api"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/CBIIT/HPC_DME_APIs",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nci",
+        "hpc",
+        "data-management",
+        "api"
+      ],
+      "id": 8
+    },
+    {
+      "name": "Scratch Manager",
+      "one_line_profile": "Daemon for automating dataset caching in HPC environments",
+      "detailed_description": "Scratch Manager is a daemon designed to automate the caching of read-only datasets between slow (archive) and fast (scratch) storage locations, optimizing data access for HPC workloads.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "caching",
+        "storage_management",
+        "hpc_io"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CEA-LIST/scratch_manager",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "hpc",
+        "caching",
+        "storage-tiering",
+        "dataset-management"
+      ],
+      "id": 9
+    },
+    {
+      "name": "Stochastic Caching",
+      "one_line_profile": "Library for stochastic dataset caching in PyTorch",
+      "detailed_description": "A lightweight library for implementing stochastic caching strategies for datasets in PyTorch, helping to optimize data loading performance in machine learning training pipelines.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "caching",
+        "data_loading",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Charl-AI/stochastic-caching",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "caching",
+        "data-loading",
+        "optimization"
+      ],
+      "id": 10
+    },
+    {
+      "name": "Oceananigans.jl",
+      "one_line_profile": "Fast and flexible fluid dynamics software for ocean modeling on CPUs and GPUs",
+      "detailed_description": "Oceananigans.jl is a Julia software package for fluid dynamics simulations, specifically tailored for oceanography and atmospheric science. It supports fast execution on CPUs and GPUs and provides a user-friendly interface for setting up complex simulations.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "fluid_dynamics",
+        "ocean_modeling",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/CliMA/Oceananigans.jl",
+      "help_website": [
+        "https://clima.github.io/Oceananigans.jl/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fluid-dynamics",
+        "oceanography",
+        "julia",
+        "gpu-acceleration"
+      ],
+      "id": 11
+    },
+    {
+      "name": "DagsHub Client",
+      "one_line_profile": "Client library for DagsHub data versioning and collaboration platform",
+      "detailed_description": "The DagsHub client library allows users to interact with the DagsHub platform, facilitating data versioning, experiment tracking, and collaboration for machine learning projects using Git and DVC.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "collaboration",
+        "experiment_tracking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DagsHub/client",
+      "help_website": [
+        "https://dagshub.com/docs/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "data-versioning",
+        "mlops",
+        "dagshub",
+        "client"
+      ],
+      "id": 12
+    },
+    {
+      "name": "Fast Data Science (fds)",
+      "one_line_profile": "CLI tool wrapping Git and DVC for simplified data and code version control",
+      "detailed_description": "Fast Data Science (fds) is a command-line interface that simplifies the usage of Git and DVC (Data Version Control) for data scientists, streamlining the process of versioning both code and large datasets.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "version_control",
+        "cli"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DagsHub/fds",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dvc",
+        "git",
+        "data-versioning",
+        "cli"
+      ],
+      "id": 13
+    },
+    {
+      "name": "GeoMet Data Registry",
+      "one_line_profile": "Registry system for managing access to meteorological open data via OGC standards",
+      "detailed_description": "A system to manage access to the Environment and Climate Change Canada's Meteorological Service of Canada (MSC) open data, including raw numerical weather prediction (NWP) model data layers and weather radar mosaics, via Open Geospatial Consortium (OGC) standards.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_management",
+        "data_access",
+        "meteorology"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ECCC-MSC/geomet-data-registry",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "meteorology",
+        "ogc",
+        "data-registry",
+        "weather-data"
+      ],
+      "id": 14
+    },
+    {
+      "name": "FastTrackML",
+      "one_line_profile": "High-performance experiment tracking server compatible with MLflow",
+      "detailed_description": "An experiment tracking server focused on speed and scalability, designed to be a drop-in replacement for the MLflow tracking server, facilitating reproducible machine learning experiments.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "reproducibility",
+        "artifact_management"
+      ],
+      "application_level": "service",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/G-Research/fasttrackml",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mlflow",
+        "experiment-tracking",
+        "reproducibility",
+        "mlops"
+      ],
+      "id": 15
+    },
+    {
+      "name": "kedro-mlflow",
+      "one_line_profile": "Kedro plugin for MLflow integration enabling experiment tracking and model versioning",
+      "detailed_description": "A plugin for the Kedro framework that integrates MLflow capabilities, specifically focusing on machine learning model versioning, packaging, and experiment tracking within data pipelines.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "model_versioning",
+        "pipeline_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Galileo-Galilei/kedro-mlflow",
+      "help_website": [
+        "https://kedro-mlflow.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "kedro",
+        "mlflow",
+        "pipeline",
+        "versioning"
+      ],
+      "id": 16
+    },
+    {
+      "name": "GiraffeTools",
+      "one_line_profile": "Graphical interface for reproducible analysis of workflow experiments",
+      "detailed_description": "A graphical interface designed to facilitate the reproducible analysis of workflow experiments, likely in a bioinformatics or scientific computing context, enabling users to manage and visualize analysis processes.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "reproducibility",
+        "analysis_visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/GiraffeTools/GiraffeTools",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "workflow",
+        "reproducibility",
+        "gui",
+        "scientific-analysis"
+      ],
+      "id": 17
+    },
+    {
+      "name": "jzfs",
+      "one_line_profile": "Git-based version control file system for code, data, and models",
+      "detailed_description": "A Git-based Version Control File System designed for the joint management of code, data, and models, facilitating reproducibility and artifact management in AI and scientific workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "artifact_management",
+        "reproducibility"
+      ],
+      "application_level": "system",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/GitDataAI/jzfs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-versioning",
+        "filesystem",
+        "git",
+        "model-management"
+      ],
+      "id": 18
+    },
+    {
+      "name": "CMF",
+      "one_line_profile": "Common Metadata Framework for tracking ML pipeline lineage and artifacts",
+      "detailed_description": "A library to collect and store information associated with ML pipelines, tracking lineages for artifacts and executions of distributed AI pipelines to ensure reproducibility and metadata management.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "metadata_tracking",
+        "lineage_tracking",
+        "artifact_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HewlettPackard/cmf",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "metadata",
+        "lineage",
+        "ml-pipeline",
+        "reproducibility"
+      ],
+      "id": 19
+    },
+    {
+      "name": "Sacred",
+      "one_line_profile": "Tool to configure, organize, log, and reproduce computational experiments",
+      "detailed_description": "A tool to help researchers configure, organize, log, and reproduce experiments, managing configuration injection and database logging of experiment runs.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "reproducibility",
+        "configuration_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/IDSIA/sacred",
+      "help_website": [
+        "https://sacred.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "experiment-tracking",
+        "reproducibility",
+        "machine-learning",
+        "logging"
+      ],
+      "id": 20
+    },
+    {
+      "name": "pycellin",
+      "one_line_profile": "Graph-based framework for analyzing cell lineages from tracking data",
+      "detailed_description": "A graph-based framework to manipulate and analyze cell lineages derived from cell tracking data, facilitating the study of cellular dynamics and genealogy.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "cell_lineage_analysis",
+        "graph_analysis",
+        "biological_image_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Image-Analysis-Hub/pycellin",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cell-lineage",
+        "bioinformatics",
+        "graph-theory",
+        "tracking"
+      ],
+      "id": 21
+    },
+    {
+      "name": "ArtiVC",
+      "one_line_profile": "Version control system for large files in data science projects",
+      "detailed_description": "A version control system designed to manage large files, similar to DVC, enabling data versioning and artifact management within scientific and AI workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "artifact_management",
+        "large_file_storage"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/InfuseAI/ArtiVC",
+      "help_website": [
+        "https://artivc.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-versioning",
+        "version-control",
+        "large-files",
+        "reproducibility"
+      ],
+      "id": 22
+    },
+    {
+      "name": "PositionBasedDynamics",
+      "one_line_profile": "Library for physically-based simulation of rigid bodies, deformable solids, and fluids",
+      "detailed_description": "A library implementing Position Based Dynamics (PBD) for the physically-based simulation of rigid bodies, deformable solids, and fluids, widely used in computer graphics and scientific simulation.",
+      "domains": [
+        "AI6"
+      ],
+      "subtask_category": [
+        "physics_simulation",
+        "fluid_dynamics",
+        "solid_mechanics"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/InteractiveComputerGraphics/PositionBasedDynamics",
+      "help_website": [
+        "https://interactivecomputergraphics.github.io/PositionBasedDynamics/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "physics-simulation",
+        "pbd",
+        "fluid-dynamics",
+        "deformable-solids"
+      ],
+      "id": 23
+    },
+    {
+      "name": "SPlisHSPlasH",
+      "one_line_profile": "Open-source library for physically-based simulation of fluids",
+      "detailed_description": "An open-source library focused on the physically-based simulation of fluids, implementing various SPH (Smoothed Particle Hydrodynamics) methods for scientific modeling.",
+      "domains": [
+        "AI6"
+      ],
+      "subtask_category": [
+        "fluid_dynamics",
+        "sph_simulation",
+        "physics_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/InteractiveComputerGraphics/SPlisHSPlasH",
+      "help_website": [
+        "https://interactivecomputergraphics.github.io/SPlisHSPlasH/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fluid-simulation",
+        "sph",
+        "physics",
+        "cfd"
+      ],
+      "id": 24
+    },
+    {
+      "name": "MLJModels.jl",
+      "one_line_profile": "Model registry and loader for the MLJ machine learning framework",
+      "detailed_description": "The model registry and tools for model queries and code loading for MLJ, a machine learning framework in Julia, facilitating model management and reproducibility.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "model_registry",
+        "model_management",
+        "machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaAI/MLJModels.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "machine-learning",
+        "model-registry",
+        "mlj"
+      ],
+      "id": 25
+    },
+    {
+      "name": "trixi",
+      "one_line_profile": "Modular experiment infrastructure optimized for PyTorch reproducibility",
+      "detailed_description": "A tool to manage machine learning experiments, ensuring reproducibility and modularity. It provides an experiment infrastructure optimized for PyTorch but flexible enough for other frameworks, facilitating artifact management and logging.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "reproducibility",
+        "artifact_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MIC-DKFZ/trixi",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "experiment-management",
+        "reproducibility"
+      ],
+      "id": 26
+    },
+    {
+      "name": "ML4ITS-synthetic-data",
+      "one_line_profile": "GAN-based synthetic time-series generation system",
+      "detailed_description": "A functional end-to-end system for generating synthetic time-series data using generative adversarial networks (GANs). It includes modules for dataset generation, model registry, and an interface for evaluation, specifically targeted at Intelligent Transportation Systems (ITS) research.",
+      "domains": [
+        "AI4",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_generation",
+        "model_registry"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ML4ITS/synthetic-data",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gan",
+        "synthetic-data",
+        "time-series"
+      ],
+      "id": 27
+    },
+    {
+      "name": "smilelogging",
+      "one_line_profile": "Python logging package for reproducible research experiments",
+      "detailed_description": "A Python logging package designed to facilitate easy and reproducible experimenting in research. It helps in tracking experiment logs and configurations to ensure scientific reproducibility.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "experiment_logging",
+        "reproducibility"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MingSun-Tse/smilelogging",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "logging",
+        "reproducibility",
+        "research-tools"
+      ],
+      "id": 28
+    },
+    {
+      "name": "PipelineX",
+      "one_line_profile": "ML pipeline builder for experimentation with Kedro and MLflow",
+      "detailed_description": "A Python package to build machine learning pipelines for experimentation, integrating with Kedro and MLflow. It focuses on simplifying the ML lifecycle management and experiment tracking.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "pipeline_orchestration",
+        "experiment_tracking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Minyus/pipelinex",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "ml-pipeline",
+        "kedro",
+        "mlflow",
+        "experimentation"
+      ],
+      "id": 29
+    },
+    {
+      "name": "CoolGraph",
+      "one_line_profile": "Graph Neural Network (GNN) library",
+      "detailed_description": "A library designed to make Graph Neural Networks (GNNs) easy to start with. GNNs are widely used in scientific modeling (e.g., molecular structures, physics simulations).",
+      "domains": [
+        "AI3",
+        "AI6"
+      ],
+      "subtask_category": [
+        "graph_learning",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/MobileTeleSystems/CoolGraph",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "graph-neural-networks",
+        "deep-learning"
+      ],
+      "id": 30
+    },
+    {
+      "name": "Oxen",
+      "one_line_profile": "High-performance data version control system for ML datasets",
+      "detailed_description": "A lightning-fast data version control system designed for structured and unstructured machine learning datasets. It aims to make versioning datasets as easy as versioning code, serving as a faster alternative to DVC for large scientific artifacts.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "artifact_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/Oxen-AI/Oxen",
+      "help_website": [
+        "https://oxen.ai"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-version-control",
+        "machine-learning",
+        "dvc-alternative",
+        "rust"
+      ],
+      "id": 31
+    },
+    {
+      "name": "Pachyderm Acoustic (Grasshopper)",
+      "one_line_profile": "Acoustical simulation extension for Grasshopper",
+      "detailed_description": "The Grasshopper extension for Pachyderm Acoustic, enabling acoustical simulation and analysis within the Grasshopper parametric modeling environment. Used for scientific modeling of sound propagation.",
+      "domains": [
+        "AI6",
+        "Physics"
+      ],
+      "subtask_category": [
+        "acoustic_simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/PachydermAcoustic/PachydermAcoustic_Grasshopper",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "acoustics",
+        "simulation",
+        "grasshopper",
+        "parametric-modeling"
+      ],
+      "id": 32
+    },
+    {
+      "name": "Pachyderm Acoustic (Rhino)",
+      "one_line_profile": "Acoustical simulation plugin for Rhinoceros",
+      "detailed_description": "A popular acoustical simulation plugin for Rhinoceros 3D. It performs scientific simulation of room acoustics and sound analysis.",
+      "domains": [
+        "AI6",
+        "Physics"
+      ],
+      "subtask_category": [
+        "acoustic_simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/PachydermAcoustic/PachydermAcoustic_Rhinoceros",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "acoustics",
+        "simulation",
+        "rhinoceros"
+      ],
+      "id": 33
+    },
+    {
+      "name": "WebGL-Fluid-Simulation",
+      "one_line_profile": "Real-time fluid dynamics simulation solver in browser",
+      "detailed_description": "A WebGL-based implementation of fluid dynamics simulation (Navier-Stokes equations). While often used for visualization, it is a functional physics solver for fluid behavior.",
+      "domains": [
+        "AI6",
+        "Physics"
+      ],
+      "subtask_category": [
+        "fluid_simulation",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/PavelDoGreat/WebGL-Fluid-Simulation",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cfd",
+        "fluid-dynamics",
+        "webgl",
+        "simulation"
+      ],
+      "id": 34
+    },
+    {
+      "name": "RL Reach",
+      "one_line_profile": "Platform for reproducible reinforcement learning experiments",
+      "detailed_description": "A platform designed for running reproducible reinforcement learning (RL) experiments, specifically focusing on reaching tasks in robotics/simulation environments.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "reinforcement_learning",
+        "reproducibility"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PierreExeter/rl_reach",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "reinforcement-learning",
+        "reproducibility",
+        "robotics"
+      ],
+      "id": 35
+    },
+    {
+      "name": "FluidX3D",
+      "one_line_profile": "High-performance lattice Boltzmann CFD software",
+      "detailed_description": "A highly optimized Computational Fluid Dynamics (CFD) software based on the Lattice Boltzmann Method (LBM). It runs on GPUs and CPUs via OpenCL, designed for high-performance scientific simulation.",
+      "domains": [
+        "AI6",
+        "Physics"
+      ],
+      "subtask_category": [
+        "cfd_simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ProjectPhysX/FluidX3D",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "lattice-boltzmann",
+        "opencl",
+        "hpc"
+      ],
+      "id": 36
+    },
+    {
+      "name": "ReproZip",
+      "one_line_profile": "Tool for packing and reproducing experiments by tracing system calls",
+      "detailed_description": "ReproZip is a tool aimed at simplifying the process of creating reproducible experiments from command-line executions. It tracks operating system calls to identify and package all necessary files and dependencies, allowing the experiment to be replayed on different environments.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "reproducibility",
+        "experiment_packing",
+        "provenance_tracking"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/VIDA-NYU/reprozip",
+      "help_website": [
+        "https://www.reprozip.org/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "reproducibility",
+        "provenance",
+        "experiment-management"
+      ],
+      "id": 37
+    },
+    {
+      "name": "SoptSC",
+      "one_line_profile": "Single-cell RNA-seq data analysis tool for clustering and lineage inference",
+      "detailed_description": "SoptSC is a MATLAB-based tool for single-cell data analysis. It performs unsupervised inference of clustering, cell lineage, pseudotime, and cell-cell communication networks from scRNA-seq data using similarity matrix optimization.",
+      "domains": [
+        "AI4",
+        "AI4-06"
+      ],
+      "subtask_category": [
+        "clustering",
+        "lineage_inference",
+        "scrna_seq_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/WangShuxiong/SoptSC",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "rna-seq",
+        "clustering",
+        "lineage-inference"
+      ],
+      "id": 38
+    },
+    {
+      "name": "WaterLily.jl",
+      "one_line_profile": "Fast and simple fluid simulator for solving Navier-Stokes equations",
+      "detailed_description": "WaterLily.jl is a Julia library for solving the incompressible Navier-Stokes equations on Cartesian grids. It is designed to be fast, simple, and backend-agnostic, suitable for fluid dynamics simulations.",
+      "domains": [
+        "AI6",
+        "AI4"
+      ],
+      "subtask_category": [
+        "fluid_simulation",
+        "cfd",
+        "navier_stokes"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/WaterLily-jl/WaterLily.jl",
+      "help_website": [
+        "https://waterlily-jl.github.io/WaterLily.jl/dev/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "fluid-dynamics",
+        "cfd",
+        "julia",
+        "simulation"
+      ],
+      "id": 39
+    },
+    {
+      "name": "Geochemistrypi",
+      "one_line_profile": "Automated machine learning framework for geochemistry data analysis",
+      "detailed_description": "Geochemistryπ is an open-sourced, highly automated machine learning Python framework designed specifically for data-driven geochemistry discovery. It simplifies the application of ML techniques to geochemical datasets.",
+      "domains": [
+        "AI4",
+        "AI4-01"
+      ],
+      "subtask_category": [
+        "geochemistry_analysis",
+        "data_mining",
+        "automated_ml"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ZJUEarthData/Geochemistrypi",
+      "help_website": [
+        "https://geochemistrypi.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "geochemistry",
+        "machine-learning",
+        "earth-science",
+        "automl"
+      ],
+      "id": 40
+    },
+    {
+      "name": "Aim",
+      "one_line_profile": "An easy-to-use & supercharged open-source experiment tracker",
+      "detailed_description": "Aim is an open-source experiment tracking tool that logs AI metadata (hyperparameters, metrics, images, etc.) and provides a UI for comparison and visualization, facilitating reproducible research.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aimhubio/aim",
+      "help_website": [
+        "https://aimstack.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "experiment-tracking",
+        "mlops",
+        "visualization"
+      ],
+      "id": 41
+    },
+    {
+      "name": "AimLflow",
+      "one_line_profile": "Aim-MLflow integration for syncing experiments",
+      "detailed_description": "A tool that synchronizes MLflow runs with Aim, allowing users to leverage Aim's visualization and tracking capabilities on top of existing MLflow setups.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "artifact_sync"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aimhubio/aimlflow",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mlflow",
+        "integration",
+        "experiment-tracking"
+      ],
+      "id": 42
+    },
+    {
+      "name": "FeatHub",
+      "one_line_profile": "Stream-batch unified feature store for real-time machine learning",
+      "detailed_description": "FeatHub is a feature store that simplifies feature engineering and management for machine learning, supporting both streaming and batch data processing with point-in-time correctness.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "feature_store",
+        "data_versioning"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/alibaba/feathub",
+      "help_website": [
+        "https://github.com/alibaba/feathub"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "feature-store",
+        "flink",
+        "machine-learning"
+      ],
+      "id": 43
+    },
+    {
+      "name": "MLflow Export-Import",
+      "one_line_profile": "Tools to export and import MLflow experiments, runs, or models",
+      "detailed_description": "A set of utilities to migrate MLflow objects (experiments, runs, registered models) between different MLflow tracking servers or for backup purposes.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_management",
+        "migration"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/amesar/mlflow-export-import",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mlflow",
+        "migration",
+        "backup"
+      ],
+      "id": 44
+    },
+    {
+      "name": "Hamilton",
+      "one_line_profile": "Modular dataflow definition with lineage and metadata tracking",
+      "detailed_description": "Apache Hamilton is a framework for defining dataflows in Python that automatically tracks lineage and metadata, facilitating reproducible feature engineering and data processing pipelines.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "pipeline_orchestration",
+        "lineage_tracking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/apache/hamilton",
+      "help_website": [
+        "https://hamilton.dagworks.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "dataflow",
+        "lineage",
+        "feature-engineering"
+      ],
+      "id": 45
+    },
+    {
+      "name": "AIOps Modules",
+      "one_line_profile": "Reusable IaC modules for ML and GenAI infrastructure on AWS",
+      "detailed_description": "A collection of Infrastructure as Code (IaC) modules designed to accelerate the deployment and operation of Machine Learning and Generative AI workloads on AWS.",
+      "domains": [
+        "AI6",
+        "AI6-01"
+      ],
+      "subtask_category": [
+        "infrastructure_provisioning",
+        "mlops_deployment"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/awslabs/aiops-modules",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "iac",
+        "aws",
+        "mlops"
+      ],
+      "id": 46
+    },
+    {
+      "name": "Data on EKS",
+      "one_line_profile": "Tool to build, deploy and scale Data Platforms on Amazon EKS",
+      "detailed_description": "Data on EKS (DoEKS) provides blueprints and tools to deploy scalable data and machine learning platforms (like Spark, Ray, Kubeflow) on Amazon EKS, optimizing for performance and cost.",
+      "domains": [
+        "AI6",
+        "AI6-01"
+      ],
+      "subtask_category": [
+        "platform_engineering",
+        "cluster_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "HCL",
+      "repo_url": "https://github.com/awslabs/data-on-eks",
+      "help_website": [
+        "https://awslabs.github.io/data-on-eks/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "kubernetes",
+        "eks",
+        "data-platform"
+      ],
+      "id": 47
+    },
+    {
+      "name": "Cloud Detection Model for Sentinel-2",
+      "one_line_profile": "Deep learning model for cloud detection in Sentinel-2 satellite imagery",
+      "detailed_description": "A semantic segmentation model based on U-Net/ResNet architectures specifically trained to detect clouds in Sentinel-2 satellite imagery, facilitating preprocessing for remote sensing and earth science analysis.",
+      "domains": [
+        "AI4-Earth",
+        "AI6"
+      ],
+      "subtask_category": [
+        "cloud_detection",
+        "image_segmentation",
+        "preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/azavea/cloud-model",
+      "help_website": [
+        "https://github.com/azavea/cloud-model"
+      ],
+      "license": "MIT",
+      "tags": [
+        "remote-sensing",
+        "sentinel-2",
+        "cloud-masking",
+        "earth-science"
+      ],
+      "id": 48
+    },
+    {
+      "name": "InfiniStore",
+      "one_line_profile": "High-performance KV cache store for distributed LLM inference",
+      "detailed_description": "A scalable key-value storage system designed specifically for managing KV caches in distributed Large Language Model (LLM) inference, optimizing memory usage and access latency for AI workloads.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "kv_caching",
+        "inference_acceleration",
+        "memory_management"
+      ],
+      "application_level": "service",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/bytedance/InfiniStore",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "kv-cache",
+        "distributed-systems",
+        "inference"
+      ],
+      "id": 49
+    },
+    {
+      "name": "Calkit",
+      "one_line_profile": "Lightweight research project management and reproducibility tool",
+      "detailed_description": "A command-line tool designed for researchers to manage project environments, version control data and code, and execute reproducible pipelines, simplifying the complexity of Git and DVC for scientific workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "reproducibility",
+        "data_versioning",
+        "environment_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/calkit/calkit",
+      "help_website": [
+        "https://calkit.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "reproducibility",
+        "git",
+        "research-management",
+        "pipeline"
+      ],
+      "id": 50
+    },
+    {
+      "name": "PARSEC Benchmark",
+      "one_line_profile": "Benchmark suite for shared-memory parallel systems",
+      "detailed_description": "A ported and maintained version of the PARSEC Benchmark suite, widely used in High Performance Computing (HPC) research to evaluate the performance of shared-memory parallel systems using diverse workloads.",
+      "domains": [
+        "AI6"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_evaluation",
+        "hpc_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/cirosantilli/parsec-benchmark",
+      "help_website": [
+        "http://parsec.cs.princeton.edu"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "hpc",
+        "benchmark",
+        "parallel-computing"
+      ],
+      "id": 51
+    },
+    {
+      "name": "ClearML",
+      "one_line_profile": "Integrated MLOps platform for experiment tracking and orchestration",
+      "detailed_description": "A comprehensive open-source MLOps platform that provides tools for experiment management, data versioning, and pipeline orchestration, widely used in AI research to ensure reproducibility and manage scientific machine learning workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03",
+        "AI6-01"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "artifact_management",
+        "pipeline_orchestration"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/clearml/clearml",
+      "help_website": [
+        "https://clear.ml/docs"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "mlops",
+        "experiment-tracking",
+        "reproducibility",
+        "data-management"
+      ],
+      "id": 52
+    },
+    {
+      "name": "ClearML Server",
+      "one_line_profile": "Backend server for the ClearML MLOps platform",
+      "detailed_description": "The backend infrastructure for ClearML, handling data persistence, API requests, and coordination for experiment tracking and orchestration services.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "experiment_tracking_backend",
+        "service_orchestration"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/clearml/clearml-server",
+      "help_website": [
+        "https://clear.ml/docs"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "mlops",
+        "backend",
+        "server"
+      ],
+      "id": 53
+    },
+    {
+      "name": "OMLMD",
+      "one_line_profile": "OCI Artifact specification and tool for ML models",
+      "detailed_description": "A tool and specification for packaging Machine Learning models and their metadata as OCI (Open Container Initiative) artifacts, facilitating the distribution and management of ML assets in container registries.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "model_packaging",
+        "artifact_management",
+        "metadata_handling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/containers/omlmd",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "oci",
+        "ml-models",
+        "containers",
+        "artifact-management"
+      ],
+      "id": 54
+    },
+    {
+      "name": "git-rdm",
+      "one_line_profile": "Research data management plugin for Git to track data provenance and publication",
+      "detailed_description": "A plugin for the Git version control system designed to facilitate research data management (RDM). It allows researchers to curate, version control, and share their research data alongside their code, bridging the gap between version control and data repositories.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "artifact_management",
+        "reproducibility"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ctjacobs/git-rdm",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "git",
+        "research-data-management",
+        "reproducibility",
+        "provenance"
+      ],
+      "id": 55
+    },
+    {
+      "name": "DataTracer",
+      "one_line_profile": "Data lineage tracing library for data science workflows",
+      "detailed_description": "A library designed to trace data lineage and provenance in data science and machine learning workflows. It helps in understanding the origin and transformation of data, which is critical for reproducibility in scientific data processing.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_provenance",
+        "lineage_tracing",
+        "reproducibility"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/data-dev/DataTracer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-lineage",
+        "provenance",
+        "data-science",
+        "reproducibility"
+      ],
+      "id": 56
+    },
+    {
+      "name": "RaceID3_StemID2_package",
+      "one_line_profile": "Algorithm for cell type and lineage inference from single-cell RNA-seq data",
+      "detailed_description": "An R package implementing the RaceID3 and StemID2 algorithms. It is used for the identification of rare cell types and the inference of lineage trees and differentiation trajectories from single-cell RNA-sequencing data.",
+      "domains": [
+        "Life Sciences",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "cell_type_inference",
+        "lineage_inference",
+        "single_cell_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/dgrun/RaceID3_StemID2_package",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "scrna-seq",
+        "lineage-inference",
+        "cell-type-identification",
+        "bioinformatics"
+      ],
+      "id": 57
+    },
+    {
+      "name": "StemID",
+      "one_line_profile": "Algorithm for lineage tree inference from single-cell data",
+      "detailed_description": "An algorithm for the inference of cell types and lineage trees from single-cell RNA-seq data. It focuses on identifying differentiation trajectories and stem cell populations.",
+      "domains": [
+        "Life Sciences",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "lineage_inference",
+        "trajectory_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/dgrun/StemID",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "scrna-seq",
+        "lineage-tree",
+        "differentiation",
+        "bioinformatics"
+      ],
+      "id": 58
+    },
+    {
+      "name": "Fluid Engine Dev",
+      "one_line_profile": "Fluid simulation engine for computer graphics and physics applications",
+      "detailed_description": "A C++ library for simulating fluid dynamics, often used in computer graphics but applicable to physics-based modeling. It provides solvers for grid-based and particle-based fluid simulations.",
+      "domains": [
+        "Physics",
+        "Computer_Graphics",
+        "Simulation"
+      ],
+      "subtask_category": [
+        "fluid_dynamics_simulation",
+        "physics_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/doyubkim/fluid-engine-dev",
+      "help_website": [
+        "http://doyubkim.github.io/fluid-engine-dev/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fluid-simulation",
+        "physics-engine",
+        "cfd"
+      ],
+      "id": 59
+    },
+    {
+      "name": "DuckDB Delta",
+      "one_line_profile": "DuckDB extension for reading and writing Delta Lake tables",
+      "detailed_description": "An extension for DuckDB that enables direct interaction with Delta Lake tables, facilitating data versioning and management in scientific data lakes and analytical workflows.",
+      "domains": [
+        "AI6-03",
+        "Data_Engineering"
+      ],
+      "subtask_category": [
+        "data_access",
+        "data_versioning"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/duckdb/duckdb-delta",
+      "help_website": [
+        "https://duckdb.org/docs/extensions/delta"
+      ],
+      "license": "MIT",
+      "tags": [
+        "duckdb",
+        "delta-lake",
+        "data-lake",
+        "versioning"
+      ],
+      "id": 60
+    },
+    {
+      "name": "paleotree",
+      "one_line_profile": "R library for analyzing and simulating phylogenies of extinct lineages",
+      "detailed_description": "A package for analyzing, time-scaling, and simulating phylogenies of extinct/fossil lineages, including plotting diversity curves for stratigraphic range data.",
+      "domains": [
+        "Biology",
+        "Paleontology"
+      ],
+      "subtask_category": [
+        "phylogenetic_analysis",
+        "evolutionary_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/dwbapst/paleotree",
+      "help_website": [
+        "https://cran.r-project.org/web/packages/paleotree/index.html"
+      ],
+      "license": "CC0-1.0",
+      "tags": [
+        "phylogeny",
+        "fossils",
+        "evolution",
+        "time-scaling"
+      ],
+      "id": 61
+    },
+    {
+      "name": "Elementary",
+      "one_line_profile": "dbt-native data observability and quality monitoring solution",
+      "detailed_description": "An open-source data observability solution for data engineers using dbt. It provides monitoring for data pipelines, anomaly detection, and data quality reporting, ensuring the reliability of data artifacts.",
+      "domains": [
+        "AI6-03",
+        "Data_Engineering"
+      ],
+      "subtask_category": [
+        "data_quality_control",
+        "pipeline_monitoring"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/elementary-data/elementary",
+      "help_website": [
+        "https://docs.elementary-data.com/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-observability",
+        "dbt",
+        "data-quality",
+        "monitoring"
+      ],
+      "id": 62
+    },
+    {
+      "name": "SCICHEM",
+      "one_line_profile": "Puff model with chemistry for simulating atmospheric plume transport",
+      "detailed_description": "A version of the SCIPUFF puff model incorporating chemical transformations. It simulates the transport and chemical evolution of power plant plumes in the atmosphere.",
+      "domains": [
+        "Environmental_Science",
+        "Atmospheric_Physics"
+      ],
+      "subtask_category": [
+        "atmospheric_dispersion_modeling",
+        "chemical_transport_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/epri-dev/SCICHEM_archived",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "atmospheric-model",
+        "plume-simulation",
+        "chemistry"
+      ],
+      "id": 63
+    },
+    {
+      "name": "papermill-mlflow",
+      "one_line_profile": "Integration for tracking Papermill notebook executions in MLflow",
+      "detailed_description": "A utility that connects Papermill (parameterized notebooks) with MLflow, enabling automatic tracking of parameters, metrics, and artifacts from notebook-based experiments.",
+      "domains": [
+        "AI6-03",
+        "Data_Science"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "reproducibility"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/eugeneyan/papermill-mlflow",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "mlflow",
+        "papermill",
+        "experiment-tracking",
+        "jupyter"
+      ],
+      "id": 64
+    },
+    {
+      "name": "IEEE-118 Power Flow Data Pipeline",
+      "one_line_profile": "Data pipeline for generating IEEE-118 power system flow cases",
+      "detailed_description": "A data processing pipeline designed to build and structure power flow cases for the IEEE-118 bus power system, facilitating simulation and analysis in power engineering.",
+      "domains": [
+        "Power_Systems",
+        "Engineering"
+      ],
+      "subtask_category": [
+        "data_generation",
+        "power_flow_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/evgenytsydenov/ieee118_power_flow_data",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "power-systems",
+        "ieee-118",
+        "data-pipeline"
+      ],
+      "id": 65
+    },
+    {
+      "name": "Expfactory",
+      "one_line_profile": "Framework for generating reproducible experiment containers",
+      "detailed_description": "Software to generate reproducible containers (Docker/Singularity) containing a battery of behavioral experiments, ensuring consistent runtime environments for scientific studies.",
+      "domains": [
+        "AI6",
+        "Psychology",
+        "Neuroscience"
+      ],
+      "subtask_category": [
+        "experiment_deployment",
+        "reproducibility"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/expfactory/expfactory",
+      "help_website": [
+        "https://expfactory.github.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "reproducibility",
+        "containers",
+        "behavioral-experiments"
+      ],
+      "id": 66
+    },
+    {
+      "name": "Data Lineage Doris",
+      "one_line_profile": "Data lineage tracking tool for Apache Doris",
+      "detailed_description": "A tool for parsing and tracking table and field-level lineage within Apache Doris, aiding in data provenance and impact analysis for data warehouses.",
+      "domains": [
+        "AI6-03",
+        "Data_Engineering"
+      ],
+      "subtask_category": [
+        "data_lineage",
+        "provenance_tracking"
+      ],
+      "application_level": "tool",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/eyesmoons/data-lineage-doris",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "data-lineage",
+        "apache-doris",
+        "provenance"
+      ],
+      "id": 67
+    },
+    {
+      "name": "dbt Feature Store",
+      "one_line_profile": "Feature store implementation using dbt macros",
+      "detailed_description": "A lightweight feature store implementation that allows defining and managing machine learning features directly within dbt repositories using macros.",
+      "domains": [
+        "AI6-03",
+        "Machine_Learning"
+      ],
+      "subtask_category": [
+        "feature_management",
+        "feature_store"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fal-ai/dbt_feature_store",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "dbt",
+        "feature-store",
+        "mlops"
+      ],
+      "id": 68
+    },
+    {
+      "name": "Feast",
+      "one_line_profile": "Open source feature store for machine learning",
+      "detailed_description": "A leading open-source feature store that manages the serving of features for training and inference, ensuring consistency between offline and online environments.",
+      "domains": [
+        "AI6-03",
+        "Machine_Learning"
+      ],
+      "subtask_category": [
+        "feature_serving",
+        "feature_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/feast-dev/feast",
+      "help_website": [
+        "https://feast.dev/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "feature-store",
+        "mlops",
+        "feature-serving"
+      ],
+      "id": 69
+    },
+    {
+      "name": "Featureform",
+      "one_line_profile": "Virtual feature store for existing data infrastructure",
+      "detailed_description": "A virtual feature store that turns existing data infrastructure (like Spark, Redis, Snowflake) into a feature store, managing feature definitions, lineage, and serving.",
+      "domains": [
+        "AI6-03",
+        "Machine_Learning"
+      ],
+      "subtask_category": [
+        "feature_management",
+        "feature_store"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/featureform/featureform",
+      "help_website": [
+        "https://www.featureform.com/"
+      ],
+      "license": "MPL-2.0",
+      "tags": [
+        "feature-store",
+        "mlops",
+        "virtual-feature-store"
+      ],
+      "id": 70
+    },
+    {
+      "name": "Featury",
+      "one_line_profile": "Machine learning feature store library",
+      "detailed_description": "A feature store library designed to simplify feature engineering and serving for machine learning applications.",
+      "domains": [
+        "AI6-03",
+        "Machine_Learning"
+      ],
+      "subtask_category": [
+        "feature_store",
+        "feature_engineering"
+      ],
+      "application_level": "library",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/findify/featury",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "feature-store",
+        "scala",
+        "ml"
+      ],
+      "id": 71
+    },
+    {
+      "name": "Fluid",
+      "one_line_profile": "Elastic data abstraction and acceleration for AI/BigData on Kubernetes",
+      "detailed_description": "A cloud-native data orchestration and acceleration system that abstracts data access for AI and Big Data applications, providing caching and data locality in Kubernetes environments.",
+      "domains": [
+        "AI6-03",
+        "Cloud_Native"
+      ],
+      "subtask_category": [
+        "data_orchestration",
+        "data_acceleration",
+        "caching"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/fluid-cloudnative/fluid",
+      "help_website": [
+        "https://fluid-cloudnative.github.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "kubernetes",
+        "data-acceleration",
+        "caching",
+        "cncf"
+      ],
+      "id": 72
+    },
+    {
+      "name": "Flyte Data Catalog",
+      "one_line_profile": "Service for indexing and managing parameterized data artifacts in Flyte workflows",
+      "detailed_description": "Data Catalog is a core service within the Flyte ecosystem designed to index and manage strongly-typed data artifacts across revisions. It enables efficient caching (memoization) of task outputs and ensures reproducibility by tracking data lineage in scientific and ML workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_management",
+        "data_lineage",
+        "caching"
+      ],
+      "application_level": "service",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/flyteorg/datacatalog",
+      "help_website": [
+        "https://flyte.org"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "flyte",
+        "artifact-management",
+        "caching",
+        "mlops"
+      ],
+      "id": 73
+    },
+    {
+      "name": "alluxiofs",
+      "one_line_profile": "Fsspec implementation for Alluxio distributed caching",
+      "detailed_description": "Alluxiofs provides a Python filesystem interface (fsspec) for Alluxio, enabling scientific data processing tools (like Pandas, Dask, and Ray) to leverage Alluxio's distributed caching capabilities for accelerated data access.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_access",
+        "caching"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fsspec/alluxiofs",
+      "help_website": [
+        "https://github.com/fsspec/alluxiofs"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "fsspec",
+        "alluxio",
+        "distributed-caching",
+        "python"
+      ],
+      "id": 74
+    },
+    {
+      "name": "FuseML",
+      "one_line_profile": "Orchestration framework for MLOps and scientific workflows",
+      "detailed_description": "FuseML is an MLOps framework designed to dynamically integrate various AI/ML tools. It provides a flexible orchestration layer for managing the lifecycle of machine learning models and scientific data processing pipelines.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "mlops"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/fuseml/fuseml",
+      "help_website": [
+        "https://fuseml.github.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "mlops",
+        "orchestration",
+        "workflow",
+        "integration"
+      ],
+      "id": 75
+    },
+    {
+      "name": "git-lfs-fuse",
+      "one_line_profile": "FUSE filesystem for mounting Git LFS repositories",
+      "detailed_description": "Git LFS FUSE allows users to mount remote Git LFS repositories as a local filesystem. This enables instant access to large scientific models and datasets without downloading the entire repository, facilitating efficient data exploration and lazy loading.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_access",
+        "dataset_management"
+      ],
+      "application_level": "tool",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/git-lfs-fuse/git-lfs-fuse",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "git-lfs",
+        "fuse",
+        "data-access",
+        "mounting"
+      ],
+      "id": 76
+    },
+    {
+      "name": "Git LFS",
+      "one_line_profile": "Git extension for versioning large files",
+      "detailed_description": "Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server. It is the industry standard for versioning large scientific datasets and ML models.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "artifact_management"
+      ],
+      "application_level": "tool",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/git-lfs/git-lfs",
+      "help_website": [
+        "https://git-lfs.github.com/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "version-control",
+        "large-file-storage",
+        "data-versioning"
+      ],
+      "id": 77
+    },
+    {
+      "name": "lfs-test-server",
+      "one_line_profile": "Standalone Git LFS server implementation",
+      "detailed_description": "A simple, standalone implementation of the Git LFS server API. While originally designed for testing, it serves as a lightweight artifact store for hosting scientific datasets and models in self-managed environments.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_store",
+        "data_hosting"
+      ],
+      "application_level": "service",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/git-lfs/lfs-test-server",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "git-lfs",
+        "server",
+        "artifact-store"
+      ],
+      "id": 78
+    },
+    {
+      "name": "FluidNet",
+      "one_line_profile": "Accelerating Eulerian Fluid Simulation With Convolutional Networks",
+      "detailed_description": "FluidNet is a deep learning framework for accelerating Eulerian fluid simulations. It uses Convolutional Neural Networks (ConvNets) to predict fluid dynamics, offering a data-driven approach to scientific simulation.",
+      "domains": [
+        "AI6"
+      ],
+      "subtask_category": [
+        "fluid_simulation",
+        "physics_informed_ml"
+      ],
+      "application_level": "solver",
+      "primary_language": "Lua",
+      "repo_url": "https://github.com/google/FluidNet",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "deep-learning",
+        "fluid-simulation",
+        "physics"
+      ],
+      "id": 79
+    },
+    {
+      "name": "JAX-CFD",
+      "one_line_profile": "Computational Fluid Dynamics in JAX",
+      "detailed_description": "JAX-CFD is a library for computational fluid dynamics (CFD) written in JAX. It enables differentiable physics simulations, allowing for gradient-based optimization and integration with machine learning models for scientific research.",
+      "domains": [
+        "AI6"
+      ],
+      "subtask_category": [
+        "fluid_simulation",
+        "cfd",
+        "differentiable_physics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/google/jax-cfd",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "jax",
+        "cfd",
+        "fluid-dynamics",
+        "simulation"
+      ],
+      "id": 80
+    },
+    {
+      "name": "Space",
+      "one_line_profile": "Unified storage framework for the machine learning lifecycle",
+      "detailed_description": "Space is a unified storage framework designed to manage data across the entire machine learning lifecycle. It provides abstractions for dataset management, versioning, and access, facilitating reproducible ML research.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_storage",
+        "dataset_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/google/space",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "storage",
+        "ml-lifecycle",
+        "dataset-management"
+      ],
+      "id": 81
+    },
+    {
+      "name": "Ground",
+      "one_line_profile": "Open-source data context service for lineage and versioning",
+      "detailed_description": "Ground is a vendor-neutral data context service that manages the lineage, metadata, and versioning of data artifacts. It serves as a critical infrastructure component for ensuring reproducibility and traceability in scientific data workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_lineage",
+        "metadata_management",
+        "data_versioning"
+      ],
+      "application_level": "service",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/ground-context/ground",
+      "help_website": [
+        "http://www.ground-context.org/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-lineage",
+        "metadata",
+        "versioning",
+        "reproducibility"
+      ],
+      "id": 82
+    },
+    {
+      "name": "carla_apollo_bridge",
+      "one_line_profile": "Bridge between Carla simulator and Apollo control stack",
+      "detailed_description": "This tool provides a data and control bridge enabling communication between the Carla autonomous driving simulator and the Apollo open autonomous driving platform. It facilitates scientific research in robotics and autonomous systems by linking simulation with control logic.",
+      "domains": [
+        "AI6"
+      ],
+      "subtask_category": [
+        "simulation_bridge",
+        "robotics_simulation"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/guardstrikelab/carla_apollo_bridge",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "carla",
+        "apollo",
+        "autonomous-driving",
+        "simulation"
+      ],
+      "id": 83
+    },
+    {
+      "name": "Spark Atlas Connector",
+      "one_line_profile": "Connector to track Spark data lineage in Apache Atlas for data governance",
+      "detailed_description": "A connector that enables tracking of data lineage and metadata from Apache Spark jobs into Apache Atlas. This is essential for scientific data governance, reproducibility, and provenance tracking in large-scale data processing pipelines.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_lineage",
+        "provenance_tracking"
+      ],
+      "application_level": "library",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/hortonworks-spark/spark-atlas-connector",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-lineage",
+        "spark",
+        "atlas",
+        "provenance"
+      ],
+      "id": 84
+    },
+    {
+      "name": "Superglue",
+      "one_line_profile": "Data lineage tracking and visualization tool for complex pipelines",
+      "detailed_description": "A lineage-tracking tool designed to visualize the propagation of data through complex pipelines composed of tables, jobs, and reports. It helps in understanding data dependencies and provenance, which is critical for reproducible scientific workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_lineage",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/intuit/superglue",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "lineage",
+        "data-visualization",
+        "pipeline-tracking"
+      ],
+      "id": 85
+    },
+    {
+      "name": "GPU-Jupyter",
+      "one_line_profile": "GPU-accelerated JupyterLab environment for reproducible deep learning",
+      "detailed_description": "A specialized JupyterLab environment stack pre-configured with GPU support (CUDA/cuDNN) and data science libraries (TensorFlow, PyTorch). It serves as a reproducible runtime platform for conducting deep learning experiments in scientific research.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "reproducible_environment",
+        "interactive_computing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/iot-salzburg/gpu-jupyter",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "jupyter",
+        "gpu",
+        "reproducibility",
+        "deep-learning"
+      ],
+      "id": 86
+    },
+    {
+      "name": "GTO",
+      "one_line_profile": "Git Tag Ops for artifact and model registry management",
+      "detailed_description": "A tool that turns a Git repository into an Artifact Registry or Model Registry using Git tags. It allows scientific teams to version, register, and manage the lifecycle of machine learning models and data artifacts directly within their version control system.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_management",
+        "model_registry"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/iterative/gto",
+      "help_website": [
+        "https://iterative.github.io/gto/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "gitops",
+        "model-registry",
+        "artifact-management",
+        "mlops"
+      ],
+      "id": 87
+    },
+    {
+      "name": "pachypy",
+      "one_line_profile": "Python client library for Pachyderm data lineage and versioning",
+      "detailed_description": "A Python client library for Pachyderm, a data versioning and lineage platform for machine learning and scientific data processing. It simplifies the interaction with Pachyderm pipelines and data repositories.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "pipeline_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/itssimon/pachypy",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pachyderm",
+        "data-lineage",
+        "versioning",
+        "python-client"
+      ],
+      "id": 88
+    },
+    {
+      "name": "Rudolfs",
+      "one_line_profile": "High-performance caching Git LFS server",
+      "detailed_description": "A high-performance, caching Git LFS (Large File Storage) server with support for AWS S3 and local storage backends. It facilitates the management and efficient retrieval of large scientific artifacts (datasets, models) in version-controlled workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_storage",
+        "caching"
+      ],
+      "application_level": "service",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/jasonwhite/rudolfs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "git-lfs",
+        "caching",
+        "artifact-storage",
+        "rust"
+      ],
+      "id": 89
+    },
+    {
+      "name": "sci-pype",
+      "one_line_profile": "Machine Learning API and pipeline framework with caching",
+      "detailed_description": "A Machine Learning API framework featuring native Redis caching and S3 export/import capabilities. It is designed to build, train, test, and analyze entire datasets, providing a structured pipeline for scientific data analysis and reproducibility.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "pipeline_management",
+        "caching",
+        "data_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jay-johnson/sci-pype",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pipeline",
+        "caching",
+        "machine-learning",
+        "reproducibility"
+      ],
+      "id": 90
+    },
+    {
+      "name": "DeltaLakeReader",
+      "one_line_profile": "Lightweight reader for Delta Lake tables without Spark",
+      "detailed_description": "A Python library to read Delta Lake tables directly without requiring a Spark engine. This enables lightweight access to versioned scientific datasets stored in Delta format, facilitating data analysis in non-Spark environments.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_access",
+        "data_versioning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jeppe742/DeltaLakeReader",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "delta-lake",
+        "data-access",
+        "python"
+      ],
+      "id": 91
+    },
+    {
+      "name": "SharedDataset",
+      "one_line_profile": "Shared memory caching wrapper for PyTorch Datasets",
+      "detailed_description": "A PyTorch Dataset extension that caches samples in shared memory, making them accessible globally to all processes to reduce memory redundancy and accelerate data loading in machine learning pipelines.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "caching",
+        "data_loading"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jotaf98/shareddataset",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "pytorch",
+        "caching",
+        "shared-memory",
+        "data-loading"
+      ],
+      "id": 92
+    },
+    {
+      "name": "JuiceFS",
+      "one_line_profile": "Distributed POSIX file system for cloud-native AI and big data",
+      "detailed_description": "A distributed POSIX file system built on top of object storage (e.g., S3) and a metadata engine (e.g., Redis), widely used in AI/Science for high-performance data caching, artifact storage, and sharing across containerized environments.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_storage",
+        "caching",
+        "distributed_storage"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/juicedata/juicefs",
+      "help_website": [
+        "https://juicefs.com/docs/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "distributed-filesystem",
+        "posix",
+        "caching",
+        "cloud-native",
+        "storage"
+      ],
+      "id": 93
+    },
+    {
+      "name": "K3ai",
+      "one_line_profile": "Lightweight AI infrastructure stack deployer",
+      "detailed_description": "A tool designed to rapidly deploy and configure AI infrastructure stacks (including Kubernetes and AI tools) for experimentation and development, facilitating reproducible runtime environments for scientific AI workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "infrastructure_deployment",
+        "environment_setup"
+      ],
+      "application_level": "tool",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/k3ai/k3ai",
+      "help_website": [
+        "https://docs.k3ai.in"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "mlops",
+        "kubernetes",
+        "infrastructure",
+        "deployment"
+      ],
+      "id": 94
+    },
+    {
+      "name": "Karamel",
+      "one_line_profile": "Orchestration tool for reproducible distributed experiments",
+      "detailed_description": "A tool for defining, provisioning, and deploying distributed systems and experiments on cloud infrastructure, ensuring reproducibility of runtime environments for data-intensive research.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "experiment_orchestration",
+        "reproducibility"
+      ],
+      "application_level": "tool",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/karamelchef/karamel",
+      "help_website": [
+        "http://www.karamel.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "distributed-systems",
+        "reproducibility",
+        "orchestration",
+        "cloud"
+      ],
+      "id": 95
+    },
+    {
+      "name": "Klever Model Registry",
+      "one_line_profile": "Cloud-native machine learning model registry",
+      "detailed_description": "A cloud-native registry for managing machine learning models, providing versioning, storage, and metadata management for ML artifacts in scientific workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "model_management",
+        "artifact_versioning"
+      ],
+      "application_level": "service",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/kleveross/klever-model-registry",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "model-registry",
+        "mlops",
+        "artifact-management",
+        "cloud-native"
+      ],
+      "id": 96
+    },
+    {
+      "name": "ORMB",
+      "one_line_profile": "OCI-based artifact manager for ML/DL models",
+      "detailed_description": "A tool that manages machine learning and deep learning models as OCI (Open Container Initiative) artifacts, enabling versioning, distribution, and deployment of models similar to Docker images.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_management",
+        "model_distribution",
+        "versioning"
+      ],
+      "application_level": "tool",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/kleveross/ormb",
+      "help_website": [
+        "https://ormb.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "oci-artifacts",
+        "model-management",
+        "mlops",
+        "docker"
+      ],
+      "id": 97
+    },
+    {
+      "name": "Kart",
+      "one_line_profile": "Distributed version control for geospatial and tabular data",
+      "detailed_description": "A distributed version control system specifically designed for geospatial and tabular datasets, enabling collaboration, history tracking, and branching for scientific data similar to Git for code.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "geospatial_data_management"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/koordinates/kart",
+      "help_website": [
+        "https://kartproject.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "data-versioning",
+        "geospatial",
+        "gis",
+        "version-control"
+      ],
+      "id": 98
+    },
+    {
+      "name": "Kubeflow Model Registry",
+      "one_line_profile": "Centralized management for ML models and artifacts",
+      "detailed_description": "A core component of the Kubeflow ecosystem that provides a centralized registry for indexing, versioning, and managing metadata of machine learning models and artifacts, facilitating collaboration in MLOps lifecycles.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "model_registry",
+        "artifact_management",
+        "metadata_tracking"
+      ],
+      "application_level": "service",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/kubeflow/model-registry",
+      "help_website": [
+        "https://github.com/kubeflow/model-registry"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "kubeflow",
+        "model-registry",
+        "mlops",
+        "artifact-management"
+      ],
+      "id": 99
+    },
+    {
+      "name": "Mooncake",
+      "one_line_profile": "LLM serving platform with optimized KV caching",
+      "detailed_description": "A serving platform designed for Large Language Models (LLMs), featuring optimized KV cache management and scheduling to accelerate inference and improve throughput for AI science applications.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "inference_acceleration",
+        "kv_caching",
+        "llm_serving"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/kvcache-ai/Mooncake",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "serving",
+        "kv-cache",
+        "inference"
+      ],
+      "id": 100
+    },
+    {
+      "name": "LaminDB",
+      "one_line_profile": "Data framework for biology with lineage and artifact tracking",
+      "detailed_description": "A data framework specifically designed for biology, providing capabilities for data querying, lineage tracking, reproducibility, and artifact management (lakehouse, feature store) to ensure FAIR data principles.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_management",
+        "lineage_tracking",
+        "reproducibility",
+        "biology_data"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/laminlabs/lamindb",
+      "help_website": [
+        "https://lamin.ai/docs/lamindb/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "biology",
+        "data-lineage",
+        "reproducibility",
+        "feature-store"
+      ],
+      "id": 101
+    },
+    {
+      "name": "llm-d-kv-cache",
+      "one_line_profile": "Distributed KV cache coordinator for LLMs",
+      "detailed_description": "A distributed coordinator for managing Key-Value (KV) caches in Large Language Model (LLM) inference, enabling efficient cache sharing and management across distributed runtime environments.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "kv_caching",
+        "inference_optimization",
+        "distributed_coordination"
+      ],
+      "application_level": "tool",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/llm-d/llm-d-kv-cache",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "kv-cache",
+        "distributed-systems",
+        "inference"
+      ],
+      "id": 102
+    },
+    {
+      "name": "Hopsworks",
+      "one_line_profile": "Data-intensive AI platform with a Feature Store for managing ML artifacts",
+      "detailed_description": "Hopsworks is an open-source platform for developing and operating machine learning models at scale. It includes a Feature Store for managing features, a Model Registry for model versioning, and support for distributed training, directly addressing artifact management in scientific ML workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_management",
+        "feature_store",
+        "mlops"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/logicalclocks/hopsworks",
+      "help_website": [
+        "https://www.hopsworks.ai/"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "feature-store",
+        "mlops",
+        "model-registry"
+      ],
+      "id": 103
+    },
+    {
+      "name": "git-lfs-s3-server",
+      "one_line_profile": "Git LFS server implementation using S3, developed for astronomical data management",
+      "detailed_description": "A deployable Git LFS server that uses AWS S3 as the storage backend. Developed by the LSST (Legacy Survey of Space and Time) Data Management team, it is designed to handle large scientific artifacts and data files within a version-controlled environment.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_management",
+        "data_versioning"
+      ],
+      "application_level": "service",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/lsst-sqre/git-lfs-s3-server",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "git-lfs",
+        "s3",
+        "astronomy",
+        "artifact-storage"
+      ],
+      "id": 104
+    },
+    {
+      "name": "marimo",
+      "one_line_profile": "Reactive Python notebook for reproducible scientific experiments",
+      "detailed_description": "A reactive notebook for Python that stores notebooks as pure Python scripts, enabling better version control and reproducibility for scientific experiments. It supports executing as a script, deploying as an app, and integrates with data analysis workflows.",
+      "domains": [
+        "AI6",
+        "AI6-01"
+      ],
+      "subtask_category": [
+        "reproducible_runtime",
+        "scientific_visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/marimo-team/marimo",
+      "help_website": [
+        "https://marimo.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "notebook",
+        "reproducibility",
+        "python",
+        "data-science"
+      ],
+      "id": 105
+    },
+    {
+      "name": "spark-sql-flow-plugin",
+      "one_line_profile": "Spark SQL plugin for visualizing column-level data lineage",
+      "detailed_description": "A plugin for Apache Spark that extracts and visualizes column-level data lineage from Spark SQL queries. This is essential for tracking data provenance and transformations in large-scale scientific data processing pipelines.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_lineage",
+        "provenance_tracking"
+      ],
+      "application_level": "library",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/maropu/spark-sql-flow-plugin",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "spark",
+        "data-lineage",
+        "visualization",
+        "provenance"
+      ],
+      "id": 106
+    },
+    {
+      "name": "SingleCellLineage",
+      "one_line_profile": "Pipelines for processing GESTALT single-cell lineage tracing data",
+      "detailed_description": "Scripts and pipelines for processing GESTALT (Genome Editing of Synthetic Target Arrays for Lineage Tracing) data at single-cell resolution. It facilitates the reconstruction of cell lineage trees in developmental biology research.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "lineage_inference",
+        "bioinformatics",
+        "single_cell_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/mckennalab/SingleCellLineage",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "single-cell",
+        "lineage-tracing",
+        "gestalt",
+        "bioinformatics"
+      ],
+      "id": 107
+    },
+    {
+      "name": "OpenTTDLab",
+      "one_line_profile": "Framework for running reproducible experiments using OpenTTD simulation",
+      "detailed_description": "A Python framework designed to run reproducible experiments using the OpenTTD game engine. It allows researchers (likely in RL or complex systems) to automate simulations, manage seeds, and collect data in a consistent manner.",
+      "domains": [
+        "AI6",
+        "AI6-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "reproducible_experiments",
+        "reinforcement_learning"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/michalc/OpenTTDLab",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "simulation",
+        "reproducibility",
+        "openttd",
+        "experimentation"
+      ],
+      "id": 108
+    },
+    {
+      "name": "DataLineage",
+      "one_line_profile": "Tool for extracting and visualizing data lineage from Spark and PowerBI",
+      "detailed_description": "A tool developed to extract data lineage information from Spark components and PowerBI/AAS and visualize it (e.g., in Azure Purview). It supports the management of data provenance in analytical workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_lineage",
+        "provenance_tracking"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/DataLineage",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-lineage",
+        "spark",
+        "azure",
+        "provenance"
+      ],
+      "id": 109
+    },
+    {
+      "name": "lst-bench",
+      "one_line_profile": "Benchmark framework for Log-Structured Tables (Delta Lake, Hudi, Iceberg)",
+      "detailed_description": "A framework for benchmarking Log-Structured Tables (LSTs) such as Delta Lake, Apache Hudi, and Apache Iceberg. It helps data engineers and scientists evaluate the performance of artifact stores used in data lakehouse architectures.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "artifact_management",
+        "data_storage"
+      ],
+      "application_level": "tool",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/microsoft/lst-bench",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "delta-lake",
+        "hudi",
+        "iceberg",
+        "data-lake"
+      ],
+      "id": 110
+    },
+    {
+      "name": "RSoptSC",
+      "one_line_profile": "Cell-cell communication and lineage inference for scRNA-seq data",
+      "detailed_description": "An R package for inferring cell-cell communication networks and reconstructing cell lineage trajectories from single-cell RNA sequencing (scRNA-seq) data. It uses optimization techniques to model cellular interactions and developmental paths.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "lineage_inference",
+        "bioinformatics",
+        "scRNA-seq"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/mkarikom/RSoptSC",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "bioinformatics",
+        "single-cell",
+        "lineage",
+        "inference"
+      ],
+      "id": 111
+    },
+    {
+      "name": "MLflow",
+      "one_line_profile": "Open source platform for the machine learning lifecycle",
+      "detailed_description": "A platform to streamline machine learning development, including tracking experiments, packaging code into reproducible runs, and sharing and deploying models. It provides a central registry for model management.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_management",
+        "model_registry",
+        "experiment_tracking"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mlflow/mlflow",
+      "help_website": [
+        "https://mlflow.org/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "mlops",
+        "experiment-tracking",
+        "model-registry"
+      ],
+      "id": 112
+    },
+    {
+      "name": "MCP Registry",
+      "one_line_profile": "Registry service for Model Context Protocol (MCP) servers",
+      "detailed_description": "A community-driven registry service designed to manage and discover Model Context Protocol (MCP) servers, facilitating the connection between AI models and data contexts.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_management",
+        "service_registry"
+      ],
+      "application_level": "service",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/modelcontextprotocol/registry",
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "registry",
+        "llm-infrastructure"
+      ],
+      "id": 113
+    },
+    {
+      "name": "CellTagR",
+      "one_line_profile": "R package for clone calling and lineage reconstruction",
+      "detailed_description": "A computational tool for analyzing CellTag data to support clone calling and lineage reconstruction in single-cell biology experiments.",
+      "domains": [
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "lineage_reconstruction",
+        "clone_calling"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/morris-lab/CellTagR",
+      "license": null,
+      "tags": [
+        "single-cell",
+        "lineage-tracing",
+        "r-package"
+      ],
+      "id": 114
+    },
+    {
+      "name": "Jodie",
+      "one_line_profile": "Delta Lake and filesystem helper methods for Scala",
+      "detailed_description": "A utility library providing helper methods for managing Delta Lake tables and filesystem operations, facilitating data versioning and management in data science workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_management",
+        "data_versioning"
+      ],
+      "application_level": "library",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/mrpowers-io/jodie",
+      "license": "MIT",
+      "tags": [
+        "delta-lake",
+        "scala",
+        "data-engineering"
+      ],
+      "id": 115
+    },
+    {
+      "name": "Levi",
+      "one_line_profile": "Delta Lake helper methods for Python",
+      "detailed_description": "A Python library offering utility functions for interacting with Delta Lake, enabling efficient data management and versioning without a direct Spark dependency.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_management",
+        "data_versioning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mrpowers-io/levi",
+      "license": "MIT",
+      "tags": [
+        "delta-lake",
+        "python",
+        "data-management"
+      ],
+      "id": 116
+    },
+    {
+      "name": "Horcrux",
+      "one_line_profile": "Version controlled access to data for Docker containers",
+      "detailed_description": "A tool that provides on-demand, version-controlled access to data volumes for Docker containers, facilitating reproducible data environments for containerized applications.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "container_storage"
+      ],
+      "application_level": "infrastructure",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/muthu-r/horcrux",
+      "license": "BSD-3-Clause",
+      "tags": [
+        "docker",
+        "data-versioning",
+        "storage"
+      ],
+      "id": 117
+    },
+    {
+      "name": "Fast-LangGraph",
+      "one_line_profile": "High-performance Rust accelerators for LangGraph applications",
+      "detailed_description": "A library providing Rust-based accelerators for LangGraph, optimizing checkpoint operations and state management for LLM agent workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "state_management",
+        "artifact_acceleration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neul-labs/fast-langgraph",
+      "license": "MIT",
+      "tags": [
+        "langgraph",
+        "rust",
+        "optimization"
+      ],
+      "id": 118
+    },
+    {
+      "name": "Reskit",
+      "one_line_profile": "Library for reproducible pipelines in scientific machine learning",
+      "detailed_description": "A Python library designed to assist in creating and curating reproducible machine learning pipelines, specifically targeting scientific and industrial applications.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "pipeline_management",
+        "reproducibility"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/neuro-ml/reskit",
+      "license": "BSD-3-Clause",
+      "tags": [
+        "scientific-ml",
+        "reproducibility",
+        "pipelines"
+      ],
+      "id": 119
+    },
+    {
+      "name": "ONNX Registry",
+      "one_line_profile": "Web service for managing ONNX models",
+      "detailed_description": "An intelligent component registry web service for storing, managing, and retrieving SNN, DNN, and ML models in the ONNX format.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "model_registry",
+        "artifact_management"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neurom-iot/onnx-registry",
+      "license": "MIT",
+      "tags": [
+        "onnx",
+        "model-registry",
+        "mlops"
+      ],
+      "id": 120
+    },
+    {
+      "name": "Kapsule",
+      "one_line_profile": "Tool for packaging LLM models into OCI images",
+      "detailed_description": "A utility for packaging Large Language Models (LLMs) into encrypted OCI (Open Container Initiative) images, enabling secure distribution via standard container registries.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_packaging",
+        "model_distribution"
+      ],
+      "application_level": "tool",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/nicholasjackson/kapsule",
+      "license": null,
+      "tags": [
+        "llm",
+        "oci",
+        "packaging"
+      ],
+      "id": 121
+    },
+    {
+      "name": "Shelf",
+      "one_line_profile": "Type-aware, fsspec-based artifact store client",
+      "detailed_description": "A Python client for general artifact storage that leverages fsspec to provide a type-aware interface for managing data and model artifacts across various storage backends.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_management",
+        "storage_client"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nicholasjng/shelf",
+      "license": "Apache-2.0",
+      "tags": [
+        "fsspec",
+        "artifact-store",
+        "python"
+      ],
+      "id": 122
+    },
+    {
+      "name": "lfs-s3",
+      "one_line_profile": "Git LFS custom transfer agent for S3",
+      "detailed_description": "A custom transfer agent for Git LFS (Large File Storage) that enables using Amazon S3 (or compatible providers) as the storage backend for versioning large scientific datasets and models.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "storage_backend"
+      ],
+      "application_level": "tool",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/nicolas-graves/lfs-s3",
+      "license": "MIT",
+      "tags": [
+        "git-lfs",
+        "s3",
+        "data-versioning"
+      ],
+      "id": 123
+    },
+    {
+      "name": "Trustix",
+      "one_line_profile": "Distributed trust and reproducibility tracking for binary caches",
+      "detailed_description": "A tool for tracking reproducibility and establishing distributed trust for binary caches, particularly within the Nix ecosystem, ensuring artifact integrity in scientific computing workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "reproducibility",
+        "artifact_verification"
+      ],
+      "application_level": "infrastructure",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/nix-community/trustix",
+      "license": null,
+      "tags": [
+        "nix",
+        "reproducibility",
+        "binary-cache"
+      ],
+      "id": 124
+    },
+    {
+      "name": "OpenHPC Scale-up Automation",
+      "one_line_profile": "Automation scripts for scaling OpenHPC clusters",
+      "detailed_description": "A set of tools and scripts to automate the process of scaling up OpenHPC clusters by leveraging IPMI and Redfish for hardware management and node discovery.",
+      "domains": [
+        "AI6"
+      ],
+      "subtask_category": [
+        "cluster_management",
+        "hpc_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nsfcac/Automating-the-scale-up-process-in-OpenHPC",
+      "license": null,
+      "tags": [
+        "openhpc",
+        "hpc",
+        "automation"
+      ],
+      "id": 125
+    },
+    {
+      "name": "StorageLayer",
+      "one_line_profile": "Content-addressable storage for files across S3 and local systems",
+      "detailed_description": "A library providing a content-addressable storage abstraction layer, allowing unified file management across local filesystems and S3, useful for data-intensive analysis.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "storage_abstraction",
+        "artifact_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/occrp-attic/storagelayer",
+      "license": "MIT",
+      "tags": [
+        "storage",
+        "content-addressable",
+        "s3"
+      ],
+      "id": 126
+    },
+    {
+      "name": "Ollama GGUF Downloader",
+      "one_line_profile": "CLI tool to download GGUF model files from Ollama registry",
+      "detailed_description": "A command-line tool designed to download GGUF model files directly from the Ollama registry, facilitating the acquisition and management of local AI models.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_management",
+        "model_download"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/olamide226/ollama-gguf-downloader",
+      "license": "MIT",
+      "tags": [
+        "ollama",
+        "gguf",
+        "model-management"
+      ],
+      "id": 127
+    },
+    {
+      "name": "Onllama ModelScope2Registry",
+      "one_line_profile": "Ollama Model Registry Mirror/Accelerator for ModelScope",
+      "detailed_description": "A tool acting as a registry mirror and accelerator, enabling faster downloading of Ollama models from the ModelScope repository.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_management",
+        "registry_mirror"
+      ],
+      "application_level": "tool",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/onllama/Onllama.ModelScope2Registry",
+      "license": "MIT",
+      "tags": [
+        "ollama",
+        "modelscope",
+        "registry"
+      ],
+      "id": 128
+    },
+    {
+      "name": "GAM",
+      "one_line_profile": "Globally Addressable Memory management via RDMA",
+      "detailed_description": "A system for efficient distributed memory management using RDMA and caching, designed to support high-performance computing applications requiring shared memory abstractions.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "memory_management",
+        "caching",
+        "hpc_acceleration"
+      ],
+      "application_level": "infrastructure",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ooibc88/gam",
+      "license": null,
+      "tags": [
+        "rdma",
+        "distributed-memory",
+        "hpc"
+      ],
+      "id": 129
+    },
+    {
+      "name": "OomStore",
+      "one_line_profile": "Lightweight and fast Feature Store",
+      "detailed_description": "A feature store powered by Go and Rust, designed to manage and serve machine learning features consistently across training and inference environments.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "feature_store",
+        "data_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/oom-ai/oomstore",
+      "license": "Apache-2.0",
+      "tags": [
+        "feature-store",
+        "mlops",
+        "go"
+      ],
+      "id": 130
+    },
+    {
+      "name": "OpenMetadata",
+      "one_line_profile": "Unified metadata platform for data discovery and observability",
+      "detailed_description": "A platform for metadata management, data discovery, and lineage tracking, essential for governing scientific data assets and ensuring data quality and traceability.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "metadata_management",
+        "lineage_tracking",
+        "data_discovery"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/open-metadata/OpenMetadata",
+      "help_website": [
+        "https://open-metadata.org/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "metadata",
+        "data-governance",
+        "lineage"
+      ],
+      "id": 131
+    },
+    {
+      "name": "ODD Platform",
+      "one_line_profile": "Open-source data discovery and observability platform",
+      "detailed_description": "A platform focused on data discovery and observability, helping data practitioners manage data lineage and quality in complex data ecosystems.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_discovery",
+        "observability"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/opendatadiscovery/odd-platform",
+      "license": "Apache-2.0",
+      "tags": [
+        "observability",
+        "data-discovery",
+        "lineage"
+      ],
+      "id": 132
+    },
+    {
+      "name": "hcfsfuse",
+      "one_line_profile": "Hadoop compatible FUSE client",
+      "detailed_description": "A FUSE (Filesystem in Userspace) implementation that allows mounting Hadoop-compatible filesystems locally, facilitating access to distributed storage in HPC/Big Data environments.",
+      "domains": [
+        "AI6"
+      ],
+      "subtask_category": [
+        "storage_access",
+        "hpc_integration"
+      ],
+      "application_level": "tool",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/opendataio/hcfsfuse",
+      "license": "Apache-2.0",
+      "tags": [
+        "hadoop",
+        "fuse",
+        "hpc"
+      ],
+      "id": 133
+    },
+    {
+      "name": "ModelStore",
+      "one_line_profile": "Library to version, export, and save ML models",
+      "detailed_description": "A Python library that simplifies the process of versioning, exporting, and saving machine learning models to various storage providers, supporting reproducible ML workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "model_versioning",
+        "artifact_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/operatorai/modelstore",
+      "license": "Apache-2.0",
+      "tags": [
+        "model-versioning",
+        "mlops",
+        "python"
+      ],
+      "id": 134
+    },
+    {
+      "name": "Pachyderm",
+      "one_line_profile": "Data-centric pipeline and data versioning platform for reproducible data science",
+      "detailed_description": "Pachyderm is a data versioning and data lineage platform that allows users to create reproducible data science pipelines. It provides a Git-like file system for data (PFS) and a pipeline system (PPS) that automatically triggers processing when data changes, ensuring full reproducibility and provenance tracking for scientific workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "lineage_tracking",
+        "pipeline_orchestration"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/pachyderm/pachyderm",
+      "help_website": [
+        "https://www.pachyderm.com/docs"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-versioning",
+        "mlops",
+        "reproducibility",
+        "pipeline"
+      ],
+      "id": 135
+    },
+    {
+      "name": "python-pachyderm",
+      "one_line_profile": "Python client library for Pachyderm data versioning platform",
+      "detailed_description": "The official Python client for Pachyderm, enabling scientists and developers to interact with Pachyderm's data versioning and pipeline features programmatically. It facilitates the integration of data lineage and version control into Python-based scientific workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "api_client"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pachyderm/python-pachyderm",
+      "help_website": [
+        "https://pachyderm-python.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "python",
+        "client",
+        "pachyderm",
+        "data-science"
+      ],
+      "id": 136
+    },
+    {
+      "name": "duckdb-diskcache",
+      "one_line_profile": "Disk caching extension for DuckDB to accelerate access to remote data lakes",
+      "detailed_description": "A C++ extension for DuckDB that provides a disk cache for accessing remote data lakes (such as Iceberg or Delta Lake). Developed by researchers at CWI, it optimizes data access patterns for analytical workloads common in scientific data processing.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "caching",
+        "data_access_acceleration"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/peterboncz/duckdb-diskcache",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "duckdb",
+        "caching",
+        "data-lake",
+        "performance"
+      ],
+      "id": 137
+    },
+    {
+      "name": "STREAM",
+      "one_line_profile": "Single-cell Trajectories Reconstruction, Exploration And Mapping tool",
+      "detailed_description": "STREAM is an interactive pipeline for reconstructing complex cellular differentiation trajectories from single-cell RNA-sequencing data. It can accurately disentangle complex trajectories and provides visualization tools for exploring developmental branches.",
+      "domains": [
+        "AI3",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "trajectory_inference",
+        "single_cell_analysis",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/pinellolab/STREAM",
+      "help_website": [
+        "https://stream.pinellolab.partners.org/"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "single-cell",
+        "trajectory-inference",
+        "rna-seq",
+        "bioinformatics"
+      ],
+      "id": 138
+    },
+    {
+      "name": "PLynx",
+      "one_line_profile": "Domain-agnostic platform for managing reproducible experiments and data-oriented workflows",
+      "detailed_description": "PLynx is a modular platform designed to manage reproducible experiments and data-oriented workflows. It provides a graphical interface for building pipelines, tracking experiment history, and managing artifacts, suitable for machine learning and scientific computing tasks.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "reproducibility",
+        "experiment_tracking"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/plynx-team/plynx",
+      "help_website": [
+        "https://plynx.com/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "workflow",
+        "reproducibility",
+        "experiment-tracking",
+        "pipeline"
+      ],
+      "id": 139
+    },
+    {
+      "name": "GENDIS",
+      "one_line_profile": "Genetic Discovery of Shapelets algorithm for time series classification",
+      "detailed_description": "GENDIS (GEnetic DIscovery of Shapelets) is a Python implementation of a genetic algorithm-based shapelet discovery method for time series classification. It provides a scikit-learn compatible API for analyzing time-series data, which is common in scientific experiments.",
+      "domains": [
+        "AI1",
+        "DataScience"
+      ],
+      "subtask_category": [
+        "time_series_analysis",
+        "shapelet_discovery",
+        "classification"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/predict-idlab/GENDIS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "time-series",
+        "genetic-algorithm",
+        "shapelets",
+        "sklearn"
+      ],
+      "id": 140
+    },
+    {
+      "name": "GridFluidSim3D",
+      "one_line_profile": "PIC/FLIP fluid simulation solver based on physical methods",
+      "detailed_description": "A C++ implementation of a fluid simulation solver using Particle-In-Cell (PIC) and Fluid-Implicit-Particle (FLIP) methods, capable of generating fluid dynamics data.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rlguy/GridFluidSim3D",
+      "help_website": [],
+      "license": "Zlib",
+      "tags": [
+        "fluid-simulation",
+        "physics",
+        "solver",
+        "cpp"
+      ],
+      "id": 141
+    },
+    {
+      "name": "BPref",
+      "one_line_profile": "Benchmark suite for preference-based reinforcement learning",
+      "detailed_description": "A benchmarking framework for preference-based reinforcement learning (PbRL), providing environments and baselines to evaluate RL algorithms.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "reinforcement_learning"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rll-research/BPref",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reinforcement-learning",
+        "benchmark",
+        "preference-learning"
+      ],
+      "id": 142
+    },
+    {
+      "name": "gittargets",
+      "one_line_profile": "Data version control for R analysis pipelines",
+      "detailed_description": "A tool that integrates data version control with the 'targets' workflow package in R, enabling reproducible analysis pipelines by tracking data snapshots.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "workflow_management"
+      ],
+      "application_level": "tool",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ropensci/gittargets",
+      "help_website": [
+        "https://docs.ropensci.org/gittargets/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "r",
+        "data-version-control",
+        "reproducibility",
+        "pipeline"
+      ],
+      "id": 143
+    },
+    {
+      "name": "s3git",
+      "one_line_profile": "Distributed version control for data on cloud storage",
+      "detailed_description": "A CLI tool that brings git-like versioning to data stored in S3 and other cloud storage, enabling distributed version control for large datasets.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "artifact_management"
+      ],
+      "application_level": "tool",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/s3git/s3git",
+      "help_website": [
+        "http://s3git.org"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-versioning",
+        "s3",
+        "cloud-storage",
+        "git-like"
+      ],
+      "id": 144
+    },
+    {
+      "name": "git-lfs-ipfs",
+      "one_line_profile": "IPFS storage backend for Git LFS",
+      "detailed_description": "A custom transfer agent for Git LFS that allows using IPFS (InterPlanetary File System) as the storage backend for large scientific artifacts.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_management",
+        "data_storage"
+      ],
+      "application_level": "tool",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/sameer/git-lfs-ipfs",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "git-lfs",
+        "ipfs",
+        "decentralized-storage",
+        "artifact-management"
+      ],
+      "id": 145
+    },
+    {
+      "name": "lambo",
+      "one_line_profile": "Bayesian optimization solver for protein design",
+      "detailed_description": "Implementation of 'Latent MBO', a method for accelerating Bayesian Optimization for protein design using denoising autoencoders.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "protein_design",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/samuelstanton/lambo",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "protein-design",
+        "bayesian-optimization",
+        "machine-learning",
+        "bioinformatics"
+      ],
+      "id": 146
+    },
+    {
+      "name": "lfscache",
+      "one_line_profile": "Caching proxy for Git LFS",
+      "detailed_description": "A caching proxy server for Git LFS, designed to accelerate the retrieval of large artifacts in distributed workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "caching",
+        "artifact_management"
+      ],
+      "application_level": "service",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/saracen/lfscache",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "git-lfs",
+        "caching",
+        "proxy",
+        "performance"
+      ],
+      "id": 147
+    },
+    {
+      "name": "llm-data-annotation",
+      "one_line_profile": "Data annotation framework using LLMs",
+      "detailed_description": "A framework that leverages Large Language Models (LLMs) and active learning to automate and enhance data annotation processes for machine learning datasets.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_annotation",
+        "data_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/saran9991/llm-data-annotation",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-annotation",
+        "llm",
+        "active-learning",
+        "cleanlab"
+      ],
+      "id": 148
+    },
+    {
+      "name": "DVCP-TE",
+      "one_line_profile": "Simulation model of the Tennessee Eastman chemical process",
+      "detailed_description": "A simulation environment for the Tennessee Eastman chemical process, used as a benchmark for process control and security research (Damn Vulnerable Chemical Process).",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "process_control"
+      ],
+      "application_level": "dataset",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/satejnik/DVCP-TE",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "chemical-process",
+        "simulation",
+        "benchmark",
+        "security"
+      ],
+      "id": 149
+    },
+    {
+      "name": "lfs-folderstore",
+      "one_line_profile": "Local folder storage adapter for Git LFS",
+      "detailed_description": "A custom transfer adapter for Git LFS that allows using a local folder (or shared network drive) as the remote storage backend, facilitating artifact management in restricted environments.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "artifact_management",
+        "data_storage"
+      ],
+      "application_level": "tool",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/sinbad/lfs-folderstore",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "git-lfs",
+        "storage-adapter",
+        "artifact-management"
+      ],
+      "id": 150
+    },
+    {
+      "name": "Spine Toolbox",
+      "one_line_profile": "Workflow and data management for modelling and simulation",
+      "detailed_description": "An open-source platform to manage data, scenarios, and workflows for complex modelling and simulation tasks, supporting version control and team collaboration.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "simulation_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spine-tools/Spine-Toolbox",
+      "help_website": [
+        "https://spine-toolbox.readthedocs.io/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "workflow",
+        "simulation",
+        "data-management",
+        "modelling"
+      ],
+      "id": 151
+    },
+    {
+      "name": "stac-geoparquet",
+      "one_line_profile": "Conversion library between STAC items and GeoParquet format",
+      "detailed_description": "A Python library to convert SpatioTemporal Asset Catalog (STAC) items between JSON, GeoParquet, pgstac, and Delta Lake formats, facilitating efficient storage and querying of geospatial data.",
+      "domains": [
+        "Earth Science",
+        "Geospatial",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "data_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stac-utils/stac-geoparquet",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "stac",
+        "geoparquet",
+        "geospatial",
+        "gis",
+        "data-conversion"
+      ],
+      "id": 152
+    },
+    {
+      "name": "SU2",
+      "one_line_profile": "Open-Source Suite for Multiphysics Simulation and Design",
+      "detailed_description": "SU2 is an open-source suite of software tools written in C++ for the numerical solution of partial differential equations (PDE) and performing PDE-constrained optimization, primarily for CFD and aerodynamics.",
+      "domains": [
+        "Physics",
+        "CFD",
+        "HPC",
+        "AI6"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/su2code/SU2",
+      "help_website": [
+        "https://su2code.github.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "multiphysics",
+        "simulation",
+        "aerodynamics",
+        "optimization"
+      ],
+      "id": 153
+    },
+    {
+      "name": "torchdatasets",
+      "one_line_profile": "Extended PyTorch Dataset with caching and mapping capabilities",
+      "detailed_description": "A library that extends PyTorch Dataset with features like caching, mapping, and other functional transformations, similar to tensorflow.data, to optimize data loading pipelines in scientific machine learning.",
+      "domains": [
+        "AI6-03",
+        "Machine Learning"
+      ],
+      "subtask_category": [
+        "data_loading",
+        "caching",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/szymonmaszke/torchdatasets",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "dataset",
+        "caching",
+        "data-loading"
+      ],
+      "id": 154
+    },
+    {
+      "name": "Hangar",
+      "one_line_profile": "Version control system for tensor data",
+      "detailed_description": "Hangar is a version control system specifically designed for tensor data. It allows users to commit, branch, merge, revert, and collaborate on numerical data, ensuring reproducibility in machine learning and scientific research.",
+      "domains": [
+        "AI6-03",
+        "Machine Learning"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "artifact_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tensorwerk/hangar-py",
+      "help_website": [
+        "https://hangar-py.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-versioning",
+        "tensors",
+        "reproducibility",
+        "git-for-data"
+      ],
+      "id": 155
+    },
+    {
+      "name": "LineageExplorer",
+      "one_line_profile": "Tool for estimating SARS-CoV-2 variant growth advantages",
+      "detailed_description": "An R package/tool to estimate the growth rate advantage of SARS-CoV-2 variants of concern based on international genomic surveillance data and multinomial spline fits.",
+      "domains": [
+        "Biology",
+        "Epidemiology",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "inference",
+        "statistical_analysis",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/tomwenseleers/LineageExplorer",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "covid-19",
+        "epidemiology",
+        "genomics",
+        "statistical-modeling"
+      ],
+      "id": 156
+    },
+    {
+      "name": "DVC",
+      "one_line_profile": "Data Version Control for Machine Learning Projects",
+      "detailed_description": "DVC is a data version control system built for machine learning projects. It handles large files, datasets, and machine learning models, making them shareable and reproducible. It integrates with Git to version control data and pipelines.",
+      "domains": [
+        "AI6-03",
+        "Machine Learning",
+        "Data Science"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "reproducibility",
+        "pipeline_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/treeverse/dvc",
+      "help_website": [
+        "https://dvc.org/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-version-control",
+        "mlops",
+        "reproducibility",
+        "git-for-data"
+      ],
+      "id": 157
+    },
+    {
+      "name": "DVCLive",
+      "one_line_profile": "Library for logging and tracking ML metrics",
+      "detailed_description": "DVCLive is a Python library for logging machine learning metrics, parameters, and model artifacts. It integrates with DVC to track experiments and visualize results, facilitating scientific experiment management.",
+      "domains": [
+        "AI6-03",
+        "Machine Learning"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "metrics_logging"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/treeverse/dvclive",
+      "help_website": [
+        "https://dvc.org/doc/dvclive"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "experiment-tracking",
+        "mlops",
+        "metrics",
+        "logging"
+      ],
+      "id": 158
+    },
+    {
+      "name": "lakeFS",
+      "one_line_profile": "Git-like version control for data lakes",
+      "detailed_description": "lakeFS provides a Git-like version control interface for object storage (S3, Azure Blob, GCS). It allows managing data lakes with commits, branches, and merges, enabling reproducible data science and data engineering workflows.",
+      "domains": [
+        "AI6-03",
+        "Data Science",
+        "Big Data"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "artifact_management",
+        "reproducibility"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/treeverse/lakeFS",
+      "help_website": [
+        "https://lakefs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-lake",
+        "version-control",
+        "object-storage",
+        "reproducibility"
+      ],
+      "id": 159
+    },
+    {
+      "name": "ATOM",
+      "one_line_profile": "Python package for fast exploration and optimization of machine learning pipelines",
+      "detailed_description": "ATOM is an AutoML tool designed to accelerate the data science pipeline. It provides features for data cleaning, feature engineering, and model selection/optimization, specifically catering to scientific modeling and analysis tasks.",
+      "domains": [
+        "AI4",
+        "AI6"
+      ],
+      "subtask_category": [
+        "automl",
+        "model_optimization",
+        "pipeline_automation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tvdboom/ATOM",
+      "help_website": [
+        "https://atom-ml.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "automl",
+        "machine-learning",
+        "data-science"
+      ],
+      "id": 160
+    },
+    {
+      "name": "tvault",
+      "one_line_profile": "Lightweight local model registry for PyTorch",
+      "detailed_description": "tvault is a tool for managing machine learning model artifacts. It allows researchers to track, compare, and register PyTorch models locally, facilitating reproducibility and experiment management in scientific workflows.",
+      "domains": [
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "model_registry",
+        "artifact_management",
+        "experiment_tracking"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/vessl-ai/tvault",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "model-registry",
+        "pytorch",
+        "mlops"
+      ],
+      "id": 161
+    },
+    {
+      "name": "OpenCorr",
+      "one_line_profile": "Digital Image Correlation (DIC) and Digital Volume Correlation (DVC) library",
+      "detailed_description": "OpenCorr is an open-source C++ library for Digital Image Correlation (DIC) and Digital Volume Correlation (DVC), widely used in experimental mechanics and materials science for strain and deformation analysis.",
+      "domains": [
+        "Physics",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "digital_image_correlation",
+        "strain_analysis",
+        "deformation_measurement"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/vincentjzy/OpenCorr",
+      "help_website": [],
+      "license": "MPL-2.0",
+      "tags": [
+        "dic",
+        "dvc",
+        "experimental-mechanics"
+      ],
+      "id": 162
+    },
+    {
+      "name": "vLLM",
+      "one_line_profile": "High-throughput and memory-efficient inference engine for LLMs",
+      "detailed_description": "vLLM is a high-performance library for LLM inference and serving. It utilizes PagedAttention to manage attention key and value memory efficiently, making it a critical tool for deploying large-scale scientific language models.",
+      "domains": [
+        "AI6",
+        "AI6-01"
+      ],
+      "subtask_category": [
+        "llm_inference",
+        "model_serving",
+        "memory_optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/vllm-project/vllm",
+      "help_website": [
+        "https://docs.vllm.ai/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "inference-engine",
+        "llm",
+        "hpc"
+      ],
+      "id": 163
+    },
+    {
+      "name": "GPTCache",
+      "one_line_profile": "Semantic caching library for Large Language Models to reduce latency and costs",
+      "detailed_description": "A semantic cache for LLMs that stores and retrieves responses based on semantic similarity. It integrates with LangChain and llama_index to optimize inference efficiency, reducing API costs and latency in AI-driven scientific workflows.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "caching",
+        "inference_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zilliztech/GPTCache",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "caching",
+        "semantic-search",
+        "optimization"
+      ],
+      "id": 164
+    },
+    {
+      "name": "ZnTrack",
+      "one_line_profile": "Python interface for DVC to manage scientific workflows and data versioning",
+      "detailed_description": "A lightweight Python package that acts as a wrapper for DVC (Data Version Control). It enables researchers to define, run, visualize, and benchmark DVC pipelines directly within Python scripts or Jupyter notebooks, facilitating reproducible scientific experiments.",
+      "domains": [
+        "AI6",
+        "AI6-03"
+      ],
+      "subtask_category": [
+        "data_versioning",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zincware/ZnTrack",
+      "help_website": [
+        "https://zntrack.readthedocs.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "dvc",
+        "reproducibility",
+        "pipeline",
+        "jupyter"
+      ],
+      "id": 165
+    }
+  ]
+}

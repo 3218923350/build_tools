@@ -1,0 +1,2509 @@
+{
+  "generated_at": "2025-12-16T10:48:57.068848+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "R1",
+      "leaf_cluster_name": "实验室自动化-机器人与设备集成生态",
+      "domain": "Robotics/Lab",
+      "typical_objects": "device APIs",
+      "task_chain": "驱动→编排→记录→监控→审计",
+      "tool_form": "设备接口 + 调度 + 监控"
+    },
+    "unit": {
+      "unit_id": "R1-04",
+      "unit_name": "故障诊断与监控（AI）",
+      "target_scale": "100–250",
+      "coverage_tools": "anomaly detection、monitoring"
+    },
+    "search": {
+      "target_candidates": 250,
+      "queries": [
+        "[GH] Prometheus",
+        "[GH] Grafana",
+        "[GH] ADTK",
+        "[GH] DeepOD",
+        "[GH] Alibi Detect",
+        "[GH] PlotJuggler",
+        "[GH] ROS diagnostics",
+        "[GH] PyOD",
+        "[GH] Anomalib",
+        "[GH] lab automation monitoring",
+        "[GH] robot anomaly detection",
+        "[GH] predictive maintenance robotics",
+        "[GH] fault diagnosis system",
+        "[GH] visual inspection deep learning",
+        "[GH] device telemetry analysis",
+        "[GH] sensor fusion anomaly detection",
+        "[GH] time series anomaly detection",
+        "[GH] liquid handling error detection",
+        "[GH] equipment health monitoring",
+        "[GH] industrial defect detection",
+        "[GH] robot state estimation",
+        "[GH] log anomaly detection",
+        "[WEB] lab automation anomaly detection github",
+        "[WEB] robotics fault diagnosis library github",
+        "[WEB] predictive maintenance laboratory equipment github",
+        "[WEB] visual inspection for liquid handling github",
+        "[WEB] ROS2 health monitoring tools github",
+        "[WEB] AI for laboratory equipment monitoring github"
+      ],
+      "total_candidates": 1032,
+      "tool_candidates": 439,
+      "final_tools": 97
+    }
+  },
+  "tools": [
+    {
+      "name": "Flow Forecast",
+      "one_line_profile": "Deep learning library for time series forecasting and anomaly detection",
+      "detailed_description": "A deep learning library based on PyTorch for time series forecasting, classification, and anomaly detection. Originally developed for flood forecasting, it supports various models and is applicable to scientific sensor data analysis.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "forecasting",
+        "time_series_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AIStream-Peelout/flow-forecast",
+      "help_website": [
+        "https://flow-forecast.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "time-series",
+        "forecasting",
+        "anomaly-detection",
+        "pytorch",
+        "hydrology"
+      ],
+      "id": 1
+    },
+    {
+      "name": "AprilTag",
+      "one_line_profile": "Visual fiducial system for robotics localization and calibration",
+      "detailed_description": "A visual fiducial system popular for robotics research, used for tasks such as localization, camera calibration, and object tracking. It provides robust detection of tags in images.",
+      "domains": [
+        "R1"
+      ],
+      "subtask_category": [
+        "localization",
+        "calibration",
+        "object_tracking"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/AprilRobotics/apriltag",
+      "help_website": [
+        "https://april.eecs.umich.edu/software/apriltag"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "robotics",
+        "computer-vision",
+        "localization",
+        "fiducial-marker"
+      ],
+      "id": 2
+    },
+    {
+      "name": "PlotJuggler ArduPilot Plugin",
+      "one_line_profile": "PlotJuggler plugin for analyzing ArduPilot binary logs",
+      "detailed_description": "A plugin for the PlotJuggler time-series visualization tool that enables loading and analyzing ArduPilot Dataflash binary logs, facilitating diagnostics and monitoring of autonomous vehicles.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "data_visualization",
+        "log_analysis",
+        "diagnostics"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ArduPilot/plotjuggler-apbin-plugins",
+      "help_website": [
+        "https://github.com/ArduPilot/plotjuggler-apbin-plugins"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "ardupilot",
+        "plotjuggler",
+        "robotics",
+        "log-analysis"
+      ],
+      "id": 3
+    },
+    {
+      "name": "telegraf_resource_monitor",
+      "one_line_profile": "ROS 2 package for system resource monitoring via Telegraf",
+      "detailed_description": "Integrates Telegraf with ROS 2 to monitor system resources (CPU, memory, etc.) and publish them as ROS diagnostics messages, enabling health monitoring of robot compute infrastructure.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "system_monitoring",
+        "diagnostics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Bart-van-Ingen/telegraf_resource_monitor",
+      "help_website": [
+        "https://github.com/Bart-van-Ingen/telegraf_resource_monitor"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "ros2",
+        "monitoring",
+        "telegraf",
+        "robotics"
+      ],
+      "id": 4
+    },
+    {
+      "name": "tsod",
+      "one_line_profile": "Time series anomaly detection library",
+      "detailed_description": "A Python library for detecting anomalies in time series data, developed by DHI. It provides various detectors (constant, gradient, range, etc.) suitable for environmental and sensor data analysis.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "time_series_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DHI/tsod",
+      "help_website": [
+        "https://github.com/DHI/tsod"
+      ],
+      "license": "MIT",
+      "tags": [
+        "time-series",
+        "anomaly-detection",
+        "sensor-data"
+      ],
+      "id": 5
+    },
+    {
+      "name": "Adaptive Alerting",
+      "one_line_profile": "Streaming anomaly detection with automated model selection",
+      "detailed_description": "A library for anomaly detection on streaming time series data. It features automated model selection and is designed to handle dynamic data patterns, applicable to sensor monitoring.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "monitoring",
+        "time_series_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/ExpediaGroup/adaptive-alerting",
+      "help_website": [
+        "https://github.com/ExpediaGroup/adaptive-alerting"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "anomaly-detection",
+        "streaming",
+        "time-series",
+        "monitoring"
+      ],
+      "id": 6
+    },
+    {
+      "name": "ndt_localizer",
+      "one_line_profile": "NDT-based localization package for mobile robots",
+      "detailed_description": "A ROS package for robot localization using the Normal Distributions Transform (NDT) algorithm with LiDAR data. Developed by FAIR-SPACE (Future AI & Robotics for Space).",
+      "domains": [
+        "R1"
+      ],
+      "subtask_category": [
+        "localization",
+        "state_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/FAIRSpace-AdMaLL/ndt_localizer",
+      "help_website": [
+        "https://github.com/FAIRSpace-AdMaLL/ndt_localizer"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "robotics",
+        "localization",
+        "lidar",
+        "ndt",
+        "ros"
+      ],
+      "id": 7
+    },
+    {
+      "name": "TL-Fault-Diagnosis-Library",
+      "one_line_profile": "Transfer learning library for fault diagnosis",
+      "detailed_description": "A library implementing various transfer learning techniques specifically for fault diagnosis tasks (e.g., bearing faults). It supports domain adaptation and generalization.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "fault_diagnosis",
+        "transfer_learning",
+        "classification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Feaxure-fresh/TL-Fault-Diagnosis-Library",
+      "help_website": [
+        "https://github.com/Feaxure-fresh/TL-Fault-Diagnosis-Library"
+      ],
+      "license": null,
+      "tags": [
+        "fault-diagnosis",
+        "transfer-learning",
+        "deep-learning",
+        "prognostics"
+      ],
+      "id": 8
+    },
+    {
+      "name": "StreamAD",
+      "one_line_profile": "Online anomaly detection for data streams",
+      "detailed_description": "A Python toolkit for real-time anomaly detection on data streams. It provides a unified interface for various online anomaly detection algorithms, suitable for monitoring sensor data.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "stream_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Fengrui-Liu/StreamAD",
+      "help_website": [
+        "https://github.com/Fengrui-Liu/StreamAD"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "anomaly-detection",
+        "online-learning",
+        "stream-mining",
+        "time-series"
+      ],
+      "id": 9
+    },
+    {
+      "name": "pyodi",
+      "one_line_profile": "Python Object Detection Insights and analysis tool",
+      "detailed_description": "A tool for analyzing object detection datasets and model predictions. It helps in understanding data distribution and model performance, useful for computer vision tasks in scientific research.",
+      "domains": [
+        "R1"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "model_evaluation",
+        "computer_vision"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Gradiant/pyodi",
+      "help_website": [
+        "https://pyodi.readthedocs.io/"
+      ],
+      "license": "MPL-2.0",
+      "tags": [
+        "object-detection",
+        "analysis",
+        "visualization",
+        "computer-vision"
+      ],
+      "id": 10
+    },
+    {
+      "name": "AOI Sheet Substrate Defect Inspection Software",
+      "one_line_profile": "Automated Optical Inspection software for detecting defects in sheet substrates",
+      "detailed_description": "A comprehensive software solution for Automated Optical Inspection (AOI) machines, integrating image processing algorithms and deep learning for defect detection. It includes modules for camera control, light control, visual positioning, laser correction, and TCP/IP communication, specifically designed for industrial and laboratory material inspection.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "defect_detection",
+        "image_processing",
+        "device_control"
+      ],
+      "application_level": "platform",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/JeffWang0325/AOI-Sheet-Substrate-Defect-Inspection-Software",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "aoi",
+        "defect-detection",
+        "machine-vision",
+        "industrial-automation"
+      ],
+      "id": 11
+    },
+    {
+      "name": "DeepADoTS",
+      "one_line_profile": "Benchmarking library for deep anomaly detection methods on time series",
+      "detailed_description": "A systematic evaluation framework and library for deep learning-based anomaly detection methods on time series data. It provides implementations of various state-of-the-art algorithms and standardized datasets to facilitate benchmarking and research in time series anomaly detection.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KDD-OpenSource/DeepADoTS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "time-series",
+        "anomaly-detection",
+        "benchmarking",
+        "deep-learning"
+      ],
+      "id": 12
+    },
+    {
+      "name": "ros2_topic_monitor",
+      "one_line_profile": "GUI tool for monitoring ROS2 topic availability and statistics",
+      "detailed_description": "A graphical user interface tool designed to monitor the availability and frequency of ROS2 topics. It aids in diagnosing communication issues and ensuring the health of robotic systems by providing real-time visualization of topic status.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "diagnostics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LCAS/ros2_topic_monitor",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ros2",
+        "monitoring",
+        "gui",
+        "robotics"
+      ],
+      "id": 13
+    },
+    {
+      "name": "Segmentation-Based-Surface-Defect-Detection",
+      "one_line_profile": "Deep learning application for industrial surface defect detection",
+      "detailed_description": "A deep learning-based application project for detecting defects on workpiece surfaces using segmentation techniques. It is designed for industrial quality control and runs on GPU using Keras.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "defect_detection",
+        "image_segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LeeWise9/Segmentation-Based-Surface-Defect-Detection",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "defect-detection",
+        "deep-learning",
+        "surface-inspection",
+        "keras"
+      ],
+      "id": 14
+    },
+    {
+      "name": "mola_state_estimation",
+      "one_line_profile": "Virtual state estimation API for the MOLA robotics framework",
+      "detailed_description": "Implementations of the virtual state estimation API for robots and vehicles within the MOLA (Modular Optimization framework for Localization and mapping) ecosystem. It provides a standardized interface for integrating various state estimation algorithms.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "localization"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/MOLAorg/mola_state_estimation",
+      "help_website": [
+        "https://github.com/MOLAorg"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "robotics",
+        "state-estimation",
+        "mola",
+        "slam"
+      ],
+      "id": 15
+    },
+    {
+      "name": "ProbabilisticContactEstimation",
+      "one_line_profile": "Probabilistic contact state estimation for legged robots in ROS",
+      "detailed_description": "A ROS package for estimating the contact state of legged robots using probabilistic methods. It is essential for dynamic locomotion control and state monitoring of quadrupedal or bipedal robots.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "contact_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MichaelMarav/ProbabilisticContactEstimation",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "robotics",
+        "ros",
+        "state-estimation",
+        "legged-robots"
+      ],
+      "id": 16
+    },
+    {
+      "name": "mrob",
+      "one_line_profile": "Library for 3D state estimation in mobile robotics",
+      "detailed_description": "A C++ and Python library for 3D state estimation, focusing on mobile robotics applications. It includes implementations for graph optimization, rigid body transformations, and other utilities required for SLAM and navigation.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "slam",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/MobileRoboticsSkoltech/mrob",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "robotics",
+        "state-estimation",
+        "slam",
+        "python-bindings"
+      ],
+      "id": 17
+    },
+    {
+      "name": "LIKO",
+      "one_line_profile": "LiDAR-Inertial-Kinematic Odometry for biped robots",
+      "detailed_description": "A state estimation system (LiDAR-Inertial-Kinematic Odometry) specifically designed for bipedal robots. It fuses data from LiDAR, IMU, and kinematics to provide robust localization and state monitoring.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "odometry",
+        "sensor_fusion"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Mr-Zqr/LIKO",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "lidar",
+        "odometry",
+        "biped-robot",
+        "state-estimation"
+      ],
+      "id": 18
+    },
+    {
+      "name": "greenwave_monitor",
+      "one_line_profile": "ROS 2 topic monitoring tool for NVIDIA Isaac ROS",
+      "detailed_description": "A monitoring tool within the NVIDIA Isaac ROS ecosystem designed to track and visualize the status of ROS 2 topics. It helps in ensuring the reliability and performance of robotic applications by providing real-time feedback on data flow.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "diagnostics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NVIDIA-ISAAC-ROS/greenwave_monitor",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ros2",
+        "monitoring",
+        "isaac-ros",
+        "robotics"
+      ],
+      "id": 19
+    },
+    {
+      "name": "Nixtla",
+      "one_line_profile": "Time series foundation model and library for forecasting and anomaly detection",
+      "detailed_description": "A production-ready library and SDK for time series analysis, featuring TimeGPT, a generative pre-trained transformer for time series. It supports forecasting and anomaly detection across various domains including IoT and scientific data.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "forecasting",
+        "time_series_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Nixtla/nixtla",
+      "help_website": [
+        "https://docs.nixtla.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "time-series",
+        "forecasting",
+        "anomaly-detection",
+        "foundation-model"
+      ],
+      "id": 20
+    },
+    {
+      "name": "PyODM",
+      "one_line_profile": "Python SDK for OpenDroneMap aerial image processing",
+      "detailed_description": "A Python Software Development Kit (SDK) for interacting with OpenDroneMap (ODM). It allows developers to integrate aerial image processing capabilities, such as orthophoto generation and 3D reconstruction, into their applications.",
+      "domains": [
+        "R1"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "photogrammetry",
+        "3d_reconstruction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenDroneMap/PyODM",
+      "help_website": [
+        "https://pyodm.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "photogrammetry",
+        "drone",
+        "sdk",
+        "image-processing"
+      ],
+      "id": 21
+    },
+    {
+      "name": "MTAD",
+      "one_line_profile": "Tools and benchmark for multivariate time series anomaly detection",
+      "detailed_description": "A comprehensive toolkit and benchmarking suite for multivariate time series anomaly detection. It provides implementations of various algorithms and evaluation metrics to assist researchers and practitioners in selecting and testing anomaly detection methods.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpsPAI/MTAD",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "time-series",
+        "anomaly-detection",
+        "benchmarking",
+        "multivariate"
+      ],
+      "id": 22
+    },
+    {
+      "name": "PaddleTS",
+      "one_line_profile": "Deep time series modeling library based on PaddlePaddle",
+      "detailed_description": "An easy-to-use deep learning library for time series modeling, built on PaddlePaddle. It covers tasks such as time series forecasting, representation learning, and anomaly detection, providing a unified interface for state-of-the-art models.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "time_series_analysis",
+        "anomaly_detection",
+        "forecasting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PaddlePaddle/PaddleTS",
+      "help_website": [
+        "https://paddlets.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "time-series",
+        "paddlepaddle",
+        "deep-learning",
+        "anomaly-detection"
+      ],
+      "id": 23
+    },
+    {
+      "name": "libPeR_base",
+      "one_line_profile": "Library for vision-based robot state estimation",
+      "detailed_description": "A C++ library developed by the Robotic Perception group (MIS lab) for vision-based state estimation of robots and scenes. It provides core functionalities for perception tasks in robotics.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "computer_vision",
+        "perception"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/PerceptionRobotique/libPeR_base",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "robotics",
+        "computer-vision",
+        "state-estimation",
+        "perception"
+      ],
+      "id": 24
+    },
+    {
+      "name": "data_tamer",
+      "one_line_profile": "C++ library for high-performance time series logging in robotics",
+      "detailed_description": "A C++ library designed for 'fearless' time series logging, optimized for robotics applications. It allows for efficient data recording with minimal overhead, facilitating post-hoc analysis and debugging of robot behavior.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "data_logging",
+        "monitoring"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/PickNikRobotics/data_tamer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "logging",
+        "robotics",
+        "time-series",
+        "c++"
+      ],
+      "id": 25
+    },
+    {
+      "name": "plotjuggler-CAN-dbs",
+      "one_line_profile": "PlotJuggler plugin for visualizing CAN bus data",
+      "detailed_description": "A plugin for PlotJuggler that enables the visualization of CAN bus data using .dbs files. It allows engineers to decode and plot CAN messages, which is essential for debugging and monitoring automotive and robotic systems.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_decoding",
+        "monitoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/PlotJuggler/plotjuggler-CAN-dbs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "can-bus",
+        "visualization",
+        "plotjuggler",
+        "plugin"
+      ],
+      "id": 26
+    },
+    {
+      "name": "plotjuggler-lsl",
+      "one_line_profile": "PlotJuggler plugin for Lab Streaming Layer (LSL) data",
+      "detailed_description": "A plugin for PlotJuggler that supports the Lab Streaming Layer (LSL) protocol. LSL is widely used in scientific experiments (e.g., EEG, BCI) for unified time-series data collection, and this plugin enables real-time visualization of such streams.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "monitoring",
+        "data_streaming"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/PlotJuggler/plotjuggler-lsl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "lsl",
+        "visualization",
+        "plotjuggler",
+        "neuroscience"
+      ],
+      "id": 27
+    },
+    {
+      "name": "plotjuggler-ros-plugins",
+      "one_line_profile": "PlotJuggler plugins for ROS and ROS2 data visualization",
+      "detailed_description": "A collection of plugins for PlotJuggler that enable seamless integration with ROS and ROS2. These plugins allow users to visualize ROS topics and messages in real-time or from bag files, making it a standard tool for robotics debugging.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "monitoring",
+        "ros_integration"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/PlotJuggler/plotjuggler-ros-plugins",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "ros",
+        "ros2",
+        "visualization",
+        "plotjuggler"
+      ],
+      "id": 28
+    },
+    {
+      "name": "NeuroMHE",
+      "one_line_profile": "Neural Moving Horizon Estimation for adaptive optimal estimation",
+      "detailed_description": "An auto-tuning and adaptive optimal estimator that fuses a neural network with Moving Horizon Estimation (MHE). It is designed for fast online adaptation to state-dependent noise in robotic systems, improving state estimation accuracy.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "control",
+        "adaptive_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RCL-NUS/NeuroMHE",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "state-estimation",
+        "mhe",
+        "neural-networks",
+        "robotics"
+      ],
+      "id": 29
+    },
+    {
+      "name": "VAE-for-Anomaly-Detection",
+      "one_line_profile": "Collection of Variational Auto-Encoder (VAE) implementations for anomaly detection",
+      "detailed_description": "A repository providing implementations of various VAE architectures (MLP_VAE, LSTM_VAE, IndRNN_VAE) specifically tailored for anomaly detection tasks in multivariate time-series data.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SchindlerLiang/VAE-for-Anomaly-Detection",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vae",
+        "anomaly-detection",
+        "time-series",
+        "lstm"
+      ],
+      "id": 30
+    },
+    {
+      "name": "alibi-detect",
+      "one_line_profile": "Algorithms for outlier, adversarial, and drift detection",
+      "detailed_description": "An open-source Python library focused on outlier, adversarial, and concept drift detection. It provides a wide range of algorithms for tabular, image, and time series data, suitable for monitoring scientific data pipelines and models.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "drift_detection",
+        "monitoring"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/SeldonIO/alibi-detect",
+      "help_website": [
+        "https://docs.seldon.io/projects/alibi-detect/en/latest/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "outlier-detection",
+        "drift-detection",
+        "adversarial-detection",
+        "monitoring"
+      ],
+      "id": 31
+    },
+    {
+      "name": "TSB-AD",
+      "one_line_profile": "Benchmark suite for time-series anomaly detection",
+      "detailed_description": "A comprehensive benchmark for evaluating anomaly detection algorithms on time-series data. It includes datasets and evaluation scripts to assess the reliability of detection methods.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "benchmarking",
+        "evaluation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TheDatumOrg/TSB-AD",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "time-series",
+        "anomaly-detection"
+      ],
+      "id": 32
+    },
+    {
+      "name": "TSB-UAD",
+      "one_line_profile": "End-to-end benchmark suite for univariate time-series anomaly detection",
+      "detailed_description": "A benchmark suite specifically designed for univariate time-series anomaly detection, providing datasets, metrics, and baseline implementations for comparative analysis.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "benchmarking",
+        "evaluation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/TheDatumOrg/TSB-UAD",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "univariate",
+        "time-series",
+        "anomaly-detection"
+      ],
+      "id": 33
+    },
+    {
+      "name": "DeepLog",
+      "one_line_profile": "PyTorch implementation of DeepLog for system log anomaly detection",
+      "detailed_description": "An implementation of the DeepLog model for detecting anomalies in system logs using deep learning (LSTM). Useful for diagnosing faults in complex automated systems.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "fault_diagnosis",
+        "log_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Thijsvanede/DeepLog",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deeplog",
+        "log-analysis",
+        "anomaly-detection",
+        "lstm"
+      ],
+      "id": 34
+    },
+    {
+      "name": "TimeEval",
+      "one_line_profile": "Evaluation tool for anomaly detection algorithms on time series",
+      "detailed_description": "A tool designed to evaluate and compare various anomaly detection algorithms on time series data, facilitating the selection of appropriate methods for scientific monitoring.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "benchmarking",
+        "anomaly_detection"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/TimeEval/TimeEval",
+      "help_website": [
+        "https://timeeval.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "evaluation",
+        "time-series",
+        "anomaly-detection"
+      ],
+      "id": 35
+    },
+    {
+      "name": "TimeEval-algorithms",
+      "one_line_profile": "Collection of time series anomaly detection algorithms for TimeEval",
+      "detailed_description": "A repository containing Docker-based implementations of various time series anomaly detection algorithms, designed to be used with the TimeEval evaluation tool.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "algorithm_collection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TimeEval/TimeEval-algorithms",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "algorithms",
+        "time-series",
+        "anomaly-detection"
+      ],
+      "id": 36
+    },
+    {
+      "name": "Variational-Lstm-Autoencoder",
+      "one_line_profile": "LSTM Variational Autoencoder for time series anomaly detection",
+      "detailed_description": "An implementation of a Variational LSTM Autoencoder for detecting anomalies and extracting features from time series data, applicable to sensor monitoring.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "feature_extraction",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TimyadNyda/Variational-Lstm-Autoencoder",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "lstm",
+        "vae",
+        "anomaly-detection",
+        "time-series"
+      ],
+      "id": 37
+    },
+    {
+      "name": "drift",
+      "one_line_profile": "Symmetry-preserving state estimation library for robotic platforms",
+      "detailed_description": "A C++ library for state estimation (Dead Reckoning In Field Time) in robotics, preserving symmetries for accurate monitoring of robot states.",
+      "domains": [
+        "R1"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "monitoring",
+        "robotics"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/UMich-CURLY/drift",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "state-estimation",
+        "robotics",
+        "dead-reckoning"
+      ],
+      "id": 38
+    },
+    {
+      "name": "LogAnalyzer",
+      "one_line_profile": "Ensemble framework for log-based anomaly detection",
+      "detailed_description": "A framework that combines multiple log-based anomaly detection methods into an ensemble to improve fault diagnosis accuracy.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "log_analysis",
+        "fault_diagnosis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Roff",
+      "repo_url": "https://github.com/Wapiti08/LogAnalyzer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "log-analysis",
+        "ensemble-learning",
+        "anomaly-detection"
+      ],
+      "id": 39
+    },
+    {
+      "name": "PyPOTS",
+      "one_line_profile": "Python toolkit for partially-observed time series analysis",
+      "detailed_description": "A comprehensive library for analyzing partially-observed time series, including tasks like imputation, classification, forecasting, and anomaly detection, suitable for industrial and scientific data.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "imputation",
+        "time_series_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/WenjieDu/PyPOTS",
+      "help_website": [
+        "https://pypots.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "time-series",
+        "missing-data",
+        "anomaly-detection",
+        "imputation"
+      ],
+      "id": 40
+    },
+    {
+      "name": "leg-odometry",
+      "one_line_profile": "Proprioceptive state estimation for legged robots",
+      "detailed_description": "A tool for estimating the state (odometry) of legged robots using IMU and joint encoders, essential for robot monitoring and control.",
+      "domains": [
+        "R1"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "odometry",
+        "robotics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/YibinWu/leg-odometry",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "robotics",
+        "state-estimation",
+        "odometry"
+      ],
+      "id": 41
+    },
+    {
+      "name": "condition-monitoring-system-for-gas-turbine",
+      "one_line_profile": "Condition monitoring and fault diagnosis system for gas turbines",
+      "detailed_description": "A system designed for monitoring the condition of gas turbines, including anomaly detection and fault diagnosis functionalities.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "condition_monitoring",
+        "fault_diagnosis",
+        "anomaly_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ZhongWang24/condition-monitoring-system-for-gas-turbine",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gas-turbine",
+        "fault-diagnosis",
+        "condition-monitoring"
+      ],
+      "id": 42
+    },
+    {
+      "name": "Unsupervised-Deep-Learning-Framework-for-Anomaly-Detection-in-Time-Series",
+      "one_line_profile": "Unsupervised deep learning framework for time series anomaly detection",
+      "detailed_description": "A framework providing various unsupervised deep learning models (MLP, Conv1D, VAE, Wavenet) for detecting anomalies in time series data.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "time_series_analysis",
+        "modeling"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ZhouYuxuanYX/Unsupervised-Deep-Learning-Framework-for-Anomaly-Detection-in-Time-Series-",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deep-learning",
+        "anomaly-detection",
+        "time-series",
+        "unsupervised-learning"
+      ],
+      "id": 43
+    },
+    {
+      "name": "anomaly-detection-log-datasets",
+      "one_line_profile": "Analysis scripts for log anomaly detection datasets",
+      "detailed_description": "A collection of scripts to analyze and process log datasets used for anomaly detection research, facilitating data preparation and understanding.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "log_analysis"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ait-aecid/anomaly-detection-log-datasets",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "log-analysis",
+        "datasets",
+        "anomaly-detection"
+      ],
+      "id": 44
+    },
+    {
+      "name": "logdata-anomaly-miner",
+      "one_line_profile": "Log data parsing and anomaly detection pipeline tool",
+      "detailed_description": "A tool designed to parse log data and define analysis pipelines for anomaly detection, optimized for running with limited resources on production servers.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "log_parsing",
+        "anomaly_detection",
+        "pipeline_definition"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ait-aecid/logdata-anomaly-miner",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "log-mining",
+        "anomaly-detection",
+        "pipeline"
+      ],
+      "id": 45
+    },
+    {
+      "name": "msda",
+      "one_line_profile": "Library for multi-sensor data analysis and anomaly detection",
+      "detailed_description": "A library for multi-dimensional, multi-sensor, and multivariate time series data analysis, including unsupervised feature selection and deep anomaly detection.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "anomaly_detection",
+        "feature_selection"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ajayarunachalam/msda",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "multi-sensor",
+        "time-series",
+        "anomaly-detection",
+        "explainable-ai"
+      ],
+      "id": 46
+    },
+    {
+      "name": "Prometheus",
+      "one_line_profile": "Open source autonomous drone software platform",
+      "detailed_description": "A comprehensive open-source software platform for autonomous drones, including modules for state estimation, mapping, and planning, enabling advanced robotic monitoring and control.",
+      "domains": [
+        "R1"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "autonomous_control",
+        "robotics"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/amov-lab/Prometheus",
+      "help_website": [
+        "https://github.com/amov-lab/Prometheus/wiki"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "drones",
+        "autonomous-systems",
+        "robotics",
+        "state-estimation"
+      ],
+      "id": 47
+    },
+    {
+      "name": "airflow-provider-anomaly-detection",
+      "one_line_profile": "Airflow provider for anomaly detection tasks",
+      "detailed_description": "An Apache Airflow provider that integrates anomaly detection capabilities directly into Airflow workflows, facilitating automated monitoring pipelines.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "workflow_integration",
+        "anomaly_detection"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/andrewm4894/airflow-provider-anomaly-detection",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "airflow",
+        "anomaly-detection",
+        "workflow"
+      ],
+      "id": 48
+    },
+    {
+      "name": "ADTK",
+      "one_line_profile": "A Python toolkit for rule-based and unsupervised anomaly detection in time series",
+      "detailed_description": "ADTK (Anomaly Detection Toolkit) is a Python package for unsupervised / rule-based time series anomaly detection. It offers a set of common detectors, transformers, and aggregators to build anomaly detection models for scientific and industrial sensor data.",
+      "domains": [
+        "R1-04",
+        "Scientific Computing"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "time_series_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/arundo/adtk",
+      "help_website": [
+        "https://adtk.readthedocs.io/"
+      ],
+      "license": "MPL-2.0",
+      "tags": [
+        "time-series",
+        "anomaly-detection",
+        "sensor-data"
+      ],
+      "id": 49
+    },
+    {
+      "name": "Curve",
+      "one_line_profile": "An integrated experimental platform for time series data anomaly detection",
+      "detailed_description": "Curve is an open-source platform designed to support the full lifecycle of time series anomaly detection, including data labeling, model training, and evaluation. It is suitable for handling sensor data in laboratory and industrial settings.",
+      "domains": [
+        "R1-04",
+        "Data Analysis"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "labeling",
+        "benchmarking"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/baidu/Curve",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "time-series",
+        "anomaly-detection",
+        "labeling-tool"
+      ],
+      "id": 50
+    },
+    {
+      "name": "pyodeint",
+      "one_line_profile": "Python wrapper around the boost odeint C++ library for numerical integration",
+      "detailed_description": "pyodeint provides a Python interface to the C++ boost::numeric::odeint library, enabling efficient numerical integration of ordinary differential equations (ODEs) for scientific modeling and simulation.",
+      "domains": [
+        "Scientific Computing",
+        "Modeling"
+      ],
+      "subtask_category": [
+        "simulation",
+        "ode_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/bjodah/pyodeint",
+      "help_website": [
+        "https://bjodah.github.io/pyodeint/latest/"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "ode",
+        "numerical-integration",
+        "simulation"
+      ],
+      "id": 51
+    },
+    {
+      "name": "pyodesys",
+      "one_line_profile": "A Python library for straightforward numerical integration of systems of ODEs",
+      "detailed_description": "pyodesys offers a unified interface for integrating systems of ordinary differential equations, supporting symbolic representation and multiple backend solvers (including GSL, CVODE, and odeint).",
+      "domains": [
+        "Scientific Computing",
+        "Modeling"
+      ],
+      "subtask_category": [
+        "simulation",
+        "ode_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bjodah/pyodesys",
+      "help_website": [
+        "https://bjodah.github.io/pyodesys/latest/"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "ode",
+        "symbolic-math",
+        "simulation"
+      ],
+      "id": 52
+    },
+    {
+      "name": "QRCodeStateEstimation",
+      "one_line_profile": "A library for robot pose estimation using QR codes",
+      "detailed_description": "A C++ library designed to determine the 3D pose (state estimation) of robots or UAVs by visually tracking QR codes, serving as a localization tool in robotics research.",
+      "domains": [
+        "R1",
+        "Robotics"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "localization"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/charlesrwest/QRCodeStateEstimation",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "robotics",
+        "localization",
+        "computer-vision"
+      ],
+      "id": 53
+    },
+    {
+      "name": "cockpit-ros2-diagnostics",
+      "one_line_profile": "A Cockpit plugin to display ROS 2 diagnostic information for robot monitoring",
+      "detailed_description": "A plugin for the Cockpit web interface that visualizes ROS 2 diagnostic messages, enabling real-time health monitoring and fault diagnosis of robotic systems.",
+      "domains": [
+        "R1-04",
+        "Robotics"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "diagnostics"
+      ],
+      "application_level": "solver",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/clearpathrobotics/cockpit-ros2-diagnostics",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "ros2",
+        "diagnostics",
+        "robot-monitoring"
+      ],
+      "id": 54
+    },
+    {
+      "name": "cognitoware-robotics",
+      "one_line_profile": "A C++ library for probabilistic state estimation and Bayes filters in robotics",
+      "detailed_description": "A library implementing probabilistic state estimation algorithms for robotics, including Kalman filters, Markov chains, and distribution handling for sensor models.",
+      "domains": [
+        "R1",
+        "Robotics"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "filtering"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/cognitoware/robotics",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "kalman-filter",
+        "state-estimation",
+        "robotics"
+      ],
+      "id": 55
+    },
+    {
+      "name": "robot_localization",
+      "one_line_profile": "A ROS package for nonlinear state estimation and sensor fusion",
+      "detailed_description": "A standard ROS package that provides nonlinear state estimation through Extended Kalman Filters (EKF) and Unscented Kalman Filters (UKF) to fuse sensor data for robust robot localization.",
+      "domains": [
+        "R1",
+        "Robotics"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "sensor_fusion"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/cra-ros-pkg/robot_localization",
+      "help_website": [
+        "http://docs.ros.org/en/noetic/api/robot_localization/html/index.html"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "ros",
+        "kalman-filter",
+        "sensor-fusion"
+      ],
+      "id": 56
+    },
+    {
+      "name": "PyODDS",
+      "one_line_profile": "An end-to-end system for outlier detection with database support",
+      "detailed_description": "PyODDS is an end-to-end Python system for outlier detection that supports database backend integration, enabling efficient anomaly detection on large-scale scientific or industrial datasets.",
+      "domains": [
+        "R1-04",
+        "Data Analysis"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "outlier_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/datamllab/pyodds",
+      "help_website": [
+        "https://pyodds.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "outlier-detection",
+        "anomaly-detection",
+        "data-mining"
+      ],
+      "id": 57
+    },
+    {
+      "name": "CATCH",
+      "one_line_profile": "Channel-Aware Multivariate Time Series Anomaly Detection Model",
+      "detailed_description": "A PyTorch implementation of the CATCH model for multivariate time series anomaly detection, utilizing frequency patching and channel-aware attention mechanisms to capture temporal and spectral dependencies.",
+      "domains": [
+        "R1-04",
+        "Time Series Analysis",
+        "Deep Learning"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "time_series_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/decisionintelligence/CATCH",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "time-series",
+        "anomaly-detection",
+        "deep-learning",
+        "pytorch"
+      ],
+      "id": 58
+    },
+    {
+      "name": "TAB",
+      "one_line_profile": "Unified Benchmarking Framework for Time Series Anomaly Detection",
+      "detailed_description": "A comprehensive benchmarking library for evaluating time series anomaly detection algorithms, providing unified datasets, metrics, and baseline implementations to standardize research and application.",
+      "domains": [
+        "R1-04",
+        "Time Series Analysis",
+        "Benchmarking"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "anomaly_detection",
+        "evaluation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/decisionintelligence/TAB",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "benchmark",
+        "time-series",
+        "anomaly-detection"
+      ],
+      "id": 59
+    },
+    {
+      "name": "PlotJuggler",
+      "one_line_profile": "Time Series Visualization Tool for Robotics and Logs",
+      "detailed_description": "A fast and intuitive desktop application for visualizing and analyzing time series data. It supports various data formats including ROS bags, CSV, and ULog, making it a standard tool for robotics debugging and sensor data monitoring.",
+      "domains": [
+        "R1",
+        "R1-04",
+        "Robotics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_analysis",
+        "monitoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/facontidavide/PlotJuggler",
+      "help_website": [
+        "https://www.plotjuggler.io/"
+      ],
+      "license": "MPL-2.0",
+      "tags": [
+        "visualization",
+        "robotics",
+        "time-series",
+        "ros"
+      ],
+      "id": 60
+    },
+    {
+      "name": "pyoats",
+      "one_line_profile": "Library for Time Series Outlier Detection",
+      "detailed_description": "A Python library designed for quick and easy detection of outliers in time series data, providing implementations of various statistical and machine learning-based detection methods suitable for sensor data analysis.",
+      "domains": [
+        "R1-04",
+        "Data Science",
+        "Time Series Analysis"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "outlier_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/georgian-io/pyoats",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "time-series",
+        "outlier-detection",
+        "anomaly-detection"
+      ],
+      "id": 61
+    },
+    {
+      "name": "pyodk",
+      "one_line_profile": "Official Python Client for Open Data Kit (ODK)",
+      "detailed_description": "The official Python library for interacting with ODK Central, enabling programmatic access to scientific field data collection projects, form management, and data retrieval for analysis.",
+      "domains": [
+        "Field Research",
+        "Data Collection",
+        "Social Science"
+      ],
+      "subtask_category": [
+        "data_access",
+        "data_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/getodk/pyodk",
+      "help_website": [
+        "https://pyodk.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "odk",
+        "data-collection",
+        "field-research"
+      ],
+      "id": 62
+    },
+    {
+      "name": "MiniShift-Simple3D",
+      "one_line_profile": "Real-time 3D anomaly detection framework for high-resolution industrial defects",
+      "detailed_description": "A scalable dataset and real-time framework implementation for detecting subtle industrial defects using high-resolution 3D anomaly detection techniques. It serves as a solver for 3D surface inspection tasks.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "3d_inspection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hustCYQ/MiniShift-Simple3D",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "3d-anomaly-detection",
+        "industrial-inspection",
+        "point-cloud"
+      ],
+      "id": 63
+    },
+    {
+      "name": "muse",
+      "one_line_profile": "State estimation package for quadruped robots fusing proprioceptive and exteroceptive data",
+      "detailed_description": "A robotics library designed for quadruped state estimation, integrating various sensor data sources to provide accurate robot localization and status monitoring.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "sensor_fusion"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/iit-DLSLab/muse",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "robotics",
+        "state-estimation",
+        "quadruped"
+      ],
+      "id": 64
+    },
+    {
+      "name": "go2_odometry",
+      "one_line_profile": "State estimation solver for Unitree Go2 robots",
+      "detailed_description": "A lightweight state estimation tool specifically designed for the Unitree Go2 robot platform, enabling odometry tracking for robotics research and monitoring.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "odometry"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/inria-paris-robotics-lab/go2_odometry",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "unitree-go2",
+        "odometry",
+        "robotics"
+      ],
+      "id": 65
+    },
+    {
+      "name": "Industrial-Anomaly-Detection",
+      "one_line_profile": "Virtualization-based platform for running multiple industrial anomaly detection workloads",
+      "detailed_description": "A reference implementation and platform for executing independent anomaly detection workloads (such as object flaws and motor defects) on a single system using KVM virtualization, suitable for industrial monitoring setups.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "workload_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/intel-iot-devkit/Industrial-Anomaly-Detection",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "industrial-iot",
+        "anomaly-detection",
+        "virtualization"
+      ],
+      "id": 66
+    },
+    {
+      "name": "DEnKF",
+      "one_line_profile": "Differentiable Ensemble Kalman Filter for robot state estimation",
+      "detailed_description": "A data-driven approach to enhance state estimation in robotics using Differentiable Ensemble Kalman Filters, providing a solver for filtering and estimation tasks.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "kalman_filter"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ir-lab/DEnKF",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "kalman-filter",
+        "robotics",
+        "state-estimation"
+      ],
+      "id": 67
+    },
+    {
+      "name": "CUDA-Accelerated-Visual-Inertial-Odometry-Fusion",
+      "one_line_profile": "GPU-accelerated Unscented Kalman Filter for visual-inertial odometry fusion",
+      "detailed_description": "A high-performance C++ library utilizing CUDA for real-time fusion of visual odometry and IMU data via Unscented Kalman Filter (UKF), designed for robotics state estimation.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "sensor_fusion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Cuda",
+      "repo_url": "https://github.com/jagennath-hari/CUDA-Accelerated-Visual-Inertial-Odometry-Fusion",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cuda",
+        "kalman-filter",
+        "visual-inertial-odometry"
+      ],
+      "id": 68
+    },
+    {
+      "name": "RAD",
+      "one_line_profile": "Benchmark dataset for real-life anomaly detection with robotic observations",
+      "detailed_description": "A dataset and benchmark suite designed for evaluating anomaly detection algorithms in robotic scenarios, providing real-world observational data.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kaichen-z/RAD",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "robotics",
+        "anomaly-detection",
+        "dataset"
+      ],
+      "id": 69
+    },
+    {
+      "name": "labml",
+      "one_line_profile": "Mobile monitoring library for deep learning model training and hardware usage",
+      "detailed_description": "A library for monitoring deep learning experiments, tracking training metrics and hardware resource usage (GPU/CPU) in real-time, facilitating the scientific process of model development.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "experiment_monitoring",
+        "resource_tracking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/labmlai/labml",
+      "help_website": [
+        "https://labml.ai"
+      ],
+      "license": "MIT",
+      "tags": [
+        "experiment-tracking",
+        "deep-learning",
+        "monitoring"
+      ],
+      "id": 70
+    },
+    {
+      "name": "VAE-LSTM-for-anomaly-detection",
+      "one_line_profile": "Unsupervised VAE-LSTM model for time series anomaly detection",
+      "detailed_description": "An implementation of a VAE-LSTM hybrid model for unsupervised anomaly detection in time series data, serving as a solver for signal analysis tasks.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "time_series_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/lin-shuyu/VAE-LSTM-for-anomaly-detection",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vae",
+        "lstm",
+        "time-series"
+      ],
+      "id": 71
+    },
+    {
+      "name": "fuse",
+      "one_line_profile": "General architecture for live sensor fusion on robots",
+      "detailed_description": "A comprehensive stack for performing real-time sensor fusion on robots, supporting applications like state estimation, localization, mapping, and calibration.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "sensor_fusion",
+        "state_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/locusrobotics/fuse",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "robotics",
+        "sensor-fusion",
+        "localization"
+      ],
+      "id": 72
+    },
+    {
+      "name": "monitoring",
+      "one_line_profile": "Tool for analyzing and monitoring ROS systems",
+      "detailed_description": "A utility tool designed to monitor and analyze Robot Operating System (ROS) environments, aiding in the diagnosis and observation of robotic system behaviors.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "system_monitoring",
+        "diagnostics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/luhrts/monitoring",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ros",
+        "monitoring",
+        "robotics"
+      ],
+      "id": 73
+    },
+    {
+      "name": "anomalyzer",
+      "one_line_profile": "Probabilistic anomaly detection library for time series data",
+      "detailed_description": "A Go library implementing probabilistic models for detecting anomalies in time series data, applicable to sensor data analysis and monitoring tasks.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "time_series_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/lytics/anomalyzer",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "time-series",
+        "anomaly-detection",
+        "statistics"
+      ],
+      "id": 74
+    },
+    {
+      "name": "ADBenchmarks-anomaly-detection-datasets",
+      "one_line_profile": "Comprehensive repository of real-world anomaly detection datasets",
+      "detailed_description": "A collection of diverse anomaly detection datasets covering tabular, time series, graph, image, and video data, serving as a benchmark resource for evaluating AD algorithms.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "dataset"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/mala-lab/ADBenchmarks-anomaly-detection-datasets",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dataset",
+        "anomaly-detection",
+        "benchmark"
+      ],
+      "id": 75
+    },
+    {
+      "name": "mtad-gat",
+      "one_line_profile": "Multivariate Time-series Anomaly Detection via Graph Attention Network",
+      "detailed_description": "An implementation of the MTAD-GAT model for detecting anomalies in multivariate time-series data using graph attention networks, suitable for complex sensor data analysis.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "time_series_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mangushev/mtad-gat",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "graph-neural-networks",
+        "time-series",
+        "anomaly-detection"
+      ],
+      "id": 76
+    },
+    {
+      "name": "TagAnomaly",
+      "one_line_profile": "Anomaly detection analysis and labeling tool for time series data",
+      "detailed_description": "A tool specifically designed for the analysis and labeling of anomalies in multiple time series datasets. It allows users to visualize time series and tag regions of interest, aiding in the creation of labeled datasets for supervised anomaly detection models.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "data_labeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/microsoft/TagAnomaly",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "time-series",
+        "anomaly-detection",
+        "labeling"
+      ],
+      "id": 77
+    },
+    {
+      "name": "Anomalib",
+      "one_line_profile": "Deep learning library for anomaly detection in images and time series",
+      "detailed_description": "A deep learning library that collects state-of-the-art anomaly detection algorithms for benchmarking, developing, and deploying anomaly detection models. It supports experiment management and hyper-parameter optimization, specifically targeting visual inspection and defect detection tasks.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "defect_detection",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/open-edge-platform/anomalib",
+      "help_website": [
+        "https://anomalib.readthedocs.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "deep-learning",
+        "computer-vision",
+        "anomaly-detection"
+      ],
+      "id": 78
+    },
+    {
+      "name": "legged_control",
+      "one_line_profile": "NMPC and WBC based control and simulation framework for legged robots",
+      "detailed_description": "A comprehensive framework for legged robot control, state estimation, and Sim2Real simulation, utilizing Non-linear Model Predictive Control (NMPC) and Whole-Body Control (WBC) based on OCS2 and ROS controls.",
+      "domains": [
+        "R1"
+      ],
+      "subtask_category": [
+        "robot_control",
+        "simulation",
+        "state_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/qiayuanl/legged_control",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "robotics",
+        "control-theory",
+        "mpc",
+        "simulation"
+      ],
+      "id": 79
+    },
+    {
+      "name": "ros_jetson_stats",
+      "one_line_profile": "ROS wrapper for monitoring NVIDIA Jetson hardware diagnostics",
+      "detailed_description": "A ROS package that integrates NVIDIA Jetson hardware status (CPU/GPU usage, temperature, fan speed) into the robot's diagnostic system, enabling real-time hardware monitoring and fault detection.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "hardware_monitoring",
+        "diagnostics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rbonghi/ros_jetson_stats",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ros",
+        "jetson",
+        "monitoring",
+        "diagnostics"
+      ],
+      "id": 80
+    },
+    {
+      "name": "ros-graph-monitor",
+      "one_line_profile": "Tool for monitoring ROS application structure and node health",
+      "detailed_description": "A diagnostic tool designed to monitor the structure of ROS (Robot Operating System) graphs, verifying node connectivity and topic statistics to ensure application integrity.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "software_monitoring",
+        "graph_analysis"
+      ],
+      "application_level": "tool",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ros-tooling/graph-monitor",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ros",
+        "diagnostics",
+        "monitoring"
+      ],
+      "id": 81
+    },
+    {
+      "name": "ros_diagnostics",
+      "one_line_profile": "Standard ROS stack for collecting and analyzing robot diagnostics",
+      "detailed_description": "The standard diagnostics stack for ROS, providing tools and libraries (diagnostic_aggregator, diagnostic_analysis) to collect, aggregate, and visualize diagnostic data from robot hardware and software.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "diagnostics",
+        "system_monitoring",
+        "log_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ros/diagnostics",
+      "help_website": [
+        "http://wiki.ros.org/diagnostics"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "ros",
+        "diagnostics",
+        "robotics"
+      ],
+      "id": 82
+    },
+    {
+      "name": "topnode",
+      "one_line_profile": "Resource monitoring component for ROS 2 nodes",
+      "detailed_description": "A ROS 2 component that monitors system resource usage (CPU, memory) of other nodes, facilitating performance analysis and anomaly detection in robotic systems.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "resource_monitoring",
+        "performance_analysis"
+      ],
+      "application_level": "tool",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/safe-ros/topnode",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ros2",
+        "monitoring",
+        "profiling"
+      ],
+      "id": 83
+    },
+    {
+      "name": "Orion",
+      "one_line_profile": "Unsupervised time series anomaly detection library",
+      "detailed_description": "A machine learning library built for unsupervised time series anomaly detection, providing verified pipelines for detecting anomalies in satellite telemetry and other scientific sensor data.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "time_series_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sintel-dev/Orion",
+      "help_website": [
+        "https://github.com/sintel-dev/Orion"
+      ],
+      "license": "MIT",
+      "tags": [
+        "anomaly-detection",
+        "time-series",
+        "machine-learning"
+      ],
+      "id": 84
+    },
+    {
+      "name": "Anomaly-Transformer",
+      "one_line_profile": "Time series anomaly detection model using association discrepancy",
+      "detailed_description": "A deep learning model implementation for unsupervised anomaly detection in time series data, utilizing an Anomaly-Transformer architecture to capture association discrepancies.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "time_series_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/thuml/Anomaly-Transformer",
+      "help_website": [
+        "https://openreview.net/forum?id=LzQQ89U1qm_"
+      ],
+      "license": "MIT",
+      "tags": [
+        "time-series",
+        "anomaly-detection",
+        "transformer",
+        "deep-learning"
+      ],
+      "id": 85
+    },
+    {
+      "name": "Darts",
+      "one_line_profile": "Python library for easy manipulation and forecasting of time series",
+      "detailed_description": "A comprehensive Python library for user-friendly forecasting and anomaly detection on time series, supporting a variety of models from ARIMA to deep neural networks.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "forecasting",
+        "anomaly_detection",
+        "time_series_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/unit8co/darts",
+      "help_website": [
+        "https://unit8co.github.io/darts/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "time-series",
+        "forecasting",
+        "anomaly-detection",
+        "machine-learning"
+      ],
+      "id": 86
+    },
+    {
+      "name": "Anomaly Detection in Industry",
+      "one_line_profile": "UI pipeline for training and inference of industrial anomaly detection models",
+      "detailed_description": "A graphical user interface and pipeline for training and deploying anomaly detection models (based on Anomalib) specifically for industrial manufacturing inspection tasks.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "visual_inspection",
+        "anomaly_detection",
+        "quality_control"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/vnk8071/anomaly-detection-in-industry-manufacturing",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "industrial-inspection",
+        "computer-vision",
+        "gui",
+        "anomalib"
+      ],
+      "id": 87
+    },
+    {
+      "name": "SKAB",
+      "one_line_profile": "Skoltech Anomaly Benchmark for time-series anomaly detection",
+      "detailed_description": "A benchmark dataset designed for evaluating algorithms for anomaly detection in time-series data, specifically focused on embedded systems and testbeds.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "anomaly_detection"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/waico/SKAB",
+      "help_website": [
+        "https://www.kaggle.com/dmitryyemelyanov/skab"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "benchmark",
+        "dataset",
+        "time-series",
+        "anomaly-detection"
+      ],
+      "id": 88
+    },
+    {
+      "name": "DeepOD",
+      "one_line_profile": "Deep learning-based outlier and anomaly detection library",
+      "detailed_description": "A comprehensive Python library for deep learning-based anomaly detection, providing implementations of various state-of-the-art algorithms for tabular and time-series data.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "outlier_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xuhongzuo/DeepOD",
+      "help_website": [
+        "https://deepod.readthedocs.io/"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "deep-learning",
+        "anomaly-detection",
+        "outlier-detection"
+      ],
+      "id": 89
+    },
+    {
+      "name": "PyOD",
+      "one_line_profile": "Comprehensive Python toolkit for detecting outlying objects",
+      "detailed_description": "A scalable Python toolkit for detecting outlying objects in multivariate data, featuring over 40 detection algorithms ranging from classical techniques to deep learning models.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "outlier_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yzhao062/pyod",
+      "help_website": [
+        "https://pyod.readthedocs.io/"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "anomaly-detection",
+        "machine-learning",
+        "outlier-detection",
+        "data-mining"
+      ],
+      "id": 90
+    },
+    {
+      "name": "GTA",
+      "one_line_profile": "Graph Transformer for Multivariate Time Series Anomaly Detection",
+      "detailed_description": "Implementation of a Graph Transformer network designed to learn graph structures for detecting anomalies in multivariate time series data, particularly for IoT applications.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "time_series_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zackchen-lb/GTA",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "graph-neural-networks",
+        "time-series",
+        "iot",
+        "anomaly-detection"
+      ],
+      "id": 91
+    },
+    {
+      "name": "CARLA",
+      "one_line_profile": "Self-supervised contrastive learning for time series anomaly detection",
+      "detailed_description": "A self-supervised contrastive learning model (CARLA) designed to learn robust representations of time series data for enhanced anomaly detection capabilities.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/zamanzadeh/CARLA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "contrastive-learning",
+        "time-series",
+        "anomaly-detection"
+      ],
+      "id": 92
+    },
+    {
+      "name": "TS-Anomaly-Benchmark",
+      "one_line_profile": "Comprehensive benchmark for time-series anomaly detection",
+      "detailed_description": "A curated collection of datasets and evaluation scripts serving as a comprehensive benchmark for assessing time-series anomaly detection algorithms.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "anomaly_detection"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zamanzadeh/ts-anomaly-benchmark",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "time-series",
+        "anomaly-detection",
+        "dataset"
+      ],
+      "id": 93
+    },
+    {
+      "name": "LogSAD",
+      "one_line_profile": "Training-free anomaly detection with vision and language foundation models",
+      "detailed_description": "Implementation of a training-free anomaly detection approach leveraging vision and language foundation models, targeting log analysis tasks (CVPR 2025).",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "log_analysis",
+        "anomaly_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhang0jhon/LogSAD",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "foundation-models",
+        "log-analysis",
+        "anomaly-detection",
+        "cvpr"
+      ],
+      "id": 94
+    },
+    {
+      "name": "InterFusion",
+      "one_line_profile": "Multivariate time series anomaly detection using hierarchical embedding",
+      "detailed_description": "A model for multivariate time series anomaly detection and interpretation that uses hierarchical inter-metric and temporal embeddings to capture complex dependencies.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "time_series_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhhlee/InterFusion",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "time-series",
+        "anomaly-detection",
+        "kdd",
+        "multivariate-analysis"
+      ],
+      "id": 95
+    },
+    {
+      "name": "Co-LRIO",
+      "one_line_profile": "LiDAR-Ranging-Inertial Centralized State Estimation for Robotic Swarms",
+      "detailed_description": "A ROS2 package implementing centralized state estimation for robotic swarms by fusing LiDAR, ranging, and inertial data, useful for monitoring robot states.",
+      "domains": [
+        "R1",
+        "R1-04"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "sensor_fusion",
+        "monitoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/zhongshp/Co-LRIO",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ros2",
+        "state-estimation",
+        "robotics",
+        "sensor-fusion"
+      ],
+      "id": 96
+    },
+    {
+      "name": "Industrial Defect Detection",
+      "one_line_profile": "Deep learning system for industrial product defect detection",
+      "detailed_description": "A deep learning-based system designed for automated visual inspection and defect detection in industrial products, aiming to replace manual quality control.",
+      "domains": [
+        "R1-04"
+      ],
+      "subtask_category": [
+        "visual_inspection",
+        "defect_detection",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zwb204/Industrial_defect_detection",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "defect-detection",
+        "deep-learning",
+        "industrial-automation",
+        "computer-vision"
+      ],
+      "id": 97
+    }
+  ]
+}

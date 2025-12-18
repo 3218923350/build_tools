@@ -1,0 +1,2986 @@
+{
+  "generated_at": "2025-12-16T08:32:57.802984+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "C4",
+      "leaf_cluster_name": "化学-谱学解析与表征生态",
+      "domain": "Chemistry",
+      "typical_objects": "NMR/MS/IR/Raman",
+      "task_chain": "预处理→峰识别→指认→定量→报告",
+      "tool_form": "GUI + 库 + 流水线"
+    },
+    "unit": {
+      "unit_id": "C4-01",
+      "unit_name": "谱图预处理/峰检测/去噪",
+      "target_scale": "200–450",
+      "coverage_tools": "peak picking、baseline、denoise"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] als-spectral",
+        "[GH] scikit-spectra",
+        "[GH] spectrochempy",
+        "[GH] MALDIquant",
+        "[GH] rampy",
+        "[GH] pybaselines",
+        "[GH] MZmine",
+        "[GH] XCMS",
+        "[GH] OpenMS",
+        "[GH] nmrglue",
+        "[GH] peak detection",
+        "[GH] baseline correction",
+        "[GH] spectral denoising",
+        "[GH] peak picking",
+        "[GH] spectrum smoothing",
+        "[GH] NMR processing",
+        "[GH] mass spectrometry preprocessing",
+        "[GH] Raman spectroscopy analysis",
+        "[GH] spectral deconvolution",
+        "[GH] chemometrics preprocessing",
+        "[GH] Savitzky-Golay",
+        "[GH] chromatogram alignment",
+        "[GH] signal processing spectroscopy",
+        "[WEB] spectroscopy preprocessing library github",
+        "[WEB] NMR peak detection python github",
+        "[WEB] mass spectrometry baseline correction github",
+        "[WEB] Raman spectrum denoising tools github",
+        "[WEB] spectral analysis algorithms github",
+        "[WEB] open source spectroscopy signal processing github"
+      ],
+      "total_candidates": 817,
+      "tool_candidates": 303,
+      "final_tools": 118
+    }
+  },
+  "tools": [
+    {
+      "name": "BoxSERS",
+      "one_line_profile": "Python package for processing and analyzing vibrational spectra (Raman, SERS, FTIR)",
+      "detailed_description": "BoxSERS is a Python package designed for the processing and analysis of vibrational spectra, including Raman, SERS, and FTIR data. It provides functionality for baseline subtraction, smoothing, normalization, and peak detection, facilitating the extraction of chemical information from spectral datasets.",
+      "domains": [
+        "Chemistry",
+        "Spectroscopy"
+      ],
+      "subtask_category": [
+        "spectral_processing",
+        "baseline_correction",
+        "peak_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ALebrun-108/BoxSERS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "raman",
+        "sers",
+        "ftir",
+        "spectroscopy",
+        "preprocessing"
+      ],
+      "id": 1
+    },
+    {
+      "name": "SpectroMap",
+      "one_line_profile": "Peak detection algorithm using constellation maps for signal analysis",
+      "detailed_description": "SpectroMap is a peak detection tool that utilizes a constellation map approach to identify peaks in signals. It is designed to handle spectral data and provide robust peak identification capabilities.",
+      "domains": [
+        "Signal Processing",
+        "Spectroscopy"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "signal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Aaron-AALG/SpectroMap",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "peak-detection",
+        "signal-processing",
+        "constellation-map"
+      ],
+      "id": 2
+    },
+    {
+      "name": "NMRProcFlow",
+      "one_line_profile": "Interactive GUI for 1D NMR metabolomics spectra processing",
+      "detailed_description": "NMRProcFlow is an open-source software that provides a graphical user interface for the processing and visualization of 1D NMR metabolomics data. It facilitates spectral alignment, baseline correction, and peak integration, specifically tailored for metabolomics workflows.",
+      "domains": [
+        "Chemistry",
+        "Metabolomics"
+      ],
+      "subtask_category": [
+        "spectral_processing",
+        "metabolomics_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "R",
+      "repo_url": "https://github.com/INRA/NMRProcFlow",
+      "help_website": [
+        "https://nmrprocflow.org"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "nmr",
+        "metabolomics",
+        "spectra-processing"
+      ],
+      "id": 3
+    },
+    {
+      "name": "Risa",
+      "one_line_profile": "R package for processing ISA-tab metadata and data into Bioconductor structures",
+      "detailed_description": "Risa is an R package that serves as a bridge between the ISA-tab metadata format and Bioconductor data structures. It allows for the parsing of ISA-tab files and processing of associated mass spectrometry data into xcmsSet objects for further metabolomics or proteomics analysis.",
+      "domains": [
+        "Bioinformatics",
+        "Metabolomics"
+      ],
+      "subtask_category": [
+        "data_management",
+        "metadata_parsing",
+        "format_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ISA-tools/Risa",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "isa-tab",
+        "bioconductor",
+        "metabolomics",
+        "xcms"
+      ],
+      "id": 4
+    },
+    {
+      "name": "vg-beat-detectors",
+      "one_line_profile": "Fast R-peak detectors for ECG based on Visibility Graphs",
+      "detailed_description": "vg-beat-detectors provides fast and sample-accurate algorithms for detecting R-peaks in electrocardiogram (ECG) signals using Visibility Graphs. It offers an alternative to traditional signal processing methods for heart rate variability analysis.",
+      "domains": [
+        "Signal Processing",
+        "Physiology"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "signal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JonasEmrich/vg-beat-detectors",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "ecg",
+        "peak-detection",
+        "visibility-graphs"
+      ],
+      "id": 5
+    },
+    {
+      "name": "ampdLib",
+      "one_line_profile": "Python implementation of the Automatic Multiscale Peak Detection (AMPD) algorithm",
+      "detailed_description": "ampdLib is a Python library implementing the Automatic Multiscale Peak Detection (AMPD) algorithm. It is designed for robust peak detection in periodic and quasi-periodic signals, useful in various scientific signal processing tasks.",
+      "domains": [
+        "Signal Processing"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "signal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LucaCerina/ampdLib",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "peak-detection",
+        "ampd",
+        "signal-processing"
+      ],
+      "id": 6
+    },
+    {
+      "name": "LumiSpy",
+      "one_line_profile": "HyperSpy extension for luminescence spectroscopy data analysis",
+      "detailed_description": "LumiSpy is an extension for the HyperSpy library, specifically designed for the analysis of luminescence spectroscopy data. It provides tools for handling, processing, and analyzing multidimensional luminescence datasets.",
+      "domains": [
+        "Materials Science",
+        "Spectroscopy"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "luminescence"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LumiSpy/lumispy",
+      "help_website": [
+        "https://lumispy.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "luminescence",
+        "hyperspy",
+        "spectroscopy"
+      ],
+      "id": 7
+    },
+    {
+      "name": "nmrkit",
+      "one_line_profile": "Microservices for NMR data processing and analysis",
+      "detailed_description": "A collection of microservices designed to simplify NMR data processing and analysis, developed by NFDI4Chem.",
+      "domains": [
+        "Chemistry",
+        "Spectroscopy"
+      ],
+      "subtask_category": [
+        "processing",
+        "analysis"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NFDI4Chem/nmrkit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "microservices",
+        "spectroscopy"
+      ],
+      "id": 8
+    },
+    {
+      "name": "nmrpy",
+      "one_line_profile": "Python module for processing NMR spectra",
+      "detailed_description": "A Python module dedicated to the processing and analysis of Nuclear Magnetic Resonance (NMR) spectra.",
+      "domains": [
+        "Chemistry",
+        "Spectroscopy"
+      ],
+      "subtask_category": [
+        "processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NMRPy/nmrpy",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "nmr",
+        "spectra-processing",
+        "python"
+      ],
+      "id": 9
+    },
+    {
+      "name": "LFMF",
+      "one_line_profile": "Low Frequency / Medium Frequency Propagation Model",
+      "detailed_description": "C++ implementation of the NTIA/ITS Low Frequency / Medium Frequency (LF/MF) Propagation Model for predicting transmission loss.",
+      "domains": [
+        "Physics",
+        "Telecommunications"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/NTIA/LFMF",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "propagation-model",
+        "radio-frequency",
+        "physics"
+      ],
+      "id": 10
+    },
+    {
+      "name": "OpenMS",
+      "one_line_profile": "Open-source software for mass spectrometry data processing",
+      "detailed_description": "A powerful, open-source software library and framework for the processing and analysis of mass spectrometry data.",
+      "domains": [
+        "Chemistry",
+        "Mass Spectrometry"
+      ],
+      "subtask_category": [
+        "processing",
+        "analysis",
+        "peak_picking"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenMS/OpenMS",
+      "help_website": [
+        "http://www.openms.de"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "mass-spectrometry",
+        "proteomics",
+        "metabolomics"
+      ],
+      "id": 11
+    },
+    {
+      "name": "Cardiac-frecuency-and-ECG-signal-denoising-by-EEMD",
+      "one_line_profile": "ECG signal denoising and R peak detection",
+      "detailed_description": "MATLAB implementation for ECG signal denoising using Ensemble Empirical Mode Decomposition (EEMD) and R peak detection using Hilbert Transform.",
+      "domains": [
+        "Biomedical",
+        "Signal Processing"
+      ],
+      "subtask_category": [
+        "denoising",
+        "peak_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/RAMIRO-GM/Cardiac-frecuency-and-ECG-signal-denoising-by-EEMD",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ecg",
+        "eemd",
+        "denoising"
+      ],
+      "id": 12
+    },
+    {
+      "name": "PyZEAL",
+      "one_line_profile": "Numerical calculation of zeros of analytic functions",
+      "detailed_description": "A Python package for finding zeros, poles, and residues of holomorphic and meromorphic functions, successor to the ZEAL Fortran package.",
+      "domains": [
+        "Mathematics",
+        "Physics"
+      ],
+      "subtask_category": [
+        "calculation",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Spectral-Analysis-UPB/PyZEAL",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "complex-analysis",
+        "numerical-methods",
+        "roots"
+      ],
+      "id": 13
+    },
+    {
+      "name": "BaselineRemoval",
+      "one_line_profile": "Baseline removal for Raman spectra",
+      "detailed_description": "A Python library to perform baseline removal, correction, and subtraction for Raman spectra using algorithms like Modpoly and Zhang fit.",
+      "domains": [
+        "Chemistry",
+        "Spectroscopy"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "baseline_correction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/StatguyUser/BaselineRemoval",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "raman",
+        "baseline-correction",
+        "spectroscopy"
+      ],
+      "id": 14
+    },
+    {
+      "name": "TNO-DECO",
+      "one_line_profile": "Preprocessing for GC-MS Data",
+      "detailed_description": "MATLAB code for preprocessing Gas Chromatography Mass Spectrometry (GC-MS) data, developed by TNO.",
+      "domains": [
+        "Chemistry",
+        "Mass Spectrometry"
+      ],
+      "subtask_category": [
+        "preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/TNO/TNO-DECO",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "gc-ms",
+        "preprocessing",
+        "chromatography"
+      ],
+      "id": 15
+    },
+    {
+      "name": "FLARE",
+      "one_line_profile": "RNA edit detection and peak calling",
+      "detailed_description": "Software for RNA edit detection (SAILOR) and peak calling (FLARE) from the Yeo Lab.",
+      "domains": [
+        "Biology",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "peak_calling",
+        "variant_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/YeoLab/FLARE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "rna",
+        "peak-calling",
+        "genomics"
+      ],
+      "id": 16
+    },
+    {
+      "name": "peak-detector",
+      "one_line_profile": "Multimodal peak detection for physiological signals",
+      "detailed_description": "A MATLAB tool for multimodal peak detection using ECG, ABP, PPG, or SV signals.",
+      "domains": [
+        "Biomedical",
+        "Signal Processing"
+      ],
+      "subtask_category": [
+        "peak_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/alistairewj/peak-detector",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "ecg",
+        "ppg",
+        "peak-detection"
+      ],
+      "id": 17
+    },
+    {
+      "name": "gram_savitzky_golay",
+      "one_line_profile": "C++ implementation of Savitzky-Golay filtering based on Gram polynomials",
+      "detailed_description": "A highly efficient C++ library for smoothing and differentiating data using Savitzky-Golay filters, utilizing Gram polynomials for numerical stability and performance.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "denoising",
+        "smoothing",
+        "differentiation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/arntanguy/gram_savitzky_golay",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "savitzky-golay",
+        "smoothing",
+        "signal-processing",
+        "cpp"
+      ],
+      "id": 18
+    },
+    {
+      "name": "sgsmooth",
+      "one_line_profile": "C++ Implementation of Savitzky-Golay filters",
+      "detailed_description": "A C++ library providing an implementation of the Savitzky-Golay smoothing filter, suitable for preprocessing spectral or time-series data.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "denoising",
+        "smoothing"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/arntanguy/sgsmooth",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "savitzky-golay",
+        "smoothing",
+        "signal-processing"
+      ],
+      "id": 19
+    },
+    {
+      "name": "peakdetect",
+      "one_line_profile": "Simple peak detection algorithm in Python",
+      "detailed_description": "A lightweight Python module for detecting peaks and valleys in time-series data, useful for basic spectral or signal analysis.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/avhn/peakdetect",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "peak-detection",
+        "signal-processing",
+        "python"
+      ],
+      "id": 20
+    },
+    {
+      "name": "RamanSPy",
+      "one_line_profile": "Python package for integrative Raman spectroscopy data analysis",
+      "detailed_description": "An open-source Python package designed for the analysis of Raman spectroscopy data, offering tools for preprocessing, processing, and visualizing Raman spectra.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "preprocessing",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/barahona-research-group/RamanSPy",
+      "help_website": [
+        "https://ramanspy.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "raman-spectroscopy",
+        "chemometrics",
+        "data-analysis"
+      ],
+      "id": 21
+    },
+    {
+      "name": "sdrf-pipelines",
+      "one_line_profile": "SDRF file validator and converter for proteomics/genomics pipelines",
+      "detailed_description": "A tool to validate Sample and Data Relationship Format (SDRF) files and convert them into configuration files for various data analysis pipelines in proteomics and multi-omics.",
+      "domains": [
+        "C4",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "metadata_validation",
+        "pipeline_configuration",
+        "quality_control"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bigbio/sdrf-pipelines",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "sdrf",
+        "proteomics",
+        "metadata",
+        "bioinformatics"
+      ],
+      "id": 22
+    },
+    {
+      "name": "ChemoSpec",
+      "one_line_profile": "R functions for the chemometric analysis of spectra",
+      "detailed_description": "A collection of R functions for top-down exploratory data analysis of spectral data, including NMR, IR, and Raman, supporting plotting, PCA, and HCA.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "chemometrics",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/bryanhanson/ChemoSpec",
+      "help_website": [
+        "https://bryanhanson.github.io/ChemoSpec/"
+      ],
+      "license": null,
+      "tags": [
+        "chemometrics",
+        "spectroscopy",
+        "nmr",
+        "ir",
+        "r-package"
+      ],
+      "id": 23
+    },
+    {
+      "name": "PTXQC",
+      "one_line_profile": "Quality Control pipeline for Proteomics results from MaxQuant",
+      "detailed_description": "An R-based Quality Control (QC) pipeline that generates comprehensive QC reports for proteomics data analyzed with MaxQuant.",
+      "domains": [
+        "Bioinformatics",
+        "Proteomics"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "qc_report"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/cbielow/PTXQC",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "proteomics",
+        "quality-control",
+        "maxquant",
+        "qc"
+      ],
+      "id": 24
+    },
+    {
+      "name": "rampy",
+      "one_line_profile": "Python software for spectral data processing (IR, Raman, XAS)",
+      "detailed_description": "A Python library containing functions for processing spectroscopic data, including baseline correction, smoothing, resampling, and peak fitting, suitable for Raman, IR, and XAS.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "spectral_processing",
+        "baseline_correction",
+        "curve_fitting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/charlesll/rampy",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "spectroscopy",
+        "raman",
+        "ir",
+        "xas",
+        "data-processing"
+      ],
+      "id": 25
+    },
+    {
+      "name": "nmrium",
+      "one_line_profile": "React component to display and process NMR spectra",
+      "detailed_description": "A web-based tool and React component for visualizing, processing, and assigning Nuclear Magnetic Resonance (NMR) spectra directly in the browser.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "spectral_processing",
+        "peak_picking"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/cheminfo/nmrium",
+      "help_website": [
+        "https://www.nmrium.org"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "spectroscopy",
+        "visualization",
+        "react",
+        "web-tool"
+      ],
+      "id": 26
+    },
+    {
+      "name": "PeakBot",
+      "one_line_profile": "Machine learning based peak detection for LC-HRMS data",
+      "detailed_description": "A machine-learning based tool for the detection of chromatographic and m/z profile-mode peaks in Liquid Chromatography-High Resolution Mass Spectrometry (LC-HRMS) data.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "chromatography"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/christophuv/PeakBot",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "lc-ms",
+        "peak-detection",
+        "machine-learning",
+        "mass-spectrometry"
+      ],
+      "id": 27
+    },
+    {
+      "name": "peaks-detection",
+      "one_line_profile": "C library for detecting peaks and valleys in digital signals",
+      "detailed_description": "A C implementation for identifying peaks and valleys in sampled digital signals, applicable to various signal processing tasks including spectroscopy.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/cighao/peaks-detection",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "peak-detection",
+        "signal-processing",
+        "c"
+      ],
+      "id": 28
+    },
+    {
+      "name": "spectrum",
+      "one_line_profile": "Spectral Analysis library in Python",
+      "detailed_description": "A Python library for spectral analysis, implementing methods based on Fourier transform and parametric methods (e.g., Yule-Walker, BURG, MA, ARMA) for power spectral density estimation.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "psd_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cokelaer/spectrum",
+      "help_website": [
+        "http://pyspectrum.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "spectral-analysis",
+        "signal-processing",
+        "fourier",
+        "psd"
+      ],
+      "id": 29
+    },
+    {
+      "name": "DeepeR",
+      "one_line_profile": "Deep learning enabled Raman spectroscopy analysis",
+      "detailed_description": "A deep learning framework designed for the classification and analysis of Raman spectroscopy data, enabling automated identification of samples.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "classification",
+        "deep_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/conor-horgan/DeepeR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "raman",
+        "deep-learning",
+        "spectroscopy",
+        "classification"
+      ],
+      "id": 30
+    },
+    {
+      "name": "GEE_TimeSeries",
+      "one_line_profile": "Google Earth Engine time series processing with Savitzky-Golay filter",
+      "detailed_description": "A Python package for processing time series data within Google Earth Engine, specifically implementing Savitzky-Golay smoothing for remote sensing data analysis.",
+      "domains": [
+        "Earth Science",
+        "Remote Sensing"
+      ],
+      "subtask_category": [
+        "time_series_analysis",
+        "smoothing",
+        "denoising"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/davemlz/GEE_TimeSeries",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "google-earth-engine",
+        "remote-sensing",
+        "savitzky-golay",
+        "time-series"
+      ],
+      "id": 31
+    },
+    {
+      "name": "pybaselines",
+      "one_line_profile": "Library of algorithms for baseline correction of experimental data",
+      "detailed_description": "A comprehensive Python library providing various algorithms for baseline correction of spectroscopic and experimental data, including polynomial, spline, and morphological methods.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "baseline_correction",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/derb12/pybaselines",
+      "help_website": [
+        "https://pybaselines.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "baseline-correction",
+        "spectroscopy",
+        "chemometrics",
+        "data-processing"
+      ],
+      "id": 32
+    },
+    {
+      "name": "findpeaks",
+      "one_line_profile": "Detection of peaks and valleys in 1D vectors or 2D arrays",
+      "detailed_description": "A Python library for detecting peaks and valleys in 1D and 2D data, with support for interpolation, filtering, and topology-based peak detection.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "image_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/erdogant/findpeaks",
+      "help_website": [
+        "https://erdogant.github.io/findpeaks/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "peak-detection",
+        "signal-processing",
+        "topology",
+        "python"
+      ],
+      "id": 33
+    },
+    {
+      "name": "sgolay2",
+      "one_line_profile": "Two-dimensional Savitzky-Golay filter",
+      "detailed_description": "A Python implementation of the Savitzky-Golay filter for two-dimensional data, useful for smoothing images or 2D spectral data.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "smoothing",
+        "denoising",
+        "image_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/espdev/sgolay2",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "savitzky-golay",
+        "image-smoothing",
+        "2d-filter"
+      ],
+      "id": 34
+    },
+    {
+      "name": "SpectralMultivariateCalibration",
+      "one_line_profile": "Partial Least Squares implementation for spectral calibration",
+      "detailed_description": "A Python implementation of Partial Least Squares (PLS) regression, specifically designed for multivariate calibration in spectral analysis.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "calibration",
+        "chemometrics",
+        "regression"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/freesiemens/SpectralMultivariateCalibration",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pls",
+        "chemometrics",
+        "calibration",
+        "spectroscopy"
+      ],
+      "id": 35
+    },
+    {
+      "name": "indigo",
+      "one_line_profile": "SNV and InDel Discovery in Sanger Chromatogram traces",
+      "detailed_description": "A tool for the discovery of Single Nucleotide Variants (SNVs) and Insertions/Deletions (InDels) in chromatogram traces obtained from Sanger sequencing of PCR products.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "peak_detection",
+        "chromatogram_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/gear-genomics/indigo",
+      "help_website": [
+        "https://www.gear-genomics.com/indigo/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "sanger-sequencing",
+        "variant-discovery",
+        "chromatogram",
+        "bioinformatics"
+      ],
+      "id": 36
+    },
+    {
+      "name": "tracy",
+      "one_line_profile": "Analysis of Sanger Chromatogram trace files",
+      "detailed_description": "A command-line tool for basecalling, alignment, assembly, and deconvolution of Sanger chromatogram trace files, supporting various file formats like AB1 and SCF.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "basecalling",
+        "assembly",
+        "chromatogram_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/gear-genomics/tracy",
+      "help_website": [
+        "https://www.gear-genomics.com/tracy/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "sanger-sequencing",
+        "basecalling",
+        "chromatogram",
+        "bioinformatics"
+      ],
+      "id": 37
+    },
+    {
+      "name": "Monocle",
+      "one_line_profile": "Monoisotopic peak and accurate precursor m/z detection in shotgun proteomics",
+      "detailed_description": "A tool developed by the Gygi Lab for accurate monoisotopic peak detection and precursor m/z estimation in shotgun proteomics experiments, improving identification rates.",
+      "domains": [
+        "Bioinformatics",
+        "Proteomics"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "mass_spectrometry"
+      ],
+      "application_level": "solver",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/gygilab/Monocle",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "proteomics",
+        "mass-spectrometry",
+        "peak-detection",
+        "gygi-lab"
+      ],
+      "id": 38
+    },
+    {
+      "name": "PeakFit",
+      "one_line_profile": "MATLAB-based peak-fitting tool for spectroscopic data analysis",
+      "detailed_description": "A MATLAB tool designed for fitting peaks in spectroscopic data, facilitating the analysis of spectral features.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_fitting",
+        "spectral_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/heriantolim/PeakFit",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "matlab",
+        "spectroscopy",
+        "peak-fitting"
+      ],
+      "id": 39
+    },
+    {
+      "name": "Alchromy",
+      "one_line_profile": "Python package for spectral deconvolution of UV-Vis waveforms",
+      "detailed_description": "A Python package specifically designed for the spectral deconvolution of UV-Vis waveforms, aiding in the separation of overlapping spectral signals.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "spectral_deconvolution",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hickey221/Alchromy",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "uv-vis",
+        "deconvolution",
+        "spectroscopy"
+      ],
+      "id": 40
+    },
+    {
+      "name": "sgolayfilt",
+      "one_line_profile": "Savitzky-Golay differentiation filters implementation",
+      "detailed_description": "A MATLAB implementation of Savitzky-Golay differentiation filters, commonly used for smoothing and differentiating data in signal processing and spectroscopy.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "denoising",
+        "smoothing"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/horchler/sgolayfilt",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "signal-processing",
+        "filter",
+        "savitzky-golay"
+      ],
+      "id": 41
+    },
+    {
+      "name": "scikit-spectra",
+      "one_line_profile": "Pandas-based toolkit for explorative spectroscopy analysis",
+      "detailed_description": "A Python toolkit built on pandas for explorative analysis of spectroscopic data, with a particular focus on UV-Vis spectroscopy.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hughesadam87/scikit-spectra",
+      "help_website": [
+        "http://scikit-spectra.readthedocs.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "spectroscopy",
+        "pandas",
+        "uv-vis"
+      ],
+      "id": 42
+    },
+    {
+      "name": "IDSL.IPA",
+      "one_line_profile": "Intrinsic Peak Analysis pipeline for large-scale metabolomics peak picking",
+      "detailed_description": "A pipeline for peak-picking in large-scale untargeted small molecule analysis, including metabolomics and lipidomics, developed by the Integrated Data Science Laboratory.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_picking",
+        "metabolomics_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/idslme/IDSL.IPA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "metabolomics",
+        "peak-picking",
+        "mass-spectrometry"
+      ],
+      "id": 43
+    },
+    {
+      "name": "pyampd",
+      "one_line_profile": "Python implementation of Automatic Multiscale Peak Detection algorithm",
+      "detailed_description": "An improved Python implementation of the Automatic Multiscale Peak Detection (AMPD) algorithm for identifying peaks in periodic or quasi-periodic signals.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "signal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ig248/pyampd",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "peak-detection",
+        "algorithm",
+        "signal-processing"
+      ],
+      "id": 44
+    },
+    {
+      "name": "peakipy",
+      "one_line_profile": "Interactive NMR peak deconvolution tool",
+      "detailed_description": "A Python tool designed for interactive deconvolution of NMR peaks, assisting in the analysis of complex NMR spectra.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_deconvolution",
+        "nmr_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/j-brady/peakipy",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "nmr",
+        "deconvolution",
+        "spectroscopy"
+      ],
+      "id": 45
+    },
+    {
+      "name": "nmrglue",
+      "one_line_profile": "Python module for working with NMR data",
+      "detailed_description": "A robust Python module for reading, writing, and processing NMR data, supporting various file formats and processing functions.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "file_io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jjhelmus/nmrglue",
+      "help_website": [
+        "http://nmrglue.readthedocs.org/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "nmr",
+        "spectroscopy",
+        "data-processing"
+      ],
+      "id": 46
+    },
+    {
+      "name": "PyWaveletPeakID",
+      "one_line_profile": "Wavelet-based positive peak detection for 1D data",
+      "detailed_description": "A Python library implementing wavelet-based methods for detecting positive peaks in one-dimensional data streams.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "signal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/johnmgregoire/PyWaveletPeakID",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "wavelet",
+        "peak-detection",
+        "1d-signal"
+      ],
+      "id": 47
+    },
+    {
+      "name": "xcms-gnps-tools",
+      "one_line_profile": "Utility functions for integrating XCMS with GNPS",
+      "detailed_description": "A collection of R utility functions to facilitate the use of XCMS preprocessing results within the GNPS molecular networking ecosystem.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "data_integration",
+        "workflow_utility"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/jorainer/xcms-gnps-tools",
+      "help_website": [],
+      "license": "Artistic-2.0",
+      "tags": [
+        "xcms",
+        "gnps",
+        "mass-spectrometry"
+      ],
+      "id": 48
+    },
+    {
+      "name": "xcms4gnps2",
+      "one_line_profile": "XCMS-based preprocessing workflow for GNPS2",
+      "detailed_description": "A repository providing XCMS-based preprocessing workflows for LC-MS/MS data, specifically tailored for feature-based molecular networking (FBMN) with GNPS2.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "TeX",
+      "repo_url": "https://github.com/jorainer/xcms4gnps2",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "xcms",
+        "gnps2",
+        "metabolomics"
+      ],
+      "id": 49
+    },
+    {
+      "name": "ecg-baseline",
+      "one_line_profile": "ECG signal baseline filtering library",
+      "detailed_description": "A C++ library for baseline filtering of ECG signals using Savitzky-Golay, Zero-phase Butterworth, and Wavelet filters. While domain-specific to ECG, the methods are applicable to general signal processing.",
+      "domains": [
+        "C4-01"
+      ],
+      "subtask_category": [
+        "baseline_correction",
+        "filtering"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/k0zmo/ecg-baseline",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ecg",
+        "signal-processing",
+        "baseline-correction"
+      ],
+      "id": 50
+    },
+    {
+      "name": "cpc",
+      "one_line_profile": "Characterization of peaks detected by XCMS",
+      "detailed_description": "A package designed to characterize peaks detected using separate peak detection methods, with current support for XCMS preprocessing output.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_characterization",
+        "post_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/krispir/cpc",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "xcms",
+        "peak-analysis",
+        "mass-spectrometry"
+      ],
+      "id": 51
+    },
+    {
+      "name": "prospectr",
+      "one_line_profile": "R package for processing and sample selection of spectroscopic data",
+      "detailed_description": "An R package providing miscellaneous functions for preprocessing spectroscopic data (like derivatives, smoothing) and selecting representative samples.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "sample_selection"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/l-ramirez-lopez/prospectr",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "spectroscopy",
+        "chemometrics",
+        "preprocessing"
+      ],
+      "id": 52
+    },
+    {
+      "name": "OpenMS (LANL)",
+      "one_line_profile": "Multiscale solvers for coupled Maxwell-Schrödinger equations",
+      "detailed_description": "A collection of multiscale solvers for coupled Maxwell-Schrödinger equations in open quantum environments, developed by Los Alamos National Laboratory.",
+      "domains": [
+        "Physics",
+        "Quantum"
+      ],
+      "subtask_category": [
+        "simulation",
+        "quantum_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lanl/OpenMS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "quantum-mechanics",
+        "maxwell-schrodinger",
+        "simulation"
+      ],
+      "id": 53
+    },
+    {
+      "name": "PeakDetection",
+      "one_line_profile": "Real-time peak detection algorithm for Arduino",
+      "detailed_description": "A C++ library for real-time peak detection using z-score algorithms, optimized for embedded systems like Arduino but applicable to general signal streams.",
+      "domains": [
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "real_time_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/leandcesar/PeakDetection",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "arduino",
+        "peak-detection",
+        "signal-processing"
+      ],
+      "id": 54
+    },
+    {
+      "name": "savitzkygolay",
+      "one_line_profile": "Savitzky-Golay filters implementation",
+      "detailed_description": "A Python implementation of Savitzky-Golay filters for data smoothing and differentiation, maintained by the Leifer Lab.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "denoising",
+        "smoothing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/leiferlab/savitzkygolay",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "savitzky-golay",
+        "smoothing",
+        "filter"
+      ],
+      "id": 55
+    },
+    {
+      "name": "NSC",
+      "one_line_profile": "Nyström-based spectral clustering for LiDAR tree segmentation",
+      "detailed_description": "Implementation of Nyström-based spectral clustering with K-nearest neighbour-based sampling for individual tree segmentation from airborne LiDAR point cloud data.",
+      "domains": [
+        "Remote Sensing",
+        "Forestry"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "clustering"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/limingado/NSC",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "lidar",
+        "spectral-clustering",
+        "segmentation"
+      ],
+      "id": 56
+    },
+    {
+      "name": "SavitzkyGolay.jl",
+      "one_line_profile": "1D Savitzky-Golay filter in Julia",
+      "detailed_description": "A Julia language implementation of the 1D Savitzky-Golay filter for signal smoothing and differentiation.",
+      "domains": [
+        "C4-01"
+      ],
+      "subtask_category": [
+        "denoising",
+        "smoothing"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/lnacquaroli/SavitzkyGolay.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "savitzky-golay",
+        "signal-processing"
+      ],
+      "id": 57
+    },
+    {
+      "name": "NMR.jl",
+      "one_line_profile": "Tools for NMR spectroscopy in Julia",
+      "detailed_description": "A Julia package providing tools for the processing, simulation, and analysis of NMR spectroscopy data.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/marcel-utz/NMR.jl",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nmr",
+        "julia",
+        "spectroscopy"
+      ],
+      "id": 58
+    },
+    {
+      "name": "chemometrics",
+      "one_line_profile": "Python library for chemometric data analysis",
+      "detailed_description": "A Python library providing various algorithms and tools for chemometric data analysis, including multivariate analysis methods.",
+      "domains": [
+        "C4"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "chemometrics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/maruedt/chemometrics",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "chemometrics",
+        "data-analysis",
+        "python"
+      ],
+      "id": 59
+    },
+    {
+      "name": "AMPD-algorithm",
+      "one_line_profile": "Automatic Multiscale-based Peak Detection algorithm",
+      "detailed_description": "Implementations of the Automatic Multiscale-based Peak Detection (AMPD) algorithm in multiple languages for detecting peaks in noisy periodic signals.",
+      "domains": [
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "algorithm"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/mathouse/AMPD-algorithm",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "peak-detection",
+        "ampd",
+        "signal-processing"
+      ],
+      "id": 60
+    },
+    {
+      "name": "openmpp",
+      "one_line_profile": "R interface to OpenM++ microsimulation platform",
+      "detailed_description": "A programmatic R interface to the OpenM++ microsimulation platform, allowing users to run and analyze microsimulation models.",
+      "domains": [
+        "Simulation"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/mattwarkentin/openmpp",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "microsimulation",
+        "openm++",
+        "r"
+      ],
+      "id": 61
+    },
+    {
+      "name": "OpenMSFTL",
+      "one_line_profile": "Research simulation toolkit for federated learning",
+      "detailed_description": "A research simulation toolkit developed by Microsoft for experimenting with federated learning algorithms and scenarios.",
+      "domains": [
+        "AI Research"
+      ],
+      "subtask_category": [
+        "simulation",
+        "federated_learning"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/OpenMSFTL",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "federated-learning",
+        "simulation",
+        "microsoft"
+      ],
+      "id": 62
+    },
+    {
+      "name": "global-spectral-deconvolution",
+      "one_line_profile": "Global Spectra Deconvolution and Peak Optimizer",
+      "detailed_description": "A TypeScript library for global spectral deconvolution and peak optimization, part of the mljs scientific ecosystem.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "spectral_deconvolution",
+        "peak_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/mljs/global-spectral-deconvolution",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deconvolution",
+        "spectroscopy",
+        "mljs"
+      ],
+      "id": 63
+    },
+    {
+      "name": "mljs/savitzky-golay",
+      "one_line_profile": "Savitzky-Golay filter in TypeScript",
+      "detailed_description": "A TypeScript implementation of the Savitzky-Golay filter for data smoothing, part of the mljs project.",
+      "domains": [
+        "C4-01"
+      ],
+      "subtask_category": [
+        "denoising",
+        "smoothing"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/mljs/savitzky-golay",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "savitzky-golay",
+        "smoothing",
+        "typescript"
+      ],
+      "id": 64
+    },
+    {
+      "name": "savitzky-golay-generalized",
+      "one_line_profile": "Generalized Savitzky-Golay smoothing and differentiation",
+      "detailed_description": "A TypeScript library implementing the General Least-Squares Smoothing and Differentiation by the Convolution (Savitzky-Golay) Method.",
+      "domains": [
+        "C4-01"
+      ],
+      "subtask_category": [
+        "denoising",
+        "differentiation"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/mljs/savitzky-golay-generalized",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "savitzky-golay",
+        "smoothing",
+        "algorithm"
+      ],
+      "id": 65
+    },
+    {
+      "name": "ms_peak_picker",
+      "one_line_profile": "Peak picking library for mass spectrometry data",
+      "detailed_description": "A library designed to provide efficient peak picking functionality for software processing mass spectrometry data.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_picking",
+        "mass_spectrometry"
+      ],
+      "application_level": "library",
+      "primary_language": "Cython",
+      "repo_url": "https://github.com/mobiusklein/ms_peak_picker",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "mass-spectrometry",
+        "peak-picking",
+        "cython"
+      ],
+      "id": 66
+    },
+    {
+      "name": "OFF-PEAK",
+      "one_line_profile": "CNV detection tool for Whole Exome Sequencing (WES) data",
+      "detailed_description": "A tool designed to detect Copy Number Variations (CNV) in Whole Exome Sequencing data, specifically focusing on 'off-target' reads to improve detection sensitivity.",
+      "domains": [
+        "Biology",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "cnv_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/mquinodo/OFF-PEAK",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cnv",
+        "wes",
+        "genomics"
+      ],
+      "id": 67
+    },
+    {
+      "name": "ramanbiolib",
+      "one_line_profile": "Raman spectral search library for biological molecule identification",
+      "detailed_description": "A library for searching and identifying biological molecules (lipids, proteins, metabolites, etc.) using Raman spectroscopy data against a database of 140 components.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "spectral_identification",
+        "database_search"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mteranm/ramanbiolib",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "raman-spectroscopy",
+        "biological-molecules",
+        "spectral-library"
+      ],
+      "id": 68
+    },
+    {
+      "name": "MZmine 3",
+      "one_line_profile": "Open-source software for mass spectrometry data processing",
+      "detailed_description": "A comprehensive framework for the processing and visualization of mass spectrometry based molecular profile data, supporting peak picking, alignment, and identification.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "spectral_processing",
+        "metabolomics"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/mzmine/mzmine",
+      "help_website": [
+        "http://mzmine.github.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "mass-spectrometry",
+        "metabolomics",
+        "lipidomics"
+      ],
+      "id": 69
+    },
+    {
+      "name": "MZmine 2",
+      "one_line_profile": "Previous version of the MZmine mass spectrometry processing framework",
+      "detailed_description": "The legacy version (v2) of the MZmine framework for differential analysis of mass spectrometry data.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "spectral_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/mzmine/mzmine2",
+      "help_website": [
+        "http://mzmine.github.io/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "mass-spectrometry",
+        "legacy"
+      ],
+      "id": 70
+    },
+    {
+      "name": "nf-core/diaproteomics",
+      "one_line_profile": "Pipeline for quantitative analysis of DIA proteomics data",
+      "detailed_description": "A Nextflow pipeline for automated quantitative analysis of Data-Independent Acquisition (DIA) proteomics mass spectrometry measurements, including spectral library generation and statistical analysis.",
+      "domains": [
+        "Biology",
+        "Proteomics"
+      ],
+      "subtask_category": [
+        "quantification",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/diaproteomics",
+      "help_website": [
+        "https://nf-co.re/diaproteomics"
+      ],
+      "license": "MIT",
+      "tags": [
+        "proteomics",
+        "mass-spectrometry",
+        "dia",
+        "nextflow"
+      ],
+      "id": 71
+    },
+    {
+      "name": "nf-core/mhcquant",
+      "one_line_profile": "Pipeline for MHC eluted peptide identification and quantification",
+      "detailed_description": "A bioinformatics analysis pipeline for identifying and quantifying MHC eluted peptides from mass spectrometry raw data, specifically for immunopeptidomics.",
+      "domains": [
+        "Biology",
+        "Immunology"
+      ],
+      "subtask_category": [
+        "peptide_identification",
+        "quantification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/mhcquant",
+      "help_website": [
+        "https://nf-co.re/mhcquant"
+      ],
+      "license": "MIT",
+      "tags": [
+        "immunopeptidomics",
+        "mass-spectrometry",
+        "mhc"
+      ],
+      "id": 72
+    },
+    {
+      "name": "nf-core/proteomicslfq",
+      "one_line_profile": "Pipeline for label-free quantification (LFQ) proteomics",
+      "detailed_description": "A Nextflow pipeline for processing label-free quantification (LFQ) proteomics mass spectrometry data, converting raw files to quantified protein lists.",
+      "domains": [
+        "Biology",
+        "Proteomics"
+      ],
+      "subtask_category": [
+        "quantification",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/proteomicslfq",
+      "help_website": [
+        "https://nf-co.re/proteomicslfq"
+      ],
+      "license": "MIT",
+      "tags": [
+        "proteomics",
+        "lfq",
+        "mass-spectrometry"
+      ],
+      "id": 73
+    },
+    {
+      "name": "MWSG Spectrogram Enhancement",
+      "one_line_profile": "Spectrogram enhancement using Multiple Window Savitzky Golay filter",
+      "detailed_description": "Implementation of the Multiple Window Savitzky Golay (MWSG) filter for robust bird sound detection and spectrogram enhancement, as published in IEEE Transactions.",
+      "domains": [
+        "Biology",
+        "Bioacoustics"
+      ],
+      "subtask_category": [
+        "denoising",
+        "spectrogram_enhancement"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/nithinraok/MWSG_IEEE_Paper",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bioacoustics",
+        "savitzky-golay",
+        "denoising"
+      ],
+      "id": 74
+    },
+    {
+      "name": "ROCCO",
+      "one_line_profile": "Robust Open Chromatin Detection via Convex Optimization",
+      "detailed_description": "A multisample consensus peak calling tool for ATAC-seq data that uses convex optimization to robustly identify open chromatin regions across multiple samples.",
+      "domains": [
+        "Biology",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "peak_calling",
+        "chromatin_accessibility"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nolan-h-hamilton/ROCCO",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "atac-seq",
+        "peak-calling",
+        "optimization"
+      ],
+      "id": 75
+    },
+    {
+      "name": "Shannon-Energy-R-Peak-Detection",
+      "one_line_profile": "R-Peak detection algorithm for EKG signals",
+      "detailed_description": "A Python implementation of the Shannon Energy Envelope method for detecting R-peaks in Electrocardiogram (EKG/ECG) signals.",
+      "domains": [
+        "Medicine",
+        "Physiology"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "signal_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nsunami/Shannon-Energy-R-Peak-Detection",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ekg",
+        "ecg",
+        "peak-detection"
+      ],
+      "id": 76
+    },
+    {
+      "name": "SpinPlots",
+      "one_line_profile": "NMR data plotting library based on NMRglue",
+      "detailed_description": "A Python package designed to simplify the visualization and plotting of Nuclear Magnetic Resonance (NMR) spectroscopy data, built on top of NMRglue.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "spectral_plotting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nuts-org/spinplots",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "visualization",
+        "spectroscopy"
+      ],
+      "id": 77
+    },
+    {
+      "name": "OpenM++",
+      "one_line_profile": "Open source microsimulation platform",
+      "detailed_description": "A flexible and scalable open-source platform for developing and running microsimulation models, often used in epidemiology and social sciences.",
+      "domains": [
+        "Social Science",
+        "Epidemiology"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "C",
+      "repo_url": "https://github.com/openmpp/main",
+      "help_website": [
+        "http://www.openmpp.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "microsimulation",
+        "modeling"
+      ],
+      "id": 78
+    },
+    {
+      "name": "OpenMSIStream",
+      "one_line_profile": "Materials data streaming for laboratory environments",
+      "detailed_description": "A Python framework based on Apache Kafka for streaming materials science data from instruments to storage/analysis services, facilitating lab automation.",
+      "domains": [
+        "Materials Science",
+        "Lab Automation"
+      ],
+      "subtask_category": [
+        "data_streaming",
+        "infrastructure"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openmsi/openmsistream",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "materials-science",
+        "streaming",
+        "kafka"
+      ],
+      "id": 79
+    },
+    {
+      "name": "peakdet",
+      "one_line_profile": "Toolbox for physiological peak detection analyses",
+      "detailed_description": "A Python toolbox designed for processing physiological data (like ECG, EDA, respiration) to detect peaks and analyze signal characteristics.",
+      "domains": [
+        "Medicine",
+        "Physiology"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "signal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/physiopy/peakdet",
+      "help_website": [
+        "https://peakdet.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "physiology",
+        "peak-detection",
+        "biosignals"
+      ],
+      "id": 80
+    },
+    {
+      "name": "nmrfit",
+      "one_line_profile": "Quantitative NMR analysis via least-squares fitting",
+      "detailed_description": "A tool for quantitative analysis of Nuclear Magnetic Resonance (NMR) spectroscopy data using least-squares fitting techniques, developed at PNNL.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "spectral_fitting",
+        "quantification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pnnl/nmrfit",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nmr",
+        "fitting",
+        "quantification"
+      ],
+      "id": 81
+    },
+    {
+      "name": "savgol",
+      "one_line_profile": "Savitzky-Golay filters implementation in Ruby",
+      "detailed_description": "A Ruby implementation of Savitzky-Golay filters for data smoothing and differentiation, developed by Prince Lab (University of Toronto).",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "smoothing",
+        "denoising"
+      ],
+      "application_level": "library",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/princelab/savgol",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "savitzky-golay",
+        "smoothing",
+        "chemometrics"
+      ],
+      "id": 82
+    },
+    {
+      "name": "pycroscopy",
+      "one_line_profile": "Scientific analysis of nanoscale materials imaging data",
+      "detailed_description": "A Python package for processing, analyzing, and visualizing multidimensional imaging and spectroscopy data, particularly for microscopy and materials science.",
+      "domains": [
+        "Materials Science",
+        "Microscopy"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "spectroscopy_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/pycroscopy/pycroscopy",
+      "help_website": [
+        "https://pycroscopy.github.io/pycroscopy/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "microscopy",
+        "materials-science",
+        "multidimensional-data"
+      ],
+      "id": 83
+    },
+    {
+      "name": "HSID-CNN",
+      "one_line_profile": "Hyperspectral Image Denoising using CNN",
+      "detailed_description": "Implementation of a Spatial-Spectral Deep Residual Convolutional Neural Network for denoising hyperspectral images, as published in IEEE TGRS.",
+      "domains": [
+        "Remote Sensing",
+        "Physics"
+      ],
+      "subtask_category": [
+        "denoising",
+        "image_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/qzhang95/HSID-CNN",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "hyperspectral",
+        "denoising",
+        "deep-learning"
+      ],
+      "id": 84
+    },
+    {
+      "name": "raman_tl",
+      "one_line_profile": "Processing and plotting of Raman spectra",
+      "detailed_description": "A Python tool for baseline correction, smoothing, processing, and plotting of Raman spectroscopy data.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "baseline_correction",
+        "smoothing",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/radi0sus/raman_tl",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "raman",
+        "spectroscopy",
+        "baseline-correction"
+      ],
+      "id": 85
+    },
+    {
+      "name": "Raman-noodles",
+      "one_line_profile": "Analysis of Raman and IR spectra datasets",
+      "detailed_description": "A repository containing code and notebooks for the analysis, processing, and visualization of Raman and Infrared (IR) spectroscopy datasets.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/raman-noodles/Raman-noodles",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "raman",
+        "ir-spectroscopy",
+        "data-analysis"
+      ],
+      "id": 86
+    },
+    {
+      "name": "raman-spectra-decomp-analysis",
+      "one_line_profile": "Decomposition analysis of materials using Raman spectroscopy",
+      "detailed_description": "Python code to identify components and calculate decomposition of materials using Raman spectroscopy data.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "spectral_decomposition",
+        "material_identification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/raman-noodles/raman-spectra-decomp-analysis",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "raman",
+        "decomposition",
+        "materials-science"
+      ],
+      "id": 87
+    },
+    {
+      "name": "LDCT Nonlocal Denoising",
+      "one_line_profile": "Low Dose CT Denoising using Non-Local Neural Networks",
+      "detailed_description": "Source code for noise conscious training of non-local neural networks for denoising Low Dose CT (Computed Tomography) images.",
+      "domains": [
+        "Medicine",
+        "Medical Imaging"
+      ],
+      "subtask_category": [
+        "denoising",
+        "image_reconstruction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/reach2sbera/ldct_nonlocal",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ct-scan",
+        "denoising",
+        "deep-learning"
+      ],
+      "id": 88
+    },
+    {
+      "name": "IPO",
+      "one_line_profile": "Automated Optimization of XCMS Parameters",
+      "detailed_description": "A tool for the automated optimization of parameters for XCMS, a widely used software for processing mass spectrometry data in metabolomics.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "parameter_optimization",
+        "workflow_optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/rietho/IPO",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "xcms",
+        "metabolomics",
+        "optimization"
+      ],
+      "id": 89
+    },
+    {
+      "name": "Savitzky-Golay-CPP",
+      "one_line_profile": "C++ implementation of Savitzky-Golay Filter coefficients",
+      "detailed_description": "A robust C++ library for computing Savitzky-Golay filter coefficients, widely used for smoothing and differentiation of data in spectroscopy and chemometrics.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "smoothing",
+        "filtering"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/robotsorcerer/Savitzky-Golay",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "savitzky-golay",
+        "cpp",
+        "signal-processing"
+      ],
+      "id": 90
+    },
+    {
+      "name": "GCPeakDetection",
+      "one_line_profile": "Peak detection for gas chromatography data",
+      "detailed_description": "MATLAB code specifically designed for detecting peaks in Gas Chromatography (GC) data.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "chromatography"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/rosalind-wang/GCPeakDetection",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gas-chromatography",
+        "peak-detection"
+      ],
+      "id": 91
+    },
+    {
+      "name": "spinsolveproc",
+      "one_line_profile": "Library to process Spinsolve NMR experiments",
+      "detailed_description": "A Python library for processing data from Magritek Spinsolve benchtop NMR spectrometers.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "spectral_processing",
+        "instrument_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rserial/spinsolveproc",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nmr",
+        "spinsolve",
+        "data-processing"
+      ],
+      "id": 92
+    },
+    {
+      "name": "lipyd",
+      "one_line_profile": "Lipidomics LC-MS/MS data analysis",
+      "detailed_description": "A Python module for the analysis of lipidomics data obtained via Liquid Chromatography-Tandem Mass Spectrometry (LC-MS/MS).",
+      "domains": [
+        "Biology",
+        "Metabolomics"
+      ],
+      "subtask_category": [
+        "lipid_identification",
+        "spectral_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/saezlab/lipyd",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "lipidomics",
+        "mass-spectrometry",
+        "lc-ms"
+      ],
+      "id": 93
+    },
+    {
+      "name": "MALDIquant",
+      "one_line_profile": "Quantitative Analysis of Mass Spectrometry Data",
+      "detailed_description": "A complete analysis pipeline for MALDI-TOF and other mass spectrometry data, providing tools for baseline correction, peak detection, alignment, and visualization.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "quantification",
+        "peak_detection",
+        "baseline_correction"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/sgibb/MALDIquant",
+      "help_website": [
+        "https://strimmerlab.github.io/software/maldiquant/"
+      ],
+      "license": null,
+      "tags": [
+        "mass-spectrometry",
+        "maldi",
+        "quantification"
+      ],
+      "id": 94
+    },
+    {
+      "name": "MALDIquantForeign",
+      "one_line_profile": "Import/Export routines for MALDIquant",
+      "detailed_description": "A companion package for MALDIquant that provides functions to import and export mass spectrometry data in various standard formats (mzML, mzXML, etc.).",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "data_io",
+        "format_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/sgibb/MALDIquantForeign",
+      "help_website": [
+        "https://strimmerlab.github.io/software/maldiquant/"
+      ],
+      "license": null,
+      "tags": [
+        "mass-spectrometry",
+        "data-import",
+        "mzml"
+      ],
+      "id": 95
+    },
+    {
+      "name": "EELSpecNet",
+      "one_line_profile": "Deep learning framework for EELS signal deconvolution and spectral reconstruction",
+      "detailed_description": "A deep learning framework designed for Electron Energy Loss Spectroscopy (EELS) signal deconvolution, featuring alignment-invariant processing and high-accuracy spectral reconstruction.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "deconvolution",
+        "spectral_reconstruction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/shmouses/EELSpecNet",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "eels",
+        "deep-learning",
+        "deconvolution",
+        "spectroscopy"
+      ],
+      "id": 96
+    },
+    {
+      "name": "AlpsNMR",
+      "one_line_profile": "Automated spectral processing system for NMR data",
+      "detailed_description": "An R package for the automated processing of NMR spectra, including reading, preprocessing, and peak detection, specifically designed for untargeted NMR metabolomics.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "peak_detection",
+        "normalization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/sipss/AlpsNMR",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nmr",
+        "metabolomics",
+        "preprocessing",
+        "peak-picking"
+      ],
+      "id": 97
+    },
+    {
+      "name": "BSS-PLSR-for-Spectroscopy-Analysis",
+      "one_line_profile": "Blind Source Separation and PLSR framework for spectroscopy mixtures",
+      "detailed_description": "A framework combining Blind Source Separation (BSS) and Partial Least Squares Regression (PLSR) for analyzing spectroscopy mixture data (Raman, FTIR) to identify sources and quantify concentrations.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "source_separation",
+        "quantification",
+        "spectral_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/skocevska/BSS-PLSR-for-Spectroscopy-Analysis",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "raman",
+        "ftir",
+        "bss",
+        "plsr",
+        "mixture-analysis"
+      ],
+      "id": 98
+    },
+    {
+      "name": "xcms",
+      "one_line_profile": "Framework for LC/MS and GC/MS data analysis and preprocessing",
+      "detailed_description": "A comprehensive Bioconductor package for preprocessing high-throughput LC/MS and GC/MS data, featuring peak detection, retention time alignment, and identification.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "alignment",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/sneumann/xcms",
+      "help_website": [
+        "https://bioconductor.org/packages/xcms"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "mass-spectrometry",
+        "metabolomics",
+        "lc-ms",
+        "gc-ms",
+        "bioconductor"
+      ],
+      "id": 99
+    },
+    {
+      "name": "ms-peakonly",
+      "one_line_profile": "Neural network-based peak detection for untargeted metabolomics",
+      "detailed_description": "A high-level API and tool for peak detection in untargeted metabolomics mass spectrometry data using neural networks, based on the peakonly method.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "metabolomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/sorenwacker/ms-peakonly",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mass-spectrometry",
+        "deep-learning",
+        "peak-detection"
+      ],
+      "id": 100
+    },
+    {
+      "name": "spectral",
+      "one_line_profile": "Python module for hyperspectral image processing",
+      "detailed_description": "A Python package for processing hyperspectral image data (imaging spectroscopy), providing functions for reading, displaying, and analyzing hyperspectral data.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "spectral_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spectralpython/spectral",
+      "help_website": [
+        "http://www.spectralpython.net"
+      ],
+      "license": "MIT",
+      "tags": [
+        "hyperspectral",
+        "imaging-spectroscopy",
+        "remote-sensing"
+      ],
+      "id": 101
+    },
+    {
+      "name": "spectrapepper",
+      "one_line_profile": "Advanced processing and combinatorial analysis of spectroscopy data",
+      "detailed_description": "A Python package designed for the advanced processing and combinatorial analysis of various types of spectroscopy data.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "combinatorial_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spectrapepper/spectrapepper",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spectroscopy",
+        "combinatorial-analysis",
+        "data-processing"
+      ],
+      "id": 102
+    },
+    {
+      "name": "SpectroChemPy",
+      "one_line_profile": "Framework for processing and modeling spectroscopic data",
+      "detailed_description": "A Python framework dedicated to processing, analyzing, and modeling spectroscopic data for chemistry, supporting various formats and processing pipelines.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "spectral_processing",
+        "modeling",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spectrochempy/spectrochempy",
+      "help_website": [
+        "https://www.spectrochempy.fr"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "spectroscopy",
+        "chemistry",
+        "chemometrics",
+        "data-analysis"
+      ],
+      "id": 103
+    },
+    {
+      "name": "SPIKE",
+      "one_line_profile": "Processing program for FT-spectroscopy",
+      "detailed_description": "A collaborative development project for a Fourier Transform (FT) spectroscopy processing program, handling spectral data analysis.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "spectral_processing",
+        "ft_spectroscopy"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/spike-project/spike",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "ft-spectroscopy",
+        "signal-processing"
+      ],
+      "id": 104
+    },
+    {
+      "name": "ukbnmr",
+      "one_line_profile": "Tools for processing Nightingale NMR biomarker data",
+      "detailed_description": "An R package providing tools for processing and analyzing Nightingale NMR biomarker data specifically from the UK Biobank.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "biomarker_analysis",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/sritchie73/ukbnmr",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nmr",
+        "uk-biobank",
+        "biomarkers",
+        "metabolomics"
+      ],
+      "id": 105
+    },
+    {
+      "name": "PeakABro",
+      "one_line_profile": "Peaklist Annotator and Browser for metabolomics",
+      "detailed_description": "A tool for browsing and annotating peak lists generated from metabolomics data, facilitating manual inspection and curation.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "annotation",
+        "visualization",
+        "curation"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/stanstrup/PeakABro",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "metabolomics",
+        "peak-annotation",
+        "visualization"
+      ],
+      "id": 106
+    },
+    {
+      "name": "QC4Metabolomics",
+      "one_line_profile": "Quality control systems for metabolomics studies",
+      "detailed_description": "A set of tools and systems for performing quality control (QC) in metabolomics studies, ensuring data reliability.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "qc_report"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/stanstrup/QC4Metabolomics",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "metabolomics",
+        "quality-control",
+        "qc"
+      ],
+      "id": 107
+    },
+    {
+      "name": "nmr_peak_picker",
+      "one_line_profile": "Automated peak picking for high-dimensional NMR spectra",
+      "detailed_description": "A tool for automated peak picking in high-dimensional NMR spectra, addressing the challenges of complex spectral data.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_picking",
+        "nmr_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tevang/nmr_peak_picker",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "nmr",
+        "peak-picking",
+        "high-dimensional"
+      ],
+      "id": 108
+    },
+    {
+      "name": "MSBrowser",
+      "one_line_profile": "Interactive dashboard for xcms peak picking parameter tuning",
+      "detailed_description": "An R Shiny dashboard for interactive visualization and fine-tuning of peak picking parameters in the xcms R package, supporting LC-MS and GC-MS data.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "parameter_optimization",
+        "visualization",
+        "peak_picking"
+      ],
+      "application_level": "platform",
+      "primary_language": "R",
+      "repo_url": "https://github.com/tkimhofer/msbrowser",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "xcms",
+        "shiny",
+        "metabolomics",
+        "parameter-tuning"
+      ],
+      "id": 109
+    },
+    {
+      "name": "drawnmr",
+      "one_line_profile": "Visualization tool for NMR data in Jupyter Notebooks",
+      "detailed_description": "A utility to draw NMR data in Jupyter Notebooks using nmrglue and bokeh, facilitating interactive data exploration.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "nmr_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tlinnet/drawnmr",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "nmr",
+        "visualization",
+        "jupyter",
+        "bokeh"
+      ],
+      "id": 110
+    },
+    {
+      "name": "BEADS_Baseline_correction",
+      "one_line_profile": "BEADS baseline correction algorithm for chromatograms",
+      "detailed_description": "A C++ implementation of the BEADS (Baseline Estimation And Denoising with Sparsity) algorithm specifically for chemical chromatograms.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "baseline_correction",
+        "denoising"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/tvijverb/BEADS_Baseline_correction",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "chromatography",
+        "baseline-correction",
+        "beads-algorithm"
+      ],
+      "id": 111
+    },
+    {
+      "name": "DIMSpec",
+      "one_line_profile": "Database Infrastructure for Mass Spectrometry",
+      "detailed_description": "The Database Infrastructure for Mass Spectrometry (DIMSpec) project, providing tools and structure for managing mass spectrometry data.",
+      "domains": [
+        "C4"
+      ],
+      "subtask_category": [
+        "data_management",
+        "infrastructure"
+      ],
+      "application_level": "platform",
+      "primary_language": "R",
+      "repo_url": "https://github.com/usnistgov/dimspec",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "mass-spectrometry",
+        "database",
+        "infrastructure"
+      ],
+      "id": 112
+    },
+    {
+      "name": "mzkit",
+      "one_line_profile": "Comprehensive toolkit for mass spectrometry and metabolomics data analysis",
+      "detailed_description": "A toolkit for processing NMR, MALDI MSI, MALDI single cell, Raman Spectroscopy, LC-MS, and GC-MS raw data, including chemoinformatics analysis and visualization.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "multi_omics_processing",
+        "visualization",
+        "chemoinformatics"
+      ],
+      "application_level": "platform",
+      "primary_language": "Visual Basic .NET",
+      "repo_url": "https://github.com/xieguigang/mzkit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mass-spectrometry",
+        "nmr",
+        "raman",
+        "maldi",
+        "metabolomics"
+      ],
+      "id": 113
+    },
+    {
+      "name": "xcmsrocker",
+      "one_line_profile": "Rocker image for metabolomics data analysis with xcms",
+      "detailed_description": "A Docker image pre-configured with xcms and other tools for metabolomics data analysis, facilitating reproducible research environments.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "reproducibility"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/yufree/xcmsrocker",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docker",
+        "metabolomics",
+        "xcms",
+        "reproducibility"
+      ],
+      "id": 114
+    },
+    {
+      "name": "RWPD",
+      "one_line_profile": "Recursive wavelet peak detection and deconvolution",
+      "detailed_description": "An R package for recursive wavelet peak detection and deconvolution, likely designed for chromatographic or spectroscopic data analysis.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "deconvolution"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/zmzhang/RWPD",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "wavelet",
+        "peak-detection",
+        "deconvolution"
+      ],
+      "id": 115
+    },
+    {
+      "name": "airPLS",
+      "one_line_profile": "Baseline correction algorithm using adaptive iteratively reweighted Penalized Least Squares",
+      "detailed_description": "A Python implementation of the airPLS (adaptive iteratively reweighted Penalized Least Squares) algorithm. It is widely used for baseline correction in spectroscopic data analysis (e.g., Raman, NMR, IR) to remove background noise while preserving peak information without requiring user intervention for peak detection.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "baseline_correction",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zmzhang/airPLS",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "baseline-correction",
+        "spectroscopy",
+        "chemometrics",
+        "signal-processing"
+      ],
+      "id": 116
+    },
+    {
+      "name": "baselineWavelet",
+      "one_line_profile": "Wavelet-based background correction for Raman spectroscopy",
+      "detailed_description": "An R package designed for intelligent background correction in Raman spectroscopy, specifically targeting highly fluorescent samples. It utilizes wavelet transforms to separate and remove broad background signals from sharp Raman peaks.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "baseline_correction",
+        "background_removal"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/zmzhang/baselineWavelet",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "raman-spectroscopy",
+        "wavelet-transform",
+        "fluorescence-removal",
+        "chemometrics"
+      ],
+      "id": 117
+    },
+    {
+      "name": "libPeak",
+      "one_line_profile": "Peak detection algorithms for analytical instrument data",
+      "detailed_description": "A Python library providing methods for peak detection in data generated by analytical instruments (such as chromatography or spectroscopy). It includes algorithms to identify signal peaks, which is a fundamental step in quantitative and qualitative chemical analysis.",
+      "domains": [
+        "C4",
+        "C4-01"
+      ],
+      "subtask_category": [
+        "peak_detection",
+        "signal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zmzhang/libPeak",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "peak-picking",
+        "analytical-chemistry",
+        "chromatography",
+        "spectroscopy"
+      ],
+      "id": 118
+    }
+  ]
+}

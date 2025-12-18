@@ -1,0 +1,3471 @@
+{
+  "generated_at": "2025-12-16T04:03:46.927151+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "S2",
+      "leaf_cluster_name": "结构生物-功能/位点/相互作用预测生态",
+      "domain": "StructBio",
+      "typical_objects": "seq/graph/structure",
+      "task_chain": "表征→功能/位点→相互作用→解释→benchmark",
+      "tool_form": "模型库 + 数据集 + 评测"
+    },
+    "unit": {
+      "unit_id": "S2-02",
+      "unit_name": "位点/口袋/结合位点预测",
+      "target_scale": "150–350",
+      "coverage_tools": "pocket detection、binding site predictors"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] CryptoSite",
+        "[GH] Ghecom",
+        "[GH] COACH",
+        "[GH] POVME",
+        "[GH] DeepPocket",
+        "[GH] Kalasanty",
+        "[GH] DeepSite",
+        "[GH] P2Rank",
+        "[GH] Fpocket",
+        "[GH] binding site prediction",
+        "[GH] pocket detection",
+        "[GH] cavity detection",
+        "[GH] ligand binding site",
+        "[GH] active site prediction",
+        "[GH] druggability prediction",
+        "[GH] protein pocket",
+        "[GH] allosteric site prediction",
+        "[GH] cryptic pocket detection",
+        "[GH] protein surface analysis",
+        "[GH] structure-based drug design",
+        "[GH] geometric deep learning protein",
+        "[GH] protein-ligand interaction site",
+        "[WEB] protein binding pocket detection tools github",
+        "[WEB] deep learning ligand binding site prediction github",
+        "[WEB] structure based druggability prediction github",
+        "[WEB] protein cavity detection algorithms github",
+        "[WEB] cryptic pocket detection github"
+      ],
+      "total_candidates": 707,
+      "tool_candidates": 258,
+      "final_tools": 144
+    }
+  },
+  "tools": [
+    {
+      "name": "BADGER-SBDD",
+      "one_line_profile": "Binding affinity guidance for diffusion models in structure-based drug design",
+      "detailed_description": "A framework implementing general binding affinity guidance for diffusion models to improve structure-based drug design (SBDD), ensuring generated molecules have high affinity.",
+      "domains": [
+        "S2",
+        "S4"
+      ],
+      "subtask_category": [
+        "structure_based_drug_design",
+        "molecule_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ASK-Berkeley/BADGER-SBDD",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-model",
+        "sbdd",
+        "binding-affinity"
+      ],
+      "id": 1
+    },
+    {
+      "name": "PocketVina",
+      "one_line_profile": "GPU-accelerated protein-ligand docking with automated pocket detection",
+      "detailed_description": "A GPU-accelerated docking tool that integrates automated pocket detection and multi-pocket conditioning to enhance protein-ligand docking efficiency and accuracy.",
+      "domains": [
+        "S2",
+        "S2-02",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "pocket_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/BIMSBbioinfo/PocketVina",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "gpu-acceleration",
+        "pocket-detection"
+      ],
+      "id": 2
+    },
+    {
+      "name": "EquiPNAS",
+      "one_line_profile": "Equivariant deep graph neural networks for protein-nucleic acid binding site prediction",
+      "detailed_description": "A deep learning method using pLM-informed E(3) equivariant graph neural networks to predict binding sites between proteins and nucleic acids.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "protein_nucleic_acid_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Bhattacharya-Lab/EquiPNAS",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gnn",
+        "binding-site",
+        "protein-rna",
+        "protein-dna"
+      ],
+      "id": 3
+    },
+    {
+      "name": "GraphCDR",
+      "one_line_profile": "Graph neural network with contrastive learning for cancer drug response prediction",
+      "detailed_description": "A method utilizing graph neural networks and contrastive learning to predict the response of cancer cell lines to various drugs.",
+      "domains": [
+        "S4"
+      ],
+      "subtask_category": [
+        "drug_response_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BioMedicalBigDataMiningLab/GraphCDR",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "drug-response",
+        "gnn",
+        "contrastive-learning"
+      ],
+      "id": 4
+    },
+    {
+      "name": "DeepInteract",
+      "one_line_profile": "Geometric deep learning framework for predicting protein interface contacts",
+      "detailed_description": "A geometric transformer-based framework designed to predict contact interfaces between interacting proteins.",
+      "domains": [
+        "S2",
+        "S2-02",
+        "S2-04"
+      ],
+      "subtask_category": [
+        "interface_prediction",
+        "ppi_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BioinfoMachineLearning/DeepInteract",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "geometric-deep-learning",
+        "protein-interface",
+        "ppi"
+      ],
+      "id": 5
+    },
+    {
+      "name": "DeepRefine",
+      "one_line_profile": "Geometric deep learning method for refining protein complex structures",
+      "detailed_description": "A tool leveraging geometric deep learning to assess and refine the 3D structures of protein complexes.",
+      "domains": [
+        "S2",
+        "S2-01"
+      ],
+      "subtask_category": [
+        "structure_refinement",
+        "model_quality_assessment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BioinfoMachineLearning/DeepRefine",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "structure-refinement",
+        "protein-complex",
+        "geometric-dl"
+      ],
+      "id": 6
+    },
+    {
+      "name": "GCDM-SBDD",
+      "one_line_profile": "Geometry-complete diffusion generative model for structure-based drug design",
+      "detailed_description": "A generative model using geometry-complete diffusion processes to design small molecules based on protein target structures.",
+      "domains": [
+        "S2",
+        "S4"
+      ],
+      "subtask_category": [
+        "structure_based_drug_design",
+        "molecule_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BioinfoMachineLearning/GCDM-SBDD",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-model",
+        "sbdd",
+        "generative-model"
+      ],
+      "id": 7
+    },
+    {
+      "name": "DeepDTIs_DBN",
+      "one_line_profile": "Deep belief net based drug-target interaction prediction",
+      "detailed_description": "A deep learning approach using Deep Belief Networks (DBN) to predict interactions between drugs and target proteins.",
+      "domains": [
+        "S2",
+        "S2-04",
+        "S4"
+      ],
+      "subtask_category": [
+        "dti_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Bjoux2/DeepDTIs_DBN",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dti",
+        "deep-belief-network",
+        "drug-target"
+      ],
+      "id": 8
+    },
+    {
+      "name": "Rag2Mol",
+      "one_line_profile": "Structure-based drug design using Retrieval Augmented Generation",
+      "detailed_description": "A method applying Retrieval Augmented Generation (RAG) techniques to the task of structure-based drug design.",
+      "domains": [
+        "S2",
+        "S4"
+      ],
+      "subtask_category": [
+        "structure_based_drug_design",
+        "molecule_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CQ-zhang-2016/Rag2Mol",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "rag",
+        "sbdd",
+        "generative-ai"
+      ],
+      "id": 9
+    },
+    {
+      "name": "CaDRReS",
+      "one_line_profile": "Cancer Drug Response prediction using a Recommender System",
+      "detailed_description": "A recommender system-based approach for predicting the response of cancer subtypes to various drug treatments.",
+      "domains": [
+        "S4"
+      ],
+      "subtask_category": [
+        "drug_response_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CSB5/CaDRReS",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "recommender-system",
+        "drug-response",
+        "cancer"
+      ],
+      "id": 10
+    },
+    {
+      "name": "BionoiNet",
+      "one_line_profile": "Deep learning-based software to classify ligand-binding sites",
+      "detailed_description": "A PyTorch implementation of BionoiNet for classifying and characterizing ligand-binding sites in proteins.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_classification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CSBG-LSU/BionoiNet",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "binding-site",
+        "classification",
+        "deep-learning"
+      ],
+      "id": 11
+    },
+    {
+      "name": "fpocket",
+      "one_line_profile": "Fast open source protein pocket detection algorithm",
+      "detailed_description": "A very fast, open-source protein pocket detection algorithm based on Voronoi tessellation, widely used for identifying potential binding sites.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "pocket_detection",
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/Discngine/fpocket",
+      "help_website": [
+        "http://fpocket.sourceforge.net"
+      ],
+      "license": "MIT",
+      "tags": [
+        "voronoi",
+        "pocket-detection",
+        "structural-biology"
+      ],
+      "id": 12
+    },
+    {
+      "name": "keypoint-diffusion",
+      "one_line_profile": "Diffusion model for structure-based drug design with learned representations",
+      "detailed_description": "A diffusion-based model for generating drug candidates based on protein structures, utilizing learned representations for faster inference.",
+      "domains": [
+        "S2",
+        "S4"
+      ],
+      "subtask_category": [
+        "structure_based_drug_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Dunni3/keypoint-diffusion",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-model",
+        "sbdd",
+        "keypoints"
+      ],
+      "id": 13
+    },
+    {
+      "name": "DPASyn",
+      "one_line_profile": "Mechanism-Aware Drug Synergy Prediction via Dual Attention",
+      "detailed_description": "A deep learning model for predicting drug synergy that incorporates mechanism-aware dual attention and precision-aware quantization.",
+      "domains": [
+        "S4"
+      ],
+      "subtask_category": [
+        "drug_synergy_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Echo-Nie/DPASyn",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "drug-synergy",
+        "attention-mechanism",
+        "deep-learning"
+      ],
+      "id": 14
+    },
+    {
+      "name": "DeepConv-DTI",
+      "one_line_profile": "Prediction of drug-target interactions via deep learning with convolution",
+      "detailed_description": "A deep learning model using convolutional neural networks on protein sequences to predict drug-target interactions.",
+      "domains": [
+        "S2",
+        "S2-04",
+        "S4"
+      ],
+      "subtask_category": [
+        "dti_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GIST-CSBL/DeepConv-DTI",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dti",
+        "cnn",
+        "sequence-based"
+      ],
+      "id": 15
+    },
+    {
+      "name": "HoTS",
+      "one_line_profile": "Sequence-based prediction of binding regions and drug-target interactions",
+      "detailed_description": "A method for predicting both drug-target interactions and the specific binding regions on the protein sequence.",
+      "domains": [
+        "S2",
+        "S2-02",
+        "S2-04"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "dti_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GIST-CSBL/HoTS",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "binding-region",
+        "dti",
+        "sequence-based"
+      ],
+      "id": 16
+    },
+    {
+      "name": "Anchor",
+      "one_line_profile": "Transcription Factor Binding Site Prediction",
+      "detailed_description": "An algorithm for predicting transcription factor binding sites, originally a winning entry in the ENCODE-DREAM challenge.",
+      "domains": [
+        "S1",
+        "S2"
+      ],
+      "subtask_category": [
+        "tfbs_prediction",
+        "sequence_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/GuanLab/Anchor",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "transcription-factor",
+        "binding-site",
+        "genomics"
+      ],
+      "id": 17
+    },
+    {
+      "name": "TamGent",
+      "one_line_profile": "Transformer-based Generative Solution for Structured-based Drug Design",
+      "detailed_description": "A Transformer-based generative model designed to tailor molecules for specific protein pockets in structure-based drug design.",
+      "domains": [
+        "S2",
+        "S4"
+      ],
+      "subtask_category": [
+        "structure_based_drug_design",
+        "molecule_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HankerWu/TamGent",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "transformer",
+        "sbdd",
+        "generative-model"
+      ],
+      "id": 18
+    },
+    {
+      "name": "EquiBind",
+      "one_line_profile": "Geometric deep learning for fast predictions of protein-ligand binding structure",
+      "detailed_description": "A geometric deep learning model that directly predicts the 3D coordinates of a ligand bound to a protein receptor without expensive sampling.",
+      "domains": [
+        "S2",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "binding_pose_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HannesStark/EquiBind",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "geometric-dl",
+        "docking",
+        "equivariant-neural-network"
+      ],
+      "id": 19
+    },
+    {
+      "name": "FlowSite",
+      "one_line_profile": "Harmonic Self-Conditioned Flow Matching for Multi-Ligand Docking and Binding Site Design",
+      "detailed_description": "A flow matching-based approach for multi-ligand docking and designing binding sites, enabling flexible protein-ligand interaction modeling.",
+      "domains": [
+        "S2",
+        "S2-02",
+        "S2-03"
+      ],
+      "subtask_category": [
+        "binding_site_design",
+        "molecular_docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HannesStark/FlowSite",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "flow-matching",
+        "docking",
+        "protein-design"
+      ],
+      "id": 20
+    },
+    {
+      "name": "oncoPredict",
+      "one_line_profile": "R package for drug response prediction and drug-gene association prediction",
+      "detailed_description": "An R package designed to predict in vivo drug response from in vitro screening data and identify drug-gene associations.",
+      "domains": [
+        "S4"
+      ],
+      "subtask_category": [
+        "drug_response_prediction",
+        "biomarker_discovery"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/HuangLabUMN/oncoPredict",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "r-package",
+        "drug-response",
+        "pharmacogenomics"
+      ],
+      "id": 21
+    },
+    {
+      "name": "otter-knowledge",
+      "one_line_profile": "Knowledge-enhanced learned representation for drug target binding affinity prediction",
+      "detailed_description": "A framework that enriches protein and drug representations with knowledge graphs to improve the accuracy of binding affinity predictions.",
+      "domains": [
+        "S2",
+        "S4"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/IBM/otter-knowledge",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "knowledge-graph",
+        "binding-affinity",
+        "representation-learning"
+      ],
+      "id": 22
+    },
+    {
+      "name": "KG4SL",
+      "one_line_profile": "Knowledge graph neural network for synthetic lethality prediction",
+      "detailed_description": "A Graph Neural Network (GNN) model that leverages knowledge graphs to predict synthetic lethality pairs for cancer target discovery.",
+      "domains": [
+        "S4"
+      ],
+      "subtask_category": [
+        "synthetic_lethality_prediction",
+        "target_discovery"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JieZheng-ShanghaiTech/KG4SL",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "knowledge-graph",
+        "synthetic-lethality"
+      ],
+      "id": 23
+    },
+    {
+      "name": "CLAPE-SMB",
+      "one_line_profile": "Contrastive learning and pre-trained encoder for protein-small molecules binding sites prediction",
+      "detailed_description": "A method using contrastive learning and pre-trained encoders to predict binding sites for small molecules on proteins.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JueWangTHU/CLAPE-SMB",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "contrastive-learning",
+        "binding-site",
+        "protein-ligand"
+      ],
+      "id": 24
+    },
+    {
+      "name": "match_ligand_binding_sites",
+      "one_line_profile": "Extract ligand binding sites from PDB and match to de novo scaffolds",
+      "detailed_description": "A utility to extract ligand binding motifs from the PDB and match them onto de novo designed protein scaffolds for functional protein design.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_extraction",
+        "protein_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Kortemme-Lab/match_ligand_binding_sites",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "protein-design",
+        "binding-site",
+        "pdb-mining"
+      ],
+      "id": 25
+    },
+    {
+      "name": "EmerGNN",
+      "one_line_profile": "Emerging Drug Interaction Prediction Enabled by Flow-based Graph Neural Network",
+      "detailed_description": "A flow-based Graph Neural Network model designed to predict emerging drug-drug interactions using biomedical networks.",
+      "domains": [
+        "S4"
+      ],
+      "subtask_category": [
+        "ddi_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LARS-research/EmerGNN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ddi",
+        "gnn",
+        "drug-interaction"
+      ],
+      "id": 26
+    },
+    {
+      "name": "KnowDDI",
+      "one_line_profile": "Accurate and Interpretable Drug-drug Interaction Prediction via Knowledge Subgraph Learning",
+      "detailed_description": "A method for predicting drug-drug interactions that provides interpretability through knowledge subgraph learning.",
+      "domains": [
+        "S4"
+      ],
+      "subtask_category": [
+        "ddi_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LARS-research/KnowDDI",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ddi",
+        "knowledge-graph",
+        "interpretability"
+      ],
+      "id": 27
+    },
+    {
+      "name": "PeSTo",
+      "one_line_profile": "Geometric deep learning method to predict protein binding interfaces",
+      "detailed_description": "A geometric deep learning tool (Protein Structure Transformer) for accurate prediction of protein-protein and other binding interfaces directly from structure.",
+      "domains": [
+        "S2",
+        "S2-02",
+        "S2-04"
+      ],
+      "subtask_category": [
+        "interface_prediction",
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/LBM-EPFL/PeSTo",
+      "help_website": [
+        "https://pesto.epfl.ch"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "geometric-dl",
+        "protein-interface",
+        "structural-biology"
+      ],
+      "id": 28
+    },
+    {
+      "name": "PeSTo-Carbs",
+      "one_line_profile": "Geometric Deep Learning for Prediction of Protein-Carbohydrate Binding Interfaces",
+      "detailed_description": "An extension of the PeSTo framework specifically trained to predict binding interfaces between proteins and carbohydrates.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "protein_carbohydrate_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/LBM-EPFL/PeSTo-Carbs",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "carbohydrate",
+        "binding-site",
+        "geometric-dl"
+      ],
+      "id": 29
+    },
+    {
+      "name": "DrugLAMP",
+      "one_line_profile": "Drug-target interaction predictions utilizing multi-modal large language models",
+      "detailed_description": "A system utilizing multi-modal large language models to discern structural affinities and predict drug-target interactions.",
+      "domains": [
+        "S2",
+        "S4"
+      ],
+      "subtask_category": [
+        "dti_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Lzcstan/DrugLAMP",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "llm",
+        "dti",
+        "multi-modal"
+      ],
+      "id": 30
+    },
+    {
+      "name": "Affinity2Vec",
+      "one_line_profile": "Drug-target binding affinity prediction using representation learning",
+      "detailed_description": "A method combining representation learning, graph mining, and machine learning to predict drug-target binding affinities.",
+      "domains": [
+        "S2",
+        "S4"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/MahaThafar/Affinity2Vec",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "binding-affinity",
+        "representation-learning",
+        "graph-mining"
+      ],
+      "id": 31
+    },
+    {
+      "name": "DTiGEMSplus",
+      "one_line_profile": "Network-based method for computational Drug-Target Interaction prediction",
+      "detailed_description": "A network-based tool for predicting drug-target interactions using graph embedding, graph mining, and similarity-based techniques.",
+      "domains": [
+        "S2",
+        "S4"
+      ],
+      "subtask_category": [
+        "dti_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MahaThafar/Drug-Target-Interaction-Prediciton-Method",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dti",
+        "graph-embedding",
+        "network-biology"
+      ],
+      "id": 32
+    },
+    {
+      "name": "EEG-DTI",
+      "one_line_profile": "End-to-end heterogeneous graph learning framework for drug-target interaction prediction",
+      "detailed_description": "A deep learning framework utilizing heterogeneous graph representation learning to predict interactions between drugs and targets, facilitating drug discovery processes.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "drug_target_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MedicineBiology-AI/EEG-DTI",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dti",
+        "graph-neural-networks",
+        "drug-discovery"
+      ],
+      "id": 33
+    },
+    {
+      "name": "POVME3",
+      "one_line_profile": "Pocket volume analyzer for protein modeling and binding site analysis",
+      "detailed_description": "A Python-based tool for analyzing the shape and volume of ligand binding pockets in protein structures, often used in molecular dynamics simulations to track pocket dynamics.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "pocket_detection",
+        "volume_calculation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/POVME/POVME3",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-pocket",
+        "molecular-dynamics",
+        "binding-site"
+      ],
+      "id": 34
+    },
+    {
+      "name": "PaccMann Predictor",
+      "one_line_profile": "Bimodal neural networks for drug-target and drug-cell interaction prediction",
+      "detailed_description": "A PyTorch implementation of multimodal deep learning models for predicting drug sensitivity (pharmacogenomics) and drug-target binding affinity (proteochemometrics).",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "affinity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PaccMann/paccmann_predictor",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "drug-target-affinity",
+        "deep-learning",
+        "pharmacogenomics"
+      ],
+      "id": 35
+    },
+    {
+      "name": "PointSite",
+      "one_line_profile": "Point cloud segmentation tool for protein ligand binding atom identification",
+      "detailed_description": "A tool that treats protein structures as point clouds and uses segmentation techniques to identify atoms involved in ligand binding, aiding in binding site prediction.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "point_cloud_segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/PointSite/PointSite",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-structure",
+        "binding-site",
+        "point-cloud"
+      ],
+      "id": 36
+    },
+    {
+      "name": "SSM-DTA",
+      "one_line_profile": "Drug-target affinity prediction model addressing data scarcity",
+      "detailed_description": "A deep learning model designed to predict drug-target binding affinity, specifically optimized to handle data scarcity issues in DTA datasets.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "affinity_prediction",
+        "drug_target_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/QizhiPei/SSM-DTA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dta",
+        "deep-learning",
+        "drug-discovery"
+      ],
+      "id": 37
+    },
+    {
+      "name": "PocketFlow",
+      "one_line_profile": "Autoregressive flow model for molecule generation in protein pockets",
+      "detailed_description": "A generative model that designs drug-like molecules fitting specific protein binding pockets, incorporating chemical knowledge into an autoregressive flow architecture.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "molecule_generation",
+        "structure_based_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Saoge123/PocketFlow",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "generative-model",
+        "sbdd",
+        "drug-design"
+      ],
+      "id": 38
+    },
+    {
+      "name": "InteracDome",
+      "one_line_profile": "Tool to compute site-based ligand-binding frequencies",
+      "detailed_description": "A computational tool and resource for analyzing ligand-binding frequencies across protein domains, helping to identify functional binding sites based on structural data.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_analysis",
+        "structural_bioinformatics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Singh-Lab/InteracDome",
+      "help_website": [
+        "http://interacdome.princeton.edu"
+      ],
+      "license": null,
+      "tags": [
+        "ligand-binding",
+        "protein-domains",
+        "bioinformatics"
+      ],
+      "id": 39
+    },
+    {
+      "name": "VHELIBS",
+      "one_line_profile": "Validation helper for ligands and binding sites",
+      "detailed_description": "A software tool designed to assist in the validation and assessment of predicted ligand binding sites and ligand structures in computational chemistry workflows.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "validation",
+        "binding_site_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/URV-cheminformatics/VHELIBS",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "binding-site",
+        "validation",
+        "cheminformatics"
+      ],
+      "id": 40
+    },
+    {
+      "name": "fpocketR",
+      "one_line_profile": "Program to find drug-like RNA-ligand binding pockets",
+      "detailed_description": "A specialized tool for detecting potential small molecule binding pockets on RNA structures, adapted from protein pocket detection methodologies.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "pocket_detection",
+        "rna_structure"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Weeks-UNC/fpocketR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rna",
+        "binding-pocket",
+        "drug-discovery"
+      ],
+      "id": 41
+    },
+    {
+      "name": "DeepGS",
+      "one_line_profile": "Deep representation learning for drug-target binding affinity prediction",
+      "detailed_description": "A deep learning framework combining graph neural networks and sequence modeling to predict the binding affinity between drugs and target proteins.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "affinity_prediction",
+        "drug_target_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/XuanLin1991/DeepGS",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dta",
+        "deep-learning",
+        "bioinformatics"
+      ],
+      "id": 42
+    },
+    {
+      "name": "CLAPE",
+      "one_line_profile": "Contrastive learning encoder for protein-ligand binding sites prediction",
+      "detailed_description": "A deep learning model utilizing contrastive learning and pre-trained encoders to accurately predict protein-ligand binding sites from structural data.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "contrastive_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/YAndrewL/CLAPE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "binding-site",
+        "protein-ligand",
+        "deep-learning"
+      ],
+      "id": 43
+    },
+    {
+      "name": "BindDM",
+      "one_line_profile": "Binding-adaptive diffusion models for structure-based drug design",
+      "detailed_description": "A generative diffusion model framework that adapts to binding site information for designing novel drug molecules based on protein structures.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "molecule_generation",
+        "structure_based_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/YangLing0818/BindDM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "diffusion-model",
+        "sbdd",
+        "generative-ai"
+      ],
+      "id": 44
+    },
+    {
+      "name": "DSAC",
+      "one_line_profile": "Dual-branch network for transcription factor binding sites prediction",
+      "detailed_description": "A deep learning tool combining local features and global representations to predict transcription factor binding sites on DNA sequences.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/YuBinLab-QUST/DSAC",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "tfbs",
+        "deep-learning",
+        "dna-binding"
+      ],
+      "id": 45
+    },
+    {
+      "name": "FusionDTI",
+      "one_line_profile": "Token-level fusion module for drug-target interaction prediction",
+      "detailed_description": "A predictive model for drug-target interactions that employs a token-level fusion mechanism to capture fine-grained interaction details between molecules and proteins.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "drug_target_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ZhaohanM/FusionDTI",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dti",
+        "deep-learning",
+        "nlp-for-bio"
+      ],
+      "id": 46
+    },
+    {
+      "name": "MINN-DTI",
+      "one_line_profile": "Mutual interaction neural network for DTI prediction",
+      "detailed_description": "A neural network framework designed to effectively predict drug-target interactions by modeling the mutual interactions between drug and target features.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "drug_target_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/admislf/MINN-DTI",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dti",
+        "deep-learning",
+        "bioinformatics"
+      ],
+      "id": 47
+    },
+    {
+      "name": "Chemogenomic-DTI-Prediction-Methods",
+      "one_line_profile": "Collection of algorithms for chemogenomic drug-target interaction prediction",
+      "detailed_description": "A MATLAB-based repository containing implementations of various chemogenomic algorithms and methods for predicting drug-target interactions.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/alizat/Chemogenomic-DTI-Prediction-Methods",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dti",
+        "chemogenomics",
+        "matlab"
+      ],
+      "id": 48
+    },
+    {
+      "name": "DiffSBDD",
+      "one_line_profile": "Euclidean diffusion model for structure-based drug design",
+      "detailed_description": "A state-of-the-art generative diffusion model for generating ligand structures within protein binding pockets, operating in Euclidean space.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "molecule_generation",
+        "structure_based_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/arneschneuing/DiffSBDD",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-model",
+        "sbdd",
+        "generative-chemistry"
+      ],
+      "id": 49
+    },
+    {
+      "name": "GraphSite",
+      "one_line_profile": "Protein-DNA binding site prediction using graph transformers",
+      "detailed_description": "A deep learning tool that uses graph transformers on predicted protein structures to identify DNA binding sites.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "protein_dna_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/biomed-AI/GraphSite",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dna-binding",
+        "graph-transformer",
+        "structural-biology"
+      ],
+      "id": 50
+    },
+    {
+      "name": "LMetalSite",
+      "one_line_profile": "Alignment-free metal ion-binding site prediction",
+      "detailed_description": "A tool for predicting metal ion binding sites in proteins from sequence data using pretrained language models and multi-task learning, without requiring structural alignment.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "metal_binding"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/biomed-AI/LMetalSite",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "metal-binding",
+        "protein-sequence",
+        "deep-learning"
+      ],
+      "id": 51
+    },
+    {
+      "name": "SAP_bare-protein",
+      "one_line_profile": "Calculation of Spatial Aggregation Propensity (SAP) from MD trajectories",
+      "detailed_description": "A set of FORTRAN codes and scripts to calculate the Spatial Aggregation Propensity of proteins based on solvent accessible surface area from GROMACS trajectories.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "property_calculation",
+        "molecular_dynamics_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/bresmegroup/SAP_bare-protein",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "molecular-dynamics",
+        "protein-aggregation",
+        "gromacs"
+      ],
+      "id": 52
+    },
+    {
+      "name": "DecompDiff",
+      "one_line_profile": "Diffusion model with decomposed priors for structure-based drug design",
+      "detailed_description": "The official implementation of DecompDiff, a diffusion model framework that utilizes decomposed priors to improve structure-based drug design (SBDD) by generating 3D molecular structures conditioned on protein pockets.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "structure_based_drug_design",
+        "molecular_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bytedance/DecompDiff",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "diffusion-model",
+        "sbdd",
+        "drug-design",
+        "generative-model"
+      ],
+      "id": 53
+    },
+    {
+      "name": "MDeePred",
+      "one_line_profile": "Multi-channel deep chemogenomic model for binding affinity prediction",
+      "detailed_description": "A multi-channel deep learning framework for predicting receptor-ligand binding affinity in drug discovery, integrating chemogenomic data for improved accuracy.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "drug_target_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cansyl/MDeePred",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "binding-affinity",
+        "deep-learning",
+        "chemogenomics"
+      ],
+      "id": 54
+    },
+    {
+      "name": "PoseCheck",
+      "one_line_profile": "Quality control and pose validation for SBDD methods",
+      "detailed_description": "A Python library designed to perform pose checks and validation for 3D structure-based drug design methods, ensuring generated molecules meet physical and chemical plausibility standards.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "pose_validation",
+        "sbdd"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cch1999/posecheck",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "validation",
+        "sbdd",
+        "molecular-pose"
+      ],
+      "id": 55
+    },
+    {
+      "name": "DEPACT_PACMatch",
+      "one_line_profile": "De novo ligand-binding pocket design tools",
+      "detailed_description": "A set of programs (DEPACT and PACMatch) for the de novo design of ligand-binding pockets within protein scaffolds, facilitating protein engineering and functional design.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "pocket_design",
+        "protein_engineering"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/chenyaoxi/DEPACT_PACMatch",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "protein-design",
+        "pocket-design",
+        "ligand-binding"
+      ],
+      "id": 56
+    },
+    {
+      "name": "bcpaff",
+      "one_line_profile": "Electron density-based geometric deep learning for binding affinity",
+      "detailed_description": "A tool exploring protein-ligand binding affinity prediction using electron density-based geometric deep learning techniques.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "geometric_deep_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cisert/bcpaff",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "binding-affinity",
+        "electron-density",
+        "geometric-deep-learning"
+      ],
+      "id": 57
+    },
+    {
+      "name": "SHREC 2022 Protein-Ligand Benchmark",
+      "one_line_profile": "Benchmark dataset and evaluation tools for binding site recognition",
+      "detailed_description": "The official dataset and evaluation toolkit for the SHREC 2022 contest focused on protein-ligand binding site recognition, enabling standardized assessment of prediction algorithms.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "binding_site_prediction"
+      ],
+      "application_level": "dataset",
+      "primary_language": "C",
+      "repo_url": "https://github.com/concept-lab/shrec22_proteinLigandBenchmark",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "benchmark",
+        "binding-site",
+        "shrec"
+      ],
+      "id": 58
+    },
+    {
+      "name": "DrEval",
+      "one_line_profile": "Statistical evaluation toolkit for drug response prediction",
+      "detailed_description": "A Python toolkit designed to ensure that evaluations of drug response prediction models are statistically sound, biologically meaningful, and reproducible.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "drug_response_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/daisybio/drevalpy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "evaluation",
+        "drug-response",
+        "statistics"
+      ],
+      "id": 59
+    },
+    {
+      "name": "CIGIN",
+      "one_line_profile": "Chemically interpretable graph interaction network for ADMET prediction",
+      "detailed_description": "A deep learning model (Chemically Interpretable Graph Interaction Network) for predicting pharmacokinetic properties (ADMET) of drug-like molecules, emphasizing interpretability.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "admet"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/devalab/CIGIN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "admet",
+        "pharmacokinetics",
+        "graph-neural-network"
+      ],
+      "id": 60
+    },
+    {
+      "name": "DeepPocket",
+      "one_line_profile": "Deep learning-based ligand binding site detection",
+      "detailed_description": "A deep learning approach for detecting ligand binding sites on protein surfaces, utilizing 3D convolutional neural networks.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "pocket_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/devalab/DeepPocket",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "binding-site",
+        "pocket-detection"
+      ],
+      "id": 61
+    },
+    {
+      "name": "ReSimNet",
+      "one_line_profile": "Drug response similarity prediction network",
+      "detailed_description": "An implementation of ReSimNet, a Siamese neural network architecture designed to predict the similarity of drug responses between different cell lines or conditions.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "drug_response_prediction",
+        "similarity_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/dmis-lab/ReSimNet",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "drug-response",
+        "siamese-network",
+        "bioinformatics"
+      ],
+      "id": 62
+    },
+    {
+      "name": "POVME",
+      "one_line_profile": "Pocket Volume Measurer for molecular simulations",
+      "detailed_description": "A tool to detect, characterize, and measure the volume of binding pockets from molecular dynamics simulation trajectories.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "pocket_detection",
+        "md_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/durrantlab/POVME",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "molecular-dynamics",
+        "pocket-volume",
+        "binding-site"
+      ],
+      "id": 63
+    },
+    {
+      "name": "PharmacoForge",
+      "one_line_profile": "Pharmacophore generation using diffusion models",
+      "detailed_description": "A tool that generates pharmacophores conditioned on a protein pocket using a diffusion model, aiding in structure-based drug design.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "pharmacophore_generation",
+        "sbdd"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eflynn8/pharmacophore-diffusion",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "diffusion-model",
+        "pharmacophore",
+        "drug-design"
+      ],
+      "id": 64
+    },
+    {
+      "name": "CPA",
+      "one_line_profile": "Compositional Perturbation Autoencoder for single-cell drug response",
+      "detailed_description": "A deep generative framework (Compositional Perturbation Autoencoder) to learn and predict the effects of drug perturbations at the single-cell level, including unseen drug combinations.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "single_cell_analysis",
+        "drug_response_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/facebookresearch/CPA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "perturbation",
+        "generative-model"
+      ],
+      "id": 65
+    },
+    {
+      "name": "WaterKit",
+      "one_line_profile": "Prediction of water molecule placement in binding sites",
+      "detailed_description": "A tool designed to predict the placement and energy of water molecules within ligand binding sites, which is critical for accurate docking and binding affinity estimation.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "hydration_prediction",
+        "binding_site_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/forlilab/waterkit",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "water-placement",
+        "binding-site",
+        "docking"
+      ],
+      "id": 66
+    },
+    {
+      "name": "Reinforced-Genetic-Algorithm",
+      "one_line_profile": "RL and GA hybrid for structure-based drug design",
+      "detailed_description": "A framework combining Reinforcement Learning and Genetic Algorithms for structure-based drug design tasks.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "structure_based_drug_design",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/futianfan/reinforced-genetic-algorithm",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "reinforcement-learning",
+        "genetic-algorithm",
+        "sbdd"
+      ],
+      "id": 67
+    },
+    {
+      "name": "FMol",
+      "one_line_profile": "Simplified drug discovery pipeline integrating AlphaFold and fpocket",
+      "detailed_description": "A pipeline tool that integrates AlphaSMILES, AlphaFold, and fpocket/Amber to automate the process of generating molecules, predicting protein structures, and assessing druggability.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "drug_discovery_pipeline",
+        "druggability_assessment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/garywei944/FMol",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pipeline",
+        "alphafold",
+        "fpocket"
+      ],
+      "id": 68
+    },
+    {
+      "name": "Pocket-to-Concavity",
+      "one_line_profile": "Refinement tool for protein-ligand binding site shapes",
+      "detailed_description": "A tool for refining the shape representation of protein-ligand binding sites derived from alpha-spheres, improving the definition of concavities for downstream analysis.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_analysis",
+        "shape_refinement"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/genki-kudo/Pocket-to-Concavity",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "binding-site",
+        "alpha-spheres",
+        "concavity"
+      ],
+      "id": 69
+    },
+    {
+      "name": "OMTRA",
+      "one_line_profile": "Multi-task generative model for SBDD",
+      "detailed_description": "A multi-task generative model designed for Structure-Based Drug Design, capable of generating molecules that fit specific protein targets.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "structure_based_drug_design",
+        "molecular_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/gnina/OMTRA",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "generative-model",
+        "sbdd",
+        "multi-task-learning"
+      ],
+      "id": 70
+    },
+    {
+      "name": "DMFF-DTA",
+      "one_line_profile": "Dual modality feature fused network for DTA prediction",
+      "detailed_description": "A deep learning model (DMFF-DTA) that integrates binding site information with other modalities to predict drug-target binding affinity.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "drug_target_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hehh77/DMFF-DTA",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dta",
+        "binding-affinity",
+        "deep-learning"
+      ],
+      "id": 71
+    },
+    {
+      "name": "PIDiff",
+      "one_line_profile": "Physics-informed diffusion model for pocket-specific generation",
+      "detailed_description": "Implementation of a physics-informed diffusion model designed to generate 3D molecular structures specifically tailored to protein pockets.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "molecular_generation",
+        "sbdd"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/hello-maker/PIDiff",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "diffusion-model",
+        "physics-informed",
+        "sbdd"
+      ],
+      "id": 72
+    },
+    {
+      "name": "DeepDTA",
+      "one_line_profile": "Deep learning for drug-target binding affinity prediction",
+      "detailed_description": "A widely used deep learning model for predicting drug-target binding affinity using sequence and SMILES representations.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "drug_target_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hkmztrk/DeepDTA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dta",
+        "binding-affinity",
+        "deep-learning"
+      ],
+      "id": 73
+    },
+    {
+      "name": "MOLI",
+      "one_line_profile": "Multi-omics late integration for drug response prediction",
+      "detailed_description": "A deep neural network approach for drug response prediction that utilizes multi-omics data with a late integration strategy.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "drug_response_prediction",
+        "multi_omics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/hosseinshn/MOLI",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "drug-response",
+        "multi-omics",
+        "deep-learning"
+      ],
+      "id": 74
+    },
+    {
+      "name": "YuelPocket",
+      "one_line_profile": "GNN-based protein-ligand binding site prediction",
+      "detailed_description": "A graph neural network-based method for predicting protein-ligand binding sites, leveraging structural information.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "pocket_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hust220/yuel_pocket",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gnn",
+        "binding-site",
+        "deep-learning"
+      ],
+      "id": 75
+    },
+    {
+      "name": "DrugCell",
+      "one_line_profile": "Visible neural network for drug response prediction",
+      "detailed_description": "A visible neural network model that predicts drug response by simulating the hierarchical structure of a human cell, providing interpretability alongside prediction.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "drug_response_prediction",
+        "interpretable_ai"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/idekerlab/DrugCell",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "drug-response",
+        "visible-neural-network",
+        "systems-biology"
+      ],
+      "id": 76
+    },
+    {
+      "name": "MIRACLE",
+      "one_line_profile": "Multi-view graph contrastive learning for DDI prediction",
+      "detailed_description": "A model utilizing multi-view graph contrastive representation learning to predict drug-drug interactions (DDI).",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "drug_drug_interaction",
+        "graph_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/isjakewong/MIRACLE",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ddi",
+        "contrastive-learning",
+        "graph-neural-network"
+      ],
+      "id": 77
+    },
+    {
+      "name": "AMG",
+      "one_line_profile": "RL agent for fragment-based 3D molecular generation",
+      "detailed_description": "A deep reinforcement learning framework acting as an interaction agent to steer fragment-based 3D molecular generation specifically for protein pockets.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "molecular_generation",
+        "sbdd",
+        "fragment_based_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ispc-lab/AMG",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "reinforcement-learning",
+        "fragment-based",
+        "sbdd"
+      ],
+      "id": 78
+    },
+    {
+      "name": "SeFMol",
+      "one_line_profile": "Steering semi-flexible molecular diffusion for SBDD",
+      "detailed_description": "A method combining reinforcement learning with diffusion models to steer the generation of semi-flexible molecules in structure-based drug design.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "molecular_generation",
+        "sbdd"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ispc-lab/SeFMol",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "diffusion-model",
+        "reinforcement-learning",
+        "sbdd"
+      ],
+      "id": 79
+    },
+    {
+      "name": "PrankWebApp",
+      "one_line_profile": "Web application for binding site analysis and visualization",
+      "detailed_description": "The source code for the PrankWeb application, which provides a platform for running P2Rank binding site predictions and visualizing the results on protein structures.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "visualization",
+        "binding_site_prediction"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/jendelel/PrankWebApp",
+      "help_website": [
+        "https://prankweb.cz/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "visualization",
+        "web-app",
+        "p2rank"
+      ],
+      "id": 80
+    },
+    {
+      "name": "Allopred",
+      "one_line_profile": "Prediction of allosteric pockets on proteins",
+      "detailed_description": "A tool for predicting allosteric pockets and sites on protein structures, aiding in the discovery of allosteric modulators.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "allosteric_site_prediction",
+        "pocket_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jgreener64/allopred",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "allostery",
+        "pocket-prediction",
+        "protein-structure"
+      ],
+      "id": 81
+    },
+    {
+      "name": "MPBind",
+      "one_line_profile": "Transformer-based protein binding site prediction",
+      "detailed_description": "A deep learning model utilizing transformer architectures for the prediction of protein binding sites.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "deep_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jianlin-cheng/MPBind",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "transformer",
+        "binding-site",
+        "deep-learning"
+      ],
+      "id": 82
+    },
+    {
+      "name": "PUResNet",
+      "one_line_profile": "Deep learning model for predicting protein-ligand binding sites",
+      "detailed_description": "A deep convolutional neural network based method for predicting protein-ligand binding sites from 3D protein structures.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "pocket_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jivankandel/PUResNet",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deep-learning",
+        "binding-sites",
+        "structure-based"
+      ],
+      "id": 83
+    },
+    {
+      "name": "PUResNetV2.0",
+      "one_line_profile": "Updated deep learning model for ligand binding site prediction",
+      "detailed_description": "The second version of PUResNet for predicting ligand binding sites, offering improved performance and updated architecture.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jivankandel/PUResNetV2.0",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "binding-sites",
+        "protein-structure"
+      ],
+      "id": 84
+    },
+    {
+      "name": "caviar",
+      "one_line_profile": "Protein cavity identification and subpocket decomposition tool",
+      "detailed_description": "A tool for identifying protein cavities and automatically decomposing them into subpockets for detailed structural analysis.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "pocket_detection",
+        "subpocket_decomposition"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jr-marchand/caviar",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cavity-detection",
+        "protein-structure",
+        "subpockets"
+      ],
+      "id": 85
+    },
+    {
+      "name": "DrugHIVE",
+      "one_line_profile": "Deep hierarchical generative model for structure-based drug design",
+      "detailed_description": "A deep learning framework for structure-based drug design using a hierarchical generative model to generate molecules fitting specific protein pockets.",
+      "domains": [
+        "S2",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "drug_design",
+        "generative_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jssweller/DrugHIVE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "sbdd",
+        "generative-model",
+        "drug-design"
+      ],
+      "id": 86
+    },
+    {
+      "name": "DLEPS",
+      "one_line_profile": "Deep Learning based Efficacy Prediction System for drug discovery",
+      "detailed_description": "A system for predicting drug efficacy using deep learning techniques, aiding in the drug discovery process.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "efficacy_prediction",
+        "drug_screening"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kekegg/DLEPS",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "drug-efficacy",
+        "deep-learning",
+        "screening"
+      ],
+      "id": 87
+    },
+    {
+      "name": "BiLevel-Graph-Neural-Network",
+      "one_line_profile": "Bi-Level Graph Neural Networks for Drug-Drug Interaction Prediction",
+      "detailed_description": "Implementation of Bi-Level Graph Neural Networks to predict interactions between drugs, presented at ICML 2020 Workshop.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "ddi_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kenqgu/BiLevel-Graph-Neural-Network",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "drug-interaction",
+        "ddi"
+      ],
+      "id": 88
+    },
+    {
+      "name": "DeepPurpose",
+      "one_line_profile": "Comprehensive Deep Learning Toolkit for Drug Discovery",
+      "detailed_description": "A versatile toolkit for various drug discovery tasks including Drug-Target Interaction (DTI), Drug Property, PPI, and DDI prediction.",
+      "domains": [
+        "Drug Discovery",
+        "S2"
+      ],
+      "subtask_category": [
+        "dti_prediction",
+        "property_prediction",
+        "interaction_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kexinhuang12345/DeepPurpose",
+      "help_website": [
+        "https://deeppurpose.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "toolkit",
+        "dti",
+        "drug-discovery",
+        "deep-learning"
+      ],
+      "id": 89
+    },
+    {
+      "name": "MolTrans",
+      "one_line_profile": "Molecular Interaction Transformer for DTI Prediction",
+      "detailed_description": "A Transformer-based model for predicting Drug-Target Interactions by modeling molecular substructure interactions.",
+      "domains": [
+        "Drug Discovery",
+        "S2"
+      ],
+      "subtask_category": [
+        "dti_prediction",
+        "interaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kexinhuang12345/MolTrans",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "transformer",
+        "dti",
+        "molecular-interaction"
+      ],
+      "id": 90
+    },
+    {
+      "name": "DeepCDR",
+      "one_line_profile": "Cancer Drug Response Prediction via Hybrid GCN",
+      "detailed_description": "A hybrid graph convolutional network model for predicting cancer drug responses by integrating multi-omics data.",
+      "domains": [
+        "Drug Discovery",
+        "Precision Medicine"
+      ],
+      "subtask_category": [
+        "drug_response_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kimmo1019/DeepCDR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cancer",
+        "drug-response",
+        "gcn"
+      ],
+      "id": 91
+    },
+    {
+      "name": "deepsite-js",
+      "one_line_profile": "JavaScript implementation/interface for DeepSite binding site prediction",
+      "detailed_description": "An enhanced JavaScript-based implementation or interface for the DeepSite algorithm, used for predicting protein binding pockets.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/kiritoko1029/deepsite",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "binding-site",
+        "javascript",
+        "visualization"
+      ],
+      "id": 92
+    },
+    {
+      "name": "EPBD-BERT",
+      "one_line_profile": "Transcription factor binding site prediction using BERT",
+      "detailed_description": "A BERT-based model for predicting transcription factor binding sites on DNA sequences, aiding in mutation identification.",
+      "domains": [
+        "Genomics",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "sequence_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/lanl/EPBD-BERT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bert",
+        "dna",
+        "transcription-factor"
+      ],
+      "id": 93
+    },
+    {
+      "name": "egfr-att",
+      "one_line_profile": "Neural network for drug effect prediction",
+      "detailed_description": "A neural network model specifically designed for predicting drug effects, likely focused on EGFR inhibitors.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "drug_effect_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lehgtrung/egfr-att",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "neural-network",
+        "drug-effect",
+        "egfr"
+      ],
+      "id": 94
+    },
+    {
+      "name": "LABind",
+      "one_line_profile": "Ligand-Aware Binding Site Prediction",
+      "detailed_description": "A method for identifying protein binding sites by learning interactions between ligands and proteins.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ljquanlab/LABind",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ligand-aware",
+        "binding-site",
+        "interaction"
+      ],
+      "id": 95
+    },
+    {
+      "name": "DELPHI",
+      "one_line_profile": "Deep learning for protein-protein binding site prediction",
+      "detailed_description": "A deep learning approach for predicting binding sites involved in protein-protein interactions.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "ppi_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lucian-ilie/DELPHI",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ppi",
+        "binding-site",
+        "deep-learning"
+      ],
+      "id": 96
+    },
+    {
+      "name": "3D-Generative-SBDD",
+      "one_line_profile": "3D Generative Model for Structure-Based Drug Design",
+      "detailed_description": "A generative model for designing drug molecules in 3D based on protein structures, published at NeurIPS 2021.",
+      "domains": [
+        "S2",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "drug_design",
+        "generative_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/luost26/3D-Generative-SBDD",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sbdd",
+        "3d-generative",
+        "drug-design"
+      ],
+      "id": 97
+    },
+    {
+      "name": "DTINet",
+      "one_line_profile": "Network Integration for Drug-Target Interaction Prediction",
+      "detailed_description": "A network integration approach to predict drug-target interactions by combining heterogeneous information.",
+      "domains": [
+        "Drug Discovery",
+        "S2"
+      ],
+      "subtask_category": [
+        "dti_prediction",
+        "network_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/luoyunan/DTINet",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "network-integration",
+        "dti",
+        "matlab"
+      ],
+      "id": 98
+    },
+    {
+      "name": "KDBNet",
+      "one_line_profile": "Kinase-drug binding prediction with uncertainty quantification",
+      "detailed_description": "A deep learning model for predicting kinase-drug binding affinities with calibrated uncertainty quantification.",
+      "domains": [
+        "Drug Discovery",
+        "S2"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "uncertainty_quantification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/luoyunan/KDBNet",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "kinase",
+        "binding-affinity",
+        "uncertainty"
+      ],
+      "id": 99
+    },
+    {
+      "name": "drprg",
+      "one_line_profile": "Drug Resistance Prediction with Reference Graphs",
+      "detailed_description": "A tool for predicting drug resistance using reference graphs, implemented in Rust for performance.",
+      "domains": [
+        "Genomics",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "resistance_prediction",
+        "graph_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/mbhall88/drprg",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "drug-resistance",
+        "reference-graphs",
+        "rust"
+      ],
+      "id": 100
+    },
+    {
+      "name": "efindsite",
+      "one_line_profile": "Ligand binding site prediction and virtual screening",
+      "detailed_description": "A tool for predicting ligand binding sites and performing virtual screening, developed by the Brylinski Lab.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "virtual_screening"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/michal-brylinski/efindsite",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "binding-site",
+        "virtual-screening",
+        "brylinski-lab"
+      ],
+      "id": 101
+    },
+    {
+      "name": "clamp",
+      "one_line_profile": "Language-enhanced activity prediction models for drug discovery",
+      "detailed_description": "Code for enhancing activity prediction models in drug discovery by incorporating natural language understanding capabilities.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "activity_prediction",
+        "nlp_for_science"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ml-jku/clamp",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nlp",
+        "drug-discovery",
+        "activity-prediction"
+      ],
+      "id": 102
+    },
+    {
+      "name": "lsc",
+      "one_line_profile": "Large-scale comparison of ML methods for drug target prediction",
+      "detailed_description": "A benchmarking library and codebase for comparing various machine learning methods for drug target prediction on ChEMBL data.",
+      "domains": [
+        "Drug Discovery",
+        "S2"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "target_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ml-jku/lsc",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "benchmark",
+        "drug-target",
+        "chembl"
+      ],
+      "id": 103
+    },
+    {
+      "name": "FAME.AL",
+      "one_line_profile": "Active learning for sites of metabolism prediction",
+      "detailed_description": "A tool using active learning to predict sites of metabolism in molecules, developed by the Pharmacoinformatics group at Univ. Vienna.",
+      "domains": [
+        "Drug Discovery",
+        "Metabolism"
+      ],
+      "subtask_category": [
+        "metabolism_prediction",
+        "active_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/molinfo-vienna/FAME.AL",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "metabolism",
+        "active-learning",
+        "som"
+      ],
+      "id": 104
+    },
+    {
+      "name": "deepsite-mirror",
+      "one_line_profile": "Mirror of DeepSite binding site prediction service",
+      "detailed_description": "A TypeScript implementation/mirror of the DeepSite tool for predicting protein binding sites, facilitating access to the model.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction"
+      ],
+      "application_level": "service",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/mutalisk999/deepsite",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "binding-site",
+        "mirror",
+        "huggingface"
+      ],
+      "id": 105
+    },
+    {
+      "name": "drugresponseeval",
+      "one_line_profile": "Pipeline for evaluating drug response prediction models",
+      "detailed_description": "A Nextflow pipeline for statistically and biologically sound testing and evaluation of drug response prediction models.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "drug_response"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/drugresponseeval",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nf-core",
+        "pipeline",
+        "evaluation"
+      ],
+      "id": 106
+    },
+    {
+      "name": "GEFA",
+      "one_line_profile": "Early Fusion Approach in Drug-Target Affinity Prediction",
+      "detailed_description": "Implementation of the GEFA model which uses an early fusion approach for predicting drug-target affinities.",
+      "domains": [
+        "Drug Discovery",
+        "S2"
+      ],
+      "subtask_category": [
+        "dta_prediction",
+        "affinity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ngminhtri0394/GEFA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dta",
+        "early-fusion",
+        "affinity"
+      ],
+      "id": 107
+    },
+    {
+      "name": "EquiDock",
+      "one_line_profile": "Geometric deep learning for rigid 3D protein-protein docking",
+      "detailed_description": "A geometric deep learning model for fast and accurate rigid body protein-protein docking.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "protein_docking",
+        "interaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/octavian-ganea/equidock_public",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "geometric-deep-learning",
+        "protein-protein"
+      ],
+      "id": 108
+    },
+    {
+      "name": "Cloud-Bind",
+      "one_line_profile": "Cloud-based Drug Binding Structure Prediction",
+      "detailed_description": "A cloud-based tool/notebook for predicting drug binding structures, facilitating accessible computational chemistry.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/pablo-arantes/Cloud-Bind",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cloud-computing",
+        "binding-prediction",
+        "colab"
+      ],
+      "id": 109
+    },
+    {
+      "name": "DrugBAN",
+      "one_line_profile": "Bilinear attention network for drug-target prediction",
+      "detailed_description": "An interpretable bilinear attention network model with domain adaptation for improving drug-target interaction prediction.",
+      "domains": [
+        "Drug Discovery",
+        "S2"
+      ],
+      "subtask_category": [
+        "dti_prediction",
+        "attention_mechanism"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/peizhenbai/DrugBAN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "attention-network",
+        "dti",
+        "domain-adaptation"
+      ],
+      "id": 110
+    },
+    {
+      "name": "Pocket2Mol",
+      "one_line_profile": "Efficient Molecular Sampling Based on 3D Protein Pockets",
+      "detailed_description": "A generative model for efficient sampling of molecules conditioned on 3D protein pocket structures.",
+      "domains": [
+        "S2",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "drug_design",
+        "molecular_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pengxingang/Pocket2Mol",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "generative-model",
+        "pocket-based",
+        "drug-design"
+      ],
+      "id": 111
+    },
+    {
+      "name": "e3moldiffusion",
+      "one_line_profile": "Diffusion-based structure-based drug design",
+      "detailed_description": "A research repository from Pfizer for diffusion-based models applied to structure-based drug design.",
+      "domains": [
+        "S2",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "drug_design",
+        "diffusion_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/pfizer-opensource/e3moldiffusion",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "diffusion",
+        "sbdd",
+        "pfizer"
+      ],
+      "id": 112
+    },
+    {
+      "name": "pocket_detection",
+      "one_line_profile": "Protein pocket detection tool",
+      "detailed_description": "A tool for detecting pockets in protein structures, developed by Preferred Networks research.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "pocket_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pfnet-research/pocket_detection",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pocket-detection",
+        "protein-structure",
+        "pfn"
+      ],
+      "id": 113
+    },
+    {
+      "name": "SimSite3D",
+      "one_line_profile": "3D binding site similarity search tool",
+      "detailed_description": "Software for searching databases of 3D structures to find binding sites with steric and chemical similarities to a query site.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_comparison",
+        "similarity_search"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/psa-lab/SimSite3D",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "binding-site",
+        "similarity-search",
+        "structural-biology"
+      ],
+      "id": 114
+    },
+    {
+      "name": "UniSite",
+      "one_line_profile": "End-to-End Ligand Binding Site Detection Framework",
+      "detailed_description": "A cross-structure dataset and learning framework for end-to-end detection of ligand binding sites.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/quanlin-wu/unisite",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "binding-site",
+        "deep-learning",
+        "end-to-end"
+      ],
+      "id": 115
+    },
+    {
+      "name": "P2Rank",
+      "one_line_profile": "Machine learning-based ligand binding site prediction",
+      "detailed_description": "A standalone command-line tool for predicting ligand binding sites from protein structures using machine learning.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/rdk/p2rank",
+      "help_website": [
+        "http://prankweb.cz/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "binding-site",
+        "machine-learning",
+        "structural-biology"
+      ],
+      "id": 116
+    },
+    {
+      "name": "3DProtDTA",
+      "one_line_profile": "Deep learning model for drug-target affinity prediction using residue-level protein graphs",
+      "detailed_description": "A deep learning framework that predicts drug-target affinity (DTA) by leveraging residue-level protein graph representations and 3D structural information, aiming to improve interaction prediction accuracy.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "affinity_prediction",
+        "interaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/receptor-ai/3d-prot-dta",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dta",
+        "graph-neural-networks",
+        "protein-structure"
+      ],
+      "id": 117
+    },
+    {
+      "name": "Drug-Drug-Interaction-Prediction",
+      "one_line_profile": "DDI prediction model using Knowledge Graph Embeddings and Conv-LSTM",
+      "detailed_description": "A computational model for predicting drug-drug interactions (DDIs) by combining knowledge graph embeddings with Convolutional-LSTM networks to capture both structural and sequential patterns in drug data.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "drug_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/rezacsedu/Drug-Drug-Interaction-Prediction",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ddi",
+        "knowledge-graph",
+        "deep-learning"
+      ],
+      "id": 118
+    },
+    {
+      "name": "CryptoSite",
+      "one_line_profile": "Library for prediction of cryptic binding sites in proteins",
+      "detailed_description": "A Python library designed to identify cryptic binding sites—pockets that are not apparent in unbound protein structures but form upon ligand binding—using structural analysis and machine learning.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "pocket_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/salilab/cryptosite",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "cryptic-sites",
+        "protein-binding",
+        "structural-biology"
+      ],
+      "id": 119
+    },
+    {
+      "name": "ConPLex",
+      "one_line_profile": "Contrastive learning model for drug-target interaction prediction",
+      "detailed_description": "A method adapting protein language models and contrastive learning to predict drug-target interactions with high accuracy, enabling zero-shot prediction capabilities for novel targets.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "dti"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/samsledje/ConPLex",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-language-models",
+        "contrastive-learning",
+        "drug-discovery"
+      ],
+      "id": 120
+    },
+    {
+      "name": "AF-cryptic-pocket",
+      "one_line_profile": "Workflow for cryptic pocket prediction using AlphaFold 2",
+      "detailed_description": "A computational workflow that leverages AlphaFold 2 to generate protein conformational ensembles, facilitating the detection of cryptic pockets that are relevant for drug discovery.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "pocket_detection",
+        "conformation_generation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/sbhakat/AF-cryptic-pocket",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "alphafold2",
+        "cryptic-pockets",
+        "molecular-dynamics"
+      ],
+      "id": 121
+    },
+    {
+      "name": "Pocket2Drug",
+      "one_line_profile": "Generative model to predict binding drugs for ligand-binding sites",
+      "detailed_description": "A generative deep learning framework that takes protein pocket structures as input and generates potential binding drug molecules, facilitating structure-based de novo drug design.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "drug_design",
+        "molecule_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shiwentao00/Pocket2Drug",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "generative-model",
+        "sbdd",
+        "drug-design"
+      ],
+      "id": 122
+    },
+    {
+      "name": "GGNN_Meets_PLM",
+      "one_line_profile": "Integration of protein language models into geometric deep learning",
+      "detailed_description": "A framework combining pre-trained protein language models with geometric graph neural networks to enhance the representation learning of proteins for downstream tasks like affinity prediction.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "representation_learning",
+        "interaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/smiles724/GGNN_Meets_PLM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "plm",
+        "geometric-deep-learning",
+        "protein-representation"
+      ],
+      "id": 123
+    },
+    {
+      "name": "DeepSurf",
+      "one_line_profile": "Surface-based deep learning for ligand binding site prediction",
+      "detailed_description": "A deep learning tool that utilizes protein surface representations to predict potential ligand binding sites, focusing on geometric and chemical features of the protein surface.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "surface_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stemylonas/DeepSurf",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "protein-surface",
+        "deep-learning",
+        "binding-site"
+      ],
+      "id": 124
+    },
+    {
+      "name": "CPA",
+      "one_line_profile": "Compositional Perturbation Autoencoder for single-cell drug response",
+      "detailed_description": "A deep generative framework to learn and predict the effects of perturbations (e.g., drugs) at the single-cell level, capable of estimating dose-response curves and handling unseen drug combinations.",
+      "domains": [
+        "S2",
+        "Omics"
+      ],
+      "subtask_category": [
+        "perturbation_prediction",
+        "drug_response"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/theislab/cpa",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "single-cell",
+        "generative-model",
+        "drug-response"
+      ],
+      "id": 125
+    },
+    {
+      "name": "PocketAnchor",
+      "one_line_profile": "Structure-based pocket representations for interaction prediction",
+      "detailed_description": "A deep learning model that learns anchor-based representations of protein pockets to improve the accuracy of protein-ligand interaction predictions.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "pocket_representation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tiantz17/PocketAnchor",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "protein-ligand",
+        "representation-learning",
+        "deep-learning"
+      ],
+      "id": 126
+    },
+    {
+      "name": "DeepPBS",
+      "one_line_profile": "Geometric deep learning for protein-DNA binding specificity",
+      "detailed_description": "A geometric deep learning framework designed to predict protein-DNA binding specificity and binding sites by analyzing the structural interface between proteins and DNA.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "protein_dna_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/timkartar/DeepPBS",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "protein-dna",
+        "geometric-deep-learning",
+        "binding-specificity"
+      ],
+      "id": 127
+    },
+    {
+      "name": "GrASP",
+      "one_line_profile": "Graph Attention Site Prediction for druggable binding sites",
+      "detailed_description": "A Graph Neural Network model with attention mechanisms (GrASP) for identifying druggable binding sites on protein structures, focusing on capturing long-range dependencies in protein graphs.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "druggability_assessment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tiwarylab/GrASP",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "attention-mechanism",
+        "druggability"
+      ],
+      "id": 128
+    },
+    {
+      "name": "TGSA",
+      "one_line_profile": "Twin Graph Neural Networks for drug response prediction",
+      "detailed_description": "A deep learning model utilizing protein-protein association-based twin graph neural networks with similarity augmentation to predict drug responses in cancer cell lines.",
+      "domains": [
+        "S2",
+        "Omics"
+      ],
+      "subtask_category": [
+        "drug_response_prediction",
+        "interaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/violet-sto/TGSA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "drug-response",
+        "gnn",
+        "cancer-biology"
+      ],
+      "id": 129
+    },
+    {
+      "name": "DeepDrug",
+      "one_line_profile": "Graph-based deep learning framework for drug relation prediction",
+      "detailed_description": "A general framework using graph convolutional networks to predict various drug relations, including drug-drug interactions and drug-target interactions, by modeling molecular structures.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "relation_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wanwenzeng/deepdrug",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "drug-relation",
+        "gcn",
+        "bioinformatics"
+      ],
+      "id": 130
+    },
+    {
+      "name": "iDeep",
+      "one_line_profile": "Integrated prediction of RNA-protein binding sites using deep learning",
+      "detailed_description": "A deep learning framework integrating multiple data sources (sequence, structure) to predict RNA-protein binding sites, utilizing Convolutional Neural Networks (CNNs) and Deep Belief Networks (DBNs).",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "rna_protein_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/xypan1232/iDeep",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rna-binding",
+        "deep-learning",
+        "multimodal"
+      ],
+      "id": 131
+    },
+    {
+      "name": "KGNN",
+      "one_line_profile": "Knowledge Graph Neural Network for DDI prediction",
+      "detailed_description": "A model that leverages Knowledge Graph Neural Networks to predict drug-drug interactions by capturing high-order structural information and semantic relations in the knowledge graph.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "ddi"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xzenglab/KGNN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "knowledge-graph",
+        "gnn",
+        "drug-interaction"
+      ],
+      "id": 132
+    },
+    {
+      "name": "NucleusDiff",
+      "one_line_profile": "Nucleus-level denoising diffusion model for structure-based drug design",
+      "detailed_description": "A generative diffusion model that operates at the nucleus level (manifold-constrained) for generating 3D drug molecules within protein pockets, aiming for high structural validity and affinity.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "drug_design",
+        "molecule_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yanliang3612/NucleusDiff",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-model",
+        "sbdd",
+        "generative-ai"
+      ],
+      "id": 133
+    },
+    {
+      "name": "AttentionSiteDTI",
+      "one_line_profile": "Attention-based model for DTI prediction using binding sites",
+      "detailed_description": "A deep learning model that predicts drug-target interactions by using graph representations of ligands and the 3D structure of protein binding sites, enhanced by an attention mechanism.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "binding_site_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yazdanimehdi/AttentionSiteDTI",
+      "help_website": [],
+      "license": "CC-BY-4.0",
+      "tags": [
+        "attention-mechanism",
+        "dti",
+        "binding-site"
+      ],
+      "id": 134
+    },
+    {
+      "name": "DeepDrugDomain",
+      "one_line_profile": "Toolkit for DTI prediction and binding affinity estimation",
+      "detailed_description": "A versatile Python toolkit designed for streamlining the preprocessing of drug-target data and training deep learning models for interaction prediction and binding affinity estimation.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "affinity_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yazdanimehdi/DeepDrugDomain",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "toolkit",
+        "dti",
+        "preprocessing"
+      ],
+      "id": 135
+    },
+    {
+      "name": "DeepCSeqSite",
+      "one_line_profile": "Protein-ligand binding sites prediction toolkit",
+      "detailed_description": "A deep learning-based toolkit for predicting protein-ligand binding sites from protein sequences, utilizing convolutional neural networks to capture sequence motifs.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "sequence_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yfCuiFaith/DeepCSeqSite",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "sequence-based",
+        "binding-site",
+        "cnn"
+      ],
+      "id": 136
+    },
+    {
+      "name": "SumGNN",
+      "one_line_profile": "Multi-typed drug interaction prediction via knowledge graph summarization",
+      "detailed_description": "A graph neural network model that efficiently predicts multi-typed drug interactions by summarizing knowledge graphs, handling the complexity of diverse interaction types.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "knowledge_graph"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yueyu1030/SumGNN",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gnn",
+        "knowledge-graph",
+        "drug-interaction"
+      ],
+      "id": 137
+    },
+    {
+      "name": "DrugGPS",
+      "one_line_profile": "Learning subpocket prototypes for generalizable structure-based drug design",
+      "detailed_description": "A method for structure-based drug design that learns subpocket prototypes to improve the generalizability of generated molecules to novel protein pockets.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "drug_design",
+        "pocket_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zaixizhang/DrugGPS_ICML23",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "sbdd",
+        "subpocket",
+        "generative-model"
+      ],
+      "id": 138
+    },
+    {
+      "name": "FAIR",
+      "one_line_profile": "Full atom protein pocket design via iterative refinement",
+      "detailed_description": "A deep learning framework for designing full-atom protein pockets through an iterative refinement process, enabling the creation of novel binding sites with specific geometric properties.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "protein_design",
+        "pocket_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zaixizhang/FAIR",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "protein-design",
+        "iterative-refinement",
+        "full-atom"
+      ],
+      "id": 139
+    },
+    {
+      "name": "PocketFlow",
+      "one_line_profile": "Generative model for protein pocket generation using prior-informed flow matching",
+      "detailed_description": "Implementation of the NeurIPS 2024 paper 'Generalized Protein Pocket Generation with Prior-Informed Flow Matching'. It utilizes flow matching techniques to generate valid and druggable protein pockets, aiding in structure-based drug design.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "pocket_generation",
+        "structure_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zaixizhang/PocketFlow",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "protein-pocket",
+        "generative-model",
+        "flow-matching",
+        "drug-design"
+      ],
+      "id": 140
+    },
+    {
+      "name": "PocketGen",
+      "one_line_profile": "Deep generative model for full-atom ligand-binding protein pocket generation",
+      "detailed_description": "A deep learning method for generating full-atom ligand-binding protein pockets. It combines geometric deep learning with generative modeling to create realistic binding sites for drug discovery applications.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "pocket_generation",
+        "structure_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zaixizhang/PocketGen",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-structure",
+        "ligand-binding",
+        "generative-ai",
+        "drug-discovery"
+      ],
+      "id": 141
+    },
+    {
+      "name": "HyperAttentionDTI",
+      "one_line_profile": "Attention-based deep learning model for drug-protein interaction prediction",
+      "detailed_description": "A sequence-based deep learning framework utilizing attention mechanisms to predict drug-protein interactions (DTI). It aims to improve prediction accuracy by focusing on critical parts of protein and drug sequences.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "drug_target_interaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhaoqichang/HpyerAttentionDTI",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dti-prediction",
+        "deep-learning",
+        "attention-mechanism",
+        "drug-discovery"
+      ],
+      "id": 142
+    },
+    {
+      "name": "GeoBind",
+      "one_line_profile": "Geometric deep learning for nucleic acid binding interface segmentation",
+      "detailed_description": "A geometric deep learning method for segmenting nucleic acid binding interfaces on protein surfaces. It predicts binding sites by analyzing the geometric and chemical features of the protein surface.",
+      "domains": [
+        "S2",
+        "S2-02"
+      ],
+      "subtask_category": [
+        "binding_site_prediction",
+        "interface_segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zpliulab/GeoBind",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-rna-interaction",
+        "geometric-deep-learning",
+        "binding-site",
+        "segmentation"
+      ],
+      "id": 143
+    },
+    {
+      "name": "SWnet",
+      "one_line_profile": "Drug response prediction from cancer genomic signatures and chemical structures",
+      "detailed_description": "A deep learning model designed to predict drug responses based on cancer genomic signatures and compound chemical structures. It integrates self-attention mechanisms to model the interactions between biological and chemical features.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "drug_response_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zuozhaorui/SWnet",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "drug-response",
+        "pharmacogenomics",
+        "deep-learning",
+        "cancer-research"
+      ],
+      "id": 144
+    }
+  ]
+}

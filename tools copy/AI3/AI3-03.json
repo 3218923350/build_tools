@@ -1,0 +1,2675 @@
+{
+  "generated_at": "2025-12-16T06:59:19.553632+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "AI3",
+      "leaf_cluster_name": "科研领域模型训练与微调生态",
+      "domain": "AI Toolchain",
+      "typical_objects": "domain corpora",
+      "task_chain": "数据→训练→微调→对齐→评测→发布",
+      "tool_form": "训练栈 + 数据管线 + serving"
+    },
+    "unit": {
+      "unit_id": "AI3-03",
+      "unit_name": "数据管线与清洗（科研语料）",
+      "target_scale": "200–450",
+      "coverage_tools": "dataset pipelines、dedup"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] Trafilatura",
+        "[GH] CCNet",
+        "[GH] Nougat",
+        "[GH] RedPajama-Data",
+        "[GH] NeMo-Curator",
+        "[GH] text-dedup",
+        "[GH] Dolma",
+        "[GH] Datatrove",
+        "[GH] Data-Juicer",
+        "[GH] llm data pipeline",
+        "[GH] text deduplication",
+        "[GH] minhash lsh",
+        "[GH] corpus cleaning",
+        "[GH] quality filtering",
+        "[GH] pii redaction",
+        "[GH] scientific dataset processing",
+        "[GH] arxiv parser",
+        "[GH] pdf to text",
+        "[GH] dataset curation",
+        "[GH] pretraining data preparation",
+        "[GH] jsonl processing",
+        "[GH] exact deduplication",
+        "[WEB] llm dataset processing pipeline github",
+        "[WEB] large scale text deduplication tools github",
+        "[WEB] scientific paper parsing for llm github",
+        "[WEB] data-juicer llm data processing github",
+        "[WEB] nemo curator github",
+        "[WEB] open source data curation for large language models github"
+      ],
+      "total_candidates": 1051,
+      "tool_candidates": 469,
+      "final_tools": 107
+    }
+  },
+  "tools": [
+    {
+      "name": "text-extract-api",
+      "one_line_profile": "API for extracting and cleaning text from various document formats including PDFs for dataset creation",
+      "detailed_description": "A robust tool for parsing and extracting text from documents (PDF, Word, PPTX), essential for building scientific corpora from literature. It includes features for PII removal and structured data conversion.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_extraction",
+        "cleaning",
+        "preprocessing"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CatchTheTornado/text-extract-api",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ocr",
+        "pdf-parsing",
+        "dataset-creation",
+        "pii-removal"
+      ],
+      "id": 1
+    },
+    {
+      "name": "text-dedup",
+      "one_line_profile": "All-in-one text de-duplication tool for NLP datasets",
+      "detailed_description": "A comprehensive library for deduplicating text datasets using methods like MinHash and SimHash, widely used in preparing training corpora for Large Language Models.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "deduplication",
+        "cleaning",
+        "preprocessing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ChenghaoMou/text-dedup",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "deduplication",
+        "minhash",
+        "simhash",
+        "nlp",
+        "dataset-cleaning"
+      ],
+      "id": 2
+    },
+    {
+      "name": "PMLB",
+      "one_line_profile": "Python interface for a curated repository of benchmark datasets for evaluating ML algorithms",
+      "detailed_description": "PMLB (Penn Machine Learning Benchmarks) provides a standardized interface to access a large collection of curated benchmark datasets, facilitating the evaluation and comparison of supervised machine learning algorithms in scientific research.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "data_loading",
+        "evaluation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EpistasisLab/pmlb",
+      "help_website": [
+        "https://epistasislab.github.io/pmlb/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "datasets",
+        "machine-learning",
+        "evaluation"
+      ],
+      "id": 3
+    },
+    {
+      "name": "paper-qa",
+      "one_line_profile": "High accuracy RAG for answering questions from scientific documents with citations",
+      "detailed_description": "A specialized Retrieval-Augmented Generation (RAG) tool designed for scientific workflows. It ingests scientific papers (PDFs/text) and provides answers to queries with precise citations, enabling efficient literature review and information extraction.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "information_retrieval",
+        "question_answering",
+        "literature_review"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Future-House/paper-qa",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "rag",
+        "scientific-literature",
+        "citations",
+        "llm"
+      ],
+      "id": 4
+    },
+    {
+      "name": "ccNetViz",
+      "one_line_profile": "Lightweight JavaScript library for visualization of large-scale biological network graphs",
+      "detailed_description": "A high-performance WebGL-based library developed by Helikar Lab for visualizing large-scale networks, specifically tailored for biological systems and complex network analysis.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "network_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/HelikarLab/ccNetViz",
+      "help_website": [
+        "http://helikarlab.github.io/ccNetViz/"
+      ],
+      "license": null,
+      "tags": [
+        "visualization",
+        "network-biology",
+        "webgl",
+        "graphs"
+      ],
+      "id": 5
+    },
+    {
+      "name": "OneCite",
+      "one_line_profile": "Toolkit to parse, complete, and format academic references",
+      "detailed_description": "An intelligent toolkit designed to automate the processing of academic references. It supports parsing, completion, and formatting, which is essential for cleaning and structuring bibliographic data in scientific corpora.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "metadata_processing",
+        "cleaning",
+        "reference_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HzaCode/OneCite",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "citations",
+        "bibliography",
+        "academic-references",
+        "parsing"
+      ],
+      "id": 6
+    },
+    {
+      "name": "Seave",
+      "one_line_profile": "Web platform for filtering and annotating genetic variants",
+      "detailed_description": "Seave is a web platform that enables genetic variants to be easily filtered and annotated with in silico pathogenicity prediction scores and annotations from popular disease databases. It stores genomic variation of all types and sizes, allowing filtering for specific inheritance patterns, quality values, allele frequencies, and gene lists.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "variant_filtering",
+        "genomic_annotation"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/KCCG/seave",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "genomics",
+        "variant-filtering",
+        "bioinformatics"
+      ],
+      "id": 7
+    },
+    {
+      "name": "SmCCNet",
+      "one_line_profile": "Canonical correlation analysis for regulatory network discovery",
+      "detailed_description": "A canonical correlation analysis based method for discovering (quantitative) trait-specific heterogeneous regulatory networks. It integrates multi-omics data to identify regulatory relationships.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "network_analysis",
+        "regulatory_network_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/KechrisLab/SmCCNet",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bioinformatics",
+        "regulatory-networks",
+        "multi-omics"
+      ],
+      "id": 8
+    },
+    {
+      "name": "NeMo Curator",
+      "one_line_profile": "Scalable data pre-processing and curation toolkit for LLMs",
+      "detailed_description": "A scalable data pre-processing and curation toolkit for Large Language Models (LLMs). It provides modules for data download, text extraction, cleaning, quality filtering, and deduplication, essential for training scientific domain models.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "dataset_curation",
+        "deduplication",
+        "data_cleaning"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NVIDIA-NeMo/Curator",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "data-curation",
+        "nlp"
+      ],
+      "id": 9
+    },
+    {
+      "name": "nougat-latex-ocr",
+      "one_line_profile": "Fine-tuning and evaluation codebase for Nougat scientific OCR models",
+      "detailed_description": "Codebase for fine-tuning and evaluating Nougat-based image-to-LaTeX generation models. Nougat is specialized for parsing scientific documents, converting PDFs to Markdown with LaTeX math support.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "ocr",
+        "scientific_document_parsing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NormXU/nougat-latex-ocr",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ocr",
+        "latex",
+        "scientific-papers"
+      ],
+      "id": 10
+    },
+    {
+      "name": "AfterQC",
+      "one_line_profile": "Automatic filtering, trimming, and quality control for FASTQ data",
+      "detailed_description": "Automatic Filtering, Trimming, Error Removing and Quality Control for fastq data. It is designed to process high-throughput sequencing data efficiently.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "read_trimming"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenGene/AfterQC",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bioinformatics",
+        "fastq",
+        "quality-control"
+      ],
+      "id": 11
+    },
+    {
+      "name": "fastp",
+      "one_line_profile": "Ultra-fast all-in-one FASTQ preprocessor",
+      "detailed_description": "An ultra-fast all-in-one FASTQ preprocessor that provides quality control, adapter trimming, filtering, splitting, and merging capabilities for sequencing data.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "adapter_trimming",
+        "preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenGene/fastp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bioinformatics",
+        "fastq",
+        "ngs"
+      ],
+      "id": 12
+    },
+    {
+      "name": "PteRedactyl",
+      "one_line_profile": "PII redaction tool for clinical free-text",
+      "detailed_description": "A python module for redaction of personally identifiable information (PII) in clinical free-text. It builds on Presidio and is designed for de-identifying medical records for research.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "pii_redaction",
+        "clinical_data_cleaning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SETT-Centre-Data-and-AI/PteRedactyl",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "clinical-nlp",
+        "de-identification",
+        "medical-data"
+      ],
+      "id": 13
+    },
+    {
+      "name": "CCNet-Pure-Pytorch",
+      "one_line_profile": "Pure PyTorch implementation of Criss-Cross Attention for semantic segmentation",
+      "detailed_description": "A faster and more precise implementation of Criss-Cross Attention (2D & 3D) for Semantic Segmentation in pure PyTorch, serving as a solver for computer vision tasks.",
+      "domains": [
+        "AI3"
+      ],
+      "subtask_category": [
+        "semantic_segmentation",
+        "model_implementation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Serge-weihao/CCNet-Pure-Pytorch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "semantic-segmentation",
+        "attention-mechanism",
+        "computer-vision"
+      ],
+      "id": 14
+    },
+    {
+      "name": "OmniStyle",
+      "one_line_profile": "Data filtering tool for high-quality style transfer datasets",
+      "detailed_description": "Official implementation for filtering high-quality style transfer data at scale, providing tools to curate and clean image datasets for model training.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_filtering",
+        "dataset_curation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/StyleX-Research/OmniStyle",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "style-transfer",
+        "data-filtering",
+        "computer-vision"
+      ],
+      "id": 15
+    },
+    {
+      "name": "awesome-semantic-segmentation-pytorch",
+      "one_line_profile": "Collection of semantic segmentation model implementations in PyTorch",
+      "detailed_description": "A comprehensive library providing implementations for various semantic segmentation models (FCN, PSPNet, Deeplabv3, etc.) on PyTorch, serving as a reference solver.",
+      "domains": [
+        "AI3"
+      ],
+      "subtask_category": [
+        "semantic_segmentation",
+        "model_implementation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Tramac/awesome-semantic-segmentation-pytorch",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pytorch",
+        "semantic-segmentation",
+        "deep-learning",
+        "computer-vision"
+      ],
+      "id": 16
+    },
+    {
+      "name": "MLM_Filter",
+      "one_line_profile": "Multimodal language model based data filtering tool",
+      "detailed_description": "Official implementation of 'Finetuned Multimodal Language Models are High-Quality Image-Text Data Filters', providing a solver for cleaning and filtering multimodal datasets.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_filtering",
+        "multimodal_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Victorwz/MLM_Filter",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-cleaning",
+        "multimodal",
+        "llm",
+        "image-text"
+      ],
+      "id": 17
+    },
+    {
+      "name": "dense_parser",
+      "one_line_profile": "Dependency parser using Head Selection",
+      "detailed_description": "Implementation of the DeNSe parser for Dependency Parsing as Head Selection, serving as a solver for NLP structure prediction tasks.",
+      "domains": [
+        "AI3"
+      ],
+      "subtask_category": [
+        "dependency_parsing",
+        "nlp"
+      ],
+      "application_level": "solver",
+      "primary_language": "Lua",
+      "repo_url": "https://github.com/XingxingZhang/dense_parser",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nlp",
+        "dependency-parsing",
+        "deep-learning"
+      ],
+      "id": 18
+    },
+    {
+      "name": "pydoxtools",
+      "one_line_profile": "Library for data extraction from unstructured documents",
+      "detailed_description": "A library to extract information from unstructured data using AI techniques, supporting customizable pipelines for data ingestion and cleaning in scientific workflows.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_extraction",
+        "data_cleaning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Xyntopia/pydoxtools",
+      "help_website": [
+        "https://pydoxtools.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "etl",
+        "unstructured-data",
+        "pdf-extraction",
+        "pipeline"
+      ],
+      "id": 19
+    },
+    {
+      "name": "CCNet",
+      "one_line_profile": "Palmprint recognition model implementation",
+      "detailed_description": "Implementation of Comprehensive Competition Mechanism in Palmprint Recognition (IEEE TIFS), serving as a solver for biometric identification tasks.",
+      "domains": [
+        "AI3"
+      ],
+      "subtask_category": [
+        "biometrics",
+        "image_recognition"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Zi-YuanYang/CCNet",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "palmprint-recognition",
+        "computer-vision",
+        "biometrics"
+      ],
+      "id": 20
+    },
+    {
+      "name": "trafilatura",
+      "one_line_profile": "Web scraping and text extraction tool",
+      "detailed_description": "A Python and command-line tool to gather text and metadata from the Web, facilitating the creation of domain corpora through crawling, scraping, and extraction.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "web_scraping",
+        "text_extraction",
+        "corpus_creation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/adbar/trafilatura",
+      "help_website": [
+        "https://trafilatura.readthedocs.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "scraping",
+        "text-extraction",
+        "crawler",
+        "nlp"
+      ],
+      "id": 21
+    },
+    {
+      "name": "deidentify",
+      "one_line_profile": "Tool for identifying and anonymizing personal information",
+      "detailed_description": "A simple yet powerful tool for identifying and anonymizing personal information (PII) in various formats, essential for data cleaning in scientific corpora.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "pii_removal",
+        "data_anonymization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/aliengiraffe/deidentify",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pii",
+        "anonymization",
+        "data-privacy",
+        "gdpr"
+      ],
+      "id": 22
+    },
+    {
+      "name": "dolma",
+      "one_line_profile": "Data curation tools for OLMo pre-training data",
+      "detailed_description": "A library and toolkit for generating, inspecting, and processing large-scale pre-training data (OLMo), including deduplication and filtering pipelines.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "dataset_curation",
+        "pretraining_data",
+        "deduplication"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/allenai/dolma",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "dataset-curation",
+        "nlp",
+        "pretraining"
+      ],
+      "id": 23
+    },
+    {
+      "name": "duplodocus",
+      "one_line_profile": "Exact and MinHash deduplication tool for text datasets",
+      "detailed_description": "Tooling for performing exact and MinHash-based deduplication on large-scale text datasets, a critical step in preparing scientific corpora for model training.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "deduplication",
+        "data_cleaning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/allenai/duplodocus",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "deduplication",
+        "minhash",
+        "nlp",
+        "rust"
+      ],
+      "id": 24
+    },
+    {
+      "name": "deepfabric",
+      "one_line_profile": "Platform for dataset curation and model training",
+      "detailed_description": "A tool to curate high-quality datasets, train, evaluate, and ship models, providing an end-to-end workflow for AI model development.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "dataset_curation",
+        "ml_workflow"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/always-further/deepfabric",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dataset-management",
+        "mlops",
+        "training-pipeline"
+      ],
+      "id": 25
+    },
+    {
+      "name": "consimilo",
+      "one_line_profile": "Clojure library for similarity querying on large datasets",
+      "detailed_description": "A library for querying large datasets based on similarity (LSH/Simhash), useful for deduplication and near-duplicate detection in data pipelines.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "similarity_search",
+        "deduplication"
+      ],
+      "application_level": "library",
+      "primary_language": "Clojure",
+      "repo_url": "https://github.com/andrewmcloud/consimilo",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "clojure",
+        "lsh",
+        "simhash",
+        "deduplication"
+      ],
+      "id": 26
+    },
+    {
+      "name": "semlib",
+      "one_line_profile": "Library for building LLM-powered data processing pipelines",
+      "detailed_description": "A library to build data processing and analysis pipelines that leverage Large Language Models, facilitating complex data transformation and cleaning tasks.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "pipeline_construction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/anishathalye/semlib",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "data-pipeline",
+        "semantic-processing"
+      ],
+      "id": 27
+    },
+    {
+      "name": "pii-lib",
+      "one_line_profile": "PII detection and redaction library for code datasets",
+      "detailed_description": "A library designed for the BigCode project to detect and redact Personally Identifiable Information (PII) specifically in code datasets, supporting privacy compliance in LLM training.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "pii_redaction",
+        "data_cleaning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bigcode-project/pii-lib",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pii",
+        "redaction",
+        "code-dataset",
+        "llm"
+      ],
+      "id": 28
+    },
+    {
+      "name": "BigScience Data Preparation",
+      "one_line_profile": "Data sourcing and cleaning pipeline for the ROOTS corpus",
+      "detailed_description": "A collection of scripts and notebooks used for sourcing, processing, and cleaning the BigScience ROOTS corpus, a large-scale multilingual dataset for training open science language models.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_cleaning",
+        "corpus_preparation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/bigscience-workshop/data-preparation",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "bigscience",
+        "roots-corpus",
+        "data-cleaning",
+        "nlp"
+      ],
+      "id": 29
+    },
+    {
+      "name": "pdfdiff",
+      "one_line_profile": "Tool to inspect text differences between PDF files",
+      "detailed_description": "A command-line tool that allows users to compare the text content of two PDF files, useful for verifying data extraction fidelity or tracking changes in scientific documents.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "pdf_processing",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cascremers/pdfdiff",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pdf",
+        "diff",
+        "text-extraction",
+        "cli"
+      ],
+      "id": 30
+    },
+    {
+      "name": "PDFeXpress",
+      "one_line_profile": "PDF manipulation and extraction tool",
+      "detailed_description": "A tool to handle various PDF operations such as merging, splitting, and extracting images and text, facilitating the preprocessing of PDF documents for corpus creation.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "pdf_processing",
+        "text_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chianjin/PDFeXpress",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "pdf",
+        "extraction",
+        "preprocessing"
+      ],
+      "id": 31
+    },
+    {
+      "name": "Cocoindex",
+      "one_line_profile": "Incremental data transformation framework for AI",
+      "detailed_description": "A high-performance framework for data transformation in AI pipelines, supporting incremental processing to efficiently handle large-scale datasets.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_transformation",
+        "pipeline_orchestration"
+      ],
+      "application_level": "framework",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/cocoindex-io/cocoindex",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-pipeline",
+        "incremental-processing",
+        "etl",
+        "rust"
+      ],
+      "id": 32
+    },
+    {
+      "name": "text_dedup",
+      "one_line_profile": "High-performance text deduplication toolkit",
+      "detailed_description": "A toolkit designed for efficient text deduplication, essential for cleaning large language model training corpora to remove redundant data.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "deduplication",
+        "data_cleaning"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/conanhujinming/text_dedup",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deduplication",
+        "nlp",
+        "corpus-cleaning"
+      ],
+      "id": 33
+    },
+    {
+      "name": "pdf2htmlEX",
+      "one_line_profile": "High-fidelity PDF to HTML converter",
+      "detailed_description": "A tool that converts PDF documents to HTML while preserving layout and typography, widely used in scientific literature parsing pipelines to extract structured data.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "pdf_processing",
+        "format_conversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/coolwanglu/pdf2htmlEX",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "pdf-to-html",
+        "parsing",
+        "document-processing"
+      ],
+      "id": 34
+    },
+    {
+      "name": "marimba",
+      "one_line_profile": "Framework for FAIR scientific image datasets",
+      "detailed_description": "A Python framework developed by CSIRO for structuring, processing, packaging, and distributing scientific image datasets in accordance with FAIR principles.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "dataset_management"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/csiro-fair/marimba",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "fair-data",
+        "scientific-imaging",
+        "csiro"
+      ],
+      "id": 35
+    },
+    {
+      "name": "Lilac",
+      "one_line_profile": "Data curation and exploration tool for LLMs",
+      "detailed_description": "A tool for curating, filtering, and exploring datasets for Large Language Models, offering features for PII detection, quality filtering, and data visualization.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_curation",
+        "pii_detection",
+        "quality_control"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/databricks/lilac",
+      "help_website": [
+        "https://lilacml.com"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-curation",
+        "llm",
+        "visualization",
+        "data-cleaning"
+      ],
+      "id": 36
+    },
+    {
+      "name": "undatum",
+      "one_line_profile": "CLI tool for data conversion and processing",
+      "detailed_description": "A command-line utility for converting between various data formats (CSV, NDJSON, BSON, XML) and performing basic data processing tasks, useful in data pipelines.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "data_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/datacoon/undatum",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "data-conversion",
+        "etl"
+      ],
+      "id": 37
+    },
+    {
+      "name": "Data-Juicer",
+      "one_line_profile": "Data processing sandbox for foundation models",
+      "detailed_description": "A one-stop data processing system for Large Language Models (LLMs), providing a rich set of operators for filtering, deduplication, and formatting of training data.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_cleaning",
+        "deduplication",
+        "filtering"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/datajuicer/data-juicer",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "data-processing",
+        "sandbox",
+        "etl"
+      ],
+      "id": 38
+    },
+    {
+      "name": "Haystack",
+      "one_line_profile": "AI orchestration framework for LLM pipelines",
+      "detailed_description": "An orchestration framework to build LLM applications, including components for data ingestion, preprocessing, cleaning, and vectorization, suitable for managing scientific corpora.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "pipeline_orchestration",
+        "data_ingestion",
+        "preprocessing"
+      ],
+      "application_level": "framework",
+      "primary_language": "MDX",
+      "repo_url": "https://github.com/deepset-ai/haystack",
+      "help_website": [
+        "https://haystack.deepset.ai"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "rag",
+        "llm",
+        "pipeline",
+        "nlp"
+      ],
+      "id": 39
+    },
+    {
+      "name": "dockstring",
+      "one_line_profile": "Package for molecular docking benchmarks",
+      "detailed_description": "A Python package that facilitates molecular docking tasks, providing curated datasets and realistic benchmarks for drug discovery research.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "drug_discovery"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dockstring/dockstring",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "molecular-docking",
+        "drug-discovery",
+        "benchmark",
+        "chemistry"
+      ],
+      "id": 40
+    },
+    {
+      "name": "docling-parse",
+      "one_line_profile": "PDF parsing and text extraction tool",
+      "detailed_description": "A package for extracting text and coordinates from programmatic PDFs, part of the Docling ecosystem for document processing and parsing.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "pdf_parsing",
+        "text_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/docling-project/docling-parse",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pdf",
+        "parsing",
+        "document-processing"
+      ],
+      "id": 41
+    },
+    {
+      "name": "LSHR",
+      "one_line_profile": "Locality Sensitive Hashing (LSH) library for R",
+      "detailed_description": "An R implementation of Locality Sensitive Hashing (LSH) for finding similar items in large datasets, commonly used for deduplication of scientific corpora or genomic sequences.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "deduplication",
+        "similarity_search"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/dselivanov/LSHR",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "lsh",
+        "deduplication",
+        "r-package",
+        "similarity-search"
+      ],
+      "id": 42
+    },
+    {
+      "name": "luftdatenpumpe",
+      "one_line_profile": "Tool for acquiring and processing air quality data",
+      "detailed_description": "A pipeline tool to acquire, filter, process, and visualize live and historical air quality data from sources like Sensor.Community and OpenAQ, supporting time-series storage and reverse geocoding.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "data_processing",
+        "environmental_science"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/earthobservations/luftdatenpumpe",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "air-quality",
+        "data-pipeline",
+        "earth-science",
+        "etl"
+      ],
+      "id": 43
+    },
+    {
+      "name": "datasketch",
+      "one_line_profile": "Probabilistic data structures for big data processing",
+      "detailed_description": "A Python library providing implementations of MinHash, LSH, LSH Forest, and HyperLogLog for processing and deduplicating massive datasets, widely used in scientific corpus cleaning.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "deduplication",
+        "similarity_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ekzhu/datasketch",
+      "help_website": [
+        "https://ekzhu.github.io/datasketch/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "minhash",
+        "lsh",
+        "deduplication",
+        "big-data"
+      ],
+      "id": 44
+    },
+    {
+      "name": "minhash-lsh",
+      "one_line_profile": "MinHash LSH implementation in Go",
+      "detailed_description": "A Go library implementing MinHash and Locality Sensitive Hashing (LSH) for efficient similarity search and deduplication in large-scale data processing pipelines.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "deduplication",
+        "similarity_search"
+      ],
+      "application_level": "library",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/ekzhu/minhash-lsh",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "minhash",
+        "lsh",
+        "go",
+        "deduplication"
+      ],
+      "id": 45
+    },
+    {
+      "name": "Evidently",
+      "one_line_profile": "ML and LLM observability and data quality framework",
+      "detailed_description": "An open-source framework to evaluate, test, and monitor ML models and data pipelines, providing metrics for data drift, data quality, and model performance, essential for maintaining scientific datasets and models.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "data_drift_detection",
+        "model_evaluation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/evidentlyai/evidently",
+      "help_website": [
+        "https://docs.evidentlyai.com/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-quality",
+        "mlops",
+        "observability",
+        "drift-detection"
+      ],
+      "id": 46
+    },
+    {
+      "name": "bitext-lexind",
+      "one_line_profile": "Unsupervised bitext mining and lexicon induction pipeline",
+      "detailed_description": "A research tool for inducing high-quality bilingual lexicons and mining bitexts from monolingual corpora using unsupervised methods, useful for constructing parallel scientific corpora.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "corpora_mining",
+        "alignment",
+        "nlp"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/facebookresearch/bitext-lexind",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nlp",
+        "bitext-mining",
+        "lexicon-induction",
+        "alignment"
+      ],
+      "id": 47
+    },
+    {
+      "name": "Nougat",
+      "one_line_profile": "Neural Optical Understanding for Academic Documents",
+      "detailed_description": "A visual transformer model and tool designed to convert scientific PDF documents into structured Markdown, specifically handling mathematical formulas and academic layouts.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_extraction",
+        "ocr",
+        "pdf_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/facebookresearch/nougat",
+      "help_website": [
+        "https://facebookresearch.github.io/nougat/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "ocr",
+        "pdf-to-markdown",
+        "scientific-papers",
+        "transformer"
+      ],
+      "id": 48
+    },
+    {
+      "name": "Moira",
+      "one_line_profile": "Quality filtering tool for metagenomic amplicon sequences",
+      "detailed_description": "A tool for accurate quality filtering of metagenomic amplicon sequences, reducing errors in microbiome data analysis.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "bioinformatics",
+        "filtering"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fpusan/moira",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "metagenomics",
+        "bioinformatics",
+        "quality-control",
+        "amplicon"
+      ],
+      "id": 49
+    },
+    {
+      "name": "OCRmyPDF",
+      "one_line_profile": "Tool to add OCR text layers to scanned PDFs",
+      "detailed_description": "A pipeline tool that adds an OCR text layer to scanned PDF files, enabling text search and extraction, widely used in digitizing scientific literature and archives.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_extraction",
+        "ocr",
+        "digitization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fritz-hh/OCRmyPDF",
+      "help_website": [
+        "https://ocrmypdf.readthedocs.io/"
+      ],
+      "license": null,
+      "tags": [
+        "ocr",
+        "pdf",
+        "text-extraction",
+        "archiving"
+      ],
+      "id": 50
+    },
+    {
+      "name": "pdfocr",
+      "one_line_profile": "Ruby script for PDF OCR using Cuneiform",
+      "detailed_description": "A wrapper tool to add text layers to PDF files using the Cuneiform OCR software, facilitating text extraction from scanned documents.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_extraction",
+        "ocr"
+      ],
+      "application_level": "solver",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/gkovacs/pdfocr",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ocr",
+        "pdf",
+        "ruby",
+        "text-extraction"
+      ],
+      "id": 51
+    },
+    {
+      "name": "Datatrove",
+      "one_line_profile": "Large-scale data processing library for LLM training",
+      "detailed_description": "A platform-agnostic library providing customizable pipeline processing blocks for filtering, deduplicating, and extracting data, specifically designed for preparing large-scale datasets for LLM training.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_pipeline",
+        "deduplication",
+        "filtering"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/huggingface/datatrove",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-processing",
+        "llm",
+        "pipeline",
+        "deduplication"
+      ],
+      "id": 52
+    },
+    {
+      "name": "hydrobr",
+      "one_line_profile": "R interface for Brazilian National Water Agency data",
+      "detailed_description": "An R package to download, filter, and perform quality checks on hydrological data from the Brazilian National Water Agency (ANA), facilitating hydrological research and analysis.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "quality_control",
+        "hydrology"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/hydroversebr/hydrobr",
+      "help_website": [
+        "https://hydroversebr.github.io/hydrobr/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "hydrology",
+        "r-package",
+        "data-access",
+        "earth-science"
+      ],
+      "id": 53
+    },
+    {
+      "name": "WordCab PII",
+      "one_line_profile": "PII/PHI/PCI redaction models based on GLiNER architecture for data cleaning",
+      "detailed_description": "A collection of state-of-the-art PII (Personally Identifiable Information) redaction models designed to clean sensitive data from corpora. It utilizes the GLiNER architecture to detect and redact entities, facilitating the preparation of safe scientific and medical datasets.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_cleaning",
+        "pii_redaction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/info-wordcab/wordcab-pii",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pii-redaction",
+        "data-cleaning",
+        "nlp",
+        "gliner"
+      ],
+      "id": 54
+    },
+    {
+      "name": "FiftyOne Image Deduplication Plugin",
+      "one_line_profile": "Plugin for FiftyOne to remove exact and approximate duplicates from image datasets",
+      "detailed_description": "A plugin for the FiftyOne computer vision toolset that provides functionality to detect and remove duplicate images from datasets. It supports both exact and approximate deduplication, essential for cleaning scientific image corpora.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "deduplication",
+        "data_cleaning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jacobmarks/image-deduplication-plugin",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deduplication",
+        "computer-vision",
+        "data-cleaning",
+        "fiftyone"
+      ],
+      "id": 55
+    },
+    {
+      "name": "LLM Corpus Quality",
+      "one_line_profile": "Tool for cleaning and quality assessment of large model pre-training corpora",
+      "detailed_description": "A toolkit designed for the pre-processing of large language model (LLM) corpora. It includes functions for rule-based cleaning, sensitive word filtering, advertisement filtering, deduplication, and quality assessment, specifically tailored for Chinese and general text data.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_cleaning",
+        "quality_control",
+        "deduplication"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/jiangnanboy/llm_corpus_quality",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "corpus-cleaning",
+        "data-quality",
+        "llm",
+        "preprocessing"
+      ],
+      "id": 56
+    },
+    {
+      "name": "Arxiv Parser",
+      "one_line_profile": "Tool to filter and parse publications from arXiv for corpus creation",
+      "detailed_description": "A basic tool utilizing the arXiv API to filter and retrieve the latest publications. It assists researchers in creating scientific corpora by automating the collection of papers based on specific criteria.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "literature_mining"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/katjaschwarz/arxiv_parser",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "arxiv",
+        "data-mining",
+        "literature-review"
+      ],
+      "id": 57
+    },
+    {
+      "name": "dpsprep",
+      "one_line_profile": "DJVU to PDF converter preserving OCR text and metadata for scientific documents",
+      "detailed_description": "A Python utility that converts DJVU files to PDF format while preserving the original OCR text layer and bookmark metadata (such as Table of Contents). This is particularly useful for digitizing and processing legacy scientific literature for downstream AI tasks.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_preparation",
+        "format_conversion",
+        "ocr_handling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kcroker/dpsprep",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "djvu",
+        "pdf",
+        "ocr",
+        "document-conversion"
+      ],
+      "id": 58
+    },
+    {
+      "name": "Magpie",
+      "one_line_profile": "Alignment data synthesis pipeline by prompting aligned LLMs",
+      "detailed_description": "A data synthesis pipeline designed to generate high-quality alignment data for Large Language Models (LLMs) from scratch. It works by prompting aligned LLMs with specific templates to create synthetic instruction-response pairs, facilitating the training and fine-tuning of models without requiring existing labeled data.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_generation",
+        "synthetic_data",
+        "alignment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/magpie-align/magpie",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "synthetic-data",
+        "llm-alignment",
+        "data-pipeline",
+        "instruction-tuning"
+      ],
+      "id": 59
+    },
+    {
+      "name": "MarieAI",
+      "one_line_profile": "Complex data extraction and orchestration framework for unstructured documents",
+      "detailed_description": "A framework designed for processing unstructured documents, integrating AI-powered pipelines (GenAI, LLM, VLLM) for tasks like document cleanup, OCR, classification, and NER. Useful for creating scientific corpora from raw documents.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "data_parsing",
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/marieai/marie-ai",
+      "license": "MIT",
+      "tags": [
+        "ocr",
+        "document-processing",
+        "pipeline",
+        "llm"
+      ],
+      "id": 60
+    },
+    {
+      "name": "go-trafilatura",
+      "one_line_profile": "Go port of the Trafilatura library for web text extraction",
+      "detailed_description": "A Go implementation of the Trafilatura library, designed to extract text and metadata from web pages. Essential for building large-scale domain corpora from web sources.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "data_extraction",
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/markusmobius/go-trafilatura",
+      "license": "Apache-2.0",
+      "tags": [
+        "web-scraping",
+        "text-extraction",
+        "corpus-creation"
+      ],
+      "id": 61
+    },
+    {
+      "name": "TICCL",
+      "one_line_profile": "Text-Induced Corpus Clean-up tool",
+      "detailed_description": "A tool for cleaning and correcting text corpora, specifically handling spelling variations and normalization. Useful for preparing high-quality NLP datasets.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "data_cleaning",
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/martinreynaert/TICCL",
+      "license": "GPL-3.0",
+      "tags": [
+        "corpus-cleaning",
+        "nlp",
+        "normalization"
+      ],
+      "id": 62
+    },
+    {
+      "name": "Juicer",
+      "one_line_profile": "Web API for extracting text and metadata from HTML pages",
+      "detailed_description": "A Scala-based tool for extracting main text, metadata, and named entities from HTML articles. Used for gathering data for scientific corpora.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "data_extraction",
+      "application_level": "service",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/matth/juicer",
+      "license": "MIT",
+      "tags": [
+        "text-extraction",
+        "html-parsing",
+        "corpus-creation"
+      ],
+      "id": 63
+    },
+    {
+      "name": "LSH",
+      "one_line_profile": "Locality Sensitive Hashing using MinHash for near-duplicate detection",
+      "detailed_description": "A Python/Cython implementation of MinHash LSH to detect near-duplicate text documents. Critical for deduplicating large scientific corpora.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "deduplication",
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mattilyra/LSH",
+      "license": "MIT",
+      "tags": [
+        "lsh",
+        "deduplication",
+        "minhash",
+        "text-mining"
+      ],
+      "id": 64
+    },
+    {
+      "name": "prok-quality",
+      "one_line_profile": "Workflow for assessing the quality of prokaryotic genomes",
+      "detailed_description": "A Nextflow pipeline for filtering, dereplication, and quality assessment of prokaryotic genomes. Specifically designed for bioinformatics data processing.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "quality_control",
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/metashot/prok-quality",
+      "license": "GPL-3.0",
+      "tags": [
+        "bioinformatics",
+        "genome-assembly",
+        "quality-control",
+        "nextflow"
+      ],
+      "id": 65
+    },
+    {
+      "name": "ARXGEN",
+      "one_line_profile": "Scripts to parse arXiv documents for NLP tasks",
+      "detailed_description": "A set of scripts from Microsoft to parse and process arXiv LaTeX source files, extracting figures, tables, and text for training NLP models.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "data_parsing",
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/ARXGEN",
+      "license": "MIT",
+      "tags": [
+        "arxiv",
+        "latex-parsing",
+        "nlp",
+        "corpus-creation"
+      ],
+      "id": 66
+    },
+    {
+      "name": "NGSQCToolkit",
+      "one_line_profile": "Toolkit for quality check and filtering of NGS data",
+      "detailed_description": "A toolkit for quality control and filtering of Next Generation Sequencing (NGS) data from Roche and Illumina platforms. Essential for bioinformatics data preprocessing.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "quality_control",
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/mjain-lab/NGSQCToolkit",
+      "help_website": [
+        "http://www.nipgr.res.in/ngsqctoolkit.html"
+      ],
+      "license": null,
+      "tags": [
+        "ngs",
+        "bioinformatics",
+        "quality-control",
+        "filtering"
+      ],
+      "id": 67
+    },
+    {
+      "name": "pdf2json",
+      "one_line_profile": "Converts binary PDF to JSON and text",
+      "detailed_description": "A tool to convert PDF documents into JSON format, enabling server-side processing and text extraction. Widely used in pipelines to parse scientific literature.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "data_parsing",
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/modesty/pdf2json",
+      "license": "NOASSERTION",
+      "tags": [
+        "pdf-parsing",
+        "text-extraction",
+        "json"
+      ],
+      "id": 68
+    },
+    {
+      "name": "comparable-text-miner",
+      "one_line_profile": "Miner for comparable Arabic-English documents and corpus processing",
+      "detailed_description": "A tool for mining comparable documents, performing morphological analysis, POS tagging, and corpus cleaning/alignment. Useful for creating multilingual scientific corpora.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "data_alignment",
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/motazsaad/comparable-text-miner",
+      "license": "Apache-2.0",
+      "tags": [
+        "text-mining",
+        "nlp",
+        "corpus-alignment",
+        "arabic"
+      ],
+      "id": 69
+    },
+    {
+      "name": "OCRmyPDF",
+      "one_line_profile": "Adds an OCR text layer to scanned PDF files",
+      "detailed_description": "A robust tool that adds an OCR text layer to scanned PDF files, making them searchable and copy-pasteable. Essential for digitizing and processing older scientific literature.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "ocr",
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ocrmypdf/OCRmyPDF",
+      "license": "MPL-2.0",
+      "tags": [
+        "ocr",
+        "pdf-processing",
+        "digitization"
+      ],
+      "id": 70
+    },
+    {
+      "name": "MinerU",
+      "one_line_profile": "Transforms complex documents like PDFs into LLM-ready markdown/JSON",
+      "detailed_description": "A comprehensive tool for extracting content from complex documents (PDFs, etc.) and converting them into clean Markdown or JSON formats suitable for LLM training and RAG workflows.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "data_parsing",
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/opendatalab/MinerU",
+      "license": "AGPL-3.0",
+      "tags": [
+        "pdf-parsing",
+        "llm-data",
+        "markdown-conversion",
+        "rag"
+      ],
+      "id": 71
+    },
+    {
+      "name": "MinerU-HTML",
+      "one_line_profile": "SLM-powered HTML main content extractor",
+      "detailed_description": "A tool that uses Small Language Models (SLM) to extract main content from HTML pages, outputting clean HTML bodies. Designed for deep research agents and training data generation.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "data_extraction",
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/opendatalab/MinerU-HTML",
+      "license": "Apache-2.0",
+      "tags": [
+        "html-extraction",
+        "web-scraping",
+        "slm"
+      ],
+      "id": 72
+    },
+    {
+      "name": "open-semantic-etl",
+      "one_line_profile": "ETL tools for file crawling, text extraction, and content analysis",
+      "detailed_description": "A Python-based ETL toolkit for processing documents (text extraction, OCR) and performing content analysis (NER, Entity Extraction). Used to enrich data for search indices and knowledge graphs.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "data_processing",
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/opensemanticsearch/open-semantic-etl",
+      "license": "GPL-3.0",
+      "tags": [
+        "etl",
+        "ocr",
+        "ner",
+        "text-extraction"
+      ],
+      "id": 73
+    },
+    {
+      "name": "open-semantic-search",
+      "one_line_profile": "Semantic Search Engine and Text Mining platform",
+      "detailed_description": "An integrated research tool for searching and analyzing large document collections. Combines ETL, OCR, NER, and a search UI to facilitate semantic exploration of scientific or unstructured data.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "data_analysis",
+      "application_level": "platform",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/opensemanticsearch/open-semantic-search",
+      "license": "GPL-3.0",
+      "tags": [
+        "semantic-search",
+        "text-mining",
+        "knowledge-graph"
+      ],
+      "id": 74
+    },
+    {
+      "name": "modis_restservice_qc_filter_Python",
+      "one_line_profile": "Access and quality filter MODIS data",
+      "detailed_description": "A tool from ORNL DAAC to access MODIS web services and perform quality filtering on the retrieved earth science data.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": "quality_control",
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ornldaac/modis_restservice_qc_filter_Python",
+      "license": "NOASSERTION",
+      "tags": [
+        "earth-science",
+        "modis",
+        "quality-control",
+        "data-access"
+      ],
+      "id": 75
+    },
+    {
+      "name": "pdf2htmlEX",
+      "one_line_profile": "High-fidelity PDF to HTML converter for document parsing pipelines",
+      "detailed_description": "A tool that converts PDF documents into HTML format while preserving text, layout, and styling. It is widely used in scientific data pipelines to parse and extract structured information from research papers and technical documents.",
+      "domains": [
+        "AI3-03",
+        "AI3"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "data_ingestion"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/pdf2htmlEX/pdf2htmlEX",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "pdf-conversion",
+        "document-parsing",
+        "html"
+      ],
+      "id": 76
+    },
+    {
+      "name": "Phileas",
+      "one_line_profile": "Engine for PII and PHI redaction and de-identification",
+      "detailed_description": "A configuration-based engine for identifying and redacting sensitive information (PII/PHI) from text data. It supports various filter strategies and is essential for cleaning research corpora containing sensitive human data.",
+      "domains": [
+        "AI3-03",
+        "AI3"
+      ],
+      "subtask_category": [
+        "pii_redaction",
+        "data_cleaning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/philterd/phileas",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pii-redaction",
+        "de-identification",
+        "nlp"
+      ],
+      "id": 77
+    },
+    {
+      "name": "Philter",
+      "one_line_profile": "Command-line tool and library for text redaction",
+      "detailed_description": "A tool designed to redact Personally Identifiable Information (PII) and Protected Health Information (PHI) from text. It serves as a component in data cleaning pipelines for preparing privacy-compliant datasets.",
+      "domains": [
+        "AI3-03",
+        "AI3"
+      ],
+      "subtask_category": [
+        "pii_redaction",
+        "data_cleaning"
+      ],
+      "application_level": "solver",
+      "primary_language": "CSS",
+      "repo_url": "https://github.com/philterd/philter",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "redaction",
+        "privacy",
+        "data-cleaning"
+      ],
+      "id": 78
+    },
+    {
+      "name": "pvanalytics",
+      "one_line_profile": "Quality control and feature labeling for photovoltaic data",
+      "detailed_description": "A library providing functions for quality control, filtering, and feature labeling of data from photovoltaic energy systems. It supports scientific analysis of energy production data through rigorous data cleaning and validation methods.",
+      "domains": [
+        "AI3-03",
+        "AI3"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "filtering",
+        "feature_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pvlib/pvanalytics",
+      "help_website": [
+        "https://pvanalytics.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "photovoltaic",
+        "quality-control",
+        "energy-data"
+      ],
+      "id": 79
+    },
+    {
+      "name": "FastSketchLSH",
+      "one_line_profile": "High-performance LSH-based deduplication for large text corpora",
+      "detailed_description": "A C++ implementation of FastSketch and MinHash-based Jaccard estimators using Locality Sensitive Hashing (LSH). It is designed to efficiently deduplicate extremely large text corpora, a critical step in training large language models.",
+      "domains": [
+        "AI3-03",
+        "AI3"
+      ],
+      "subtask_category": [
+        "deduplication",
+        "hashing"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pzcddm/FastSketchLSH",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deduplication",
+        "lsh",
+        "minhash",
+        "nlp"
+      ],
+      "id": 80
+    },
+    {
+      "name": "Filtlong",
+      "one_line_profile": "Quality filtering tool for long-read sequencing data",
+      "detailed_description": "A tool for filtering long sequencing reads (e.g., Nanopore, PacBio) based on quality and length. It is essential for quality control in genomics data pipelines to ensure high-quality input for downstream assembly or analysis.",
+      "domains": [
+        "AI3-03",
+        "AI3"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "filtering"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rrwick/Filtlong",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bioinformatics",
+        "long-reads",
+        "quality-control"
+      ],
+      "id": 81
+    },
+    {
+      "name": "docconv",
+      "one_line_profile": "Library for converting documents to plain text",
+      "detailed_description": "A Go library that converts various document formats (PDF, DOCX, HTML, etc.) into plain text. It is widely used in data ingestion pipelines to extract raw text from heterogeneous document sources for NLP tasks.",
+      "domains": [
+        "AI3-03",
+        "AI3"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "text_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/sajari/docconv",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "document-conversion",
+        "pdf-parsing",
+        "text-extraction"
+      ],
+      "id": 82
+    },
+    {
+      "name": "openredaction",
+      "one_line_profile": "Local PII detection and redaction library",
+      "detailed_description": "A TypeScript library for detecting and redacting Personally Identifiable Information (PII) locally. It provides high-performance, privacy-preserving data cleaning capabilities for text processing pipelines.",
+      "domains": [
+        "AI3-03",
+        "AI3"
+      ],
+      "subtask_category": [
+        "pii_redaction",
+        "data_cleaning"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/sam247/openredaction",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pii",
+        "redaction",
+        "privacy"
+      ],
+      "id": 83
+    },
+    {
+      "name": "doc_redaction",
+      "one_line_profile": "GUI tool for document redaction",
+      "detailed_description": "A Python-based tool with a graphical interface for redacting sensitive information from PDF, Word, and Excel files. It facilitates the manual or semi-automated cleaning of document datasets.",
+      "domains": [
+        "AI3-03",
+        "AI3"
+      ],
+      "subtask_category": [
+        "pii_redaction",
+        "data_cleaning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/seanpedrick-case/doc_redaction",
+      "help_website": [
+        "https://huggingface.co/spaces/seanpedrickcase/document_redaction"
+      ],
+      "license": null,
+      "tags": [
+        "redaction",
+        "document-processing",
+        "gui"
+      ],
+      "id": 84
+    },
+    {
+      "name": "gaoya",
+      "one_line_profile": "Locality Sensitive Hashing (LSH) library in Rust",
+      "detailed_description": "A Rust implementation of Locality Sensitive Hashing (LSH) algorithms, including MinHash and SimHash. It is a core building block for developing high-performance deduplication and similarity search tools for large-scale datasets.",
+      "domains": [
+        "AI3-03",
+        "AI3"
+      ],
+      "subtask_category": [
+        "deduplication",
+        "hashing"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/serega/gaoya",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "lsh",
+        "minhash",
+        "deduplication",
+        "rust"
+      ],
+      "id": 85
+    },
+    {
+      "name": "Text-file-to-handwritten-pdf-file",
+      "one_line_profile": "Synthetic handwritten data generator",
+      "detailed_description": "A tool that converts digital text files into simulated handwritten PDF documents. It is useful for generating synthetic training data for Optical Character Recognition (OCR) and handwriting analysis models.",
+      "domains": [
+        "AI3-03",
+        "AI3"
+      ],
+      "subtask_category": [
+        "data_synthesis",
+        "data_augmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sharanya02/Text-file-to-handwritten-pdf-file",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "synthetic-data",
+        "ocr",
+        "handwriting-generation"
+      ],
+      "id": 86
+    },
+    {
+      "name": "dupandas",
+      "one_line_profile": "Flexible deduplication for pandas DataFrames",
+      "detailed_description": "A Python package designed for performing deduplication on pandas DataFrames using flexible text matching and cleaning strategies. It simplifies the data cleaning process for tabular datasets.",
+      "domains": [
+        "AI3-03",
+        "AI3"
+      ],
+      "subtask_category": [
+        "deduplication",
+        "data_cleaning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shivam5992/dupandas",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pandas",
+        "deduplication",
+        "data-cleaning"
+      ],
+      "id": 87
+    },
+    {
+      "name": "markdrop",
+      "one_line_profile": "PDF to Markdown converter with LLM-based enrichment",
+      "detailed_description": "A pipeline tool for converting PDF documents to Markdown format while extracting images and tables. It integrates with LLMs to generate descriptive text for extracted visual elements, enhancing the quality of data for RAG or training corpora.",
+      "domains": [
+        "AI3-03",
+        "AI3"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "data_enrichment"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shoryasethia/markdrop",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "pdf-to-markdown",
+        "llm",
+        "data-extraction"
+      ],
+      "id": 88
+    },
+    {
+      "name": "PREQUAL",
+      "one_line_profile": "Pre-alignment quality filter for comparative sequence analysis",
+      "detailed_description": "A tool for filtering non-homologous residues from unaligned sequences. It is used in bioinformatics pipelines to improve the quality of multiple sequence alignments by removing noise prior to alignment.",
+      "domains": [
+        "AI3-03",
+        "AI3"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "filtering"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/simonwhelan/prequal",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bioinformatics",
+        "sequence-analysis",
+        "quality-control"
+      ],
+      "id": 89
+    },
+    {
+      "name": "UltimateKalman",
+      "one_line_profile": "High-quality polymorphic implementations of Kalman filters and smoothers",
+      "detailed_description": "A library providing implementations of Square-Root Kalman filters and smoothers in MATLAB, C, and Java. It is designed for scientific estimation and signal processing tasks, offering consistent APIs across languages.",
+      "domains": [
+        "AI3"
+      ],
+      "subtask_category": [
+        "estimation",
+        "signal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/sivantoledo/ultimate-kalman",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "kalman-filter",
+        "estimation",
+        "signal-processing"
+      ],
+      "id": 90
+    },
+    {
+      "name": "slncky",
+      "one_line_profile": "lncRNA discovery and filtering tool from RNA-Seq data",
+      "detailed_description": "A bioinformatics tool for filtering high-quality noncoding transcripts, discovering lncRNA orthologs, and characterizing conserved lncRNA evolution from RNA-Seq data.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "bioinformatics_analysis",
+        "filtering"
+      ],
+      "application_level": "solver",
+      "primary_language": "CSS",
+      "repo_url": "https://github.com/slncky/slncky",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "lncrna",
+        "rna-seq",
+        "bioinformatics"
+      ],
+      "id": 91
+    },
+    {
+      "name": "CCNet",
+      "one_line_profile": "Criss-Cross Attention Network for Semantic Segmentation",
+      "detailed_description": "Implementation of CCNet (Criss-Cross Attention for Semantic Segmentation), a deep learning model for computer vision tasks, published in TPAMI 2020 and ICCV 2019.",
+      "domains": [
+        "AI3"
+      ],
+      "subtask_category": [
+        "semantic_segmentation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/speedinghzl/CCNet",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "semantic-segmentation",
+        "attention-mechanism",
+        "computer-vision"
+      ],
+      "id": 92
+    },
+    {
+      "name": "Splunk Attack Data",
+      "one_line_profile": "Curated datasets of various security attacks for simulation and testing",
+      "detailed_description": "A repository containing curated datasets generated from various simulated attacks. It serves as a domain corpus for training and testing security analytics and machine learning models.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "dataset_generation",
+        "simulation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/splunk/attack_data",
+      "help_website": [
+        "https://attack.splunk.com"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "security-dataset",
+        "attack-simulation",
+        "corpus"
+      ],
+      "id": 93
+    },
+    {
+      "name": "minhashcuda",
+      "one_line_profile": "Weighted MinHash implementation on CUDA for multi-GPU",
+      "detailed_description": "A high-performance implementation of Weighted MinHash using CUDA, designed for fast deduplication and similarity estimation on large datasets using multiple GPUs.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "deduplication",
+        "similarity_search"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/src-d/minhashcuda",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "minhash",
+        "cuda",
+        "deduplication"
+      ],
+      "id": 94
+    },
+    {
+      "name": "STORM",
+      "one_line_profile": "LLM-powered knowledge curation and research system",
+      "detailed_description": "An LLM-powered system that automates the research process by researching a topic and generating full-length reports with citations, aiding in knowledge curation and scientific literature review.",
+      "domains": [
+        "AI3"
+      ],
+      "subtask_category": [
+        "knowledge_curation",
+        "literature_review"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stanford-oval/storm",
+      "help_website": [
+        "https://storm.genie.stanford.edu"
+      ],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "research-assistant",
+        "knowledge-curation"
+      ],
+      "id": 95
+    },
+    {
+      "name": "German Wikipedia Text Corpus",
+      "one_line_profile": "Cleaned and preprocessed German Wikipedia corpus for NLP",
+      "detailed_description": "A cleaned, preprocessed, and sentence-split German text corpus derived from Wikipedia, intended for training NLP embeddings like fastText or ELMo.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "corpus_preparation",
+        "nlp_training"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/t-systems-on-site-services-gmbh/german-wikipedia-text-corpus",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "corpus",
+        "nlp",
+        "german-wikipedia"
+      ],
+      "id": 96
+    },
+    {
+      "name": "slate",
+      "one_line_profile": "Python library for extracting text from PDFs",
+      "detailed_description": "A Python library that simplifies the process of extracting text from PDF documents, wrapping the PDFMiner library for easier use in data processing pipelines.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "text_extraction",
+        "data_cleaning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/timClicks/slate",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "pdf-extraction",
+        "text-mining",
+        "python"
+      ],
+      "id": 97
+    },
+    {
+      "name": "RedPajama-Data",
+      "one_line_profile": "Code for preparing large-scale datasets for LLM training",
+      "detailed_description": "A repository containing code and workflows for preparing, cleaning, and deduplicating large-scale datasets (RedPajama) used for training large language models.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "dataset_preparation",
+        "deduplication"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/togethercomputer/RedPajama-Data",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm-dataset",
+        "data-pipeline",
+        "redpajama"
+      ],
+      "id": 98
+    },
+    {
+      "name": "Towhee",
+      "one_line_profile": "Framework for neural data processing pipelines",
+      "detailed_description": "A framework dedicated to making neural data processing pipelines simple and fast, supporting tasks like embedding generation, ETL for unstructured data, and multimodal processing.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_pipeline",
+        "embedding_generation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/towhee-io/towhee",
+      "help_website": [
+        "https://towhee.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "etl",
+        "neural-pipeline",
+        "unstructured-data"
+      ],
+      "id": 99
+    },
+    {
+      "name": "Upgini",
+      "one_line_profile": "Data search and enrichment library for Machine Learning",
+      "detailed_description": "A library for automating data search and enrichment for machine learning pipelines. It helps find and add relevant features from external data sources to improve model accuracy.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "feature_enrichment",
+        "data_augmentation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/upgini/upgini",
+      "help_website": [
+        "https://upgini.com"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "feature-engineering",
+        "data-enrichment",
+        "automl"
+      ],
+      "id": 100
+    },
+    {
+      "name": "NIST OCR Pipeline",
+      "one_line_profile": "Distributed pipeline for converting PDF corpora to clean text",
+      "detailed_description": "A tool developed by NIST to convert a corpus of PDF documents into clean text files using a distributed architecture, facilitating the creation of scientific text corpora.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "ocr",
+        "text_extraction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/usnistgov/ocr-pipeline",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "ocr",
+        "pdf-processing",
+        "nist"
+      ],
+      "id": 101
+    },
+    {
+      "name": "Superpipe",
+      "one_line_profile": "Optimized LLM pipelines for structured data extraction",
+      "detailed_description": "A library for building optimized pipelines that use LLMs to extract structured data from unstructured sources, focusing on efficiency and accuracy in data processing workflows.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_extraction",
+        "pipeline_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/villagecomputing/superpipe",
+      "help_website": [
+        "https://superpipe.ai"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "llm-pipeline",
+        "structured-data",
+        "extraction"
+      ],
+      "id": 102
+    },
+    {
+      "name": "OmniStyle",
+      "one_line_profile": "Data filtering tool for high-quality style transfer datasets",
+      "detailed_description": "Official implementation of the CVPR 2025 paper 'OmniStyle: Filtering High Quality Style Transfer Data at Scale'. It provides tools to filter and curate datasets for style transfer tasks.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_filtering",
+        "dataset_curation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wangyePHD/OmniStyle",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "style-transfer",
+        "data-filtering",
+        "cvpr"
+      ],
+      "id": 103
+    },
+    {
+      "name": "hotpdf",
+      "one_line_profile": "Fast PDF parsing and text extraction library",
+      "detailed_description": "A fast PDF parsing library built on top of pdfminer.six, designed to extract text and find text coordinates within PDF documents, useful for data ingestion pipelines.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "text_extraction",
+        "pdf_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/weareprestatech/hotpdf",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pdf-parser",
+        "text-extraction",
+        "python"
+      ],
+      "id": 104
+    },
+    {
+      "name": "GROOT",
+      "one_line_profile": "Resistome profiler for metagenomic data",
+      "detailed_description": "A tool for graphing resistance out of metagenomes (GROOT). It is a resistome profiler that uses variation graphs to index and align reads to antimicrobial resistance genes.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "bioinformatics_analysis",
+        "alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/will-rowe/groot",
+      "help_website": [
+        "https://groot-documentation.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "metagenomics",
+        "bioinformatics",
+        "resistome"
+      ],
+      "id": 105
+    },
+    {
+      "name": "faster-nougat",
+      "one_line_profile": "Optimized local implementation of the Nougat model for scientific PDF parsing",
+      "detailed_description": "A highly efficient, local implementation of the Nougat (Neural Optical Understanding for Academic Documents) model. It is designed to convert scientific PDF documents into lightweight Markdown formats, accurately preserving mathematical formulas, tables, and citations, which is a critical step in building high-quality scientific corpora.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "data_extraction",
+        "document_parsing",
+        "ocr"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhuzilin/faster-nougat",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pdf-parsing",
+        "scientific-papers",
+        "nougat",
+        "ocr",
+        "markdown"
+      ],
+      "id": 106
+    },
+    {
+      "name": "lazy-astroph",
+      "one_line_profile": "Automated parser and notifier for arXiv Astrophysics papers",
+      "detailed_description": "A workflow automation tool for researchers in Astrophysics. It parses the daily arXiv astro-ph feed, filters papers based on user-defined keywords, and delivers relevant results via email or Slack, facilitating efficient literature tracking and data collection.",
+      "domains": [
+        "AI3",
+        "AI3-03"
+      ],
+      "subtask_category": [
+        "literature_mining",
+        "data_collection"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zingale/lazy-astroph",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "arxiv",
+        "astrophysics",
+        "literature-search",
+        "automation"
+      ],
+      "id": 107
+    }
+  ]
+}

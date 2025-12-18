@@ -1,0 +1,1885 @@
+{
+  "generated_at": "2025-12-16T05:38:10.457042+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "E2",
+      "leaf_cluster_name": "气候-数值模式与数据同化生态",
+      "domain": "Climate",
+      "typical_objects": "NetCDF/GRIB grids",
+      "task_chain": "模式→同化→评估→后处理→复现",
+      "tool_form": "模式组件 + 同化库 + 评测"
+    },
+    "unit": {
+      "unit_id": "E2-02",
+      "unit_name": "同化工具（EnKF/4DVar等）",
+      "target_scale": "150–350",
+      "coverage_tools": "DA libraries"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] SABER",
+        "[GH] EMPIRE",
+        "[GH] EnKF-C",
+        "[GH] DAPPER",
+        "[GH] OpenDA",
+        "[GH] WRF-DA",
+        "[GH] GSI",
+        "[GH] PDAF",
+        "[GH] JEDI",
+        "[GH] DART",
+        "[GH] data assimilation",
+        "[GH] EnKF",
+        "[GH] LETKF",
+        "[GH] 4DVar",
+        "[GH] 3DVar",
+        "[GH] ensemble kalman filter",
+        "[GH] variational assimilation",
+        "[GH] adjoint model",
+        "[GH] state estimation climate",
+        "[GH] observation operator",
+        "[GH] covariance localization",
+        "[GH] data assimilation framework",
+        "[GH] particle filter assimilation",
+        "[WEB] data assimilation library github",
+        "[WEB] ensemble kalman filter EnKF github",
+        "[WEB] 4DVar variational assimilation github",
+        "[WEB] JEDI data assimilation github",
+        "[WEB] DART data assimilation research testbed github",
+        "[WEB] PDAF parallel data assimilation framework github"
+      ],
+      "total_candidates": 1010,
+      "tool_candidates": 555,
+      "final_tools": 73
+    }
+  },
+  "tools": [
+    {
+      "name": "DataAssim.jl",
+      "one_line_profile": "Ensemble Kalman Filter data assimilation library for Julia",
+      "detailed_description": "A Julia library implementing various ensemble Kalman Filter (EnKF) methods for data assimilation, designed for high-performance scientific computing and integration with dynamic models.",
+      "domains": [
+        "Climate",
+        "Oceanography",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "state_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/Alexander-Barth/DataAssim.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "enkf",
+        "kalman-filter",
+        "data-assimilation",
+        "julia"
+      ],
+      "id": 1
+    },
+    {
+      "name": "Saber",
+      "one_line_profile": "Deep learning tool for information extraction in biomedical text",
+      "detailed_description": "Saber (Sequence Annotator for Biomedical Entities and Relations) is a deep-learning based tool for information extraction in the biomedical domain, facilitating the identification of entities and relations in scientific literature.",
+      "domains": [
+        "Biomedical",
+        "Bioinformatics",
+        "NLP"
+      ],
+      "subtask_category": [
+        "information_extraction",
+        "named_entity_recognition"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BaderLab/saber",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bionlp",
+        "deep-learning",
+        "information-extraction",
+        "biomedical"
+      ],
+      "id": 2
+    },
+    {
+      "name": "CARDAMOM",
+      "one_line_profile": "Carbon Data Model Framework for assimilating earth observations",
+      "detailed_description": "The CARDAMOM (CARbon DAta MOdel fraMework) framework is designed to retrieve terrestrial carbon cycle states and parameters by assimilating diverse Earth observation datasets into a process-based model.",
+      "domains": [
+        "Ecology",
+        "Climate",
+        "E2"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "parameter_estimation",
+        "carbon_cycle_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/CARDAMOM-framework/CARDAMOM_v2.3",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "carbon-cycle",
+        "data-assimilation",
+        "earth-observation",
+        "ecology"
+      ],
+      "id": 3
+    },
+    {
+      "name": "4dvarnet-core",
+      "one_line_profile": "Deep learning framework for 4DVar data assimilation",
+      "detailed_description": "Core implementation of the 4DVarNet architecture, which combines variational data assimilation (4DVar) principles with deep learning to solve inverse problems in geosciences, particularly for ocean dynamics reconstruction.",
+      "domains": [
+        "Oceanography",
+        "Climate",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "reconstruction",
+        "inverse_problem"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CIA-Oceanix/4dvarnet-core",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "4dvar",
+        "deep-learning",
+        "data-assimilation",
+        "oceanography"
+      ],
+      "id": 4
+    },
+    {
+      "name": "ClimaAtmos.jl",
+      "one_line_profile": "Atmosphere model leveraging data assimilation and machine learning",
+      "detailed_description": "ClimaAtmos.jl is a component of the CliMA ecosystem, providing an atmospheric model designed to integrate data assimilation and machine learning for calibrating subgrid-scale processes and improving climate predictions.",
+      "domains": [
+        "Climate",
+        "Meteorology",
+        "E2"
+      ],
+      "subtask_category": [
+        "atmospheric_modeling",
+        "simulation",
+        "calibration"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/CliMA/ClimaAtmos.jl",
+      "help_website": [
+        "https://clima.github.io/ClimaAtmos.jl/dev/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "climate-model",
+        "atmosphere",
+        "julia",
+        "clima"
+      ],
+      "id": 5
+    },
+    {
+      "name": "DassFlow-1D",
+      "one_line_profile": "Data assimilation software for 1D free surface flows",
+      "detailed_description": "DassFlow-1D is a software for variational data assimilation (4D-Var) in river hydraulics, solving 1D Shallow-Water equations (Saint-Venant equations) to model river network dynamics.",
+      "domains": [
+        "Hydrology",
+        "Fluid Dynamics",
+        "E2"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "hydraulic_modeling",
+        "flood_forecasting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/DassHydro/dassflow1d",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "hydraulics",
+        "shallow-water",
+        "data-assimilation",
+        "fortran"
+      ],
+      "id": 6
+    },
+    {
+      "name": "DassFlow-2D",
+      "one_line_profile": "Data assimilation software for 2D free surface flows",
+      "detailed_description": "DassFlow-2D implements variational data assimilation for 2D Shallow-Water equations, suitable for modeling river networks and floodplains with complex topography.",
+      "domains": [
+        "Hydrology",
+        "Fluid Dynamics",
+        "E2"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "hydraulic_modeling",
+        "flood_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "GLSL",
+      "repo_url": "https://github.com/DassHydro/dassflow2d",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "hydraulics",
+        "shallow-water",
+        "data-assimilation",
+        "flood-modeling"
+      ],
+      "id": 7
+    },
+    {
+      "name": "OpenDataCapture",
+      "one_line_profile": "Electronic data capture platform for clinical research instruments",
+      "detailed_description": "An electronic data capture platform designed for administering remote and in-person clinical instruments, facilitating data collection for neuroscience and medical research.",
+      "domains": [
+        "Medical",
+        "Neuroscience"
+      ],
+      "subtask_category": [
+        "data_collection",
+        "clinical_data_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/DouglasNeuroInformatics/OpenDataCapture",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "edc",
+        "clinical-data",
+        "neuroscience",
+        "data-capture"
+      ],
+      "id": 8
+    },
+    {
+      "name": "netcdf2littler",
+      "one_line_profile": "Converter from NetCDF to Little-R format for WRF data assimilation",
+      "detailed_description": "An application to convert NetCDF files to the Little-R format, which is the accepted input format for the WRF data assimilation system (WRFDA) preprocessor (obsproc).",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "data_assimilation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/ERA-URBAN/netcdf2littler",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "netcdf",
+        "wrf",
+        "wrfda",
+        "little-r",
+        "format-conversion"
+      ],
+      "id": 9
+    },
+    {
+      "name": "swell",
+      "one_line_profile": "Workflow system for coupled data assimilation applications",
+      "detailed_description": "A workflow system designed for coupled data assimilation applications, developed by GEOS-ESM (Goddard Earth Observing System - Earth System Model).",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "data_assimilation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GEOS-ESM/swell",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-assimilation",
+        "workflow",
+        "geos-esm",
+        "earth-system-modeling"
+      ],
+      "id": 10
+    },
+    {
+      "name": "PyFenicsAD.jl",
+      "one_line_profile": "Automatic differentiation of FEniCS and Firedrake models in Julia",
+      "detailed_description": "A library enabling automatic differentiation of FEniCS and Firedrake models within the Julia programming environment, facilitating scientific modeling and optimization.",
+      "domains": [
+        "Scientific Computing",
+        "Physics"
+      ],
+      "subtask_category": [
+        "automatic_differentiation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/IvanYashchuk/PyFenicsAD.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "fenics",
+        "firedrake",
+        "automatic-differentiation",
+        "fem"
+      ],
+      "id": 11
+    },
+    {
+      "name": "DASH",
+      "one_line_profile": "MATLAB package for paleoclimate data assimilation workflow",
+      "detailed_description": "A package designed for paleoclimate data assimilation workflows, facilitating the reconstruction of past climates using proxy data and model simulations.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "paleoclimate_reconstruction"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/JonKing93/DASH",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "paleoclimate",
+        "data-assimilation",
+        "matlab",
+        "climate-reconstruction"
+      ],
+      "id": 12
+    },
+    {
+      "name": "CONES",
+      "one_line_profile": "Coupler for OpenFOAM and Data Assimilation libraries",
+      "detailed_description": "A coupling tool that connects the CFD software OpenFOAM with external codes, specifically designed to perform sequential Data Assimilation techniques like the Ensemble Kalman Filter (EnKF) using the CWIPI coupler.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "coupling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/MiguelMValero/CONES",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "openfoam",
+        "data-assimilation",
+        "enkf",
+        "cfd"
+      ],
+      "id": 13
+    },
+    {
+      "name": "DART",
+      "one_line_profile": "Data Assimilation Research Testbed",
+      "detailed_description": "A community facility for ensemble data assimilation developed at NCAR. It provides a modular framework to couple various scientific models with observations for data assimilation research and operations.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "ensemble_forecasting"
+      ],
+      "application_level": "platform",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/NCAR/DART",
+      "help_website": [
+        "https://dart.ucar.edu/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-assimilation",
+        "ensemble-kalman-filter",
+        "earth-system-modeling"
+      ],
+      "id": 14
+    },
+    {
+      "name": "HRLDAS",
+      "one_line_profile": "High Resolution Land Data Assimilation System",
+      "detailed_description": "A land data assimilation system that drives land surface models (like Noah-MP) with observed forcing data to simulate land surface states and fluxes.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "land_surface_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/NCAR/hrldas",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "land-surface-model",
+        "data-assimilation",
+        "hydrology"
+      ],
+      "id": 15
+    },
+    {
+      "name": "HRLDAS-release",
+      "one_line_profile": "Release version of HRLDAS with Noah-MP",
+      "detailed_description": "The release repository for the High Resolution Land Data Assimilation System (HRLDAS), containing the Noah-MP Land Surface Model for simulating soil moisture, temperature, and energy fluxes.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "land_surface_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/NCAR/hrldas-release",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "noah-mp",
+        "land-model",
+        "assimilation"
+      ],
+      "id": 16
+    },
+    {
+      "name": "pyDARTdiags",
+      "one_line_profile": "Python diagnostics for DART",
+      "detailed_description": "A Python package for analyzing and visualizing observation space diagnostics generated by the Data Assimilation Research Testbed (DART).",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "diagnostics",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NCAR/pyDARTdiags",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dart",
+        "diagnostics",
+        "visualization"
+      ],
+      "id": 17
+    },
+    {
+      "name": "GDASApp",
+      "one_line_profile": "Global Data Assimilation System Application",
+      "detailed_description": "The application layer for NOAA's Global Data Assimilation System (GDAS), managing the execution and configuration of data assimilation workflows.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NOAA-EMC/GDASApp",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "noaa",
+        "gdas",
+        "assimilation"
+      ],
+      "id": 18
+    },
+    {
+      "name": "GSI",
+      "one_line_profile": "Gridpoint Statistical Interpolation",
+      "detailed_description": "A data assimilation system used by NOAA for operational weather forecasting. It performs 3D-Var, 4D-Var, and hybrid EnVar analysis to combine observations with model background fields.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/NOAA-EMC/GSI",
+      "help_website": [
+        "https://dtcenter.org/community-code/gridpoint-statistical-interpolation-gsi"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "3dvar",
+        "4dvar",
+        "nwp",
+        "noaa"
+      ],
+      "id": 19
+    },
+    {
+      "name": "global-workflow",
+      "one_line_profile": "NOAA Global Workflow",
+      "detailed_description": "The superstructure and workflow management system supporting NOAA's Global Forecast System (GFS), Global Ensemble Forecast System (GEFS), and Seasonal Forecast Systems (SFS).",
+      "domains": [
+        "E2"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "numerical_weather_prediction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/NOAA-EMC/global-workflow",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "gfs",
+        "workflow",
+        "nwp"
+      ],
+      "id": 20
+    },
+    {
+      "name": "NSRDB",
+      "one_line_profile": "National Solar Radiation Database pipeline",
+      "detailed_description": "The data processing pipeline for the National Solar Radiation Database. It includes modules for satellite data assimilation, cloud property prediction, radiative transport modeling, and data gap-filling.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "radiative_transfer",
+        "data_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NREL/nsrdb",
+      "help_website": [
+        "https://nsrdb.nrel.gov/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "solar-energy",
+        "radiative-transfer",
+        "satellite-data"
+      ],
+      "id": 21
+    },
+    {
+      "name": "4DEnVar",
+      "one_line_profile": "4DEnVar Data Assimilation implementation",
+      "detailed_description": "A Python implementation of the 4D Ensemble Variational (4DEnVar) data assimilation method, providing a codebase for testing and understanding this hybrid assimilation technique.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "algorithm_implementation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/NatalieDouglas/4DEnVar",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "4denvar",
+        "data-assimilation",
+        "python"
+      ],
+      "id": 22
+    },
+    {
+      "name": "AGILE",
+      "one_line_profile": "Open Global Glacier Data Assimilation Framework",
+      "detailed_description": "A framework for assimilating data into global glacier models to improve estimates of glacier mass balance and evolution.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "glacier_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/OGGM/AGILE",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "glacier",
+        "data-assimilation",
+        "oggm"
+      ],
+      "id": 23
+    },
+    {
+      "name": "OpenDA",
+      "one_line_profile": "Open Data Assimilation Toolbox",
+      "detailed_description": "An open-source toolbox for data assimilation and calibration. It provides a set of interfaces and algorithms to easily connect numerical models with observations for state estimation and parameter optimization.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "calibration"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/OpenDA-Association/OpenDA",
+      "help_website": [
+        "https://www.openda.org/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "data-assimilation",
+        "calibration",
+        "java"
+      ],
+      "id": 24
+    },
+    {
+      "name": "FNP",
+      "one_line_profile": "Fourier Neural Processes for Data Assimilation",
+      "detailed_description": "Implementation of Fourier Neural Processes (FNP) for arbitrary-resolution data assimilation, as presented at NeurIPS 2024. It applies deep learning techniques to the data assimilation problem.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "machine_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenEarthLab/FNP",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ai4s",
+        "neural-processes",
+        "data-assimilation"
+      ],
+      "id": 25
+    },
+    {
+      "name": "FengWu-4DVar",
+      "one_line_profile": "AI Weather Model with 4DVar Assimilation",
+      "detailed_description": "A system integrating the FengWu large weather model with 4D-Var data assimilation techniques to improve weather forecasting accuracy using AI methods.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "weather_forecasting",
+        "machine_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenEarthLab/FengWu-4DVar",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ai-weather",
+        "4dvar",
+        "fengwu"
+      ],
+      "id": 26
+    },
+    {
+      "name": "PDAF",
+      "one_line_profile": "Parallel Data Assimilation Framework",
+      "detailed_description": "A software framework for ensemble data assimilation. It provides fully implemented data assimilation algorithms (like EnKF, LETKF, LSEIK) and is designed for high-performance computing environments.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "ensemble_filtering"
+      ],
+      "application_level": "platform",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/PDAF/PDAF",
+      "help_website": [
+        "http://pdaf.awi.de/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "hpc",
+        "data-assimilation",
+        "enkf"
+      ],
+      "id": 27
+    },
+    {
+      "name": "fmr-enkf",
+      "one_line_profile": "Fast Multipole Method EnKF",
+      "detailed_description": "Implementation of Ensemble Kalman Filters (EnKFs) accelerated by the Fast Multipole Method (FMM) and Randomized Low-Rank Approximations (RandLRA) for efficient data assimilation.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "algorithm_optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/PierreBlanchard/fmr-enkf",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "enkf",
+        "fast-multipole-method",
+        "matlab"
+      ],
+      "id": 28
+    },
+    {
+      "name": "PET",
+      "one_line_profile": "Python Ensemble Toolbox",
+      "detailed_description": "A Python toolbox for data assimilation and parameter estimation, providing implementations of various ensemble-based algorithms.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Python-Ensemble-Toolbox/PET",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "data-assimilation",
+        "ensemble-methods",
+        "python"
+      ],
+      "id": 29
+    },
+    {
+      "name": "DataAssimBench",
+      "one_line_profile": "Benchmarking tools for applying AI/ML to data assimilation",
+      "detailed_description": "A benchmarking suite designed to evaluate and compare Artificial Intelligence and Machine Learning methods applied to Data Assimilation tasks, facilitating the development of data-driven DA algorithms.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "data_assimilation",
+        "machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/StevePny/DataAssimBench",
+      "help_website": [
+        "https://github.com/StevePny/DataAssimBench"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-assimilation",
+        "benchmark",
+        "ai",
+        "machine-learning"
+      ],
+      "id": 30
+    },
+    {
+      "name": "vortexwake",
+      "one_line_profile": "Free-Vortex Wake Modelling solver with Discrete Adjoint",
+      "detailed_description": "A Python-based solver for Free-Vortex Wake Modelling, featuring Discrete Adjoint capabilities for aerodynamic analysis and optimization, developed by TU Delft Data Driven Control.",
+      "domains": [
+        "E2"
+      ],
+      "subtask_category": [
+        "simulation",
+        "aerodynamics",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TUDelft-DataDrivenControl/vortexwake",
+      "help_website": [
+        "https://github.com/TUDelft-DataDrivenControl/vortexwake"
+      ],
+      "license": "MIT",
+      "tags": [
+        "aerodynamics",
+        "vortex-wake",
+        "adjoint",
+        "simulation"
+      ],
+      "id": 31
+    },
+    {
+      "name": "dust",
+      "one_line_profile": "Data Assimilation framework for Agent-Based Models",
+      "detailed_description": "A research tool for performing Data Assimilation on Agent-Based Models (ABMs), developed to support urban analytics and dynamic modeling research.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "agent_based_modeling",
+        "urban_analytics"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Urban-Analytics/dust",
+      "help_website": [
+        "https://github.com/Urban-Analytics/dust"
+      ],
+      "license": "MIT",
+      "tags": [
+        "agent-based-models",
+        "data-assimilation",
+        "urban-analytics"
+      ],
+      "id": 32
+    },
+    {
+      "name": "DIFFICE_jax",
+      "one_line_profile": "Differentiable neural-network solver for ice shelf data assimilation",
+      "detailed_description": "A JAX-based differentiable neural-network solver designed for data assimilation tasks specifically in the context of ice shelf dynamics and glaciology.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "solver",
+        "glaciology"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/YaoGroup/DIFFICE_jax",
+      "help_website": [
+        "https://github.com/YaoGroup/DIFFICE_jax"
+      ],
+      "license": "MIT",
+      "tags": [
+        "jax",
+        "differentiable-programming",
+        "ice-shelves",
+        "data-assimilation"
+      ],
+      "id": 33
+    },
+    {
+      "name": "torchda",
+      "one_line_profile": "Deep Learning library for Data Assimilation",
+      "detailed_description": "A Python library leveraging PyTorch to integrate Deep Learning techniques into Data Assimilation workflows, enabling hybrid modeling and state estimation.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "deep_learning",
+        "state_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/acse-jm122/torchda",
+      "help_website": [
+        "https://github.com/acse-jm122/torchda"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "pytorch",
+        "deep-learning",
+        "data-assimilation"
+      ],
+      "id": 34
+    },
+    {
+      "name": "ODIL",
+      "one_line_profile": "Framework for solving inverse and data assimilation problems using discrete loss optimization",
+      "detailed_description": "ODIL (Optimizing a Discrete Loss) is a Python framework designed to solve inverse problems and data assimilation tasks involving partial differential equations (PDEs). It employs a discretization-based approach to optimize loss functions, facilitating the integration of observational data with physical models.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "inverse_problem",
+        "pde_solver"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cselab/odil",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-assimilation",
+        "inverse-problems",
+        "pde",
+        "optimization"
+      ],
+      "id": 35
+    },
+    {
+      "name": "DASPy",
+      "one_line_profile": "Multivariate Land Data Assimilation System for CLM",
+      "detailed_description": "DASPy is a Python-based multivariate Land Data Assimilation System (LDAS) designed for the Community Land Model (CLM). It incorporates high-performance computing capabilities to facilitate the assimilation of various land surface observations into the CLM 4.5 model.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "land_modeling"
+      ],
+      "application_level": "system",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/daspy/daspy",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "data-assimilation",
+        "clm",
+        "land-model",
+        "hpc"
+      ],
+      "id": 36
+    },
+    {
+      "name": "PyPanda",
+      "one_line_profile": "Python implementation of PANDA for gene regulatory network reconstruction",
+      "detailed_description": "PyPanda is a Python implementation of the PANDA (Passing Attributes between Networks for Data Assimilation) algorithm. It is used in bioinformatics to reconstruct gene regulatory networks by integrating multiple sources of data through a message-passing approach.",
+      "domains": [
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "network_inference",
+        "gene_regulatory_network"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/davidvi/pypanda",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bioinformatics",
+        "gene-regulatory-networks",
+        "network-inference"
+      ],
+      "id": 37
+    },
+    {
+      "name": "optimizer",
+      "one_line_profile": "MATLAB toolbox for optimization and data assimilation algorithms",
+      "detailed_description": "A collection of algorithms implemented in MATLAB for scientific modeling and parameter estimation, including MCMC, Differential Evolution Markov Chain, and Ensemble Kalman Filter (EnKF).",
+      "domains": [
+        "E2-02",
+        "Mathematics"
+      ],
+      "subtask_category": [
+        "inference",
+        "parameter_estimation",
+        "data_assimilation"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/guoliu/optimizer",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "mcmc",
+        "enkf",
+        "optimization",
+        "matlab"
+      ],
+      "id": 38
+    },
+    {
+      "name": "scale-letkf",
+      "one_line_profile": "LETKF data assimilation package for SCALE-RM weather model",
+      "detailed_description": "The Local Ensemble Transform Kalman Filter (LETKF) data assimilation implementation specifically designed for the SCALE-RM (Scalable Computing for Advanced Library and Environment - Regional Model) weather model.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "weather_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/gylien/scale-letkf",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "letkf",
+        "data-assimilation",
+        "weather-model",
+        "scale-rm"
+      ],
+      "id": 39
+    },
+    {
+      "name": "eoldas",
+      "one_line_profile": "Earth Observation Land Data Assimilation System",
+      "detailed_description": "A framework for assimilating Earth Observation (EO) data into land surface models. It allows for the retrieval of biophysical parameters and state estimation using variational methods.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "parameter_retrieval",
+        "earth_observation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jgomezdans/eoldas",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "earth-observation",
+        "data-assimilation",
+        "land-surface-model"
+      ],
+      "id": 40
+    },
+    {
+      "name": "L96-EnKF",
+      "one_line_profile": "Ensemble Kalman Filter implementation for Lorenz 96 model",
+      "detailed_description": "A Python implementation of the Ensemble Kalman Filter (EnKF) applied to the Lorenz 96 atmospheric toy model, serving as a benchmark tool for data assimilation algorithm development.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jswhit/L96",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "enkf",
+        "lorenz-96",
+        "data-assimilation"
+      ],
+      "id": 41
+    },
+    {
+      "name": "pyWRFDART",
+      "one_line_profile": "Python interface for coupling WRF and DART systems",
+      "detailed_description": "A collection of Python scripts and utilities designed to facilitate the workflow and coupling between the Weather Research and Forecasting (WRF) model and the Data Assimilation Research Testbed (DART).",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "data_assimilation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lmadaus/pyWRFDART",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "wrf",
+        "dart",
+        "meteorology"
+      ],
+      "id": 42
+    },
+    {
+      "name": "ADAF",
+      "one_line_profile": "AI Data Assimilation Framework for Weather Forecasting",
+      "detailed_description": "An Artificial Intelligence Data Assimilation Framework developed by Microsoft Research, designed to integrate deep learning with traditional data assimilation methods for weather forecasting applications.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "weather_forecasting"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/ADAF",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ai4science",
+        "weather-forecasting",
+        "data-assimilation"
+      ],
+      "id": 43
+    },
+    {
+      "name": "Appa",
+      "one_line_profile": "Latent Diffusion Models for Global Data Assimilation",
+      "detailed_description": "Implementation of a data assimilation method using Latent Diffusion Models (LDMs) to model and correct weather dynamics, supporting global weather forecasting tasks.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "generative_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/montefiore-sail/appa",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "diffusion-models",
+        "weather-dynamics",
+        "data-assimilation"
+      ],
+      "id": 44
+    },
+    {
+      "name": "DAPPER",
+      "one_line_profile": "Data Assimilation with Python: a Package for Experimental Research",
+      "detailed_description": "A Python package designed for benchmarking and experimental research in data assimilation (DA), providing implementations of various DA methods (EnKF, Particle Filters, etc.) and dynamical models.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "benchmarking",
+        "state_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nansencenter/DAPPER",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-assimilation",
+        "enkf",
+        "particle-filter",
+        "climate-science"
+      ],
+      "id": 45
+    },
+    {
+      "name": "NEDAS",
+      "one_line_profile": "NERSC Ensemble Data Assimilation System",
+      "detailed_description": "An ensemble data assimilation system developed at NERSC, designed for assimilating data into numerical models, likely focusing on oceanographic or climatic applications.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "ensemble_forecasting"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nansencenter/NEDAS",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "data-assimilation",
+        "ensemble-methods",
+        "oceanography"
+      ],
+      "id": 46
+    },
+    {
+      "name": "openDAQ",
+      "one_line_profile": "Open source data acquisition SDK",
+      "detailed_description": "A data acquisition (DAQ) SDK that provides a standard way to connect to sensors and measuring devices, facilitating scientific data generation and collection.",
+      "domains": [
+        "Physics",
+        "Engineering"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "sensor_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/openDAQ/openDAQ",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-acquisition",
+        "daq",
+        "sensors",
+        "sdk"
+      ],
+      "id": 47
+    },
+    {
+      "name": "OpenDataVal",
+      "one_line_profile": "Unified Benchmark for Data Valuation in Machine Learning",
+      "detailed_description": "A Python library and benchmark for data valuation algorithms, used in machine learning research to assess the contribution of data points to model performance.",
+      "domains": [
+        "Computer Science",
+        "Machine Learning"
+      ],
+      "subtask_category": [
+        "data_valuation",
+        "model_evaluation",
+        "data_quality"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/opendataval/opendataval",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-valuation",
+        "machine-learning",
+        "benchmark"
+      ],
+      "id": 48
+    },
+    {
+      "name": "wrfxpy",
+      "one_line_profile": "WRF-SFIRE data acquisition, forecasting, and assimilation tools",
+      "detailed_description": "A Python package for managing WRF-SFIRE simulations, including data acquisition, forecasting, data assimilation, and visualization for wildfire and weather modeling.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "forecasting",
+        "visualization",
+        "simulation_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openwfm/wrfxpy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "wrf",
+        "fire-modeling",
+        "data-assimilation",
+        "weather-forecasting"
+      ],
+      "id": 49
+    },
+    {
+      "name": "GSI (Graph)",
+      "one_line_profile": "GPU-friendly Subgraph Isomorphism solver",
+      "detailed_description": "An implementation of a GPU-friendly algorithm for the Subgraph Isomorphism problem, a fundamental computational problem in graph theory with applications in bioinformatics and chemistry.",
+      "domains": [
+        "Computer Science",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "subgraph_isomorphism",
+        "graph_matching"
+      ],
+      "application_level": "solver",
+      "primary_language": "Cuda",
+      "repo_url": "https://github.com/pkumod/GSI",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "graph-algorithms",
+        "gpu",
+        "subgraph-isomorphism"
+      ],
+      "id": 50
+    },
+    {
+      "name": "KF-EBT",
+      "one_line_profile": "Kalman Filter Ensemble-Based Tracker",
+      "detailed_description": "A C++ implementation of an object tracker using Kalman Filter and Ensemble-based methods, applicable in computer vision and signal processing research.",
+      "domains": [
+        "Computer Vision",
+        "Signal Processing"
+      ],
+      "subtask_category": [
+        "object_tracking",
+        "state_estimation",
+        "kalman_filter"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/psenna/KF-EBT",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "kalman-filter",
+        "tracking",
+        "computer-vision"
+      ],
+      "id": 51
+    },
+    {
+      "name": "AnDA",
+      "one_line_profile": "Analog Data Assimilation Library",
+      "detailed_description": "A Python library for Analog Data Assimilation, providing methods to combine data with analog forecasting models.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "analog_forecasting"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ptandeo/AnDA",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "data-assimilation",
+        "analog-methods",
+        "climate-science"
+      ],
+      "id": 52
+    },
+    {
+      "name": "LaVEnDAR",
+      "one_line_profile": "Land Variational Ensemble Data Assimilation Framework",
+      "detailed_description": "A framework implementing Four-Dimensional Ensemble Variational (4D-EnVar) data assimilation specifically for land surface models.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "land_surface_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pyearthsci/lavendar",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-assimilation",
+        "land-surface",
+        "4d-envar"
+      ],
+      "id": 53
+    },
+    {
+      "name": "EnKF-C",
+      "one_line_profile": "C implementation of Ensemble Kalman Filter for data assimilation with large-scale geophysical models",
+      "detailed_description": "A lightweight, portable C framework for ensemble data assimilation (EnKF) designed to work with large-scale layered geophysical models (oceanography/atmospheric). It provides a flexible interface for coupling with various numerical models.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "state_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/sakov/enkf-c",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "enkf",
+        "data-assimilation",
+        "oceanography",
+        "geophysics"
+      ],
+      "id": 54
+    },
+    {
+      "name": "LETKF (Miyoshi)",
+      "one_line_profile": "Implementation of the Local Ensemble Transform Kalman Filter",
+      "detailed_description": "A Fortran implementation of the Local Ensemble Transform Kalman Filter (LETKF) for data assimilation, originally developed by Takemasa Miyoshi.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "state_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/takemasa-miyoshi/letkf",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "letkf",
+        "kalman-filter",
+        "data-assimilation"
+      ],
+      "id": 55
+    },
+    {
+      "name": "thiery-lab/data-assimilation",
+      "one_line_profile": "Python implementations of various data assimilation methods",
+      "detailed_description": "A collection of Python codes implementing standard data assimilation algorithms, likely for educational or research prototyping purposes within the Thiery Lab.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/thiery-lab/data-assimilation",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-assimilation",
+        "python"
+      ],
+      "id": 56
+    },
+    {
+      "name": "torch-assimilate",
+      "one_line_profile": "PyTorch and Dask based library for efficient data assimilation",
+      "detailed_description": "A Python package leveraging PyTorch for gradients and Dask for parallelism to perform efficient data assimilation of weather model data and observations, specifically targeting GPU acceleration.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "weather_forecasting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tobifinn/torch-assimilate",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "pytorch",
+        "dask",
+        "data-assimilation",
+        "gpu"
+      ],
+      "id": 57
+    },
+    {
+      "name": "Tandem",
+      "one_line_profile": "Tsunami Adjoint simulator for dispersive wave equations",
+      "detailed_description": "A scientific simulator for Tsunami Adjoint simulations focusing on Nonpoint sources and Dispersive wave equations on a self-gravitating Earth Model.",
+      "domains": [
+        "E2"
+      ],
+      "subtask_category": [
+        "simulation",
+        "geophysics_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/tomographyyy/tandem",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "tsunami",
+        "simulation",
+        "earth-model"
+      ],
+      "id": 58
+    },
+    {
+      "name": "UMD-LETKF",
+      "one_line_profile": "Universal Multi-Domain Local Ensemble Transform Kalman Filter",
+      "detailed_description": "A Fortran implementation of the Local Ensemble Transform Kalman Filter (LETKF) developed at the University of Maryland, designed for data assimilation across multiple domains.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "state_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/travissluka/UMD-LETKF",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "letkf",
+        "kalman-filter",
+        "fortran"
+      ],
+      "id": 59
+    },
+    {
+      "name": "Darts",
+      "one_line_profile": "Library for time series forecasting and anomaly detection",
+      "detailed_description": "A Python library for user-friendly forecasting and anomaly detection on time series, widely used in scientific data analysis contexts such as weather and physics.",
+      "domains": [
+        "E2"
+      ],
+      "subtask_category": [
+        "time_series_analysis",
+        "forecasting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/unit8co/darts",
+      "help_website": [
+        "https://unit8co.github.io/darts/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "time-series",
+        "forecasting",
+        "anomaly-detection"
+      ],
+      "id": 60
+    },
+    {
+      "name": "viluiz/gan",
+      "one_line_profile": "GANs for Reduced-Order Models and Data Assimilation",
+      "detailed_description": "A framework applying Generative Adversarial Networks (GAN) within a reduced-order model (ROM) context for time series prediction, data assimilation, and uncertainty quantification.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "uncertainty_quantification",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/viluiz/gan",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gan",
+        "rom",
+        "data-assimilation"
+      ],
+      "id": 61
+    },
+    {
+      "name": "wme7/DataAssimilation",
+      "one_line_profile": "Matlab scripts for ENKF and IENKF data assimilation",
+      "detailed_description": "A collection of Matlab scripts implementing Ensemble Kalman Filter (ENKF) and Iterative ENKF (IENKF) algorithms, serving as tools for developing data assimilation workflows.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "algorithm_development"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/wme7/DataAssimilation",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "matlab",
+        "enkf",
+        "ienkf"
+      ],
+      "id": 62
+    },
+    {
+      "name": "4DVarFormer",
+      "one_line_profile": "Variational-constrained neural network for weather forecasting initialization",
+      "detailed_description": "Official implementation of '4DVarFormer', a deep learning model for accurate initial field estimation in weather forecasting, combining variational constraints with neural networks.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "weather_forecasting",
+        "initialization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/wuxinwang1997/4DVarFormer",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "deep-learning",
+        "weather-forecasting",
+        "4dvar"
+      ],
+      "id": 63
+    },
+    {
+      "name": "ICE",
+      "one_line_profile": "Incremental Covariance Estimation for Robust Localization",
+      "detailed_description": "Software for Incremental Covariance Estimation, a technique relevant to Kalman filtering and state estimation in navigation and potentially adaptable to other data assimilation contexts.",
+      "domains": [
+        "E2-02"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "covariance_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/wvu-navLab/ICE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "covariance-estimation",
+        "localization",
+        "kalman-filter"
+      ],
+      "id": 64
+    },
+    {
+      "name": "DAFI",
+      "one_line_profile": "Ensemble based data assimilation and field inversion framework",
+      "detailed_description": "DAFI is a C++ framework for ensemble-based data assimilation and field inversion, designed for high-performance computing applications in physics and engineering.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "field_inversion"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/xiaoh/DAFI",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-assimilation",
+        "field-inversion",
+        "ensemble-methods"
+      ],
+      "id": 65
+    },
+    {
+      "name": "AI-VarDA",
+      "one_line_profile": "Modular AI-based variational data assimilation framework",
+      "detailed_description": "A modular framework supporting traditional and AI-based variational algorithms (like FengWu-4DVar, VAE-Var) for data assimilation, featuring pluggable interfaces for forecast models.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "ai_for_science"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xiaoyi018/AI-VarDA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ai4s",
+        "variational-da",
+        "weather-forecasting"
+      ],
+      "id": 66
+    },
+    {
+      "name": "FuXi-DA",
+      "one_line_profile": "Deep learning data assimilation framework for satellite observations",
+      "detailed_description": "A generalized deep learning data assimilation framework specifically designed for assimilating satellite observations into weather models (FuXi).",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "satellite_data_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xuxiaoze/FuXi-DA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deep-learning",
+        "satellite-assimilation",
+        "fuxi"
+      ],
+      "id": 67
+    },
+    {
+      "name": "pp-EnKF",
+      "one_line_profile": "Performance portable Ensemble Kalman Filter",
+      "detailed_description": "A high-performance computing implementation of the Ensemble Kalman Filter (EnKF) using C++ std::execution for performance portability across architectures.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "hpc"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/yasahi-hpc/pp-EnKF",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "enkf",
+        "hpc",
+        "c++"
+      ],
+      "id": 68
+    },
+    {
+      "name": "torchEnKF",
+      "one_line_profile": "Auto differentiable Ensemble Kalman Filters",
+      "detailed_description": "Implementation of Auto-differentiable Ensemble Kalman Filters, allowing for gradient-based optimization within the data assimilation process, based on PyTorch.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "differentiable_programming"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ymchen0/torchEnKF",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pytorch",
+        "enkf",
+        "differentiable-programming"
+      ],
+      "id": 69
+    },
+    {
+      "name": "pyPDAF",
+      "one_line_profile": "Python interface to the Parallel Data Assimilation Framework (PDAF)",
+      "detailed_description": "A Python wrapper/interface for PDAF (Parallel Data Assimilation Framework), enabling the use of high-performance DA algorithms from Python.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Cython",
+      "repo_url": "https://github.com/yumengch/pyPDAF",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "pdaf",
+        "python-wrapper",
+        "data-assimilation"
+      ],
+      "id": 70
+    },
+    {
+      "name": "APSIM-EnKF",
+      "one_line_profile": "EnKF data assimilation framework for APSIM model",
+      "detailed_description": "An Ensemble Kalman Filter (EnKF) framework specifically designed for assimilating data into the Agricultural Production Systems sIMulator (APSIM) model.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "agricultural_modeling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/yuxi-research/APSIM-EnKF",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "apsim",
+        "enkf",
+        "agriculture"
+      ],
+      "id": 71
+    },
+    {
+      "name": "Valiant",
+      "one_line_profile": "Ensemble Kalman filter and ensemble optimization library",
+      "detailed_description": "A C library and executable for Ensemble Kalman Filter (EnKF) and ensemble optimization, suitable for integrating with various numerical models.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/yye00/Valiant",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "enkf",
+        "optimization",
+        "c"
+      ],
+      "id": 72
+    },
+    {
+      "name": "TensorVar",
+      "one_line_profile": "Efficient four-dimensional variational data assimilation framework",
+      "detailed_description": "TensorVar is a research tool designed for efficient four-dimensional variational (4D-Var) data assimilation. It likely leverages tensor computation frameworks to accelerate the optimization process involved in assimilating observational data into numerical models, suitable for atmospheric and oceanic science applications.",
+      "domains": [
+        "E2",
+        "E2-02"
+      ],
+      "subtask_category": [
+        "data_assimilation",
+        "variational_analysis",
+        "state_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/yyimingucl/TensorVar",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-assimilation",
+        "4dvar",
+        "meteorology",
+        "optimization"
+      ],
+      "id": 73
+    }
+  ]
+}

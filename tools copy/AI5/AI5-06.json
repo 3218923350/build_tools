@@ -1,0 +1,3640 @@
+{
+  "generated_at": "2025-12-16T23:52:35.088975+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "AI5",
+      "leaf_cluster_name": "科研代理-工具调用与工作流编排生态",
+      "domain": "AI Toolchain",
+      "typical_objects": "tools/workflows",
+      "task_chain": "规划→调用→追踪→回放→评测→治理",
+      "tool_form": "agent框架 + tracing + registry"
+    },
+    "unit": {
+      "unit_id": "AI5-06",
+      "unit_name": "工具包装与沙箱执行（容器/策略）",
+      "target_scale": "150–350",
+      "coverage_tools": "sandbox runners、container exec"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] Deno",
+        "[GH] Kata Containers",
+        "[GH] NSJAIL",
+        "[GH] Modal",
+        "[GH] Pyodide",
+        "[GH] Firecracker",
+        "[GH] gVisor",
+        "[GH] CodeBox",
+        "[GH] Open Interpreter",
+        "[GH] E2B",
+        "[GH] agent sandbox",
+        "[GH] code interpreter",
+        "[GH] secure execution environment",
+        "[GH] llm tool runner",
+        "[GH] python sandbox",
+        "[GH] container executor",
+        "[GH] docker sandbox",
+        "[GH] wasm runtime",
+        "[GH] remote code execution",
+        "[GH] function calling wrapper",
+        "[GH] safe repl",
+        "[GH] virtual machine manager",
+        "[GH] microvm",
+        "[GH] tool orchestration",
+        "[GH] isolated runtime",
+        "[WEB] llm code interpreter sandbox github",
+        "[WEB] secure python execution for ai agents github",
+        "[WEB] docker container sandbox for tool execution github",
+        "[WEB] webassembly sandbox for llm github",
+        "[WEB] agent tool wrapper middleware github",
+        "[WEB] open source code execution environment for agents github"
+      ],
+      "total_candidates": 1365,
+      "tool_candidates": 992,
+      "final_tools": 139
+    }
+  },
+  "tools": [
+    {
+      "name": "xpk",
+      "one_line_profile": "Cluster orchestration tool for large-scale AI model training on TPUs/GPUs",
+      "detailed_description": "xpk (Accelerated Processing Kit) is a software tool designed to help developers and researchers orchestrate large-scale deep learning training jobs on Google Kubernetes Engine (GKE), specifically optimizing for TPU and GPU accelerators. It facilitates the management of high-performance computing resources required for training scientific foundation models.",
+      "domains": [
+        "AI5",
+        "AI5-06",
+        "Scientific Computing"
+      ],
+      "subtask_category": [
+        "model_training",
+        "workflow_orchestration",
+        "resource_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AI-Hypercomputer/xpk",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "hpc",
+        "kubernetes",
+        "tpu",
+        "gpu",
+        "orchestration"
+      ],
+      "id": 1
+    },
+    {
+      "name": "Covalent",
+      "one_line_profile": "Workflow orchestration tool for HPC, quantum, and ML experiments",
+      "detailed_description": "Covalent is a Pythonic workflow orchestration tool designed for research scientists and engineers to manage complex experiments across heterogeneous compute environments, including high-performance computing (HPC) clusters, quantum computers, and cloud resources.",
+      "domains": [
+        "AI5",
+        "AI5-06",
+        "Quantum Computing"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "experiment_management",
+        "distributed_computing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AgnostiqHQ/covalent",
+      "help_website": [
+        "https://covalent.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "workflow",
+        "hpc",
+        "quantum-computing",
+        "machine-learning"
+      ],
+      "id": 2
+    },
+    {
+      "name": "code-sandbox-mcp",
+      "one_line_profile": "Secure Docker-based code execution sandbox for AI agents",
+      "detailed_description": "An MCP (Model Context Protocol) server that provides a secure, isolated Docker environment for AI agents to execute code. This tool is essential for 'AI Scientist' agents to perform data analysis, simulation, and calculation tasks safely within a scientific workflow.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandbox",
+        "agent_tool"
+      ],
+      "application_level": "service",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/Automata-Labs-team/code-sandbox-mcp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "sandbox",
+        "docker",
+        "ai-agent",
+        "code-execution"
+      ],
+      "id": 3
+    },
+    {
+      "name": "beanbox-vm",
+      "one_line_profile": "MicroVM specifically designed for secure code execution by LLMs",
+      "detailed_description": "A lightweight virtualization solution tailored for Large Language Models to execute code safely. It provides an isolated environment (sandbox) to prevent unauthorized access or damage to the host system during agentic workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandboxing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/ErikKaum/beanbox-vm",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "sandbox",
+        "llm-agent",
+        "microvm",
+        "security"
+      ],
+      "id": 4
+    },
+    {
+      "name": "safe-code-execution",
+      "one_line_profile": "Secure code execution utilities for AI interfaces like Open WebUI",
+      "detailed_description": "A set of utilities designed to wrap and execute code generated by AI models within a secure, sandboxed environment. It is specifically integrated with platforms like Open WebUI and Ollama to enable safe agentic capabilities.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandboxing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EtiennePerot/safe-code-execution",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "sandbox",
+        "python",
+        "security",
+        "llm-tool"
+      ],
+      "id": 5
+    },
+    {
+      "name": "Otter",
+      "one_line_profile": "Multi-modal model based on OpenFlamingo for instruction following",
+      "detailed_description": "A multi-modal Large Language Model (MLLM) designed for improved instruction-following and in-context learning capabilities. While primarily a model, it serves as a foundational tool for visual understanding tasks in scientific research agents.",
+      "domains": [
+        "AI4",
+        "AI5"
+      ],
+      "subtask_category": [
+        "visual_understanding",
+        "multimodal_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EvolvingLMMs-Lab/Otter",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "multimodal",
+        "llm",
+        "visual-question-answering",
+        "deep-learning"
+      ],
+      "id": 6
+    },
+    {
+      "name": "openai-o1-code-interpreter",
+      "one_line_profile": "Code interpreter support utility for OpenAI o1 models",
+      "detailed_description": "A tool designed to provide code interpretation capabilities specifically for the OpenAI o1 model series, enabling the model to execute code snippets for calculation or data processing tasks within a workflow.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "interpreter"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FanaHOVA/openai-o1-code-interpreter",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "code-interpreter",
+        "openai",
+        "llm-tool"
+      ],
+      "id": 7
+    },
+    {
+      "name": "kira",
+      "one_line_profile": "Fast and scalable general-purpose sandbox code execution engine",
+      "detailed_description": "A sandbox engine designed to execute untrusted code securely and efficiently. It is suitable for use in AI agent workflows where dynamic code generation and execution are required for data analysis or simulation.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandboxing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/FlorianWoelki/kira",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sandbox",
+        "execution-engine",
+        "security"
+      ],
+      "id": 8
+    },
+    {
+      "name": "llmesh",
+      "one_line_profile": "Agentic tool mesh platform for orchestrating intelligent plugins",
+      "detailed_description": "A platform designed to streamline the orchestration of AI tools and plugins. It serves as a central hub (mesh) for managing tool invocations and interactions within LLM-based agent workflows.",
+      "domains": [
+        "AI5",
+        "AI5-01"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "tool_invocation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HewlettPackard/llmesh",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "agent-orchestration",
+        "tool-mesh",
+        "llm-plugins"
+      ],
+      "id": 9
+    },
+    {
+      "name": "mcp-bridge-api",
+      "one_line_profile": "Proxy for connecting to multiple Model Context Protocol (MCP) servers",
+      "detailed_description": "A bridge API that facilitates connections to various Model Context Protocol (MCP) servers. It enables LLMs to interact with external tools and contexts in a standardized way, supporting secure tool execution across environments.",
+      "domains": [
+        "AI5",
+        "AI5-01"
+      ],
+      "subtask_category": [
+        "tool_invocation",
+        "interoperability"
+      ],
+      "application_level": "service",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/INQUIRELAB/mcp-bridge-api",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "model-context-protocol",
+        "tool-bridge"
+      ],
+      "id": 10
+    },
+    {
+      "name": "IfcLCA",
+      "one_line_profile": "Life Cycle Assessment tool for Built Environment using IFC",
+      "detailed_description": "An open-source tool for performing Life Cycle Assessment (LCA) on built environment projects. It utilizes Industry Foundation Classes (IFC) data to calculate environmental impacts, supporting sustainable engineering and construction research.",
+      "domains": [
+        "AI4S",
+        "Civil_Engineering"
+      ],
+      "subtask_category": [
+        "life_cycle_assessment",
+        "environmental_impact_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/IfcLCA/IfcLCA",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "lca",
+        "ifc",
+        "sustainability",
+        "built-environment"
+      ],
+      "id": 11
+    },
+    {
+      "name": "wasm_exec",
+      "one_line_profile": "WASM-powered sandbox for safely running dynamic Python code",
+      "detailed_description": "A sandbox implementation that uses WebAssembly (WASM) to execute Python code safely. This is particularly useful for AI agents requiring a secure, isolated environment to run generated code without risking the host system.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandboxing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Jflick58/wasm_exec",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "wasm",
+        "sandbox",
+        "python",
+        "security"
+      ],
+      "id": 12
+    },
+    {
+      "name": "k7",
+      "one_line_profile": "Self-hosted infrastructure for lightweight VM sandboxes",
+      "detailed_description": "A tool for deploying and managing lightweight virtual machine sandboxes. It provides a CLI, API, and Python SDK to safely execute untrusted code, making it an ideal infrastructure component for AI research agents.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandboxing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Katakate/k7",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "sandbox",
+        "vm",
+        "infrastructure",
+        "agent-execution"
+      ],
+      "id": 13
+    },
+    {
+      "name": "MaestroWF",
+      "one_line_profile": "Orchestration tool for computational workflows on HPC systems",
+      "detailed_description": "A tool developed by LLNL to easily orchestrate general computational workflows both locally and on supercomputers, supporting complex scientific simulation pipelines.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "hpc_simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LLNL/maestrowf",
+      "help_website": [
+        "https://maestrowf.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "hpc",
+        "workflow",
+        "orchestration",
+        "simulation"
+      ],
+      "id": 14
+    },
+    {
+      "name": "Local-Code-Interpreter",
+      "one_line_profile": "Local implementation of OpenAI's Code Interpreter for data analysis",
+      "detailed_description": "A local implementation of the Code Interpreter pattern, allowing execution of Python code generated by LLMs in a local environment, essential for scientific data analysis and visualization tasks.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "data_analysis"
+      ],
+      "application_level": "application",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MrGreyfun/Local-Code-Interpreter",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "code-interpreter",
+        "sandbox",
+        "data-analysis"
+      ],
+      "id": 15
+    },
+    {
+      "name": "ToolOrchestra",
+      "one_line_profile": "RL training framework for orchestrating tools and agentic workflows",
+      "detailed_description": "An end-to-end Reinforcement Learning training framework developed by NVIDIA for orchestrating tools and agentic workflows, enabling agents to learn how to use scientific tools effectively.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "tool_learning",
+        "workflow_orchestration"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NVlabs/ToolOrchestra",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "reinforcement-learning",
+        "agent",
+        "tool-use"
+      ],
+      "id": 16
+    },
+    {
+      "name": "OpenCodeInterpreter",
+      "one_line_profile": "System for code generation and execution for data analysis",
+      "detailed_description": "A suite of open-source code generation systems that integrates execution and iterative refinement, designed to bridge the gap between LLMs and sophisticated data analysis tasks.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_generation",
+        "data_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenCodeInterpreter/OpenCodeInterpreter",
+      "help_website": [
+        "https://opencodeinterpreter.github.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "code-interpreter",
+        "llm",
+        "execution-sandbox"
+      ],
+      "id": 17
+    },
+    {
+      "name": "ClaudeCage",
+      "one_line_profile": "Sandboxed execution environment for Claude Code",
+      "detailed_description": "A tool that wraps Claude Code in a container/sandbox environment, enabling safe execution of AI-generated code for analysis and development tasks.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "safe_code_running"
+      ],
+      "application_level": "tool",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/PACHAKUTlQ/ClaudeCage",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "sandbox",
+        "claude",
+        "container"
+      ],
+      "id": 18
+    },
+    {
+      "name": "Arrakis",
+      "one_line_profile": "Self-hosted sandboxing solution for AI agent code execution and workflow backtracking",
+      "detailed_description": "Arrakis is a specialized sandboxing infrastructure designed for AI agents, enabling secure code execution, file manipulation, and workflow backtracking. It provides a REST API and Python SDK to orchestrate isolated environments (MicroVMs) for multi-step agentic tasks, essential for scientific agents performing data analysis or simulation.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandbox_environment",
+        "agent_workflow"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/abshkbh/arrakis",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "sandbox",
+        "ai-agent",
+        "code-execution",
+        "microvm"
+      ],
+      "id": 19
+    },
+    {
+      "name": "Agent-Infra Sandbox",
+      "one_line_profile": "All-in-One Docker-based sandbox environment for AI Agents",
+      "detailed_description": "A comprehensive sandbox solution for AI agents that integrates Browser, Shell, File system, MCP (Model Context Protocol), and VSCode Server into a single Docker container. It provides a secure and interactive environment for agents to execute code, browse the web, and manage files, facilitating complex scientific agent workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_environment",
+        "code_execution",
+        "agent_tooling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/agent-infra/sandbox",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "sandbox",
+        "docker",
+        "ai-agent",
+        "mcp"
+      ],
+      "id": 20
+    },
+    {
+      "name": "AgentScope",
+      "one_line_profile": "Agent-oriented programming framework for building multi-agent LLM applications",
+      "detailed_description": "AgentScope is a developer-centric framework for building multi-agent applications with Large Language Models (LLMs). It provides primitives for agent construction, message exchange, and tool usage, enabling the development of complex scientific agent systems for tasks like literature review, data analysis, and simulation orchestration.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "agent_framework",
+        "workflow_orchestration",
+        "multi_agent_system"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/agentscope-ai/agentscope",
+      "help_website": [
+        "https://agentscope.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "multi-agent",
+        "llm",
+        "framework",
+        "agent-orchestration"
+      ],
+      "id": 21
+    },
+    {
+      "name": "AgentScope Runtime",
+      "one_line_profile": "Production-ready runtime environment for AgentScope agent deployment and tool sandboxing",
+      "detailed_description": "The runtime component of the AgentScope framework, designed to handle the deployment and execution of agents. It includes features for tool sandboxing and distributed agent communication, ensuring secure and scalable execution of scientific agent workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "runtime_environment",
+        "sandbox_execution",
+        "agent_deployment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/agentscope-ai/agentscope-runtime",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "runtime",
+        "agent-deployment",
+        "sandbox"
+      ],
+      "id": 22
+    },
+    {
+      "name": "AgentScope Runtime Java",
+      "one_line_profile": "Java implementation of the AgentScope runtime for agent deployment",
+      "detailed_description": "The Java-based implementation of the AgentScope runtime, enabling the deployment and execution of AgentScope agents within Java environments. It supports tool sandboxing and agent orchestration, facilitating integration with Java-based scientific infrastructure.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "runtime_environment",
+        "sandbox_execution"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/agentscope-ai/agentscope-runtime-java",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "java",
+        "runtime",
+        "agent-scope"
+      ],
+      "id": 23
+    },
+    {
+      "name": "Node Code Sandbox MCP",
+      "one_line_profile": "Model Context Protocol (MCP) server for executing JavaScript in disposable Docker containers",
+      "detailed_description": "A Model Context Protocol (MCP) server implementation that provides a secure, sandboxed environment for AI models to execute arbitrary JavaScript code. It uses disposable Docker containers to ensure isolation, enabling AI agents to perform data processing or calculation tasks safely.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandbox_environment",
+        "mcp_server"
+      ],
+      "application_level": "service",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/alfonsograziano/node-code-sandbox-mcp",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "mcp",
+        "sandbox",
+        "docker",
+        "code-execution"
+      ],
+      "id": 24
+    },
+    {
+      "name": "Wuying Agentbay SDK",
+      "one_line_profile": "SDK for Wuying Cloud Sandbox designed for AI Agents",
+      "detailed_description": "The Python SDK for interacting with the Wuying Cloud Sandbox, a specialized environment built for AI agents. It allows agents to execute tasks in a secure, cloud-based sandbox, supporting workflows that require isolated execution and resource management.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_interface",
+        "cloud_execution",
+        "agent_tooling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aliyun/wuying-agentbay-sdk",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "sdk",
+        "cloud-sandbox",
+        "ai-agent"
+      ],
+      "id": 25
+    },
+    {
+      "name": "Semantic Router",
+      "one_line_profile": "Superfast decision-making layer for LLMs and agents using semantic vector similarity",
+      "detailed_description": "A library for superfast decision-making in AI agents and LLMs. It uses semantic vector similarity to route requests to the appropriate tools or handlers, enabling intelligent processing of multi-modal data and orchestration of scientific workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "tool_routing",
+        "decision_making"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aurelio-labs/semantic-router",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "agent",
+        "routing",
+        "llm",
+        "orchestration"
+      ],
+      "id": 26
+    },
+    {
+      "name": "secimport",
+      "one_line_profile": "eBPF-based sandbox for secure Python execution",
+      "detailed_description": "An eBPF-based sandbox for Python that enforces precise syscall control and secures library imports. It is used to create secure execution environments for AI agents and scientific workflows running untrusted code.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "security_enforcement"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/avilum/secimport",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sandbox",
+        "ebpf",
+        "python",
+        "security"
+      ],
+      "id": 27
+    },
+    {
+      "name": "Autonomous Driving Data Framework (ADDF)",
+      "one_line_profile": "Modular framework for processing and analyzing autonomous driving data",
+      "detailed_description": "A collection of modules deployed using SeedFarmer to bootstrap environments for the processing, analysis, and visualization of autonomous driving data. It supports complex scientific/engineering data workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "workflow_orchestration",
+        "data_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/awslabs/autonomous-driving-data-framework",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "autonomous-driving",
+        "data-analysis",
+        "workflow",
+        "aws"
+      ],
+      "id": 28
+    },
+    {
+      "name": "Chapyter",
+      "one_line_profile": "ChatGPT Code Interpreter integration for Jupyter Notebooks",
+      "detailed_description": "A Jupyter Notebook extension that integrates ChatGPT as a code interpreter, enabling natural language driven data analysis, visualization, and code generation directly within the scientific workbench.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "scientific_data_analysis",
+        "scientific_visualization",
+        "code_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chapyter/chapyter",
+      "help_website": [
+        "https://github.com/chapyter/chapyter"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "jupyter",
+        "llm-agent",
+        "code-interpreter",
+        "data-analysis"
+      ],
+      "id": 29
+    },
+    {
+      "name": "quarto-pyodide",
+      "one_line_profile": "Quarto extension for interactive Python execution via Pyodide",
+      "detailed_description": "A Quarto extension that embeds Pyodide to enable interactive Python code cells within HTML documents, facilitating reproducible research, scientific data visualization, and interactive tutorials without backend servers.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "scientific_visualization",
+        "reproducible_research",
+        "interactive_computing"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/coatless-quarto/pyodide",
+      "help_website": [
+        "https://github.com/coatless-quarto/pyodide"
+      ],
+      "license": "MIT",
+      "tags": [
+        "quarto",
+        "pyodide",
+        "interactive-science",
+        "wasm"
+      ],
+      "id": 30
+    },
+    {
+      "name": "Cohere Terrarium",
+      "one_line_profile": "Sandboxed execution environment for LLM-based data agents",
+      "detailed_description": "A Python sandbox designed specifically for LLM data agents to execute generated code securely, enabling automated scientific data analysis and processing workflows driven by language models.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "scientific_data_analysis",
+        "code_execution",
+        "agent_workflow"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cohere-ai/cohere-terrarium",
+      "help_website": [
+        "https://github.com/cohere-ai/cohere-terrarium"
+      ],
+      "license": "MIT",
+      "tags": [
+        "llm-agent",
+        "sandbox",
+        "data-analysis",
+        "python-execution"
+      ],
+      "id": 31
+    },
+    {
+      "name": "Sandbox Topically",
+      "one_line_profile": "Topic modeling helpers using managed language models",
+      "detailed_description": "A toolkit for performing topic modeling and text clustering using large language models (Cohere/GPT), facilitating qualitative data analysis and semantic structure discovery in scientific or textual datasets.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "scientific_data_analysis",
+        "topic_modeling",
+        "text_mining"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/cohere-ai/sandbox-topically",
+      "help_website": [
+        "https://github.com/cohere-ai/sandbox-topically"
+      ],
+      "license": "MIT",
+      "tags": [
+        "topic-modeling",
+        "nlp",
+        "clustering",
+        "llm"
+      ],
+      "id": 32
+    },
+    {
+      "name": "Octogen",
+      "one_line_profile": "Open-source code interpreter agent framework for executing tasks",
+      "detailed_description": "Octogen is a framework for building AI agents capable of interpreting and executing code to solve tasks, serving as a foundational tool for AI-driven data analysis and scientific workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_interpretation",
+        "task_execution"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dbpunk-labs/octogen",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "agent-framework",
+        "code-interpreter",
+        "llm-agent"
+      ],
+      "id": 33
+    },
+    {
+      "name": "Gen AI Code Execution Agent",
+      "one_line_profile": "Secure dynamic session agent for AI-generated code execution",
+      "detailed_description": "A secure agent implementation designed to execute AI-generated code within isolated environments (Azure Container Apps), enabling safe data processing and analysis workflows for LLMs.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandbox_management"
+      ],
+      "application_level": "service",
+      "primary_language": "Bicep",
+      "repo_url": "https://github.com/denniszielke/gen-ai-code-execution-agent",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "azure",
+        "sandbox",
+        "code-execution",
+        "llm"
+      ],
+      "id": 34
+    },
+    {
+      "name": "Agent Sandbox Skill",
+      "one_line_profile": "Agent skill for managing isolated execution environments",
+      "detailed_description": "A library providing skills for AI agents to manage and utilize isolated sandbox environments, facilitating secure code execution for data analysis and scientific tasks.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_management",
+        "code_execution"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/disler/agent-sandbox-skill",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "agent-skill",
+        "sandbox",
+        "python"
+      ],
+      "id": 35
+    },
+    {
+      "name": "tsk",
+      "one_line_profile": "Task manager and sandbox for coding agents",
+      "detailed_description": "A tool designed to manage tasks and provide a sandboxed environment for coding agents, enabling secure execution of generated code for automated workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "task_management",
+        "sandbox_execution"
+      ],
+      "application_level": "platform",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/dtormoen/tsk",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "agent-sandbox",
+        "rust",
+        "task-runner"
+      ],
+      "id": 36
+    },
+    {
+      "name": "Claude Agent Server",
+      "one_line_profile": "Server to run Claude Agent in a sandbox via websocket",
+      "detailed_description": "A server implementation that wraps Claude Agent (Claude Code) in a secure sandbox environment, allowing remote control and execution of coding tasks via WebSocket.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "agent_hosting",
+        "sandbox_execution"
+      ],
+      "application_level": "service",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/dzhng/claude-agent-server",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "claude",
+        "agent-server",
+        "sandbox"
+      ],
+      "id": 37
+    },
+    {
+      "name": "E2B",
+      "one_line_profile": "Secure sandboxed cloud environments for AI agents",
+      "detailed_description": "An open-source infrastructure providing secure, sandboxed cloud environments specifically designed for AI agents to execute code, analyze data, and perform complex tasks.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_provisioning",
+        "code_execution"
+      ],
+      "application_level": "platform",
+      "primary_language": "MDX",
+      "repo_url": "https://github.com/e2b-dev/E2B",
+      "help_website": [
+        "https://e2b.dev/docs"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "sandbox",
+        "ai-infrastructure",
+        "code-interpreter"
+      ],
+      "id": 38
+    },
+    {
+      "name": "AI Analyst",
+      "one_line_profile": "AI agent for analyzing CSV files and creating charts",
+      "detailed_description": "An open-source AI analyst agent powered by E2B sandboxes that automates the analysis of CSV data files and generates interactive visualizations using LLMs.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/e2b-dev/ai-analyst",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-analysis",
+        "agent",
+        "visualization",
+        "csv"
+      ],
+      "id": 39
+    },
+    {
+      "name": "E2B Code Interpreter",
+      "one_line_profile": "SDK for running AI-generated code in sandboxes",
+      "detailed_description": "A Python and JS/TS SDK that enables AI applications to execute AI-generated code within secure E2B sandboxes, facilitating capabilities like data analysis and code interpretation.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_interpretation",
+        "sandbox_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "MDX",
+      "repo_url": "https://github.com/e2b-dev/code-interpreter",
+      "help_website": [
+        "https://e2b.dev/docs/code-interpreter/introduction"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "sdk",
+        "code-interpreter",
+        "sandbox"
+      ],
+      "id": 40
+    },
+    {
+      "name": "E2B Desktop Sandbox",
+      "one_line_profile": "Desktop graphical sandbox environment for LLM computer use",
+      "detailed_description": "A sandboxed desktop environment designed for Large Language Models (LLMs) to perform computer use tasks securely. It provides a graphical interface and execution context for AI agents to interact with desktop applications and file systems.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "agent_environment"
+      ],
+      "application_level": "platform",
+      "primary_language": "MDX",
+      "repo_url": "https://github.com/e2b-dev/desktop",
+      "help_website": [
+        "https://e2b.dev/docs"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "sandbox",
+        "llm",
+        "computer-use",
+        "desktop-environment"
+      ],
+      "id": 41
+    },
+    {
+      "name": "LLM Code Interpreter",
+      "one_line_profile": "Advanced code interpreter for LLMs with internet and filesystem access",
+      "detailed_description": "A code execution environment for LLMs (like ChatGPT) that allows running code in various languages, executing terminal processes, and accessing the filesystem and internet. It serves as a powerful tool for AI agents to perform computational tasks.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "agent_tool"
+      ],
+      "application_level": "solver",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/e2b-dev/llm-code-interpreter",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "code-interpreter",
+        "llm",
+        "sandbox",
+        "execution"
+      ],
+      "id": 42
+    },
+    {
+      "name": "E2B MCP Server",
+      "one_line_profile": "Model Context Protocol server for E2B sandbox integration",
+      "detailed_description": "An implementation of the Model Context Protocol (MCP) that enables AI models (like Claude) to securely execute code within E2B sandboxes. It acts as a bridge between the LLM and the secure execution environment.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "tool_wrapping",
+        "code_execution"
+      ],
+      "application_level": "service",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/e2b-dev/mcp-server",
+      "help_website": [
+        "https://modelcontextprotocol.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "mcp",
+        "sandbox",
+        "claude",
+        "integration"
+      ],
+      "id": 43
+    },
+    {
+      "name": "Open Computer Use",
+      "one_line_profile": "AI agent implementation for computer control using E2B sandboxes",
+      "detailed_description": "An open-source implementation of an AI agent capable of 'computer use' (interacting with UI/desktop), powered by LLMs and running within the E2B Desktop Sandbox. It serves as a solver for automating desktop tasks via AI.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "agent_workflow",
+        "computer_use"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/e2b-dev/open-computer-use",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "agent",
+        "computer-use",
+        "automation",
+        "llm"
+      ],
+      "id": 44
+    },
+    {
+      "name": "Rivet Plugin E2B",
+      "one_line_profile": "E2B sandbox integration plugin for Rivet visual programming environment",
+      "detailed_description": "A plugin for Rivet, a visual programming tool for AI agents, that provides nodes for interacting with E2B sandboxes. It enables the orchestration of code execution tasks within visual AI workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "tool_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/e2b-dev/rivet-plugin-e2b",
+      "help_website": [
+        "https://rivet.ironcladapp.com/"
+      ],
+      "license": null,
+      "tags": [
+        "rivet",
+        "plugin",
+        "visual-programming",
+        "sandbox"
+      ],
+      "id": 45
+    },
+    {
+      "name": "Surf",
+      "one_line_profile": "Natural language driven computer use AI agent",
+      "detailed_description": "An AI agent powered by OpenAI models that interacts with a virtual desktop environment (E2B) through natural language instructions. It functions as a high-level solver for executing complex computer tasks via AI.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "agent_workflow",
+        "computer_use"
+      ],
+      "application_level": "solver",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/e2b-dev/surf",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "agent",
+        "computer-use",
+        "openai",
+        "automation"
+      ],
+      "id": 46
+    },
+    {
+      "name": "SymPy Beta",
+      "one_line_profile": "Browser-based symbolic mathematics engine powered by SymPy",
+      "detailed_description": "A Wolfram|Alpha-like answer engine that performs symbolic mathematics computations entirely in the browser using SymPy. It allows for solving mathematical problems without backend computation.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "symbolic_computation",
+        "math_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eagleoflqj/sympy_beta",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "sympy",
+        "math",
+        "symbolic",
+        "browser"
+      ],
+      "id": 47
+    },
+    {
+      "name": "pooltool",
+      "one_line_profile": "Physics-based billiards simulation library",
+      "detailed_description": "A simulation package for billiards that emphasizes realistic physics modeling. It is used for research in event-based simulation and physics analysis of impact dynamics.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "physics_simulation",
+        "dynamics_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ekiefl/pooltool",
+      "help_website": [
+        "https://pooltool.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "physics",
+        "simulation",
+        "billiards",
+        "dynamics"
+      ],
+      "id": 48
+    },
+    {
+      "name": "pgmpl",
+      "one_line_profile": "Matplotlib-syntax wrapper for PyQtGraph visualization",
+      "detailed_description": "A library that provides wrappers to allow calling PyQtGraph functions using Matplotlib syntax. It facilitates high-performance scientific visualization while maintaining a familiar API for researchers.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "scientific_visualization",
+        "plotting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eldond/pgmpl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "matplotlib",
+        "pyqtgraph",
+        "plotting"
+      ],
+      "id": 49
+    },
+    {
+      "name": "LetMeDoIt",
+      "one_line_profile": "AI assistant for executing local computing tasks",
+      "detailed_description": "An advanced AI assistant leveraging LLMs (ChatGPT, Gemini, AutoGen) to engage in conversations and execute computing tasks on local devices. It acts as an agentic solver for automating research or computational workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "agent_workflow",
+        "task_automation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eliranwong/letmedoit",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "agent",
+        "automation",
+        "llm",
+        "cli"
+      ],
+      "id": 50
+    },
+    {
+      "name": "MCP Server Code Execution",
+      "one_line_profile": "MCP server for isolated Python code execution",
+      "detailed_description": "A Model Context Protocol (MCP) server that executes Python code in isolated rootless containers. It provides a secure execution environment for AI agents to run scientific or general-purpose code.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "tool_wrapping"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/elusznik/mcp-server-code-execution-mode",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "mcp",
+        "python",
+        "sandbox",
+        "execution"
+      ],
+      "id": 51
+    },
+    {
+      "name": "Endor CLI",
+      "one_line_profile": "CLI for managing instant sandboxed environments for AI agents",
+      "detailed_description": "A command-line tool to provision and manage instant, private, sandboxed environments (like databases or servers). It is designed to support AI agents and rapid prototyping in secure environments.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_management",
+        "environment_provisioning"
+      ],
+      "application_level": "service",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/endorhq/cli",
+      "help_website": [
+        "https://www.endor.ai/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "sandbox",
+        "cli",
+        "ai-agent",
+        "infrastructure"
+      ],
+      "id": 52
+    },
+    {
+      "name": "maplab",
+      "one_line_profile": "Modular and multi-modal mapping framework for robotics",
+      "detailed_description": "A framework for visual-inertial mapping and localization. It supports multi-session, multi-robot mapping and provides tools for map creation, processing, and evaluation in robotics research.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "mapping",
+        "slam",
+        "robotics_simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ethz-asl/maplab",
+      "help_website": [
+        "https://github.com/ethz-asl/maplab/wiki"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "slam",
+        "robotics",
+        "mapping",
+        "visual-inertial"
+      ],
+      "id": 53
+    },
+    {
+      "name": "Denoiser",
+      "one_line_profile": "Real-time speech enhancement in the waveform domain",
+      "detailed_description": "A PyTorch implementation of a causal speech enhancement model working on raw waveforms. It is capable of removing various kinds of background noise and reverb, useful for audio data processing in scientific research.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "signal_processing",
+        "noise_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/facebookresearch/denoiser",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "audio",
+        "speech-enhancement",
+        "deep-learning",
+        "pytorch"
+      ],
+      "id": 54
+    },
+    {
+      "name": "Flow Matching",
+      "one_line_profile": "PyTorch library for flow matching algorithms",
+      "detailed_description": "A library for implementing flow matching algorithms, featuring continuous and discrete implementations. It supports research in generative modeling for text and image modalities.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "generative_modeling",
+        "algorithm_implementation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/facebookresearch/flow_matching",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "flow-matching",
+        "generative-models",
+        "pytorch",
+        "machine-learning"
+      ],
+      "id": 55
+    },
+    {
+      "name": "firectl",
+      "one_line_profile": "Command-line tool to run Firecracker microVMs for secure isolation",
+      "detailed_description": "Firectl is a CLI tool for Firecracker, a lightweight virtual machine monitor (VMM) that uses the Linux Kernel-based Virtual Machine (KVM) to create and manage microVMs. In the context of AI4S, it serves as a critical infrastructure component for securely sandboxing AI agent code execution.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "isolation_strategy"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/firecracker-microvm/firectl",
+      "help_website": [
+        "https://github.com/firecracker-microvm/firectl"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "microvm",
+        "sandbox",
+        "virtualization",
+        "firecracker"
+      ],
+      "id": 56
+    },
+    {
+      "name": "Marine",
+      "one_line_profile": "Wasm runtime for multi-module applications with shared-nothing linking",
+      "detailed_description": "Marine is a WebAssembly runtime that supports interface-types and a shared-nothing linking scheme. It provides a secure sandbox environment for executing multi-module Wasm applications, suitable for isolating scientific computation or agentic workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "wasm_runtime"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/fluencelabs/marine",
+      "help_website": [
+        "https://fluence.dev/docs/marine-book/introduction/"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "webassembly",
+        "wasm",
+        "sandbox",
+        "runtime"
+      ],
+      "id": 57
+    },
+    {
+      "name": "Gate",
+      "one_line_profile": "Platform for benign remote code execution and distributed computing",
+      "detailed_description": "Gate is a system designed for remote code execution, allowing code to be moved to data or executed across clusters. It serves as an execution infrastructure that can support distributed scientific computing and agent-based workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "remote_execution",
+        "distributed_computing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/gate-computer/gate",
+      "help_website": [
+        "https://gate.computer/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "rce",
+        "distributed-systems",
+        "execution-engine"
+      ],
+      "id": 58
+    },
+    {
+      "name": "gVisor",
+      "one_line_profile": "Application kernel for containers providing strong isolation",
+      "detailed_description": "gVisor is an application kernel, written in Go, that implements a substantial portion of the Linux system surface. It provides an isolation boundary between the application and the host kernel, making it a critical tool for securely executing untrusted scientific code or AI agent generated scripts.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "container_isolation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/google/gvisor",
+      "help_website": [
+        "https://gvisor.dev/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "sandbox",
+        "container",
+        "security",
+        "isolation"
+      ],
+      "id": 59
+    },
+    {
+      "name": "nsjail",
+      "one_line_profile": "Lightweight process isolation tool using Linux namespaces and seccomp-bpf",
+      "detailed_description": "NsJail is a process isolation tool that utilizes Linux namespaces, cgroups, rlimits, and seccomp-bpf syscall filters. It is widely used to sandbox processes, making it highly relevant for securely running scientific analysis scripts generated by AI agents.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "process_isolation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/google/nsjail",
+      "help_website": [
+        "https://github.com/google/nsjail"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "sandbox",
+        "isolation",
+        "linux-namespaces",
+        "security"
+      ],
+      "id": 60
+    },
+    {
+      "name": "ipybox",
+      "one_line_profile": "Python code sandbox designed for AI agent tool calling",
+      "detailed_description": "ipybox is a Python code sandbox specifically designed to provide a secure environment for AI agents to execute code programmatically. It supports MCP (Model Context Protocol) tool calling, making it a direct component of the AI4S agent toolchain.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_interpreter",
+        "sandbox_execution"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gradion-ai/ipybox",
+      "help_website": [
+        "https://github.com/gradion-ai/ipybox"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "sandbox",
+        "llm-agent",
+        "python",
+        "code-interpreter"
+      ],
+      "id": 61
+    },
+    {
+      "name": "graniet/llm",
+      "one_line_profile": "CLI tool to orchestrate multiple LLM backends and workflows",
+      "detailed_description": "A Rust-based library and CLI tool designed to unify and orchestrate multiple LLM backends (OpenAI, Claude, Ollama, etc.) into complex multi-step AI workflows. It serves as a workflow engine for AI agents, supporting reasoning and task execution chains.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "agent_framework"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/graniet/llm",
+      "help_website": [
+        "https://github.com/graniet/llm"
+      ],
+      "license": null,
+      "tags": [
+        "llm",
+        "orchestration",
+        "workflow",
+        "agent"
+      ],
+      "id": 62
+    },
+    {
+      "name": "aWsm",
+      "one_line_profile": "WebAssembly ahead-of-time compiler and runtime",
+      "detailed_description": "aWsm is a WebAssembly AOT compiler and runtime focused on generating fast, portable code. It serves as a sandboxed execution environment for Wasm modules, applicable in secure scientific computing workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "wasm_runtime"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/gwsystems/aWsm",
+      "help_website": [
+        "https://github.com/gwsystems/aWsm"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "webassembly",
+        "compiler",
+        "runtime",
+        "sandbox"
+      ],
+      "id": 63
+    },
+    {
+      "name": "sandwine",
+      "one_line_profile": "Tool to run Windows applications in a sandboxed Wine environment",
+      "detailed_description": "Sandwine is a command-line tool that runs Windows applications using Wine within a Bubblewrap sandbox. This allows for the secure and isolated execution of legacy scientific software (often Windows-only) on Linux clusters.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "compatibility_layer"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hartwork/sandwine",
+      "help_website": [
+        "https://github.com/hartwork/sandwine"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "sandbox",
+        "wine",
+        "bubblewrap",
+        "windows-compat"
+      ],
+      "id": 64
+    },
+    {
+      "name": "Code Interpreter",
+      "one_line_profile": "Open-source Code Interpreter for LLMs supporting multiple models",
+      "detailed_description": "An open-source implementation of a Code Interpreter that integrates with various LLMs (GPT, Gemini, Claude, LLaMa). It provides the execution environment for AI agents to write and run code for data analysis and scientific tasks.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_interpreter",
+        "agent_tool"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haseeb-heaven/code-interpreter",
+      "help_website": [
+        "https://github.com/haseeb-heaven/code-interpreter"
+      ],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "code-interpreter",
+        "agent",
+        "data-analysis"
+      ],
+      "id": 65
+    },
+    {
+      "name": "PRIMS",
+      "one_line_profile": "MCP server for safe Python code execution by LLM agents",
+      "detailed_description": "PRIMS (Python Runtime Interpreter MCP Server) is a lightweight Model Context Protocol server that enables LLM agents to execute arbitrary Python code in a secure, ephemeral sandbox. It is a specialized tool for the AI4S agent toolchain.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_interpreter",
+        "sandbox_execution"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hileamlakB/Python-Runtime-Interpreter-MCP-Server",
+      "help_website": [
+        "https://github.com/hileamlakB/Python-Runtime-Interpreter-MCP-Server"
+      ],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "sandbox",
+        "python",
+        "agent-tool"
+      ],
+      "id": 66
+    },
+    {
+      "name": "EasyR1",
+      "one_line_profile": "Efficient multi-modality Reinforcement Learning training framework",
+      "detailed_description": "EasyR1 is a scalable Reinforcement Learning (RL) training framework based on veRL. It supports multi-modality training, making it a core tool for developing advanced AI models for scientific discovery and reasoning.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "model_training",
+        "reinforcement_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hiyouga/EasyR1",
+      "help_website": [
+        "https://github.com/hiyouga/EasyR1"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "reinforcement-learning",
+        "rl",
+        "training-framework",
+        "ai4s"
+      ],
+      "id": 67
+    },
+    {
+      "name": "GoJudge",
+      "one_line_profile": "Fast and secure code execution sandbox powered by nsjail",
+      "detailed_description": "A high-performance code execution sandbox server based on Linux namespaces and cgroups (nsjail). It provides a secure environment for executing untrusted code, making it suitable for AI agents acting as code interpreters in scientific workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandbox_runner"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/huseynovvusal/gojudge",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sandbox",
+        "nsjail",
+        "code-execution",
+        "security"
+      ],
+      "id": 68
+    },
+    {
+      "name": "Hyperlight",
+      "one_line_profile": "Lightweight Virtual Machine Manager for embedding safe code execution",
+      "detailed_description": "A lightweight Virtual Machine Manager (VMM) designed to be embedded within applications. It enables the safe execution of untrusted code within micro virtual machines with very low latency, serving as a critical infrastructure for secure AI agent tool execution.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "isolation"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/hyperlight-dev/hyperlight",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "vmm",
+        "virtualization",
+        "sandbox",
+        "microvm"
+      ],
+      "id": 69
+    },
+    {
+      "name": "CodeSherpa",
+      "one_line_profile": "Code interpreter plugin for LLMs to execute analysis code",
+      "detailed_description": "A code interpreter tool designed as a plugin for Large Language Models (like ChatGPT). It allows agents to write and execute code to perform calculations, data analysis, and other scientific tasks within a controlled environment.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_interpretation",
+        "data_analysis"
+      ],
+      "application_level": "service",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/iamgreggarcia/codesherpa",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "code-interpreter",
+        "llm-plugin",
+        "agent-tool"
+      ],
+      "id": 70
+    },
+    {
+      "name": "Sculptor",
+      "one_line_profile": "Platform for running parallel coding agents in isolated sandboxes",
+      "detailed_description": "A UI and orchestration platform for running parallel coding agents in safe, isolated sandboxes. It facilitates complex agent-based workflows where agents need to generate and execute code safely, supporting scientific simulation and analysis tasks.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "sandbox_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Unknown",
+      "repo_url": "https://github.com/imbue-ai/sculptor",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "agent-platform",
+        "sandbox",
+        "parallel-execution"
+      ],
+      "id": 71
+    },
+    {
+      "name": "EvalGPT",
+      "one_line_profile": "Code interpreter framework for automating tasks via LLMs",
+      "detailed_description": "A code interpreter framework that utilizes large language models to automate the process of code-writing and execution. It provides the necessary tooling to connect LLMs with an execution environment for performing user-defined tasks, including data processing.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_interpretation",
+        "task_automation"
+      ],
+      "application_level": "framework",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/index-labs/evalgpt",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "code-interpreter",
+        "llm",
+        "automation"
+      ],
+      "id": 72
+    },
+    {
+      "name": "QiskitBot",
+      "one_line_profile": "Sandboxed execution environment for Quantum Circuits",
+      "detailed_description": "A bot interface that leverages nested containers (podman) to safely run untrusted user input for executing Quantum Circuits using Qiskit. It serves as a specialized sandbox runner for quantum computing tasks.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "quantum_simulation",
+        "sandbox_execution"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/infiniteregrets/QiskitBot",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "quantum-computing",
+        "qiskit",
+        "sandbox",
+        "podman"
+      ],
+      "id": 73
+    },
+    {
+      "name": "Instill Core",
+      "one_line_profile": "Full-stack AI infrastructure for data and model pipeline orchestration",
+      "detailed_description": "A full-stack AI infrastructure tool designed to streamline data, model, and pipeline orchestration. It enables the construction of versatile data pipelines (VDP) for processing unstructured data (images, text) using AI models, applicable to scientific data processing workflows.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "pipeline_orchestration",
+        "data_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/instill-ai/instill-core",
+      "help_website": [
+        "https://www.instill.tech/docs"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "pipeline-orchestration",
+        "etl",
+        "ai-infrastructure"
+      ],
+      "id": 74
+    },
+    {
+      "name": "Pyodide Console",
+      "one_line_profile": "Serverless Python environment for scientific computing via WebAssembly",
+      "detailed_description": "A desktop application providing a serverless Python environment for scientific computing using WebAssembly (Pyodide). It offers a sandboxed runtime for executing Python scientific stacks (NumPy, Pandas, etc.) without local installation.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "scientific_computing",
+        "sandbox_execution"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/inureyes/pyodide-console",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pyodide",
+        "webassembly",
+        "scientific-computing",
+        "sandbox"
+      ],
+      "id": 75
+    },
+    {
+      "name": "jupylite_duckdb",
+      "one_line_profile": "DuckDB-WASM integration for JupyterLite",
+      "detailed_description": "Integrates DuckDB-WASM with JupyterLite and Pyodide, enabling serverless, sandboxed SQL data analysis and scientific computing directly in the browser.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "sandbox_environment"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/iqmo-org/jupylite_duckdb",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "duckdb",
+        "wasm",
+        "jupyterlite",
+        "data-analysis"
+      ],
+      "id": 76
+    },
+    {
+      "name": "Fortran Expression Evaluator",
+      "one_line_profile": "Interpreter for evaluating Fortran expressions",
+      "detailed_description": "An open-source Fortran expression evaluator (parser and interpreter). It allows for the dynamic evaluation of mathematical expressions using Fortran syntax, useful in scientific simulation and modeling contexts.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "expression_evaluation",
+        "calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/ivomarsoares-personal/Fortran-Expression-Evaluator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fortran",
+        "interpreter",
+        "math-expression"
+      ],
+      "id": 77
+    },
+    {
+      "name": "labctl",
+      "one_line_profile": "CLI for managing remote microVM playgrounds",
+      "detailed_description": "A command-line tool to control iximiuz Labs, enabling the creation and management of remote microVM playgrounds. It serves as a tool for managing ephemeral, sandboxed environments for testing and execution.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_management",
+        "microvm_orchestration"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/iximiuz/labctl",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "microvm",
+        "sandbox",
+        "cli"
+      ],
+      "id": 78
+    },
+    {
+      "name": "JIProlog",
+      "one_line_profile": "Cross-platform Prolog interpreter in Java",
+      "detailed_description": "A pure Java 100% Prolog interpreter. It enables logic programming and reasoning tasks, which are applicable in AI and specific scientific modeling domains requiring logical inference.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "logic_programming",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/jiprolog/jiprolog",
+      "help_website": [
+        "http://www.jiprolog.com"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "prolog",
+        "interpreter",
+        "logic-programming"
+      ],
+      "id": 79
+    },
+    {
+      "name": "Venice",
+      "one_line_profile": "Sandboxed Lisp dialect for safe scripting",
+      "detailed_description": "A Clojure-inspired Lisp dialect with Java interoperability, designed specifically as a safe, sandboxed scripting language. It provides a secure execution environment for dynamic scripts, suitable for AI agents executing generated code.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "scripting",
+        "sandbox_execution"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/jlangch/venice",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "lisp",
+        "sandbox",
+        "scripting",
+        "security"
+      ],
+      "id": 80
+    },
+    {
+      "name": "ONNX Script Editor",
+      "one_line_profile": "Browser-based editor and visualizer for ONNX Script models",
+      "detailed_description": "A web-based tool for visualizing and editing ONNX models using ONNX Script. It leverages Pyodide and Netron to run completely in the browser, enabling researchers to inspect and modify machine learning models without local setup.",
+      "domains": [
+        "AI5",
+        "AI5-05"
+      ],
+      "subtask_category": [
+        "model_visualization",
+        "model_editing"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/josephrocca/onnxscript-editor",
+      "help_website": [
+        "https://josephrocca.github.io/onnxscript-editor/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "onnx",
+        "visualization",
+        "model-editing",
+        "browser-based"
+      ],
+      "id": 81
+    },
+    {
+      "name": "Replite",
+      "one_line_profile": "Embeddable REPL component powered by JupyterLite",
+      "detailed_description": "A lightweight, embeddable Read-Eval-Print Loop (REPL) powered by JupyterLite. It allows integrating a scientific Python computing environment directly into web applications, enabling interactive code execution for research and education.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "interactive_computing",
+        "code_execution"
+      ],
+      "application_level": "library",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/jtpio/replite",
+      "help_website": [
+        "https://github.com/jtpio/replite"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "jupyter",
+        "repl",
+        "wasm",
+        "python"
+      ],
+      "id": 82
+    },
+    {
+      "name": "JupyterLite",
+      "one_line_profile": "Wasm-powered Jupyter running entirely in the browser",
+      "detailed_description": "A JupyterLab distribution that runs entirely in the browser using WebAssembly. It provides a serverless scientific computing environment, enabling reproducible research and data analysis without backend infrastructure.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "scientific_computing_environment",
+        "data_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/jupyterlite/jupyterlite",
+      "help_website": [
+        "https://jupyterlite.readthedocs.io/en/latest/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "jupyter",
+        "wasm",
+        "scientific-computing",
+        "browser-based"
+      ],
+      "id": 83
+    },
+    {
+      "name": "Pyodide Kernel",
+      "one_line_profile": "Python kernel for JupyterLite powered by Pyodide",
+      "detailed_description": "The Python kernel for JupyterLite, built on top of Pyodide. It enables running the scientific Python stack (NumPy, Pandas, etc.) within the browser-based Jupyter environment, serving as a core component for serverless scientific workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "kernel_execution",
+        "scientific_computing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jupyterlite/pyodide-kernel",
+      "help_website": [
+        "https://github.com/jupyterlite/pyodide-kernel"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "jupyter",
+        "pyodide",
+        "kernel",
+        "wasm"
+      ],
+      "id": 84
+    },
+    {
+      "name": "pyodide-http",
+      "one_line_profile": "HTTP request patching library for Pyodide environments",
+      "detailed_description": "A utility library that patches standard Python HTTP libraries (like requests and urllib3) to work within the Pyodide WebAssembly environment. It is essential for enabling scientific Python code to fetch data and interact with APIs when running in browser-based sandboxes like JupyterLite.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "networking",
+        "infrastructure_enabler"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/koenvo/pyodide-http",
+      "help_website": [
+        "https://github.com/koenvo/pyodide-http"
+      ],
+      "license": "MIT",
+      "tags": [
+        "pyodide",
+        "networking",
+        "wasm",
+        "jupyterlite"
+      ],
+      "id": 85
+    },
+    {
+      "name": "Agent Sandbox",
+      "one_line_profile": "Sandbox runtime for managing AI agent workloads",
+      "detailed_description": "A specialized sandbox runtime designed for managing isolated, stateful, and singleton workloads, specifically targeting AI agent runtimes. It provides the necessary infrastructure to securely execute and manage long-running AI agents in a Kubernetes environment.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "agent_execution",
+        "sandbox_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/kubernetes-sigs/agent-sandbox",
+      "help_website": [
+        "https://github.com/kubernetes-sigs/agent-sandbox"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "ai-agent",
+        "sandbox",
+        "kubernetes",
+        "runtime"
+      ],
+      "id": 86
+    },
+    {
+      "name": "langchain-sandbox",
+      "one_line_profile": "Sandboxed execution environment for untrusted Python code in agent workflows",
+      "detailed_description": "A secure sandbox environment designed for LangChain agents to execute untrusted Python code. It utilizes Pyodide and Deno to provide isolation, enabling agents to safely perform data analysis, calculation, and other dynamic tasks required in scientific research workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/langchain-ai/langchain-sandbox",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "sandbox",
+        "python",
+        "agent-execution",
+        "security"
+      ],
+      "id": 87
+    },
+    {
+      "name": "dify-sandbox",
+      "one_line_profile": "Secure and lightweight code execution sandbox for AI agents",
+      "detailed_description": "A specialized sandbox service designed for the Dify platform to execute code generated by AI agents. It supports multiple programming languages and provides a secure, isolated environment for running data processing and analysis scripts within scientific agent workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "data_analysis"
+      ],
+      "application_level": "service",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/langgenius/dify-sandbox",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "sandbox",
+        "code-execution",
+        "isolation",
+        "agent-infrastructure"
+      ],
+      "id": 88
+    },
+    {
+      "name": "Code-Interpreter-Api",
+      "one_line_profile": "Open-source implementation of a code interpreter for LLMs",
+      "detailed_description": "A Python library that provides a Code Interpreter interface for Large Language Models (LLMs), similar to OpenAI's implementation. It allows agents to generate and execute Python code for data analysis, visualization, and mathematical calculation, serving as a key component in scientific research agents.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "visualization",
+        "code_execution"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/leezhuuuuu/Code-Interpreter-Api",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "code-interpreter",
+        "llm",
+        "data-science",
+        "agent-tool"
+      ],
+      "id": 89
+    },
+    {
+      "name": "mflowgen",
+      "one_line_profile": "Modular flow specification and build-system generator for ASIC/FPGA design",
+      "detailed_description": "A tool for creating modular, sandboxed workflows for ASIC and FPGA design-space exploration. It allows researchers and engineers to construct complex hardware design flows using isolated nodes, facilitating reproducibility and scalability in electronic design automation (EDA) research.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "design_space_exploration",
+        "simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/liv1n/mrflowgen",
+      "help_website": [
+        "https://mflowgen.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "eda",
+        "asic",
+        "fpga",
+        "workflow",
+        "modular-design"
+      ],
+      "id": 90
+    },
+    {
+      "name": "TextWorld",
+      "one_line_profile": "Sandbox learning environment for training reinforcement learning agents on text-based games",
+      "detailed_description": "TextWorld is a sandbox learning environment for the training and evaluation of reinforcement learning (RL) agents on text-based games. It generates games and provides an interface for agents to interact with the environment, facilitating research in generalization and language understanding.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "reinforcement_learning",
+        "environment_simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/TextWorld",
+      "help_website": [
+        "https://textworld-docs.azurewebsites.net/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "reinforcement-learning",
+        "nlp",
+        "sandbox",
+        "simulation"
+      ],
+      "id": 91
+    },
+    {
+      "name": "SEGAR",
+      "one_line_profile": "Sandbox environment for generalizable agent research in reinforcement learning",
+      "detailed_description": "SEGAR (Sandbox Environment for Generalizable Agent Research) is a research platform designed to test and improve the generalization capabilities of reinforcement learning agents through procedurally generated environments.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "reinforcement_learning",
+        "environment_simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/segar",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reinforcement-learning",
+        "generalization",
+        "sandbox"
+      ],
+      "id": 92
+    },
+    {
+      "name": "UniLM",
+      "one_line_profile": "Unified pre-training framework for large-scale self-supervised learning across tasks and modalities",
+      "detailed_description": "UniLM (Unified Language Model) is a library providing large-scale self-supervised pre-training models and code for natural language processing, computer vision, and multi-modal tasks. It serves as a foundational tool for scientific text analysis and multi-modal data modeling.",
+      "domains": [
+        "AI5",
+        "AI4"
+      ],
+      "subtask_category": [
+        "model_training",
+        "inference",
+        "representation_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/unilm",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nlp",
+        "computer-vision",
+        "pre-training",
+        "transformer"
+      ],
+      "id": 93
+    },
+    {
+      "name": "Wassette",
+      "one_line_profile": "Security-oriented runtime for executing WebAssembly components via Model Context Protocol (MCP)",
+      "detailed_description": "Wassette is a runtime environment designed to securely execute WebAssembly (WASM) components, integrated with the Model Context Protocol (MCP). It enables AI agents to safely invoke external tools and computations within a sandboxed environment.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "tool_wrapping"
+      ],
+      "application_level": "platform",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/microsoft/wassette",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "webassembly",
+        "sandbox",
+        "agent-tools",
+        "security"
+      ],
+      "id": 94
+    },
+    {
+      "name": "modAL",
+      "one_line_profile": "Modular active learning framework for optimizing data labeling and experimental design",
+      "detailed_description": "modAL is an active learning framework for Python, designed to streamline the process of intelligent data labeling and experimental design. It allows researchers to build active learning pipelines with scikit-learn compatible estimators.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "active_learning",
+        "experimental_design",
+        "data_selection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/modAL-python/modAL",
+      "help_website": [
+        "https://modal-python.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "active-learning",
+        "machine-learning",
+        "optimization"
+      ],
+      "id": 95
+    },
+    {
+      "name": "3D-Speaker",
+      "one_line_profile": "Toolkit for single- and multi-modal speaker verification, recognition, and diarization",
+      "detailed_description": "3D-Speaker is a comprehensive toolkit for speaker verification, recognition, and diarization. It supports large-scale pre-trained models and handles multi-modal data, serving as a tool for audio signal analysis and biometric research.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "audio_analysis",
+        "speaker_recognition",
+        "diarization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/modelscope/3D-Speaker",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "audio-processing",
+        "speaker-verification",
+        "biometrics"
+      ],
+      "id": 96
+    },
+    {
+      "name": "ms-enclave",
+      "one_line_profile": "Modular and stable agent sandbox runtime environment for secure tool execution",
+      "detailed_description": "ms-enclave is a sandbox runtime environment specifically designed for AI agents. It provides a secure and isolated context for agents to execute code and invoke tools, ensuring safety and stability in automated workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "agent_runtime"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/modelscope/ms-enclave",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "sandbox",
+        "agent",
+        "runtime",
+        "security"
+      ],
+      "id": 97
+    },
+    {
+      "name": "Brainchop",
+      "one_line_profile": "In-browser 3D MRI rendering and volumetric segmentation tool",
+      "detailed_description": "A client-side web-based tool for 3D MRI visualization and segmentation, allowing researchers to process neuroimaging data directly in the browser using WebGL and machine learning models.",
+      "domains": [
+        "Neuroscience",
+        "Medical Imaging"
+      ],
+      "subtask_category": [
+        "scientific_visualization",
+        "image_segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/neuroneural/brainchop",
+      "help_website": [
+        "https://brainchop.org"
+      ],
+      "license": "MIT",
+      "tags": [
+        "mri",
+        "neuroimaging",
+        "segmentation",
+        "visualization"
+      ],
+      "id": 98
+    },
+    {
+      "name": "VLMEvalKit",
+      "one_line_profile": "Evaluation toolkit for large multi-modality models",
+      "detailed_description": "An open-source toolkit for evaluating Large Multi-modality Models (LMMs) across various benchmarks, facilitating scientific assessment of AI model performance in computer vision and language tasks.",
+      "domains": [
+        "Artificial Intelligence",
+        "Computer Science"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "scientific_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/open-compass/VLMEvalKit",
+      "help_website": [
+        "https://github.com/open-compass/VLMEvalKit"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "evaluation",
+        "vlm",
+        "multimodal",
+        "benchmark"
+      ],
+      "id": 99
+    },
+    {
+      "name": "Open Interpreter",
+      "one_line_profile": "Local code execution agent for scientific workflows",
+      "detailed_description": "A natural language interface that allows LLMs to run code (Python, JavaScript, Shell) locally, acting as an autonomous agent for scientific data analysis, simulation execution, and workflow orchestration.",
+      "domains": [
+        "AI5",
+        "AI5-06",
+        "Data Science"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "data_analysis",
+        "code_generation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openinterpreter/open-interpreter",
+      "help_website": [
+        "https://docs.openinterpreter.com/"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "agent",
+        "code-interpreter",
+        "automation",
+        "llm"
+      ],
+      "id": 100
+    },
+    {
+      "name": "OpenTripPlanner",
+      "one_line_profile": "Multi-modal transportation network analysis and routing engine",
+      "detailed_description": "A software platform for multi-modal trip planning and transportation network analysis, widely used in urban planning research and geography for modeling accessibility and transit systems.",
+      "domains": [
+        "Urban Planning",
+        "Transportation Science",
+        "Geography"
+      ],
+      "subtask_category": [
+        "scientific_modeling",
+        "network_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/opentripplanner/OpenTripPlanner",
+      "help_website": [
+        "https://www.opentripplanner.org/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "transportation",
+        "routing",
+        "urban-planning",
+        "gis"
+      ],
+      "id": 101
+    },
+    {
+      "name": "AeroSandbox",
+      "one_line_profile": "Aircraft design optimization and aerodynamics analysis tool",
+      "detailed_description": "A Python library for aircraft design optimization that leverages automatic differentiation for fast aerodynamic, propulsion, and structural analysis, enabling complex engineering simulations.",
+      "domains": [
+        "Aerospace Engineering",
+        "Physics"
+      ],
+      "subtask_category": [
+        "scientific_modeling",
+        "optimization",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/peterdsharpe/AeroSandbox",
+      "help_website": [
+        "https://peterdsharpe.github.io/AeroSandbox/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "aerodynamics",
+        "optimization",
+        "aircraft-design",
+        "physics"
+      ],
+      "id": 102
+    },
+    {
+      "name": "Polyaxon",
+      "one_line_profile": "MLOps platform for reproducible machine learning experiments and workflow orchestration",
+      "detailed_description": "Polyaxon is a platform for reproducing and managing the whole life cycle of machine learning projects, including workflow orchestration and sandboxed execution of experiments.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "experiment_tracking"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/polyaxon/polyaxon",
+      "help_website": [
+        "https://polyaxon.com/docs/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "mlops",
+        "workflow-orchestration",
+        "reproducibility",
+        "kubernetes"
+      ],
+      "id": 103
+    },
+    {
+      "name": "pctx",
+      "one_line_profile": "Secure sandboxed execution layer for AI agent tool calls",
+      "detailed_description": "pctx provides an execution layer for agentic tool calls, exposing custom tools and MCP servers as code that runs in secure sandboxes, facilitating safe code execution for AI agents.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "code_interpretation"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/portofcontext/pctx",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sandbox",
+        "agent-tools",
+        "security",
+        "mcp"
+      ],
+      "id": 104
+    },
+    {
+      "name": "sandbox-mcp",
+      "one_line_profile": "MCP server for running code in isolated Docker containers",
+      "detailed_description": "A Model Context Protocol (MCP) server that enables Large Language Models (LLMs) to execute arbitrary code safely within isolated Docker containers, serving as a secure sandbox runner.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "code_interpretation"
+      ],
+      "application_level": "service",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/pottekkat/sandbox-mcp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "sandbox",
+        "docker",
+        "llm-tools"
+      ],
+      "id": 105
+    },
+    {
+      "name": "mcp-run-python",
+      "one_line_profile": "MCP server to execute Python code in a secure sandbox environment",
+      "detailed_description": "An MCP server implementation that allows AI agents to run Python code within a sandboxed environment, enabling safe code execution and data processing capabilities for LLMs.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "code_interpretation"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pydantic/mcp-run-python",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "python",
+        "sandbox",
+        "agent-tools"
+      ],
+      "id": 106
+    },
+    {
+      "name": "matplotlib-pyodide",
+      "one_line_profile": "Matplotlib backend for rendering plots in Pyodide (WASM) environments",
+      "detailed_description": "Provides HTML5 backends for Matplotlib, enabling scientific visualization within Pyodide-based browser sandboxes, essential for client-side scientific data analysis.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "scientific_visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pyodide/matplotlib-pyodide",
+      "help_website": [],
+      "license": "MPL-2.0",
+      "tags": [
+        "visualization",
+        "matplotlib",
+        "wasm",
+        "pyodide"
+      ],
+      "id": 107
+    },
+    {
+      "name": "Pyodide",
+      "one_line_profile": "Python distribution for the browser based on WebAssembly with scientific stack support",
+      "detailed_description": "Pyodide is a port of CPython to WebAssembly/Emscripten, enabling the deployment of the scientific Python stack (NumPy, Pandas, Matplotlib, etc.) in browser sandboxes and Node.js.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "runtime_environment",
+        "scientific_computing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pyodide/pyodide",
+      "help_website": [
+        "https://pyodide.org/en/stable/"
+      ],
+      "license": "MPL-2.0",
+      "tags": [
+        "wasm",
+        "python",
+        "scientific-computing",
+        "sandbox"
+      ],
+      "id": 108
+    },
+    {
+      "name": "GPT Code UI",
+      "one_line_profile": "Open source implementation of OpenAI's ChatGPT Code Interpreter",
+      "detailed_description": "A web-based platform that provides a Python sandbox environment for Large Language Models (LLMs) to generate and execute code. It enables scientific workflows such as data analysis, visualization, and file processing through natural language instructions, mimicking the functionality of OpenAI's Code Interpreter.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "data_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ricklamers/gpt-code-ui",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "code-interpreter",
+        "sandbox",
+        "llm-agent",
+        "data-analysis"
+      ],
+      "id": 109
+    },
+    {
+      "name": "law",
+      "one_line_profile": "Large-scale task workflow management system for High Energy Physics",
+      "detailed_description": "A workflow management tool based on Luigi, designed for High Energy Physics (HEP) analyses. It handles job submission to remote infrastructure and provides environment sandboxing using Docker and Singularity, ensuring reproducible scientific computation pipelines.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "job_submission"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/riga/law",
+      "help_website": [
+        "https://law.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "workflow",
+        "physics",
+        "hep",
+        "sandboxing",
+        "luigi"
+      ],
+      "id": 110
+    },
+    {
+      "name": "Smart Grasping Sandbox",
+      "one_line_profile": "Simulation sandbox for robotic grasping research",
+      "detailed_description": "A public simulation sandbox designed for research into robotic grasping using Shadow Robot's hardware. It provides a virtual environment (often via Jupyter Notebooks) for testing and developing grasping algorithms and control strategies.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "robotics_simulation",
+        "control_policy"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/shadow-robot/smart_grasping_sandbox",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "robotics",
+        "simulation",
+        "grasping",
+        "sandbox"
+      ],
+      "id": 111
+    },
+    {
+      "name": "CodeBoxAPI",
+      "one_line_profile": "Sandboxing infrastructure for LLM-based code execution",
+      "detailed_description": "A scalable and secure sandboxing infrastructure designed to execute code generated by Large Language Models (LLMs). It serves as the backend execution engine for AI agents performing scientific data analysis, plotting, and calculation tasks.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox_execution",
+        "code_interpreter"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shroominic/codebox-api",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sandbox",
+        "llm",
+        "code-execution",
+        "infrastructure"
+      ],
+      "id": 112
+    },
+    {
+      "name": "CodeInterpreterAPI",
+      "one_line_profile": "Open source implementation of ChatGPT Code Interpreter",
+      "detailed_description": "A Python library that implements the Code Interpreter pattern for LLMs, allowing agents to execute Python code in a sandbox (using CodeBox) to perform data analysis, file manipulation, and visualization tasks relevant to scientific research.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shroominic/codeinterpreter-api",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "agent",
+        "code-interpreter",
+        "llm",
+        "data-science"
+      ],
+      "id": 113
+    },
+    {
+      "name": "IncognitoPilot",
+      "one_line_profile": "Local AI code interpreter for sensitive data analysis",
+      "detailed_description": "An AI code interpreter designed to run locally, enabling the secure analysis of sensitive scientific data using LLMs (like Llama 2 or GPT-4). It provides a sandbox environment where code is executed on the user's machine, ensuring data privacy.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "data_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/silvanmelchior/IncognitoPilot",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "local-llm",
+        "code-interpreter",
+        "privacy",
+        "data-analysis"
+      ],
+      "id": 114
+    },
+    {
+      "name": "WhyNot",
+      "one_line_profile": "A Python sandbox for decision making and causal inference in dynamics",
+      "detailed_description": "WhyNot is a Python sandbox designed for research in decision making within dynamic environments. It provides a set of simulators and tools to study causal inference and reinforcement learning in complex systems.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "causal_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/socialfoundations/whynot",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "causal-inference",
+        "reinforcement-learning",
+        "simulation",
+        "sandbox"
+      ],
+      "id": 115
+    },
+    {
+      "name": "Docker Code Interpreter",
+      "one_line_profile": "Containerized environment for running Open-source Code Interpreters",
+      "detailed_description": "A project providing one-click Docker applications for Open-source Code Interpreters, enabling secure and isolated execution of code generated by AI agents, facilitating data analysis and calculation tasks.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandbox_environment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/soulteary/docker-code-interpreter",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "code-interpreter",
+        "docker",
+        "sandbox",
+        "ai-agent"
+      ],
+      "id": 116
+    },
+    {
+      "name": "Spring AI Agents",
+      "one_line_profile": "Autonomous agent integrations for Spring AI with secure sandbox execution",
+      "detailed_description": "A library providing autonomous agent capabilities for the Spring AI ecosystem, featuring secure sandbox execution environments for running agent-generated code, essential for reliable scientific workflows.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "code_execution"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/spring-ai-community/spring-ai-agents",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "spring-ai",
+        "agent",
+        "sandbox",
+        "java"
+      ],
+      "id": 117
+    },
+    {
+      "name": "QuantumSheet",
+      "one_line_profile": "User-friendly mathematics worksheet and solver",
+      "detailed_description": "A web-based tool for mathematical calculation and solving, providing a worksheet interface for executing mathematical operations and solving equations.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "calculation",
+        "solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/stefnotch/quantum-sheet",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "math",
+        "solver",
+        "worksheet"
+      ],
+      "id": 118
+    },
+    {
+      "name": "SandboxAI",
+      "one_line_profile": "Isolated sandbox environment for running AI-generated code",
+      "detailed_description": "A platform for executing code generated by AI agents in isolated sandboxes, ensuring safety and reproducibility for computational tasks and data analysis.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandbox_environment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/substratusai/sandboxai",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "sandbox",
+        "ai-code-execution",
+        "security"
+      ],
+      "id": 119
+    },
+    {
+      "name": "Super RAG",
+      "one_line_profile": "RAG pipelines with integrated Code Interpreters",
+      "detailed_description": "A library for building RAG pipelines that includes built-in Code Interpreter capabilities, allowing AI agents to perform data analysis and summarization tasks.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "code_execution"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/superagent-ai/super-rag",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rag",
+        "code-interpreter",
+        "data-analysis"
+      ],
+      "id": 120
+    },
+    {
+      "name": "VibeKit",
+      "one_line_profile": "Isolated sandbox for running coding agents",
+      "detailed_description": "A toolkit for running coding agents (like Claude Code, Gemini) in clean, isolated sandboxes with data redaction and observability, facilitating secure scientific code execution.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandbox_environment"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/superagent-ai/vibekit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sandbox",
+        "agent-runner",
+        "code-execution"
+      ],
+      "id": 121
+    },
+    {
+      "name": "OpenDataInterpreter",
+      "one_line_profile": "Agent for data analytics and visualization",
+      "detailed_description": "An AI agent tool designed to interpret data, perform analytics, and generate visualizations by conversing with the data, automating the data science workflow.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/suvansh/OpenDataInterpreter",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "data-analysis",
+        "visualization",
+        "agent"
+      ],
+      "id": 122
+    },
+    {
+      "name": "SymPy Live",
+      "one_line_profile": "Web-based interactive shell for SymPy",
+      "detailed_description": "A web-based interactive shell environment for SymPy, a Python library for symbolic mathematics, allowing users to perform symbolic computation in a browser sandbox.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "symbolic_computation",
+        "calculation"
+      ],
+      "application_level": "platform",
+      "primary_language": "CSS",
+      "repo_url": "https://github.com/sympy/live",
+      "help_website": [
+        "https://live.sympy.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "sympy",
+        "math",
+        "symbolic-computation",
+        "shell"
+      ],
+      "id": 123
+    },
+    {
+      "name": "MCP Runner",
+      "one_line_profile": "Sandboxed runner for Dockerized MCP Servers",
+      "detailed_description": "A tool to run Model Context Protocol (MCP) servers in sandboxed Docker containers, enabling AI agents to securely invoke external tools and services.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "tool_invocation",
+        "sandbox_environment"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/tangier-ai/mcp-runner",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mcp",
+        "docker",
+        "sandbox",
+        "agent-tools"
+      ],
+      "id": 124
+    },
+    {
+      "name": "sdsandbox",
+      "one_line_profile": "Sandbox simulator for training self-driving cars",
+      "detailed_description": "A simulation environment using Unity for training self-driving car models with Python, Keras, and Tensorflow, facilitating machine learning research in autonomous driving.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "training"
+      ],
+      "application_level": "solver",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/tawnkramer/sdsandbox",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "simulation",
+        "autonomous-driving",
+        "machine-learning",
+        "unity"
+      ],
+      "id": 125
+    },
+    {
+      "name": "Runno",
+      "one_line_profile": "Sandboxed runtime for programming languages and WASI binaries",
+      "detailed_description": "A sandboxed runtime environment that works in the browser or via MCP, allowing AI agents to execute code in various programming languages securely.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandbox_environment"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/taybenlor/runno",
+      "help_website": [
+        "https://runno.dev"
+      ],
+      "license": "MIT",
+      "tags": [
+        "sandbox",
+        "wasi",
+        "code-execution",
+        "mcp"
+      ],
+      "id": 126
+    },
+    {
+      "name": "Claude Code Sandbox",
+      "one_line_profile": "Secure local Docker sandbox for Claude Code",
+      "detailed_description": "A tool to run Claude Code agents safely in local Docker containers, providing an isolated environment for code execution and tool use without risking the host system.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandbox_environment"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/textcortex/claude-code-sandbox",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "claude",
+        "docker",
+        "sandbox",
+        "security"
+      ],
+      "id": 127
+    },
+    {
+      "name": "CodeBox AI",
+      "one_line_profile": "Secure Python code execution sandbox designed for LLM agents",
+      "detailed_description": "A self-hosted Python code execution service that provides a secure sandbox for Large Language Models (LLMs) to run generated code. It serves as an open-source alternative to OpenAI's Code Interpreter, enabling AI agents to perform data analysis and scientific calculation tasks safely.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandbox"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tomconte/codebox-ai",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sandbox",
+        "llm-agent",
+        "code-interpreter",
+        "python"
+      ],
+      "id": 128
+    },
+    {
+      "name": "Tuplex",
+      "one_line_profile": "High-performance parallel processing framework for Python data science pipelines",
+      "detailed_description": "A big data processing framework that compiles Python data science pipelines into optimized LLVM bytecode. It allows data scientists to write standard Python code (similar to PySpark or Dask) while achieving performance comparable to compiled C++ code, specifically targeting scientific data cleaning and transformation tasks.",
+      "domains": [
+        "AI5",
+        "AI5-06",
+        "AI5-01"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "pipeline_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/tuplex/tuplex",
+      "help_website": [
+        "https://tuplex.cs.brown.edu"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-science",
+        "pipeline",
+        "compiler",
+        "llvm",
+        "parallel-computing"
+      ],
+      "id": 129
+    },
+    {
+      "name": "AI Code Sandbox",
+      "one_line_profile": "Docker-based secure Python sandbox for AI code execution",
+      "detailed_description": "A secure sandboxing solution designed to execute Python code generated by AI/ML models. It utilizes Docker to isolate the execution environment, making it suitable for AI agents performing data analysis, visualization, or other scientific computing tasks without risking the host system.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandbox"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/typper-io/ai-code-sandbox",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "sandbox",
+        "docker",
+        "llm",
+        "python",
+        "security"
+      ],
+      "id": 130
+    },
+    {
+      "name": "Fiber",
+      "one_line_profile": "Distributed computing library for large-scale AI and scientific computation",
+      "detailed_description": "A Python distributed computing library developed by Uber that simplifies running large-scale AI and scientific computation workloads across computer clusters. It unifies the interface for local and distributed execution, supporting tasks like reinforcement learning, population-based training, and general scientific simulation.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "distributed_computing",
+        "task_scheduling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uber/fiber",
+      "help_website": [
+        "https://uber.github.io/fiber/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "distributed-systems",
+        "hpc",
+        "reinforcement-learning",
+        "python"
+      ],
+      "id": 131
+    },
+    {
+      "name": "Unity Catalog",
+      "one_line_profile": "Open unified governance solution for data and AI assets",
+      "detailed_description": "A unified governance catalog for data and AI, providing a centralized interface to manage tables, files, and ML models. It supports scientific data management by offering lineage, access control, and discovery capabilities for large-scale datasets used in AI for Science workflows.",
+      "domains": [
+        "AI5",
+        "AI5-01"
+      ],
+      "subtask_category": [
+        "data_management",
+        "data_governance"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/unitycatalog/unitycatalog",
+      "help_website": [
+        "https://www.unitycatalog.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-catalog",
+        "governance",
+        "lakehouse",
+        "metadata"
+      ],
+      "id": 132
+    },
+    {
+      "name": "LLM Sandbox",
+      "one_line_profile": "Lightweight Python code interpreter sandbox for LLMs",
+      "detailed_description": "A portable Python library that provides a sandboxed runtime environment for Large Language Models to execute code. It is designed to facilitate the development of AI agents that require safe code execution capabilities for tasks such as data analysis, mathematical calculation, and scientific simulation.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandbox"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/vndee/llm-sandbox",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "code-interpreter",
+        "sandbox",
+        "llm",
+        "python",
+        "agent"
+      ],
+      "id": 133
+    },
+    {
+      "name": "stlite",
+      "one_line_profile": "Serverless Wasm runtime for Streamlit data science applications",
+      "detailed_description": "A tool that enables running Streamlit applications entirely in the browser using WebAssembly (Pyodide), facilitating the deployment and sharing of scientific data visualization and analysis dashboards without backend infrastructure.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "scientific_visualization",
+        "data_app_deployment"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/whitphx/stlite",
+      "help_website": [
+        "https://stlite.net"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "streamlit",
+        "wasm",
+        "data-science",
+        "visualization",
+        "pyodide"
+      ],
+      "id": 134
+    },
+    {
+      "name": "OCP.wasm",
+      "one_line_profile": "WebAssembly port of Build123d for browser-based CAD modeling",
+      "detailed_description": "A tool wrapping the Build123d Python CAD library into WebAssembly, enabling parametric 3D modeling and engineering design directly in the browser.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "scientific_modeling",
+        "cad",
+        "engineering_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yeicor/OCP.wasm",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cad",
+        "wasm",
+        "build123d",
+        "modeling",
+        "python"
+      ],
+      "id": 135
+    },
+    {
+      "name": "mcp-code-execution-enhanced",
+      "one_line_profile": "Sandboxed code execution provider for AI agents via MCP",
+      "detailed_description": "A tool implementing the Model Context Protocol (MCP) for secure, sandboxed code execution, enabling AI agents to perform data analysis and scientific computation tasks safely.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "sandbox",
+        "agent_tool"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yoloshii/mcp-code-execution-enhanced",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "mcp",
+        "sandbox",
+        "agent",
+        "code-execution"
+      ],
+      "id": 136
+    },
+    {
+      "name": "code-atlas",
+      "one_line_profile": "C++ implementation of Open Interpreter for efficient agentic code execution",
+      "detailed_description": "A high-performance implementation of the Open Interpreter pattern, serving as a tool for AI agents to execute code for tasks such as data analysis and scientific computing.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "data_analysis",
+        "agent_tool"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ystemsrx/code-atlas",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "open-interpreter",
+        "agent",
+        "code-execution",
+        "cpp"
+      ],
+      "id": 137
+    },
+    {
+      "name": "microsandbox",
+      "one_line_profile": "Self-hosted sandboxes for AI agent code execution",
+      "detailed_description": "A specialized sandbox environment designed for AI agents to securely execute generated code, essential for automated scientific data analysis and workflow orchestration.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox",
+        "code_execution",
+        "agent_infrastructure"
+      ],
+      "application_level": "platform",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/zerocore-ai/microsandbox",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "sandbox",
+        "ai-agent",
+        "code-execution",
+        "rust"
+      ],
+      "id": 138
+    },
+    {
+      "name": "codeinterpreter-codebox",
+      "one_line_profile": "Cloud sandbox service for Python code interpreters",
+      "detailed_description": "A tool providing isolated Python environments (sandboxes) specifically for 'Code Interpreter' applications, enabling secure execution of data analysis and scientific code generated by LLMs.",
+      "domains": [
+        "AI5",
+        "AI5-06"
+      ],
+      "subtask_category": [
+        "sandbox",
+        "code_execution",
+        "data_analysis"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhangzhejian/codeinterpreter-codebox",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "code-interpreter",
+        "sandbox",
+        "python",
+        "llm"
+      ],
+      "id": 139
+    }
+  ]
+}

@@ -1,0 +1,1705 @@
+{
+  "generated_at": "2025-12-16T05:14:34.078267+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "S2",
+      "leaf_cluster_name": "结构生物-功能/位点/相互作用预测生态",
+      "domain": "StructBio",
+      "typical_objects": "seq/graph/structure",
+      "task_chain": "表征→功能/位点→相互作用→解释→benchmark",
+      "tool_form": "模型库 + 数据集 + 评测"
+    },
+    "unit": {
+      "unit_id": "S2-05",
+      "unit_name": "可解释性与归因/突变扫描",
+      "target_scale": "150–300",
+      "coverage_tools": "attribution、in-silico mutagenesis"
+    },
+    "search": {
+      "target_candidates": 300,
+      "queries": [
+        "[GH] Bio-embeddings",
+        "[GH] MSA Transformer",
+        "[GH] AlphaMissense",
+        "[GH] GEMME",
+        "[GH] ProteinGym",
+        "[GH] DeepSequence",
+        "[GH] Tranception",
+        "[GH] EVE",
+        "[GH] ESM-1v",
+        "[GH] variant effect prediction",
+        "[GH] deep mutational scanning",
+        "[GH] in-silico mutagenesis",
+        "[GH] protein fitness prediction",
+        "[GH] zero-shot variant prediction",
+        "[GH] protein model interpretability",
+        "[GH] saliency map protein",
+        "[GH] attention visualization protein",
+        "[GH] mutation scoring",
+        "[GH] evolutionary landscape",
+        "[GH] sequence attribution",
+        "[GH] structural impact prediction",
+        "[GH] protein language model analysis",
+        "[WEB] protein variant effect prediction github",
+        "[WEB] deep learning in-silico mutagenesis github",
+        "[WEB] protein language model interpretability github",
+        "[WEB] zero-shot mutation prediction tools github",
+        "[WEB] deep mutational scanning analysis github",
+        "[WEB] protein model saliency maps github"
+      ],
+      "total_candidates": 658,
+      "tool_candidates": 178,
+      "final_tools": 66
+    }
+  },
+  "tools": [
+    {
+      "name": "Iterative_masking",
+      "one_line_profile": "Iterative masking algorithm on MSA Transformer for synthetic sequence generation",
+      "detailed_description": "An algorithm that uses iterative masking on MSA Transformers to generate synthetic protein sequences, useful for data augmentation and evolutionary modeling.",
+      "domains": [
+        "S2",
+        "S1"
+      ],
+      "subtask_category": [
+        "sequence_generation",
+        "evolutionary_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Bitbol-Lab/Iterative_masking",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "msa-transformer",
+        "synthetic-data",
+        "protein-design"
+      ],
+      "id": 1
+    },
+    {
+      "name": "CDMetaPOP",
+      "one_line_profile": "Individual-based eco-evolutionary model for landscape demogenetics",
+      "detailed_description": "A spatially-explicit simulation tool for modeling population viability and genetics in complex landscapes, tracking individual eco-evolutionary dynamics.",
+      "domains": [
+        "Ecology",
+        "Evolutionary Biology"
+      ],
+      "subtask_category": [
+        "simulation",
+        "population_genetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ComputationalEcologyLab/CDMetaPOP",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "eco-evolutionary",
+        "simulation",
+        "demogenetics"
+      ],
+      "id": 2
+    },
+    {
+      "name": "bio-datasets",
+      "one_line_profile": "Collection of biological datasets and embeddings loaders",
+      "detailed_description": "A library designed to simplify the access and loading of various biological datasets and pre-computed protein embeddings for machine learning tasks.",
+      "domains": [
+        "S2",
+        "S1"
+      ],
+      "subtask_category": [
+        "data_loading",
+        "dataset_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DeepChainBio/bio-datasets",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "datasets",
+        "embeddings",
+        "bioinformatics"
+      ],
+      "id": 3
+    },
+    {
+      "name": "bio-transformers",
+      "one_line_profile": "Wrapper for protein language models to generate embeddings",
+      "detailed_description": "A wrapper library built on top of ESM and ProtBert models to facilitate the generation of protein embeddings for downstream prediction tasks.",
+      "domains": [
+        "S2",
+        "S1"
+      ],
+      "subtask_category": [
+        "embedding_generation",
+        "feature_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DeepChainBio/bio-transformers",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "esm",
+        "protbert",
+        "embeddings"
+      ],
+      "id": 4
+    },
+    {
+      "name": "S3F",
+      "one_line_profile": "Sequence-Structure-Surface Model for Protein Fitness Prediction",
+      "detailed_description": "A deep learning model that integrates sequence, structure, and surface features to predict protein fitness and mutational effects.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "fitness_prediction",
+        "variant_effect_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DeepGraphLearning/S3F",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-fitness",
+        "structure-prediction",
+        "deep-learning"
+      ],
+      "id": 5
+    },
+    {
+      "name": "mutatex",
+      "one_line_profile": "Pipeline for in-silico mutagenesis using FoldX",
+      "detailed_description": "A Python wrapper and pipeline for automating in-silico mutagenesis experiments and stability calculations using the FoldX force field.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "in_silico_mutagenesis",
+        "stability_prediction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ELELAB/mutatex",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "foldx",
+        "mutagenesis",
+        "protein-stability"
+      ],
+      "id": 6
+    },
+    {
+      "name": "InterPLM",
+      "one_line_profile": "Interpretability framework for Protein Language Models",
+      "detailed_description": "A tool for discovering interpretable features in protein language models using sparse autoencoders, aiding in the understanding of model representations.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "interpretability",
+        "feature_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ElanaPearl/InterPLM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "interpretability",
+        "plm",
+        "sparse-autoencoders"
+      ],
+      "id": 7
+    },
+    {
+      "name": "Enrich2",
+      "one_line_profile": "Analysis tool for deep mutational scanning experiments",
+      "detailed_description": "A software package for processing, analyzing, and visualizing data from deep mutational scanning (DMS) experiments to calculate enrichment ratios.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "dms_analysis",
+        "variant_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FowlerLab/Enrich2",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "dms",
+        "ngs",
+        "mutational-scanning"
+      ],
+      "id": 8
+    },
+    {
+      "name": "Envision",
+      "one_line_profile": "Predictor of protein variant molecular effects",
+      "detailed_description": "A machine learning model trained on large-scale experimental mutagenesis data to predict the molecular effects of protein variants.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "fitness_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/FowlerLab/Envision2017",
+      "help_website": [
+        "https://envision.gs.washington.edu/"
+      ],
+      "license": null,
+      "tags": [
+        "variant-prediction",
+        "dms",
+        "machine-learning"
+      ],
+      "id": 9
+    },
+    {
+      "name": "Selene",
+      "one_line_profile": "Framework for sequence-level deep learning in genomics",
+      "detailed_description": "A PyTorch-based framework designed for developing, training, and evaluating deep learning models on biological sequence data.",
+      "domains": [
+        "S1",
+        "S2"
+      ],
+      "subtask_category": [
+        "sequence_modeling",
+        "model_training"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/FunctionLab/selene",
+      "help_website": [],
+      "license": "BSD-3-Clause-Clear",
+      "tags": [
+        "genomics",
+        "deep-learning",
+        "sequence-analysis"
+      ],
+      "id": 10
+    },
+    {
+      "name": "protein-localization",
+      "one_line_profile": "Subcellular localization prediction using Transformer embeddings",
+      "detailed_description": "A model utilizing Transformer-based protein embeddings and linear attention mechanisms to predict the subcellular localization of proteins.",
+      "domains": [
+        "S2"
+      ],
+      "subtask_category": [
+        "localization_prediction",
+        "cell_biology"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/HannesStark/protein-localization",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "subcellular-localization",
+        "transformers",
+        "embeddings"
+      ],
+      "id": 11
+    },
+    {
+      "name": "Hierarchical Importance Attribution",
+      "one_line_profile": "Hierarchical explanation for neural sequence models",
+      "detailed_description": "Implementation of hierarchical importance attribution methods to explain compositional semantics and feature importance in neural sequence models.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "attribution",
+        "interpretability"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/INK-USC/hierarchical-explanation-neural-sequence-models",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "interpretability",
+        "nlp",
+        "sequence-models"
+      ],
+      "id": 12
+    },
+    {
+      "name": "LucaVirus",
+      "one_line_profile": "Unified genome-protein language model for viruses",
+      "detailed_description": "A deep learning model for modeling the evolutionary and functional landscape of viruses, utilizing both genome and protein information.",
+      "domains": [
+        "S2",
+        "S1"
+      ],
+      "subtask_category": [
+        "viral_evolution",
+        "fitness_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LucaOne/LucaVirus",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "virus",
+        "evolution",
+        "language-model"
+      ],
+      "id": 13
+    },
+    {
+      "name": "PyMissense",
+      "one_line_profile": "Pathogenicity plot and PDB visualization for AlphaMissense",
+      "detailed_description": "A tool to generate pathogenicity plots and map AlphaMissense predictions onto PDB structures for custom proteins.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "visualization",
+        "variant_effect_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MPI-Dortmund/pymissense",
+      "help_website": [],
+      "license": "MPL-2.0",
+      "tags": [
+        "alphamissense",
+        "visualization",
+        "pathogenicity"
+      ],
+      "id": 14
+    },
+    {
+      "name": "Lomap",
+      "one_line_profile": "Alchemical mutation scoring map for free energy calculations",
+      "detailed_description": "A tool to plan relative free energy calculations by constructing a graph of alchemical mutations between ligands.",
+      "domains": [
+        "S2",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "free_energy_calculation",
+        "mutation_planning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MobleyLab/Lomap",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "free-energy",
+        "alchemical",
+        "ligand-design"
+      ],
+      "id": 15
+    },
+    {
+      "name": "dms-pipeline",
+      "one_line_profile": "Snakemake pipeline for DMS data quantification",
+      "detailed_description": "A bioinformatics pipeline for processing paired-end reads from deep mutational scanning experiments to quantify variants.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "dms_quantification",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Novartis/dms-pipeline",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dms",
+        "snakemake",
+        "ngs"
+      ],
+      "id": 16
+    },
+    {
+      "name": "ProteinGym",
+      "one_line_profile": "Benchmarks for protein fitness prediction and design",
+      "detailed_description": "A comprehensive benchmark suite and platform for evaluating protein fitness prediction models and design algorithms.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "fitness_prediction"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/OATML-Markslab/ProteinGym",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "protein-fitness",
+        "evaluation"
+      ],
+      "id": 17
+    },
+    {
+      "name": "Tranception",
+      "one_line_profile": "Protein fitness prediction with autoregressive transformers",
+      "detailed_description": "A model for predicting protein fitness using autoregressive transformers and inference-time retrieval mechanisms.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "fitness_prediction",
+        "variant_effect_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OATML-Markslab/Tranception",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "transformers",
+        "fitness-prediction",
+        "retrieval"
+      ],
+      "id": 18
+    },
+    {
+      "name": "Lomap (OpenFreeEnergy)",
+      "one_line_profile": "Alchemical mutation scoring map (OpenFreeEnergy fork)",
+      "detailed_description": "A maintained version of Lomap for planning alchemical relative free energy calculations in drug discovery.",
+      "domains": [
+        "S2",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "free_energy_calculation",
+        "mutation_planning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenFreeEnergy/Lomap",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "free-energy",
+        "alchemical",
+        "drug-discovery"
+      ],
+      "id": 19
+    },
+    {
+      "name": "ProLLaMA",
+      "one_line_profile": "Protein Large Language Model for Multi-Task Processing",
+      "detailed_description": "A protein large language model adapted from LLaMA, capable of handling multiple protein language processing tasks.",
+      "domains": [
+        "S2",
+        "S1"
+      ],
+      "subtask_category": [
+        "protein_language_model",
+        "multi_task_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PKU-YuanGroup/ProLLaMA",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "protein-design",
+        "nlp"
+      ],
+      "id": 20
+    },
+    {
+      "name": "ProteinGym/proteingym-base",
+      "one_line_profile": "Infrastructure and data classes for protein variant effect prediction benchmarking",
+      "detailed_description": "A foundational library for the ProteinGym benchmark, providing data classes to combine assays, sequences, MSAs, and structures into coherent packages, along with model cards for supervised and zero-shot ML models in variant effect prediction.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "benchmarking",
+        "data_handling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ProteinGym/proteingym-base",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "variant-effect-prediction",
+        "benchmark",
+        "protein-engineering"
+      ],
+      "id": 21
+    },
+    {
+      "name": "ProteinGym/proteingym-benchmark",
+      "one_line_profile": "Comprehensive benchmark suite for protein variant effect prediction models",
+      "detailed_description": "A collection of variant effect prediction models and a DVC-based pipeline to perform benchmarking experiments against ProteinGym datasets. Includes a webapp for listing model performance.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "benchmarking",
+        "model_evaluation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ProteinGym/proteingym-benchmark",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "variant-effect-prediction",
+        "dvc"
+      ],
+      "id": 22
+    },
+    {
+      "name": "VESPA",
+      "one_line_profile": "Single Amino Acid Variant effect predictor using ProtT5 embeddings",
+      "detailed_description": "VESPA (Variant Effect Score Prediction using All-embeddings) is a predictor for Single Amino Acid Variant (SAV) effects, leveraging embeddings from the Protein Language Model ProtT5 to assess functional impacts.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "mutation_scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Rostlab/VESPA",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "protT5",
+        "variant-prediction",
+        "embeddings"
+      ],
+      "id": 23
+    },
+    {
+      "name": "protPheMut",
+      "one_line_profile": "ML and graph-based tool for scoring missense mutations to phenotypes",
+      "detailed_description": "A tool utilizing machine learning and graph-based approaches to provide indicators and scores for linking missense mutations to specific phenotypes.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "phenotype_scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Spencer-JRWang/protPheMut",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "missense-mutation",
+        "graph-neural-networks",
+        "phenotype"
+      ],
+      "id": 24
+    },
+    {
+      "name": "Pythia",
+      "one_line_profile": "Structure-based predictor for protein stability changes upon mutation",
+      "detailed_description": "A structure-based self-supervised learning tool that enables ultrafast prediction of thermodynamic stability changes (Delta Delta G) caused by protein mutations.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "stability_prediction",
+        "mutation_effect"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Wublab/Pythia",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ddg",
+        "protein-stability",
+        "self-supervised-learning"
+      ],
+      "id": 25
+    },
+    {
+      "name": "DISAE",
+      "one_line_profile": "MSA-regularized transformer for predicting chemical-protein interactions",
+      "detailed_description": "A protein sequence transformer model regularized by Multiple Sequence Alignments (MSA) designed to predict genome-wide chemical-protein interactions, with applications in GPCR deorphanization.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "sequence_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/XieResearchGroup/DISAE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cpi",
+        "transformer",
+        "gpcr"
+      ],
+      "id": 26
+    },
+    {
+      "name": "Maverick",
+      "one_line_profile": "Mendelian approach to variant effect prediction",
+      "detailed_description": "A Keras-based deep learning tool for predicting the effects of genetic variants, utilizing a Mendelian approach to assess pathogenicity.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "pathogenicity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ZuchnerLab/Maverick",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "variant-prediction",
+        "mendelian",
+        "keras"
+      ],
+      "id": 27
+    },
+    {
+      "name": "VenusFSFP",
+      "one_line_profile": "Few-shot protein fitness prediction model",
+      "detailed_description": "A machine learning model designed for few-shot prediction of protein fitness landscapes, enabling accurate predictions with limited labeled data.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "fitness_prediction",
+        "few_shot_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ai4protein/VenusFSFP",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "protein-fitness",
+        "few-shot",
+        "machine-learning"
+      ],
+      "id": 28
+    },
+    {
+      "name": "VenusREM",
+      "one_line_profile": "Retrieval-augmented zero-shot mutant prediction tool",
+      "detailed_description": "A tool that augments zero-shot mutant effect prediction by using retrieval-based logits fusion, improving accuracy in assessing protein variants.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "zero_shot_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ai4protein/VenusREM",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "retrieval-augmented",
+        "mutant-prediction",
+        "zero-shot"
+      ],
+      "id": 29
+    },
+    {
+      "name": "metapointfinder",
+      "one_line_profile": "Tool for finding and scoring resistance-causing mutations in long reads",
+      "detailed_description": "A bioinformatics tool designed to identify and score mutations that cause resistance, specifically tailored for analyzing long-read sequencing data.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "mutation_detection",
+        "resistance_scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aldertzomer/metapointfinder",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "long-read",
+        "mutation-detection",
+        "resistance"
+      ],
+      "id": 30
+    },
+    {
+      "name": "VaLiAnT",
+      "one_line_profile": "Variant Library Annotation Tool for Deep Mutational Scanning",
+      "detailed_description": "VaLiAnT (Variant Library Annotation Tool) is designed for the design and annotation of oligonucleotide libraries used in Saturation Genome Editing and Deep Mutational Scanning (DMS) experiments.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "library_design",
+        "variant_annotation",
+        "dms"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cancerit/VaLiAnT",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "dms",
+        "library-design",
+        "variant-annotation"
+      ],
+      "id": 31
+    },
+    {
+      "name": "SUsPECT",
+      "one_line_profile": "Variant effect prediction pipeline using custom long-read transcriptomes",
+      "detailed_description": "A Nextflow pipeline for predicting the effects of variants by leveraging custom long-read transcriptome data, enabling more accurate assessment in specific genomic contexts.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "transcriptomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/cmbi/SUsPECT",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "nextflow",
+        "long-read",
+        "variant-prediction"
+      ],
+      "id": 32
+    },
+    {
+      "name": "DeepSequence",
+      "one_line_profile": "Generative latent variable model for biological sequence families",
+      "detailed_description": "A deep generative model that learns the latent structure of biological sequence families, widely used for predicting the effects of mutations based on evolutionary information.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "sequence_modeling",
+        "mutation_effect_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/debbiemarkslab/DeepSequence",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "generative-model",
+        "evolutionary-inference",
+        "mutation-effect"
+      ],
+      "id": 33
+    },
+    {
+      "name": "SeqDesign",
+      "one_line_profile": "Autoregressive generative models for protein design and variant prediction",
+      "detailed_description": "A toolkit for protein design and variant effect prediction utilizing autoregressive generative models to capture sequence dependencies.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "protein_design",
+        "variant_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/debbiemarkslab/SeqDesign",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "autoregressive",
+        "protein-design",
+        "generative-model"
+      ],
+      "id": 34
+    },
+    {
+      "name": "dms-vep-pipeline-3",
+      "one_line_profile": "Pipeline for analyzing deep mutational scanning of viral entry proteins",
+      "detailed_description": "A comprehensive analysis pipeline specifically designed for processing and interpreting Deep Mutational Scanning (DMS) data of viral entry proteins.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "dms_analysis",
+        "viral_evolution"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/dms-vep/dms-vep-pipeline-3",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dms",
+        "virology",
+        "pipeline"
+      ],
+      "id": 35
+    },
+    {
+      "name": "HyPepTox-Fuse",
+      "one_line_profile": "Hybrid framework for peptide toxicity prediction using PLM embeddings",
+      "detailed_description": "An interpretable hybrid framework that accurately predicts peptide toxicity by fusing embeddings from protein language models with conventional physicochemical descriptors.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "toxicity_prediction",
+        "function_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/duongttr/HyPepTox-Fuse",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "peptide-toxicity",
+        "protein-language-model",
+        "hybrid-model"
+      ],
+      "id": 36
+    },
+    {
+      "name": "mutmatch",
+      "one_line_profile": "Tool for estimating somatic gene selection and epistasis",
+      "detailed_description": "A statistical tool for estimating somatic gene selection and epistasis by analyzing neighboring gene mutation rates and CADD scores, focusing on low-impact mutations.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "selection_estimation",
+        "epistasis_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ebesedina/mutmatch",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "somatic-mutation",
+        "epistasis",
+        "selection"
+      ],
+      "id": 37
+    },
+    {
+      "name": "interprot",
+      "one_line_profile": "Sparse Autoencoders for interpreting protein language model features",
+      "detailed_description": "A library to train and evaluate Sparse Autoencoders (SAEs) aimed at identifying interpretable features within Protein Language Models (pLMs), facilitating scientific discovery in protein representation learning.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "interpretability",
+        "feature_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/etowahadams/interprot",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "interpretability",
+        "sparse-autoencoder",
+        "protein-language-model"
+      ],
+      "id": 38
+    },
+    {
+      "name": "DeepFRI",
+      "one_line_profile": "Deep learning model for protein function prediction using graph convolutional networks",
+      "detailed_description": "DeepFRI (Deep Functional Residue Identification) is a Graph Convolutional Network (GCN) based method for predicting protein functions by leveraging sequence and structure features. It provides interpretable predictions by identifying key residues (saliency maps) responsible for specific functions.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "function_prediction",
+        "residue_attribution",
+        "structure_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/flatironinstitute/DeepFRI",
+      "help_website": [
+        "https://github.com/flatironinstitute/DeepFRI"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "protein-function",
+        "gcn",
+        "interpretability",
+        "structure-prediction"
+      ],
+      "id": 39
+    },
+    {
+      "name": "mutscan",
+      "one_line_profile": "R package for processing and visualizing Deep Mutational Scanning (DMS) data",
+      "detailed_description": "mutscan is a software tool designed to process, statistically analyze, and visualize data from Deep Mutational Scanning experiments. It facilitates the understanding of how mutations affect protein function through comprehensive data handling pipelines.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "dms_analysis",
+        "visualization",
+        "statistical_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/fmicompbio/mutscan",
+      "help_website": [
+        "https://github.com/fmicompbio/mutscan"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "dms",
+        "mutation-scanning",
+        "visualization",
+        "r-package"
+      ],
+      "id": 40
+    },
+    {
+      "name": "MMSplice / MTSplice",
+      "one_line_profile": "Predicting effects of genetic variants on splicing",
+      "detailed_description": "MMSplice (Modular Modeling of Splicing) and MTSplice predict the effects of variants on exon skipping, splice site choice, and splicing efficiency. It uses neural networks to model splicing regulation and can predict tissue-specific effects.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "splicing_prediction",
+        "in_silico_mutagenesis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gagneurlab/MMSplice_MTSplice",
+      "help_website": [
+        "https://github.com/gagneurlab/MMSplice_MTSplice"
+      ],
+      "license": "MIT",
+      "tags": [
+        "splicing",
+        "variant-effect",
+        "genomics",
+        "deep-learning"
+      ],
+      "id": 41
+    },
+    {
+      "name": "nn4dms",
+      "one_line_profile": "Neural networks for modeling Deep Mutational Scanning data",
+      "detailed_description": "nn4dms provides neural network architectures and training pipelines specifically designed for analyzing Deep Mutational Scanning (DMS) datasets, enabling the mapping of sequence variants to functional scores.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "dms_modeling",
+        "fitness_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/gitter-lab/nn4dms",
+      "help_website": [
+        "https://github.com/gitter-lab/nn4dms"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dms",
+        "neural-networks",
+        "protein-engineering"
+      ],
+      "id": 42
+    },
+    {
+      "name": "metalic",
+      "one_line_profile": "Meta in-context learning for protein fitness prediction",
+      "detailed_description": "Metalic is a framework for protein fitness prediction using meta-learning and in-context learning approaches. It allows for few-shot prediction of protein properties based on limited data.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "fitness_prediction",
+        "meta_learning",
+        "protein_engineering"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/instadeepai/metalic",
+      "help_website": [
+        "https://github.com/instadeepai/metalic"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "protein-fitness",
+        "meta-learning",
+        "in-context-learning"
+      ],
+      "id": 43
+    },
+    {
+      "name": "dms_tools",
+      "one_line_profile": "Analysis and visualization of Deep Mutational Scanning data",
+      "detailed_description": "A Python package for processing, analyzing, and visualizing data from deep mutational scanning experiments. It handles sequencing data alignment, counting, and calculation of differential selection.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "dms_analysis",
+        "visualization",
+        "alignment"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jbloomlab/dms_tools",
+      "help_website": [
+        "https://jbloomlab.github.io/dms_tools/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "dms",
+        "bioinformatics",
+        "visualization"
+      ],
+      "id": 44
+    },
+    {
+      "name": "dms_tools2",
+      "one_line_profile": "Successor to dms_tools for Deep Mutational Scanning analysis",
+      "detailed_description": "The second version of dms_tools, providing improved pipelines for the analysis and visualization of deep mutational scanning data, including support for barcoded sequencing data.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "dms_analysis",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jbloomlab/dms_tools2",
+      "help_website": [
+        "https://jbloomlab.github.io/dms_tools2/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "dms",
+        "bioinformatics",
+        "ngs-analysis"
+      ],
+      "id": 45
+    },
+    {
+      "name": "dms_variants",
+      "one_line_profile": "Analysis of deep mutational scanning of barcoded variants",
+      "detailed_description": "A Python package specifically designed to analyze deep mutational scanning experiments that use barcoded variants, facilitating the mapping of barcodes to variants and counting.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "dms_analysis",
+        "barcode_mapping"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/jbloomlab/dms_variants",
+      "help_website": [
+        "https://jbloomlab.github.io/dms_variants/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "dms",
+        "barcoding",
+        "variant-analysis"
+      ],
+      "id": 46
+    },
+    {
+      "name": "dmslogo",
+      "one_line_profile": "Sequence logos for Deep Mutational Scanning data",
+      "detailed_description": "A tool to draw sequence logos that are specifically tailored to visualize the results of deep mutational scanning experiments, such as amino acid preferences or differential selection.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "visualization",
+        "dms_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/jbloomlab/dmslogo",
+      "help_website": [
+        "https://jbloomlab.github.io/dmslogo/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "visualization",
+        "sequence-logo",
+        "dms"
+      ],
+      "id": 47
+    },
+    {
+      "name": "phydms",
+      "one_line_profile": "Phylogenetic analyses informed by Deep Mutational Scanning",
+      "detailed_description": "phydms uses data from deep mutational scanning experiments to inform phylogenetic substitution models, allowing for more accurate modeling of protein evolution and selection pressures.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "phylogenetics",
+        "evolutionary_modeling",
+        "dms_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/jbloomlab/phydms",
+      "help_website": [
+        "https://jbloomlab.github.io/phydms/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "phylogenetics",
+        "evolution",
+        "dms"
+      ],
+      "id": 48
+    },
+    {
+      "name": "kipoi-veff",
+      "one_line_profile": "Variant effect prediction plugin for Kipoi",
+      "detailed_description": "kipoi-veff is a plugin for the Kipoi model zoo that enables standard variant effect prediction (VEP) across various genomic deep learning models hosted on Kipoi.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "genomics"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kipoi/kipoi-veff",
+      "help_website": [
+        "https://kipoi.org/veff/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "kipoi",
+        "variant-effect",
+        "genomics"
+      ],
+      "id": 49
+    },
+    {
+      "name": "fastISM",
+      "one_line_profile": "Accelerated In-silico Saturation Mutagenesis",
+      "detailed_description": "fastISM provides a highly optimized implementation for performing In-silico Saturation Mutagenesis (ISM) on convolutional neural networks, significantly speeding up the interpretation of genomic models.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "in_silico_mutagenesis",
+        "interpretability",
+        "model_acceleration"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kundajelab/fastISM",
+      "help_website": [
+        "https://github.com/kundajelab/fastISM"
+      ],
+      "license": "MIT",
+      "tags": [
+        "ism",
+        "interpretability",
+        "genomics"
+      ],
+      "id": 50
+    },
+    {
+      "name": "yuzu",
+      "one_line_profile": "Compressed-sensing based In-silico Mutagenesis",
+      "detailed_description": "yuzu is a tool for rapidly calculating in-silico mutagenesis saliency maps using compressed sensing techniques, enabling efficient interpretation of sequence-based deep learning models.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "in_silico_mutagenesis",
+        "saliency_map",
+        "interpretability"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kundajelab/yuzu",
+      "help_website": [
+        "https://github.com/kundajelab/yuzu"
+      ],
+      "license": "MIT",
+      "tags": [
+        "compressed-sensing",
+        "ism",
+        "saliency"
+      ],
+      "id": 51
+    },
+    {
+      "name": "DiMSum",
+      "one_line_profile": "Pipeline for analyzing Deep Mutational Scanning data",
+      "detailed_description": "DiMSum (Deep Mutational Scanning of U M) is an error model and pipeline for analyzing DMS data. It estimates variant fitness and associated errors, diagnosing experimental pathologies.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "dms_analysis",
+        "error_modeling",
+        "fitness_estimation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/lehner-lab/DiMSum",
+      "help_website": [
+        "https://github.com/lehner-lab/DiMSum"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dms",
+        "pipeline",
+        "error-correction"
+      ],
+      "id": 52
+    },
+    {
+      "name": "MoCHI",
+      "one_line_profile": "Interpretable modeling of Deep Mutational Scanning data",
+      "detailed_description": "MoCHI uses neural networks to fit interpretable thermodynamic models to DMS data, quantifying energies, couplings, epistasis, and allostery directly from high-throughput measurements.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "dms_modeling",
+        "thermodynamics",
+        "interpretability"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lehner-lab/MoCHI",
+      "help_website": [
+        "https://github.com/lehner-lab/MoCHI"
+      ],
+      "license": "MIT",
+      "tags": [
+        "thermodynamics",
+        "epistasis",
+        "dms",
+        "interpretable-ai"
+      ],
+      "id": 53
+    },
+    {
+      "name": "Tranception",
+      "one_line_profile": "Protein fitness prediction using autoregressive transformers and retrieval",
+      "detailed_description": "An implementation of Tranception, a state-of-the-art model for protein fitness prediction that combines autoregressive transformers with retrieval-based inference to capture evolutionary information.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "fitness_prediction",
+        "sequence_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lucidrains/tranception-pytorch",
+      "help_website": [
+        "https://github.com/lucidrains/tranception-pytorch"
+      ],
+      "license": "MIT",
+      "tags": [
+        "protein-fitness",
+        "transformer",
+        "evolutionary-scale"
+      ],
+      "id": 54
+    },
+    {
+      "name": "AlphaMissenseR",
+      "one_line_profile": "R interface for AlphaMissense data resources",
+      "detailed_description": "AlphaMissenseR provides an R interface to access and analyze pathogenicity predictions from AlphaMissense, facilitating the integration of these predictions into genomic workflows.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "data_access"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/mtmorgan/AlphaMissenseR",
+      "help_website": [
+        "https://github.com/mtmorgan/AlphaMissenseR"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "alphamissense",
+        "variant-pathogenicity",
+        "r-package"
+      ],
+      "id": 55
+    },
+    {
+      "name": "rosace",
+      "one_line_profile": "Statistical inference for growth-based Deep Mutational Scanning",
+      "detailed_description": "Rosace performs statistical inference on growth-based deep mutational scanning screens. It models the growth dynamics to estimate fitness effects and their uncertainties.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "dms_analysis",
+        "statistical_inference",
+        "growth_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/pimentellab/rosace",
+      "help_website": [
+        "https://github.com/pimentellab/rosace"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dms",
+        "statistics",
+        "growth-rate"
+      ],
+      "id": 56
+    },
+    {
+      "name": "MSA Transformer",
+      "one_line_profile": "Protein language model for unsupervised sequence modeling and contact prediction",
+      "detailed_description": "A Transformer-based protein language model that operates on Multiple Sequence Alignments (MSAs) to capture co-evolutionary information, enabling state-of-the-art unsupervised contact prediction and fitness estimation.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "variant_effect_prediction",
+        "contact_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rmrao/msa-transformer",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "protein-language-model",
+        "msa",
+        "contact-prediction",
+        "transformer"
+      ],
+      "id": 57
+    },
+    {
+      "name": "bio_embeddings",
+      "one_line_profile": "Pipeline for generating protein embeddings from various language models",
+      "detailed_description": "A comprehensive library providing a unified interface to generate, visualize, and analyze protein embeddings from state-of-the-art protein language models (e.g., ProtTrans, SeqVec, ESM).",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "feature_extraction",
+        "embedding_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sacdallago/bio_embeddings",
+      "help_website": [
+        "https://docs.bioembeddings.com"
+      ],
+      "license": "MIT",
+      "tags": [
+        "embeddings",
+        "protein-language-model",
+        "feature-extraction"
+      ],
+      "id": 58
+    },
+    {
+      "name": "ProVis",
+      "one_line_profile": "Visual analysis tool for interpreting attention mechanisms in protein language models",
+      "detailed_description": "A toolkit designed to interpret and visualize the attention maps of protein language models (BERTology), helping to understand how these models capture biological features like contact maps and binding sites.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "interpretability",
+        "model_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/salesforce/provis",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "interpretability",
+        "attention-mechanism",
+        "protein-language-model",
+        "visualization"
+      ],
+      "id": 59
+    },
+    {
+      "name": "D-SCRIPT",
+      "one_line_profile": "Deep learning model for structure-aware protein-protein interaction prediction",
+      "detailed_description": "An interpretable deep learning method for predicting protein-protein interactions (PPIs) from sequence data, incorporating structural awareness to improve prediction accuracy and physical plausibility.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "ppi_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/samsledje/D-SCRIPT",
+      "help_website": [
+        "https://d-script.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "ppi",
+        "interaction-prediction",
+        "deep-learning"
+      ],
+      "id": 60
+    },
+    {
+      "name": "CPT",
+      "one_line_profile": "Cross-protein transfer learning framework for variant effect prediction",
+      "detailed_description": "A method leveraging cross-protein transfer learning to improve the prediction of variant effects, particularly useful for proteins with limited homologous sequence data.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "transfer_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/songlab-cal/CPT",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "variant-prediction",
+        "transfer-learning",
+        "mutation-effect"
+      ],
+      "id": 61
+    },
+    {
+      "name": "Factored Attention",
+      "one_line_profile": "Method for interpreting protein language models via factored attention analysis",
+      "detailed_description": "Code and methodology for interpreting Potts models and Transformer-based protein models by factoring attention matrices, enabling the extraction of structural and functional insights from learned representations.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "interpretability",
+        "model_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/songlab-cal/factored-attention",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "interpretability",
+        "attention-analysis",
+        "potts-model"
+      ],
+      "id": 62
+    },
+    {
+      "name": "SARS-CoV-2-RBD-Abs-HTDMS",
+      "one_line_profile": "Data processing pipeline for high-throughput deep mutational scanning",
+      "detailed_description": "A specialized bioinformatics pipeline for processing high-throughput deep mutational scanning (DMS) data, specifically designed for analyzing SARS-CoV-2 RBD antibody escape mutations.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "dms_analysis",
+        "mutation_scanning"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/sunneyxielab/SARS-CoV-2-RBD-Abs-HTDMS",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dms",
+        "deep-mutational-scanning",
+        "sars-cov-2",
+        "antibody-escape"
+      ],
+      "id": 63
+    },
+    {
+      "name": "ProMEP",
+      "one_line_profile": "Multimodal deep learning model for zero-shot mutation effect prediction",
+      "detailed_description": "A deep learning tool that combines sequence and structural information to predict the functional effects of protein mutations in a zero-shot manner, without requiring labeled training data for the specific protein.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "mutation_scanning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wenjiegroup/ProMEP",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mutation-effect",
+        "zero-shot",
+        "deep-learning"
+      ],
+      "id": 64
+    },
+    {
+      "name": "Deep Mutational Scan Evaluation",
+      "one_line_profile": "Benchmark dataset and evaluation framework for deep mutational scanning models",
+      "detailed_description": "A unified evaluation framework and data collection for benchmarking computational models against Deep Mutational Scanning (DMS) experiments, facilitating the comparison of variant effect prediction methods.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "dms_analysis"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/westlake-repl/deep-mutational-scan-evalation",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "benchmark",
+        "dms",
+        "evaluation"
+      ],
+      "id": 65
+    },
+    {
+      "name": "dms-pipeline",
+      "one_line_profile": "Bioinformatics pipeline for processing high-throughput deep mutational scanning data",
+      "detailed_description": "A data processing pipeline designed for high-throughput deep mutational scanning (DMS) of monoclonal antibodies (mAbs), handling raw sequencing data to generate mutation enrichment scores.",
+      "domains": [
+        "S2",
+        "S2-05"
+      ],
+      "subtask_category": [
+        "dms_analysis",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yunlongcaolab/dms-pipeline",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dms",
+        "antibody",
+        "pipeline",
+        "ngs-processing"
+      ],
+      "id": 66
+    }
+  ]
+}

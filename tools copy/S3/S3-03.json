@@ -1,0 +1,3281 @@
+{
+  "generated_at": "2025-12-16T06:47:33.523710+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "S3",
+      "leaf_cluster_name": "药物发现-虚拟筛选与对接生态",
+      "domain": "Drug Discovery",
+      "typical_objects": "ligands/receptors",
+      "task_chain": "构象→对接→打分→再打分→验证→工作流",
+      "tool_form": "对接引擎 + HPC/workflow + 平台"
+    },
+    "unit": {
+      "unit_id": "S3-03",
+      "unit_name": "打分/再打分/共识评分",
+      "target_scale": "150–350",
+      "coverage_tools": "scoring functions、rescoring pipelines"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] DeepAtom",
+        "[GH] DSX",
+        "[GH] Smina",
+        "[GH] Pafnucy",
+        "[GH] KDEEP",
+        "[GH] OnionNet",
+        "[GH] X-Score",
+        "[GH] NNScore",
+        "[GH] RF-Score",
+        "[GH] GNINA",
+        "[GH] scoring function",
+        "[GH] rescoring",
+        "[GH] binding affinity prediction",
+        "[GH] protein-ligand interaction",
+        "[GH] consensus scoring",
+        "[GH] molecular docking score",
+        "[GH] pose ranking",
+        "[GH] structure-based scoring",
+        "[GH] machine learning scoring function",
+        "[GH] deep learning affinity",
+        "[GH] interaction energy",
+        "[GH] virtual screening ranking",
+        "[GH] docking evaluation",
+        "[WEB] protein-ligand scoring function github",
+        "[WEB] molecular docking rescoring pipeline github",
+        "[WEB] deep learning binding affinity prediction github",
+        "[WEB] consensus scoring tools drug discovery github",
+        "[WEB] structure-based scoring function benchmark github"
+      ],
+      "total_candidates": 911,
+      "tool_candidates": 329,
+      "final_tools": 132
+    }
+  },
+  "tools": [
+    {
+      "name": "PointDE",
+      "one_line_profile": "Protein docking evaluation using 3D point cloud neural networks",
+      "detailed_description": "Official implementation of PointDE, a deep learning model that evaluates protein docking poses by representing them as 3D point clouds to predict the quality of the docking.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "docking_scoring",
+        "model_evaluation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AI-ProteinGroup/PointDE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-docking",
+        "point-cloud",
+        "deep-learning",
+        "scoring-function"
+      ],
+      "id": 1
+    },
+    {
+      "name": "GatorAffinity",
+      "one_line_profile": "Protein-ligand binding affinity prediction using synthetic structural data",
+      "detailed_description": "A deep learning model designed to boost protein-ligand binding affinity prediction by leveraging large-scale synthetic structural data for training.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "affinity_prediction",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AIDD-LiLab/GatorAffinity",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "binding-affinity",
+        "protein-ligand",
+        "deep-learning",
+        "synthetic-data"
+      ],
+      "id": 2
+    },
+    {
+      "name": "KinaseDocker2",
+      "one_line_profile": "PyMOL plugin for kinase inhibitor binding and affinity prediction",
+      "detailed_description": "A PyMOL plugin and Docker-based tool specifically designed for predicting the binding modes and affinity of kinase inhibitors.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "docking",
+        "affinity_prediction",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/APAJanssen/KinaseDocker2",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "kinase",
+        "docking",
+        "pymol-plugin",
+        "affinity-prediction"
+      ],
+      "id": 3
+    },
+    {
+      "name": "protein_mutation_scoring",
+      "one_line_profile": "Scoring functions for protein mutation effects using ESM-2",
+      "detailed_description": "A collection of scoring functions leveraging the ESM-2 protein language model to predict the effects of mutations on protein sequences.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "mutation_scoring",
+        "sequence_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Amelie-Schreiber/protein_mutation_scoring",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "esm-2",
+        "protein-mutation",
+        "scoring-function",
+        "plm"
+      ],
+      "id": 4
+    },
+    {
+      "name": "protein-ligand-GNN",
+      "one_line_profile": "GNN-based protein-ligand interaction prediction and XAI",
+      "detailed_description": "Code implementation for analyzing protein-ligand interactions using Graph Neural Networks (GNNs) and Explainable AI (XAI) techniques.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AndMastro/protein-ligand-GNN",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gnn",
+        "protein-ligand",
+        "xai",
+        "interaction-prediction"
+      ],
+      "id": 5
+    },
+    {
+      "name": "iScore",
+      "one_line_profile": "Machine learning-based scoring function for de novo drug discovery",
+      "detailed_description": "Implementation of iScore, a machine learning-based scoring function designed to evaluate compounds in de novo drug discovery pipelines.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "scoring_function",
+        "drug_discovery"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AnyoLabs/iScore",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "scoring-function",
+        "machine-learning",
+        "de-novo-design"
+      ],
+      "id": 6
+    },
+    {
+      "name": "Generalized-Score-Functions-for-Causal-Discovery",
+      "one_line_profile": "Generalized score-based method for causal discovery",
+      "detailed_description": "A MATLAB implementation of generalized score functions for causal discovery, enabling the identification of causal structures from data.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "causal_discovery",
+        "statistical_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/Biwei-Huang/Generalized-Score-Functions-for-Causal-Discovery",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "causal-discovery",
+        "score-function",
+        "statistics"
+      ],
+      "id": 7
+    },
+    {
+      "name": "NeoBert",
+      "one_line_profile": "Neoantigen-HLA binding affinity prediction using BERT",
+      "detailed_description": "A BERT-based deep learning model specifically designed to predict the binding affinity between neoantigens and HLA molecules, integrating biological features.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "affinity_prediction",
+        "immunoinformatics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CHB-learner/NeoBert",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "neoantigen",
+        "hla-binding",
+        "bert",
+        "affinity-prediction"
+      ],
+      "id": 8
+    },
+    {
+      "name": "BINDKIN",
+      "one_line_profile": "Benchmark for kinase-ligand interaction point mutations",
+      "detailed_description": "A structural benchmark dataset and toolset for measuring the impact of point mutations on kinase-ligand interactions.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "interaction_analysis"
+      ],
+      "application_level": "dataset",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/CSB-KaracaLab/BINDKIN",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "kinase",
+        "mutation",
+        "benchmark",
+        "protein-ligand"
+      ],
+      "id": 9
+    },
+    {
+      "name": "BACPI",
+      "one_line_profile": "Bi-directional attention neural network for compound-protein interaction",
+      "detailed_description": "A deep learning model using bi-directional attention mechanisms to predict compound-protein interactions and binding affinity.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "affinity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CSUBioGroup/BACPI",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "compound-protein-interaction",
+        "attention-mechanism",
+        "deep-learning"
+      ],
+      "id": 10
+    },
+    {
+      "name": "ms2rescore",
+      "one_line_profile": "AI-assisted rescoring of peptide identifications in proteomics",
+      "detailed_description": "A modular platform for AI-assisted rescoring of peptide identifications from mass spectrometry data, improving identification rates.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "rescoring",
+        "proteomics",
+        "peptide_identification"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CompOmics/ms2rescore",
+      "help_website": [
+        "https://ms2rescore.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "proteomics",
+        "mass-spectrometry",
+        "rescoring",
+        "peptide-identification"
+      ],
+      "id": 11
+    },
+    {
+      "name": "spectrum_similarity",
+      "one_line_profile": "Scoring functions for comparing MS/MS spectra",
+      "detailed_description": "A library of scoring functions designed to calculate the similarity between mass spectrometry (MS/MS) spectra.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "spectral_scoring",
+        "proteomics"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/CompOmics/spectrum_similarity",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "mass-spectrometry",
+        "scoring-function",
+        "similarity-metric"
+      ],
+      "id": 12
+    },
+    {
+      "name": "fpocket",
+      "one_line_profile": "Fast protein pocket detection algorithm based on Voronoi tessellation",
+      "detailed_description": "A very fast open source protein pocket detection algorithm based on Voronoi tessellation, widely used for identifying binding sites and extracting pocket descriptors.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "pocket_detection",
+        "binding_site_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/Discngine/fpocket",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pocket-detection",
+        "voronoi",
+        "protein-structure",
+        "drug-design"
+      ],
+      "id": 13
+    },
+    {
+      "name": "IPSAE",
+      "one_line_profile": "Scoring function for interprotein interactions in AlphaFold models",
+      "detailed_description": "A scoring function designed to evaluate interprotein interactions within structures predicted by AlphaFold2 and AlphaFold3.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "scoring_function",
+        "protein_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DunbrackLab/IPSAE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "alphafold",
+        "scoring",
+        "protein-protein-interaction"
+      ],
+      "id": 14
+    },
+    {
+      "name": "RNAdvisor",
+      "one_line_profile": "Integrated wrapper for RNA 3D structure evaluation metrics",
+      "detailed_description": "A docker-based wrapper that integrates multiple metrics and scoring functions for the evaluation of RNA 3D structures.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "structure_evaluation",
+        "rna_scoring"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EvryRNA/rnadvisor",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rna",
+        "structure-evaluation",
+        "scoring-function"
+      ],
+      "id": 15
+    },
+    {
+      "name": "plif_validity",
+      "one_line_profile": "Tool for assessing interaction recovery of predicted protein-ligand poses",
+      "detailed_description": "Code and notebooks for assessing the interaction recovery of predicted protein-ligand poses, useful for validating docking results.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "docking_validation",
+        "interaction_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Exscientia/plif_validity",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-ligand",
+        "docking-validation",
+        "interaction-recovery"
+      ],
+      "id": 16
+    },
+    {
+      "name": "MD-IFP",
+      "one_line_profile": "MD trajectory analysis using protein-ligand Interaction Fingerprints",
+      "detailed_description": "A tool for analyzing Molecular Dynamics (MD) trajectories by calculating and monitoring protein-ligand Interaction Fingerprints (IFPs) over time.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "md_analysis",
+        "interaction_fingerprint"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/HITS-MCM/MD-IFP",
+      "help_website": [],
+      "license": "EUPL-1.2",
+      "tags": [
+        "molecular-dynamics",
+        "interaction-fingerprint",
+        "protein-ligand"
+      ],
+      "id": 17
+    },
+    {
+      "name": "pocketoptimizer",
+      "one_line_profile": "Binding pocket optimization using force fields and scoring functions",
+      "detailed_description": "A tool for optimizing binding pockets based on force fields and docking scoring functions to improve ligand binding prediction.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "pocket_optimization",
+        "structure_refinement"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rich Text Format",
+      "repo_url": "https://github.com/Hoecker-Lab/pocketoptimizer",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "binding-pocket",
+        "optimization",
+        "force-field",
+        "scoring"
+      ],
+      "id": 18
+    },
+    {
+      "name": "dock2interaction_profile",
+      "one_line_profile": "Batch analysis of protein-ligand interactions from docking results",
+      "detailed_description": "A script wrapper around PLIP to perform batch analysis of protein-ligand interactions derived from Smina/Vina docking results.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "interaction_analysis",
+        "docking_post_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/HongYhong/dock2interaction_profile",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "plip",
+        "docking",
+        "interaction-profiling",
+        "batch-processing"
+      ],
+      "id": 19
+    },
+    {
+      "name": "CaFE_Plugin",
+      "one_line_profile": "VMD plugin for binding affinity prediction using free energy methods",
+      "detailed_description": "A VMD plugin that facilitates binding affinity prediction using end-point free energy methods such as MM/PBSA or MM/GBSA.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "affinity_prediction",
+        "free_energy_calculation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Tcl",
+      "repo_url": "https://github.com/HuiLiuCode/CaFE_Plugin",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "vmd-plugin",
+        "binding-affinity",
+        "free-energy",
+        "mm-pbsa"
+      ],
+      "id": 20
+    },
+    {
+      "name": "otter-knowledge",
+      "one_line_profile": "Knowledge-enhanced representation for drug target binding affinity prediction",
+      "detailed_description": "A method that enriches protein sequence and SMILES drug databases with a large Knowledge Graph to improve drug target binding affinity prediction.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "affinity_prediction",
+        "representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/IBM/otter-knowledge",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "knowledge-graph",
+        "binding-affinity",
+        "drug-discovery",
+        "representation-learning"
+      ],
+      "id": 21
+    },
+    {
+      "name": "MGDTA",
+      "one_line_profile": "Multigranular representation learning for drug-target binding affinity prediction",
+      "detailed_description": "A deep learning model that explores multigranular representations to predict drug-target binding affinity, aiding in virtual screening and drug discovery.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "virtual_screening"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/IILab-Resource/MGDTA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "drug-target-affinity",
+        "deep-learning",
+        "representation-learning"
+      ],
+      "id": 22
+    },
+    {
+      "name": "DeepDTAF",
+      "one_line_profile": "Deep learning architecture for protein-ligand binding affinity prediction",
+      "detailed_description": "A deep learning framework that utilizes local and global features of proteins and ligands to predict binding affinity, supporting structure-based drug design.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/KailiWang1/DeepDTAF",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "protein-ligand",
+        "binding-affinity",
+        "deep-learning"
+      ],
+      "id": 23
+    },
+    {
+      "name": "AutoSF",
+      "one_line_profile": "Automated search for bilinear scoring functions in knowledge graph learning",
+      "detailed_description": "An automated machine learning (AutoML) tool designed to search for effective bilinear scoring functions for knowledge graph embedding, optimizing performance on link prediction tasks.",
+      "domains": [
+        "Artificial Intelligence",
+        "Knowledge Graphs"
+      ],
+      "subtask_category": [
+        "knowledge_graph_embedding",
+        "scoring_function_search"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LARS-research/AutoSF",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "knowledge-graph",
+        "automl",
+        "scoring-function"
+      ],
+      "id": 24
+    },
+    {
+      "name": "ERAS",
+      "one_line_profile": "Efficient relation-aware scoring function search for knowledge graphs",
+      "detailed_description": "A framework for efficiently searching for relation-aware scoring functions in knowledge graph embeddings, improving upon standard AutoML methods for KGE.",
+      "domains": [
+        "Artificial Intelligence",
+        "Knowledge Graphs"
+      ],
+      "subtask_category": [
+        "knowledge_graph_embedding",
+        "scoring_function_search"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LARS-research/ERAS",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "knowledge-graph",
+        "automl",
+        "embedding"
+      ],
+      "id": 25
+    },
+    {
+      "name": "SCORE (SLAM)",
+      "one_line_profile": "Saturated Consensus Relocalization in Semantic Line Maps",
+      "detailed_description": "A robotics algorithm for relocalization in semantic line maps using saturated consensus, applicable in SLAM (Simultaneous Localization and Mapping) tasks.",
+      "domains": [
+        "Robotics",
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "localization",
+        "slam"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LIAS-CUHKSZ/SCORE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "slam",
+        "robotics",
+        "localization"
+      ],
+      "id": 26
+    },
+    {
+      "name": "GPCNDTA",
+      "one_line_profile": "Drug-target binding affinity prediction using cross-attention networks",
+      "detailed_description": "A model for predicting drug-target binding affinity that integrates graph features and pharmacophores via cross-attention networks.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "virtual_screening"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LiZhang30/GPCNDTA",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pharmacophore",
+        "graph-neural-network",
+        "dta"
+      ],
+      "id": 27
+    },
+    {
+      "name": "Seeing Without Looking",
+      "one_line_profile": "Contextual rescoring of object detections for AP maximization",
+      "detailed_description": "A computer vision tool that uses contextual information to rescore object detections, aiming to maximize Average Precision (AP) in detection tasks.",
+      "domains": [
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "object_detection",
+        "rescoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LourencoVazPato/seeing-without-looking",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "object-detection",
+        "cvpr",
+        "rescoring"
+      ],
+      "id": 28
+    },
+    {
+      "name": "CHOKO",
+      "one_line_profile": "Consensus rescoring of protein-protein docking poses",
+      "detailed_description": "A tool for the consensus rescoring of protein-protein docking poses, utilizing the DockingPP library to improve docking predictions.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "protein_protein_docking",
+        "rescoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MMSB-MOBI/CHOKO",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "docking",
+        "protein-protein",
+        "scoring"
+      ],
+      "id": 29
+    },
+    {
+      "name": "Affinity2Vec",
+      "one_line_profile": "Drug-target binding affinity prediction using representation learning",
+      "detailed_description": "A method for predicting drug-target binding affinity by combining representation learning, graph mining, and machine learning techniques.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/MahaThafar/Affinity2Vec",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "drug-target",
+        "affinity-prediction",
+        "graph-mining"
+      ],
+      "id": 30
+    },
+    {
+      "name": "MolScore",
+      "one_line_profile": "Automated scoring function for de novo molecular design",
+      "detailed_description": "A comprehensive scoring framework to evaluate and guide generative models in de novo molecular design, supporting various objective functions and metrics.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "molecular_design",
+        "scoring_function"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MorganCThomas/MolScore",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "generative-models",
+        "drug-design",
+        "scoring"
+      ],
+      "id": 31
+    },
+    {
+      "name": "Alfalfa",
+      "one_line_profile": "Web service for runtime interaction with building energy models",
+      "detailed_description": "A platform enabling runtime interaction and control of building energy models (OpenStudio/EnergyPlus/Modelica) via REST APIs, used for energy optimization research.",
+      "domains": [
+        "Energy Engineering",
+        "Building Science"
+      ],
+      "subtask_category": [
+        "building_energy_modeling",
+        "simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NREL/alfalfa",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "energy-plus",
+        "openstudio",
+        "modelica"
+      ],
+      "id": 32
+    },
+    {
+      "name": "DualBind",
+      "one_line_profile": "3D structure-based deep learning for binding affinity prediction",
+      "detailed_description": "A deep learning model using a dual-loss framework to predict protein-ligand binding affinity from 3D structural data.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "structure_based_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NVIDIA-Digital-Bio/dualbind",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "deep-learning",
+        "binding-affinity",
+        "nvidia"
+      ],
+      "id": 33
+    },
+    {
+      "name": "MSBooster",
+      "one_line_profile": "Deep learning feature augmentation for PSM rescoring",
+      "detailed_description": "A tool that generates deep learning-based features to improve Peptide-Spectrum Match (PSM) rescoring in proteomics, designed to work with Percolator.",
+      "domains": [
+        "Proteomics",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "psm_rescoring",
+        "mass_spectrometry"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/Nesvilab/MSBooster",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "proteomics",
+        "percolator",
+        "deep-learning"
+      ],
+      "id": 34
+    },
+    {
+      "name": "PaccMann Kinase Binding",
+      "one_line_profile": "Kinase binding residues analysis for affinity prediction",
+      "detailed_description": "A module from the PaccMann project focusing on comparing active site and full kinase sequences for drug-target affinity prediction.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "kinase_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PaccMann/paccmann_kinase_binding_residues",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "kinase",
+        "drug-target-affinity",
+        "paccmann"
+      ],
+      "id": 35
+    },
+    {
+      "name": "TFAIP Hybrid CTC-S2S",
+      "one_line_profile": "Rescoring sequence-to-sequence models for text recognition",
+      "detailed_description": "A framework for rescoring Sequence-to-Sequence models using CTC-Prefixes to improve text line recognition accuracy.",
+      "domains": [
+        "Computer Vision",
+        "OCR"
+      ],
+      "subtask_category": [
+        "text_recognition",
+        "rescoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "PureBasic",
+      "repo_url": "https://github.com/Planet-AI-GmbH/tfaip-hybrid-ctc-s2s",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ocr",
+        "htr",
+        "sequence-to-sequence"
+      ],
+      "id": 36
+    },
+    {
+      "name": "gnina-torch",
+      "one_line_profile": "PyTorch implementation of GNINA scoring function",
+      "detailed_description": "A PyTorch implementation of the GNINA molecular docking scoring function, enabling integration into deep learning workflows for drug discovery.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "scoring_function",
+        "molecular_docking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RMeli/gnina-torch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gnina",
+        "docking",
+        "pytorch"
+      ],
+      "id": 37
+    },
+    {
+      "name": "bg_control",
+      "one_line_profile": "Blood glucose outcome improvement and meal scoring",
+      "detailed_description": "A tool for analyzing time-series blood glucose data, identifying unlabelled meals, and developing meal-scoring functions to improve diabetes management outcomes.",
+      "domains": [
+        "Biomedical Engineering",
+        "Healthcare"
+      ],
+      "subtask_category": [
+        "glucose_modeling",
+        "meal_scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/RobotPsychologist/bg_control",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "diabetes",
+        "blood-glucose",
+        "machine-learning"
+      ],
+      "id": 38
+    },
+    {
+      "name": "SCORCH",
+      "one_line_profile": "Scoring function and docking pipeline",
+      "detailed_description": "Deployable code for the SCORCH scoring function and associated docking pipeline, designed for evaluating protein-ligand interactions.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "scoring_function",
+        "docking"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SMVDGroup/SCORCH",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "scoring",
+        "drug-discovery"
+      ],
+      "id": 39
+    },
+    {
+      "name": "IoT Attack Detection",
+      "one_line_profile": "ML-based attack and anomaly detection for IoT sensors",
+      "detailed_description": "A machine learning framework for detecting attacks and anomalies in IoT sensor networks, comparing various algorithms like Random Forest and ANN.",
+      "domains": [
+        "IoT",
+        "Cybersecurity"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "intrusion_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Shauqi/Attack-and-Anomaly-Detection-in-IoT-Sensors-in-IoT-Sites-Using-Machine-Learning-Approaches",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "iot",
+        "security",
+        "anomaly-detection"
+      ],
+      "id": 40
+    },
+    {
+      "name": "XFEM_Fracture2D",
+      "one_line_profile": "2D XFEM solver for multiple crack propagation",
+      "detailed_description": "A MATLAB program using the Extended Finite Element Method (XFEM) to solve 2D linear-elastic fracture problems involving multiple crack propagations.",
+      "domains": [
+        "Computational Mechanics",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "fracture_simulation",
+        "finite_element_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/ShelvanLee/XFEM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "xfem",
+        "fracture-mechanics",
+        "matlab"
+      ],
+      "id": 41
+    },
+    {
+      "name": "SCORE (Bioinfo)",
+      "one_line_profile": "Consensus tool for detecting differentially expressed genes in bacteria",
+      "detailed_description": "A consensus-based tool for identifying differentially expressed genes in bacterial transcriptomics data.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "differential_expression_analysis",
+        "consensus_scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/SiWolf/SCORE",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bacteria",
+        "gene-expression",
+        "rnaseq"
+      ],
+      "id": 42
+    },
+    {
+      "name": "multiscorer",
+      "one_line_profile": "Multiple metric functions for scikit-learn cross-validation",
+      "detailed_description": "A utility module that enables the use of multiple scoring metrics simultaneously within scikit-learn's cross_val_score function.",
+      "domains": [
+        "Machine Learning",
+        "Data Science"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "cross_validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/StKyr/multiscorer",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "scikit-learn",
+        "metrics",
+        "cross-validation"
+      ],
+      "id": 43
+    },
+    {
+      "name": "XLM-Tools",
+      "one_line_profile": "Program for scoring protein structures based on crosslinking mass spectrometry data",
+      "detailed_description": "A Python-based tool designed to score and validate protein structural models using experimental data from crosslinking mass spectrometry (XL-MS), specifically supporting MonoLinks (MoDS), Crosslinks (MNXL), and both (XLMO).",
+      "domains": [
+        "S3",
+        "S3-03",
+        "Proteomics"
+      ],
+      "subtask_category": [
+        "scoring",
+        "structure_validation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Topf-Lab/XLM-Tools",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-structure",
+        "scoring-function",
+        "crosslinking-mass-spectrometry"
+      ],
+      "id": 44
+    },
+    {
+      "name": "TopoFormer",
+      "one_line_profile": "Topological transformer for protein-ligand interaction prediction",
+      "detailed_description": "A deep learning model that utilizes topological data analysis and transformer architectures to predict the binding affinity of protein-ligand complexes.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/WeilabMSU/TopoFormer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "drug-discovery",
+        "binding-affinity",
+        "transformer",
+        "topology"
+      ],
+      "id": 45
+    },
+    {
+      "name": "DeepGS",
+      "one_line_profile": "Deep representation learning for drug-target binding affinity prediction",
+      "detailed_description": "A deep learning framework combining graph neural networks and sequence modeling to predict drug-target binding affinity, utilizing SMILES and protein sequences as inputs.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/XuanLin1991/DeepGS",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "drug-target-interaction",
+        "deep-learning",
+        "binding-affinity"
+      ],
+      "id": 46
+    },
+    {
+      "name": "AA-Score-Tool",
+      "one_line_profile": "Tool for protein-ligand binding affinity prediction",
+      "detailed_description": "A computational tool designed to predict the binding affinity of protein-ligand complexes, likely utilizing amino acid specific scoring contributions.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Xundrug/AA-Score-Tool",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "binding-affinity",
+        "scoring-function",
+        "protein-ligand"
+      ],
+      "id": 47
+    },
+    {
+      "name": "IPDiff",
+      "one_line_profile": "Binding-aware 3D molecule diffusion model with interaction priors",
+      "detailed_description": "A 3D molecular generation framework that incorporates protein-ligand interaction priors into diffusion models to generate molecules with high binding affinity and valid conformations.",
+      "domains": [
+        "S3",
+        "S3-01"
+      ],
+      "subtask_category": [
+        "molecule_generation",
+        "structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/YangLing0818/IPDiff",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-model",
+        "drug-design",
+        "generative-model"
+      ],
+      "id": 48
+    },
+    {
+      "name": "aafragpy",
+      "one_line_profile": "High-energy hadronic interaction model implementation",
+      "detailed_description": "A Python implementation of the AAfrag model for simulating high-energy hadronic interactions, based on QGSJET-II-04m, used in particle physics and astrophysics simulations.",
+      "domains": [
+        "Physics",
+        "High Energy Physics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "interaction_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/aafragpy/aafragpy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "particle-physics",
+        "hadronic-interaction",
+        "simulation"
+      ],
+      "id": 49
+    },
+    {
+      "name": "SIGN",
+      "one_line_profile": "Structure-aware interactive graph neural networks for binding affinity",
+      "detailed_description": "A deep learning model (Structure-aware Interactive Graph Neural Networks) for predicting protein-ligand binding affinity by modeling spatial and topological interactions.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/agave233/SIGN",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gnn",
+        "binding-affinity",
+        "structure-aware"
+      ],
+      "id": 50
+    },
+    {
+      "name": "NRLMFb",
+      "one_line_profile": "Beta-distribution-rescored matrix factorization for DTI prediction",
+      "detailed_description": "A method improving drug-target interaction prediction using Neighborhood Regularized Logistic Matrix Factorization with Beta-distribution rescoring.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "rescoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/akiyamalab/NRLMFb",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "drug-target-interaction",
+        "matrix-factorization",
+        "rescoring"
+      ],
+      "id": 51
+    },
+    {
+      "name": "dockit",
+      "one_line_profile": "High-throughput molecular docking workflow using Vina engines",
+      "detailed_description": "A Python-based workflow tool for performing high-throughput molecular docking against multiple targets and ligands, utilizing Vina-series docking engines.",
+      "domains": [
+        "S3",
+        "S3-02"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "virtual_screening"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aretasg/dockit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-docking",
+        "high-throughput",
+        "vina"
+      ],
+      "id": 52
+    },
+    {
+      "name": "AUTOSURF",
+      "one_line_profile": "Automated construction of global potential energy surfaces",
+      "detailed_description": "A software package for robustly computing electronic energies and automating the construction of global potential energy surfaces (PES), particularly for systems with highly anisotropic interactions.",
+      "domains": [
+        "Chemistry",
+        "Physics"
+      ],
+      "subtask_category": [
+        "potential_energy_surface_fitting",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/autosurf/AUTOSURF-v1.3",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "potential-energy-surface",
+        "computational-chemistry",
+        "electronic-structure"
+      ],
+      "id": 53
+    },
+    {
+      "name": "SAnDReS",
+      "one_line_profile": "Statistical analysis of docking results and scoring functions",
+      "detailed_description": "A computational environment for the development and statistical analysis of machine-learning models for predicting ligand-binding affinity and evaluating docking results.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "scoring_function_development",
+        "docking_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/azevedolab/sandres",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "docking",
+        "scoring-function",
+        "machine-learning"
+      ],
+      "id": 54
+    },
+    {
+      "name": "Sfcnn",
+      "one_line_profile": "3D CNN-based scoring function for protein-ligand binding",
+      "detailed_description": "A scoring function model utilizing 3D convolutional neural networks to predict the binding affinity of protein-ligand complexes.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/bioinfocqupt/Sfcnn",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "3d-cnn",
+        "scoring-function",
+        "binding-affinity"
+      ],
+      "id": 55
+    },
+    {
+      "name": "MAGI",
+      "one_line_profile": "Metabolite-gene annotation consensus scoring tool",
+      "detailed_description": "A tool to score and find consensus between metabolite identifications and gene annotations to improve metabolomics and genomics integration.",
+      "domains": [
+        "Metabolomics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "annotation",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/biorack/magi",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "metabolomics",
+        "genomics",
+        "consensus-scoring"
+      ],
+      "id": 56
+    },
+    {
+      "name": "FLOWUnsteady",
+      "one_line_profile": "Interactional aerodynamics and acoustics solver",
+      "detailed_description": "A solver for interactional aerodynamics and acoustics, specifically designed for multirotor aircraft and wind energy applications, simulating unsteady flow physics.",
+      "domains": [
+        "Physics",
+        "Fluid Dynamics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "aerodynamics_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/byuflowlab/FLOWUnsteady",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cfd",
+        "aerodynamics",
+        "acoustics",
+        "wind-energy"
+      ],
+      "id": 57
+    },
+    {
+      "name": "DeepRescore",
+      "one_line_profile": "Deep learning-based PSM rescoring tool",
+      "detailed_description": "A tool for rescoring peptide-spectrum matches (PSMs) in proteomics by leveraging deep learning-derived peptide features to improve identification accuracy.",
+      "domains": [
+        "Proteomics",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "rescoring",
+        "peptide_identification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/bzhanglab/DeepRescore",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "proteomics",
+        "mass-spectrometry",
+        "rescoring"
+      ],
+      "id": 58
+    },
+    {
+      "name": "GEMS",
+      "one_line_profile": "GNN and transfer learning for binding affinity prediction",
+      "detailed_description": "A framework for protein-ligand binding affinity prediction that combines Graph Neural Networks (GNN) with transfer learning from protein language models.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/camlab-ethz/GEMS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "transfer-learning",
+        "binding-affinity"
+      ],
+      "id": 59
+    },
+    {
+      "name": "MDeePred",
+      "one_line_profile": "Multi-channel deep chemogenomic model for binding affinity",
+      "detailed_description": "A multi-channel deep learning approach for chemogenomic modeling to predict receptor-ligand binding affinities in drug discovery.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "chemogenomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cansyl/MDeePred",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "deep-learning",
+        "chemogenomics",
+        "binding-affinity"
+      ],
+      "id": 60
+    },
+    {
+      "name": "ProLIF (cbouy)",
+      "one_line_profile": "Protein-Ligand Interaction Fingerprints library",
+      "detailed_description": "A library to generate interaction fingerprints for protein-ligand complexes, facilitating the analysis of molecular interactions from docking or MD simulations.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "interaction_analysis",
+        "fingerprinting"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/cbouy/ProLIF",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "interaction-fingerprint",
+        "molecular-docking",
+        "md-analysis"
+      ],
+      "id": 61
+    },
+    {
+      "name": "ProLIF",
+      "one_line_profile": "Interaction fingerprints for protein-ligand complexes",
+      "detailed_description": "A Python library designed to generate and analyze interaction fingerprints for protein-ligand complexes, supporting data from various molecular modeling software.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "interaction_analysis",
+        "fingerprinting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chemosim-lab/ProLIF",
+      "help_website": [
+        "https://prolif.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "interaction-fingerprint",
+        "cheminformatics",
+        "molecular-dynamics"
+      ],
+      "id": 62
+    },
+    {
+      "name": "DeltaVina",
+      "one_line_profile": "A scoring function for protein-ligand docking based on AutoDock Vina",
+      "detailed_description": "DeltaVina is a scoring function designed to improve the accuracy of protein-ligand docking. It is often used in conjunction with a modified version of AutoDock Vina (vina4dv) to evaluate binding poses and affinities.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "scoring_function",
+        "binding_affinity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chengwang88/deltavina",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scoring-function",
+        "docking",
+        "vina"
+      ],
+      "id": 63
+    },
+    {
+      "name": "vina4dv",
+      "one_line_profile": "Modified AutoDock Vina engine for DeltaVina scoring",
+      "detailed_description": "A fork of AutoDock Vina specifically modified to support the DeltaVina scoring function. It serves as the docking engine to apply the DeltaVina scoring terms during the docking process.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "scoring_function"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/chengwang88/vina4dv",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "docking-engine",
+        "vina",
+        "scoring"
+      ],
+      "id": 64
+    },
+    {
+      "name": "EasyDock",
+      "one_line_profile": "Fully automated and parallelized molecular docking pipeline",
+      "detailed_description": "EasyDock is a Python-based pipeline for automating molecular docking tasks. It supports distributed environments, making it suitable for large-scale virtual screening campaigns.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "docking_pipeline",
+        "virtual_screening"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ci-lab-cz/easydock",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "docking",
+        "pipeline",
+        "automation",
+        "virtual-screening"
+      ],
+      "id": 65
+    },
+    {
+      "name": "SMPLIP-Score",
+      "one_line_profile": "Prediction of absolute ligand-protein binding affinity",
+      "detailed_description": "SMPLIP-Score is a tool for predicting the absolute binding affinity between ligands and proteins. Developed by the College of Pharmacy at Gachon University, it utilizes machine learning approaches for scoring.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "scoring_function"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/college-of-pharmacy-gachon-university/SMPLIP-Score",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "binding-affinity",
+        "scoring",
+        "protein-ligand"
+      ],
+      "id": 66
+    },
+    {
+      "name": "Uni-Dock-Benchmarks",
+      "one_line_profile": "Benchmark datasets for evaluating Uni-Dock performance",
+      "detailed_description": "A curated collection of datasets and benchmarking tests designed to evaluate the performance and accuracy of the Uni-Dock docking system. It serves as a standard reference for validating docking results.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "benchmark_dataset",
+        "validation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dptech-corp/Uni-Dock-Benchmarks",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "docking",
+        "dataset"
+      ],
+      "id": 67
+    },
+    {
+      "name": "EnOpt",
+      "one_line_profile": "Ensemble Optimizer for docking and consensus-score analysis",
+      "detailed_description": "EnOpt (Ensemble Optimizer) is a tool designed to streamline ensemble-docking workflows and perform consensus-score analysis, helping to improve the reliability of virtual screening results.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "consensus_scoring",
+        "ensemble_docking"
+      ],
+      "application_level": "workflow",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/durrantlab/EnOpt",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ensemble-docking",
+        "consensus-scoring",
+        "virtual-screening"
+      ],
+      "id": 68
+    },
+    {
+      "name": "AnnapuRNA",
+      "one_line_profile": "Scoring function for RNA-small molecule interactions",
+      "detailed_description": "AnnapuRNA is a specialized scoring function developed for predicting and evaluating interactions between RNA molecules and small molecule ligands, addressing a specific niche in docking.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "scoring_function",
+        "rna_ligand_docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/filipsPL/annapurna",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "rna",
+        "scoring-function",
+        "docking"
+      ],
+      "id": 69
+    },
+    {
+      "name": "ACID",
+      "one_line_profile": "Auto in silico Consensus Inverse Docking for drug repurposing",
+      "detailed_description": "ACID (Auto in silico Consensus Inverse Docking) is a tool and web server backend designed for drug repurposing. It evaluates binding affinities between a small molecule and multiple protein targets using consensus inverse docking methods.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "inverse_docking",
+        "consensus_scoring",
+        "drug_repurposing"
+      ],
+      "application_level": "platform",
+      "primary_language": "TSQL",
+      "repo_url": "https://github.com/fwangccnu/ACID",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "inverse-docking",
+        "drug-repurposing",
+        "consensus-scoring"
+      ],
+      "id": 70
+    },
+    {
+      "name": "GNINA",
+      "one_line_profile": "Deep learning framework for molecular docking and scoring",
+      "detailed_description": "GNINA is a molecular docking software that utilizes deep convolutional neural networks to score protein-ligand interactions and optimize binding poses. It is a fork of Smina/AutoDock Vina with advanced DL scoring capabilities.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "scoring_function",
+        "pose_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/gnina/gnina",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "deep-learning",
+        "docking",
+        "scoring",
+        "cnn"
+      ],
+      "id": 71
+    },
+    {
+      "name": "Phinder",
+      "one_line_profile": "Pharmacophore feature identification using GNINA fragment docking",
+      "detailed_description": "Phinder is a tool for the semi-automatic identification of pharmacophore features from unbound receptor structures. It leverages GNINA's fragment docking capabilities to map potential interaction sites.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "pharmacophore_modeling",
+        "fragment_docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gnina/phinder",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pharmacophore",
+        "fragment-docking",
+        "gnina"
+      ],
+      "id": 72
+    },
+    {
+      "name": "HAC-Net",
+      "one_line_profile": "Hybrid Attention-Based CNN for protein-ligand binding affinity prediction",
+      "detailed_description": "HAC-Net is a deep learning model that combines attention mechanisms with convolutional neural networks to predict protein-ligand binding affinities with high accuracy.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "scoring_function"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/gregory-kyro/HAC-Net",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "binding-affinity",
+        "attention-mechanism"
+      ],
+      "id": 73
+    },
+    {
+      "name": "T-ALPHA",
+      "one_line_profile": "Hierarchical transformer-based network for binding affinity prediction",
+      "detailed_description": "T-ALPHA is a deep neural network utilizing a hierarchical transformer architecture for predicting protein-ligand binding affinities. It incorporates uncertainty-aware self-learning for improved protein-specific alignment.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "scoring_function"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/gregory-kyro/T-ALPHA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "transformer",
+        "binding-affinity",
+        "deep-learning"
+      ],
+      "id": 74
+    },
+    {
+      "name": "Binding Affinity Benchmark",
+      "one_line_profile": "Benchmark dataset for protein-protein binding affinity",
+      "detailed_description": "A benchmark dataset maintained by the HADDOCK team for evaluating protein-protein binding affinity prediction methods.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "benchmark_dataset",
+        "binding_affinity"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haddocking/binding-affinity-benchmark",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "protein-protein",
+        "affinity"
+      ],
+      "id": 75
+    },
+    {
+      "name": "PRODIGY-LIG",
+      "one_line_profile": "Prediction of protein-small molecule binding affinities",
+      "detailed_description": "PRODIGY-LIG is a structure-based method for predicting the binding affinity of protein-ligand complexes. It is part of the PRODIGY family of tools from the HADDOCK group.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "scoring_function"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haddocking/prodigy-lig",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "binding-affinity",
+        "scoring",
+        "protein-ligand"
+      ],
+      "id": 76
+    },
+    {
+      "name": "CoPRA",
+      "one_line_profile": "Cross-domain pretrained model for protein-RNA binding affinity prediction",
+      "detailed_description": "CoPRA (Bridging Cross-domain Pretrained Sequence Models with Complex Structures) is a deep learning framework designed to predict protein-RNA binding affinity. It integrates cross-domain pretrained sequence models with complex structural information to enhance prediction accuracy.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "protein_rna_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hanrthu/CoPRA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-rna",
+        "binding-affinity",
+        "deep-learning",
+        "AAAI-2025"
+      ],
+      "id": 77
+    },
+    {
+      "name": "DeepDTA",
+      "one_line_profile": "Deep learning model for drug-target binding affinity prediction",
+      "detailed_description": "DeepDTA is a deep learning-based method that predicts drug-target binding affinity using only the sequence information of both targets (proteins) and drugs (compounds). It eliminates the need for 3D structural data, making it applicable to large-scale screening.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "dta_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hkmztrk/DeepDTA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "drug-target-affinity",
+        "deep-learning",
+        "sequence-based",
+        "virtual-screening"
+      ],
+      "id": 78
+    },
+    {
+      "name": "PSICHIC",
+      "one_line_profile": "Physicochemical graph neural network for protein-ligand interaction fingerprints",
+      "detailed_description": "PSICHIC is a graph neural network model that learns protein-ligand interaction fingerprints directly from sequence data. It incorporates physicochemical constraints to provide interpretable predictions of binding interactions without relying on 3D crystal structures.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "interaction_fingerprint",
+        "binding_affinity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/huankoh/PSICHIC",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "graph-neural-network",
+        "interaction-fingerprints",
+        "protein-ligand",
+        "sequence-based"
+      ],
+      "id": 79
+    },
+    {
+      "name": "R4DSXML",
+      "one_line_profile": "R package for handling CDISC Dataset-XML and Define-XML",
+      "detailed_description": "R4DSXML is an R package designed to import and handle CDISC Dataset-XML and Define-XML files. It supports the standardization and exchange of clinical trial data, facilitating regulatory submissions and data analysis in pharmaceutical research.",
+      "domains": [
+        "Clinical Data"
+      ],
+      "subtask_category": [
+        "data_standardization",
+        "clinical_data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/i-akiya/R4DSXML",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "cdisc",
+        "clinical-trials",
+        "xml-parsing",
+        "data-exchange"
+      ],
+      "id": 80
+    },
+    {
+      "name": "deltaVinaXGB",
+      "one_line_profile": "Machine-learning based protein-ligand scoring function",
+      "detailed_description": "deltaVinaXGB is a scoring function for protein-ligand docking that combines classical physics-based terms from Vina with a gradient boosting machine (XGBoost) to improve the accuracy of binding affinity predictions and virtual screening ranking.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "scoring_function",
+        "binding_affinity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/jenniening/deltaVinaXGB",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "scoring-function",
+        "molecular-docking",
+        "xgboost",
+        "machine-learning"
+      ],
+      "id": 81
+    },
+    {
+      "name": "MBP",
+      "one_line_profile": "Multi-task Bioassay Pre-training for affinity prediction",
+      "detailed_description": "MBP (Multi-task Bioassay Pre-training) is a framework for protein-ligand binding affinity prediction. It utilizes a pre-training strategy on large-scale bioassay data to learn robust molecular representations, which are then fine-tuned for affinity prediction tasks.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jiaxianyan/MBP",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pre-training",
+        "bioassay",
+        "binding-affinity",
+        "multi-task-learning"
+      ],
+      "id": 82
+    },
+    {
+      "name": "ProteusAI",
+      "one_line_profile": "Library for ML-driven protein engineering and interaction prediction",
+      "detailed_description": "ProteusAI is a Python library designed for machine learning-driven protein engineering. It provides workflows for protein structure prediction, mutational effect estimation, and protein-ligand interaction analysis, serving as a comprehensive toolkit for protein design.",
+      "domains": [
+        "S3",
+        "S3-03",
+        "Protein Engineering"
+      ],
+      "subtask_category": [
+        "protein_engineering",
+        "structure_prediction",
+        "interaction_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jonfunk21/ProteusAI",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-engineering",
+        "machine-learning",
+        "mutational-effects",
+        "protein-ligand"
+      ],
+      "id": 83
+    },
+    {
+      "name": "ANTIPASTI",
+      "one_line_profile": "Deep learning model for antibody binding affinity prediction",
+      "detailed_description": "ANTIPASTI (ANTIbody Predictor of Affinity from STructural Information) is a deep learning model that predicts the binding affinity of antibodies based on their three-dimensional structural data, aiding in the computational design and selection of therapeutic antibodies.",
+      "domains": [
+        "S3",
+        "S3-03",
+        "Antibody Design"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "antibody_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kevinmicha/ANTIPASTI",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "antibody",
+        "binding-affinity",
+        "structure-based",
+        "deep-learning"
+      ],
+      "id": 84
+    },
+    {
+      "name": "DOVE",
+      "one_line_profile": "Deep-learning based docking decoy evaluation method",
+      "detailed_description": "DOVE is a deep learning-based method for evaluating protein docking decoys. It distinguishes near-native structures from incorrect docking poses by analyzing the interface properties, serving as a scoring function for protein-protein docking.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "scoring_function",
+        "decoy_evaluation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kiharalab/DOVE",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "docking",
+        "scoring",
+        "deep-learning",
+        "protein-protein-interaction"
+      ],
+      "id": 85
+    },
+    {
+      "name": "GNN_DOVE",
+      "one_line_profile": "Graph Neural Network for protein docking model evaluation",
+      "detailed_description": "GNN_DOVE is a graph neural network-based scoring function for evaluating protein docking models. It represents protein interfaces as graphs to capture topological and physicochemical features for distinguishing correct docking poses.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "scoring_function",
+        "decoy_evaluation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kiharalab/GNN_DOVE",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "graph-neural-network",
+        "docking",
+        "scoring",
+        "protein-interaction"
+      ],
+      "id": 86
+    },
+    {
+      "name": "CAPLA",
+      "one_line_profile": "Cross-attention based protein-ligand affinity prediction",
+      "detailed_description": "CAPLA is a deep learning model for predicting protein-ligand binding affinity. It employs a cross-attention mechanism to effectively capture the interaction features between protein sequences and ligand molecular graphs.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "dta_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lennylv/CAPLA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cross-attention",
+        "binding-affinity",
+        "deep-learning",
+        "protein-ligand"
+      ],
+      "id": 87
+    },
+    {
+      "name": "OpenXRayMC",
+      "one_line_profile": "Monte Carlo radiation dose scoring for x-ray imaging",
+      "detailed_description": "OpenXRayMC is a Monte Carlo simulation application designed for calculating radiation dose distributions in diagnostic x-ray imaging. It allows for precise dose scoring in various geometries, supporting medical physics research and safety assessment.",
+      "domains": [
+        "Medical Physics"
+      ],
+      "subtask_category": [
+        "dose_calculation",
+        "monte_carlo_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/medicalphysics/OpenXRayMC",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "monte-carlo",
+        "radiation-dose",
+        "x-ray",
+        "medical-physics"
+      ],
+      "id": 88
+    },
+    {
+      "name": "plantain",
+      "one_line_profile": "AI-based pose scoring function for molecular docking",
+      "detailed_description": "plantain is a molecular docking tool that utilizes an artificial intelligence-based scoring function. It is designed to provide fast and accurate predictions of ligand binding poses and affinities, facilitating virtual screening workflows.",
+      "domains": [
+        "S3",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "scoring_function"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/molecularmodelinglab/plantain",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-docking",
+        "scoring-function",
+        "artificial-intelligence",
+        "pose-prediction"
+      ],
+      "id": 89
+    },
+    {
+      "name": "PIGNet2",
+      "one_line_profile": "Physics-informed deep learning model for protein-ligand interaction prediction",
+      "detailed_description": "A versatile deep learning-based protein-ligand interaction prediction model designed for binding affinity scoring and virtual screening. It integrates physics-informed features to improve generalization and accuracy in scoring.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "scoring",
+        "binding_affinity_prediction",
+        "virtual_screening"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mseok/PIGNet2",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "protein-ligand",
+        "binding-affinity",
+        "physics-informed"
+      ],
+      "id": 90
+    },
+    {
+      "name": "Nanome Docking Plugin",
+      "one_line_profile": "Docking interface plugin for Nanome VR platform",
+      "detailed_description": "A plugin for the Nanome virtual reality molecular design platform that triggers docking calculations using Autodock 4, Smina, and Vina directly within the VR environment.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "docking",
+        "visualization"
+      ],
+      "application_level": "plugin",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nanome-ai/plugin-docking",
+      "help_website": [
+        "https://nanome.ai"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "vr",
+        "docking",
+        "nanome",
+        "autodock",
+        "smina"
+      ],
+      "id": 91
+    },
+    {
+      "name": "PELE Platform",
+      "one_line_profile": "Platform for Protein Energy Landscape Exploration (PELE)",
+      "detailed_description": "A wrapper platform to launch various PELE features including AdaptivePELE, Markov State Models (MSM), Ligand Growing, and Glide Rescoring for drug discovery and molecular dynamics tasks.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "rescoring",
+        "ligand_growing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nostrumbiodiscovery/pele_platform",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pele",
+        "molecular-dynamics",
+        "simulation",
+        "drug-discovery"
+      ],
+      "id": 92
+    },
+    {
+      "name": "USMPep",
+      "one_line_profile": "MHC binding affinity prediction model",
+      "detailed_description": "A tool for predicting the binding affinity of peptides to the Major Histocompatibility Complex (MHC), aiding in immunology and vaccine design.",
+      "domains": [
+        "Immunology",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "epitope_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nstrodt/USMPep",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "mhc",
+        "peptide",
+        "binding-affinity",
+        "immunology"
+      ],
+      "id": 93
+    },
+    {
+      "name": "RF-Score-VS",
+      "one_line_profile": "Random Forest scoring function for virtual screening",
+      "detailed_description": "A Random Forest-based protein-ligand scoring function specifically tailored for virtual screening tasks, part of the ODDT ecosystem.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "scoring",
+        "virtual_screening"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/oddt/rfscorevs",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "scoring-function",
+        "random-forest",
+        "virtual-screening",
+        "oddt"
+      ],
+      "id": 94
+    },
+    {
+      "name": "RF-Score-VS Binary",
+      "one_line_profile": "Binary classification version of RF-Score-VS",
+      "detailed_description": "A binary classification variant of the RF-Score-VS scoring function, designed to classify protein-ligand poses as active or inactive.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "scoring",
+        "classification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/oddt/rfscorevs_binary",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "scoring-function",
+        "random-forest",
+        "binary-classification"
+      ],
+      "id": 95
+    },
+    {
+      "name": "Inferred-functional-risk-scoring",
+      "one_line_profile": "Functionally informed genetic risk scores generator",
+      "detailed_description": "R scripts for generating functionally informed genetic risk scores using Transcriptome-Wide Association Studies (TWAS) data.",
+      "domains": [
+        "Genetics"
+      ],
+      "subtask_category": [
+        "risk_scoring",
+        "genetic_analysis"
+      ],
+      "application_level": "script",
+      "primary_language": "R",
+      "repo_url": "https://github.com/opain/Inferred-functional-risk-scoring",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "genetics",
+        "risk-score",
+        "twas",
+        "bioinformatics"
+      ],
+      "id": 96
+    },
+    {
+      "name": "MHCflurry",
+      "one_line_profile": "Peptide-MHC I binding affinity predictor",
+      "detailed_description": "A comprehensive package for peptide-MHC I binding affinity prediction, including training and prediction modules, widely used in neoantigen identification.",
+      "domains": [
+        "Immunology",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "neoantigen_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openvax/mhcflurry",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mhc",
+        "peptide",
+        "immunotherapy",
+        "binding-prediction"
+      ],
+      "id": 97
+    },
+    {
+      "name": "pUniFind",
+      "one_line_profile": "De novo sequencing and database search rescoring model",
+      "detailed_description": "A deep learning model for rescoring in de novo sequencing and database search for proteomics, aiming to improve identification accuracy.",
+      "domains": [
+        "Proteomics"
+      ],
+      "subtask_category": [
+        "rescoring",
+        "de_novo_sequencing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pFindStudio/pUniFind",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "proteomics",
+        "deep-learning",
+        "rescoring",
+        "mass-spectrometry"
+      ],
+      "id": 98
+    },
+    {
+      "name": "DeepSeqPan",
+      "one_line_profile": "Sequence-based pan model for peptide-MHC I binding",
+      "detailed_description": "A deep learning model for predicting peptide-MHC class I binding affinity using sequence information, supporting pan-specific predictions.",
+      "domains": [
+        "Immunology"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pcpLiu/DeepSeqPan",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "mhc-i",
+        "deep-learning",
+        "peptide",
+        "binding-affinity"
+      ],
+      "id": 99
+    },
+    {
+      "name": "DeepSeqPanII",
+      "one_line_profile": "Sequence-based pan model for peptide-MHC II binding",
+      "detailed_description": "A successor to DeepSeqPan, specifically designed for predicting peptide-MHC class II binding affinities.",
+      "domains": [
+        "Immunology"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pcpLiu/DeepSeqPanII",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "mhc-ii",
+        "deep-learning",
+        "peptide",
+        "binding-affinity"
+      ],
+      "id": 100
+    },
+    {
+      "name": "CrystalExplorer",
+      "one_line_profile": "Crystal structure analysis and visualization tool",
+      "detailed_description": "Software for crystal structure analysis, featuring Hirshfeld surface analysis and calculation of intermolecular interaction energies.",
+      "domains": [
+        "Crystallography",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "structure_analysis",
+        "visualization",
+        "energy_calculation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/peterspackman/crystalexplorer",
+      "help_website": [
+        "http://crystalexplorer.scb.uwa.edu.au/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "crystallography",
+        "hirshfeld-surface",
+        "interaction-energy"
+      ],
+      "id": 101
+    },
+    {
+      "name": "PLIP",
+      "one_line_profile": "Protein-Ligand Interaction Profiler",
+      "detailed_description": "A tool to analyze and visualize non-covalent protein-ligand interactions in PDB files, detecting hydrogen bonds, hydrophobic contacts, pi-stacking, etc.",
+      "domains": [
+        "Drug Discovery",
+        "Structural Biology"
+      ],
+      "subtask_category": [
+        "interaction_analysis",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pharmai/plip",
+      "help_website": [
+        "https://plip-tool.biotec.tu-dresden.de/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "protein-ligand",
+        "interaction-profiling",
+        "pdb",
+        "visualization"
+      ],
+      "id": 102
+    },
+    {
+      "name": "PLINDER",
+      "one_line_profile": "Protein Ligand Interaction Dataset and Evaluation Resource",
+      "detailed_description": "A comprehensive resource and dataset for training and evaluating protein-ligand interaction models, facilitating benchmarking in drug discovery.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "dataset",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/plinder-org/plinder",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "dataset",
+        "protein-ligand",
+        "benchmarking",
+        "evaluation"
+      ],
+      "id": 103
+    },
+    {
+      "name": "PandaMap-Color",
+      "one_line_profile": "Customizable Protein-Ligand Interaction Mapper",
+      "detailed_description": "A visualization tool for mapping protein-ligand interactions with customizable color schemes to enhance interpretability.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "visualization",
+        "interaction_mapping"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pritampanda15/PandaMap-Color",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "protein-ligand",
+        "interaction-map"
+      ],
+      "id": 104
+    },
+    {
+      "name": "NAMD-MMPBGBSA",
+      "one_line_profile": "Scripts for NAMD MD and free energy calculations",
+      "detailed_description": "A collection of scripts to run NAMD Molecular Dynamics simulations and perform free energy calculations using LIE, MMPBSA, and MMGBSA methods, optimized for Google Colab.",
+      "domains": [
+        "Molecular Dynamics",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "free_energy_calculation",
+        "simulation_workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/purnawanpp/NAMD-MMPBGBSA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "namd",
+        "mmpbsa",
+        "mmgbsa",
+        "free-energy",
+        "molecular-dynamics"
+      ],
+      "id": 105
+    },
+    {
+      "name": "Causal-learn",
+      "one_line_profile": "Python library for causal discovery and inference",
+      "detailed_description": "A Python library for causal discovery that includes independence tests and score functions, widely used in scientific causal analysis and AI for Science research.",
+      "domains": [
+        "Data Science",
+        "Causal Inference"
+      ],
+      "subtask_category": [
+        "causal_discovery",
+        "statistical_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/py-why/causal-learn",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "causal-inference",
+        "causal-discovery",
+        "statistics",
+        "python"
+      ],
+      "id": 106
+    },
+    {
+      "name": "Pymol_Script",
+      "one_line_profile": "PyMOL script for protein-ligand interaction imaging",
+      "detailed_description": "A utility script for PyMOL to automate the generation of high-quality protein-ligand interaction images for publication or analysis.",
+      "domains": [
+        "Structural Biology"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_generation"
+      ],
+      "application_level": "script",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/quantaosun/Pymol_Script",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pymol",
+        "visualization",
+        "protein-ligand",
+        "script"
+      ],
+      "id": 107
+    },
+    {
+      "name": "BAPULM",
+      "one_line_profile": "Binding affinity prediction model",
+      "detailed_description": "A computational model for predicting binding affinity in drug discovery contexts.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/radh55sh/BAPULM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "binding-affinity",
+        "drug-discovery",
+        "prediction"
+      ],
+      "id": 108
+    },
+    {
+      "name": "DEBplant",
+      "one_line_profile": "Dynamic Energy Budget plant model",
+      "detailed_description": "Scripts implementing a Dynamic Energy Budget (DEB) plant model that accounts for microclimate interactions, used in ecological and biological modeling.",
+      "domains": [
+        "Ecology",
+        "Plant Biology"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "script",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/rafaqz/DEBplant",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deb",
+        "plant-model",
+        "ecology",
+        "julia"
+      ],
+      "id": 109
+    },
+    {
+      "name": "3DProtDTA",
+      "one_line_profile": "Deep learning model for drug-target affinity prediction",
+      "detailed_description": "A deep learning model utilizing residue-level protein graphs to predict drug-target binding affinity.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "dta"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/receptor-ai/3d-prot-dta",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deep-learning",
+        "dta",
+        "drug-target-affinity",
+        "graph-neural-network"
+      ],
+      "id": 110
+    },
+    {
+      "name": "dockECR",
+      "one_line_profile": "Consensus docking and ranking protocol",
+      "detailed_description": "An open consensus docking and ranking protocol designed to improve virtual screening results by combining outputs from multiple docking tools.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "docking",
+        "consensus_scoring",
+        "virtual_screening"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rochoa85/dockECR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "consensus",
+        "virtual-screening",
+        "ranking"
+      ],
+      "id": 111
+    },
+    {
+      "name": "Docking_py",
+      "one_line_profile": "Python library for automating molecular docking",
+      "detailed_description": "A Python library that simplifies and automates the use of Smina, Vina, Qvina2, and Qvinaw docking software for virtual screening workflows.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "docking",
+        "workflow_automation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/samuelmurail/docking_py",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "docking",
+        "vina",
+        "smina",
+        "automation",
+        "python"
+      ],
+      "id": 112
+    },
+    {
+      "name": "SIEVE-Score",
+      "one_line_profile": "Interaction energy-based virtual screening method",
+      "detailed_description": "A virtual screening method based on Random Forest that utilizes interaction energy terms to score and rank compounds.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "virtual_screening",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sekijima-lab/SIEVE-Score",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "virtual-screening",
+        "random-forest",
+        "scoring-function",
+        "interaction-energy"
+      ],
+      "id": 113
+    },
+    {
+      "name": "ML_PSI",
+      "one_line_profile": "Predictor for polymer-surface adhesive free energies",
+      "detailed_description": "A machine learning model for predicting adhesive free energies of polymer-surface interactions, useful in materials science.",
+      "domains": [
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "energy_prediction",
+        "polymer_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shijiale0609/ML_PSI",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "machine-learning",
+        "polymer",
+        "surface-interaction",
+        "free-energy"
+      ],
+      "id": 114
+    },
+    {
+      "name": "DLSCORE",
+      "one_line_profile": "Deep learning scoring function for binding affinity",
+      "detailed_description": "A deep learning-based scoring function designed to predict protein-ligand binding affinity, trained on the PDBbind refined set.",
+      "domains": [
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "scoring",
+        "binding_affinity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sirimullalab/DLSCORE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "scoring-function",
+        "binding-affinity",
+        "pdbbind"
+      ],
+      "id": 115
+    },
+    {
+      "name": "PocketAnchor",
+      "one_line_profile": "Structure-based pocket representation learning for protein-ligand interaction prediction",
+      "detailed_description": "A deep learning framework that learns structure-based pocket representations to predict protein-ligand interactions, serving as a scoring function for drug discovery.",
+      "domains": [
+        "Drug Discovery",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tiantz17/PocketAnchor",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "deep-learning",
+        "protein-ligand-interaction",
+        "structure-based"
+      ],
+      "id": 116
+    },
+    {
+      "name": "MolDockLab",
+      "one_line_profile": "Data-driven workflow for consensus Structure-Based Virtual Screening (SBVS)",
+      "detailed_description": "A Jupyter Notebook-based workflow designed to identify the best balanced consensus scoring strategy for structure-based virtual screening campaigns against specific targets.",
+      "domains": [
+        "Drug Discovery",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "virtual_screening",
+        "consensus_scoring"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/volkamerlab/MolDockLab",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "virtual-screening",
+        "consensus-scoring",
+        "docking"
+      ],
+      "id": 117
+    },
+    {
+      "name": "Oktoberfest",
+      "one_line_profile": "Rescoring and spectral library generation pipeline for proteomics",
+      "detailed_description": "A proteomics pipeline that uses deep learning (via Prosit) to generate spectral libraries and rescore peptide-spectrum matches (PSMs) to increase identification rates.",
+      "domains": [
+        "Proteomics",
+        "Mass Spectrometry"
+      ],
+      "subtask_category": [
+        "rescoring",
+        "spectral_library_generation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wilhelm-lab/oktoberfest",
+      "help_website": [
+        "https://oktoberfest.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "proteomics",
+        "mass-spectrometry",
+        "rescoring"
+      ],
+      "id": 118
+    },
+    {
+      "name": "ECIFGraph",
+      "one_line_profile": "Water Network-Augmented model for Protein-Ligand Binding Affinity Prediction",
+      "detailed_description": "A deep learning model that incorporates water network information into graph representations to predict protein-ligand binding affinities.",
+      "domains": [
+        "Drug Discovery",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xiaoyangqu/ECIFGraph",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "binding-affinity",
+        "graph-neural-network",
+        "water-network"
+      ],
+      "id": 119
+    },
+    {
+      "name": "DeepDTA-tf",
+      "one_line_profile": "TensorFlow implementation of DeepDTA for drug-target binding affinity prediction",
+      "detailed_description": "A TensorFlow implementation of the DeepDTA model, which uses sequence-based deep learning to predict drug-target binding affinities.",
+      "domains": [
+        "Drug Discovery",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "dta"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xnuohz/DeepDTA-tf",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deep-learning",
+        "binding-affinity",
+        "sequence-based"
+      ],
+      "id": 120
+    },
+    {
+      "name": "DeepDrugDomain",
+      "one_line_profile": "Toolkit for drug-target interaction and binding affinity prediction",
+      "detailed_description": "A versatile Python toolkit designed for streamlined preprocessing and accurate prediction of drug-target interactions (DTI) and binding affinities using deep learning.",
+      "domains": [
+        "Drug Discovery",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "dti_prediction",
+        "binding_affinity_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yazdanimehdi/DeepDrugDomain",
+      "help_website": [
+        "https://deepdrugdomain.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "drug-target-interaction",
+        "deep-learning",
+        "preprocessing"
+      ],
+      "id": 121
+    },
+    {
+      "name": "orthrus_metaproteomics",
+      "one_line_profile": "Metaproteomics pipeline combining de novo sequencing and database searching",
+      "detailed_description": "A workflow for metaproteomics data analysis that integrates Transformer-based de novo sequencing (Casanovo) with database searching and rescoring tools (Sage + Mokapot).",
+      "domains": [
+        "Proteomics",
+        "Metaproteomics"
+      ],
+      "subtask_category": [
+        "peptide_identification",
+        "rescoring"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/yc386/orthrus_metaproteomics",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "metaproteomics",
+        "de-novo-sequencing",
+        "rescoring"
+      ],
+      "id": 122
+    },
+    {
+      "name": "Fibro-CoSANet",
+      "one_line_profile": "Multi-modal network for pulmonary fibrosis progression prediction",
+      "detailed_description": "An end-to-end multi-modal deep learning model utilizing CT images and demographic data to predict FVC decline in Idiopathic Pulmonary Fibrosis patients.",
+      "domains": [
+        "Medical Imaging",
+        "Clinical Prediction"
+      ],
+      "subtask_category": [
+        "disease_progression_prediction",
+        "medical_image_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zabir-nabil/Fibro-CoSANet",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pulmonary-fibrosis",
+        "multi-modal",
+        "medical-imaging"
+      ],
+      "id": 123
+    },
+    {
+      "name": "OnionNet-2",
+      "one_line_profile": "CNN-based protein-ligand binding affinity prediction model",
+      "detailed_description": "A convolutional neural network (CNN) model designed to predict protein-ligand binding affinity based on inter-molecular contact features.",
+      "domains": [
+        "Drug Discovery",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zchwang/OnionNet-2",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cnn",
+        "binding-affinity",
+        "structure-based"
+      ],
+      "id": 124
+    },
+    {
+      "name": "AttentionDTA (BIBM)",
+      "one_line_profile": "Attention-based model for drug-target binding affinity prediction",
+      "detailed_description": "A deep learning model utilizing attention mechanisms to predict drug-target binding affinities from sequence data.",
+      "domains": [
+        "Drug Discovery",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "dta"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhaoqichang/AttentionDTA_BIBM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "attention-mechanism",
+        "binding-affinity",
+        "sequence-based"
+      ],
+      "id": 125
+    },
+    {
+      "name": "AttentionDTA (TCBB)",
+      "one_line_profile": "Sequence-based deep learning with attention for DTA prediction",
+      "detailed_description": "Implementation of the AttentionDTA model for predicting drug-target binding affinity, published in TCBB.",
+      "domains": [
+        "Drug Discovery",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "dta"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhaoqichang/AttentionDTA_TCBB",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "attention-mechanism",
+        "binding-affinity",
+        "deep-learning"
+      ],
+      "id": 126
+    },
+    {
+      "name": "MMPD-DTA",
+      "one_line_profile": "Multi-modal deep learning model for DTA prediction",
+      "detailed_description": "A multi-modal deep learning framework for predicting drug-target binding affinity, integrating different data modalities.",
+      "domains": [
+        "Drug Discovery",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "dta"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhc-moushang/MMPD-DTA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "multi-modal",
+        "binding-affinity",
+        "deep-learning"
+      ],
+      "id": 127
+    },
+    {
+      "name": "OnionNet-SFCT",
+      "one_line_profile": "Scoring function correction term for protein-ligand docking",
+      "detailed_description": "A tool that improves protein-ligand docking and screening accuracies by incorporating a machine learning-based scoring function correction term.",
+      "domains": [
+        "Drug Discovery",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "docking_scoring",
+        "rescoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhenglz/OnionNet-SFCT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "docking",
+        "scoring-function",
+        "correction"
+      ],
+      "id": 128
+    },
+    {
+      "name": "dockingML",
+      "one_line_profile": "Pipeline for MD, Docking, and Machine Learning in drug discovery",
+      "detailed_description": "A Python package that integrates molecular dynamics (MD), molecular docking, and machine learning methods into a unified drug discovery pipeline.",
+      "domains": [
+        "Drug Discovery",
+        "S3"
+      ],
+      "subtask_category": [
+        "virtual_screening_pipeline",
+        "molecular_dynamics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhenglz/dockingML",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "molecular-dynamics",
+        "docking",
+        "machine-learning"
+      ],
+      "id": 129
+    },
+    {
+      "name": "OnionNet",
+      "one_line_profile": "Deep neural network for protein-ligand binding affinity prediction",
+      "detailed_description": "A multiple-layer deep neural network based on inter-molecular contact features for predicting protein-ligand binding affinity.",
+      "domains": [
+        "Drug Discovery",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "binding_affinity_prediction",
+        "scoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhenglz/onionnet",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "deep-learning",
+        "binding-affinity",
+        "contact-features"
+      ],
+      "id": 130
+    },
+    {
+      "name": "IGN",
+      "one_line_profile": "InteractionGraphNet for protein-ligand interaction prediction",
+      "detailed_description": "A deep graph representation learning framework (InteractionGraphNet) for accurate protein-ligand interaction predictions and virtual screening.",
+      "domains": [
+        "Drug Discovery",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "virtual_screening"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zjujdj/IGN",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "graph-neural-network",
+        "interaction-prediction",
+        "virtual-screening"
+      ],
+      "id": 131
+    },
+    {
+      "name": "InteractionGraphNet",
+      "one_line_profile": "Deep graph framework for structure-based virtual screening",
+      "detailed_description": "A deep graph representation learning framework designed for accurate protein-ligand interaction prediction and large-scale structure-based virtual screening.",
+      "domains": [
+        "Drug Discovery",
+        "S3-03"
+      ],
+      "subtask_category": [
+        "virtual_screening",
+        "interaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": null,
+      "repo_url": "https://github.com/zjujdj/InteractionGraphNet",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "graph-learning",
+        "virtual-screening",
+        "protein-ligand"
+      ],
+      "id": 132
+    }
+  ]
+}

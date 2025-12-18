@@ -1,0 +1,3128 @@
+{
+  "generated_at": "2025-12-16T01:18:00.697166+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "C1",
+      "leaf_cluster_name": "化学信息-分子表示与检索生态",
+      "domain": "Chemistry",
+      "typical_objects": "SMILES/InChI, graphs",
+      "task_chain": "标准化→指纹/embedding→检索→评测",
+      "tool_form": "表示库 + 向量检索 + index"
+    },
+    "unit": {
+      "unit_id": "C1-02",
+      "unit_name": "指纹/embedding/特征工程",
+      "target_scale": "200–450",
+      "coverage_tools": "fingerprints、embeddings、featurizers"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] PaDEL-Descriptor",
+        "[GH] Descriptastorus",
+        "[GH] GROVER",
+        "[GH] TorchDrug",
+        "[GH] DGL-LifeSci",
+        "[GH] ChemBERTa",
+        "[GH] Mol2Vec",
+        "[GH] Mordred",
+        "[GH] DeepChem",
+        "[GH] RDKit",
+        "[GH] molecular fingerprints",
+        "[GH] molecular embeddings",
+        "[GH] chemical descriptors",
+        "[GH] molecule featurizer",
+        "[GH] SMILES embedding",
+        "[GH] molecular representation learning",
+        "[GH] graph neural networks chemistry",
+        "[GH] chemoinformatics features",
+        "[GH] ECFP fingerprint",
+        "[GH] Morgan fingerprint",
+        "[GH] molecular graph convolution",
+        "[GH] chemical language model",
+        "[GH] structure-property prediction features",
+        "[WEB] molecular fingerprints python library github",
+        "[WEB] deep learning molecular embeddings github",
+        "[WEB] chemical feature extraction tools github",
+        "[WEB] SMILES transformer representation github",
+        "[WEB] graph neural network molecule featurizer github"
+      ],
+      "total_candidates": 898,
+      "tool_candidates": 327,
+      "final_tools": 124
+    }
+  },
+  "tools": [
+    {
+      "name": "Jupyter Dock",
+      "one_line_profile": "Interactive molecular docking and visualization workflows in Jupyter",
+      "detailed_description": "A set of Jupyter Notebooks designed for performing molecular docking protocols interactively, including visualization, file format conversion, and result analysis.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/AngelRuizMoreno/Jupyter_Dock",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-docking",
+        "jupyter-notebook",
+        "visualization",
+        "bioinformatics"
+      ],
+      "id": 1
+    },
+    {
+      "name": "ChemicalX",
+      "one_line_profile": "Deep learning library for drug-drug interaction and pair scoring",
+      "detailed_description": "A PyTorch and TorchDrug based deep learning library designed for drug pair scoring tasks, such as predicting drug-drug interactions, polypharmacy side effects, and combination synergy.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "drug_interaction_prediction",
+        "scoring"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AstraZeneca/chemicalx",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "deep-learning",
+        "drug-discovery",
+        "pytorch",
+        "drug-drug-interaction"
+      ],
+      "id": 2
+    },
+    {
+      "name": "DeepMol",
+      "one_line_profile": "Machine and deep learning framework for computational chemistry",
+      "detailed_description": "A standardized framework for applying machine learning and deep learning techniques to computational chemistry problems, facilitating drug discovery pipelines.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_modeling",
+        "property_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BioSystemsUM/DeepMol",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "chemoinformatics",
+        "machine-learning",
+        "deep-learning",
+        "drug-discovery"
+      ],
+      "id": 3
+    },
+    {
+      "name": "PCMol",
+      "one_line_profile": "Protein-conditioned de novo molecular generator",
+      "detailed_description": "A multi-target de novo molecular generator that conditions generation on AlphaFold's latent protein embeddings to design molecules for specific protein targets.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "de_novo_design",
+        "molecular_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/CDDLeiden/PCMol",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "generative-model",
+        "drug-design",
+        "alphafold",
+        "molecular-generation"
+      ],
+      "id": 4
+    },
+    {
+      "name": "ChemDataExtractor",
+      "one_line_profile": "Toolkit for extracting chemical information from scientific literature",
+      "detailed_description": "A toolkit for automatically extracting chemical information from scientific documents, including named entity recognition and relationship extraction for chemical properties.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "text_mining",
+        "information_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/CambridgeMolecularEngineering/chemdataextractor2",
+      "help_website": [
+        "http://chemdataextractor.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "nlp",
+        "text-mining",
+        "chemistry",
+        "information-extraction"
+      ],
+      "id": 5
+    },
+    {
+      "name": "SMILES Transformer",
+      "one_line_profile": "Pre-trained Transformer for molecular fingerprinting from SMILES",
+      "detailed_description": "An implementation of a Transformer-based model pre-trained on SMILES strings to generate molecular fingerprints, useful for low-data drug discovery tasks.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_representation",
+        "fingerprinting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/DSPsleeporg/smiles-transformer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "smiles",
+        "transformer",
+        "fingerprint",
+        "representation-learning"
+      ],
+      "id": 6
+    },
+    {
+      "name": "u-signal3D",
+      "one_line_profile": "Platform for 3D molecular organization analysis on cell surfaces",
+      "detailed_description": "A computational platform that defines shape-invariant representations of spatial scales of molecular organization at the cell surface, enabling comparison and machine-learning of signaling across diverse cell populations.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_analysis",
+        "spatial_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/DanuserLab/u-signal3D",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "molecular-organization",
+        "cell-signaling",
+        "3d-analysis",
+        "matlab"
+      ],
+      "id": 7
+    },
+    {
+      "name": "TorchDrug",
+      "one_line_profile": "Machine learning platform for drug discovery",
+      "detailed_description": "A powerful and flexible machine learning platform designed for drug discovery, covering graph machine learning, protein representation learning, and molecule generation.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "drug_discovery",
+        "graph_learning",
+        "protein_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DeepGraphLearning/torchdrug",
+      "help_website": [
+        "https://torchdrug.ai"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "drug-discovery",
+        "graph-neural-networks",
+        "pytorch",
+        "machine-learning"
+      ],
+      "id": 8
+    },
+    {
+      "name": "rdkit-scripts",
+      "one_line_profile": "Collection of utility scripts for RDKit",
+      "detailed_description": "A collection of Python scripts and helper functions to facilitate common chemoinformatics tasks using the RDKit library.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "chemoinformatics_utility",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DrrDom/rdkit-scripts",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rdkit",
+        "chemoinformatics",
+        "scripts",
+        "python"
+      ],
+      "id": 9
+    },
+    {
+      "name": "rdeditor",
+      "one_line_profile": "Simple RDKit-based molecule editor GUI",
+      "detailed_description": "A graphical user interface for editing molecular structures, built using RDKit and PySide.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_editing",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EBjerrum/rdeditor",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "rdkit",
+        "molecule-editor",
+        "gui",
+        "pyside"
+      ],
+      "id": 10
+    },
+    {
+      "name": "scikit-mol",
+      "one_line_profile": "Scikit-learn compatible molecular vectorization",
+      "detailed_description": "A library providing scikit-learn compatible transformer classes for molecular vectorization and fingerprinting using RDKit.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "featurization",
+        "fingerprinting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EBjerrum/scikit-mol",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "scikit-learn",
+        "rdkit",
+        "molecular-fingerprints",
+        "machine-learning"
+      ],
+      "id": 11
+    },
+    {
+      "name": "MatDeepLearn",
+      "one_line_profile": "Graph neural network library for materials chemistry",
+      "detailed_description": "A library designed for applying graph neural networks to materials chemistry tasks, such as property prediction.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "materials_property_prediction",
+        "graph_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Fung-Lab/MatDeepLearn",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "materials-science",
+        "graph-neural-networks",
+        "deep-learning",
+        "chemistry"
+      ],
+      "id": 12
+    },
+    {
+      "name": "KerasNeuralFingerprint",
+      "one_line_profile": "Keras implementation of neural graph fingerprints",
+      "detailed_description": "A Keras-based implementation of neural fingerprints that operates on molecular graphs of arbitrary size.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "fingerprinting",
+        "representation_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GUR9000/KerasNeuralFingerprint",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "keras",
+        "neural-fingerprint",
+        "molecular-graph",
+        "deep-learning"
+      ],
+      "id": 13
+    },
+    {
+      "name": "neural-fingerprint",
+      "one_line_profile": "Convolutional networks for molecular fingerprints",
+      "detailed_description": "The original implementation of convolutional networks on graphs for learning molecular fingerprints, capable of handling molecular graphs of arbitrary size.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "fingerprinting",
+        "graph_convolution"
+      ],
+      "application_level": "library",
+      "primary_language": "TeX",
+      "repo_url": "https://github.com/HIPS/neural-fingerprint",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "graph-convolution",
+        "molecular-fingerprints",
+        "deep-learning",
+        "chemistry"
+      ],
+      "id": 14
+    },
+    {
+      "name": "SELFormer",
+      "one_line_profile": "Molecular representation learning via SELFIES language models",
+      "detailed_description": "A Transformer-based model for molecular representation learning that utilizes SELFIES strings to generate embeddings for downstream tasks.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "representation_learning",
+        "molecular_embedding"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HUBioDataLab/SELFormer",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "selfies",
+        "transformer",
+        "representation-learning",
+        "molecular-embedding"
+      ],
+      "id": 15
+    },
+    {
+      "name": "InformaticsMatters Pipelines",
+      "one_line_profile": "Containerised components and workflows for cheminformatics and computational chemistry",
+      "detailed_description": "A collection of containerised tools and Nextflow pipelines for various cheminformatics tasks, facilitating reproducible computational chemistry workflows.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "cheminformatics_pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/InformaticsMatters/pipelines",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cheminformatics",
+        "workflow",
+        "docker",
+        "nextflow"
+      ],
+      "id": 16
+    },
+    {
+      "name": "MaSIF",
+      "one_line_profile": "Geometric deep learning framework for molecular surface interaction fingerprints",
+      "detailed_description": "MaSIF (Molecular Surface Interaction Fingerprints) uses geometric deep learning to decipher patterns in molecular surfaces, enabling prediction of protein-protein interactions and other surface-based properties.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_surface_analysis",
+        "interaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LPDI-EPFL/masif",
+      "help_website": [
+        "https://github.com/LPDI-EPFL/masif"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "geometric-deep-learning",
+        "molecular-surface",
+        "protein-interaction",
+        "fingerprints"
+      ],
+      "id": 17
+    },
+    {
+      "name": "EAGCN",
+      "one_line_profile": "Multi-View Spectral Graph Convolution with Consistent Edge Attention for Molecular Modeling",
+      "detailed_description": "An implementation of EAGCN, a deep learning model for molecular property prediction that utilizes multi-view spectral graph convolutions and edge attention mechanisms.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "molecular_representation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Luckick/EAGCN",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "graph-neural-networks",
+        "molecular-modeling",
+        "spectral-convolution"
+      ],
+      "id": 18
+    },
+    {
+      "name": "psikit",
+      "one_line_profile": "Python interface bridging Psi4 and RDKit for computational chemistry",
+      "detailed_description": "A Python library that integrates Psi4 (quantum chemistry) and RDKit (cheminformatics), allowing users to run quantum mechanical calculations on molecules processed via RDKit.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "quantum_chemistry_interface",
+        "molecular_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Mishima-syk/psikit",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "psi4",
+        "rdkit",
+        "quantum-chemistry",
+        "cheminformatics"
+      ],
+      "id": 19
+    },
+    {
+      "name": "chemper",
+      "one_line_profile": "Chemical Perception Sampling Tools",
+      "detailed_description": "A tool for automatically creating SMARTS patterns for chemical perception, useful for force field parameterization and chemical substructure identification.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "chemical_perception",
+        "smarts_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MobleyLab/chemper",
+      "help_website": [
+        "https://chemper.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "smarts",
+        "chemical-perception",
+        "force-field"
+      ],
+      "id": 20
+    },
+    {
+      "name": "SMILES-RNN",
+      "one_line_profile": "RNN-based model for de novo molecule generation",
+      "detailed_description": "A repository implementing SMILES-based Recurrent Neural Networks (RNNs) for reinforcement learning-based de novo molecule generation.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "de_novo_generation",
+        "molecule_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MorganCThomas/SMILES-RNN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "generative-model",
+        "rnn",
+        "smiles",
+        "drug-discovery"
+      ],
+      "id": 21
+    },
+    {
+      "name": "nfp",
+      "one_line_profile": "Keras layers for graph neural networks in chemistry and materials science",
+      "detailed_description": "A library providing Keras layers for end-to-end learning with RDKit and Pymatgen, facilitating the construction of Graph Neural Networks for molecular and crystal property prediction.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "graph_neural_networks",
+        "molecular_representation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NREL/nfp",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "gnn",
+        "keras",
+        "materials-science",
+        "cheminformatics"
+      ],
+      "id": 22
+    },
+    {
+      "name": "ccdutils",
+      "one_line_profile": "Tools for handling PDBe Chemical Component Dictionary definitions",
+      "detailed_description": "A set of Python tools to parse and manipulate PDB chemical component definitions for small molecules, utilizing RDKit for chemical processing.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "structure_processing",
+        "chemical_component_dictionary"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PDBeurope/ccdutils",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pdb",
+        "chemical-components",
+        "rdkit",
+        "structural-biology"
+      ],
+      "id": 23
+    },
+    {
+      "name": "Free-Wilson",
+      "one_line_profile": "Implementation of Free-Wilson SAR analysis method",
+      "detailed_description": "A Python implementation of the Free-Wilson method for Structure-Activity Relationship (SAR) analysis using RDKit, allowing for the decomposition of biological activity into substituent contributions.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "sar_analysis",
+        "activity_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PatWalters/Free-Wilson",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sar",
+        "free-wilson",
+        "rdkit",
+        "medicinal-chemistry"
+      ],
+      "id": 24
+    },
+    {
+      "name": "rd_filters",
+      "one_line_profile": "Structural alert filtering tool for drug discovery",
+      "detailed_description": "A script and library to screen molecules against structural alerts (e.g., PAINS, Glaxo, BMS) using RDKit and ChEMBL protocols, essential for filtering undesirable compounds in drug discovery.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "molecular_filtering",
+        "admet_screening"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PatWalters/rd_filters",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-alerts",
+        "pains",
+        "drug-discovery",
+        "filtering"
+      ],
+      "id": 25
+    },
+    {
+      "name": "solubility",
+      "one_line_profile": "Implementation of ESOL solubility prediction method",
+      "detailed_description": "An implementation of Delaney's ESOL (Estimated SOLubility) method using RDKit for predicting aqueous solubility of organic molecules.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "solubility_prediction",
+        "property_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PatWalters/solubility",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "esol",
+        "solubility",
+        "rdkit",
+        "property-prediction"
+      ],
+      "id": 26
+    },
+    {
+      "name": "useful_rdkit_utils",
+      "one_line_profile": "Collection of utility functions for RDKit",
+      "detailed_description": "A curated collection of helper functions and utilities for RDKit, addressing common tasks in cheminformatics such as visualization, tagging, and property calculation.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "cheminformatics_utilities",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/PatWalters/useful_rdkit_utils",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rdkit",
+        "utilities",
+        "cheminformatics"
+      ],
+      "id": 27
+    },
+    {
+      "name": "RadonPy",
+      "one_line_profile": "Automated physical property calculation library for polymer informatics",
+      "detailed_description": "A Python library designed to automate physical property calculations for polymers, integrating MD simulations and other computational methods for polymer informatics.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "polymer_informatics",
+        "property_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RadonPy/RadonPy",
+      "help_website": [
+        "https://radonpy.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "polymer",
+        "molecular-dynamics",
+        "informatics",
+        "automation"
+      ],
+      "id": 28
+    },
+    {
+      "name": "CIDER",
+      "one_line_profile": "Chemical dataset comparator and visualizer using RDKit",
+      "detailed_description": "A Python package and Jupyter workflow for comparing chemical structure datasets (SD files) based on size, overlap, descriptor distributions, and chemical space clustering.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "dataset_comparison",
+        "chemical_space_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Steinbeck-Lab/ChemIcal-DatasEt-comparatoR",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "rdkit",
+        "dataset-comparison",
+        "visualization"
+      ],
+      "id": 29
+    },
+    {
+      "name": "Cheminformatics Microservice",
+      "one_line_profile": "API-based microservices for essential cheminformatics operations",
+      "detailed_description": "A set of microservices designed to be accessed via API calls to support various cheminformatics tasks, facilitating integration into larger systems.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "chemical_service",
+        "infrastructure"
+      ],
+      "application_level": "service",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/Steinbeck-Lab/cheminformatics-microservice",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "microservice",
+        "api",
+        "cheminformatics"
+      ],
+      "id": 30
+    },
+    {
+      "name": "iFeatureOmega-CLI",
+      "one_line_profile": "Comprehensive CLI platform for molecular feature extraction",
+      "detailed_description": "A command-line interface for generating, analyzing, and visualizing over 170 representations for biological sequences, 3D structures, and ligands.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "feature_extraction",
+        "representation_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Superzchen/iFeatureOmega-CLI",
+      "help_website": [
+        "http://ifeature2.erc.monash.edu"
+      ],
+      "license": null,
+      "tags": [
+        "feature-extraction",
+        "bioinformatics",
+        "cli"
+      ],
+      "id": 31
+    },
+    {
+      "name": "iFeatureOmega-GUI",
+      "one_line_profile": "GUI platform for molecular feature extraction and analysis",
+      "detailed_description": "A graphical user interface version of iFeatureOmega for generating and analyzing molecular representations, designed for users with limited programming expertise.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "feature_extraction",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Superzchen/iFeatureOmega-GUI",
+      "help_website": [
+        "http://ifeature2.erc.monash.edu"
+      ],
+      "license": null,
+      "tags": [
+        "gui",
+        "feature-extraction",
+        "visualization"
+      ],
+      "id": 32
+    },
+    {
+      "name": "ScaffoldGraph",
+      "one_line_profile": "Library for scaffold network and tree generation",
+      "detailed_description": "An open-source cheminformatics library built on RDKit and NetworkX for generating and analyzing scaffold networks and scaffold trees to explore chemical space.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "scaffold_analysis",
+        "chemical_space_exploration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UCLCheminformatics/ScaffoldGraph",
+      "help_website": [
+        "https://scaffoldgraph.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "scaffold",
+        "networkx",
+        "rdkit"
+      ],
+      "id": 33
+    },
+    {
+      "name": "molgraph",
+      "one_line_profile": "Graph neural networks for molecular machine learning in TensorFlow",
+      "detailed_description": "A Python package implementing graph neural networks for molecular machine learning, compatible with TensorFlow and Keras APIs.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "model_training",
+        "graph_neural_networks"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/akensert/molgraph",
+      "help_website": [
+        "https://molgraph.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "tensorflow",
+        "molecular-learning"
+      ],
+      "id": 34
+    },
+    {
+      "name": "moldrug",
+      "one_line_profile": "Genetic algorithm for drug-oriented molecule optimization",
+      "detailed_description": "A Python package for drug-oriented optimization in chemical space, utilizing genetic algorithms to evolve molecular structures.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "drug_optimization",
+        "generative_chemistry"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ale94mleon/moldrug",
+      "help_website": [
+        "https://moldrug.readthedocs.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "optimization",
+        "genetic-algorithm",
+        "drug-design"
+      ],
+      "id": 35
+    },
+    {
+      "name": "rdkit_ipynb_tools",
+      "one_line_profile": "RDKit utilities for Jupyter Notebooks",
+      "detailed_description": "A collection of tools and helpers to enhance the usage of RDKit within IPython/Jupyter Notebooks, focusing on visualization and data handling.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_handling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/apahl/rdkit_ipynb_tools",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rdkit",
+        "jupyter",
+        "visualization"
+      ],
+      "id": 36
+    },
+    {
+      "name": "DGL-LifeSci",
+      "one_line_profile": "Deep Graph Library for Life Sciences",
+      "detailed_description": "A python package for applying graph neural networks to chemistry and biology tasks, built on top of the Deep Graph Library (DGL).",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "model_training",
+        "graph_neural_networks"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/awslabs/dgl-lifesci",
+      "help_website": [
+        "https://lifesci.dgl.ai"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "gnn",
+        "deep-learning",
+        "lifesciences"
+      ],
+      "id": 37
+    },
+    {
+      "name": "MolPipeline",
+      "one_line_profile": "Scikit-learn compatible molecular processing pipeline",
+      "detailed_description": "A Python package that wraps RDKit functionality into scikit-learn compatible transformers, enabling the construction of molecular machine learning pipelines.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "pipeline_construction",
+        "feature_engineering"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/basf/MolPipeline",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scikit-learn",
+        "pipeline",
+        "rdkit"
+      ],
+      "id": 38
+    },
+    {
+      "name": "MolRep",
+      "one_line_profile": "Deep representation learning library for molecular property prediction",
+      "detailed_description": "A comprehensive library for molecular representation learning, providing various state-of-the-art models for property prediction tasks.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "representation_learning",
+        "property_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/biomed-AI/MolRep",
+      "help_website": [
+        "https://molrep.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "representation-learning",
+        "deep-learning",
+        "molecular-property"
+      ],
+      "id": 39
+    },
+    {
+      "name": "descriptastorus",
+      "one_line_profile": "Descriptor computation and storage for machine learning",
+      "detailed_description": "A library for efficient computation and storage of molecular descriptors, designed to support machine learning workflows in chemistry.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "descriptor_calculation",
+        "data_storage"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bp-kelley/descriptastorus",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "descriptors",
+        "machine-learning",
+        "chemistry"
+      ],
+      "id": 40
+    },
+    {
+      "name": "mols2grid",
+      "one_line_profile": "Interactive 2D molecule viewer for dataframes",
+      "detailed_description": "A tool to generate interactive grids of 2D molecular structures from pandas DataFrames or RDKit molecules, facilitating data exploration.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_exploration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cbouy/mols2grid",
+      "help_website": [
+        "https://mols2grid.readthedocs.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "visualization",
+        "rdkit",
+        "pandas"
+      ],
+      "id": 41
+    },
+    {
+      "name": "QCF",
+      "one_line_profile": "Quantum Computing Functions for Octave/Matlab",
+      "detailed_description": "A toolbox for simulating quantum computing algorithms (like Grover and Deutsch) based on Nielsen & Chuang's formalism.",
+      "domains": [
+        "Physics"
+      ],
+      "subtask_category": [
+        "quantum_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/charles-fox/qcf",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "quantum-computing",
+        "simulation",
+        "matlab"
+      ],
+      "id": 42
+    },
+    {
+      "name": "chembience",
+      "one_line_profile": "Docker-based platform for cheminformatics web apps",
+      "detailed_description": "A platform facilitating the development and deployment of cheminformatics-centric web applications and microservices using Docker.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "infrastructure",
+        "deployment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chembience/chembience",
+      "help_website": [
+        "http://chembience.org"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "docker",
+        "cheminformatics",
+        "platform"
+      ],
+      "id": 43
+    },
+    {
+      "name": "ChEMBL Beaker",
+      "one_line_profile": "RDKit functionality exposed as a web service",
+      "detailed_description": "A wrapper around RDKit that exposes its functionality via a REST API, allowing chemical processing over the web.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "chemical_service",
+        "api"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chembl/chembl_beaker",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "rdkit",
+        "rest-api",
+        "chembl"
+      ],
+      "id": 44
+    },
+    {
+      "name": "ProLIF",
+      "one_line_profile": "Protein-Ligand Interaction Fingerprints generator",
+      "detailed_description": "A library to generate interaction fingerprints for protein-ligand complexes from molecular dynamics trajectories or docking poses.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "interaction_analysis",
+        "fingerprint_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chemosim-lab/ProLIF",
+      "help_website": [
+        "https://prolif.readthedocs.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "protein-ligand",
+        "fingerprints",
+        "molecular-dynamics"
+      ],
+      "id": 45
+    },
+    {
+      "name": "Chemprop",
+      "one_line_profile": "Message Passing Neural Networks for property prediction",
+      "detailed_description": "A robust library for training Message Passing Neural Networks (MPNNs) for molecular property prediction, widely used as a baseline in cheminformatics.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "model_training"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chemprop/chemprop",
+      "help_website": [
+        "https://chemprop.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "mpnn",
+        "property-prediction",
+        "deep-learning"
+      ],
+      "id": 46
+    },
+    {
+      "name": "PromptSMILES",
+      "one_line_profile": "Chemical language models for scaffold decoration and linking",
+      "detailed_description": "A Python package for scaffold decoration and fragment linking using chemical language models and reinforcement learning.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "generative_chemistry",
+        "scaffold_decoration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/compsciencelab/PromptSMILES",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "generative-model",
+        "rl",
+        "smiles"
+      ],
+      "id": 47
+    },
+    {
+      "name": "rdchiral",
+      "one_line_profile": "Stereochemistry-aware reaction handling wrapper for RDKit",
+      "detailed_description": "A wrapper for RDKit's reaction handling functionality that improves the treatment of stereochemistry during reaction template application.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "reaction_handling",
+        "stereochemistry"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/connorcoley/rdchiral",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rdkit",
+        "reaction-prediction",
+        "stereochemistry"
+      ],
+      "id": 48
+    },
+    {
+      "name": "ePMV",
+      "one_line_profile": "Embedded Python Molecular Viewer for 3D animation software",
+      "detailed_description": "A plugin that runs molecular modeling software directly inside professional 3D animation applications (like Blender, Maya) for high-quality visualization.",
+      "domains": [
+        "C1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "molecular_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/corredD/ePMV",
+      "help_website": [
+        "http://epmv.scripps.edu"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "visualization",
+        "blender",
+        "molecular-viewer"
+      ],
+      "id": 49
+    },
+    {
+      "name": "molsetrep",
+      "one_line_profile": "Library for molecular set representation learning",
+      "detailed_description": "A Python library designed for learning representations of sets of molecules, enabling machine learning tasks where the input is a collection of molecules rather than a single entity.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_representation",
+        "machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/daenuprobst/molsetrep",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "representation-learning",
+        "molecular-sets",
+        "deep-learning"
+      ],
+      "id": 50
+    },
+    {
+      "name": "datamol",
+      "one_line_profile": "High-level molecular processing library built on RDKit",
+      "detailed_description": "A Python library that provides a simplified and ergonomic API for molecular processing and manipulation, built on top of RDKit to streamline cheminformatics workflows.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-01"
+      ],
+      "subtask_category": [
+        "molecular_processing",
+        "cheminformatics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/datamol-io/datamol",
+      "help_website": [
+        "https://docs.datamol.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "rdkit-wrapper",
+        "molecular-manipulation",
+        "cheminformatics"
+      ],
+      "id": 51
+    },
+    {
+      "name": "molfeat-padel",
+      "one_line_profile": "PaDEL descriptors plugin for the molfeat library",
+      "detailed_description": "A plugin for the molfeat ecosystem that enables the calculation of PaDEL molecular descriptors, integrating Java-based PaDEL functionality into Python workflows.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "feature_engineering",
+        "molecular_descriptors"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/datamol-io/molfeat-padel",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "padel",
+        "descriptors",
+        "plugin"
+      ],
+      "id": 52
+    },
+    {
+      "name": "DeepChem",
+      "one_line_profile": "Comprehensive deep learning library for life sciences",
+      "detailed_description": "A robust Python library that democratizes deep learning for science, providing tools for drug discovery, materials science, quantum chemistry, and biology, including implementations of MolNet and various featurizers.",
+      "domains": [
+        "Chemistry",
+        "Biology",
+        "Materials Science",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_modeling",
+        "property_prediction",
+        "drug_discovery"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepchem/deepchem",
+      "help_website": [
+        "https://deepchem.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "drug-discovery",
+        "molnet"
+      ],
+      "id": 53
+    },
+    {
+      "name": "DeepChem GUI",
+      "one_line_profile": "Web-based graphical user interface for DeepChem",
+      "detailed_description": "A web interface designed to make DeepChem's functionalities accessible via a GUI, facilitating model training and prediction for users without extensive coding experience.",
+      "domains": [
+        "Chemistry",
+        "C1"
+      ],
+      "subtask_category": [
+        "molecular_modeling",
+        "gui"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/deepchem/deepchem-gui",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gui",
+        "web-interface",
+        "deepchem"
+      ],
+      "id": 54
+    },
+    {
+      "name": "ChemBERTa-3",
+      "one_line_profile": "Pre-trained transformer models for molecular representation",
+      "detailed_description": "A repository containing the ChemBERTa-3 models, which are BERT-like transformers pre-trained on large chemical datasets for generating molecular embeddings and fine-tuning on downstream tasks.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_representation",
+        "embedding"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepforestsci/chemberta3",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "transformer",
+        "bert",
+        "molecular-embeddings"
+      ],
+      "id": 55
+    },
+    {
+      "name": "DeepMD-kit",
+      "one_line_profile": "Deep learning package for molecular dynamics and potential energy surfaces",
+      "detailed_description": "A deep learning package designed for generating many-body potential energy representations and running molecular dynamics simulations with ab initio accuracy.",
+      "domains": [
+        "Chemistry",
+        "Physics",
+        "Materials Science",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "potential_energy_surface"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepmodeling/deepmd-kit",
+      "help_website": [
+        "http://www.deepmd.org"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "molecular-dynamics",
+        "potential-energy",
+        "deep-learning"
+      ],
+      "id": 56
+    },
+    {
+      "name": "ECFPinvert",
+      "one_line_profile": "Tool for inverting ECFP fingerprints to molecular structures",
+      "detailed_description": "An algorithmic tool that attempts to reconstruct molecular structures from their Extended Connectivity Fingerprints (ECFP), useful for interpretability and inverse design.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "inverse_design",
+        "structure_reconstruction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dehaenw/ECFPinvert",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "fingerprints",
+        "ecfp",
+        "inversion"
+      ],
+      "id": 57
+    },
+    {
+      "name": "rdkit-scripts",
+      "one_line_profile": "Collection of cheminformatics utility scripts using RDKit",
+      "detailed_description": "A curated collection of command-line scripts and utilities for common cheminformatics tasks such as conformation generation, docking preparation, and molecular property calculation, built on RDKit.",
+      "domains": [
+        "Chemistry",
+        "C1"
+      ],
+      "subtask_category": [
+        "cheminformatics",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dkoes/rdkit-scripts",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scripts",
+        "utilities",
+        "rdkit"
+      ],
+      "id": 58
+    },
+    {
+      "name": "chemistry_drawer",
+      "one_line_profile": "Interactive molecular visualization tool using Plotly",
+      "detailed_description": "A Python tool that leverages Plotly to create interactive 2D drawings of chemical molecules, enhancing visualization capabilities for cheminformatics data.",
+      "domains": [
+        "Chemistry",
+        "C1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "molecular_drawing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dylanwal/chemistry_drawer",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "visualization",
+        "plotly",
+        "molecules"
+      ],
+      "id": 59
+    },
+    {
+      "name": "padelpy",
+      "one_line_profile": "Python wrapper for PaDEL-Descriptor software",
+      "detailed_description": "A Python wrapper that provides an interface to the Java-based PaDEL-Descriptor software, allowing users to calculate molecular descriptors and fingerprints directly within Python scripts.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "feature_engineering",
+        "molecular_descriptors"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ecrl/padelpy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "wrapper",
+        "padel",
+        "descriptors"
+      ],
+      "id": 60
+    },
+    {
+      "name": "FFiNet",
+      "one_line_profile": "Force field-inspired molecular representation learning model",
+      "detailed_description": "A molecular representation learning model that incorporates physical insights from force fields to improve the quality of learned molecular embeddings.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_representation",
+        "embedding"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fate1997/FFiNet",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "representation-learning",
+        "force-field",
+        "deep-learning"
+      ],
+      "id": 61
+    },
+    {
+      "name": "Graph_convolutional_NN_molecule_maker",
+      "one_line_profile": "Graph Neural Network for molecular generation",
+      "detailed_description": "A Graph Neural Network implementation designed for the generative design of molecules, utilizing geometric machine learning principles.",
+      "domains": [
+        "Chemistry",
+        "C1"
+      ],
+      "subtask_category": [
+        "molecular_generation",
+        "generative_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/flawnson/Graph_convolutional_NN_molecule_maker",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gnn",
+        "molecular-generation",
+        "geometric-deep-learning"
+      ],
+      "id": 62
+    },
+    {
+      "name": "neural_fingerprints_tf",
+      "one_line_profile": "TensorFlow implementation of Neural Graph Fingerprints",
+      "detailed_description": "An implementation of Convolutional Networks on Graphs for Learning Molecular Fingerprints (Neural Fingerprints) using TensorFlow, allowing for differentiable fingerprint generation.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_representation",
+        "fingerprinting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fllinares/neural_fingerprints_tf",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "tensorflow",
+        "neural-fingerprints",
+        "graph-convolution"
+      ],
+      "id": 63
+    },
+    {
+      "name": "ChemAgent",
+      "one_line_profile": "LLM-based agent for chemical reasoning and self-updating knowledge",
+      "detailed_description": "A Large Language Model based agent capable of chemical reasoning and maintaining a self-updating library of chemical knowledge, presented at ICLR 2025.",
+      "domains": [
+        "Chemistry",
+        "C1"
+      ],
+      "subtask_category": [
+        "chemical_reasoning",
+        "autonomous_agent"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gersteinlab/ChemAgent",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "llm",
+        "agent",
+        "chemical-reasoning"
+      ],
+      "id": 64
+    },
+    {
+      "name": "MiniMol",
+      "one_line_profile": "Lightweight pre-trained model for molecular fingerprinting",
+      "detailed_description": "A 10M-parameter molecular fingerprinting model pre-trained on a large set of biological and quantum tasks, designed to provide efficient and general-purpose molecular embeddings.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_representation",
+        "embedding"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/graphcore-research/minimol",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fingerprinting",
+        "pre-trained-model",
+        "embeddings"
+      ],
+      "id": 65
+    },
+    {
+      "name": "MolGraphEval",
+      "one_line_profile": "Benchmark framework for molecular graph embeddings",
+      "detailed_description": "A framework for evaluating self-supervised learning methods for molecular graph embeddings, providing benchmarks and metrics to assess representation quality.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "evaluation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hansen7/MolGraphEval",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmarking",
+        "graph-embeddings",
+        "self-supervised-learning"
+      ],
+      "id": 66
+    },
+    {
+      "name": "DeepEI",
+      "one_line_profile": "Predicting molecular fingerprints from electron-ionization mass spectra",
+      "detailed_description": "A deep neural network model designed to predict molecular fingerprints directly from electron-ionization mass spectrometry (EI-MS) data, aiding in structure identification.",
+      "domains": [
+        "Chemistry",
+        "Analytical Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "spectrum_analysis",
+        "fingerprint_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hcji/DeepEI",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mass-spectrometry",
+        "deep-learning",
+        "fingerprint-prediction"
+      ],
+      "id": 67
+    },
+    {
+      "name": "PyFingerprint",
+      "one_line_profile": "Library for generating molecular fingerprints",
+      "detailed_description": "A Python tool for generating various types of molecular fingerprints from chemical structures, facilitating similarity searching and machine learning applications.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "feature_engineering",
+        "fingerprinting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hcji/PyFingerprint",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "fingerprints",
+        "molecular-descriptors",
+        "python"
+      ],
+      "id": 68
+    },
+    {
+      "name": "espsim",
+      "one_line_profile": "Shape and electrostatic potential similarity scoring tool",
+      "detailed_description": "A Python library for calculating similarity scores between molecules based on 3D shape and electrostatic potential (ESP), utilizing RDKit for molecular handling.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "similarity_scoring",
+        "molecular_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/hesther/espsim",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "shape-similarity",
+        "electrostatics",
+        "rdkit"
+      ],
+      "id": 69
+    },
+    {
+      "name": "FG-BERT",
+      "one_line_profile": "Functional group-based BERT for molecular representation",
+      "detailed_description": "A self-supervised molecular representation learning method that leverages functional groups to improve the embedding quality of BERT-based models for chemical tasks.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_representation",
+        "embedding"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/idrugLab/FG-BERT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bert",
+        "functional-groups",
+        "representation-learning"
+      ],
+      "id": 70
+    },
+    {
+      "name": "Graph Neural Networks for Quantum Chemistry",
+      "one_line_profile": "Implementations of Graph Neural Networks for quantum chemistry tasks",
+      "detailed_description": "A collection of Graph Neural Network (GNN) implementations specifically tailored for quantum chemistry applications, enabling molecular property prediction and representation learning.",
+      "domains": [
+        "Chemistry",
+        "Quantum Chemistry"
+      ],
+      "subtask_category": [
+        "molecular_modeling",
+        "property_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ifding/graph-neural-networks",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gnn",
+        "quantum-chemistry",
+        "deep-learning"
+      ],
+      "id": 71
+    },
+    {
+      "name": "pyADA",
+      "one_line_profile": "Cheminformatics package for Applicability Domain calculation",
+      "detailed_description": "A Python package designed to perform Applicability Domain analysis of molecular fingerprints based on similarity calculations, useful for validating QSAR models.",
+      "domains": [
+        "Chemistry",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "model_validation",
+        "fingerprint_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/jeffrichardchemistry/pyADA",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "applicability-domain",
+        "qsar",
+        "fingerprints"
+      ],
+      "id": 72
+    },
+    {
+      "name": "xyz2mol",
+      "one_line_profile": "Converter from XYZ coordinates to RDKit molecular objects",
+      "detailed_description": "A utility tool that converts XYZ atomic coordinate files into RDKit molecule objects with connectivity and bond order inference.",
+      "domains": [
+        "Chemistry",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "structure_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jensengroup/xyz2mol",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rdkit",
+        "xyz",
+        "file-conversion"
+      ],
+      "id": 73
+    },
+    {
+      "name": "ChemRxnExtractor",
+      "one_line_profile": "Toolkit for extracting chemical reactions from scientific literature",
+      "detailed_description": "A deep learning-based toolkit for automatically extracting chemical reaction information, including reactants, products, and conditions, from scientific text.",
+      "domains": [
+        "Chemistry",
+        "NLP"
+      ],
+      "subtask_category": [
+        "information_extraction",
+        "literature_mining"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jiangfeng1124/ChemRxnExtractor",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reaction-extraction",
+        "nlp",
+        "text-mining"
+      ],
+      "id": 74
+    },
+    {
+      "name": "cddd",
+      "one_line_profile": "Continuous and Data-Driven Descriptors for molecules",
+      "detailed_description": "Implementation of a translation-based autoencoder to generate continuous and data-driven molecular descriptors (embeddings) from chemical representations.",
+      "domains": [
+        "Chemistry",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_representation",
+        "embedding_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jrwnter/cddd",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-descriptors",
+        "embeddings",
+        "autoencoder"
+      ],
+      "id": 75
+    },
+    {
+      "name": "AQME",
+      "one_line_profile": "Automated Quantum Mechanical Environments workflow tool",
+      "detailed_description": "A transparent and reproducible workflow tool for automated quantum mechanical calculations, including conformer generation, input creation, and descriptor generation.",
+      "domains": [
+        "Chemistry",
+        "Quantum Chemistry"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "conformer_generation",
+        "qm_calculation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jvalegre/aqme",
+      "help_website": [
+        "https://aqme.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "quantum-chemistry",
+        "automation",
+        "rdkit",
+        "xtb"
+      ],
+      "id": 76
+    },
+    {
+      "name": "E3FP",
+      "one_line_profile": "3D molecular fingerprint generation library",
+      "detailed_description": "A Python library for generating 3D molecular fingerprints (E3FP) from molecular conformers, integrating with RDKit for structure handling.",
+      "domains": [
+        "Chemistry",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "fingerprint_generation",
+        "molecular_representation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/keiserlab/e3fp",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "3d-fingerprints",
+        "cheminformatics",
+        "rdkit"
+      ],
+      "id": 77
+    },
+    {
+      "name": "Scopy",
+      "one_line_profile": "Library for negative design in HTS/VS database creation",
+      "detailed_description": "An integrated Python library for designing high-throughput screening (HTS) and virtual screening (VS) databases, focusing on negative design and filtering undesirable compounds.",
+      "domains": [
+        "Chemistry",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "library_design",
+        "filtering",
+        "screening"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kotori-y/Scopy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "drug-design",
+        "screening",
+        "filters"
+      ],
+      "id": 78
+    },
+    {
+      "name": "LPM-24-Dataset",
+      "one_line_profile": "Benchmark dataset for Language + Molecules tasks",
+      "detailed_description": "A dataset and benchmark repository for evaluating multimodal models on language and molecular tasks, supporting the development of chemical language models.",
+      "domains": [
+        "Chemistry",
+        "NLP"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "dataset"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/language-plus-molecules/LPM-24-Dataset",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "benchmark",
+        "multimodal",
+        "language-models"
+      ],
+      "id": 79
+    },
+    {
+      "name": "minervachem",
+      "one_line_profile": "Cheminformatics and machine learning library from LANL",
+      "detailed_description": "A Python library for cheminformatics and machine learning applications, developed at Los Alamos National Laboratory.",
+      "domains": [
+        "Chemistry",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lanl/minervachem",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cheminformatics",
+        "machine-learning",
+        "lanl"
+      ],
+      "id": 80
+    },
+    {
+      "name": "scikit-chem",
+      "one_line_profile": "High-level cheminformatics package built on RDKit",
+      "detailed_description": "A Python package providing a high-level interface for cheminformatics tasks, built upon RDKit and integrating with the scientific Python stack.",
+      "domains": [
+        "Chemistry",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "molecular_handling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lewisacidic/scikit-chem",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "rdkit",
+        "wrapper",
+        "cheminformatics"
+      ],
+      "id": 81
+    },
+    {
+      "name": "PIDGINv3",
+      "one_line_profile": "Protein target prediction using random forests",
+      "detailed_description": "A tool for predicting protein targets for chemical compounds using random forest models and reliability-density neighbourhood analysis.",
+      "domains": [
+        "Chemistry",
+        "Biology"
+      ],
+      "subtask_category": [
+        "target_prediction",
+        "bioactivity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lhm30/PIDGINv3",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "target-prediction",
+        "random-forest",
+        "drug-discovery"
+      ],
+      "id": 82
+    },
+    {
+      "name": "torch-molecule",
+      "one_line_profile": "Deep learning package for molecular discovery",
+      "detailed_description": "A deep learning library designed for molecular discovery, offering an sklearn-style interface for property prediction, inverse design, and representation learning.",
+      "domains": [
+        "Chemistry",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "representation_learning",
+        "inverse_design"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/liugangcode/torch-molecule",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "molecular-discovery",
+        "pytorch"
+      ],
+      "id": 83
+    },
+    {
+      "name": "eMolFrag",
+      "one_line_profile": "Molecular fragmentation tool based on BRICS",
+      "detailed_description": "A Python-based tool for molecular fragmentation implementing the BRICS algorithm, useful for fragment-based drug design.",
+      "domains": [
+        "Chemistry",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "fragmentation",
+        "structure_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/liutairan/eMolFrag",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "fragmentation",
+        "brics",
+        "drug-design"
+      ],
+      "id": 84
+    },
+    {
+      "name": "LanczosNetwork",
+      "one_line_profile": "Graph Neural Network based on Lanczos algorithm",
+      "detailed_description": "Implementation of Lanczos Network, a deep graph convolutional network architecture for learning on graph-structured data, benchmarked on quantum chemistry datasets.",
+      "domains": [
+        "Chemistry",
+        "Machine Learning"
+      ],
+      "subtask_category": [
+        "molecular_representation",
+        "property_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lrjconan/LanczosNetwork",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "lanczos",
+        "quantum-chemistry"
+      ],
+      "id": 85
+    },
+    {
+      "name": "PoseBusters",
+      "one_line_profile": "Plausibility checks for generated molecule poses",
+      "detailed_description": "A tool for performing physics-based and geometric plausibility checks on generated molecular poses, ensuring chemical validity in docking or generative models.",
+      "domains": [
+        "Chemistry",
+        "Structural Biology"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "pose_validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/maabuu/posebusters",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docking",
+        "pose-validation",
+        "quality-control"
+      ],
+      "id": 86
+    },
+    {
+      "name": "molecularGNN_smiles",
+      "one_line_profile": "GNN for molecules based on subgraph fingerprints",
+      "detailed_description": "A Graph Neural Network implementation for molecular property prediction that learns representations based on r-radius subgraphs (fingerprints).",
+      "domains": [
+        "Chemistry",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "representation_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/masashitsubaki/molecularGNN_smiles",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gnn",
+        "fingerprints",
+        "smiles"
+      ],
+      "id": 87
+    },
+    {
+      "name": "molecular_rectifier",
+      "one_line_profile": "Tool to correct unsanitizable RDKit molecules",
+      "detailed_description": "A Python utility that attempts to automatically correct and sanitize RDKit molecule objects that fail standard sanitization checks.",
+      "domains": [
+        "Chemistry",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "data_cleaning",
+        "structure_correction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/matteoferla/molecular_rectifier",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rdkit",
+        "sanitization",
+        "error-handling"
+      ],
+      "id": 88
+    },
+    {
+      "name": "rdkit_to_params",
+      "one_line_profile": "Rosetta params file generator from RDKit molecules",
+      "detailed_description": "A tool to create or modify Rosetta parameter (topology) files from RDKit molecule objects, facilitating interoperability between cheminformatics and protein modeling tools.",
+      "domains": [
+        "Chemistry",
+        "Structural Biology"
+      ],
+      "subtask_category": [
+        "file_conversion",
+        "parameterization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/matteoferla/rdkit_to_params",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rosetta",
+        "rdkit",
+        "topology"
+      ],
+      "id": 89
+    },
+    {
+      "name": "keras-molecules",
+      "one_line_profile": "Autoencoder for continuous molecular representation",
+      "detailed_description": "An autoencoder network implementation for learning continuous vector representations of molecular structures, enabling generative chemistry tasks.",
+      "domains": [
+        "Chemistry",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "representation_learning",
+        "generative_model"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/maxhodak/keras-molecules",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "autoencoder",
+        "keras",
+        "molecular-generation"
+      ],
+      "id": 90
+    },
+    {
+      "name": "ChemDataExtractor",
+      "one_line_profile": "Tool for extracting chemical information from documents",
+      "detailed_description": "A toolkit for automatically extracting chemical names, properties, and spectra from scientific documents using NLP techniques.",
+      "domains": [
+        "Chemistry",
+        "NLP"
+      ],
+      "subtask_category": [
+        "information_extraction",
+        "text_mining"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mcs07/ChemDataExtractor",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nlp",
+        "extraction",
+        "mining"
+      ],
+      "id": 91
+    },
+    {
+      "name": "MolVS",
+      "one_line_profile": "Molecule validation and standardization library",
+      "detailed_description": "A Python library for validating, standardizing, and salt stripping of chemical structures, ensuring data consistency for cheminformatics workflows.",
+      "domains": [
+        "Chemistry",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "standardization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mcs07/MolVS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "standardization",
+        "validation",
+        "rdkit"
+      ],
+      "id": 92
+    },
+    {
+      "name": "S4 for De Novo Drug Design",
+      "one_line_profile": "Chemical language modeling with structured state space sequence models",
+      "detailed_description": "A codebase applying Structured State Space Sequence (S4) models to chemical language modeling for de novo drug design and molecular generation tasks.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_generation",
+        "de_novo_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/molML/s4-for-de-novo-drug-design",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "generative-model",
+        "drug-design",
+        "sequence-modeling"
+      ],
+      "id": 93
+    },
+    {
+      "name": "mordred",
+      "one_line_profile": "Molecular descriptor calculator",
+      "detailed_description": "A python-based molecular descriptor calculator capable of calculating over 1800 2D and 3D descriptors, designed for ease of use and performance in cheminformatics.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "feature_engineering",
+        "descriptor_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mordred-descriptor/mordred",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "molecular-descriptors",
+        "cheminformatics",
+        "qsar"
+      ],
+      "id": 94
+    },
+    {
+      "name": "MolecularTransformerEmbeddings",
+      "one_line_profile": "Transformer for molecular text representation and embeddings",
+      "detailed_description": "A Transformer neural network model trained to translate between different molecular text representations (SMILES, InChI) and generate continuous molecular embeddings for downstream tasks.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_embedding",
+        "representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/mpcrlab/MolecularTransformerEmbeddings",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "transformer",
+        "smiles",
+        "embeddings"
+      ],
+      "id": 95
+    },
+    {
+      "name": "ODDT",
+      "one_line_profile": "Open Drug Discovery Toolkit",
+      "detailed_description": "A modular and comprehensive toolkit for drug discovery, providing implementations of interaction fingerprints, scoring functions, and methods for virtual screening and QSAR.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "virtual_screening",
+        "interaction_fingerprints",
+        "scoring"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/oddt/oddt",
+      "help_website": [
+        "http://oddt.readthedocs.org"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "drug-discovery",
+        "virtual-screening",
+        "cheminformatics"
+      ],
+      "id": 96
+    },
+    {
+      "name": "osmordred",
+      "one_line_profile": "C++ port of the Mordred descriptor calculator",
+      "detailed_description": "A high-performance C++ implementation of the Mordred molecular descriptor calculator, designed to accelerate feature engineering workflows.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "feature_engineering",
+        "descriptor_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/osmoai/osmordred",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cpp",
+        "molecular-descriptors",
+        "performance"
+      ],
+      "id": 97
+    },
+    {
+      "name": "PyPLIF-HIPPOS",
+      "one_line_profile": "Molecular interaction fingerprinting tool",
+      "detailed_description": "A tool for generating protein-ligand interaction fingerprints (PLIF) from docking results of AutoDock Vina and PLANTS, facilitating post-docking analysis.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "interaction_fingerprints",
+        "docking_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/radifar/PyPLIF-HIPPOS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "fingerprints",
+        "molecular-docking",
+        "protein-ligand"
+      ],
+      "id": 98
+    },
+    {
+      "name": "RDKit",
+      "one_line_profile": "Open source cheminformatics and machine learning software",
+      "detailed_description": "The industry-standard open-source cheminformatics library providing extensive functionality for molecule manipulation, descriptor calculation, fingerprint generation, and substructure searching.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "cheminformatics",
+        "molecular_modeling",
+        "descriptor_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/rdkit/rdkit",
+      "help_website": [
+        "http://www.rdkit.org"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cheminformatics",
+        "smiles",
+        "molecular-graph"
+      ],
+      "id": 99
+    },
+    {
+      "name": "RDKit.js",
+      "one_line_profile": "JavaScript distribution of RDKit",
+      "detailed_description": "A JavaScript library that exposes RDKit's cheminformatics functionality for web-based applications, enabling client-side molecular rendering and processing.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "cheminformatics",
+        "visualization",
+        "web_component"
+      ],
+      "application_level": "library",
+      "primary_language": "Dockerfile",
+      "repo_url": "https://github.com/rdkit/rdkit-js",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "javascript",
+        "wasm",
+        "cheminformatics"
+      ],
+      "id": 100
+    },
+    {
+      "name": "MHFP",
+      "one_line_profile": "Molecular MinHash Fingerprints",
+      "detailed_description": "An implementation of MHFP6 (MinHash Fingerprint), a molecular fingerprint designed for scalable and accurate similarity search and machine learning applications.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "fingerprinting",
+        "similarity_search"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/reymond-group/mhfp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fingerprints",
+        "minhash",
+        "similarity-search"
+      ],
+      "id": 101
+    },
+    {
+      "name": "chemicalite",
+      "one_line_profile": "SQLite extension for cheminformatics",
+      "detailed_description": "A SQLite extension that adds cheminformatics capabilities to SQLite databases, allowing storage, indexing, and querying of chemical structures directly within the database.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "data_storage",
+        "substructure_search"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rvianello/chemicalite",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "sqlite",
+        "database",
+        "cheminformatics"
+      ],
+      "id": 102
+    },
+    {
+      "name": "rxn-standardization",
+      "one_line_profile": "Chemical compound standardization tool",
+      "detailed_description": "A tool for standardizing chemical compounds using language models and data-driven approaches, developed by IBM Research for the RXN ecosystem.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "standardization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rxn4chemistry/rxn-standardization",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "standardization",
+        "nlp",
+        "cleaning"
+      ],
+      "id": 103
+    },
+    {
+      "name": "Mol2vec",
+      "one_line_profile": "Vector representations of molecular substructures",
+      "detailed_description": "An unsupervised machine learning library to learn vector representations of molecular substructures (similar to Word2Vec), enabling continuous embedding of molecules for ML tasks.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_embedding",
+        "representation_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/samoturk/mol2vec",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "embeddings",
+        "word2vec",
+        "nlp-for-chemistry"
+      ],
+      "id": 104
+    },
+    {
+      "name": "scikit-fingerprints",
+      "one_line_profile": "Scikit-learn compatible molecular fingerprints",
+      "detailed_description": "A comprehensive Python library providing a wide range of molecular fingerprints and descriptors, designed to be fully compatible with the scikit-learn ecosystem.",
+      "domains": [
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "feature_engineering",
+        "fingerprinting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scikit-fingerprints/scikit-fingerprints",
+      "help_website": [
+        "https://scikit-fingerprints.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "scikit-learn",
+        "fingerprints",
+        "cheminformatics"
+      ],
+      "id": 105
+    },
+    {
+      "name": "poeclm",
+      "one_line_profile": "Implementation of Product-of-Experts Chemical Language Models for molecular generation",
+      "detailed_description": "A Python implementation of Product-of-Experts Chemical Language Models (PoE-CLM) designed to improve molecular generation and representation by combining multiple expert models.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_generation",
+        "molecular_representation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shuyana/poeclm",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "chemical-language-model",
+        "molecular-generation",
+        "product-of-experts"
+      ],
+      "id": 106
+    },
+    {
+      "name": "ReLM",
+      "one_line_profile": "Language model-based framework for chemical reaction prediction",
+      "detailed_description": "ReLM leverages pre-trained language models to enhance chemical reaction prediction, specifically focusing on predicting reaction products and reagents.",
+      "domains": [
+        "Chemistry",
+        "C1"
+      ],
+      "subtask_category": [
+        "reaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/syr-cn/ReLM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "chemical-reaction-prediction",
+        "language-models",
+        "nlp-for-chemistry"
+      ],
+      "id": 107
+    },
+    {
+      "name": "GROVER",
+      "one_line_profile": "Self-supervised graph transformer for molecular representation learning",
+      "detailed_description": "GROVER (Graph Representation from self-supervised message passing transfOrmer) is a state-of-the-art framework for learning molecular embeddings from large-scale unlabelled molecular data using graph transformers.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_representation_learning",
+        "molecular_embedding"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tencent-ailab/grover",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "graph-transformer",
+        "self-supervised-learning",
+        "molecular-embedding",
+        "pytorch"
+      ],
+      "id": 108
+    },
+    {
+      "name": "DES-Melting-Point-Predictor",
+      "one_line_profile": "Prediction of melting point and density for Deep Eutectic Solvents using ChemBERTa",
+      "detailed_description": "A machine learning tool that utilizes ChemBERTa embeddings and ensemble learning to predict the density and melting point of deep eutectic solvents (DESs).",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "molecular_embedding"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tingtingwuwu/Predicting-Melting-Point-and-Density-of-DESs-by-ChemBERTa-ML",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deep-eutectic-solvents",
+        "melting-point-prediction",
+        "chemberta",
+        "ensemble-learning"
+      ],
+      "id": 109
+    },
+    {
+      "name": "pharmacophore-toolkit",
+      "one_line_profile": "Toolkit for generating pharmacophore models from molecular structures",
+      "detailed_description": "A toolkit built on RDKit to generate simple pharmacophore models, aiding in the identification of essential features for molecular recognition.",
+      "domains": [
+        "Chemistry",
+        "C1"
+      ],
+      "subtask_category": [
+        "pharmacophore_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/tlint101/pharmacophore-toolkit",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "pharmacophore",
+        "rdkit",
+        "drug-design"
+      ],
+      "id": 110
+    },
+    {
+      "name": "pinky",
+      "one_line_profile": "Library for generating molecular fingerprints",
+      "detailed_description": "A Python library designed for calculating various molecular fingerprints, facilitating chemical similarity search and machine learning applications.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "fingerprint_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ubccr/pinky",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "molecular-fingerprints",
+        "cheminformatics"
+      ],
+      "id": 111
+    },
+    {
+      "name": "MolCAP",
+      "one_line_profile": "Molecular representation learning enhanced by chemical reactivity pretraining",
+      "detailed_description": "MolCAP is a molecular representation learning framework that incorporates chemical reactivity knowledge through pretraining and prompted finetuning.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_representation_learning",
+        "reactivity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wangyu-sd/MolCAP",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "molecular-representation",
+        "chemical-reactivity",
+        "pretraining"
+      ],
+      "id": 112
+    },
+    {
+      "name": "molplotly",
+      "one_line_profile": "Interactive molecular visualization add-on for Plotly",
+      "detailed_description": "A Python library that extends Plotly to enable interactive visualization of chemical data, allowing users to view molecular structures on mouseover in scatter plots.",
+      "domains": [
+        "Chemistry",
+        "C1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_exploration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wjm41/molplotly",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "visualization",
+        "plotly",
+        "rdkit",
+        "interactive-plots"
+      ],
+      "id": 113
+    },
+    {
+      "name": "DeepCombDTI",
+      "one_line_profile": "Deep learning model for drug-target interaction prediction",
+      "detailed_description": "DeepCombDTI utilizes deep learning and various molecular fingerprints to predict interactions between drugs and target proteins.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "drug_target_interaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wooks527/DeepCombDTI",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dti-prediction",
+        "deep-learning",
+        "molecular-fingerprints"
+      ],
+      "id": 114
+    },
+    {
+      "name": "gmvae",
+      "one_line_profile": "Gaussian Mixture VAE for interpretable molecular embeddings",
+      "detailed_description": "A repository implementing Gaussian Mixture Variational Autoencoders (GMVAE) to generate interpretable embeddings from molecular simulation data.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_embedding",
+        "dimensionality_reduction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/yabozkurt/gmvae",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "molecular-simulations",
+        "vae",
+        "embeddings",
+        "interpretable-ai"
+      ],
+      "id": 115
+    },
+    {
+      "name": "MoleRec",
+      "one_line_profile": "Substructure-aware molecular representation learning for drug recommendation",
+      "detailed_description": "MoleRec is a framework for combinatorial drug recommendation that employs substructure-aware molecular representation learning to capture fine-grained chemical features.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "drug_recommendation",
+        "molecular_representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yangnianzu0515/MoleRec",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "drug-recommendation",
+        "substructure-aware",
+        "representation-learning"
+      ],
+      "id": 116
+    },
+    {
+      "name": "deepFPlearn",
+      "one_line_profile": "Deep learning for linking molecular structures to targets via fingerprints",
+      "detailed_description": "A tool to link molecular structures (represented as topological fingerprints) to multiple biological targets using deep learning.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "target_prediction",
+        "fingerprint_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yigbt/deepFPlearn",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "molecular-fingerprints",
+        "target-prediction",
+        "deep-learning"
+      ],
+      "id": 117
+    },
+    {
+      "name": "Atomas",
+      "one_line_profile": "Hierarchical molecular representation learning from SMILES and text",
+      "detailed_description": "Atomas is a framework for joint molecular representation learning that aligns SMILES strings and textual descriptions at multiple semantic levels using a hierarchical adaptive alignment model.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_representation_learning",
+        "multimodal_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yikunpku/Atomas",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "molecular-representation",
+        "smiles",
+        "text-mining",
+        "hierarchical-learning"
+      ],
+      "id": 118
+    },
+    {
+      "name": "MolAE",
+      "one_line_profile": "Auto-encoder based molecular representation learning with 3D cloze test",
+      "detailed_description": "MolAE implements an auto-encoder framework for molecular representation learning, utilizing a 3D cloze test objective to capture spatial structural information.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_representation_learning",
+        "3d_structure_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yjwtheonly/MolAE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-representation",
+        "autoencoder",
+        "3d-structure",
+        "self-supervised"
+      ],
+      "id": 119
+    },
+    {
+      "name": "MolMCL",
+      "one_line_profile": "Multi-channel learning for context-dependent molecular representation",
+      "detailed_description": "MolMCL integrates structural hierarchies into context-dependent molecular representations using a multi-channel learning approach.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/yuewan2/MolMCL",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-representation",
+        "contrastive-learning",
+        "structural-hierarchy"
+      ],
+      "id": 120
+    },
+    {
+      "name": "TrimNet",
+      "one_line_profile": "Molecular representation learning from triplet messages",
+      "detailed_description": "TrimNet is a deep learning model designed to learn molecular representations by utilizing triplet messages to capture local and global structural information.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yvquanli/TrimNet",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-representation",
+        "graph-neural-networks",
+        "triplet-message"
+      ],
+      "id": 121
+    },
+    {
+      "name": "MolGraph-LarDo",
+      "one_line_profile": "Integrating LLMs with domain-specific models for molecular graph learning",
+      "detailed_description": "MolGraph-LarDo combines Large Language Models with domain-specific small models to enhance molecular graph representation learning.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "molecular_representation_learning",
+        "graph_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhangtia16/MolGraph-LarDo",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "molecular-graph",
+        "llm",
+        "representation-learning"
+      ],
+      "id": 122
+    },
+    {
+      "name": "DMFGAM",
+      "one_line_profile": "Predicting hERG channel blockers using fingerprints and graph attention",
+      "detailed_description": "DMFGAM is a deep learning model that combines molecular fingerprints and graph attention mechanisms to predict hERG channel blockers, crucial for drug safety assessment.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "toxicity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhaoqi106/DMFGAM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "herg-prediction",
+        "molecular-fingerprints",
+        "graph-attention-network"
+      ],
+      "id": 123
+    },
+    {
+      "name": "GIFDTI",
+      "one_line_profile": "Drug-target interaction prediction via global interaction representation",
+      "detailed_description": "GIFDTI predicts drug-target interactions by learning representations of global molecular structures and intermolecular interactions.",
+      "domains": [
+        "Chemistry",
+        "C1",
+        "C1-02"
+      ],
+      "subtask_category": [
+        "drug_target_interaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhaoqichang/GIFDTI",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dti-prediction",
+        "interaction-learning",
+        "molecular-representation"
+      ],
+      "id": 124
+    }
+  ]
+}

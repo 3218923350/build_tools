@@ -1,0 +1,2736 @@
+{
+  "generated_at": "2025-12-17T12:14:24.507020+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "NUM1",
+      "leaf_cluster_name": "计算科学方法论与数值计算生态",
+      "domain": "Numerical Methods / SciComp",
+      "typical_objects": "稀疏矩阵/算子, 网格与离散系统, PDE/ODE, 误差/收敛数据",
+      "task_chain": "离散化→求解→误差/稳定性→加速→验证→可复现",
+      "tool_form": "数值库/求解器框架 + 自动微分/可微分计算 + HPC"
+    },
+    "unit": {
+      "unit_id": "NUM1-03",
+      "unit_name": "谱方法与高阶方法（Galerkin/谱元/高阶FEM）",
+      "target_scale": "200–450",
+      "coverage_tools": "谱/谱元库、基函数、误差估计、高阶装配与求解"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] Semtex",
+        "[GH] Dune-fem",
+        "[GH] Deal.II",
+        "[GH] Chebfun",
+        "[GH] Shenfun",
+        "[GH] Nek5000",
+        "[GH] MFEM",
+        "[GH] Dedalus",
+        "[GH] Nektar++",
+        "[GH] spectral method",
+        "[GH] spectral element method",
+        "[GH] discontinuous galerkin",
+        "[GH] high-order fem",
+        "[GH] hp-fem",
+        "[GH] spectral solver",
+        "[GH] chebyshev polynomials",
+        "[GH] legendre polynomials",
+        "[GH] nodal dg",
+        "[GH] spectral galerkin",
+        "[GH] matrix-free spectral",
+        "[GH] pde spectral discretization",
+        "[GH] high-order finite element",
+        "[WEB] spectral element method library github",
+        "[WEB] high-order finite element solver github",
+        "[WEB] discontinuous galerkin framework github",
+        "[WEB] spectral methods pde python github",
+        "[WEB] hp-adaptive fem library github",
+        "[WEB] chebyshev spectral methods github"
+      ],
+      "total_candidates": 878,
+      "tool_candidates": 328,
+      "final_tools": 105
+    }
+  },
+  "tools": [
+    {
+      "name": "EDGE",
+      "one_line_profile": "Extreme-scale Discontinuous Galerkin Environment for seismic and CFD simulations",
+      "detailed_description": "EDGE is a solver for hyperbolic partial differential equations, focusing on seismic wave propagation and computational fluid dynamics. It utilizes the Discontinuous Galerkin method and is optimized for extreme-scale high-performance computing environments.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver",
+        "seismic_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/3343/edge",
+      "help_website": [
+        "http://dial3343.org"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "discontinuous-galerkin",
+        "hpc",
+        "seismic-simulation",
+        "cfd"
+      ],
+      "id": 1
+    },
+    {
+      "name": "GalerkinSparseGrids.jl",
+      "one_line_profile": "Sparse Grid Discretization with Discontinuous Galerkin Method",
+      "detailed_description": "A Julia package implementing sparse grid discretization combined with the Discontinuous Galerkin method for solving partial differential equations, aiming to mitigate the curse of dimensionality in high-dimensional problems.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/ABAtanasov/GalerkinSparseGrids.jl",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "sparse-grids",
+        "discontinuous-galerkin",
+        "julia",
+        "pde"
+      ],
+      "id": 2
+    },
+    {
+      "name": "hexed",
+      "one_line_profile": "Discontinuous Galerkin CFD solver with automated meshing",
+      "detailed_description": "A computational fluid dynamics solver based on the discontinuous Galerkin method. It features automated, unstructured quadrilateral/hexahedral meshing capabilities to streamline the simulation workflow.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "cfd_solver",
+        "meshing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ARTLab-GT/hexed",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cfd",
+        "discontinuous-galerkin",
+        "meshing",
+        "fluid-dynamics"
+      ],
+      "id": 3
+    },
+    {
+      "name": "coral",
+      "one_line_profile": "Parallel spectral solver for PDEs in plane layer geometry",
+      "detailed_description": "A Fortran-based parallel spectral solver designed for solving partial differential equations in plane layer geometries, suitable for fluid dynamics and other physics simulations requiring high-accuracy spectral discretizations.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/BenMql/coral",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "spectral-methods",
+        "pde-solver",
+        "fortran",
+        "parallel-computing"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Dedalus",
+      "one_line_profile": "Flexible framework for solving PDEs with modern spectral methods",
+      "detailed_description": "A general-purpose framework for solving partial differential equations using spectral methods. It supports a wide range of equations and domains, automatically handling parallelization and spectral discretization.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver",
+        "modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DedalusProject/dedalus",
+      "help_website": [
+        "https://dedalus-project.org/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "spectral-methods",
+        "pde",
+        "fluid-dynamics",
+        "python"
+      ],
+      "id": 5
+    },
+    {
+      "name": "Eigentools",
+      "one_line_profile": "Eigenvalue problem analysis package for Dedalus",
+      "detailed_description": "An extension package for the Dedalus framework specifically designed to solve and analyze eigenvalue problems, facilitating stability analysis and modal decomposition in fluid dynamics and other fields.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "analysis",
+        "eigenvalue_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DedalusProject/eigentools",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dedalus",
+        "eigenvalues",
+        "stability-analysis"
+      ],
+      "id": 6
+    },
+    {
+      "name": "pySEMTools",
+      "one_line_profile": "Post-processing package for Spectral Element Method data",
+      "detailed_description": "A Python package designed for post-processing and analyzing data generated by Spectral Element Method (SEM) simulations, likely supporting formats from solvers like Nek5000.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "post_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ExtremeFLOW/pySEMTools",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "sem",
+        "post-processing",
+        "cfd",
+        "data-analysis"
+      ],
+      "id": 7
+    },
+    {
+      "name": "BoSSS",
+      "one_line_profile": "Flexible Discontinuous Galerkin framework for numerical discretization",
+      "detailed_description": "A C# framework for the development and application of Discontinuous Galerkin (DG) schemes. It provides infrastructure for solving PDEs with high-order accuracy and flexibility in mesh handling.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver",
+        "numerical_discretization"
+      ],
+      "application_level": "platform",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/FDYdarmstadt/BoSSS",
+      "help_website": [
+        "https://github.com/FDYdarmstadt/BoSSS/wiki"
+      ],
+      "license": null,
+      "tags": [
+        "discontinuous-galerkin",
+        "cfd",
+        "numerical-methods",
+        "c-sharp"
+      ],
+      "id": 8
+    },
+    {
+      "name": "Basix",
+      "one_line_profile": "Finite element basis evaluation library for FEniCSx",
+      "detailed_description": "A library that provides evaluation of finite element basis functions. It is a core component of the FEniCSx project, handling the tabulation of elements for various cell types and polynomial orders.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "basis_evaluation",
+        "fem"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/FEniCS/basix",
+      "help_website": [
+        "https://docs.fenicsproject.org/basix/main/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "finite-element",
+        "basis-functions",
+        "fenics",
+        "numerical-analysis"
+      ],
+      "id": 9
+    },
+    {
+      "name": "SELF",
+      "one_line_profile": "Spectral Element Library in Fortran",
+      "detailed_description": "A Fortran library implementing the Spectral Element Method for solving conservation laws. It is designed for high-performance computing and supports GPU acceleration for fluid dynamics and other physics.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/FluidNumerics/SELF",
+      "help_website": [
+        "https://fluidnumerics.github.io/SELF/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "spectral-element",
+        "fortran",
+        "gpu",
+        "cfd"
+      ],
+      "id": 10
+    },
+    {
+      "name": "SpectralLDA-TensorSpark",
+      "one_line_profile": "Spectral learning method for LDA topic models on Spark",
+      "detailed_description": "An implementation of spectral methods (third-order tensor decomposition) for learning Latent Dirichlet Allocation (LDA) topic models, scaled using Apache Spark. It applies spectral algorithms to large-scale data analysis.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "analysis",
+        "topic_modeling",
+        "tensor_decomposition"
+      ],
+      "application_level": "library",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/FurongHuang/spectrallda-tensorspark",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "spectral-methods",
+        "lda",
+        "spark",
+        "machine-learning"
+      ],
+      "id": 11
+    },
+    {
+      "name": "Quail",
+      "one_line_profile": "Lightweight Discontinuous Galerkin solver for prototyping",
+      "detailed_description": "A Python-based Discontinuous Galerkin (DG) solver designed for teaching, prototyping, and testing new numerical schemes. It provides a flexible environment for experimenting with DG methods.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver",
+        "prototyping"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/IhmeGroup/quail",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "discontinuous-galerkin",
+        "python",
+        "cfd",
+        "education"
+      ],
+      "id": 12
+    },
+    {
+      "name": "FastTransforms.jl",
+      "one_line_profile": "Orthogonal polynomial transforms library for Julia",
+      "detailed_description": "A Julia package for performing fast orthogonal polynomial transforms. It supports various polynomial bases (Chebyshev, Legendre, etc.) and is essential for spectral methods and approximation theory.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "mathematical_transform",
+        "approximation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaApproximation/FastTransforms.jl",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "julia",
+        "orthogonal-polynomials",
+        "spectral-methods",
+        "fft"
+      ],
+      "id": 13
+    },
+    {
+      "name": "Adaptive Multiresolution DG",
+      "one_line_profile": "Adaptive multiresolution Discontinuous Galerkin package",
+      "detailed_description": "A C++ package implementing adaptive multiresolution techniques for the Discontinuous Galerkin method, enabling efficient high-order simulations with local mesh refinement.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver",
+        "adaptive_mesh_refinement"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/JuntaoHuang/adaptive-multiresolution-DG",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "discontinuous-galerkin",
+        "adaptive-mesh",
+        "multiresolution",
+        "cpp"
+      ],
+      "id": 14
+    },
+    {
+      "name": "KTH_Framework",
+      "one_line_profile": "Toolbox framework for Nek5000",
+      "detailed_description": "A framework for managing and integrating various toolboxes and extensions developed for the Nek5000 spectral element solver, facilitating workflow management and code reuse within the KTH-Nek5000 ecosystem.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "workflow",
+        "plugin_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/KTH-Nek5000/KTH_Framework",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nek5000",
+        "framework",
+        "hpc",
+        "cfd"
+      ],
+      "id": 15
+    },
+    {
+      "name": "FastTransforms",
+      "one_line_profile": "C library for fast orthogonal polynomial transforms",
+      "detailed_description": "A C library providing fast algorithms for orthogonal polynomial transforms, serving as a backend for high-performance spectral methods and approximation tasks.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "mathematical_transform"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/MikaelSlevinsky/FastTransforms",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "c",
+        "orthogonal-polynomials",
+        "spectral-methods",
+        "fast-algorithms"
+      ],
+      "id": 16
+    },
+    {
+      "name": "Nek5000",
+      "one_line_profile": "High-fidelity spectral element CFD solver",
+      "detailed_description": "A highly scalable computational fluid dynamics solver based on the spectral element method. It is designed for high-fidelity simulation of turbulent flows and supports massive parallelism on supercomputers.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "cfd_solver",
+        "turbulence_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/Nek5000/Nek5000",
+      "help_website": [
+        "https://nek5000.mcs.anl.gov/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "spectral-element",
+        "cfd",
+        "hpc",
+        "turbulence"
+      ],
+      "id": 17
+    },
+    {
+      "name": "NekROM",
+      "one_line_profile": "Model-Order Reduction Framework for Nek5000",
+      "detailed_description": "A framework integrated with Nek5000 for performing Model-Order Reduction (ROM). It allows for the creation of reduced-order models from high-fidelity spectral element simulations to accelerate analysis and control tasks.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "model_order_reduction",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/Nek5000/NekROM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "model-order-reduction",
+        "nek5000",
+        "cfd",
+        "rom"
+      ],
+      "id": 18
+    },
+    {
+      "name": "NekCEM",
+      "one_line_profile": "Spectral-element solver for Maxwell's and drift-diffusion equations",
+      "detailed_description": "A spectral element solver specialized for computational electromagnetics (Maxwell's equations) and drift-diffusion equations. It leverages the high-order accuracy of spectral methods for electromagnetic simulations.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "electromagnetics_solver",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/NekCEM/NekCEM",
+      "help_website": [
+        "https://nekcem.mcs.anl.gov/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "electromagnetics",
+        "spectral-element",
+        "maxwell-equations",
+        "hpc"
+      ],
+      "id": 19
+    },
+    {
+      "name": "hp3d",
+      "one_line_profile": "hp-adaptive 3D finite element software",
+      "detailed_description": "A 3D finite element software package supporting hp-adaptivity (simultaneous mesh refinement and polynomial order increase). It is designed for high-accuracy simulations requiring dynamic resolution adjustment.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fem_solver",
+        "hp_adaptivity"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/Oden-EAG/hp3d",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "finite-element",
+        "hp-adaptivity",
+        "mpi",
+        "openmp"
+      ],
+      "id": 20
+    },
+    {
+      "name": "OpenIFEM",
+      "one_line_profile": "Immersed Finite Element Method implementation based on deal.II",
+      "detailed_description": "An implementation of the Immersed Finite Element Method (IFEM) built upon the deal.II finite element library, designed for solving fluid-structure interaction or interface problems.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenIFEM/OpenIFEM",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "fem",
+        "immersed-boundary",
+        "deal.ii",
+        "pde"
+      ],
+      "id": 21
+    },
+    {
+      "name": "OpenSEMBA/dgtd",
+      "one_line_profile": "Discontinuous Galerkin Time Domain solver for Maxwell's equations",
+      "detailed_description": "A solver for Maxwell's curl equations utilizing discontinuous Galerkin methods (DGTD), suitable for computational electromagnetics simulations.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenSEMBA/dgtd",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "electromagnetics",
+        "dgtd",
+        "maxwell-equations",
+        "discontinuous-galerkin"
+      ],
+      "id": 22
+    },
+    {
+      "name": "BasisMatrices.jl",
+      "one_line_profile": "Julia library for constructing functional basis matrices",
+      "detailed_description": "A Julia package providing routines to construct BasisMatrices of various types including Chebyshev polynomials, B-Splines, and Smolyak grids, useful for spectral methods and function approximation.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "numerical_approximation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/QuantEcon/BasisMatrices.jl",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "basis-functions",
+        "chebyshev",
+        "interpolation",
+        "julia"
+      ],
+      "id": 23
+    },
+    {
+      "name": "ChebyshevApprox.jl",
+      "one_line_profile": "Multivariate function approximation using Chebyshev polynomials",
+      "detailed_description": "A Julia package designed to approximate multivariate continuous functions using Chebyshev polynomials, supporting spectral approximation tasks.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "numerical_approximation",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/RJDennis/ChebyshevApprox.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "chebyshev",
+        "approximation",
+        "spectral-methods",
+        "julia"
+      ],
+      "id": 24
+    },
+    {
+      "name": "SPECFEM3D_GEOTECH",
+      "one_line_profile": "Spectral-element software for 3D geotechnical analysis",
+      "detailed_description": "An open-source software package for 3D slope stability analysis and simulation of multistage excavation using the spectral-element method (SEM).",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "geotechnical_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/SPECFEM/specfem3d_geotech",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "spectral-element-method",
+        "geotech",
+        "slope-stability",
+        "simulation"
+      ],
+      "id": 25
+    },
+    {
+      "name": "ChebyKAN",
+      "one_line_profile": "Kolmogorov-Arnold Networks implementation using Chebyshev polynomials",
+      "detailed_description": "An implementation of Kolmogorov-Arnold Networks (KAN) that utilizes Chebyshev polynomials as basis functions instead of B-splines, offering a spectral approach to neural network function approximation.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/SynodicMonth/ChebyKAN",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "kan",
+        "chebyshev",
+        "neural-networks",
+        "function-approximation"
+      ],
+      "id": 26
+    },
+    {
+      "name": "pySED",
+      "one_line_profile": "Phonon spectral energy density calculation tool",
+      "detailed_description": "A tool to implement the phonon Spectral Energy Density (SED) method for calculating phonon lifetimes and thermal properties in materials science.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "physics_calculation"
+      ],
+      "application_level": "solver",
+      "primary_language": "sed",
+      "repo_url": "https://github.com/Tingliangstu/pySED",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "phonon",
+        "spectral-energy-density",
+        "materials-science",
+        "thermal-conductivity"
+      ],
+      "id": 27
+    },
+    {
+      "name": "NekIBM",
+      "one_line_profile": "Immersed Boundary Method platform based on Nek5000",
+      "detailed_description": "A multiphase flow simulation platform implementing the Direct-forced Immersed Boundary Method (IBM) on top of the spectral element solver Nek5000.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "cfd"
+      ],
+      "application_level": "platform",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/YunchaoYang/NekIBM",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nek5000",
+        "immersed-boundary-method",
+        "cfd",
+        "multiphase-flow"
+      ],
+      "id": 28
+    },
+    {
+      "name": "apollo",
+      "one_line_profile": "MOOSE-based application for 3D electromagnetics simulation",
+      "detailed_description": "An application enabling 3D electromagnetics simulation within the MOOSE framework, leveraging the MFEM finite element library for underlying computations.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "electromagnetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/aurora-multiphysics/apollo",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "moose-framework",
+        "electromagnetics",
+        "mfem",
+        "simulation"
+      ],
+      "id": 29
+    },
+    {
+      "name": "Palace",
+      "one_line_profile": "High-performance 3D computational electromagnetics solver",
+      "detailed_description": "A parallel, high-performance 3D finite element solver for computational electromagnetics, developed at AWS Labs, supporting large-scale simulations.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "electromagnetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/awslabs/palace",
+      "help_website": [
+        "https://awslabs.github.io/palace/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "electromagnetics",
+        "fem",
+        "hpc",
+        "solver"
+      ],
+      "id": 30
+    },
+    {
+      "name": "Chebfun",
+      "one_line_profile": "Numerical computing with functions in MATLAB",
+      "detailed_description": "An open-source software system for numerical computing with functions, using Chebyshev polynomials and spectral methods to perform operations like differentiation, integration, and root-finding with high accuracy.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "numerical_analysis",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/chebfun/chebfun",
+      "help_website": [
+        "http://www.chebfun.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "chebyshev",
+        "spectral-methods",
+        "approximation",
+        "matlab"
+      ],
+      "id": 31
+    },
+    {
+      "name": "chebpy",
+      "one_line_profile": "Python implementation of Chebfun",
+      "detailed_description": "A Python implementation of the Chebfun project, enabling numerical computing with functions using Chebyshev polynomial expansions in a Python environment.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "numerical_analysis",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chebpy/chebpy",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "chebfun",
+        "python",
+        "spectral-methods",
+        "approximation"
+      ],
+      "id": 32
+    },
+    {
+      "name": "ryujin",
+      "one_line_profile": "High-performance high-order finite element solver for hyperbolic conservation equations",
+      "detailed_description": "Ryujin is a high-performance, high-order finite element solver specifically designed for hyperbolic conservation equations. It leverages convex limiting techniques to ensure stability and accuracy in numerical simulations.",
+      "domains": [
+        "NUM1",
+        "NUM1-02"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/conservation-laws/ryujin",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "finite-element",
+        "hyperbolic-equations",
+        "conservation-laws",
+        "hpc"
+      ],
+      "id": 33
+    },
+    {
+      "name": "dflo",
+      "one_line_profile": "Discontinuous Galerkin solver for compressible flows",
+      "detailed_description": "dflo is a C++ based Discontinuous Galerkin (DG) solver designed for simulating compressible fluid flows. It provides a high-order numerical framework for computational fluid dynamics.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "cfd"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/cpraveen/dflo",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "discontinuous-galerkin",
+        "compressible-flow",
+        "cfd",
+        "solver"
+      ],
+      "id": 34
+    },
+    {
+      "name": "ultraSEM",
+      "one_line_profile": "The ultraspherical spectral element method library",
+      "detailed_description": "ultraSEM is a MATLAB library implementing the ultraspherical spectral element method. It is designed for solving partial differential equations with high accuracy using spectral elements.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/danfortunato/ultraSEM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spectral-element-method",
+        "pde-solver",
+        "matlab",
+        "ultraspherical"
+      ],
+      "id": 35
+    },
+    {
+      "name": "Spectral_li-ion_SPM",
+      "one_line_profile": "Spectral numerical solver for Lithium-ion battery Single Particle Model",
+      "detailed_description": "This tool provides a MATLAB implementation for solving the Single Particle Model (SPM) of lithium-ion batteries using spectral numerical methods, enabling efficient simulation of battery dynamics.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/davidhowey/Spectral_li-ion_SPM",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "battery-simulation",
+        "spectral-methods",
+        "lithium-ion",
+        "spm"
+      ],
+      "id": 36
+    },
+    {
+      "name": "deal.II",
+      "one_line_profile": "A C++ software library supporting the creation of finite element codes",
+      "detailed_description": "deal.II is a C++ program library targeted at the computational solution of partial differential equations using adaptive finite elements. It uses state-of-the-art programming techniques to offer you a modern interface to the complex data structures and algorithms required.",
+      "domains": [
+        "NUM1",
+        "NUM1-02"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/dealii/dealii",
+      "help_website": [
+        "https://www.dealii.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "finite-element",
+        "pde",
+        "adaptive-mesh-refinement",
+        "hpc"
+      ],
+      "id": 37
+    },
+    {
+      "name": "dedalus-sdk-python",
+      "one_line_profile": "Official Python SDK for the Dedalus spectral method framework",
+      "detailed_description": "This is the official Python SDK for Dedalus, a flexible framework for solving partial differential equations using spectral methods. It allows users to define and solve PDEs with high accuracy and performance.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dedalus-labs/dedalus-sdk-python",
+      "help_website": [
+        "https://dedalus-project.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "spectral-methods",
+        "pde-solver",
+        "fluid-dynamics",
+        "python-sdk"
+      ],
+      "id": 38
+    },
+    {
+      "name": "dedalus-sdk-typescript",
+      "one_line_profile": "Official TypeScript SDK for the Dedalus API",
+      "detailed_description": "The TypeScript SDK for Dedalus enables integration of the Dedalus spectral solver framework into web-based applications or TypeScript environments, facilitating remote simulation control or data interaction.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "interface"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/dedalus-labs/dedalus-sdk-typescript",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "typescript",
+        "sdk",
+        "spectral-methods",
+        "api-client"
+      ],
+      "id": 39
+    },
+    {
+      "name": "PyTorch-Spectral-clustering",
+      "one_line_profile": "Spectral clustering and dimensionality reduction in PyTorch",
+      "detailed_description": "A PyTorch implementation of various spectral clustering and dimensionality reduction methods. It leverages GPU acceleration for efficient processing of large datasets in scientific data analysis.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "clustering"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dimkastan/PyTorch-Spectral-clustering",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spectral-clustering",
+        "pytorch",
+        "dimensionality-reduction",
+        "machine-learning"
+      ],
+      "id": 40
+    },
+    {
+      "name": "PHiLiP",
+      "one_line_profile": "Parallel High-Order Library for PDEs through hp-adaptive DG methods",
+      "detailed_description": "PHiLiP is a C++ library for solving partial differential equations using hp-adaptive Discontinuous Galerkin methods. It is designed for high performance and parallel scalability.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/dougshidong/PHiLiP",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "discontinuous-galerkin",
+        "hp-adaptive",
+        "pde-solver",
+        "parallel-computing"
+      ],
+      "id": 41
+    },
+    {
+      "name": "NebulaSEM",
+      "one_line_profile": "Finite Volume and high-order Discontinuous Galerkin solver",
+      "detailed_description": "NebulaSEM is a solver that implements both Finite Volume (FV) and high-order Discontinuous Galerkin (DG) methods for computational fluid dynamics and other conservation laws.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "cfd"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/dshawul/NebulaSEM",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "finite-volume",
+        "discontinuous-galerkin",
+        "cfd",
+        "solver"
+      ],
+      "id": 42
+    },
+    {
+      "name": "pymech",
+      "one_line_profile": "Python software suite for Nek5000 and SIMSON",
+      "detailed_description": "pymech is a Python library designed to assist with the pre- and post-processing of data for the Nek5000 (spectral element) and SIMSON (spectral) CFD codes. It provides tools for reading, writing, and manipulating field files.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eX-Mech/pymech",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "nek5000",
+        "simson",
+        "cfd",
+        "post-processing"
+      ],
+      "id": 43
+    },
+    {
+      "name": "ENRICO",
+      "one_line_profile": "Exascale Nuclear Reactor Investigative COde",
+      "detailed_description": "ENRICO is a high-performance simulation code designed for nuclear reactor investigation at the exascale. It likely couples Monte Carlo transport with thermal-hydraulics or other physics.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/enrico-dev/enrico",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "nuclear-reactor",
+        "exascale",
+        "simulation",
+        "hpc"
+      ],
+      "id": 44
+    },
+    {
+      "name": "ExaDG",
+      "one_line_profile": "High-Order Discontinuous Galerkin solver for Exa-Scale",
+      "detailed_description": "ExaDG is a high-order Discontinuous Galerkin (DG) solver framework designed for exascale computing systems. It focuses on scalability and performance for solving complex PDEs.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/exadg/exadg",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "discontinuous-galerkin",
+        "exascale",
+        "hpc",
+        "pde-solver"
+      ],
+      "id": 45
+    },
+    {
+      "name": "Exasim",
+      "one_line_profile": "Generating Discontinuous Galerkin Codes For Extreme Scalable Simulations",
+      "detailed_description": "Exasim is a tool for generating high-performance Discontinuous Galerkin codes. It automates the creation of solvers for scalable simulations, focusing on GPU acceleration and modern hardware.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "code_generation",
+        "simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/exapde/Exasim",
+      "help_website": [
+        "https://www.exasim.org"
+      ],
+      "license": "MIT",
+      "tags": [
+        "discontinuous-galerkin",
+        "code-generation",
+        "gpu",
+        "hpc"
+      ],
+      "id": 46
+    },
+    {
+      "name": "BinauralSDM",
+      "one_line_profile": "Tools to render Binaural Room Impulse Responses using Spatial Decomposition Method",
+      "detailed_description": "BinauralSDM is a set of tools for rendering Binaural Room Impulse Responses (BRIR) using the Spatial Decomposition Method (SDM). It includes improvements for direction of arrival estimation and spectral properties of rendered audio.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "signal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/facebookresearch/BinauralSDM",
+      "help_website": [],
+      "license": "CC-BY-4.0",
+      "tags": [
+        "acoustics",
+        "spatial-audio",
+        "spectral-processing",
+        "matlab"
+      ],
+      "id": 47
+    },
+    {
+      "name": "Feel++",
+      "one_line_profile": "Finite Element Embedded Language and Library in C++",
+      "detailed_description": "Feel++ is a C++ library for solving partial differential equations using the finite element method. It provides a domain-specific language embedded in C++ to express variational formulations and solve complex physics problems.",
+      "domains": [
+        "NUM1",
+        "NUM1-02"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/feelpp/feelpp",
+      "help_website": [
+        "http://www.feelpp.org"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "finite-element",
+        "pde",
+        "c++",
+        "scientific-computing"
+      ],
+      "id": 48
+    },
+    {
+      "name": "FLEXI",
+      "one_line_profile": "High order discontinuous Galerkin framework for hyperbolic-parabolic conservation laws",
+      "detailed_description": "FLEXI is a high-order Discontinuous Galerkin (DG) framework designed for solving hyperbolic-parabolic conservation laws. It is optimized for high-performance computing and supports complex geometries.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "cfd"
+      ],
+      "application_level": "platform",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/flexi-framework/flexi",
+      "help_website": [
+        "https://www.flexi-project.org"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "discontinuous-galerkin",
+        "cfd",
+        "conservation-laws",
+        "hpc"
+      ],
+      "id": 49
+    },
+    {
+      "name": "GALÆXI",
+      "one_line_profile": "High order discontinuous Galerkin framework for compressible flows on GPU systems",
+      "detailed_description": "GALÆXI is the GPU-accelerated counterpart or extension of the FLEXI framework, providing high-order Discontinuous Galerkin solvers for compressible flows specifically optimized for GPU architectures.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "cfd"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/flexi-framework/galaexi",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gpu",
+        "discontinuous-galerkin",
+        "cfd",
+        "compressible-flow"
+      ],
+      "id": 50
+    },
+    {
+      "name": "AxiSEM",
+      "one_line_profile": "Parallel spectral-element method for 3D wave propagation in axisymmetric media",
+      "detailed_description": "AxiSEM is a parallel spectral-element method solver for 3D wave propagation in a sphere with axisymmetric or spherically symmetric structures. It is widely used in global seismology.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "wave_propagation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/geodynamics/axisem",
+      "help_website": [
+        "http://seis.earth.ox.ac.uk/axisem/"
+      ],
+      "license": null,
+      "tags": [
+        "seismology",
+        "spectral-element",
+        "wave-propagation",
+        "geophysics"
+      ],
+      "id": 51
+    },
+    {
+      "name": "sparselizard",
+      "one_line_profile": "High-performance C++ finite element library with hp-adaptivity for multi-physics",
+      "detailed_description": "A fast, user-friendly, and multiphysics C++ finite element library that supports hp-adaptivity (high-order elements) and is designed for high-performance computing applications.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/halbux/sparselizard",
+      "help_website": [
+        "http://www.sparselizard.org"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "fem",
+        "hp-fem",
+        "multi-physics",
+        "hpc"
+      ],
+      "id": 52
+    },
+    {
+      "name": "spherical-PDE-solver",
+      "one_line_profile": "Spectral method solver for PDEs on spherical surfaces",
+      "detailed_description": "A numerical program designed to solve partial differential equations on a spherical surface using spectral methods based on spherical harmonics.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hongkangcarl/spherical-PDE-solver",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spectral-methods",
+        "spherical-harmonics",
+        "pde"
+      ],
+      "id": 53
+    },
+    {
+      "name": "HORSES2D",
+      "one_line_profile": "High-order spectral element fluid dynamics solver",
+      "detailed_description": "A two-dimensional high-order spectral element method (SEM) solver designed for fluid dynamics simulations, focusing on accuracy and efficiency.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/horsescfd/HORSES2D",
+      "help_website": [
+        "https://horsescfd.github.io/HORSES2D/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "cfd",
+        "spectral-element-method",
+        "high-order"
+      ],
+      "id": 54
+    },
+    {
+      "name": "hermes-legacy",
+      "one_line_profile": "C++ library for hp-adaptive finite element methods",
+      "detailed_description": "A C++ library implementing hp-FEM (adaptive finite element methods with variable element size and polynomial degree) for solving partial differential equations.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/hpfem/hermes-legacy",
+      "help_website": [
+        "http://www.hpfem.org/hermes/"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "hp-fem",
+        "adaptive-mesh",
+        "pde"
+      ],
+      "id": 55
+    },
+    {
+      "name": "marlin",
+      "one_line_profile": "Spectral solver capability for the MOOSE simulation framework",
+      "detailed_description": "A code that adds spectral solver capabilities to the MOOSE ecosystem, operating on regular orthogonal grids and supporting GPU acceleration for representative volume elements.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/idaholab/marlin",
+      "help_website": [
+        "https://mooseframework.inl.gov/marlin/"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "moose",
+        "spectral-solver",
+        "gpu"
+      ],
+      "id": 56
+    },
+    {
+      "name": "grudge",
+      "one_line_profile": "Discontinuous Galerkin (DG) discretization environment",
+      "detailed_description": "A Python-based environment for Discontinuous Galerkin methods, part of the 'inducer' scientific computing ecosystem (UIUC), serving as a successor to 'hedge'.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "discretization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/inducer/grudge",
+      "help_website": [
+        "https://documen.tician.de/grudge/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "discontinuous-galerkin",
+        "pde",
+        "scientific-computing"
+      ],
+      "id": 57
+    },
+    {
+      "name": "hedge",
+      "one_line_profile": "Hybrid Discontinuous Galerkin environment",
+      "detailed_description": "A Python package for Discontinuous Galerkin methods, focusing on ease of use and hybrid approaches for solving PDEs.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/inducer/hedge",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "discontinuous-galerkin",
+        "pde"
+      ],
+      "id": 58
+    },
+    {
+      "name": "NodesAndModes.jl",
+      "one_line_profile": "Julia library for high-order finite element nodes and modes",
+      "detailed_description": "A Julia package providing nodes and modes (basis functions) for high-order finite element methods, supporting various element shapes and nodal distributions.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "discretization"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/jlchan/NodesAndModes.jl",
+      "help_website": [
+        "https://jlchan.github.io/NodesAndModes.jl/dev/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "fem",
+        "high-order",
+        "basis-functions"
+      ],
+      "id": 59
+    },
+    {
+      "name": "high-order-layers-torch",
+      "one_line_profile": "High-order polynomial layers for PyTorch neural networks",
+      "detailed_description": "A PyTorch library implementing high-order and sparse layers using Lagrange polynomials, Chebyshev nodes, and Fourier series, enabling spectral methods within deep learning models.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "scientific_machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jloveric/high-order-layers-torch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "spectral-methods",
+        "polynomial-layers",
+        "sciml"
+      ],
+      "id": 60
+    },
+    {
+      "name": "AssociatedLegendrePolynomials.jl",
+      "one_line_profile": "Fast calculation of Associated Legendre polynomials in Julia",
+      "detailed_description": "A Julia library dedicated to the efficient calculation of Associated Legendre polynomials, which are fundamental basis functions for spectral methods on spheres.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "numerical_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/jmert/AssociatedLegendrePolynomials.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "legendre-polynomials",
+        "spectral-methods"
+      ],
+      "id": 61
+    },
+    {
+      "name": "SEM2DPACK",
+      "one_line_profile": "Spectral Element Method for 2D wave propagation and fracture dynamics",
+      "detailed_description": "A spectral element method (SEM) solver specifically designed for 2D wave propagation and fracture dynamics, widely used in computational seismology and earthquake source dynamics.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "wave_propagation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/jpampuero/sem2dpack",
+      "help_website": [
+        "http://sourceforge.net/projects/sem2dpack/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "seismology",
+        "spectral-element-method",
+        "wave-propagation"
+      ],
+      "id": 62
+    },
+    {
+      "name": "semlab",
+      "one_line_profile": "MATLAB-based Spectral Element Method for wave propagation",
+      "detailed_description": "A MATLAB toolbox implementing the Spectral Element Method for simulating wave propagation and rupture dynamics, suitable for educational and research prototyping.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "wave_propagation"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/jpampuero/semlab",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "matlab",
+        "spectral-element-method",
+        "seismology"
+      ],
+      "id": 63
+    },
+    {
+      "name": "mesh_segmentation",
+      "one_line_profile": "Blender addon for mesh segmentation using spectral clustering",
+      "detailed_description": "A Python addon for Blender that performs mesh segmentation using spectral clustering methods, enabling scientific visualization and processing of 3D mesh data.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "segmentation"
+      ],
+      "application_level": "plugin",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kugelrund/mesh_segmentation",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "blender",
+        "spectral-clustering",
+        "mesh-processing"
+      ],
+      "id": 64
+    },
+    {
+      "name": "FLife",
+      "one_line_profile": "Vibration fatigue analysis using spectral methods",
+      "detailed_description": "A Python library for estimating fatigue life from vibration data using spectral methods (frequency domain analysis), supporting various stress-life models.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "analysis",
+        "fatigue_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ladisk/FLife",
+      "help_website": [
+        "https://flife.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fatigue-analysis",
+        "spectral-methods",
+        "vibration"
+      ],
+      "id": 65
+    },
+    {
+      "name": "NDG-FEM",
+      "one_line_profile": "Nodal Discontinuous Galerkin Finite Element Methods solver",
+      "detailed_description": "A MATLAB-based solver implementing Nodal Discontinuous Galerkin Finite Element Methods (NDG-FEM) for various hydraulic and fluid dynamics problems.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/li12242/NDG-FEM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "discontinuous-galerkin",
+        "fem",
+        "hydraulics"
+      ],
+      "id": 66
+    },
+    {
+      "name": "NSC",
+      "one_line_profile": "Nyström-based spectral clustering for LiDAR tree segmentation",
+      "detailed_description": "A Python implementation of Nyström-based spectral clustering with K-nearest neighbour-based sampling, specifically designed for individual tree segmentation from airborne LiDAR point cloud data.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/limingado/NSC",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "lidar",
+        "spectral-clustering",
+        "segmentation"
+      ],
+      "id": 67
+    },
+    {
+      "name": "ExaConstit",
+      "one_line_profile": "GPU-accelerated crystal plasticity finite element method (FEM) code",
+      "detailed_description": "A crystal plasticity finite element method (FEM) code designed to run on GPUs, developed by Lawrence Livermore National Laboratory for materials science simulations.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "materials_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/llnl/ExaConstit",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "fem",
+        "crystal-plasticity",
+        "gpu",
+        "materials-science"
+      ],
+      "id": 68
+    },
+    {
+      "name": "scaleupROM",
+      "one_line_profile": "Scalable Reduced Order Model with Discontinuous Galerkin Domain Decomposition",
+      "detailed_description": "A scalable Reduced Order Model (ROM) implementation utilizing Discontinuous Galerkin (DG) Domain Decomposition, developed by LLNL for efficient large-scale simulations.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "model_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/llnl/scaleupROM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rom",
+        "discontinuous-galerkin",
+        "domain-decomposition",
+        "llnl"
+      ],
+      "id": 69
+    },
+    {
+      "name": "RCS-DGTD",
+      "one_line_profile": "Radar Cross Section simulation using Discontinuous Galerkin Time Domain methods",
+      "detailed_description": "MATLAB routines for calculating Radar Cross Section (RCS) using Discontinuous Galerkin Time Domain (DGTD) methods, supporting high-order elements.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "electromagnetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/lmdiazangulo/RCS-DGTD",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "rcs",
+        "dgtd",
+        "electromagnetics",
+        "radar"
+      ],
+      "id": 70
+    },
+    {
+      "name": "HORSES3D",
+      "one_line_profile": "High-order discontinuous Galerkin solver for flow simulations",
+      "detailed_description": "A high-order discontinuous Galerkin solver designed for flow simulations and multi-physics applications, emphasizing spectral element methods.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "cfd"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/loganoz/horses3d",
+      "help_website": [
+        "https://horses3d.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "cfd",
+        "discontinuous-galerkin",
+        "high-order",
+        "fluid-dynamics"
+      ],
+      "id": 71
+    },
+    {
+      "name": "IGA-dealii",
+      "one_line_profile": "Isogeometric Analysis extension for the deal.II library",
+      "detailed_description": "A library extending deal.II with Isogeometric Analysis (IGA) capabilities, developed by the SISSA mathLab.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "numerical_methods"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mathLab/IGA-dealii",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "iga",
+        "dealii",
+        "fem",
+        "isogeometric-analysis"
+      ],
+      "id": 72
+    },
+    {
+      "name": "ITHACA-SEM",
+      "one_line_profile": "Reduced Order Modeling library for Spectral Element Methods",
+      "detailed_description": "A library for Real Time Highly Advanced Computational Applications using Spectral Element Methods, focusing on Reduced Order Modeling (ROM).",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "model_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mathLab/ITHACA-SEM",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "rom",
+        "spectral-element-method",
+        "sem",
+        "reduced-order-modeling"
+      ],
+      "id": 73
+    },
+    {
+      "name": "deal2lkit",
+      "one_line_profile": "Toolkit library for deal.II finite element library",
+      "detailed_description": "A toolkit library providing additional functionality and utilities for the deal.II finite element library, developed by SISSA mathLab.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "numerical_methods"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mathLab/deal2lkit",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "dealii",
+        "fem",
+        "toolkit"
+      ],
+      "id": 74
+    },
+    {
+      "name": "pi-DoMUS",
+      "one_line_profile": "Parallel Deal.II Multiphysics Solver",
+      "detailed_description": "A parallel multiphysics solver built on top of the deal.II library, designed for complex coupled simulations.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "multiphysics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mathLab/pi-DoMUS",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "multiphysics",
+        "dealii",
+        "solver",
+        "parallel-computing"
+      ],
+      "id": 75
+    },
+    {
+      "name": "PyMFEM",
+      "one_line_profile": "Python wrapper for the MFEM finite element library",
+      "detailed_description": "A Python wrapper for MFEM, enabling high-performance finite element simulations and rapid prototyping in Python.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "numerical_methods"
+      ],
+      "application_level": "library",
+      "primary_language": "SWIG",
+      "repo_url": "https://github.com/mfem/PyMFEM",
+      "help_website": [
+        "https://mfem.org"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "mfem",
+        "python-wrapper",
+        "fem",
+        "simulation"
+      ],
+      "id": 76
+    },
+    {
+      "name": "MFEM",
+      "one_line_profile": "Scalable C++ library for finite element methods",
+      "detailed_description": "A lightweight, general, and scalable C++ library for finite element methods, supporting high-order finite elements and a wide variety of solvers.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "numerical_methods"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mfem/mfem",
+      "help_website": [
+        "https://mfem.org"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "fem",
+        "high-order",
+        "hpc",
+        "pde-solver"
+      ],
+      "id": 77
+    },
+    {
+      "name": "Chebyshev",
+      "one_line_profile": "Python module for Chebyshev polynomial approximation",
+      "detailed_description": "A Python module for approximating SymPy expressions using Taylor series and Chebyshev polynomials, useful for numerical analysis and spectral methods.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "numerical_approximation",
+        "symbolic_computation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mlazaric/Chebyshev",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "chebyshev",
+        "approximation",
+        "spectral-methods",
+        "sympy"
+      ],
+      "id": 78
+    },
+    {
+      "name": "mpopt",
+      "one_line_profile": "Pseudo-spectral collocation based multi-phase optimal control solver",
+      "detailed_description": "A solver for multi-phase optimal control problems using pseudo-spectral collocation methods.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "optimization",
+        "control_theory"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mpopt/mpopt",
+      "help_website": [
+        "https://mpopt.readthedocs.io"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "optimal-control",
+        "pseudo-spectral",
+        "collocation",
+        "optimization"
+      ],
+      "id": 79
+    },
+    {
+      "name": "scPrisma",
+      "one_line_profile": "Spectral analysis method for single-cell pseudotime reconstruction",
+      "detailed_description": "A spectral analysis method for pseudotime reconstruction, inference, and filtering of cyclic signals in single-cell data.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "bioinformatics"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/nitzanlab/scPrisma",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "spectral-analysis",
+        "pseudotime",
+        "bioinformatics"
+      ],
+      "id": 80
+    },
+    {
+      "name": "ChiDG",
+      "one_line_profile": "Chimera-based Discontinuous Galerkin solver",
+      "detailed_description": "A Discontinuous Galerkin (DG) solver utilizing Chimera (overset) grids for flexible mesh handling in simulations.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "cfd"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/nwukie/ChiDG",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "discontinuous-galerkin",
+        "chimera-grid",
+        "cfd",
+        "solver"
+      ],
+      "id": 81
+    },
+    {
+      "name": "openPSTD",
+      "one_line_profile": "Visual interface and solver for Pseudo-Spectral Time-Domain method in acoustics",
+      "detailed_description": "An open-source platform providing a visual interface and solver for the Pseudo-Spectral Time-Domain (PSTD) method to simulate sound propagation.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "acoustics"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/openPSTD/openPSTD",
+      "help_website": [
+        "http://www.openpstd.org"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "pstd",
+        "acoustics",
+        "simulation",
+        "pseudo-spectral"
+      ],
+      "id": 82
+    },
+    {
+      "name": "libparanumal",
+      "one_line_profile": "Accelerated high-order finite element flow solvers",
+      "detailed_description": "A library of high-performance, GPU-accelerated finite element flow solvers and benchmarks, focusing on high-order methods.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "cfd"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/paranumal/libparanumal",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fem",
+        "high-order",
+        "gpu",
+        "cfd"
+      ],
+      "id": 83
+    },
+    {
+      "name": "ppkMHD",
+      "one_line_profile": "MPI+Kokkos implementation of spectral difference method for MHD",
+      "detailed_description": "A high-performance magnetohydrodynamics (MHD) solver implementing spectral difference method (SDM) high order schemes, utilizing MPI and Kokkos for parallel execution.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "mhd_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pkestene/ppkMHD",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "mhd",
+        "spectral-difference-method",
+        "kokkos",
+        "mpi"
+      ],
+      "id": 84
+    },
+    {
+      "name": "DGFEM-Acoustic",
+      "one_line_profile": "Discontinuous Galerkin FEM solver for Acoustic Wave Propagation",
+      "detailed_description": "A C++ implementation of the Discontinuous Galerkin Finite Element Method (DGFEM) specifically designed for simulating acoustic wave propagation.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "acoustic_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/povanberg/DGFEM-Acoustic",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dgfem",
+        "acoustics",
+        "wave-propagation"
+      ],
+      "id": 85
+    },
+    {
+      "name": "precice-dealii-adapter",
+      "one_line_profile": "Coupling adapter for deal.II within the preCICE ecosystem",
+      "detailed_description": "An adapter allowing the coupling of structural solvers written with the finite element library deal.II to other solvers via the preCICE coupling library.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "coupling",
+        "multiphysics"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/precice/dealii-adapter",
+      "help_website": [
+        "https://precice.org/adapter-dealii-overview.html"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "precice",
+        "dealii",
+        "fsi",
+        "coupling"
+      ],
+      "id": 86
+    },
+    {
+      "name": "pychebfun",
+      "one_line_profile": "Python implementation of Chebfun for computing with functions",
+      "detailed_description": "A Python library implementing the Chebfun system, allowing for numerical computing with functions using Chebyshev polynomial expansions.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "numerical_approximation",
+        "function_approximation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pychebfun/pychebfun",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "chebyshev",
+        "approximation",
+        "spectral-methods"
+      ],
+      "id": 87
+    },
+    {
+      "name": "pymor-deal.II",
+      "one_line_profile": "Bindings for deal.II to use with pyMOR",
+      "detailed_description": "Provides bindings to interface the deal.II finite element library with pyMOR, enabling model order reduction for deal.II based models. (Included due to institutional backing by pyMOR)",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "model_order_reduction",
+        "coupling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pymor/pymor-deal.II",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "pymor",
+        "dealii",
+        "model-order-reduction"
+      ],
+      "id": 88
+    },
+    {
+      "name": "TorchFSM",
+      "one_line_profile": "Fourier Spectral Method implementation with PyTorch",
+      "detailed_description": "A library implementing Fourier Spectral Methods using PyTorch, enabling differentiable spectral simulations and integration with deep learning workflows.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/qiauil/torchfsm",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "fourier-spectral-method",
+        "pde"
+      ],
+      "id": 89
+    },
+    {
+      "name": "PolynomialBases.jl",
+      "one_line_profile": "Polynomial bases for spectral element methods in Julia",
+      "detailed_description": "A Julia library providing efficient implementations of polynomial bases used in spectral element methods, serving as a foundational component for high-order solvers.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "numerical_discretization",
+        "basis_functions"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/ranocha/PolynomialBases.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "julia",
+        "spectral-element",
+        "polynomials"
+      ],
+      "id": 90
+    },
+    {
+      "name": "SummationByPartsOperators.jl",
+      "one_line_profile": "Summation-by-parts (SBP) operators for stable discretizations",
+      "detailed_description": "A Julia library of summation-by-parts (SBP) operators used in finite difference, Fourier pseudospectral, and Galerkin methods to ensure provably stable semidiscretizations.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "numerical_discretization",
+        "differential_operators"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/ranocha/SummationByPartsOperators.jl",
+      "help_website": [
+        "https://ranocha.de/SummationByPartsOperators.jl/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "sbp",
+        "stability",
+        "discretization",
+        "julia"
+      ],
+      "id": 91
+    },
+    {
+      "name": "PostMesh",
+      "one_line_profile": "Curvilinear mesh generator for high order finite element analysis",
+      "detailed_description": "A library for generating high-order curvilinear meshes, essential for high-order finite element and spectral element analysis.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "mesh_generation",
+        "pre_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/romeric/PostMesh",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mesh-generation",
+        "high-order",
+        "fem"
+      ],
+      "id": 92
+    },
+    {
+      "name": "DGTile",
+      "one_line_profile": "Discontinuous Galerkin adaptive mesh library",
+      "detailed_description": "A portably performant discontinuous Galerkin adaptive mesh library developed by Sandia National Laboratories. (Included due to institutional backing)",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "mesh_adaptation",
+        "numerical_discretization"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/sandialabs/DGTile",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "discontinuous-galerkin",
+        "adaptive-mesh",
+        "sandia"
+      ],
+      "id": 93
+    },
+    {
+      "name": "Jexpresso",
+      "one_line_profile": "Numerical solution of conservation laws using spectral elements",
+      "detailed_description": "Research software for solving conservation laws using spectral element methods, capable of running on CPUs and GPUs.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "conservation_laws"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/smarras79/Jexpresso",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spectral-elements",
+        "conservation-laws",
+        "gpu"
+      ],
+      "id": 94
+    },
+    {
+      "name": "snek5000",
+      "one_line_profile": "Python framework for Nek5000",
+      "detailed_description": "A Python framework for Nek5000, a high-fidelity spectral element code for fluid dynamics, facilitating simulation setup and execution.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "cfd_framework"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/snek5000/snek5000",
+      "help_website": [
+        "https://snek5000.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "nek5000",
+        "cfd",
+        "spectral-elements",
+        "python-wrapper"
+      ],
+      "id": 95
+    },
+    {
+      "name": "shenfun",
+      "one_line_profile": "High performance spectral Galerkin platform in Python",
+      "detailed_description": "A high-performance computational platform in Python for solving partial differential equations using the spectral Galerkin method.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "spectral_galerkin"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spectralDNS/shenfun",
+      "help_website": [
+        "https://shenfun.readthedocs.io/"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "spectral-galerkin",
+        "pde-solver",
+        "python"
+      ],
+      "id": 96
+    },
+    {
+      "name": "spectralDNS",
+      "one_line_profile": "Spectral Navier-Stokes solvers in Python",
+      "detailed_description": "A suite of spectral solvers for the Navier-Stokes equations and related systems, implemented in Python.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "cfd_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spectralDNS/spectralDNS",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "navier-stokes",
+        "spectral-method",
+        "dns"
+      ],
+      "id": 97
+    },
+    {
+      "name": "mfem-mgis",
+      "one_line_profile": "Coupling interface between MFEM and MGIS",
+      "detailed_description": "A coupling tool that connects the MFEM finite element library with MGIS (MFront Generic Interface Support) for advanced material modelling. (Included due to institutional backing by MFront/EDF ecosystem)",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "coupling",
+        "material_modelling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/thelfer/mfem-mgis",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "mfem",
+        "mgis",
+        "mfront",
+        "material-science"
+      ],
+      "id": 98
+    },
+    {
+      "name": "FastAST",
+      "one_line_profile": "Fast primal-dual interior point method for line spectral estimation",
+      "detailed_description": "A MATLAB implementation of a fast primal-dual interior point method for line spectral estimation via atomic norm soft thresholding.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "spectral_estimation",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/thomaslundgaard/fast-ast",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spectral-estimation",
+        "interior-point-method",
+        "optimization"
+      ],
+      "id": 99
+    },
+    {
+      "name": "Latent-Spectral-Models",
+      "one_line_profile": "Deep learning model for solving high-dimensional PDEs using latent spectral representations",
+      "detailed_description": "A Python implementation of Latent Spectral Models (LSM) for solving high-dimensional partial differential equations. It leverages spectral methods within a latent space to approximate PDE solutions efficiently, as presented at ICML 2023.",
+      "domains": [
+        "NUM1",
+        "NUM1-03",
+        "AI4S"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "scientific_machine_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/thuml/Latent-Spectral-Models",
+      "help_website": [
+        "https://arxiv.org/abs/2301.12664"
+      ],
+      "license": "MIT",
+      "tags": [
+        "pde-solver",
+        "spectral-methods",
+        "deep-learning",
+        "ai4s"
+      ],
+      "id": 100
+    },
+    {
+      "name": "SpectralKit.jl",
+      "one_line_profile": "Julia library for spectral method building blocks",
+      "detailed_description": "A Julia package providing essential components for implementing spectral methods, including basis functions, transforms, and grid utilities, designed to facilitate the construction of spectral solvers.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "numerical_methods",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/tpapp/SpectralKit.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "julia",
+        "spectral-methods",
+        "numerical-analysis"
+      ],
+      "id": 101
+    },
+    {
+      "name": "Trixi.jl",
+      "one_line_profile": "Adaptive high-order numerical simulation framework for conservation laws",
+      "detailed_description": "A numerical simulation framework in Julia for hyperbolic conservation laws. It supports adaptive mesh refinement and high-order methods, including Discontinuous Galerkin (DG), making it suitable for fluid dynamics and other physics simulations.",
+      "domains": [
+        "NUM1",
+        "NUM1-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/trixi-framework/Trixi.jl",
+      "help_website": [
+        "https://trixi-framework.github.io/Trixi.jl/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "cfd",
+        "discontinuous-galerkin",
+        "conservation-laws",
+        "julia"
+      ],
+      "id": 102
+    },
+    {
+      "name": "drdg3d",
+      "one_line_profile": "3D dynamic rupture modeling using Discontinuous Galerkin method",
+      "detailed_description": "A Fortran-based Discontinuous Galerkin Finite Element code specifically designed for 3D dynamic rupture modeling in seismology, enabling high-fidelity simulation of earthquake source physics.",
+      "domains": [
+        "NUM1",
+        "NUM1-03",
+        "EARTH_SCI"
+      ],
+      "subtask_category": [
+        "simulation",
+        "seismic_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/wqseis/drdg3d",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "seismology",
+        "discontinuous-galerkin",
+        "dynamic-rupture",
+        "finite-element"
+      ],
+      "id": 103
+    },
+    {
+      "name": "DGseisfor3D",
+      "one_line_profile": "3D seismic wave simulation based on Discontinuous Galerkin Method",
+      "detailed_description": "A simulation tool for modeling 3D seismic wave propagation using the Discontinuous Galerkin method, suitable for geophysics and seismological research.",
+      "domains": [
+        "NUM1",
+        "NUM1-03",
+        "EARTH_SCI"
+      ],
+      "subtask_category": [
+        "simulation",
+        "wave_propagation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/yeruichao/DGseisfor3D",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "seismic-waves",
+        "discontinuous-galerkin",
+        "geophysics"
+      ],
+      "id": 104
+    },
+    {
+      "name": "python-modularity-maximization",
+      "one_line_profile": "Spectral method implementation for network modularity maximization",
+      "detailed_description": "A Python library implementing Newman's spectral method for maximizing modularity in network analysis. It is used for community detection and graph clustering tasks in scientific data analysis.",
+      "domains": [
+        "NUM1",
+        "NUM1-03",
+        "COMP_SCI"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "clustering"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhiyzuo/python-modularity-maximization",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spectral-clustering",
+        "network-analysis",
+        "modularity",
+        "graph-theory"
+      ],
+      "id": 105
+    }
+  ]
+}

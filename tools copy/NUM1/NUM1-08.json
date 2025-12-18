@@ -1,0 +1,4230 @@
+{
+  "generated_at": "2025-12-17T15:48:33.304346+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "NUM1",
+      "leaf_cluster_name": "计算科学方法论与数值计算生态",
+      "domain": "Numerical Methods / SciComp",
+      "typical_objects": "稀疏矩阵/算子, 网格与离散系统, PDE/ODE, 误差/收敛数据",
+      "task_chain": "离散化→求解→误差/稳定性→加速→验证→可复现",
+      "tool_form": "数值库/求解器框架 + 自动微分/可微分计算 + HPC"
+    },
+    "unit": {
+      "unit_id": "NUM1-08",
+      "unit_name": "数值验证与基准（误差/收敛/制造解）",
+      "target_scale": "150–350",
+      "coverage_tools": "manufactured solutions、误差分析工具、回归测试 harness、benchmark suites"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] FLiT",
+        "[GH] Pavilion",
+        "[GH] SciMark",
+        "[GH] HPCG",
+        "[GH] HPL",
+        "[GH] FPBench",
+        "[GH] Verrou",
+        "[GH] Herbie",
+        "[GH] ReFrame",
+        "[GH] MASA",
+        "[GH] method of manufactured solutions",
+        "[GH] numerical verification",
+        "[GH] convergence analysis",
+        "[GH] scientific benchmarking",
+        "[GH] error estimation",
+        "[GH] PDE benchmark",
+        "[GH] solver benchmark",
+        "[GH] regression testing hpc",
+        "[GH] floating point analysis",
+        "[GH] numerical validation",
+        "[GH] order of accuracy",
+        "[GH] verification and validation",
+        "[GH] scientific reproducibility",
+        "[GH] finite element validation",
+        "[WEB] method of manufactured solutions library github",
+        "[WEB] numerical code verification tools github",
+        "[WEB] scientific software regression testing framework github",
+        "[WEB] floating point error analysis tools github",
+        "[WEB] HPC benchmark suite github",
+        "[WEB] PDE solver validation benchmarks github"
+      ],
+      "total_candidates": 1230,
+      "tool_candidates": 727,
+      "final_tools": 167
+    }
+  },
+  "tools": [
+    {
+      "name": "Dual_error_DG",
+      "one_line_profile": "Discontinuous Galerkin solver with adjoint-based error estimation",
+      "detailed_description": "A Discontinuous Galerkin (DG) solver for compressible 2D Euler equations that implements adjoint error estimation and adaptive mesh refinement. It serves as a numerical verification tool for studying error convergence and adaptive strategies in fluid dynamics simulations.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "error_estimation",
+        "adaptive_refinement"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/2012ZGZYY/Dual_error_DG",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "discontinuous-galerkin",
+        "error-estimation",
+        "cfd",
+        "adaptive-mesh-refinement"
+      ],
+      "id": 1
+    },
+    {
+      "name": "science-build-rules",
+      "one_line_profile": "Build utilities for reproducible scientific software environments",
+      "detailed_description": "A utility collection maintained by Aalto Scientific Computing for building reproducible scientific software stacks using Spack, Singularity, and Anaconda. It facilitates the deployment and management of consistent computational environments for research.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "reproducibility",
+        "environment_management",
+        "software_build"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AaltoSciComp/science-build-rules",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "reproducibility",
+        "spack",
+        "singularity",
+        "hpc"
+      ],
+      "id": 2
+    },
+    {
+      "name": "DocGenome",
+      "one_line_profile": "Large-scale scientific document benchmark for multi-modal models",
+      "detailed_description": "An open, large-scale scientific document benchmark designed for training and testing multi-modal large models. It provides a structured dataset and evaluation framework for analyzing scientific literature layout, content, and semantics.",
+      "domains": [
+        "AI4S"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "dataset_generation",
+        "multimodal_learning"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Alpha-Innovator/DocGenome",
+      "help_website": [],
+      "license": "CC-BY-4.0",
+      "tags": [
+        "benchmark",
+        "scientific-documents",
+        "multimodal-ai",
+        "dataset"
+      ],
+      "id": 3
+    },
+    {
+      "name": "Pavilion",
+      "one_line_profile": "Unreal Engine-based robotics simulation platform",
+      "detailed_description": "A robotics simulation platform built on Unreal Engine, designed as a modern alternative to Gazebo. It provides high-fidelity physical simulation and rendering for testing robot interactions and environments.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "robotics_simulation",
+        "physical_modeling",
+        "environment_simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/CoreRC/Pavilion",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "robotics",
+        "simulation",
+        "unreal-engine",
+        "gazebo-alternative"
+      ],
+      "id": 4
+    },
+    {
+      "name": "opfgym",
+      "one_line_profile": "Gymnasium-compatible RL environment for Optimal Power Flow (OPF) problems",
+      "detailed_description": "A framework designed to create reinforcement learning environments for solving optimal power flow problems, including benchmark environments for comparable research in energy systems.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "reinforcement_learning",
+        "optimal_power_flow",
+        "benchmark"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Digitalized-Energy-Systems/opfgym",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reinforcement-learning",
+        "power-systems",
+        "optimal-power-flow",
+        "gymnasium"
+      ],
+      "id": 5
+    },
+    {
+      "name": "FLITE3D",
+      "one_line_profile": "Computational Fluid Dynamics (CFD) PreProcessor and Solver",
+      "detailed_description": "A CFD system comprising a pre-processor and solver, designed for simulating fluid dynamics problems.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "cfd_solver",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/DrBenEvans/FLITE3D",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cfd",
+        "fluid-dynamics",
+        "solver"
+      ],
+      "id": 6
+    },
+    {
+      "name": "FPBench",
+      "one_line_profile": "Standard and benchmarks for floating point accuracy",
+      "detailed_description": "A standard and suite of benchmarks for evaluating the accuracy and correctness of floating-point computations in numerical systems.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "numerical_verification",
+        "floating_point_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Racket",
+      "repo_url": "https://github.com/FPBench/FPBench",
+      "help_website": [
+        "http://fpbench.org"
+      ],
+      "license": "MIT",
+      "tags": [
+        "floating-point",
+        "benchmark",
+        "numerical-analysis"
+      ],
+      "id": 7
+    },
+    {
+      "name": "hplib",
+      "one_line_profile": "Database and simulation library for heat pumps",
+      "detailed_description": "A library containing efficiency parameters and functions to simulate heat pump performance, based on public Keymark datasets.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "energy_systems"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/FZJ-IEK3-VSA/hplib",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "heat-pump",
+        "simulation",
+        "energy"
+      ],
+      "id": 8
+    },
+    {
+      "name": "FluxBench.jl",
+      "one_line_profile": "Benchmarks for the FluxML scientific machine learning ecosystem",
+      "detailed_description": "A benchmarking suite for FluxML, covering deep learning, scientific machine learning, and differentiable programming workloads.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "sciml",
+        "performance_testing"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/FluxML/FluxBench.jl",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "julia",
+        "fluxml",
+        "benchmark",
+        "sciml"
+      ],
+      "id": 9
+    },
+    {
+      "name": "BLOCKING",
+      "one_line_profile": "Error analysis tools for Molecular Dynamics convergence",
+      "detailed_description": "Tools for assessing the convergence of Molecular Dynamics simulations by performing error analysis on calculated ensemble averages and free energies.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "convergence_analysis",
+        "error_estimation",
+        "molecular_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/FrPsc/BLOCKING",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "molecular-dynamics",
+        "error-analysis",
+        "convergence"
+      ],
+      "id": 10
+    },
+    {
+      "name": "Mamo",
+      "one_line_profile": "Mathematical Modeling Benchmark with Solvers",
+      "detailed_description": "A benchmark dataset and solver suite designed to evaluate the mathematical modeling capabilities of AI systems.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "mathematical_modeling"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FreedomIntelligence/Mamo",
+      "help_website": [],
+      "license": "CC-BY-SA-4.0",
+      "tags": [
+        "mathematical-modeling",
+        "benchmark",
+        "llm"
+      ],
+      "id": 11
+    },
+    {
+      "name": "LAB-Bench",
+      "one_line_profile": "Benchmark for AI systems in biological research",
+      "detailed_description": "An evaluation dataset designed to benchmark AI capabilities foundational to scientific research in biology.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "biology",
+        "ai_evaluation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Future-House/LAB-Bench",
+      "help_website": [],
+      "license": "CC-BY-SA-4.0",
+      "tags": [
+        "biology",
+        "benchmark",
+        "ai4s"
+      ],
+      "id": 12
+    },
+    {
+      "name": "lm-open-science-evaluation",
+      "one_line_profile": "Evaluation framework for scientific reasoning in LLMs",
+      "detailed_description": "A reproducible and flexible framework for evaluating Large Language Models on scientific reasoning tasks.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "scientific_reasoning"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GAIR-NLP/lm-open-science-evaluation",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "scientific-reasoning",
+        "evaluation"
+      ],
+      "id": 13
+    },
+    {
+      "name": "GESS",
+      "one_line_profile": "Benchmark for Geometric Deep Learning in Science",
+      "detailed_description": "A benchmark suite for evaluating Geometric Deep Learning models under scientific applications with distribution shifts.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "geometric_deep_learning",
+        "sciml"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Graph-COM/GESS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "geometric-deep-learning",
+        "benchmark",
+        "scientific-applications"
+      ],
+      "id": 14
+    },
+    {
+      "name": "NewtonBench",
+      "one_line_profile": "Benchmark for scientific law discovery in LLM agents",
+      "detailed_description": "A benchmark designed to evaluate the ability of LLM agents to discover generalizable scientific laws.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "scientific_discovery"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HKUST-KnowComp/NewtonBench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scientific-discovery",
+        "llm",
+        "benchmark"
+      ],
+      "id": 15
+    },
+    {
+      "name": "BubbleML",
+      "one_line_profile": "Multiphase multiphysics dataset and benchmarks for SciML",
+      "detailed_description": "A dataset and benchmark suite focusing on multiphase multiphysics problems for scientific machine learning applications.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "dataset",
+        "sciml",
+        "multiphysics"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HPCForge/BubbleML",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "sciml",
+        "multiphysics",
+        "benchmark"
+      ],
+      "id": 16
+    },
+    {
+      "name": "R.rsp",
+      "one_line_profile": "Dynamic generation of scientific reports in R",
+      "detailed_description": "An R package for dynamic generation of scientific reports, facilitating reproducible research documentation.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "reporting",
+        "reproducibility"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/HenrikBengtsson/R.rsp",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "r",
+        "reporting",
+        "reproducibility"
+      ],
+      "id": 17
+    },
+    {
+      "name": "rxiv-maker",
+      "one_line_profile": "Automated scientific preprint generation tool",
+      "detailed_description": "A framework that converts markdown into publication-ready PDFs, automating scientific preprint generation with a focus on reproducibility.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "publishing",
+        "reproducibility"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HenriquesLab/rxiv-maker",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "publishing",
+        "reproducibility",
+        "markdown"
+      ],
+      "id": 18
+    },
+    {
+      "name": "HpcGridRunner",
+      "one_line_profile": "HPC Grid Runner tool",
+      "detailed_description": "A tool for managing and running jobs on HPC grids.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "hpc"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/HpcGridRunner/HpcGridRunner",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "hpc",
+        "grid-computing",
+        "workflow"
+      ],
+      "id": 19
+    },
+    {
+      "name": "HPCG",
+      "one_line_profile": "IBM Optimized HPCG benchmark",
+      "detailed_description": "An optimized version of the High Performance Conjugate Gradients (HPCG) benchmark for evaluating HPC system performance.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "hpc",
+        "performance_testing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/IBM/HPCG",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "hpc",
+        "benchmark",
+        "conjugate-gradient"
+      ],
+      "id": 20
+    },
+    {
+      "name": "SimManager",
+      "one_line_profile": "Library for reproducible scientific simulations",
+      "detailed_description": "A library designed to manage and ensure the reproducibility of scientific simulations.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "simulation_management",
+        "reproducibility"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/IGITUGraz/SimManager",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "simulation",
+        "reproducibility",
+        "management"
+      ],
+      "id": 21
+    },
+    {
+      "name": "Fin-Fact",
+      "one_line_profile": "Benchmark Dataset for Multimodal Scientific Fact Checking",
+      "detailed_description": "A benchmark dataset designed for the task of multimodal scientific fact-checking.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "fact_checking",
+        "scientific_nlp"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/IIT-DM/Fin-Fact",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fact-checking",
+        "benchmark",
+        "nlp"
+      ],
+      "id": 22
+    },
+    {
+      "name": "VLM4Bio",
+      "one_line_profile": "Benchmark for Vision-Language Models in Biology",
+      "detailed_description": "A benchmark dataset of scientific question-answer pairs for evaluating pretrained VLMs on trait discovery from biological images.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "bioimaging",
+        "vlm"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Imageomics/VLM4Bio",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "biology",
+        "vlm",
+        "benchmark",
+        "bioimaging"
+      ],
+      "id": 23
+    },
+    {
+      "name": "OMEZarrOpenSciVisDatasets",
+      "one_line_profile": "Datasets for OME-Zarr scientific visualization testing",
+      "detailed_description": "A resource providing datasets to facilitate testing and development of OME-Zarr scientific visualization tools.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "dataset",
+        "visualization_testing",
+        "bioimaging"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/InsightSoftwareConsortium/OMEZarrOpenSciVisDatasets",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ome-zarr",
+        "visualization",
+        "bioimaging",
+        "dataset"
+      ],
+      "id": 24
+    },
+    {
+      "name": "IntervalArithmetic.jl",
+      "one_line_profile": "Library for validated numerics using interval arithmetic in Julia",
+      "detailed_description": "A Julia library implementing interval arithmetic to perform rigorous numerical computations, ensuring bounds on errors and enabling numerical verification.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "numerical_verification",
+        "error_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaIntervals/IntervalArithmetic.jl",
+      "help_website": [
+        "https://juliaintervals.github.io/IntervalArithmetic.jl/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "interval-arithmetic",
+        "validated-numerics",
+        "numerical-analysis"
+      ],
+      "id": 25
+    },
+    {
+      "name": "SolverBenchmark.jl",
+      "one_line_profile": "Benchmarking tools for optimization solvers in Julia",
+      "detailed_description": "A Julia package providing utilities to benchmark and compare the performance of numerical optimization solvers, generating performance profiles and statistics.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaSmoothOptimizers/SolverBenchmark.jl",
+      "help_website": [
+        "https://juliasmoothoptimizers.github.io/SolverBenchmark.jl/stable/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "benchmarking",
+        "optimization",
+        "solver-comparison"
+      ],
+      "id": 26
+    },
+    {
+      "name": "MolPuzzle",
+      "one_line_profile": "Multimodal benchmark for molecular structure elucidation",
+      "detailed_description": "A benchmark dataset and evaluation framework designed to test Large Language Models (LLMs) on molecular structure elucidation tasks, combining visual and textual chemical data.",
+      "domains": [
+        "NUM1-08",
+        "CHE1"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "structure_elucidation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KehanGuo2/MolPuzzle",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "molecular-structure",
+        "benchmark",
+        "llm-evaluation"
+      ],
+      "id": 27
+    },
+    {
+      "name": "nvidia-hpc-benchmarks",
+      "one_line_profile": "Containerized scripts for NVIDIA HPC benchmarks",
+      "detailed_description": "A collection of scripts and configurations to run standard High Performance Computing (HPC) benchmarks on NVIDIA hardware, facilitating performance verification and system evaluation.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_evaluation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/KempnerInstitute/nvidia-hpc-benchmarks",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "hpc",
+        "benchmark",
+        "gpu"
+      ],
+      "id": 28
+    },
+    {
+      "name": "MASArena",
+      "one_line_profile": "Benchmarking framework for multi-agent systems",
+      "detailed_description": "A comprehensive framework for benchmarking single and multi-agent systems across various tasks, providing tools for performance evaluation, accuracy measurement, and efficiency analysis.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "agent_evaluation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LINs-lab/MASArena",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "multi-agent-systems",
+        "benchmark",
+        "reinforcement-learning"
+      ],
+      "id": 29
+    },
+    {
+      "name": "CCL",
+      "one_line_profile": "Core Cosmology Library with validated numerical accuracy",
+      "detailed_description": "The DESC Core Cosmology Library (CCL) provides routines for cosmological calculations with validated numerical accuracy, serving as a standard tool for cosmological data analysis and modeling.",
+      "domains": [
+        "NUM1-08",
+        "PHY1"
+      ],
+      "subtask_category": [
+        "numerical_modeling",
+        "validation"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/LSSTDESC/CCL",
+      "help_website": [
+        "https://ccl.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cosmology",
+        "numerical-accuracy",
+        "lsst"
+      ],
+      "id": 30
+    },
+    {
+      "name": "mis-benchmark-framework",
+      "one_line_profile": "Benchmarking suite for maximum independent set solvers",
+      "detailed_description": "A framework designed to benchmark and evaluate solvers for the Maximum Independent Set (MIS) problem, a fundamental graph theory problem relevant to scientific computing.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "solver_evaluation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MaxiBoether/mis-benchmark-framework",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "graph-theory",
+        "benchmark",
+        "maximum-independent-set"
+      ],
+      "id": 31
+    },
+    {
+      "name": "PaperArena",
+      "one_line_profile": "Benchmark for tool-augmented agentic reasoning on scientific literature",
+      "detailed_description": "An evaluation benchmark designed to assess the capabilities of tool-augmented AI agents in reasoning about and extracting information from scientific literature.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "scientific_reasoning"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Melmaphother/PaperArena",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "llm-benchmark",
+        "scientific-literature",
+        "agent-evaluation"
+      ],
+      "id": 32
+    },
+    {
+      "name": "auditor",
+      "one_line_profile": "Model verification, validation, and error analysis tool",
+      "detailed_description": "An R package for model auditing, providing tools for verification, validation, and error analysis of machine learning models, helping to ensure model reliability in scientific workflows.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "model_verification",
+        "error_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ModelOriented/auditor",
+      "help_website": [
+        "https://modeloriented.github.io/auditor/"
+      ],
+      "license": null,
+      "tags": [
+        "model-validation",
+        "error-analysis",
+        "xai"
+      ],
+      "id": 33
+    },
+    {
+      "name": "biomedsql",
+      "one_line_profile": "Text-to-SQL benchmark for biomedical scientific reasoning",
+      "detailed_description": "A benchmark dataset for evaluating Text-to-SQL models specifically on biomedical data, facilitating the development of natural language interfaces for scientific databases.",
+      "domains": [
+        "NUM1-08",
+        "BIO1"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "scientific_reasoning"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NIH-CARD/biomedsql",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "text-to-sql",
+        "biomedical",
+        "benchmark"
+      ],
+      "id": 34
+    },
+    {
+      "name": "hydrotools",
+      "one_line_profile": "Tools for retrieving and evaluating National Water Model data",
+      "detailed_description": "A suite of tools for retrieving USGS NWIS observations and evaluating the performance of the National Water Model (NWM), supporting hydrological data analysis and model verification.",
+      "domains": [
+        "NUM1-08",
+        "EAR1"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "data_retrieval"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NOAA-OWP/hydrotools",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "hydrology",
+        "model-evaluation",
+        "nwm"
+      ],
+      "id": 35
+    },
+    {
+      "name": "nvidia-hpcg",
+      "one_line_profile": "NVIDIA optimized HPCG benchmark",
+      "detailed_description": "An implementation of the High Performance Conjugate Gradients (HPCG) benchmark, optimized for NVIDIA GPUs to evaluate the performance of HPC systems.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_evaluation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/NVIDIA/nvidia-hpcg",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "hpc",
+        "benchmark",
+        "cuda"
+      ],
+      "id": 36
+    },
+    {
+      "name": "flowcept",
+      "one_line_profile": "Runtime provenance capture for AI and scientific workflows",
+      "detailed_description": "A tool for capturing, enriching, and querying runtime provenance data for AI and scientific workflows across edge, cloud, and HPC environments, aiding in reproducibility and analysis.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "provenance_tracking",
+        "workflow_monitoring"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ORNL/flowcept",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "provenance",
+        "scientific-workflow",
+        "hpc"
+      ],
+      "id": 37
+    },
+    {
+      "name": "ScienceBoard",
+      "one_line_profile": "Benchmark for multimodal autonomous agents in scientific workflows",
+      "detailed_description": "A benchmark and environment designed to evaluate the performance of multimodal autonomous agents in executing realistic scientific workflows.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "agent_evaluation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OS-Copilot/ScienceBoard",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "autonomous-agents",
+        "benchmark",
+        "scientific-workflow"
+      ],
+      "id": 38
+    },
+    {
+      "name": "OpenACCV-V",
+      "one_line_profile": "OpenACC Validation and Verification Testsuite",
+      "detailed_description": "A comprehensive testsuite for validating and verifying OpenACC implementations, ensuring correctness and compliance with the OpenACC standard in HPC environments.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "validation",
+        "verification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/OpenACCUserGroup/OpenACCV-V",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "openacc",
+        "validation",
+        "hpc"
+      ],
+      "id": 39
+    },
+    {
+      "name": "OlympiadBench",
+      "one_line_profile": "Benchmark for Olympiad-level scientific problems",
+      "detailed_description": "A challenging benchmark dataset for evaluating AI models on Olympiad-level bilingual multimodal scientific problems, promoting AGI research in science.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "scientific_reasoning"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenBMB/OlympiadBench",
+      "help_website": [
+        "https://olympiadbench.github.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "scientific-reasoning",
+        "multimodal"
+      ],
+      "id": 40
+    },
+    {
+      "name": "SciEval",
+      "one_line_profile": "Multi-level LLM evaluation benchmark for scientific research",
+      "detailed_description": "A benchmark designed to evaluate Large Language Models (LLMs) on various scientific research tasks, assessing their capability in scientific knowledge and reasoning.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "llm_evaluation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenDFM/SciEval",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "llm-evaluation",
+        "scientific-research",
+        "benchmark"
+      ],
+      "id": 41
+    },
+    {
+      "name": "OpenMP_VV",
+      "one_line_profile": "OpenMP Offloading Validation & Verification Suite",
+      "detailed_description": "A validation and verification suite for OpenMP offloading, used to test compiler implementations and ensure correctness of OpenMP directives on various architectures.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "validation",
+        "verification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "C",
+      "repo_url": "https://github.com/OpenMP-Validation-and-Verification/OpenMP_VV",
+      "help_website": [
+        "https://crpl.cs.udel.edu/openmp_vv/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "openmp",
+        "validation",
+        "hpc"
+      ],
+      "id": 42
+    },
+    {
+      "name": "OpenHPL",
+      "one_line_profile": "Open-source hydropower library in Modelica",
+      "detailed_description": "A Modelica library for modeling and simulating hydropower units and systems, enabling dynamic analysis and engineering simulation of hydroelectric power plants.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "scientific_modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Modelica",
+      "repo_url": "https://github.com/OpenSimHub/OpenHPL",
+      "help_website": [],
+      "license": "MPL-2.0",
+      "tags": [
+        "hydropower",
+        "modelica",
+        "simulation"
+      ],
+      "id": 43
+    },
+    {
+      "name": "FLiT",
+      "one_line_profile": "Floating-point discrepancy detection tool for numerical verification",
+      "detailed_description": "A framework to detect and analyze discrepancies in floating-point computations across different hardware, compilers, and libraries, aiding in the verification of numerical software.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "numerical_verification",
+        "error_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/PRUNERS/FLiT",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "floating-point",
+        "verification",
+        "numerical-analysis",
+        "debugging"
+      ],
+      "id": 44
+    },
+    {
+      "name": "presamples",
+      "one_line_profile": "Package for managing and verifying numerical arrays in LCA",
+      "detailed_description": "A Python package designed to write, load, manage, and verify numerical arrays (presamples) for Life Cycle Assessment (LCA) simulations, particularly useful for Monte Carlo simulations.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "sampling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PascalLesage/presamples",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "lca",
+        "numerical-arrays",
+        "monte-carlo",
+        "data-management"
+      ],
+      "id": 45
+    },
+    {
+      "name": "ik_benchmarking",
+      "one_line_profile": "Benchmarking utilities for Inverse Kinematics solvers",
+      "detailed_description": "A set of utilities designed to benchmark the performance and accuracy of Inverse Kinematics (IK) solvers within the MoveIt 2 robotics framework.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "robotics_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/PickNikRobotics/ik_benchmarking",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "inverse-kinematics",
+        "benchmarking",
+        "robotics",
+        "moveit"
+      ],
+      "id": 46
+    },
+    {
+      "name": "NeuroMHE",
+      "one_line_profile": "Neural Moving Horizon Estimation solver",
+      "detailed_description": "An auto-tuning and adaptive optimal estimator that fuses neural networks with Moving Horizon Estimation (MHE) for fast online adaptation to state-dependent noise in control systems.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "estimation",
+        "control_theory"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RCL-NUS/NeuroMHE",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "estimation",
+        "control",
+        "neural-networks",
+        "mhe"
+      ],
+      "id": 47
+    },
+    {
+      "name": "hpl-ai",
+      "one_line_profile": "HPL-AI benchmark implementation for Fugaku",
+      "detailed_description": "An implementation of the HPL-AI benchmark, which measures mixed-precision performance for AI workloads on high-performance computing systems like Fugaku.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "hpc"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/RIKEN-RCCS/hpl-ai",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "hpc",
+        "benchmark",
+        "mixed-precision",
+        "fugaku"
+      ],
+      "id": 48
+    },
+    {
+      "name": "rocHPCG",
+      "one_line_profile": "HPCG benchmark for ROCm platform",
+      "detailed_description": "The High Performance Conjugate Gradients (HPCG) benchmark implementation optimized for the AMD ROCm platform, used to measure HPC system performance.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "hpc"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ROCm/rocHPCG",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "hpc",
+        "benchmark",
+        "rocm",
+        "conjugate-gradient"
+      ],
+      "id": 49
+    },
+    {
+      "name": "rocHPL",
+      "one_line_profile": "High Performance Linpack for AMD ROCm",
+      "detailed_description": "The High Performance Linpack (HPL) benchmark implementation optimized for AMD HPC accelerators, used for ranking supercomputers (TOP500).",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "hpc"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ROCm/rocHPL",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "hpc",
+        "benchmark",
+        "linpack",
+        "rocm"
+      ],
+      "id": 50
+    },
+    {
+      "name": "mcu-solver-benchmarks",
+      "one_line_profile": "Benchmarks for solvers on microcontrollers",
+      "detailed_description": "A benchmarking suite for evaluating the performance of numerical solvers on microcontroller units (MCUs), developed as part of the TinyMPC project.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "embedded_systems"
+      ],
+      "application_level": "workflow",
+      "primary_language": "C",
+      "repo_url": "https://github.com/RoboticExplorationLab/mcu-solver-benchmarks",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "benchmark",
+        "microcontrollers",
+        "solvers",
+        "tinympc"
+      ],
+      "id": 51
+    },
+    {
+      "name": "Sudoku-Bench",
+      "one_line_profile": "Benchmark for AI problem solving capabilities",
+      "detailed_description": "An AI benchmark suite designed to evaluate creative and human-like problem-solving capabilities of models using Sudoku variants.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "reasoning_evaluation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/SakanaAI/Sudoku-Bench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "ai-reasoning",
+        "sudoku",
+        "problem-solving"
+      ],
+      "id": 52
+    },
+    {
+      "name": "DiffEqDevTools.jl",
+      "one_line_profile": "Benchmarking and testing tools for differential equations",
+      "detailed_description": "A Julia library providing benchmarking, testing, and development utilities for differential equation solvers and scientific machine learning (SciML) methods.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "numerical_verification"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DiffEqDevTools.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "differential-equations",
+        "benchmarking",
+        "sciml",
+        "julia"
+      ],
+      "id": 53
+    },
+    {
+      "name": "GlobalDiffEq.jl",
+      "one_line_profile": "Differential equation solvers with global error estimation",
+      "detailed_description": "A library for solving differential equations that includes mechanisms for global error estimation, enhancing the reliability of numerical solutions.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_estimation",
+        "numerical_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/GlobalDiffEq.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "error-estimation",
+        "differential-equations",
+        "numerical-methods",
+        "julia"
+      ],
+      "id": 54
+    },
+    {
+      "name": "SciMLBenchmarks.jl",
+      "one_line_profile": "Comprehensive benchmarks for Scientific Machine Learning",
+      "detailed_description": "A large-scale benchmarking suite for scientific machine learning (SciML) and differential equation solvers across multiple languages (Julia, Python, R, MATLAB).",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/SciML/SciMLBenchmarks.jl",
+      "help_website": [
+        "https://benchmarks.sciml.ai/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "sciml",
+        "benchmark",
+        "differential-equations",
+        "performance"
+      ],
+      "id": 55
+    },
+    {
+      "name": "ContactBench",
+      "one_line_profile": "Benchmark for robotics contact models and solvers",
+      "detailed_description": "A benchmarking tool for evaluating the accuracy and performance of contact models and solvers used in robotics simulators.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "robotics_simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Simple-Robotics/ContactBench",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "robotics",
+        "contact-models",
+        "benchmark",
+        "simulation"
+      ],
+      "id": 56
+    },
+    {
+      "name": "proxqp_benchmark",
+      "one_line_profile": "Benchmarks for ProxQP and other QP solvers",
+      "detailed_description": "A benchmarking suite comparing the ProxQP solver against other Quadratic Programming (QP) solvers like OSQP, GUROBI, and MOSEK.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "optimization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Simple-Robotics/proxqp_benchmark",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "optimization",
+        "qp-solver",
+        "benchmark",
+        "proxqp"
+      ],
+      "id": 57
+    },
+    {
+      "name": "ScenarioArchitect",
+      "one_line_profile": "GUI for creating autonomous driving test scenarios",
+      "detailed_description": "A graphical user interface tool for realizing and manipulating concrete driving testing scenarios, used for validating verification frameworks and training prediction algorithms.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "simulation_setup",
+        "scenario_generation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TUMFTM/ScenarioArchitect",
+      "help_website": [],
+      "license": "EPL-2.0",
+      "tags": [
+        "autonomous-driving",
+        "simulation",
+        "scenario-generation",
+        "testing"
+      ],
+      "id": 58
+    },
+    {
+      "name": "EasyVVUQ",
+      "one_line_profile": "Framework for verification, validation, and uncertainty quantification (VVUQ) of simulations",
+      "detailed_description": "A Python framework designed to facilitate verification, validation, and uncertainty quantification (VVUQ) for a wide variety of simulations. It helps in sampling, executing simulations, and analyzing results to assess uncertainty and validity.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "verification",
+        "validation"
+      ],
+      "application_level": "framework",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/UCL-CCS/EasyVVUQ",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "vvuq",
+        "simulation",
+        "uncertainty-quantification",
+        "verification"
+      ],
+      "id": 59
+    },
+    {
+      "name": "global_pose_estimation_for_optimal_shape",
+      "one_line_profile": "Global solver for optimizing target shape in LiDAR pose estimation",
+      "detailed_description": "A package that introduces a method to optimize target shape to remove pose ambiguity for LiDAR point clouds, achieving high accuracy in translation and rotation using a global solver.",
+      "domains": [
+        "Robotics",
+        "Optimization"
+      ],
+      "subtask_category": [
+        "pose_estimation",
+        "optimization",
+        "shape_optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/UMich-BipedLab/global_pose_estimation_for_optimal_shape",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "lidar",
+        "pose-estimation",
+        "optimization",
+        "matlab"
+      ],
+      "id": 60
+    },
+    {
+      "name": "UoB-HPC Benchmarks",
+      "one_line_profile": "Benchmark scripts for HPC systems",
+      "detailed_description": "A collection of scripts for running various benchmarks on Isambard and other High Performance Computing (HPC) systems, facilitating performance analysis and system verification.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_analysis"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/UoB-HPC/benchmarks",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "hpc",
+        "benchmark",
+        "performance"
+      ],
+      "id": 61
+    },
+    {
+      "name": "VerifiedLeapfrog",
+      "one_line_profile": "Formally verified numerical integration of ODEs",
+      "detailed_description": "A Coq implementation providing formally verified numerical integration of ordinary differential equations using the Leapfrog method, ensuring correctness of the numerical method.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "numerical_verification",
+        "formal_verification",
+        "integration"
+      ],
+      "application_level": "solver",
+      "primary_language": "Coq",
+      "repo_url": "https://github.com/VeriNum/VerifiedLeapfrog",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "formal-verification",
+        "ode",
+        "numerical-integration",
+        "coq"
+      ],
+      "id": 62
+    },
+    {
+      "name": "Metamaterial Band Gap Calculator",
+      "one_line_profile": "Bloch wave analysis for mechanical metamaterials",
+      "detailed_description": "An ABAQUS and Python implementation for calculating band gaps of nonlinear mechanical metamaterials via discretizing a representative volume element (RVE) and imposing complex-valued Bloch wave boundary conditions.",
+      "domains": [
+        "Materials Science",
+        "Mechanics"
+      ],
+      "subtask_category": [
+        "band_gap_calculation",
+        "simulation",
+        "bloch_wave_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/XJTU-Zhou-group/Calculating-band-gaps-of-nonlinear-mechanical-metamaterials",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "metamaterials",
+        "abaqus",
+        "band-gap",
+        "mechanics"
+      ],
+      "id": 63
+    },
+    {
+      "name": "SciTab",
+      "one_line_profile": "Benchmark for compositional reasoning on scientific tables",
+      "detailed_description": "A challenging benchmark dataset and task definition for compositional reasoning and claim verification on scientific tables, aiding in the development of AI models for scientific literature understanding.",
+      "domains": [
+        "AI for Science",
+        "NLP"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "claim_verification",
+        "reasoning"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/XinyuanLu00/SciTab",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "scientific-tables",
+        "nlp",
+        "reasoning"
+      ],
+      "id": 64
+    },
+    {
+      "name": "DE-PINN",
+      "one_line_profile": "Data-enabled physics-informed neural network for neutron diffusion",
+      "detailed_description": "A Data-Enabled Physics-Informed Neural Network (DEPINN) model designed to solve industrial-scale neutron diffusion eigenvalue problems (NDEPs) with high accuracy and efficiency using limited prior data.",
+      "domains": [
+        "Nuclear Physics",
+        "Scientific Machine Learning"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "neutron_diffusion",
+        "eigenvalue_problem"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/YangYuSCU/DE-PINN",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pinn",
+        "neutron-diffusion",
+        "physics-informed",
+        "deep-learning"
+      ],
+      "id": 65
+    },
+    {
+      "name": "Li-ion Battery SOC Estimator",
+      "one_line_profile": "Machine learning model for battery State-of-Charge estimation",
+      "detailed_description": "A machine learning based tool (using Random Forest) to estimate the State-of-Charge (SOC) of calendar-aged lithium-ion pouch cells, trained on experimental data under various conditions.",
+      "domains": [
+        "Energy Science",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "soc_estimation",
+        "data_analysis",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ali-ghorbani-k/SOC-estimation-of-lithium-ion-batteries",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "battery",
+        "soc-estimation",
+        "machine-learning",
+        "lithium-ion"
+      ],
+      "id": 66
+    },
+    {
+      "name": "FAIR-well-logs",
+      "one_line_profile": "Visualization toolbox for geophysical logging data",
+      "detailed_description": "A visualization toolbox for geophysical logging data, including well logs, lithology logs, core analysis, and CT-scan images, designed for data exploration and producing reproducible figures.",
+      "domains": [
+        "Geophysics",
+        "Earth Science"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_exploration",
+        "well_logging"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/anailil/FAIR-well-logs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "geophysics",
+        "visualization",
+        "well-logs",
+        "reproducibility"
+      ],
+      "id": 67
+    },
+    {
+      "name": "Radial_convergence_plot",
+      "one_line_profile": "Radial convergence plots for sensitivity analysis",
+      "detailed_description": "A script to produce radial convergence plots (or chord plots) specifically for visualizing Sobol sensitivity analysis results, aiding in the interpretation of sensitivity indices.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "visualization",
+        "sensitivity_analysis",
+        "uncertainty_quantification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/antonia-had/Radial_convergence_plot",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "visualization",
+        "sensitivity-analysis",
+        "sobol",
+        "plotting"
+      ],
+      "id": 68
+    },
+    {
+      "name": "Satire",
+      "one_line_profile": "Scalable rigorous floating-point error analysis",
+      "detailed_description": "A tool for scalable yet rigorous floating-point error analysis, helping to verify the numerical stability and accuracy of scientific computations.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_analysis",
+        "numerical_verification",
+        "floating_point_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/arnabd88/Satire",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "error-analysis",
+        "floating-point",
+        "verification",
+        "numerical-stability"
+      ],
+      "id": 69
+    },
+    {
+      "name": "File-Format-Testing",
+      "one_line_profile": "Benchmark suite for comparing scientific file formats (HDF5, netCDF4, Zarr)",
+      "detailed_description": "A configurable benchmark tool designed to compare the performance of common scientific file formats (HDF5, netCDF4, Zarr) across various I/O operations, providing automated visualization of results.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "io_performance"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/asriniket/File-Format-Testing",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "hdf5",
+        "netcdf4",
+        "zarr",
+        "benchmark",
+        "io"
+      ],
+      "id": 70
+    },
+    {
+      "name": "adaptrapezoid_benchmark",
+      "one_line_profile": "Benchmark for adaptive trapezoid integration across programming languages",
+      "detailed_description": "A benchmarking tool to evaluate the suitability and performance of various programming languages for scientific computing, specifically using the adaptive trapezoid numeric integration algorithm.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "numerical_integration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/astrojhgu/adaptrapezoid_benchmark",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "benchmark",
+        "numerical-integration",
+        "trapezoid-rule"
+      ],
+      "id": 71
+    },
+    {
+      "name": "OpenMxP",
+      "one_line_profile": "Open source implementation of the HPL-MXP mixed-precision benchmark",
+      "detailed_description": "The open-source version of the HPL-MXP (High Performance Linpack - Mixed Precision) benchmark, verified for performance on exascale systems like Frontier.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "hpc_performance"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/at-aaims/OpenMxP",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "hpl-mxp",
+        "hpc",
+        "benchmark",
+        "mixed-precision"
+      ],
+      "id": 72
+    },
+    {
+      "name": "hpl-cuda",
+      "one_line_profile": "CUDA port of the High Performance Linpack (HPL) benchmark",
+      "detailed_description": "A port of the standard HPL-2.0 benchmark suite designed to utilize NVIDIA GPU acceleration via CUBLAS for performance testing of GPU-accelerated HPC systems.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "hpc_performance"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/avidday/hpl-cuda",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "hpl",
+        "cuda",
+        "benchmark",
+        "hpc"
+      ],
+      "id": 73
+    },
+    {
+      "name": "OpenPose-for-2D-Gait-Analysis",
+      "one_line_profile": "Workflow for markerless 2D human gait analysis using OpenPose",
+      "detailed_description": "A computational workflow that utilizes OpenPose for markerless human gait analysis, estimating knee flexion landmarks and plotting clinical gait angles and points of contact.",
+      "domains": [
+        "BIO",
+        "MED"
+      ],
+      "subtask_category": [
+        "gait_analysis",
+        "biomechanics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/batking24/OpenPose-for-2D-Gait-Analysis",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gait-analysis",
+        "openpose",
+        "biomechanics"
+      ],
+      "id": 74
+    },
+    {
+      "name": "benchmark_bilevel",
+      "one_line_profile": "Benchmark suite for bi-level optimization solvers",
+      "detailed_description": "A benchmarking framework designed to evaluate and compare the performance of various solvers for bi-level optimization problems.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "optimization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/benchopt/benchmark_bilevel",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bilevel-optimization",
+        "benchmark",
+        "solvers"
+      ],
+      "id": 75
+    },
+    {
+      "name": "forestError",
+      "one_line_profile": "Unified framework for Random Forest prediction error estimation",
+      "detailed_description": "An R package providing a unified framework for estimating the prediction error of Random Forest models, useful for statistical validation of machine learning models in scientific research.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_estimation",
+        "statistical_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/benjilu/forestError",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "random-forest",
+        "error-estimation",
+        "statistics"
+      ],
+      "id": 76
+    },
+    {
+      "name": "LAP-solvers",
+      "one_line_profile": "Benchmark suite for Linear Assignment Problem (LAP) solvers",
+      "detailed_description": "A collection of benchmarks for evaluating the performance of various algorithms and solvers for the Linear Assignment Problem.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "optimization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/berhane/LAP-solvers",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "linear-assignment-problem",
+        "benchmark",
+        "optimization"
+      ],
+      "id": 77
+    },
+    {
+      "name": "CiteME",
+      "one_line_profile": "Benchmark for evaluating LLMs on scientific citation retrieval",
+      "detailed_description": "A benchmark designed to test the capabilities of language models in identifying and retrieving papers cited within scientific texts, aiding in the evaluation of AI for Science tools.",
+      "domains": [
+        "AI4S",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "citation_analysis"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bethgelab/CiteME",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "llm",
+        "benchmark",
+        "scientific-citation"
+      ],
+      "id": 78
+    },
+    {
+      "name": "Herbie",
+      "one_line_profile": "Tool for downloading numerical weather prediction datasets",
+      "detailed_description": "A python tool to download and manage numerical weather prediction (NWP) datasets like HRRR, RAP, GFS, and IFS from various sources including NOMADS and cloud archives.",
+      "domains": [
+        "ATMOS",
+        "GEO"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "weather_forecasting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/blaylockbk/Herbie",
+      "help_website": [
+        "https://herbie.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "weather-data",
+        "nwp",
+        "meteorology"
+      ],
+      "id": 79
+    },
+    {
+      "name": "ConvolutionalNeuralOperator",
+      "one_line_profile": "Implementation of Convolutional Neural Operators for PDE solving",
+      "detailed_description": "Official implementation of Convolutional Neural Operators (CNO), a deep learning framework for robust and accurate learning of Partial Differential Equations (PDEs).",
+      "domains": [
+        "NUM1",
+        "AI4S"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "neural_operators"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/camlab-ethz/ConvolutionalNeuralOperator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pde",
+        "neural-operator",
+        "deep-learning"
+      ],
+      "id": 80
+    },
+    {
+      "name": "BinningAnalysis.jl",
+      "one_line_profile": "Statistical standard error estimation for correlated data in Julia",
+      "detailed_description": "A Julia package providing tools for statistical standard error estimation on correlated data, commonly used in Monte Carlo simulations and other stochastic scientific methods.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_estimation",
+        "statistical_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/carstenbauer/BinningAnalysis.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "statistics",
+        "error-analysis",
+        "monte-carlo"
+      ],
+      "id": 81
+    },
+    {
+      "name": "reframed",
+      "one_line_profile": "Python package for metabolic modeling and constraint-based analysis",
+      "detailed_description": "A Python library for metabolic modeling, offering tools for constraint-based reconstruction and analysis (COBRA) of metabolic networks.",
+      "domains": [
+        "BIO"
+      ],
+      "subtask_category": [
+        "metabolic_modeling",
+        "systems_biology"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cdanielmachado/reframed",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "metabolic-modeling",
+        "cobra",
+        "systems-biology"
+      ],
+      "id": 82
+    },
+    {
+      "name": "chebyshev",
+      "one_line_profile": "C++ testing framework designed for scientific software",
+      "detailed_description": "A testing framework specifically designed for the needs of scientific software development, facilitating verification and validation of numerical codes.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "software_testing",
+        "verification"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/chaotic-society/chebyshev",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "testing",
+        "scientific-software",
+        "cpp"
+      ],
+      "id": 83
+    },
+    {
+      "name": "pdf-text-extraction-benchmark",
+      "one_line_profile": "Benchmark for PDF text extraction tools on scientific articles",
+      "detailed_description": "A benchmarking suite to evaluate the performance of various PDF text extraction tools specifically on scientific articles, assessing their ability to recover semantic body text.",
+      "domains": [
+        "NUM1-08",
+        "INFO"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "text_mining"
+      ],
+      "application_level": "workflow",
+      "primary_language": "TeX",
+      "repo_url": "https://github.com/ckorzen/pdf-text-extraction-benchmark",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pdf-extraction",
+        "benchmark",
+        "scientific-literature"
+      ],
+      "id": 84
+    },
+    {
+      "name": "Quantum-PDE-Benchmark",
+      "one_line_profile": "Benchmark for near-term quantum algorithms solving PDEs",
+      "detailed_description": "A benchmarking suite for evaluating the performance of near-term quantum algorithms applied to solving Partial Differential Equations (PDEs).",
+      "domains": [
+        "NUM1",
+        "NUM1-08",
+        "PHYS"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "quantum_computing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/comp-physics/Quantum-PDE-Benchmark",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "quantum-algorithms",
+        "pde",
+        "benchmark"
+      ],
+      "id": 85
+    },
+    {
+      "name": "craft",
+      "one_line_profile": "Configurable Runtime Analysis for Floating-point Tuning",
+      "detailed_description": "A tool for performing configurable runtime analysis on floating-point arithmetic in software, aiding in precision tuning and numerical stability verification.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_analysis",
+        "floating_point_analysis"
+      ],
+      "application_level": "tool",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/crafthpc/craft",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "floating-point",
+        "runtime-analysis",
+        "hpc"
+      ],
+      "id": 86
+    },
+    {
+      "name": "shval",
+      "one_line_profile": "Shadow value analysis framework for floating-point code",
+      "detailed_description": "A Pintool-based framework for shadow value analysis, used to detect and analyze floating-point errors and instability in numerical code.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_analysis",
+        "verification"
+      ],
+      "application_level": "tool",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/crafthpc/shval",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "floating-point",
+        "shadow-value",
+        "pintool"
+      ],
+      "id": 87
+    },
+    {
+      "name": "hplc-py",
+      "one_line_profile": "Python utility for HPLC data processing and quantification",
+      "detailed_description": "A Python tool designed for the processing, analysis, and quantification of data from High-Performance Liquid Chromatography (HPLC) experiments.",
+      "domains": [
+        "CHEM",
+        "BIO"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "chromatography"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cremerlab/hplc-py",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "hplc",
+        "chromatography",
+        "data-analysis"
+      ],
+      "id": 88
+    },
+    {
+      "name": "caldgemm",
+      "one_line_profile": "Portable DGEMM library for GPUs with HPL optimization",
+      "detailed_description": "A flexible DGEMM (Double-Precision General Matrix Multiplication) library for GPUs (OpenCL, CUDA, CAL) specifically optimized to support High Performance Linpack (HPL) benchmarks.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "numerical_linear_algebra",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/davidrohr/caldgemm",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "dgemm",
+        "gpu",
+        "hpl",
+        "linear-algebra"
+      ],
+      "id": 89
+    },
+    {
+      "name": "hpl-gpu",
+      "one_line_profile": "High Performance Linpack (HPL) implementation for GPUs",
+      "detailed_description": "An implementation of the High Performance Linpack (HPL) benchmark designed for GPU clusters, supporting OpenCL, CUDA, and CAL backends.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "hpc_performance"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/davidrohr/hpl-gpu",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "hpl",
+        "gpu",
+        "benchmark",
+        "hpc"
+      ],
+      "id": 90
+    },
+    {
+      "name": "LLM-SRBench",
+      "one_line_profile": "Benchmark for scientific equation discovery using Large Language Models",
+      "detailed_description": "A benchmark suite designed to evaluate the performance of Large Language Models in the task of scientific equation discovery (symbolic regression), assessing their ability to recover physical laws and mathematical relationships.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "symbolic_regression"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deep-symbolic-mathematics/llm-srbench",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "benchmark",
+        "symbolic-regression",
+        "llm",
+        "scientific-discovery"
+      ],
+      "id": 91
+    },
+    {
+      "name": "SciAssess",
+      "one_line_profile": "Benchmark for evaluating LLMs on scientific literature analysis",
+      "detailed_description": "A comprehensive benchmark suite for assessing Large Language Models' proficiency in analyzing scientific literature across various fields, focusing on memorization, comprehension, and analysis capabilities.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "literature_analysis"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepmodeling/SciAssess",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "benchmark",
+        "llm",
+        "scientific-literature",
+        "evaluation"
+      ],
+      "id": 92
+    },
+    {
+      "name": "CalibrationErrors.jl",
+      "one_line_profile": "Library for estimation of calibration errors in probabilistic models",
+      "detailed_description": "A Julia library providing methods for estimating calibration errors, which is essential for verifying the reliability of probabilistic predictions in scientific modeling and machine learning.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_analysis",
+        "calibration"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/devmotion/CalibrationErrors.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "calibration",
+        "error-estimation",
+        "uncertainty-quantification",
+        "julia"
+      ],
+      "id": 93
+    },
+    {
+      "name": "AL4PDE",
+      "one_line_profile": "Benchmark for Active Learning in Neural PDE Solvers",
+      "detailed_description": "A benchmark suite designed to evaluate active learning strategies for Neural PDE solvers, facilitating the comparison of different learning algorithms in the context of physical simulations.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "pde_solver"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dmusekamp/al4pde",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "benchmark",
+        "pde",
+        "active-learning",
+        "neural-solver"
+      ],
+      "id": 94
+    },
+    {
+      "name": "ecpoint-calibrate",
+      "one_line_profile": "Calibration and verification tool for numerical weather prediction models",
+      "detailed_description": "An interactive GUI tool developed by ECMWF for the calibration and conditional verification of numerical weather prediction model outputs, aiding in the improvement of forecast accuracy.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "calibration",
+        "verification"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/ecmwf/ecpoint-calibrate",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "weather-prediction",
+        "calibration",
+        "verification",
+        "ecmwf"
+      ],
+      "id": 95
+    },
+    {
+      "name": "verrou",
+      "one_line_profile": "Floating-point error checker and debugger",
+      "detailed_description": "A tool to assess the stability of floating-point computations by introducing random perturbations, helping to identify and debug numerical inaccuracies in scientific software.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_analysis",
+        "debugging"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/edf-hpc/verrou",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "floating-point",
+        "error-analysis",
+        "hpc",
+        "debugging"
+      ],
+      "id": 96
+    },
+    {
+      "name": "PARTNR-Planner",
+      "one_line_profile": "Benchmark for Large Planning Models in Human-Robot Collaboration",
+      "detailed_description": "A benchmark suite for evaluating Large Planning Models (LPMs) on Human-Robot Collaboration and Robot Instruction Following tasks within the Habitat simulator.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "robotics_planning"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/facebookresearch/partnr-planner",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "robotics",
+        "planning",
+        "habitat-sim"
+      ],
+      "id": 97
+    },
+    {
+      "name": "PINNs_Benchmark",
+      "one_line_profile": "Benchmark suite for Physics-Informed Neural Networks",
+      "detailed_description": "A benchmarking tool designed to evaluate the performance of Physics-Informed Neural Networks (PINNs) across various hardware architectures, specifically focusing on solving wave equations.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "pinn"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/farscape-project/PINNs_Benchmark",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "pinn",
+        "physics-informed",
+        "hpc"
+      ],
+      "id": 98
+    },
+    {
+      "name": "FpDebug",
+      "one_line_profile": "Dynamic analysis tool for floating-point accuracy problems",
+      "detailed_description": "A dynamic program analysis tool based on Valgrind designed to detect and diagnose floating-point accuracy issues in numerical software.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_analysis",
+        "debugging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/fbenz/FpDebug",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "floating-point",
+        "valgrind",
+        "debugging",
+        "numerical-analysis"
+      ],
+      "id": 99
+    },
+    {
+      "name": "amplify-benchmark",
+      "one_line_profile": "Benchmark framework for quantum annealing and Ising machines",
+      "detailed_description": "A framework for benchmarking quantum annealing machines, Ising machines, and mathematical optimization solvers, facilitating performance comparison of next-generation computing hardware.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "quantum_annealing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fixstars/amplify-benchmark",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "quantum-computing",
+        "ising-machine",
+        "optimization"
+      ],
+      "id": 100
+    },
+    {
+      "name": "HPL (Heterogeneous Programming Library)",
+      "one_line_profile": "Library for heterogeneous computing on accelerators",
+      "detailed_description": "A C++ library that facilitates the use of hardware accelerators (via OpenCL) for high-performance computing, providing a programming model for heterogeneous scientific applications.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "hpc_programming",
+        "acceleration"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/fraguela/hpl",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "hpc",
+        "opencl",
+        "heterogeneous-computing",
+        "accelerator"
+      ],
+      "id": 101
+    },
+    {
+      "name": "Top500 Benchmark Automation",
+      "one_line_profile": "Automated playbook for running the High Performance Linpack (HPL) benchmark on clusters",
+      "detailed_description": "A set of Ansible roles and scripts designed to automate the deployment and execution of the HPL (Top500) benchmark on single nodes or clusters, facilitating HPC performance verification.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_verification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jinja",
+      "repo_url": "https://github.com/geerlingguy/top500-benchmark",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "hpc",
+        "linpack",
+        "benchmark",
+        "ansible"
+      ],
+      "id": 102
+    },
+    {
+      "name": "sperrorest",
+      "one_line_profile": "Spatial error estimation and variable importance for prediction models",
+      "detailed_description": "An R package implementing spatial cross-validation and spatial block bootstrap strategies to estimate prediction error and variable importance in spatial modeling, addressing spatial autocorrelation issues.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_estimation",
+        "validation",
+        "spatial_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/giscience-fsu/sperrorest",
+      "help_website": [
+        "https://giscience-fsu.github.io/sperrorest/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "spatial-statistics",
+        "cross-validation",
+        "error-analysis"
+      ],
+      "id": 103
+    },
+    {
+      "name": "Continuous Analysis",
+      "one_line_profile": "Framework for reproducible scientific analysis using Continuous Integration",
+      "detailed_description": "A configuration and workflow system that leverages Continuous Integration (CI) services to automatically re-run scientific analyses, ensuring computational reproducibility and verifiable results.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "reproducibility",
+        "workflow_automation",
+        "verification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/greenelab/continuous_analysis",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "reproducibility",
+        "ci-cd",
+        "scientific-workflow"
+      ],
+      "id": 104
+    },
+    {
+      "name": "DLIO Benchmark",
+      "one_line_profile": "I/O benchmark suite for scientific deep learning workloads",
+      "detailed_description": "A benchmark suite designed to represent the I/O patterns of modern scientific deep learning applications, used for profiling and optimizing storage performance in HPC environments.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "io_profiling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hariharan-devarajan/dlio_benchmark",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "hpc",
+        "deep-learning",
+        "io-benchmark"
+      ],
+      "id": 105
+    },
+    {
+      "name": "Herbie",
+      "one_line_profile": "Tool for automatically improving the accuracy of floating-point expressions",
+      "detailed_description": "A tool that automatically rewrites floating-point mathematical expressions to minimize rounding errors and improve numerical accuracy, essential for reliable scientific computing.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_correction",
+        "numerical_optimization",
+        "verification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Racket",
+      "repo_url": "https://github.com/herbie-fp/herbie",
+      "help_website": [
+        "https://herbie.uwplse.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "floating-point",
+        "numerical-analysis",
+        "compiler"
+      ],
+      "id": 106
+    },
+    {
+      "name": "JEEBench",
+      "one_line_profile": "Benchmark suite for evaluating LLMs on hard scientific problems",
+      "detailed_description": "A dataset and evaluation framework containing challenging Physics, Chemistry, and Mathematics problems from the JEE exam, used to benchmark the scientific problem-solving capabilities of Large Language Models.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "model_evaluation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hgaurav2k/JEEBench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm-evaluation",
+        "scientific-qa",
+        "benchmark"
+      ],
+      "id": 107
+    },
+    {
+      "name": "h5bench",
+      "one_line_profile": "HDF5 I/O performance benchmark suite",
+      "detailed_description": "A suite of benchmarks specifically designed to measure HDF5 I/O performance under various patterns typical of scientific applications.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "io_performance"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/hpc-io/h5bench",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "hdf5",
+        "hpc",
+        "benchmark"
+      ],
+      "id": 108
+    },
+    {
+      "name": "Pavilion",
+      "one_line_profile": "HPC testing and benchmarking framework",
+      "detailed_description": "A Python-based framework for defining, running, and analyzing tests and benchmarks on High Performance Computing (HPC) systems, supporting regression testing and system verification.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "testing_framework",
+        "benchmarking",
+        "system_verification"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hpc/pavilion2",
+      "help_website": [
+        "https://pavilion.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "hpc",
+        "testing",
+        "automation"
+      ],
+      "id": 109
+    },
+    {
+      "name": "HPCG",
+      "one_line_profile": "High Performance Conjugate Gradients Benchmark",
+      "detailed_description": "The official source code for the HPCG benchmark, which complements the HPL benchmark by measuring performance on sparse matrix calculations and memory access patterns common in scientific applications.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_evaluation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/hpcg-benchmark/hpcg",
+      "help_website": [
+        "https://www.hpcg-benchmark.org/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "hpc",
+        "sparse-matrix",
+        "benchmark"
+      ],
+      "id": 110
+    },
+    {
+      "name": "FPChecker",
+      "one_line_profile": "Dynamic analysis tool for detecting floating-point errors in HPC applications",
+      "detailed_description": "FPChecker is a dynamic analysis tool developed by LLNL to detect floating-point errors in High-Performance Computing (HPC) applications. It instruments code to monitor floating-point operations at runtime, identifying issues such as underflow, overflow, and loss of precision, which are critical for the numerical verification of scientific simulations.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "numerical_verification",
+        "error_detection",
+        "debugging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/llnl/FPChecker",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "hpc",
+        "floating-point",
+        "dynamic-analysis",
+        "verification"
+      ],
+      "id": 111
+    },
+    {
+      "name": "MASA",
+      "one_line_profile": "Library for Method of Manufactured Solutions (MMS) verification",
+      "detailed_description": "MASA (Manufactured Analytical Solution Abstraction) is a library designed to facilitate the verification of numerical solvers using the Method of Manufactured Solutions. It provides a repository of manufactured solutions for various physics equations, allowing developers to verify the order of accuracy and correctness of their PDE solvers.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "numerical_verification",
+        "manufactured_solutions",
+        "solver_testing"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/manufactured-solutions/MASA",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "verification",
+        "pde",
+        "manufactured-solutions",
+        "numerical-methods"
+      ],
+      "id": 112
+    },
+    {
+      "name": "rust-herbie-lint",
+      "one_line_profile": "Rust compiler plugin for checking numerical instability",
+      "detailed_description": "A Rust compiler plugin that integrates with Herbie to automatically check for numerical instability in floating-point expressions during compilation. It serves as a static analysis tool specifically for numerical verification, helping developers identify unstable mathematical operations in scientific code.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "numerical_stability_analysis",
+        "code_verification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/mcarton/rust-herbie-lint",
+      "help_website": [],
+      "license": "MPL-2.0",
+      "tags": [
+        "rust",
+        "numerical-stability",
+        "herbie",
+        "static-analysis"
+      ],
+      "id": 113
+    },
+    {
+      "name": "mcalib",
+      "one_line_profile": "Automated rounding error analysis tool for floating-point software using Monte Carlo methods",
+      "detailed_description": "The Monte Carlo Arithmetic Library (MCALIB) is a tool designed to perform automated rounding error analysis on floating-point software. It utilizes Monte Carlo simulation techniques to estimate the precision and stability of numerical computations, aiding in the verification of numerical software.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_analysis",
+        "numerical_verification"
+      ],
+      "application_level": "library",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/mfrechtling/mcalib",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "floating-point",
+        "error-analysis",
+        "monte-carlo",
+        "numerical-verification"
+      ],
+      "id": 114
+    },
+    {
+      "name": "HerbiePlugin",
+      "one_line_profile": "GHC plugin for improving numerical stability of Haskell code via Herbie",
+      "detailed_description": "A Glasgow Haskell Compiler (GHC) plugin that integrates with Herbie to automatically rewrite Haskell floating-point expressions for improved numerical stability. It helps developers detect and fix floating-point inaccuracies during compilation.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "numerical_stability",
+        "error_correction"
+      ],
+      "application_level": "plugin",
+      "primary_language": "Haskell",
+      "repo_url": "https://github.com/mikeizbicki/HerbiePlugin",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "haskell",
+        "floating-point",
+        "numerical-stability",
+        "compiler-plugin"
+      ],
+      "id": 115
+    },
+    {
+      "name": "mlbench-old",
+      "one_line_profile": "Distributed machine learning benchmark suite (Deprecated)",
+      "detailed_description": "A public benchmark suite designed to evaluate the performance of distributed machine learning solvers and frameworks. Although deprecated, it represents a tool for benchmarking ML systems which are critical for AI4S infrastructure.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_evaluation"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/mlbench/mlbench-old",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "distributed-ml",
+        "machine-learning"
+      ],
+      "id": 116
+    },
+    {
+      "name": "kv",
+      "one_line_profile": "C++ library for verified numerical computation using interval arithmetic",
+      "detailed_description": "A C++ library dedicated to verified numerical computations. It implements interval arithmetic and other methods to ensure the accuracy and reliability of numerical results, suitable for rigorous scientific computing tasks.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "numerical_verification",
+        "interval_arithmetic"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mskashi/kv",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "verified-computing",
+        "interval-arithmetic",
+        "numerical-analysis",
+        "cpp"
+      ],
+      "id": 117
+    },
+    {
+      "name": "scirex",
+      "one_line_profile": "Benchmark dataset for document-level scientific information extraction",
+      "detailed_description": "A benchmark designed to evaluate AI models on scientific reasoning and information extraction tasks. It focuses on extracting relationships between datasets, methods, and metrics from full-text scientific documents.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "scientific_reasoning"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/n0w0f/scirex",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "information-extraction",
+        "scientific-reasoning",
+        "nlp"
+      ],
+      "id": 118
+    },
+    {
+      "name": "PRECiSA",
+      "one_line_profile": "Static analysis tool for certifying round-off errors in floating-point programs",
+      "detailed_description": "Program Round-off Error Certifier via Static Analysis (PRECiSA) is a tool developed by NASA to automatically generate certificates of round-off error bounds for floating-point programs. It uses static analysis to ensure numerical safety in critical software.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_analysis",
+        "static_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Haskell",
+      "repo_url": "https://github.com/nasa/PRECiSA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "static-analysis",
+        "round-off-error",
+        "floating-point",
+        "verification"
+      ],
+      "id": 119
+    },
+    {
+      "name": "orcapod",
+      "one_line_profile": "Framework for traceable and reproducible scientific computation",
+      "detailed_description": "A Rust-based framework designed to facilitate fully traceable and reproducible scientific computations. It manages data lineage and computation steps to ensure that scientific results can be reliably reproduced and verified.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "reproducibility",
+        "workflow_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/nauticalab/orcapod",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reproducibility",
+        "scientific-computation",
+        "provenance"
+      ],
+      "id": 120
+    },
+    {
+      "name": "RERconverge",
+      "one_line_profile": "R package for analyzing evolutionary convergence in genomic data",
+      "detailed_description": "A tool for performing analysis of convergence between organismal traits and DNA/protein sequences. It uses relative evolutionary rate (RER) methods to identify associations between genetic evolution and phenotypic traits across phylogenies.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "evolutionary_analysis",
+        "genomics"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/nclark-lab/RERconverge",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bioinformatics",
+        "evolution",
+        "genomics",
+        "r-package"
+      ],
+      "id": 121
+    },
+    {
+      "name": "reskit",
+      "one_line_profile": "Library for creating reproducible scientific machine learning pipelines",
+      "detailed_description": "A Python library designed to help researchers create, curate, and execute reproducible pipelines for scientific and industrial machine learning. It focuses on managing experiments and ensuring consistency in ML workflows.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "reproducibility"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/neuro-ml/reskit",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "machine-learning",
+        "pipeline",
+        "reproducibility",
+        "scientific-ml"
+      ],
+      "id": 122
+    },
+    {
+      "name": "OptiHPLCHandler",
+      "one_line_profile": "Python SDK for interacting with Waters Empower HPLC Web API",
+      "detailed_description": "A simplified Python SDK for interacting with the Waters Empower Web API, facilitating the automation of High-Performance Liquid Chromatography (HPLC) data handling and instrument control in laboratory settings.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "lab_automation",
+        "data_acquisition"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/novonordisk-research/OptiHPLCHandler",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "hplc",
+        "lab-automation",
+        "chemistry",
+        "api-client"
+      ],
+      "id": 123
+    },
+    {
+      "name": "nrpypn",
+      "one_line_profile": "Validated Post-Newtonian expressions generator for Numerical Relativity",
+      "detailed_description": "NRPyPN provides validated Post-Newtonian (PN) expressions for use in Numerical Relativity simulations. It serves as a code generation tool to produce accurate physical models for gravitational wave simulations.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "code_generation",
+        "numerical_relativity"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nrpy/nrpypn",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "numerical-relativity",
+        "physics",
+        "code-generation",
+        "post-newtonian"
+      ],
+      "id": 124
+    },
+    {
+      "name": "viral_eval",
+      "one_line_profile": "Evaluation scripts for NTU VIRAL robotics dataset",
+      "detailed_description": "A set of Matlab scripts designed to calculate position estimation errors for the NTU VIRAL dataset. It serves as a benchmarking utility for evaluating Simultaneous Localization and Mapping (SLAM) algorithms.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_analysis",
+        "trajectory_evaluation"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/ntu-aris/viral_eval",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "slam",
+        "robotics",
+        "evaluation",
+        "benchmark"
+      ],
+      "id": 125
+    },
+    {
+      "name": "srsd-benchmark",
+      "one_line_profile": "Benchmark suite for Symbolic Regression in scientific discovery",
+      "detailed_description": "A benchmark suite aimed at rethinking and evaluating Symbolic Regression datasets and methods for scientific discovery. It provides a standardized set of problems to test the ability of algorithms to discover physical laws from data.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "symbolic_regression"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/omron-sinicx/srsd-benchmark",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "symbolic-regression",
+        "scientific-discovery",
+        "benchmark"
+      ],
+      "id": 126
+    },
+    {
+      "name": "ATLAS",
+      "one_line_profile": "Benchmark for frontier scientific reasoning",
+      "detailed_description": "ATLAS is a high-difficulty, multidisciplinary benchmark designed to evaluate the scientific reasoning capabilities of AI models. It covers various scientific domains to test frontier intelligence in scientific contexts.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "scientific_reasoning"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/open-compass/ATLAS",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "benchmark",
+        "scientific-reasoning",
+        "ai4s"
+      ],
+      "id": 127
+    },
+    {
+      "name": "solver-benchmark",
+      "one_line_profile": "Benchmark for (MI)LP solvers on energy modeling problems",
+      "detailed_description": "A benchmarking tool designed to evaluate the performance of Mixed-Integer Linear Programming (MILP) and Linear Programming (LP) solvers specifically on energy system modeling problems.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "optimization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/open-energy-transition/solver-benchmark",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "benchmark",
+        "optimization",
+        "energy-modeling",
+        "milp"
+      ],
+      "id": 128
+    },
+    {
+      "name": "op-benchmark-recipes",
+      "one_line_profile": "Performance benchmark recipes for Power-based HPC systems",
+      "detailed_description": "A collection of recipes and scripts for running performance benchmarks on Power-architecture based systems. It facilitates the evaluation of High-Performance Computing (HPC) hardware relevant to scientific computing.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "hpc_performance"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/open-power/op-benchmark-recipes",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "hpc",
+        "benchmark",
+        "power-architecture",
+        "performance"
+      ],
+      "id": 129
+    },
+    {
+      "name": "opencpu",
+      "one_line_profile": "System for embedded scientific computation and reproducible research via R",
+      "detailed_description": "OpenCPU is a system that exposes R functions as a REST API, enabling embedded scientific computation and reproducible research. It allows researchers to publish and integrate R-based statistical methods into web applications and pipelines.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "scientific_computing",
+        "reproducibility"
+      ],
+      "application_level": "platform",
+      "primary_language": "R",
+      "repo_url": "https://github.com/opencpu/opencpu",
+      "help_website": [
+        "https://www.opencpu.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "r",
+        "scientific-computing",
+        "reproducibility",
+        "api"
+      ],
+      "id": 130
+    },
+    {
+      "name": "AlgoTune",
+      "one_line_profile": "Benchmark suite for evaluating code generation on math, physics, and CS problems",
+      "detailed_description": "A NeurIPS 2025 benchmark dataset and evaluation framework comprising 154 problems in mathematics, physics, and computer science, designed to test the capability of models to generate code that solves scientific problems faster than existing implementations.",
+      "domains": [
+        "AI4S",
+        "Scientific_Computing"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "code_generation",
+        "scientific_reasoning"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/oripress/AlgoTune",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "code-optimization",
+        "physics",
+        "math"
+      ],
+      "id": 131
+    },
+    {
+      "name": "OSQP Benchmarks",
+      "one_line_profile": "Benchmarking suite for the OSQP solver against other quadratic programming solvers",
+      "detailed_description": "A collection of benchmarks comparing the OSQP (Operator Splitting Quadratic Program) solver against other leading solvers like GUROBI, MOSEK, ECOS, and qpOASES. It provides scripts and data to evaluate solver performance on standard optimization problems.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_evaluation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/osqp/osqp_benchmarks",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "optimization",
+        "quadratic-programming",
+        "benchmark",
+        "solver-comparison"
+      ],
+      "id": 132
+    },
+    {
+      "name": "PDEBench",
+      "one_line_profile": "Extensive benchmark suite for Scientific Machine Learning based on PDEs",
+      "detailed_description": "A comprehensive benchmark suite for evaluating machine learning methods on partial differential equations (PDEs). It includes diverse PDE problems, data generation scripts, and baseline models to standardize the assessment of SciML approaches.",
+      "domains": [
+        "NUM1",
+        "NUM1-08",
+        "AI4S"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "data_generation",
+        "model_evaluation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pdebench/PDEBench",
+      "help_website": [
+        "https://arxiv.org/abs/2210.07182"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "pde",
+        "sciml",
+        "benchmark",
+        "scientific-machine-learning"
+      ],
+      "id": 133
+    },
+    {
+      "name": "AeroBenchVV",
+      "one_line_profile": "Verification and validation benchmark for autonomous F-16 maneuvers",
+      "detailed_description": "A simulation and analysis toolkit designed as a Verification & Validation (V&V) benchmark for autonomous systems, specifically focusing on F-16 aircraft maneuvers. It supports the evaluation of control strategies and reachability analysis.",
+      "domains": [
+        "NUM1",
+        "NUM1-08",
+        "Control_Systems"
+      ],
+      "subtask_category": [
+        "verification",
+        "validation",
+        "simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/pheidlauf/AeroBenchVV",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "verification",
+        "validation",
+        "aerospace",
+        "autonomous-systems"
+      ],
+      "id": 134
+    },
+    {
+      "name": "Poetiq ARC-AGI Solver",
+      "one_line_profile": "Solver implementation for the ARC-AGI benchmark",
+      "detailed_description": "A repository reproducing a high-performing submission to the ARC-AGI (Abstraction and Reasoning Corpus) benchmark. It serves as a tool for researching artificial general intelligence and abstract reasoning capabilities in AI models.",
+      "domains": [
+        "AI4S",
+        "AI_Research"
+      ],
+      "subtask_category": [
+        "reasoning",
+        "problem_solving",
+        "benchmarking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/poetiq-ai/poetiq-arc-agi-solver",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "arc-agi",
+        "reasoning",
+        "artificial-intelligence"
+      ],
+      "id": 135
+    },
+    {
+      "name": "LitSearch",
+      "one_line_profile": "Retrieval benchmark for scientific literature search",
+      "detailed_description": "A benchmark suite designed to evaluate information retrieval systems on scientific literature. It supports the development of tools for automated literature review and scientific knowledge discovery.",
+      "domains": [
+        "AI4S",
+        "NLP"
+      ],
+      "subtask_category": [
+        "information_retrieval",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/princeton-nlp/LitSearch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nlp",
+        "scientific-literature",
+        "retrieval",
+        "benchmark"
+      ],
+      "id": 136
+    },
+    {
+      "name": "PhysGym",
+      "one_line_profile": "Benchmark suite for LLM-based interactive scientific reasoning",
+      "detailed_description": "A benchmark designed to evaluate the physical reasoning capabilities of Large Language Models (LLMs) through interactive environments. It tests the model's ability to understand and manipulate physical concepts.",
+      "domains": [
+        "AI4S",
+        "Physics"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "scientific_reasoning",
+        "simulation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/principia-ai/PhysGym",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "physics",
+        "llm",
+        "reasoning",
+        "benchmark"
+      ],
+      "id": 137
+    },
+    {
+      "name": "MPC QP Benchmark",
+      "one_line_profile": "Model Predictive Control test set for benchmarking QP solvers",
+      "detailed_description": "A specific benchmark suite focusing on Model Predictive Control (MPC) problems to evaluate the performance of Quadratic Programming (QP) solvers. It provides a standardized set of problems derived from control applications.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_evaluation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/qpsolvers/mpc_qpbenchmark",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mpc",
+        "control",
+        "optimization",
+        "benchmark"
+      ],
+      "id": 138
+    },
+    {
+      "name": "qpbenchmark",
+      "one_line_profile": "Benchmark framework for quadratic programming solvers in Python",
+      "detailed_description": "A comprehensive benchmarking tool for Quadratic Programming (QP) solvers available in Python. It allows users to compare different solvers on standard problem sets, generating performance metrics on accuracy and speed.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_evaluation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/qpsolvers/qpbenchmark",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "optimization",
+        "quadratic-programming",
+        "benchmark",
+        "python"
+      ],
+      "id": 139
+    },
+    {
+      "name": "ReFrame",
+      "one_line_profile": "Framework for writing and running portable regression tests and benchmarks for HPC systems",
+      "detailed_description": "A powerful Python framework designed for High Performance Computing (HPC) centers to write, run, and analyze regression tests and benchmarks. It abstracts system interactions, allowing tests to be portable across different HPC environments.",
+      "domains": [
+        "NUM1",
+        "NUM1-08",
+        "HPC"
+      ],
+      "subtask_category": [
+        "regression_testing",
+        "benchmarking",
+        "system_validation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/reframe-hpc/reframe",
+      "help_website": [
+        "https://reframe-hpc.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "hpc",
+        "testing",
+        "benchmark",
+        "regression"
+      ],
+      "id": 140
+    },
+    {
+      "name": "forest-benchmarking",
+      "one_line_profile": "Quantum characterization, verification, and benchmarking library using pyQuil",
+      "detailed_description": "A library for quantum characterization, verification, validation (QCVV), and benchmarking. It provides routines for randomized benchmarking, state tomography, and process tomography to assess the performance of quantum processors.",
+      "domains": [
+        "NUM1-08",
+        "NUM1"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "verification",
+        "quantum_characterization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rigetti/forest-benchmarking",
+      "help_website": [
+        "https://github.com/rigetti/forest-benchmarking"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "quantum-computing",
+        "benchmarking",
+        "verification",
+        "qcvv"
+      ],
+      "id": 141
+    },
+    {
+      "name": "Ensembler",
+      "one_line_profile": "Python package for 1D and 2D model system simulations and sampling",
+      "detailed_description": "Ensembler provides access to 1D and 2D model system simulations for method development and understanding of modeling methods. It covers basic sampling techniques to enhanced sampling and free energy calculations, facilitating reproducibility in scientific code development.",
+      "domains": [
+        "NUM1",
+        "CHE1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "sampling",
+        "free_energy_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rinikerlab/Ensembler",
+      "help_website": [
+        "https://ensembler.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "molecular-dynamics",
+        "sampling",
+        "simulation",
+        "free-energy"
+      ],
+      "id": 142
+    },
+    {
+      "name": "saras",
+      "one_line_profile": "Finite-difference PDE solver for fluid dynamics",
+      "detailed_description": "A finite-difference Partial Differential Equation (PDE) solver written in C++. It is designed for numerical simulations, likely in the context of fluid dynamics or similar continuum mechanics problems.",
+      "domains": [
+        "NUM1",
+        "PHY1"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/roshansamuel/saras",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "pde",
+        "finite-difference",
+        "cfd",
+        "solver"
+      ],
+      "id": 143
+    },
+    {
+      "name": "probability-benchmark",
+      "one_line_profile": "Scientific computing benchmark comparing Rust, Zig, and C",
+      "detailed_description": "A benchmark suite designed to compare the performance of Rust, Zig, and C in scientific computing tasks, specifically focusing on probability and numerical algorithms.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_analysis"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Zig",
+      "repo_url": "https://github.com/rust-dd/probability-benchmark",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "benchmark",
+        "hpc",
+        "rust",
+        "zig"
+      ],
+      "id": 144
+    },
+    {
+      "name": "blockCV",
+      "one_line_profile": "Spatial and environmental blocking for cross-validation in ecology",
+      "detailed_description": "An R package that creates spatially or environmentally separated training and testing folds for cross-validation. It provides robust error estimation in spatially structured environments, essential for ecological modeling.",
+      "domains": [
+        "NUM1",
+        "BIO1"
+      ],
+      "subtask_category": [
+        "cross_validation",
+        "spatial_analysis",
+        "error_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/rvalavi/blockCV",
+      "help_website": [
+        "https://github.com/rvalavi/blockCV"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "spatial-statistics",
+        "ecology",
+        "cross-validation",
+        "r"
+      ],
+      "id": 145
+    },
+    {
+      "name": "scicommander",
+      "one_line_profile": "Wrapper for running shell commands in a scientifically reproducible way",
+      "detailed_description": "A tool to run shell commands with features for scientific reproducibility and robustness. It likely handles logging, environment capture, or execution tracking to ensure computational experiments are reproducible.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "reproducibility"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/samuell/scicommander",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reproducibility",
+        "workflow",
+        "cli"
+      ],
+      "id": 146
+    },
+    {
+      "name": "nonlinear_shape_cg_benchmark",
+      "one_line_profile": "Benchmark for Nonlinear Conjugate Gradient Methods in Shape Optimization",
+      "detailed_description": "A benchmark suite for evaluating nonlinear conjugate gradient methods specifically for PDE-constrained shape optimization problems, based on Steklov-Poincaré-type metrics.",
+      "domains": [
+        "NUM1-08",
+        "NUM1"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "optimization",
+        "shape_optimization"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sblauth/nonlinear_shape_cg_benchmark",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "optimization",
+        "pde",
+        "benchmark",
+        "conjugate-gradient"
+      ],
+      "id": 147
+    },
+    {
+      "name": "SciCode",
+      "one_line_profile": "Benchmark for evaluating language models on scientific coding problems",
+      "detailed_description": "A benchmark designed to challenge and evaluate large language models (LLMs) on their ability to generate code for solving scientific problems, covering various domains of natural sciences.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "model_evaluation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scicode-bench/SciCode",
+      "help_website": [
+        "https://scicode-bench.github.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "benchmark",
+        "scientific-coding",
+        "ai4s"
+      ],
+      "id": 148
+    },
+    {
+      "name": "numpy-benchmarks",
+      "one_line_profile": "Collection of scientific kernels using numpy for benchmarking",
+      "detailed_description": "A repository containing various scientific computing kernels implemented using NumPy, serving as a benchmark suite to evaluate performance of NumPy and related compilers/accelerators.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_analysis"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/serge-sans-paille/numpy-benchmarks",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "numpy",
+        "benchmark",
+        "hpc",
+        "python"
+      ],
+      "id": 149
+    },
+    {
+      "name": "showyourwork",
+      "one_line_profile": "Workflow for reproducible and open scientific articles",
+      "detailed_description": "A workflow tool that automates the compilation of scientific articles, ensuring that results, figures, and code are reproducible. It integrates with LaTeX and GitHub Actions to build papers from source.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "reproducibility",
+        "workflow_management",
+        "publishing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "TeX",
+      "repo_url": "https://github.com/showyourwork/showyourwork",
+      "help_website": [
+        "https://showyourwork.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "reproducibility",
+        "latex",
+        "workflow",
+        "open-science"
+      ],
+      "id": 150
+    },
+    {
+      "name": "BayesianSafetyValidation.jl",
+      "one_line_profile": "Bayesian optimization for estimating probability of failure",
+      "detailed_description": "A Julia package for estimating the probability of failure in safety-critical systems using reframed Bayesian optimization techniques. It is used for validation and verification of complex systems.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "validation",
+        "safety_estimation",
+        "bayesian_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/sisl/BayesianSafetyValidation.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bayesian-optimization",
+        "safety-validation",
+        "julia",
+        "verification"
+      ],
+      "id": 151
+    },
+    {
+      "name": "FPTaylor",
+      "one_line_profile": "Rigorous estimation of round-off floating-point errors",
+      "detailed_description": "A tool for the rigorous estimation of floating-point round-off errors in numerical programs. It uses symbolic Taylor arithmetic and optimization to provide certified error bounds.",
+      "domains": [
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_analysis",
+        "verification",
+        "numerical_stability"
+      ],
+      "application_level": "solver",
+      "primary_language": "OCaml",
+      "repo_url": "https://github.com/soarlab/FPTaylor",
+      "help_website": [
+        "https://github.com/soarlab/FPTaylor"
+      ],
+      "license": "MIT",
+      "tags": [
+        "floating-point",
+        "error-analysis",
+        "formal-verification",
+        "numerical-methods"
+      ],
+      "id": 152
+    },
+    {
+      "name": "ToroExact",
+      "one_line_profile": "Exact Riemann solver for gas dynamics verification",
+      "detailed_description": "A Python implementation of the exact Riemann solver for the Euler equations based on Toro (1999). It serves as a reference solution (manufactured solution) for verifying approximate Riemann solvers and numerical schemes in Computational Fluid Dynamics (CFD).",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "manufactured_solution",
+        "verification",
+        "cfd"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tahandy/ToroExact",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "riemann-solver",
+        "cfd",
+        "verification",
+        "euler-equations"
+      ],
+      "id": 153
+    },
+    {
+      "name": "ApeBench",
+      "one_line_profile": "Benchmark suite for autoregressive neural PDE solvers",
+      "detailed_description": "A comprehensive benchmark suite for evaluating autoregressive neural emulation of Partial Differential Equations (PDEs). It supports 1D, 2D, and 3D problems, differentiable physics, unrolled training, and rollout metrics, designed to standardize the evaluation of AI4S models.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "pde_solver_evaluation",
+        "neural_physics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tum-pbs/apebench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "pde",
+        "neural-operators",
+        "differentiable-physics"
+      ],
+      "id": 154
+    },
+    {
+      "name": "Autoreg-PDE-Diffusion",
+      "one_line_profile": "Benchmark for autoregressive diffusion models in turbulence",
+      "detailed_description": "A benchmarking repository for evaluating Autoregressive Conditional Diffusion Models applied to turbulent flow simulation. It provides a framework for assessing the performance and accuracy of generative models in computational fluid dynamics tasks.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "turbulence_simulation",
+        "generative_models"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/tum-pbs/autoreg-pde-diffusion",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-models",
+        "turbulence",
+        "cfd",
+        "benchmark"
+      ],
+      "id": 155
+    },
+    {
+      "name": "SYCL-Bench",
+      "one_line_profile": "Benchmark suite for SYCL implementations in HPC",
+      "detailed_description": "A benchmark suite designed to evaluate the performance of SYCL implementations across various hardware accelerators. It is essential for verifying the performance portability of numerical codes in heterogeneous high-performance computing environments.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "hpc_performance",
+        "heterogeneous_computing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/unisa-hpc/sycl-bench",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "sycl",
+        "benchmark",
+        "hpc",
+        "performance"
+      ],
+      "id": 156
+    },
+    {
+      "name": "Herbgrind",
+      "one_line_profile": "Dynamic analysis tool for floating-point error root-causing",
+      "detailed_description": "A Valgrind-based tool that dynamically tracks floating-point values in binaries to identify the root causes of numerical errors and instability. It helps numerical analysts and developers verify the numerical correctness of their scientific codes.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_analysis",
+        "numerical_verification",
+        "debugging"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/uwplse/herbgrind",
+      "help_website": [
+        "https://herbgrind.ucsd.edu/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "floating-point",
+        "numerical-analysis",
+        "valgrind",
+        "verification"
+      ],
+      "id": 157
+    },
+    {
+      "name": "LibBEEF",
+      "one_line_profile": "Library for Bayesian Error Estimation Functionals in DFT",
+      "detailed_description": "A library providing Bayesian Error Estimation Functionals (BEEF) for use in density functional theory (DFT) codes. It enables the quantification of uncertainty in electronic structure calculations, a key aspect of numerical verification in computational chemistry and physics.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "error_estimation",
+        "uncertainty_quantification",
+        "dft"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/vossjo/libbeef",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "dft",
+        "error-estimation",
+        "bayesian",
+        "electronic-structure"
+      ],
+      "id": 158
+    },
+    {
+      "name": "Benchmark_SpTRSM",
+      "one_line_profile": "Benchmark for Sparse Triangular Solve with Multiple RHS",
+      "detailed_description": "A benchmark implementation for fast synchronization-free algorithms for parallel Sparse Triangular Solves with Multiple Right-Hand Sides (SpTRSM) using the CSC format. Used for evaluating performance of sparse linear algebra kernels.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "sparse_linear_algebra",
+        "hpc"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/weifengliu-ssslab/Benchmark_SpTRSM_using_CSC",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sparse-matrix",
+        "benchmark",
+        "hpc",
+        "linear-algebra"
+      ],
+      "id": 159
+    },
+    {
+      "name": "Benchmark_SpTRSV",
+      "one_line_profile": "Benchmark for Sparse Triangular Solve (SpTRSV)",
+      "detailed_description": "A benchmark implementation for synchronization-free algorithms for parallel Sparse Triangular Solves (SpTRSV). It serves as a performance verification tool for sparse matrix computations on parallel architectures.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "sparse_linear_algebra",
+        "hpc"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/weifengliu-ssslab/Benchmark_SpTRSV_using_CSC",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sparse-matrix",
+        "benchmark",
+        "hpc",
+        "linear-algebra"
+      ],
+      "id": 160
+    },
+    {
+      "name": "HPL-AI",
+      "one_line_profile": "Mixed-precision High Performance Linpack benchmark",
+      "detailed_description": "An implementation of the HPL-AI Mixed-Precision Benchmark. It evaluates the performance of supercomputers for AI workloads by utilizing mixed-precision arithmetic, serving as a standard for verifying HPC system capabilities for scientific AI.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "hpc_performance",
+        "mixed_precision"
+      ],
+      "application_level": "workflow",
+      "primary_language": "C",
+      "repo_url": "https://github.com/wu-kan/HPL-AI",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "hpc",
+        "benchmark",
+        "linpack",
+        "mixed-precision"
+      ],
+      "id": 161
+    },
+    {
+      "name": "ControlGym",
+      "one_line_profile": "Large-scale benchmark environments for reinforcement learning in control systems",
+      "detailed_description": "A benchmarking suite designed for evaluating reinforcement learning algorithms in control tasks. It provides large-scale environments to test the robustness and performance of control policies, facilitating standardized comparisons in control theory and RL research.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "reinforcement_learning",
+        "control_systems"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xiangyuan-zhang/controlgym",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reinforcement-learning",
+        "control-theory",
+        "benchmark-suite",
+        "gym-environment"
+      ],
+      "id": 162
+    },
+    {
+      "name": "Multiphysics-Bench",
+      "one_line_profile": "Benchmark suite for scientific machine learning in multiphysics PDE solving",
+      "detailed_description": "A comprehensive benchmark suite designed to investigate and evaluate Scientific Machine Learning (SciML) methods for solving multiphysics Partial Differential Equations (PDEs). It provides standardized tasks and datasets to assess the accuracy and efficiency of neural PDE solvers.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "pde_solving",
+        "scientific_machine_learning"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xie-lab-ml/multiphysics-bench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sciml",
+        "pde",
+        "multiphysics",
+        "benchmark",
+        "neural-pde"
+      ],
+      "id": 163
+    },
+    {
+      "name": "ESKF-Attitude-Estimation",
+      "one_line_profile": "Error-State Kalman Filter implementation for attitude estimation",
+      "detailed_description": "A MATLAB implementation of the Error-State Kalman Filter (ESKF) algorithm specifically designed for attitude estimation. It serves as a numerical solver and reference implementation for robust state estimation in navigation and robotics.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "attitude_estimation",
+        "numerical_methods"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/yuzhou42/ESKF-Attitude-Estimation",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "kalman-filter",
+        "eskf",
+        "attitude-estimation",
+        "matlab",
+        "navigation"
+      ],
+      "id": 164
+    },
+    {
+      "name": "G4SATBench",
+      "one_line_profile": "Benchmark for SAT solving with Graph Neural Networks",
+      "detailed_description": "A benchmarking tool designed to evaluate and advance Boolean Satisfiability (SAT) solving using Graph Neural Networks (GNNs). It provides datasets and evaluation metrics to bridge the gap between neural learning methods and symbolic reasoning tasks.",
+      "domains": [
+        "NUM1",
+        "NUM1-08"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "sat_solving",
+        "graph_neural_networks"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhaoyu-li/G4SATBench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sat-solver",
+        "gnn",
+        "benchmark",
+        "satisfiability",
+        "neurosymbolic"
+      ],
+      "id": 165
+    },
+    {
+      "name": "pyeq2",
+      "one_line_profile": "Extensive curve and surface fitting library for Python 2",
+      "detailed_description": "A comprehensive library for curve and surface fitting, offering a large collection of equations and genetic algorithms for parameter estimation. It supports orthogonal distance regression and relative error regression, capable of generating source code in multiple languages.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "curve_fitting",
+        "regression_analysis",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zunzun/pyeq2",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "curve-fitting",
+        "surface-fitting",
+        "regression",
+        "genetic-algorithm"
+      ],
+      "id": 166
+    },
+    {
+      "name": "pyeq3",
+      "one_line_profile": "Extensive curve and surface fitting library for Python 3",
+      "detailed_description": "The Python 3 successor to pyeq2, providing a robust framework for 2D and 3D curve fitting. It includes features for parallel computing, cluster support, and automated equation selection using genetic algorithms, suitable for scientific data analysis and modeling.",
+      "domains": [
+        "NUM1"
+      ],
+      "subtask_category": [
+        "curve_fitting",
+        "regression_analysis",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zunzun/pyeq3",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "curve-fitting",
+        "surface-fitting",
+        "regression",
+        "python3"
+      ],
+      "id": 167
+    }
+  ]
+}

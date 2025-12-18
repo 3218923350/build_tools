@@ -1,0 +1,3325 @@
+{
+  "generated_at": "2025-12-16T06:53:51.717255+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "M3",
+      "leaf_cluster_name": "材料-性质预测与材料信息学生态",
+      "domain": "Materials",
+      "typical_objects": "tabular/graph",
+      "task_chain": "ETL→特征→预测→解释→评测",
+      "tool_form": "数据库 + 模型库 + benchmark"
+    },
+    "unit": {
+      "unit_id": "M3-02",
+      "unit_name": "特征工程/描述符/图表示",
+      "target_scale": "200–450",
+      "coverage_tools": "descriptors、graph builders"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] ChemoPy",
+        "[GH] LOBSTER",
+        "[GH] DeepChem",
+        "[GH] Jarvis-tools",
+        "[GH] XenonPy",
+        "[GH] Mordred",
+        "[GH] Pymatgen",
+        "[GH] RDKit",
+        "[GH] DScribe",
+        "[GH] Matminer",
+        "[GH] materials descriptors",
+        "[GH] molecular fingerprints",
+        "[GH] crystal graph",
+        "[GH] structure featurization",
+        "[GH] chemical descriptors",
+        "[GH] molecular graph builder",
+        "[GH] materials representation learning",
+        "[GH] crystal structure features",
+        "[GH] SOAP descriptor",
+        "[GH] Coulomb matrix",
+        "[GH] molecular embedding",
+        "[GH] materials informatics features",
+        "[GH] structure-to-graph",
+        "[WEB] materials science descriptors python library github",
+        "[WEB] molecular graph featurization tools github",
+        "[WEB] crystal structure representation learning github",
+        "[WEB] chemical fingerprint generation library github",
+        "[WEB] matminer descriptors tutorial github",
+        "[WEB] dscribe materials descriptors github"
+      ],
+      "total_candidates": 988,
+      "tool_candidates": 464,
+      "final_tools": 132
+    }
+  },
+  "tools": [
+    {
+      "name": "Jupyter_Dock",
+      "one_line_profile": "Interactive Jupyter notebooks for molecular docking protocols and visualization",
+      "detailed_description": "A set of interactive Jupyter Notebooks designed to perform molecular docking protocols, including visualization, file format conversion, and result analysis.",
+      "domains": [
+        "M3",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "molecular_docking",
+        "visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/AngelRuizMoreno/Jupyter_Dock",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-docking",
+        "jupyter-notebook",
+        "bioinformatics"
+      ],
+      "id": 1
+    },
+    {
+      "name": "MMELON",
+      "one_line_profile": "Multi-view Molecular Embedding with Late Fusion architecture",
+      "detailed_description": "Implementation of the MMELON architecture that combines molecular representations from image, graph, and text views to learn a joint embedding for chemical and biological property prediction.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "representation_learning",
+        "multimodal_embedding"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BiomedSciAI/biomed-multi-view",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "molecular-embedding",
+        "multimodal-learning",
+        "property-prediction"
+      ],
+      "id": 2
+    },
+    {
+      "name": "PCMol",
+      "one_line_profile": "Multi-target de novo molecular generator conditioned on protein embeddings",
+      "detailed_description": "A deep learning model for de novo molecular generation that conditions on AlphaFold's latent protein embeddings to design molecules for specific protein targets.",
+      "domains": [
+        "M3",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "de_novo_generation",
+        "drug_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/CDDLeiden/PCMol",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "generative-model",
+        "drug-discovery",
+        "alphafold"
+      ],
+      "id": 3
+    },
+    {
+      "name": "AtomicGraphNets.jl",
+      "one_line_profile": "Atomic graph models for molecules and crystals in Julia",
+      "detailed_description": "A Julia package providing implementations of graph neural network models specifically designed for atomic systems like molecules and crystals.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "graph_construction",
+        "representation_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/Chemellia/AtomicGraphNets.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "graph-neural-networks",
+        "materials-science"
+      ],
+      "id": 4
+    },
+    {
+      "name": "ChemistryFeaturization.jl",
+      "one_line_profile": "Interface package for featurizing atomic structures in Julia",
+      "detailed_description": "A Julia library for generating features and descriptors from atomic structures, designed to work with machine learning models in materials science and chemistry.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "featurization",
+        "descriptor_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/Chemellia/ChemistryFeaturization.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "featurization",
+        "descriptors"
+      ],
+      "id": 5
+    },
+    {
+      "name": "SMILES Transformer",
+      "one_line_profile": "Pre-trained Molecular Fingerprint for Low Data Drug Discovery",
+      "detailed_description": "Implementation of the SMILES Transformer, a pre-trained model for generating molecular fingerprints from SMILES strings, useful for low-data drug discovery tasks.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "fingerprinting",
+        "representation_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/DSPsleeporg/smiles-transformer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "smiles",
+        "transformer",
+        "fingerprints"
+      ],
+      "id": 6
+    },
+    {
+      "name": "rdkit-scripts",
+      "one_line_profile": "Collection of RDKit scripts for chemoinformatics tasks",
+      "detailed_description": "A repository of reusable Python scripts utilizing RDKit for various chemoinformatics tasks, simplifying common operations for researchers.",
+      "domains": [
+        "M3",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "utility"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DrrDom/rdkit-scripts",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rdkit",
+        "chemoinformatics",
+        "scripts"
+      ],
+      "id": 7
+    },
+    {
+      "name": "rdeditor",
+      "one_line_profile": "Simple RDKit molecule editor GUI",
+      "detailed_description": "A graphical user interface for editing molecules, built using PySide and RDKit, allowing for interactive chemical structure manipulation.",
+      "domains": [
+        "M3",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "molecule_editing",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EBjerrum/rdeditor",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "gui",
+        "molecule-editor",
+        "rdkit"
+      ],
+      "id": 8
+    },
+    {
+      "name": "scikit-mol",
+      "one_line_profile": "Scikit-learn compatible molecular vectorization using RDKit",
+      "detailed_description": "A library that provides scikit-learn compatible transformer classes for molecular vectorization and featurization using RDKit, facilitating integration into ML pipelines.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "featurization",
+        "descriptor_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EBjerrum/scikit-mol",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "scikit-learn",
+        "rdkit",
+        "molecular-fingerprints"
+      ],
+      "id": 9
+    },
+    {
+      "name": "KerasNeuralFingerprint",
+      "one_line_profile": "Keras implementation of neural molecular fingerprints",
+      "detailed_description": "A Keras-based implementation of neural fingerprints (graph neural networks) for operating on molecular graphs of arbitrary size.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "fingerprinting",
+        "representation_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GUR9000/KerasNeuralFingerprint",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "keras",
+        "neural-fingerprints",
+        "graph-neural-networks"
+      ],
+      "id": 10
+    },
+    {
+      "name": "GNEprop",
+      "one_line_profile": "GNN model for antibacterial activity prediction",
+      "detailed_description": "A graph neural network-based model developed to predict antibacterial activity from molecular structures, specifically for virtual screening settings.",
+      "domains": [
+        "M3",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "activity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Genentech/gneprop",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "antibacterial",
+        "gnn",
+        "property-prediction"
+      ],
+      "id": 11
+    },
+    {
+      "name": "pymatgen-io-espresso",
+      "one_line_profile": "Pymatgen addon for parsing Quantum ESPRESSO files",
+      "detailed_description": "An extension for pymatgen that provides functionality for parsing and handling input/output files for the Quantum ESPRESSO electronic structure code.",
+      "domains": [
+        "M3",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "file_parsing",
+        "input_output"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Griffin-Group/pymatgen-io-espresso",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pymatgen",
+        "quantum-espresso",
+        "dft"
+      ],
+      "id": 12
+    },
+    {
+      "name": "BloomFilterTrie",
+      "one_line_profile": "Data structure for colored de Bruijn graph indexing",
+      "detailed_description": "An alignment-free, reference-free, and incremental data structure for colored de Bruijn graphs, applied to pan-genome indexing.",
+      "domains": [
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "genome_indexing",
+        "sequence_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/GuillaumeHolley/BloomFilterTrie",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "de-bruijn-graph",
+        "pan-genome",
+        "data-structure"
+      ],
+      "id": 13
+    },
+    {
+      "name": "InformaticsMatters Pipelines",
+      "one_line_profile": "Containerised components for cheminformatics and computational chemistry workflows",
+      "detailed_description": "A collection of containerised tools and pipelines designed for cheminformatics and computational chemistry tasks, facilitating reproducible workflows.",
+      "domains": [
+        "M3",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "data_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/InformaticsMatters/pipelines",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cheminformatics",
+        "workflow",
+        "containers"
+      ],
+      "id": 14
+    },
+    {
+      "name": "LobsterPy",
+      "one_line_profile": "Automatic bonding analysis package for Lobster outputs",
+      "detailed_description": "A Python package to perform automatic bonding analysis using outputs from the Lobster program, specifically for computational materials science and quantum chemistry.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "bonding_analysis",
+        "post_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JaGeo/LobsterPy",
+      "help_website": [
+        "https://jageo.github.io/LobsterPy/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "materials-science",
+        "bonding-analysis",
+        "quantum-chemistry"
+      ],
+      "id": 15
+    },
+    {
+      "name": "MaSIF",
+      "one_line_profile": "Geometric deep learning for molecular surface interaction fingerprints",
+      "detailed_description": "A geometric deep learning framework to decipher patterns in molecular surfaces, enabling the prediction of protein-protein interactions and other surface-based properties.",
+      "domains": [
+        "M3",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "surface_analysis",
+        "interaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LPDI-EPFL/masif",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "geometric-deep-learning",
+        "molecular-surface",
+        "protein-interaction"
+      ],
+      "id": 16
+    },
+    {
+      "name": "FIDDLE",
+      "one_line_profile": "Flexible Data-Driven Pipeline for EHR data preprocessing",
+      "detailed_description": "A preprocessing pipeline that transforms structured Electronic Health Record (EHR) data into feature vectors suitable for machine learning algorithms.",
+      "domains": [
+        "Medical Informatics"
+      ],
+      "subtask_category": [
+        "data_preprocessing",
+        "feature_engineering"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/MLD3/FIDDLE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ehr",
+        "healthcare",
+        "preprocessing"
+      ],
+      "id": 17
+    },
+    {
+      "name": "MuVI",
+      "one_line_profile": "Multi-view latent variable model for integrating noisy feature sets",
+      "detailed_description": "A multi-view latent variable model with domain-informed structured sparsity, designed for integrating noisy feature sets in biological data analysis.",
+      "domains": [
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "data_integration",
+        "latent_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MLO-lab/MuVI",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "multi-view",
+        "latent-variable-model",
+        "omics"
+      ],
+      "id": 18
+    },
+    {
+      "name": "psikit",
+      "one_line_profile": "Python interface bridging Psi4 and RDKit",
+      "detailed_description": "A Python library that connects Psi4 (quantum chemistry) and RDKit (cheminformatics), allowing for seamless workflows involving quantum mechanical calculations on molecular structures.",
+      "domains": [
+        "M3",
+        "Quantum Chemistry"
+      ],
+      "subtask_category": [
+        "interface",
+        "calculation_workflow"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Mishima-syk/psikit",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "psi4",
+        "rdkit",
+        "quantum-chemistry"
+      ],
+      "id": 19
+    },
+    {
+      "name": "OpenMolcas",
+      "one_line_profile": "Multiconfigurational quantum chemistry software package",
+      "detailed_description": "A quantum chemistry software package focused on the multiconfigurational approach to electronic structure, suitable for simulating complex chemical systems.",
+      "domains": [
+        "M3",
+        "Quantum Chemistry"
+      ],
+      "subtask_category": [
+        "simulation",
+        "electronic_structure"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/Molcas/OpenMolcas",
+      "help_website": [
+        "https://molcas.gitlab.io/OpenMolcas/"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "quantum-chemistry",
+        "electronic-structure",
+        "multiconfigurational"
+      ],
+      "id": 20
+    },
+    {
+      "name": "nfp",
+      "one_line_profile": "Keras layers for end-to-end learning with RDKit and Pymatgen",
+      "detailed_description": "A library providing Keras layers and utilities for building end-to-end deep learning models for molecules and materials, integrating with RDKit and Pymatgen.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "graph_learning",
+        "feature_engineering"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NREL/nfp",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "keras",
+        "gnn",
+        "materials-informatics"
+      ],
+      "id": 21
+    },
+    {
+      "name": "cuik-molmaker",
+      "one_line_profile": "Molecular featurization package for GNNs",
+      "detailed_description": "A specialized package for converting chemical structures into formats suitable for deep learning models, particularly graph neural networks (GNNs).",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "featurization",
+        "graph_construction"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/NVIDIA-Digital-Bio/cuik-molmaker",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gnn",
+        "featurization",
+        "nvidia"
+      ],
+      "id": 22
+    },
+    {
+      "name": "ccdutils",
+      "one_line_profile": "Tools for handling PDBe chemical component definitions",
+      "detailed_description": "A set of Python tools based on RDKit to process and analyze PDB chemical component definitions for small molecules.",
+      "domains": [
+        "M3",
+        "Structural Biology"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "chemical_definitions"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PDBeurope/ccdutils",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pdb",
+        "chemical-components",
+        "rdkit"
+      ],
+      "id": 23
+    },
+    {
+      "name": "Free-Wilson",
+      "one_line_profile": "Implementation of Free-Wilson SAR analysis",
+      "detailed_description": "A Python implementation of the Free-Wilson method for Structure-Activity Relationship (SAR) analysis using RDKit.",
+      "domains": [
+        "M3",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "sar_analysis",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PatWalters/Free-Wilson",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sar",
+        "free-wilson",
+        "rdkit"
+      ],
+      "id": 24
+    },
+    {
+      "name": "rd_filters",
+      "one_line_profile": "Structural alerts and filtering using RDKit and ChEMBL",
+      "detailed_description": "A script and library to screen molecules against structural alerts (e.g., PAINS, Glaxo) using RDKit and ChEMBL data, useful for library design and curation.",
+      "domains": [
+        "M3",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "filtering",
+        "quality_control"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PatWalters/rd_filters",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-alerts",
+        "filtering",
+        "drug-discovery"
+      ],
+      "id": 25
+    },
+    {
+      "name": "solubility",
+      "one_line_profile": "Implementation of Delaney's ESOL solubility prediction",
+      "detailed_description": "A Python implementation of the ESOL (Estimated SOLubility) method for predicting aqueous solubility of organic molecules using RDKit.",
+      "domains": [
+        "M3",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PatWalters/solubility",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "solubility",
+        "esol",
+        "property-prediction"
+      ],
+      "id": 26
+    },
+    {
+      "name": "useful_rdkit_utils",
+      "one_line_profile": "Collection of useful RDKit functions and utilities",
+      "detailed_description": "A repository containing various helper functions and utilities for working with RDKit, covering tasks like visualization, descriptor calculation, and data manipulation.",
+      "domains": [
+        "M3",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "utility",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/PatWalters/useful_rdkit_utils",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rdkit",
+        "utilities",
+        "cheminformatics"
+      ],
+      "id": 27
+    },
+    {
+      "name": "LobsterPyGUI",
+      "one_line_profile": "Graphical User Interface for LobsterPy",
+      "detailed_description": "A graphical user interface wrapper for the LobsterPy package, facilitating the analysis of Lobster outputs for users who prefer a GUI.",
+      "domains": [
+        "M3",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "visualization",
+        "analysis_interface"
+      ],
+      "application_level": "solver",
+      "primary_language": "Makefile",
+      "repo_url": "https://github.com/QuantumChemist/LobsterPyGUI",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gui",
+        "lobsterpy",
+        "materials-analysis"
+      ],
+      "id": 28
+    },
+    {
+      "name": "RadonPy",
+      "one_line_profile": "Automated physical property calculation for polymer informatics",
+      "detailed_description": "A Python library designed to automate the calculation of physical properties for polymers, supporting high-throughput polymer informatics.",
+      "domains": [
+        "M3",
+        "Polymer Science"
+      ],
+      "subtask_category": [
+        "property_calculation",
+        "simulation_automation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RadonPy/RadonPy",
+      "help_website": [
+        "https://radonpy.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "polymer",
+        "informatics",
+        "molecular-dynamics"
+      ],
+      "id": 29
+    },
+    {
+      "name": "DScribe",
+      "one_line_profile": "Machine learning descriptors for atomistic systems",
+      "detailed_description": "A Python package for creating machine learning descriptors (features) for atomistic systems, including Coulomb matrix, Sine matrix, Ewald sum matrix, ACSF, SOAP, and MBTR.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "descriptor_generation",
+        "feature_engineering"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/SINGROUP/dscribe",
+      "help_website": [
+        "https://dscribe.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "descriptors",
+        "atomistic-systems",
+        "machine-learning"
+      ],
+      "id": 30
+    },
+    {
+      "name": "ShakeNBreak",
+      "one_line_profile": "Defect structure-searching method using chemically-guided bond distortions",
+      "detailed_description": "ShakeNBreak is a Python package designed to automate the identification of the ground-state structures of point defects in solids. It employs chemically-guided bond distortions to explore the potential energy surface of defects, overcoming the limitations of standard structure-searching methods that often get trapped in high-energy local minima.",
+      "domains": [
+        "Materials",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "defect_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SMTG-Bham/ShakeNBreak",
+      "help_website": [
+        "https://shakenbreak.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "defects",
+        "structure-searching",
+        "dft",
+        "materials-science"
+      ],
+      "id": 31
+    },
+    {
+      "name": "doped",
+      "one_line_profile": "Workflow software for defect supercell generation and analysis",
+      "detailed_description": "doped is a Python software suite for the generation, pre-processing, and post-processing of defect supercell calculations. It provides an efficient and reproducible workflow for defect simulations, handling tasks such as charge state generation, chemical potential analysis, and thermodynamic stability calculations.",
+      "domains": [
+        "Materials",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "workflow",
+        "defect_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SMTG-Bham/doped",
+      "help_website": [
+        "https://doped.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "defects",
+        "supercells",
+        "thermodynamics",
+        "vasp"
+      ],
+      "id": 32
+    },
+    {
+      "name": "surfaxe",
+      "one_line_profile": "Python library for generating and analyzing surface slabs",
+      "detailed_description": "surfaxe is a tool for automating the generation and analysis of surface slabs for first-principles calculations. It simplifies the creation of slab models from bulk structures, handling tasks like Miller index selection, termination handling, and vacuum insertion.",
+      "domains": [
+        "Materials",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "structure_generation",
+        "surface_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SMTG-Bham/surfaxe",
+      "help_website": [
+        "https://surfaxe.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "surfaces",
+        "slabs",
+        "dft",
+        "structure-generation"
+      ],
+      "id": 33
+    },
+    {
+      "name": "VASP-DOS_extractor",
+      "one_line_profile": "Script for extracting Density of States (DOS) from VASP outputs",
+      "detailed_description": "A Pymatgen-based Python script designed to extract total and projected density of states (DOS) data from VASP `vasprun.xml` files. It facilitates the post-processing of electronic structure calculations for materials analysis.",
+      "domains": [
+        "Materials",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "data_extraction",
+        "electronic_structure"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ShinMaterials/VASP-DOS_extractor",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vasp",
+        "dos",
+        "pymatgen",
+        "electronic-structure"
+      ],
+      "id": 34
+    },
+    {
+      "name": "VASP-Structural_Descriptors",
+      "one_line_profile": "Tool for collecting structural descriptors from atomic structures",
+      "detailed_description": "A Pymatgen-based script for batch collection of structural descriptors from atomic structures. It automates the feature engineering process for materials informatics tasks by extracting geometric and chemical features from structure files.",
+      "domains": [
+        "Materials",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "feature_extraction",
+        "descriptors"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ShinMaterials/VASP-Structural_Descriptors",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "descriptors",
+        "structural-features",
+        "pymatgen",
+        "materials-informatics"
+      ],
+      "id": 35
+    },
+    {
+      "name": "ML4SMILES",
+      "one_line_profile": "Molecular property prediction using substructure vector embeddings",
+      "detailed_description": "ML4SMILES is a tool for the automatic prediction of molecular properties. It utilizes substructure vector embeddings within a feature selection workflow to map SMILES strings to chemical properties, facilitating QSAR/QSPR modeling.",
+      "domains": [
+        "Materials",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "feature_embedding"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Songyosk/ML4SMILES",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "smiles",
+        "qsar",
+        "molecular-embeddings",
+        "property-prediction"
+      ],
+      "id": 36
+    },
+    {
+      "name": "CIDER",
+      "one_line_profile": "Chemical Dataset Comparator for analyzing and visualizing dataset overlaps",
+      "detailed_description": "ChemIcal DatasEt comparatoR (CIDER) is a Python package and Jupyter Notebook workflow for comparing chemical structure datasets. It allows users to analyze dataset size, overlap, molecular descriptor distributions, and chemical space clustering using RDKit.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "chemical_space_visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Steinbeck-Lab/ChemIcal-DatasEt-comparatoR",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cheminformatics",
+        "dataset-comparison",
+        "rdkit",
+        "chemical-space"
+      ],
+      "id": 37
+    },
+    {
+      "name": "cheminformatics-microservice",
+      "one_line_profile": "Microservices API for essential cheminformatics operations",
+      "detailed_description": "A set of microservices designed to provide cheminformatics functionalities via API calls. It enables the integration of chemical data processing, format conversion, and descriptor calculation into distributed systems or web applications.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "service",
+        "data_processing"
+      ],
+      "application_level": "service",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/Steinbeck-Lab/cheminformatics-microservice",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "microservice",
+        "api",
+        "cheminformatics",
+        "docker"
+      ],
+      "id": 38
+    },
+    {
+      "name": "iFeatureOmega-CLI",
+      "one_line_profile": "Comprehensive platform for generating biological and molecular features",
+      "detailed_description": "iFeatureOmega-CLI is the command-line version of the iFeatureOmega platform. It provides extensive functionality for generating, analyzing, and visualizing over 170 types of representations for biological sequences, 3D structures, and ligands, supporting feature extraction for bioinformatics and cheminformatics.",
+      "domains": [
+        "Biology",
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "feature_extraction",
+        "descriptors"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Superzchen/iFeatureOmega-CLI",
+      "help_website": [
+        "http://ifeature2.erc.monash.edu"
+      ],
+      "license": null,
+      "tags": [
+        "feature-extraction",
+        "bioinformatics",
+        "descriptors",
+        "sequences"
+      ],
+      "id": 39
+    },
+    {
+      "name": "cgnn",
+      "one_line_profile": "Crystal Graph Neural Networks for materials property prediction",
+      "detailed_description": "cgnn implements Crystal Graph Neural Networks, a deep learning framework for predicting material properties from crystal structures. It models crystals as graphs where atoms are nodes and bonds are edges, learning representations directly from the structure.",
+      "domains": [
+        "Materials",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "graph_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Tony-Y/cgnn",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gnn",
+        "crystal-structure",
+        "deep-learning",
+        "materials-science"
+      ],
+      "id": 40
+    },
+    {
+      "name": "ScaffoldGraph",
+      "one_line_profile": "Library for generating and analyzing scaffold networks and trees",
+      "detailed_description": "ScaffoldGraph is an open-source cheminformatics library built on RDKit and NetworkX. It is designed for the generation, analysis, and visualization of scaffold networks and scaffold trees, aiding in the exploration of chemical space and structure-activity relationships.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "scaffold_analysis",
+        "chemical_space_exploration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UCLCheminformatics/ScaffoldGraph",
+      "help_website": [
+        "https://scaffoldgraph.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "scaffolds",
+        "networkx",
+        "rdkit",
+        "cheminformatics"
+      ],
+      "id": 41
+    },
+    {
+      "name": "seq2seq-fingerprint",
+      "one_line_profile": "Unsupervised deep molecular embedding for drug discovery",
+      "detailed_description": "Implementation of 'Seq2seq Fingerprint', an unsupervised deep learning approach to generate molecular embeddings (fingerprints). It uses sequence-to-sequence models to learn fixed-length vector representations of molecules useful for downstream drug discovery tasks.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "embedding_generation",
+        "fingerprinting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/XericZephyr/seq2seq-fingerprint",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "seq2seq",
+        "molecular-fingerprint",
+        "deep-learning",
+        "drug-discovery"
+      ],
+      "id": 42
+    },
+    {
+      "name": "mcp-atomictoolkit",
+      "one_line_profile": "MCP server for atomistic simulations via ASE and Pymatgen",
+      "detailed_description": "An implementation of the Model Context Protocol (MCP) that provides an interface for Large Language Models (LLMs) to interact with atomistic simulation tools like ASE and Pymatgen. It acts as a bridge/server enabling AI agents to perform materials science calculations.",
+      "domains": [
+        "Materials",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "simulation_interface",
+        "agent_tool"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/XirtamEsrevni/mcp-atomictoolkit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "llm-agent",
+        "ase",
+        "pymatgen"
+      ],
+      "id": 43
+    },
+    {
+      "name": "ComFormer",
+      "one_line_profile": "Complete and Efficient Graph Transformers for Crystal Property Prediction",
+      "detailed_description": "Implementation of the ComFormer model (ICLR 2024), a graph transformer designed for crystal material property prediction. It aims to provide a complete and efficient representation of crystal structures for accurate property inference.",
+      "domains": [
+        "Materials",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "graph_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/YKQ98/ComFormer",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "graph-transformer",
+        "crystal-structure",
+        "property-prediction",
+        "deep-learning"
+      ],
+      "id": 44
+    },
+    {
+      "name": "Matformer",
+      "one_line_profile": "Periodic Graph Transformers for Crystal Material Property Prediction",
+      "detailed_description": "Official implementation of Matformer (NeurIPS 2022), a periodic graph transformer architecture specifically designed for modeling crystal structures and predicting their properties with high accuracy.",
+      "domains": [
+        "Materials",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "graph_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/YKQ98/Matformer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "transformer",
+        "periodic-graph",
+        "materials-science",
+        "neurips"
+      ],
+      "id": 45
+    },
+    {
+      "name": "molgraph",
+      "one_line_profile": "Graph neural networks for molecular machine learning in TensorFlow",
+      "detailed_description": "molgraph is a Python library for implementing Graph Neural Networks (GNNs) specifically for molecular machine learning. It is built on top of TensorFlow and Keras, providing layers and utilities to construct and train models on molecular graph data.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "graph_modeling",
+        "molecular_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/akensert/molgraph",
+      "help_website": [
+        "https://molgraph.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "tensorflow",
+        "molecular-graphs",
+        "keras"
+      ],
+      "id": 46
+    },
+    {
+      "name": "moldrug",
+      "one_line_profile": "Drug-oriented optimization on the chemical space",
+      "detailed_description": "moldrug is a Python package designed for the optimization of molecules in chemical space, with a focus on drug discovery. It employs genetic algorithms or other optimization strategies to evolve molecular structures towards desired properties.",
+      "domains": [
+        "Chemistry",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "molecular_optimization",
+        "drug_design"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ale94mleon/moldrug",
+      "help_website": [
+        "https://moldrug.readthedocs.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "optimization",
+        "genetic-algorithm",
+        "drug-design",
+        "chemical-space"
+      ],
+      "id": 47
+    },
+    {
+      "name": "rdkit_ipynb_tools",
+      "one_line_profile": "RDKit utilities and visualization tools for Jupyter Notebooks",
+      "detailed_description": "A collection of tools and helper functions to enhance the use of RDKit within IPython/Jupyter Notebooks. It focuses on improving the visualization of molecules, dataframes, and chemical data analysis workflows.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/apahl/rdkit_ipynb_tools",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rdkit",
+        "jupyter",
+        "visualization",
+        "cheminformatics"
+      ],
+      "id": 48
+    },
+    {
+      "name": "JARVIS-Tools",
+      "one_line_profile": "Open-source software package for data-driven atomistic materials design",
+      "detailed_description": "JARVIS-Tools is a comprehensive software package supporting the JARVIS (Joint Automated Repository for Various Integrated Simulations) infrastructure. It provides tools for high-throughput density functional theory (DFT) calculations, classical force-field simulations, and machine learning for materials design.",
+      "domains": [
+        "Materials",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "workflow",
+        "materials_design",
+        "database_interface"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/atomgptlab/jarvis",
+      "help_website": [
+        "https://jarvis-tools.readthedocs.io"
+      ],
+      "license": null,
+      "tags": [
+        "materials-design",
+        "dft",
+        "high-throughput",
+        "machine-learning"
+      ],
+      "id": 49
+    },
+    {
+      "name": "CGCNN_Paddle",
+      "one_line_profile": "PaddlePaddle implementation of Crystal Graph Convolutional Neural Networks",
+      "detailed_description": "An implementation of the Crystal Graph Convolutional Neural Network (CGCNN) model using the PaddlePaddle deep learning framework. It allows for the prediction of material properties from crystal structures within the Paddle ecosystem.",
+      "domains": [
+        "Materials",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "graph_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/banjiuyufen/CGCNN_Paddle",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "paddlepaddle",
+        "cgcnn",
+        "materials-science",
+        "deep-learning"
+      ],
+      "id": 50
+    },
+    {
+      "name": "MolPipeline",
+      "one_line_profile": "Scikit-learn compatible pipeline for molecular processing with RDKit",
+      "detailed_description": "MolPipeline is a Python package that integrates RDKit molecular processing into scikit-learn pipelines. It simplifies the creation of machine learning workflows for cheminformatics by providing compatible transformers for molecular standardization, fingerprinting, and descriptor calculation.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "feature_engineering"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/basf/MolPipeline",
+      "help_website": [
+        "https://molpipeline.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "scikit-learn",
+        "rdkit",
+        "pipeline",
+        "cheminformatics"
+      ],
+      "id": 51
+    },
+    {
+      "name": "neuraldecipher",
+      "one_line_profile": "Reverse-engineering extended-connectivity fingerprints to molecular structures",
+      "detailed_description": "Neuraldecipher is a tool for reconstructing molecular structures from their Extended-Connectivity Fingerprints (ECFPs). It uses neural networks to solve the inverse problem of mapping fingerprints back to chemical graphs, aiding in interpretability and inverse design.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "inverse_design",
+        "fingerprint_reconstruction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bayer-science-for-a-better-life/neuraldecipher",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "ecfp",
+        "inverse-design",
+        "fingerprints",
+        "deep-learning"
+      ],
+      "id": 52
+    },
+    {
+      "name": "beautiful-atoms",
+      "one_line_profile": "High-quality rendering of atoms and molecules using Blender",
+      "detailed_description": "beautiful-atoms is a Python module that interfaces with Blender to create high-quality, publication-ready 3D renderings of atomic structures and molecules. It provides a simple API to generate visualisations directly from structure files.",
+      "domains": [
+        "Materials",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "visualization",
+        "rendering"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/beautiful-atoms/beautiful-atoms",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "visualization",
+        "blender",
+        "atoms",
+        "rendering"
+      ],
+      "id": 53
+    },
+    {
+      "name": "ICSG3D",
+      "one_line_profile": "3D inorganic crystal structure generation via representation learning",
+      "detailed_description": "A deep learning framework for generating 3D inorganic crystal structures and predicting their properties using voxel-based representation learning.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "structure_generation",
+        "property_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/by256/icsg3d",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "crystal-structure",
+        "generative-model",
+        "materials-science"
+      ],
+      "id": 54
+    },
+    {
+      "name": "mols2grid",
+      "one_line_profile": "Interactive 2D molecule viewer for chemical dataframes",
+      "detailed_description": "A Python library that provides an interactive interface for visualizing 2D molecular structures within Jupyter notebooks or web browsers, often used for exploring chemical datasets.",
+      "domains": [
+        "Chemistry",
+        "M3"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_exploration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cbouy/mols2grid",
+      "help_website": [
+        "https://mols2grid.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "visualization",
+        "cheminformatics",
+        "rdkit"
+      ],
+      "id": 55
+    },
+    {
+      "name": "Chembience",
+      "one_line_profile": "Docker-based platform for chemoinformatics web applications",
+      "detailed_description": "A platform that provides a containerized environment for developing and deploying chemoinformatics-centric web applications and microservices.",
+      "domains": [
+        "Chemistry",
+        "M3"
+      ],
+      "subtask_category": [
+        "infrastructure",
+        "deployment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chembience/chembience",
+      "help_website": [
+        "http://chembience.org/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "docker",
+        "cheminformatics",
+        "microservices"
+      ],
+      "id": 56
+    },
+    {
+      "name": "ChEMBL Beaker",
+      "one_line_profile": "RDKit wrapper providing chemical utilities via REST API",
+      "detailed_description": "A standalone web server wrapper for RDKit that exposes cheminformatics functionality (like descriptor calculation and format conversion) through a RESTful API.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "api_service"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chembl/chembl_beaker",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rdkit",
+        "rest-api",
+        "cheminformatics"
+      ],
+      "id": 57
+    },
+    {
+      "name": "ProLIF",
+      "one_line_profile": "Protein-Ligand Interaction Fingerprints generator",
+      "detailed_description": "A library designed to generate interaction fingerprints for protein-ligand complexes, facilitating the analysis of molecular docking results and molecular dynamics simulations.",
+      "domains": [
+        "Chemistry",
+        "Biology",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "fingerprint_generation",
+        "interaction_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chemosim-lab/ProLIF",
+      "help_website": [
+        "https://prolif.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "protein-ligand",
+        "fingerprints",
+        "molecular-dynamics"
+      ],
+      "id": 58
+    },
+    {
+      "name": "ase-notebook",
+      "one_line_profile": "Advanced visualization for ASE and Pymatgen structures in Jupyter",
+      "detailed_description": "A visualization tool that provides highly configurable 2D (SVG) and 3D (Three.js) renderings for atomic structures from ASE or Pymatgen within Jupyter Notebooks.",
+      "domains": [
+        "M3",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chrisjsewell/ase-notebook",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "ase",
+        "pymatgen",
+        "jupyter"
+      ],
+      "id": 59
+    },
+    {
+      "name": "rdchiral",
+      "one_line_profile": "Stereochemistry handling wrapper for RDKit reactions",
+      "detailed_description": "A wrapper for RDKit's reaction handling functionality that improves the preservation and handling of stereochemistry during chemical reaction template application.",
+      "domains": [
+        "Chemistry",
+        "M3"
+      ],
+      "subtask_category": [
+        "reaction_prediction",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/connorcoley/rdchiral",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "stereochemistry",
+        "rdkit",
+        "reaction-templates"
+      ],
+      "id": 60
+    },
+    {
+      "name": "Datamol",
+      "one_line_profile": "High-level molecular processing library built on RDKit",
+      "detailed_description": "A library that provides a simplified and ergonomic API for molecular processing, manipulation, and visualization, acting as a high-level wrapper around RDKit.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/datamol-io/datamol",
+      "help_website": [
+        "https://docs.datamol.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "cheminformatics",
+        "rdkit",
+        "molecular-processing"
+      ],
+      "id": 61
+    },
+    {
+      "name": "Graphium",
+      "one_line_profile": "Scalable Graph Neural Networks for molecules",
+      "detailed_description": "A deep learning library focused on training and scaling Graph Neural Networks (GNNs) specifically for molecular and graph-based tasks in chemistry and biology.",
+      "domains": [
+        "M3",
+        "Chemistry",
+        "Biology"
+      ],
+      "subtask_category": [
+        "modeling",
+        "property_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/datamol-io/graphium",
+      "help_website": [
+        "https://graphium-docs.datamol.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "gnn",
+        "deep-learning",
+        "molecular-graphs"
+      ],
+      "id": 62
+    },
+    {
+      "name": "molfeat",
+      "one_line_profile": "Hub for molecular featurizers and descriptors",
+      "detailed_description": "A comprehensive library for calculating molecular features, providing a unified interface for various descriptors, fingerprints, and pre-trained embeddings.",
+      "domains": [
+        "M3-02",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "feature_engineering",
+        "descriptors"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/datamol-io/molfeat",
+      "help_website": [
+        "https://molfeat-docs.datamol.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "featurization",
+        "descriptors",
+        "embeddings"
+      ],
+      "id": 63
+    },
+    {
+      "name": "dbMAP",
+      "one_line_profile": "Dimensionality reduction based on diffusion harmonics",
+      "detailed_description": "A fast and modularized dimensionality reduction tool based on diffusion harmonics and graph layouts, often used for visualizing high-dimensional biological data like scRNA-seq.",
+      "domains": [
+        "Biology",
+        "M3"
+      ],
+      "subtask_category": [
+        "dimensionality_reduction",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/davisidarta/dbMAP",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "dimensionality-reduction",
+        "visualization",
+        "clustering"
+      ],
+      "id": 64
+    },
+    {
+      "name": "DeepChem",
+      "one_line_profile": "Deep learning library for drug discovery and materials science",
+      "detailed_description": "A comprehensive deep learning library that provides datasets, models, and featurizers for applications in drug discovery, materials science, quantum chemistry, and biology.",
+      "domains": [
+        "M3",
+        "Chemistry",
+        "Biology"
+      ],
+      "subtask_category": [
+        "modeling",
+        "property_prediction",
+        "feature_engineering"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepchem/deepchem",
+      "help_website": [
+        "https://deepchem.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "drug-discovery",
+        "materials-science"
+      ],
+      "id": 65
+    },
+    {
+      "name": "DeepChem GUI",
+      "one_line_profile": "Web-based graphical interface for DeepChem",
+      "detailed_description": "A graphical user interface that allows users to interact with DeepChem functionalities, such as training models and making predictions, without writing code.",
+      "domains": [
+        "M3",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "modeling",
+        "interface"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/deepchem/deepchem-gui",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gui",
+        "no-code",
+        "deepchem"
+      ],
+      "id": 66
+    },
+    {
+      "name": "DenseGNN",
+      "one_line_profile": "Universal GNNs for property prediction in crystals and molecules",
+      "detailed_description": "A graph neural network framework designed for high-performance property prediction in crystal structures and molecules, emphasizing scalability and depth.",
+      "domains": [
+        "M3",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/dhw059/DenseGNN",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gnn",
+        "crystals",
+        "property-prediction"
+      ],
+      "id": 67
+    },
+    {
+      "name": "rdkit-scripts",
+      "one_line_profile": "Collection of cheminformatics utility scripts using RDKit",
+      "detailed_description": "A set of command-line scripts and utilities for performing common cheminformatics tasks such as conformation generation, docking preparation, and filtering using RDKit.",
+      "domains": [
+        "Chemistry",
+        "M3"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "utilities"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dkoes/rdkit-scripts",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scripts",
+        "rdkit",
+        "utilities"
+      ],
+      "id": 68
+    },
+    {
+      "name": "chemistry_drawer",
+      "one_line_profile": "Molecule visualization using Plotly",
+      "detailed_description": "A lightweight tool to draw and visualize molecular structures using the Plotly graphing library, enabling interactive chemical visualizations.",
+      "domains": [
+        "Chemistry",
+        "M3"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dylanwal/chemistry_drawer",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "visualization",
+        "plotly",
+        "molecules"
+      ],
+      "id": 69
+    },
+    {
+      "name": "bandstructureplots",
+      "one_line_profile": "Band structure plotting tool using pymatgen",
+      "detailed_description": "A Python tool for generating band structure plots with RGB scales to visualize atomic or orbital contributions, built on top of pymatgen.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "visualization",
+        "electronic_structure_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gVallverdu/bandstructureplots",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "band-structure",
+        "pymatgen",
+        "visualization"
+      ],
+      "id": 70
+    },
+    {
+      "name": "MiniMol",
+      "one_line_profile": "Pre-trained molecular fingerprinting model",
+      "detailed_description": "A 10M-parameter molecular fingerprinting model pre-trained on over 3300 biological and quantum tasks, designed for generating molecular embeddings.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "molecular_fingerprinting",
+        "representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/graphcore-research/minimol",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-fingerprints",
+        "pre-trained-model",
+        "graph-neural-networks"
+      ],
+      "id": 71
+    },
+    {
+      "name": "matminer",
+      "one_line_profile": "Data mining and descriptor generation for materials science",
+      "detailed_description": "A library for data mining in materials science, providing tools for retrieving data from various databases and generating descriptors (features) for materials.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "feature_engineering",
+        "data_mining",
+        "descriptor_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hackingmaterials/matminer",
+      "help_website": [
+        "https://hackingmaterials.lbl.gov/matminer/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "materials-science",
+        "data-mining",
+        "descriptors"
+      ],
+      "id": 72
+    },
+    {
+      "name": "maptools",
+      "one_line_profile": "Materials simulation data processing tool",
+      "detailed_description": "An open-source program for processing materials simulation data, built upon Pymatgen, facilitating data analysis and structure manipulation.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "simulation_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haidi-ustc/maptools",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "pymatgen",
+        "simulation-data",
+        "materials-science"
+      ],
+      "id": 73
+    },
+    {
+      "name": "MolGraphEval",
+      "one_line_profile": "Benchmark for molecular graph embeddings",
+      "detailed_description": "A framework for evaluating self-supervised learning methods for molecular graph embeddings, as presented in NeurIPS '23.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "graph_representation_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hansen7/MolGraphEval",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-graphs",
+        "self-supervised-learning",
+        "benchmarking"
+      ],
+      "id": 74
+    },
+    {
+      "name": "DeepEI",
+      "one_line_profile": "Molecular fingerprint prediction from mass spectra",
+      "detailed_description": "A deep learning tool for predicting molecular fingerprints from electron-ionization mass spectra, aiding in structure elucidation.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "structure_elucidation",
+        "mass_spectrometry_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hcji/DeepEI",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mass-spectrometry",
+        "molecular-fingerprints",
+        "deep-learning"
+      ],
+      "id": 75
+    },
+    {
+      "name": "PyFingerprint",
+      "one_line_profile": "Molecular fingerprint generation tool",
+      "detailed_description": "A Python package for generating various types of molecular fingerprints, facilitating chemical similarity search and machine learning tasks.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "fingerprint_generation",
+        "feature_engineering"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hcji/PyFingerprint",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "molecular-fingerprints",
+        "cheminformatics",
+        "python"
+      ],
+      "id": 76
+    },
+    {
+      "name": "espsim",
+      "one_line_profile": "Shape and electrostatic similarity scoring",
+      "detailed_description": "A tool for calculating shape and Electrostatic Potential (ESP) similarity between molecules using RDKit, useful for drug discovery and virtual screening.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "similarity_scoring",
+        "molecular_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hesther/espsim",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "electrostatic-potential",
+        "molecular-similarity",
+        "rdkit"
+      ],
+      "id": 77
+    },
+    {
+      "name": "MatDGL",
+      "one_line_profile": "Graph neural network package for crystal modeling",
+      "detailed_description": "A neural network package based on DGL for training custom models for crystal modeling tasks, accelerating materials science research.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "crystal_modeling",
+        "graph_neural_networks"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/huzongxiang/MatDGL",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "crystal-structure",
+        "graph-neural-networks",
+        "materials-science"
+      ],
+      "id": 78
+    },
+    {
+      "name": "pyADA",
+      "one_line_profile": "Cheminformatics package for Applicability Domain calculation of molecular fingerprints",
+      "detailed_description": "A Python package designed to perform Applicability Domain (AD) analysis of molecular fingerprints based on similarity calculations, useful for validating QSAR models.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "applicability_domain",
+        "similarity_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/jeffrichardchemistry/pyADA",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cheminformatics",
+        "qsar",
+        "molecular-fingerprints"
+      ],
+      "id": 79
+    },
+    {
+      "name": "xyz2mol",
+      "one_line_profile": "Converter from XYZ coordinates to RDKit molecular objects",
+      "detailed_description": "A tool that converts XYZ atomic coordinates into RDKit Mol objects by inferring connectivity and bond orders, enabling the use of geometry-only data in cheminformatics pipelines.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "structure_conversion",
+        "graph_construction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jensengroup/xyz2mol",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rdkit",
+        "molecule-conversion",
+        "xyz-files"
+      ],
+      "id": 80
+    },
+    {
+      "name": "cddd",
+      "one_line_profile": "Continuous and Data-Driven Molecular Descriptors",
+      "detailed_description": "Implementation of a model to generate continuous, data-driven molecular descriptors by translating equivalent chemical representations, facilitating molecular property prediction and generation.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "molecular_descriptors",
+        "representation_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jrwnter/cddd",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-descriptors",
+        "deep-learning",
+        "cheminformatics"
+      ],
+      "id": 81
+    },
+    {
+      "name": "AQME",
+      "one_line_profile": "Automated Quantum Mechanical Environments for chemistry workflows",
+      "detailed_description": "A suite of automated workflows for conformer generation, QM input creation, and descriptor generation (xTB, DFT, RDKit), designed to make quantum mechanical calculations transparent and reproducible.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "conformer_generation",
+        "descriptor_calculation",
+        "qm_workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jvalegre/aqme",
+      "help_website": [
+        "https://aqme.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "quantum-chemistry",
+        "automation",
+        "descriptors"
+      ],
+      "id": 82
+    },
+    {
+      "name": "e3fp",
+      "one_line_profile": "3D molecular fingerprints generator",
+      "detailed_description": "A Python package for generating 3D molecular fingerprints (E3FP) from molecular structures, integrating with RDKit for conformer generation and processing.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "molecular_fingerprints",
+        "3d_descriptors"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/keiserlab/e3fp",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "fingerprints",
+        "3d-structure",
+        "cheminformatics"
+      ],
+      "id": 83
+    },
+    {
+      "name": "Scopy",
+      "one_line_profile": "Integrated negative design python library for HTS/VS database design",
+      "detailed_description": "A Python library for filtering and screening chemical libraries, focusing on negative design (removing undesirable compounds) for High-Throughput Screening (HTS) and Virtual Screening (VS).",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "library_design",
+        "screening",
+        "filtering"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kotori-y/Scopy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "drug-design",
+        "screening",
+        "filters"
+      ],
+      "id": 84
+    },
+    {
+      "name": "CausalFS",
+      "one_line_profile": "Causal feature selection and structure learning package",
+      "detailed_description": "An open-source package for causal feature selection and Bayesian network structure learning, providing algorithms to identify causal relationships in data.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "feature_selection",
+        "causal_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/kuiy/CausalFS",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "causal-inference",
+        "feature-selection",
+        "bayesian-networks"
+      ],
+      "id": 85
+    },
+    {
+      "name": "scikit-chem",
+      "one_line_profile": "High level cheminformatics package built on RDKit",
+      "detailed_description": "A cheminformatics library that provides a high-level, pythonic interface to RDKit, designed to integrate seamlessly with the Scientific Python stack (numpy, pandas, scipy).",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "cheminformatics",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lewisacidic/scikit-chem",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "rdkit",
+        "cheminformatics",
+        "pythonic"
+      ],
+      "id": 86
+    },
+    {
+      "name": "PIDGINv3",
+      "one_line_profile": "Protein target prediction using random forests",
+      "detailed_description": "A tool for predicting protein targets for chemical compounds using Random Forest models and reliability-density neighbourhood analysis.",
+      "domains": [
+        "M3",
+        "M3-03"
+      ],
+      "subtask_category": [
+        "target_prediction",
+        "bioactivity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lhm30/PIDGINv3",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "target-prediction",
+        "machine-learning",
+        "drug-discovery"
+      ],
+      "id": 87
+    },
+    {
+      "name": "eMolFrag",
+      "one_line_profile": "Molecular fragmentation tool based on BRICS algorithm",
+      "detailed_description": "A Python tool for decomposing molecules into fragments using the BRICS algorithm, useful for fragment-based drug design and molecular generation.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "molecular_fragmentation",
+        "structure_decomposition"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/liutairan/eMolFrag",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "fragmentation",
+        "brics",
+        "cheminformatics"
+      ],
+      "id": 88
+    },
+    {
+      "name": "molecule-attention-transformer",
+      "one_line_profile": "PyTorch implementation of Molecule Attention Transformer",
+      "detailed_description": "A PyTorch implementation of the Molecule Attention Transformer (MAT) architecture, designed to handle the graph-like structure of molecules for property prediction tasks.",
+      "domains": [
+        "M3",
+        "M3-03"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "graph_transformer"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lucidrains/molecule-attention-transformer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "transformer",
+        "molecular-graph",
+        "deep-learning"
+      ],
+      "id": 89
+    },
+    {
+      "name": "posebusters",
+      "one_line_profile": "Plausibility checks for generated molecule poses",
+      "detailed_description": "A tool for performing quality control and plausibility checks on generated molecular poses, ensuring physical validity and chemical correctness in drug discovery pipelines.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "pose_validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/maabuu/posebusters",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-docking",
+        "quality-control",
+        "drug-discovery"
+      ],
+      "id": 90
+    },
+    {
+      "name": "molecularGNN_smiles",
+      "one_line_profile": "Graph neural network for learning molecular representations from SMILES",
+      "detailed_description": "A graph neural network implementation that learns representations of r-radius subgraphs (fingerprints) in molecules for property prediction.",
+      "domains": [
+        "M3",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/masashitsubaki/molecularGNN_smiles",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gnn",
+        "molecular-fingerprints",
+        "smiles"
+      ],
+      "id": 91
+    },
+    {
+      "name": "PyMKS",
+      "one_line_profile": "Materials Knowledge System for structure-property linkages",
+      "detailed_description": "A Python framework for computing materials structure-property linkages using homogenization theories and machine learning, focusing on microstructure quantification.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "microstructure_analysis",
+        "property_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsinnovation/pymks",
+      "help_website": [
+        "https://pymks.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "microstructure",
+        "homogenization",
+        "materials-informatics"
+      ],
+      "id": 92
+    },
+    {
+      "name": "MPWorks",
+      "one_line_profile": "Workflow management system for the Materials Project",
+      "detailed_description": "A custom workflow package that merges pymatgen, custodian, and FireWorks to manage high-throughput calculations for the Materials Project.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "high_throughput_computing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/MPWorks",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "materials-project",
+        "workflow",
+        "vasp"
+      ],
+      "id": 93
+    },
+    {
+      "name": "MPmorph",
+      "one_line_profile": "Tools for ab-initio molecular dynamics (AIMD) analysis",
+      "detailed_description": "A collection of tools to run and analyze ab-initio molecular dynamics (AIMD) calculations, relying on the Materials Project infrastructure.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "trajectory_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/mpmorph",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "aimd",
+        "vasp",
+        "molecular-dynamics"
+      ],
+      "id": 94
+    },
+    {
+      "name": "pymatgen",
+      "one_line_profile": "Robust open-source python library for materials analysis",
+      "detailed_description": "A core library for materials analysis that defines classes for structures and molecules, providing support for input/output handling of many electronic structure codes and analysis tools.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "structure_analysis",
+        "electronic_structure",
+        "io_handling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen",
+      "help_website": [
+        "https://pymatgen.org"
+      ],
+      "license": "MIT",
+      "tags": [
+        "materials-analysis",
+        "crystallography",
+        "dft"
+      ],
+      "id": 95
+    },
+    {
+      "name": "pymatgen-analysis-alloys",
+      "one_line_profile": "Pymatgen add-on for alloy system analysis",
+      "detailed_description": "An add-on package for pymatgen containing classes and methods specifically designed for describing and analyzing alloy systems.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "alloy_analysis",
+        "structure_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-analysis-alloys",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "alloys",
+        "pymatgen-addon"
+      ],
+      "id": 96
+    },
+    {
+      "name": "pymatgen-analysis-defects",
+      "one_line_profile": "Defect analysis modules for pymatgen",
+      "detailed_description": "A specialized add-on for pymatgen to model and analyze point defects in materials, including formation energy calculations.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "defect_analysis",
+        "thermodynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-analysis-defects",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "defects",
+        "point-defects",
+        "semiconductors"
+      ],
+      "id": 97
+    },
+    {
+      "name": "pymatgen-db",
+      "one_line_profile": "Database management tool for Materials Project style data",
+      "detailed_description": "A tool to create and manage MongoDB databases for materials data, following the schema and conventions of the Materials Project.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "data_management",
+        "database_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-db",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "database",
+        "mongodb",
+        "materials-data"
+      ],
+      "id": 98
+    },
+    {
+      "name": "pymatgen-io-validation",
+      "one_line_profile": "Input/output validator for VASP calculations",
+      "detailed_description": "A comprehensive validator to ensure VASP calculation inputs and outputs are compatible with Materials Project standards and data integrity requirements.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "data_validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-io-validation",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "vasp",
+        "validation",
+        "qc"
+      ],
+      "id": 99
+    },
+    {
+      "name": "M3GNet",
+      "one_line_profile": "Materials graph network with 3-body interactions",
+      "detailed_description": "A graph neural network potential that includes 3-body interactions, capable of acting as a DFT surrogate for crystal relaxation and property prediction.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "potential_learning",
+        "structure_relaxation",
+        "property_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialyzeai/m3gnet",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "gnn",
+        "interatomic-potential",
+        "dft-surrogate"
+      ],
+      "id": 100
+    },
+    {
+      "name": "maml",
+      "one_line_profile": "Python for Materials Machine Learning",
+      "detailed_description": "A library for materials machine learning that provides implementations of various descriptors, machine learning force fields, and deep learning models.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "feature_engineering",
+        "machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/materialyzeai/maml",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "machine-learning",
+        "descriptors",
+        "force-fields"
+      ],
+      "id": 101
+    },
+    {
+      "name": "MEGNet",
+      "one_line_profile": "Graph Networks for Molecules and Crystals",
+      "detailed_description": "A scalable graph neural network framework for predicting properties of molecules and crystals, utilizing a universal graph representation.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "graph_representation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/materialyzeai/megnet",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "gnn",
+        "crystals",
+        "molecules"
+      ],
+      "id": 102
+    },
+    {
+      "name": "pymatgen-analysis-diffusion",
+      "one_line_profile": "Diffusion analysis tools for pymatgen",
+      "detailed_description": "An add-on to pymatgen providing algorithms and tools for analyzing diffusion pathways and mechanisms in materials, such as NEB analysis.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "diffusion_analysis",
+        "pathway_finding"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialyzeai/pymatgen-analysis-diffusion",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "diffusion",
+        "neb",
+        "ionic-conductivity"
+      ],
+      "id": 103
+    },
+    {
+      "name": "molecular_rectifier",
+      "one_line_profile": "Tool to correct unsanitizable RDKit molecules",
+      "detailed_description": "A utility that attempts to automatically correct and sanitize molecular structures that fail standard RDKit sanitization checks.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "data_cleaning",
+        "structure_correction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/matteoferla/molecular_rectifier",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rdkit",
+        "molecular-structure",
+        "sanitization"
+      ],
+      "id": 104
+    },
+    {
+      "name": "rdkit_to_params",
+      "one_line_profile": "Converter from RDKit molecules to Rosetta params files",
+      "detailed_description": "A tool to generate Rosetta topology (params) files from RDKit molecular objects, facilitating the use of small molecules in Rosetta simulations.",
+      "domains": [
+        "Chemistry",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "file_conversion",
+        "simulation_setup"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/matteoferla/rdkit_to_params",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rosetta",
+        "rdkit",
+        "topology-generation"
+      ],
+      "id": 105
+    },
+    {
+      "name": "MolVS",
+      "one_line_profile": "Molecule Validation and Standardization",
+      "detailed_description": "A Python library for validating, standardizing, and salt stripping of chemical structures to ensure data consistency in cheminformatics pipelines.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "data_standardization",
+        "quality_control"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mcs07/MolVS",
+      "help_website": [
+        "https://molvs.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "cheminformatics",
+        "standardization",
+        "rdkit"
+      ],
+      "id": 106
+    },
+    {
+      "name": "FS-Mol",
+      "one_line_profile": "Few-Shot Learning Dataset and Benchmark for Molecules",
+      "detailed_description": "A dataset and evaluation benchmark designed to drive research in few-shot learning for molecular property prediction and graph-structured data.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "dataset"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/FS-Mol",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "few-shot-learning",
+        "molecular-dataset",
+        "benchmark"
+      ],
+      "id": 107
+    },
+    {
+      "name": "mordred",
+      "one_line_profile": "Molecular descriptor calculator",
+      "detailed_description": "A python-based molecular descriptor calculator capable of calculating a large number of 2D and 3D descriptors.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "descriptor_calculation",
+        "feature_engineering"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mordred-descriptor/mordred",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "descriptors",
+        "cheminformatics",
+        "qsar"
+      ],
+      "id": 108
+    },
+    {
+      "name": "MolecularTransformerEmbeddings",
+      "one_line_profile": "Transformer for molecular text representations",
+      "detailed_description": "A Transformer neural network model trained to translate between molecular text representations and create continuous molecular embeddings.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "representation_learning",
+        "embedding_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/mpcrlab/MolecularTransformerEmbeddings",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "transformer",
+        "molecular-embeddings",
+        "smiles"
+      ],
+      "id": 109
+    },
+    {
+      "name": "litmatter",
+      "one_line_profile": "Deep learning on molecular and crystal graphs",
+      "detailed_description": "A framework for rapid experimentation and scaling of deep learning models specifically designed for molecular and crystal graph structures.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "graph_learning",
+        "model_training"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ncfrey/litmatter",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "crystals",
+        "deep-learning"
+      ],
+      "id": 110
+    },
+    {
+      "name": "GNNOpt",
+      "one_line_profile": "GNN for Optical Spectra Prediction",
+      "detailed_description": "A Universal Ensemble-Embedding Graph Neural Network designed for the direct prediction of optical spectra from crystal structures.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "optical_properties"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/nguyen-group/GNNOpt",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "optical-spectra",
+        "crystals"
+      ],
+      "id": 111
+    },
+    {
+      "name": "ODDT",
+      "one_line_profile": "Open Drug Discovery Toolkit",
+      "detailed_description": "A modular and comprehensive toolkit for drug discovery, providing methods for scoring functions, molecular descriptors, and interaction fingerprints.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "drug_discovery",
+        "descriptor_calculation",
+        "scoring"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/oddt/oddt",
+      "help_website": [
+        "http://oddt.readthedocs.org"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "drug-discovery",
+        "cheminformatics",
+        "molecular-docking"
+      ],
+      "id": 112
+    },
+    {
+      "name": "osmordred",
+      "one_line_profile": "C++ port of Mordred descriptor calculator",
+      "detailed_description": "A high-performance C++ implementation of the Mordred molecular descriptor calculator, enabling faster computation of molecular features.",
+      "domains": [
+        "Chemistry",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "descriptor_calculation",
+        "performance_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/osmoai/osmordred",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cpp",
+        "descriptors",
+        "mordred"
+      ],
+      "id": 113
+    },
+    {
+      "name": "Lobster",
+      "one_line_profile": "Language models for biological sequence transformation and evolutionary representation",
+      "detailed_description": "A library for training and using language models on biological sequences (proteins), enabling tasks like sequence generation, property prediction, and evolutionary analysis.",
+      "domains": [
+        "Biology",
+        "M3"
+      ],
+      "subtask_category": [
+        "sequence_modeling",
+        "representation_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/prescient-design/lobster",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "protein-language-model",
+        "evolutionary-scale-modeling",
+        "biological-sequences"
+      ],
+      "id": 114
+    },
+    {
+      "name": "PyPLIF-HIPPOS",
+      "one_line_profile": "Molecular interaction fingerprinting tool for docking results analysis",
+      "detailed_description": "A tool to generate protein-ligand interaction fingerprints (PLIF) from docking results (AutoDock Vina/PLANTS), facilitating post-docking analysis and virtual screening.",
+      "domains": [
+        "M3",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "fingerprint_generation",
+        "docking_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/radifar/PyPLIF-HIPPOS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "molecular-docking",
+        "interaction-fingerprints",
+        "virtual-screening"
+      ],
+      "id": 115
+    },
+    {
+      "name": "RDKit",
+      "one_line_profile": "Open source cheminformatics and machine learning software",
+      "detailed_description": "The de facto standard library for cheminformatics, providing functionality for molecule manipulation, descriptor generation, fingerprinting, and chemical reaction handling.",
+      "domains": [
+        "M3",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "molecular_representation",
+        "descriptor_calculation",
+        "cheminformatics"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rdkit/rdkit",
+      "help_website": [
+        "https://www.rdkit.org/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cheminformatics",
+        "molecular-descriptors",
+        "smiles-processing"
+      ],
+      "id": 116
+    },
+    {
+      "name": "RDKit.js",
+      "one_line_profile": "JavaScript distribution of RDKit for web-based cheminformatics",
+      "detailed_description": "A JavaScript library that exposes RDKit functionality to web browsers, enabling client-side molecule rendering, substructure search, and descriptor calculation.",
+      "domains": [
+        "M3",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "web_cheminformatics"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/rdkit/rdkit-js",
+      "help_website": [
+        "https://rdkit.org/docs/js/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "web-assembly",
+        "molecule-rendering",
+        "javascript"
+      ],
+      "id": 117
+    },
+    {
+      "name": "MHFP",
+      "one_line_profile": "Molecular MHFP fingerprints for cheminformatics applications",
+      "detailed_description": "Implementation of MinHash Fingerprints (MHFP), a molecular fingerprinting method designed for scalable similarity search and machine learning applications.",
+      "domains": [
+        "M3",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "fingerprint_generation",
+        "similarity_search"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/reymond-group/mhfp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "minhash",
+        "molecular-fingerprints",
+        "similarity-search"
+      ],
+      "id": 118
+    },
+    {
+      "name": "Chemicalite",
+      "one_line_profile": "SQLite extension for chemoinformatics applications",
+      "detailed_description": "A chemical database extension for SQLite that adds support for molecular structure storage, substructure search, and descriptor calculation directly within SQL queries.",
+      "domains": [
+        "M3",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "data_management",
+        "structure_search"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rvianello/chemicalite",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "sqlite-extension",
+        "chemical-database",
+        "rdkit-integration"
+      ],
+      "id": 119
+    },
+    {
+      "name": "rxnfp",
+      "one_line_profile": "Reaction fingerprints generation using attention-based neural networks",
+      "detailed_description": "A library for generating data-driven fingerprints for chemical reactions using Transformer-based models (BERT), enabling reaction classification and mapping.",
+      "domains": [
+        "M3",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "reaction_representation",
+        "fingerprint_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rxn4chemistry/rxnfp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reaction-fingerprints",
+        "transformers",
+        "chemical-reactions"
+      ],
+      "id": 120
+    },
+    {
+      "name": "PySKTB",
+      "one_line_profile": "Python package for solving Slater-Koster tight-binding hamiltonians",
+      "detailed_description": "A scientific package for constructing and solving Slater-Koster tight-binding models for electronic structure calculations in materials science.",
+      "domains": [
+        "M3",
+        "Physics"
+      ],
+      "subtask_category": [
+        "electronic_structure",
+        "hamiltonian_construction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/santoshkumarradha/pysktb",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "tight-binding",
+        "electronic-structure",
+        "materials-modeling"
+      ],
+      "id": 121
+    },
+    {
+      "name": "scikit-fingerprints",
+      "one_line_profile": "Scikit-learn compatible library for molecular fingerprints and chemoinformatics",
+      "detailed_description": "A comprehensive Python library for generating molecular fingerprints, designed to be compatible with the scikit-learn ecosystem. It facilitates the calculation of various molecular descriptors and fingerprints for chemoinformatics and machine learning applications in drug discovery and materials science.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "feature_engineering",
+        "molecular_representation",
+        "chemoinformatics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scikit-fingerprints/scikit-fingerprints",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-fingerprints",
+        "chemoinformatics",
+        "scikit-learn",
+        "descriptors"
+      ],
+      "id": 122
+    },
+    {
+      "name": "lobster-local",
+      "one_line_profile": "Bioinformatics analysis tool leveraging LLMs",
+      "detailed_description": "A local bioinformatics tool described as 'Claude-Code for Bioinformatics', designed to assist researchers in performing bioinformatics tasks through a natural language interface or automated agents, likely integrating Large Language Models for code generation and data analysis.",
+      "domains": [
+        "B1",
+        "B2"
+      ],
+      "subtask_category": [
+        "bioinformatics_analysis",
+        "code_generation",
+        "workflow_automation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/the-omics-os/lobster-local",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "bioinformatics",
+        "llm",
+        "agent",
+        "automation"
+      ],
+      "id": 123
+    },
+    {
+      "name": "MolScribe",
+      "one_line_profile": "Robust Molecular Structure Recognition with Image-to-Graph Generation",
+      "detailed_description": "A deep learning tool for converting images of chemical molecules into machine-readable graph representations (molecular structure recognition). It enables the extraction of chemical information from literature and patents.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "molecular_structure_recognition",
+        "image_to_graph",
+        "data_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/thomas0809/MolScribe",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-recognition",
+        "image-to-graph",
+        "deep-learning",
+        "chemistry"
+      ],
+      "id": 124
+    },
+    {
+      "name": "pharmacophore-toolkit",
+      "one_line_profile": "Generate simple pharmacophore models from RDKit",
+      "detailed_description": "A toolkit for generating pharmacophore models using RDKit. It aids in drug discovery by identifying the spatial arrangement of features necessary for molecular recognition.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "pharmacophore_modeling",
+        "drug_discovery",
+        "feature_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/tlint101/pharmacophore-toolkit",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "pharmacophore",
+        "rdkit",
+        "drug-discovery",
+        "chemoinformatics"
+      ],
+      "id": 125
+    },
+    {
+      "name": "cgcnn",
+      "one_line_profile": "Crystal graph convolutional neural networks for predicting material properties",
+      "detailed_description": "The original implementation of Crystal Graph Convolutional Neural Networks (CGCNN). It provides a framework for learning material properties directly from the connection of atoms in the crystal, serving as a standard tool for materials property prediction.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "graph_representation",
+        "materials_science"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/txie-93/cgcnn",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "crystal-structure",
+        "materials-science",
+        "deep-learning"
+      ],
+      "id": 126
+    },
+    {
+      "name": "JARVIS-Tools",
+      "one_line_profile": "Open-source software package for data-driven atomistic materials design",
+      "detailed_description": "A comprehensive software package from NIST for data-driven atomistic materials design. It includes tools for high-throughput density functional theory (DFT) calculations, machine learning force fields, and materials property prediction.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "materials_design",
+        "high_throughput_screening",
+        "atomistic_simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/usnistgov/jarvis",
+      "help_website": [
+        "https://jarvis.nist.gov/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "materials-design",
+        "dft",
+        "machine-learning",
+        "nist"
+      ],
+      "id": 127
+    },
+    {
+      "name": "MAST",
+      "one_line_profile": "MAterials Simulation Toolkit for use with pymatgen",
+      "detailed_description": "A toolkit developed by the University of Wisconsin Computational Materials Group for automating materials simulations. It works in conjunction with pymatgen to manage and execute computational workflows.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "simulation_workflow",
+        "automation",
+        "materials_science"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uw-cmg/MAST",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "materials-simulation",
+        "workflow",
+        "pymatgen",
+        "automation"
+      ],
+      "id": 128
+    },
+    {
+      "name": "molplotly",
+      "one_line_profile": "Add-on to plotly which show molecule images on mouseover",
+      "detailed_description": "A Python library that extends Plotly to provide interactive visualizations for chemical data. It allows users to view molecular structures as tooltips when hovering over data points in scatter plots, facilitating the exploration of chemical space.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "visualization",
+        "chemoinformatics",
+        "data_exploration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wjm41/molplotly",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "visualization",
+        "plotly",
+        "chemistry",
+        "interactive"
+      ],
+      "id": 129
+    },
+    {
+      "name": "SLICES",
+      "one_line_profile": "Invertible and invariant string-based crystal representation for materials generation",
+      "detailed_description": "SLICES is a Python library that implements an invertible, invariant, and string-based representation for crystal structures. It is designed to facilitate inverse design and generative modeling in materials science by converting crystal structures into string formats suitable for language models like MatterGPT.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "representation_learning",
+        "inverse_design",
+        "generative_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xiaohang007/SLICES",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "crystal-representation",
+        "materials-informatics",
+        "generative-models"
+      ],
+      "id": 130
+    },
+    {
+      "name": "XenonPy",
+      "one_line_profile": "Materials informatics platform for descriptor calculation and transfer learning",
+      "detailed_description": "XenonPy is a comprehensive Python library for materials informatics. It provides a rich set of pre-trained models and tools for calculating physicochemical descriptors (compositional, structural) and performing transfer learning for materials property prediction.",
+      "domains": [
+        "M3",
+        "M3-02"
+      ],
+      "subtask_category": [
+        "descriptor_calculation",
+        "property_prediction",
+        "transfer_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yoshida-lab/XenonPy",
+      "help_website": [
+        "https://xenonpy.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "materials-informatics",
+        "descriptors",
+        "transfer-learning"
+      ],
+      "id": 131
+    },
+    {
+      "name": "ternary-diagram",
+      "one_line_profile": "Tool for plotting ternary phase diagrams in materials science",
+      "detailed_description": "A Python package designed to simplify the creation of publication-quality ternary diagrams (phase diagrams) for materials science, offering an alternative to heavier frameworks like pymatgen for specific visualization tasks.",
+      "domains": [
+        "M3"
+      ],
+      "subtask_category": [
+        "visualization",
+        "phase_diagram_plotting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yu9824/ternary-diagram",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "phase-diagram",
+        "ternary-plot"
+      ],
+      "id": 132
+    }
+  ]
+}

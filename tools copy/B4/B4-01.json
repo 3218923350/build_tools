@@ -1,0 +1,1636 @@
+{
+  "generated_at": "2025-12-16T16:02:09.366364+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "B4",
+      "leaf_cluster_name": "生信-宏基因组与微生物生态",
+      "domain": "Bioinfo",
+      "typical_objects": "metagenome reads, MAGs",
+      "task_chain": "组装→分箱→分类→功能注释→统计→benchmark",
+      "tool_form": "CLI + 数据库 + workflow"
+    },
+    "unit": {
+      "unit_id": "B4-01",
+      "unit_name": "reads QC/去宿主/污染控制",
+      "target_scale": "200–450",
+      "coverage_tools": "QC、host removal、dedup、filter"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] Chopper",
+        "[GH] NanoPlot",
+        "[GH] Bowtie2",
+        "[GH] BBTools",
+        "[GH] KneadData",
+        "[GH] fastp",
+        "[GH] Cutadapt",
+        "[GH] Trimmomatic",
+        "[GH] MultiQC",
+        "[GH] FastQC",
+        "[GH] fastq quality control",
+        "[GH] metagenomics preprocessing",
+        "[GH] adapter trimming",
+        "[GH] host removal sequencing",
+        "[GH] read filtering",
+        "[GH] sequence decontamination",
+        "[GH] fastq deduplication",
+        "[GH] long read qc",
+        "[GH] bioinformatics qc pipeline",
+        "[GH] ngs data cleaning",
+        "[GH] read trimmer",
+        "[GH] human contamination removal",
+        "[WEB] metagenomics reads quality control tools github",
+        "[WEB] fastq host contamination removal github",
+        "[WEB] adapter trimming software bioinformatics github",
+        "[WEB] sequencing data preprocessing pipeline github",
+        "[WEB] nanopore reads quality control github"
+      ],
+      "total_candidates": 844,
+      "tool_candidates": 276,
+      "final_tools": 62
+    }
+  },
+  "tools": [
+    {
+      "name": "shark",
+      "one_line_profile": "Mapping-free read selection tool for RNA-Seq data",
+      "detailed_description": "Shark is a mapping-free software designed to fish relevant reads in an RNA-Seq sample, optimizing the process of selecting specific sequences without full alignment.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "read_filtering",
+        "rna_seq_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AlgoLab/shark",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "rna-seq",
+        "read-filtering",
+        "mapping-free"
+      ],
+      "id": 1
+    },
+    {
+      "name": "Arcadia-Science/metagenomics",
+      "one_line_profile": "Nextflow workflow for metagenomic QC and profiling",
+      "detailed_description": "A Nextflow workflow designed for quality control, evaluation, and profiling of metagenomic samples, supporting both short-read and long-read sequencing technologies.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "metagenomic_profiling",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/Arcadia-Science/metagenomics",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "metagenomics",
+        "nextflow",
+        "quality-control",
+        "profiling"
+      ],
+      "id": 2
+    },
+    {
+      "name": "SOAPnuke",
+      "one_line_profile": "Integrated quality control and preprocessing tool for NGS data",
+      "detailed_description": "A tool for integrated Quality Control and Preprocessing on FASTQ or BAM/CRAM files, developed by BGI. It performs filtering, trimming, and statistics generation for high-throughput sequencing data.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "preprocessing",
+        "trimming"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/BGI-flexlab/SOAPnuke",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "fastq",
+        "bam",
+        "quality-control",
+        "preprocessing"
+      ],
+      "id": 3
+    },
+    {
+      "name": "Bowtie 2",
+      "one_line_profile": "Fast and sensitive gapped read aligner",
+      "detailed_description": "Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences. It supports gapped alignment and is widely used in NGS workflows.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "alignment",
+        "read_mapping"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/BenLangmead/bowtie2",
+      "help_website": [
+        "http://bowtie-bio.sourceforge.net/bowtie2/index.shtml"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "alignment",
+        "ngs",
+        "read-mapping"
+      ],
+      "id": 4
+    },
+    {
+      "name": "GateKeeper",
+      "one_line_profile": "FPGA-accelerated pre-alignment filter for DNA short reads",
+      "detailed_description": "GateKeeper is a fast alignment filter for DNA short read mapping, designed to quickly reject dissimilar sequences before expensive alignment steps, often utilizing FPGA acceleration.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "alignment_filtering",
+        "pre_alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "VHDL",
+      "repo_url": "https://github.com/BilkentCompGen/GateKeeper",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "alignment-filter",
+        "fpga",
+        "acceleration"
+      ],
+      "id": 5
+    },
+    {
+      "name": "bamql",
+      "one_line_profile": "Query language for filtering SAM/BAM reads",
+      "detailed_description": "BamQL provides a query language syntax for filtering reads in SAM/BAM files, allowing for complex selection criteria beyond standard flag filtering.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "data_filtering",
+        "sam_bam_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/BoutrosLaboratory/bamql",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "bam",
+        "sam",
+        "filtering",
+        "query-language"
+      ],
+      "id": 6
+    },
+    {
+      "name": "SanitizeMe",
+      "one_line_profile": "Host contaminant removal tool for sequencing data",
+      "detailed_description": "A tool developed by CDC to remove host contaminants from sequencing files, ensuring privacy and data cleanliness for downstream analysis.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "host_removal",
+        "contamination_control"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CDCgov/SanitizeMe",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "decontamination",
+        "host-removal",
+        "sequencing"
+      ],
+      "id": 7
+    },
+    {
+      "name": "SneakySnake",
+      "one_line_profile": "Hardware-efficient pre-alignment filtering algorithm",
+      "detailed_description": "SneakySnake is a pre-alignment filtering algorithm that works efficiently on CPU, FPGA, and GPU architectures to expedite sequence alignment calculation for both short and long reads.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "alignment_filtering",
+        "pre_alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "VHDL",
+      "repo_url": "https://github.com/CMU-SAFARI/SneakySnake",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "alignment-filter",
+        "acceleration",
+        "genomics"
+      ],
+      "id": 8
+    },
+    {
+      "name": "CebolaLab/RNA-seq",
+      "one_line_profile": "Step-by-step analysis pipeline for RNA-seq data",
+      "detailed_description": "A shell-based analysis pipeline for RNA-seq data processing, covering steps from raw reads to expression quantification.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "rna_seq_analysis",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/CebolaLab/RNA-seq",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rna-seq",
+        "pipeline",
+        "analysis"
+      ],
+      "id": 9
+    },
+    {
+      "name": "fadapa",
+      "one_line_profile": "Parser for FastQC output data",
+      "detailed_description": "FAstqc DAta PArser (fadapa) is a minimal Python library to parse FastQC output data into a structured format for programmatic access.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "qc_report_parsing",
+        "quality_control"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ChillarAnand/fadapa",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "fastqc",
+        "parser",
+        "python"
+      ],
+      "id": 10
+    },
+    {
+      "name": "UMICollapse",
+      "one_line_profile": "Fast deduplication for reads with Unique Molecular Identifiers",
+      "detailed_description": "Accelerating the deduplication and collapsing process for reads with Unique Molecular Identifiers (UMI). Heavily optimized for scalability and speed.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "deduplication",
+        "umi_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/Daniel-Liu-c0deb0t/UMICollapse",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "umi",
+        "deduplication",
+        "ngs"
+      ],
+      "id": 11
+    },
+    {
+      "name": "TrimGalore",
+      "one_line_profile": "Wrapper for Cutadapt and FastQC for consistent trimming",
+      "detailed_description": "A wrapper around Cutadapt and FastQC to consistently apply adapter and quality trimming to FastQ files, with extra functionality for RRBS data.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "adapter_trimming"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/FelixKrueger/TrimGalore",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "trimming",
+        "fastqc",
+        "cutadapt",
+        "ngs"
+      ],
+      "id": 12
+    },
+    {
+      "name": "sra-pipeline",
+      "one_line_profile": "Pipeline to download and process SRA files",
+      "detailed_description": "A pipeline to download sra files from SRA, pipe through fastq_dump and bowtie2, designed for containerized execution.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "data_retrieval",
+        "alignment_workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FredHutch/sra-pipeline",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "sra",
+        "pipeline",
+        "fastq-dump"
+      ],
+      "id": 13
+    },
+    {
+      "name": "toulligQC",
+      "one_line_profile": "Post-sequencing QC tool for Oxford Nanopore data",
+      "detailed_description": "A post sequencing QC tool specifically designed for Oxford Nanopore sequencers to evaluate run quality and read statistics.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "nanopore_qc"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/GenomiqueENS/toulligQC",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nanopore",
+        "quality-control",
+        "ont"
+      ],
+      "id": 14
+    },
+    {
+      "name": "dropSeqPipe",
+      "one_line_profile": "Snakemake workflow for Drop-Seq scRNA-seq preprocessing",
+      "detailed_description": "A SingleCell RNASeq pre-processing snakemake workflow, specifically tailored for Drop-Seq data analysis.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "scrna_seq_processing",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Hoohm/dropSeqPipe",
+      "help_website": [],
+      "license": "CC-BY-SA-4.0",
+      "tags": [
+        "single-cell",
+        "drop-seq",
+        "snakemake",
+        "pipeline"
+      ],
+      "id": 15
+    },
+    {
+      "name": "TGSFilter",
+      "one_line_profile": "Ultra-fast filtering and trimming tool for long reads",
+      "detailed_description": "TGSFilter is an efficient tool designed for the filtering and trimming of Third Generation Sequencing (long read) data.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "long_read_filtering",
+        "trimming"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/HuiyangYu/TGSFilter",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "long-reads",
+        "filtering",
+        "trimming"
+      ],
+      "id": 16
+    },
+    {
+      "name": "fastprop",
+      "one_line_profile": "Fast molecular property prediction library",
+      "detailed_description": "Fast Molecular Property Prediction using mordredcommunity descriptors, designed for cheminformatics and materials science applications.",
+      "domains": [
+        "Chemistry",
+        "Materials"
+      ],
+      "subtask_category": [
+        "molecular_property_prediction",
+        "qsar"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JacksonBurns/fastprop",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cheminformatics",
+        "molecular-properties",
+        "prediction"
+      ],
+      "id": 17
+    },
+    {
+      "name": "AliNe",
+      "one_line_profile": "Nextflow alignment pipeline from FASTQ to BAM",
+      "detailed_description": "A Nextflow Alignment Pipeline that processes raw fastq.gz files into sorted BAM files, streamlining the alignment workflow.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "alignment_workflow",
+        "preprocessing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/Juke34/AliNe",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "alignment",
+        "nextflow",
+        "pipeline"
+      ],
+      "id": 18
+    },
+    {
+      "name": "vtkToolbox",
+      "one_line_profile": "MATLAB interface for VTK scientific visualization",
+      "detailed_description": "A MEX interface to the VTK library, providing MATLAB functions to read/write VTK files and apply VTK filters for scientific visualization and data processing.",
+      "domains": [
+        "Scientific_Visualization"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/KIT-IBT/vtkToolbox",
+      "help_website": [],
+      "license": "MPL-2.0",
+      "tags": [
+        "vtk",
+        "matlab",
+        "visualization"
+      ],
+      "id": 19
+    },
+    {
+      "name": "FastqCLS",
+      "one_line_profile": "Score-based reordering compressor for FASTQ data",
+      "detailed_description": "A robust FASTQ-specific compressor for recent generation sequencing data that utilizes score-based reordering to improve compression ratios.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "data_compression",
+        "fastq_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Krlucete/FastqCLS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "compression",
+        "fastq",
+        "bioinformatics"
+      ],
+      "id": 20
+    },
+    {
+      "name": "Natrix",
+      "one_line_profile": "Bioinformatics pipeline for raw sequencing data preprocessing",
+      "detailed_description": "An open-source bioinformatics pipeline designed for the preprocessing of raw sequencing data, including quality control and filtering steps.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "preprocessing_workflow",
+        "quality_control"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MW55/Natrix",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pipeline",
+        "preprocessing",
+        "ngs"
+      ],
+      "id": 21
+    },
+    {
+      "name": "DAmar",
+      "one_line_profile": "Long read QC, assembly and scaffolding pipeline",
+      "detailed_description": "A pipeline for Quality Control, assembly, and scaffolding of long-read sequencing data.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "assembly",
+        "quality_control",
+        "scaffolding"
+      ],
+      "application_level": "workflow",
+      "primary_language": "C",
+      "repo_url": "https://github.com/MartinPippel/DAmar",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "long-reads",
+        "assembly",
+        "pipeline"
+      ],
+      "id": 22
+    },
+    {
+      "name": "FastProNGS",
+      "one_line_profile": "Integrated tool for FASTQ QC, trimming, and statistics",
+      "detailed_description": "A tool used to cut adapter, perform quality control, trimming, splitting, and statistics generation for fastq data.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "preprocessing",
+        "trimming"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/Megagenomics/FastProNGS",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "fastq",
+        "quality-control",
+        "trimming"
+      ],
+      "id": 23
+    },
+    {
+      "name": "Ktrim",
+      "one_line_profile": "Extra-fast and accurate adapter and quality trimmer for sequencing data",
+      "detailed_description": "Ktrim is a lightweight and efficient tool designed for the quality control of high-throughput sequencing data. It performs adapter trimming and quality filtering with high speed and accuracy, suitable for preprocessing raw reads before downstream analysis.",
+      "domains": [
+        "Bioinfo",
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "adapter_trimming",
+        "read_filtering"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/hellosunking/Ktrim",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ngs",
+        "trimming",
+        "quality-control",
+        "fastq"
+      ],
+      "id": 24
+    },
+    {
+      "name": "HoCoRT",
+      "one_line_profile": "Host Contamination Removal Tool for sequencing reads",
+      "detailed_description": "HoCoRT (Host Contamination Removal Tool) is a pipeline designed to efficiently remove specific organism sequences (such as host contamination) from sequencing reads. It utilizes fast alignment tools like Bowtie2 and Hisat2 to filter out unwanted reads while preserving the target microbial data.",
+      "domains": [
+        "Bioinfo",
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "decontamination",
+        "host_removal",
+        "read_filtering"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ignasrum/hocort",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "metagenomics",
+        "contamination-removal",
+        "fastq",
+        "host-filtering"
+      ],
+      "id": 25
+    },
+    {
+      "name": "AlignQC",
+      "one_line_profile": "Analysis and quality control tool for long read alignments",
+      "detailed_description": "AlignQC is a tool for analyzing long-read sequencing alignments. It generates comprehensive reports on mappability, error patterns, and read characteristics from BAM files, outputting XHTML reports for visualization and quality assessment of long-read data.",
+      "domains": [
+        "Bioinfo",
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "alignment_analysis",
+        "long_read_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jason-weirather/AlignQC",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "long-reads",
+        "bam",
+        "quality-control",
+        "alignment"
+      ],
+      "id": 26
+    },
+    {
+      "name": "eASV-pipeline-for-515Y-926R",
+      "one_line_profile": "Pipeline for analyzing mixed 16S/18S amplicon sequences",
+      "detailed_description": "This pipeline is designed for the analysis of mixed 16S and 18S amplicon sequences, specifically targeting the 515Y-926R primer set. It integrates tools like QIIME2, DADA2, and Deblur to perform quality control, denoising, and taxonomic classification for microbial ecology studies.",
+      "domains": [
+        "Bioinfo",
+        "B4"
+      ],
+      "subtask_category": [
+        "amplicon_analysis",
+        "microbial_ecology",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/jcmcnch/eASV-pipeline-for-515Y-926R",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "16s",
+        "18s",
+        "microbiome",
+        "qiime2"
+      ],
+      "id": 27
+    },
+    {
+      "name": "needLR",
+      "one_line_profile": "Structural variant filtering and prioritization for long-read data",
+      "detailed_description": "needLR is a tool for filtering and prioritizing structural variants (SVs) detected in long-read sequencing data. It helps in reducing false positives and identifying high-confidence SVs for downstream genomic analysis.",
+      "domains": [
+        "Bioinfo"
+      ],
+      "subtask_category": [
+        "variant_filtering",
+        "structural_variant_analysis",
+        "long_read_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/jgust1/needLR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variants",
+        "long-reads",
+        "filtering"
+      ],
+      "id": 28
+    },
+    {
+      "name": "TaxTriage",
+      "one_line_profile": "Nextflow workflow for agnostic identification and classification of microbial organisms",
+      "detailed_description": "TaxTriage is a flexible Nextflow workflow designed for the agnostic identification and classification of microbial organisms from both short-read and long-read metagenomic NGS data. It facilitates rapid triage and analysis of metagenomic samples.",
+      "domains": [
+        "Bioinfo",
+        "B4"
+      ],
+      "subtask_category": [
+        "metagenomics",
+        "taxonomic_classification",
+        "microbial_identification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/jhuapl-bio/taxtriage",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "metagenomics",
+        "nextflow",
+        "classification",
+        "microbiome"
+      ],
+      "id": 29
+    },
+    {
+      "name": "fastqcr",
+      "one_line_profile": "R package for quality control of sequencing data",
+      "detailed_description": "fastqcr is an R package that facilitates the quality control of sequencing data. It allows users to run FastQC from within R, aggregate the results, and generate summary reports, streamlining the QC process for large datasets.",
+      "domains": [
+        "Bioinfo",
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "qc_reporting",
+        "fastq_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/kassambara/fastqcr",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "r",
+        "fastqc",
+        "quality-control",
+        "ngs"
+      ],
+      "id": 30
+    },
+    {
+      "name": "FastQt",
+      "one_line_profile": "FastQC port to Qt5 for high throughput sequence data quality control",
+      "detailed_description": "FastQt is a graphical user interface tool for quality control of high-throughput sequencing data, ported from FastQC to the Qt5 framework. It provides an interactive environment for visualizing and assessing the quality of sequencing reads.",
+      "domains": [
+        "Bioinfo",
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "visualization",
+        "gui"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/labsquare/FastQt",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "fastqc",
+        "qt",
+        "quality-control",
+        "gui"
+      ],
+      "id": 31
+    },
+    {
+      "name": "FastqCleaner",
+      "one_line_profile": "Shiny application for quality control, filtering, and trimming of FASTQ files",
+      "detailed_description": "FastqCleaner is a Bioconductor package providing a Shiny web application and R functions for the quality control, filtering, and trimming of FASTQ files. It offers a user-friendly interface for preprocessing sequencing data.",
+      "domains": [
+        "Bioinfo",
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "trimming",
+        "filtering",
+        "interactive_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/leandroroser/FastqCleaner",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "shiny",
+        "bioconductor",
+        "fastq",
+        "preprocessing"
+      ],
+      "id": 32
+    },
+    {
+      "name": "trimadap",
+      "one_line_profile": "Fast but inaccurate adapter trimmer for Illumina reads",
+      "detailed_description": "trimadap is a lightweight C tool developed by Heng Li for removing adapter sequences from Illumina sequencing reads. It prioritizes speed and is designed for specific use cases where heuristic trimming is sufficient.",
+      "domains": [
+        "Bioinfo",
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "adapter_trimming",
+        "read_preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/lh3/trimadap",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "illumina",
+        "trimming",
+        "ngs"
+      ],
+      "id": 33
+    },
+    {
+      "name": "primer-trimming",
+      "one_line_profile": "Fast C code for identifying and removing primers and adapters",
+      "detailed_description": "primer-trimming is a fast C-based utility for identifying and removing primer and adapter sequences from sequencing data. It is designed for efficient preprocessing of reads in metagenomic and genomic workflows.",
+      "domains": [
+        "Bioinfo",
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "primer_removal",
+        "adapter_trimming",
+        "preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/linsalrob/primer-trimming",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "c",
+        "trimming",
+        "primers",
+        "adapters"
+      ],
+      "id": 34
+    },
+    {
+      "name": "Cutadapt",
+      "one_line_profile": "Tool to remove adapter sequences, primers, poly-A tails and other unwanted sequence from high-throughput sequencing reads",
+      "detailed_description": "Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads. It is one of the most widely used tools for cleaning NGS data before alignment or assembly.",
+      "domains": [
+        "Bioinfo",
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "adapter_trimming",
+        "quality_control",
+        "read_preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/marcelm/cutadapt",
+      "help_website": [
+        "https://cutadapt.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "ngs",
+        "trimming",
+        "adapters",
+        "fastq"
+      ],
+      "id": 35
+    },
+    {
+      "name": "slide_snake",
+      "one_line_profile": "Snakemake pipeline for spatial transcriptomics data processing",
+      "detailed_description": "slide_snake is a Snakemake pipeline designed for the preprocessing, alignment, quality control, and quantification of spatial transcriptomics data. It supports both short-read and long-read sequencing technologies.",
+      "domains": [
+        "Bioinfo"
+      ],
+      "subtask_category": [
+        "spatial_transcriptomics",
+        "pipeline",
+        "quantification",
+        "alignment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mckellardw/slide_snake",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spatial-transcriptomics",
+        "snakemake",
+        "pipeline",
+        "rna-seq"
+      ],
+      "id": 36
+    },
+    {
+      "name": "Metagenomics-Toolkit",
+      "one_line_profile": "Scalable, data-agnostic workflow for short and long metagenomic read analysis",
+      "detailed_description": "A scalable workflow that automates the analysis of short and long metagenomic reads obtained from Illumina or Oxford Nanopore Technology devices. It handles quality control, assembly, and other downstream tasks in a reproducible manner.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "workflow",
+        "quality_control",
+        "assembly"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/metagenomics/metagenomics-tk",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "metagenomics",
+        "workflow",
+        "illumina",
+        "nanopore",
+        "quality-control"
+      ],
+      "id": 37
+    },
+    {
+      "name": "ChIPSeqFPro",
+      "one_line_profile": "Automated processing script for ChIP-Seq data from FASTQ to peaks",
+      "detailed_description": "A script for full processing of ChIP-Seq data starting from fastq files. It performs FastQC quality control, mapping to human or mouse genomes using BWA, SAM/BAM conversion, peak calling with MACS, and BigWig generation.",
+      "domains": [
+        "Bioinfo",
+        "Epigenetics"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "alignment",
+        "peak_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/milospjanic/ChIPSeqFPro",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "chip-seq",
+        "pipeline",
+        "fastqc",
+        "bwa",
+        "macs"
+      ],
+      "id": 38
+    },
+    {
+      "name": "rnaSeqFPro",
+      "one_line_profile": "Automated processing script for RNA-Seq data analysis",
+      "detailed_description": "A script for full processing of RNA-Seq data starting from fastq files. It integrates FastQC, STAR mapping, featureCounts, and DESeq2 for differential expression analysis and visualization.",
+      "domains": [
+        "Bioinfo",
+        "Transcriptomics"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "alignment",
+        "quantification",
+        "differential_expression"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/milospjanic/rnaSeqFPro",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "rna-seq",
+        "pipeline",
+        "star",
+        "deseq2",
+        "fastqc"
+      ],
+      "id": 39
+    },
+    {
+      "name": "Ancient_mtDNA_Pipeline",
+      "one_line_profile": "Pipeline for processing ancient mitochondrial DNA paired-end reads",
+      "detailed_description": "Analysis pipeline designed for processing paired-end Illumina reads obtained after ancient mtDNA target enrichment capture, handling the specific characteristics of ancient DNA damage and processing.",
+      "domains": [
+        "Bioinfo",
+        "Paleogenomics"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "alignment",
+        "variant_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/mnievesc/Ancient_mtDNA_Pipeline",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "ancient-dna",
+        "mtdna",
+        "pipeline",
+        "illumina"
+      ],
+      "id": 40
+    },
+    {
+      "name": "TidyMultiqc",
+      "one_line_profile": "Converter for MultiQC reports into Tidy data frames",
+      "detailed_description": "A utility that converts 'MultiQC' reports into Tidy data frames, facilitating downstream statistical analysis and visualization of quality control metrics within the R ecosystem.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "data_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/multimeric/TidyMultiqc",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "multiqc",
+        "r",
+        "tidy-data",
+        "quality-control"
+      ],
+      "id": 41
+    },
+    {
+      "name": "nf-cmgg/preprocessing",
+      "one_line_profile": "Sequencing data preprocessing workflow",
+      "detailed_description": "A Nextflow workflow for the preprocessing of sequencing data, likely including quality control and trimming steps tailored for CMGG facilities.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "preprocessing",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-cmgg/preprocessing",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nextflow",
+        "preprocessing",
+        "ngs"
+      ],
+      "id": 42
+    },
+    {
+      "name": "nf-core/bamtofastq",
+      "one_line_profile": "BAM/CRAM to FASTQ conversion and QC pipeline",
+      "detailed_description": "A pipeline that converts BAM or CRAM files to FASTQ format and performs quality control checks, useful for reverting aligned data to raw reads for re-analysis.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "quality_control"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/bamtofastq",
+      "help_website": [
+        "https://nf-co.re/bamtofastq"
+      ],
+      "license": "MIT",
+      "tags": [
+        "bam",
+        "fastq",
+        "conversion",
+        "quality-control",
+        "nf-core"
+      ],
+      "id": 43
+    },
+    {
+      "name": "nf-core/detaxizer",
+      "one_line_profile": "Pipeline for taxonomic classification and filtering (host removal)",
+      "detailed_description": "A pipeline designed to identify and optionally remove certain sequences (taxa) from raw genomic data, such as removing human host reads from metagenomic samples.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "host_removal",
+        "contamination_control",
+        "filtering"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/detaxizer",
+      "help_website": [
+        "https://nf-co.re/detaxizer"
+      ],
+      "license": "MIT",
+      "tags": [
+        "decontamination",
+        "host-removal",
+        "metagenomics",
+        "nf-core"
+      ],
+      "id": 44
+    },
+    {
+      "name": "nf-core/hgtseq",
+      "one_line_profile": "Pipeline for investigating horizontal gene transfer from NGS data",
+      "detailed_description": "A bioinformatics pipeline to detect and investigate horizontal gene transfer events using Next Generation Sequencing data.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "analysis",
+        "horizontal_gene_transfer"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/hgtseq",
+      "help_website": [
+        "https://nf-co.re/hgtseq"
+      ],
+      "license": "MIT",
+      "tags": [
+        "hgt",
+        "ngs",
+        "horizontal-gene-transfer",
+        "nf-core"
+      ],
+      "id": 45
+    },
+    {
+      "name": "nf-core/seqinspector",
+      "one_line_profile": "Comprehensive QC-only pipeline for sequencing data",
+      "detailed_description": "A dedicated pipeline for running a large set of quality control tools on sequencing data, generating global and group-specific MultiQC reports, targeting core facilities or high-throughput groups.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "qc_report"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/seqinspector",
+      "help_website": [
+        "https://nf-co.re/seqinspector"
+      ],
+      "license": "MIT",
+      "tags": [
+        "quality-control",
+        "multiqc",
+        "ngs",
+        "nf-core"
+      ],
+      "id": 46
+    },
+    {
+      "name": "autoadapt",
+      "one_line_profile": "Automatic quality control and adapter trimming for FASTQ files",
+      "detailed_description": "A tool for automatic quality control of FASTQ sequencing files, likely handling adapter detection and trimming.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "adapter_trimming"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/optimuscoprime/autoadapt",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "fastq",
+        "quality-control",
+        "adapter-trimming"
+      ],
+      "id": 47
+    },
+    {
+      "name": "mpox-nf",
+      "one_line_profile": "Monkeypox virus assembly and host-removal pipeline",
+      "detailed_description": "A Nextflow pipeline for Monkeypox virus (MPXV) assembly, including host-removal, reference-based assembly, and generation of sequence quality metrics for Illumina paired-end shotgun metagenomic data.",
+      "domains": [
+        "B4",
+        "B4-01",
+        "Virology"
+      ],
+      "subtask_category": [
+        "assembly",
+        "host_removal",
+        "quality_control"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/phac-nml/mpox-nf",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "monkeypox",
+        "assembly",
+        "host-removal",
+        "metagenomics"
+      ],
+      "id": 48
+    },
+    {
+      "name": "fqc",
+      "one_line_profile": "Extensible quality control dashboard for FASTQ assessment",
+      "detailed_description": "A quality control dashboard built around FASTQ assessment, providing visualization of sequencing data quality metrics.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/pnnl/fqc",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fastq",
+        "quality-control",
+        "dashboard",
+        "visualization"
+      ],
+      "id": 49
+    },
+    {
+      "name": "clean",
+      "one_line_profile": "Pipeline for decontamination of short reads, long reads and contigs",
+      "detailed_description": "A Nextflow pipeline designed for the decontamination of sequencing data, supporting short reads, long reads, and contigs, suitable for removing host or contaminant sequences.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "decontamination",
+        "filtering",
+        "host_removal"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/rki-mf1/clean",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "decontamination",
+        "nextflow",
+        "reads-filtering"
+      ],
+      "id": 50
+    },
+    {
+      "name": "fastq.bio",
+      "one_line_profile": "Interactive web tool for DNA sequencing quality control",
+      "detailed_description": "An interactive web-based tool for performing quality control on DNA sequencing data (FASTQ files), utilizing WebAssembly for client-side processing.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Svelte",
+      "repo_url": "https://github.com/robertaboukhalil/fastq.bio",
+      "help_website": [
+        "http://fastq.bio/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fastq",
+        "quality-control",
+        "webassembly",
+        "interactive"
+      ],
+      "id": 51
+    },
+    {
+      "name": "fastq.bio-serverless",
+      "one_line_profile": "Serverless version of fastq.bio for sequencing QC",
+      "detailed_description": "A serverless implementation of the fastq.bio tool, using Cloudflare workers and WebAssembly to perform quality control on DNA sequencing data.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/robertaboukhalil/fastq.bio-serverless",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fastq",
+        "quality-control",
+        "serverless",
+        "webassembly"
+      ],
+      "id": 52
+    },
+    {
+      "name": "minion_multiQC",
+      "one_line_profile": "Multi-tool QC wrapper for MinION data",
+      "detailed_description": "A tool to aggregate quality control metrics for Oxford Nanopore MinION data, likely integrating with MultiQC.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "qc_report"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/roblanf/minion_multiQC",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "minion",
+        "nanopore",
+        "quality-control",
+        "multiqc"
+      ],
+      "id": 53
+    },
+    {
+      "name": "Filtlong",
+      "one_line_profile": "Quality filtering tool for long reads (Nanopore/PacBio)",
+      "detailed_description": "A tool for filtering long reads (e.g., Oxford Nanopore, PacBio) by quality, length, and other metrics to improve downstream assembly or analysis.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "filtering",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rrwick/Filtlong",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "long-reads",
+        "nanopore",
+        "pacbio",
+        "filtering",
+        "quality-control"
+      ],
+      "id": 54
+    },
+    {
+      "name": "Porechop",
+      "one_line_profile": "Adapter trimmer for Oxford Nanopore reads",
+      "detailed_description": "A tool for finding and removing adapters from Oxford Nanopore reads. Adapters on the ends of reads are trimmed, and when a read has an adapter in its middle, it is treated as a chimera and chopped into separate reads.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "adapter_trimming",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rrwick/Porechop",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "nanopore",
+        "adapter-trimming",
+        "long-reads"
+      ],
+      "id": 55
+    },
+    {
+      "name": "FastQC",
+      "one_line_profile": "Standard quality control tool for high throughput sequence data",
+      "detailed_description": "A quality control analysis tool which provides a modular set of analyses which you can use to give a quick impression of whether your data has any problems of which you should be aware before doing any further analysis.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "qc_report"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/s-andrews/FastQC",
+      "help_website": [
+        "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "quality-control",
+        "ngs",
+        "fastq",
+        "visualization"
+      ],
+      "id": 56
+    },
+    {
+      "name": "chopper",
+      "one_line_profile": "Tool for partitioning biological sequences into similar batches",
+      "detailed_description": "A tool part of the SeqAn ecosystem for partitioning a set of sequences into batches (bins) that are similar in terms of their k-mer content, useful for parallel processing or indexing.",
+      "domains": [
+        "B4",
+        "Bioinfo"
+      ],
+      "subtask_category": [
+        "data_partitioning",
+        "preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/seqan/chopper",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "sequence-partitioning",
+        "k-mer",
+        "seqan"
+      ],
+      "id": 57
+    },
+    {
+      "name": "sequana_fastqc",
+      "one_line_profile": "Sequana pipeline for parallel FastQC and MultiQC summary",
+      "detailed_description": "A Sequana pipeline that runs FastQC in parallel on multiple samples and summarizes the results using MultiQC, streamlining the QC process.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sequana/fastqc",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "sequana",
+        "fastqc",
+        "multiqc",
+        "pipeline"
+      ],
+      "id": 58
+    },
+    {
+      "name": "NxTrim",
+      "one_line_profile": "Adapter trimming for Illumina Nextera Mate Pair libraries",
+      "detailed_description": "A tool for adapter trimming and virtual library creation specifically for Illumina Nextera Mate Pair libraries, separating true mate pairs from paired-end reads.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "adapter_trimming",
+        "library_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/sequencing/NxTrim",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "illumina",
+        "mate-pair",
+        "trimming",
+        "nextera"
+      ],
+      "id": 59
+    },
+    {
+      "name": "FastPCC",
+      "one_line_profile": "Fast calculation of interstation correlations for seismic noise",
+      "detailed_description": "A tool to compute interstation correlations of seismic ambient noise, including fast implementations of standard, 1-bit, phase, and wavelet phase cross-correlations.",
+      "domains": [
+        "Geophysics",
+        "Seismology"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "correlation_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/sergiventosa/FastPCC",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "seismology",
+        "cross-correlation",
+        "ambient-noise",
+        "geophysics"
+      ],
+      "id": 60
+    },
+    {
+      "name": "Trimmomatic-pigz",
+      "one_line_profile": "Accelerated version of Trimmomatic using pigz",
+      "detailed_description": "A modified version of the official Trimmomatic tool that utilizes pigz for parallel gzip compression/decompression, offering significantly faster processing speeds with identical results.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "adapter_trimming",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/shencangsheng/Trimmomatic-pigz",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "trimmomatic",
+        "pigz",
+        "acceleration",
+        "trimming"
+      ],
+      "id": 61
+    },
+    {
+      "name": "falco",
+      "one_line_profile": "High-performance C++ replacement for FastQC",
+      "detailed_description": "A C++ drop-in replacement for FastQC to assess the quality of sequence read data, offering faster performance while producing compatible reports.",
+      "domains": [
+        "B4",
+        "B4-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "qc_report"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/smithlabcode/falco",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "fastqc",
+        "quality-control",
+        "cpp",
+        "performance"
+      ],
+      "id": 62
+    }
+  ]
+}

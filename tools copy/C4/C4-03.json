@@ -1,0 +1,1818 @@
+{
+  "generated_at": "2025-12-16T09:16:14.085382+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "C4",
+      "leaf_cluster_name": "化学-谱学解析与表征生态",
+      "domain": "Chemistry",
+      "typical_objects": "NMR/MS/IR/Raman",
+      "task_chain": "预处理→峰识别→指认→定量→报告",
+      "tool_form": "GUI + 库 + 流水线"
+    },
+    "unit": {
+      "unit_id": "C4-03",
+      "unit_name": "NMR 指认/结构解析",
+      "target_scale": "150–350",
+      "coverage_tools": "NMR analysis、assignment"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] PyNMR",
+        "[GH] Magres",
+        "[GH] rnmr1d",
+        "[GH] NMRPipe",
+        "[GH] Spinach",
+        "[GH] CYANA",
+        "[GH] ARIA",
+        "[GH] NMRFAM-Sparky",
+        "[GH] CcpNmr Analysis",
+        "[GH] nmrglue",
+        "[GH] nmr assignment",
+        "[GH] structure elucidation",
+        "[GH] nmr analysis",
+        "[GH] chemical shift prediction",
+        "[GH] nmr spectral simulation",
+        "[GH] computer assisted structure elucidation",
+        "[GH] nmr peak picking",
+        "[GH] 2D NMR analysis",
+        "[GH] nmr machine learning",
+        "[GH] nmr deep learning",
+        "[GH] nmr processing",
+        "[GH] molecular structure determination",
+        "[GH] NOESY assignment",
+        "[GH] HSQC analysis",
+        "[WEB] automated nmr assignment tools github",
+        "[WEB] nmr structure elucidation software github",
+        "[WEB] chemical shift prediction machine learning github",
+        "[WEB] python nmr analysis library github",
+        "[WEB] computer assisted structure elucidation CASE github",
+        "[WEB] nmr spectral simulation github"
+      ],
+      "total_candidates": 614,
+      "tool_candidates": 158,
+      "final_tools": 71
+    }
+  },
+  "tools": [
+    {
+      "name": "hsqc_structure_elucidation",
+      "one_line_profile": "SGNN-based tool for NMR prediction and molecular distinction using HSQC simulations",
+      "detailed_description": "A tool implementing the SGNN graph neural network for 1H and 13C NMR prediction, specifically designed to distinguish between different molecules based on HSQC simulations.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "structure_elucidation",
+        "nmr_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/AstraZeneca/hsqc_structure_elucidation",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "nmr",
+        "hsqc",
+        "structure-elucidation",
+        "gnn"
+      ],
+      "id": 1
+    },
+    {
+      "name": "DiffSpectra",
+      "one_line_profile": "Molecular structure elucidation from spectra using diffusion models",
+      "detailed_description": "Implementation of a diffusion model approach for elucidating molecular structures directly from spectroscopic data.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "structure_elucidation",
+        "inverse_problem"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AzureLeon1/DiffSpectra",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "diffusion-model",
+        "spectroscopy",
+        "structure-elucidation"
+      ],
+      "id": 2
+    },
+    {
+      "name": "magnetstein",
+      "one_line_profile": "NMR spectra analysis tool using the Wasserstein metric",
+      "detailed_description": "A set of tools for analyzing Nuclear Magnetic Resonance (NMR) spectra, utilizing the Wasserstein metric for spectral comparison and analysis.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "spectral_comparison"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/BDomzal/magnetstein",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nmr",
+        "wasserstein-metric",
+        "spectral-analysis"
+      ],
+      "id": 3
+    },
+    {
+      "name": "CSTShift",
+      "one_line_profile": "NMR chemical shift prediction integrating DFT and 3D GNNs",
+      "detailed_description": "A tool for improving NMR chemical shift prediction by integrating Density Functional Theory (DFT) calculations with 3D graph neural networks.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "chemical_shift_prediction",
+        "spectral_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ChaoNyu/CSTShift",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nmr",
+        "chemical-shift",
+        "dft",
+        "gnn"
+      ],
+      "id": 4
+    },
+    {
+      "name": "chem-spectra-app",
+      "one_line_profile": "Backend service for processing NMR, IR, and MS data files",
+      "detailed_description": "A backend web service designed to process various chemistry spectroscopy files including JCAMP, RAW, and mzML formats for NMR, IR, and Mass Spectrometry.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "file_conversion"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ComPlat/chem-spectra-app",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "nmr",
+        "ir",
+        "mass-spectrometry",
+        "data-processing"
+      ],
+      "id": 5
+    },
+    {
+      "name": "simpleNMR",
+      "one_line_profile": "Web-based tool for liquid state NMR analysis",
+      "detailed_description": "A lightweight tool for the analysis of liquid state NMR data.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "spectral_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/EricHughesABC/simpleNMR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "liquid-state",
+        "analysis"
+      ],
+      "id": 6
+    },
+    {
+      "name": "MolSpectLLM",
+      "one_line_profile": "Foundation model for spectroscopy and molecule elucidation",
+      "detailed_description": "A molecular foundation model designed to bridge spectroscopy, molecular structure elucidation, and 3D structure generation.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "structure_elucidation",
+        "structure_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Eurekashen/MolSpectLLM",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "spectroscopy",
+        "structure-elucidation"
+      ],
+      "id": 7
+    },
+    {
+      "name": "FarSeer-NMR",
+      "one_line_profile": "Suite for analysis and plotting of bioNMR peaklists",
+      "detailed_description": "A software suite for automatic treatment, analysis, and plotting of large and multivariable datasets of bioNMR peaklists.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "peak_analysis",
+        "data_visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Farseer-NMR/FarSeer-NMR",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bionmr",
+        "peak-analysis",
+        "plotting"
+      ],
+      "id": 8
+    },
+    {
+      "name": "K-MSE",
+      "one_line_profile": "Knowledge-enhanced tree search for molecular structure elucidation",
+      "detailed_description": "A tool boosting LLM's capability in molecular structure elucidation using knowledge-enhanced tree search reasoning.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "structure_elucidation",
+        "reasoning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HICAI-ZJU/K-MSE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "structure-elucidation",
+        "tree-search"
+      ],
+      "id": 9
+    },
+    {
+      "name": "NMRProcFlow",
+      "one_line_profile": "GUI tool for 1D NMR metabolomics data processing",
+      "detailed_description": "An efficient graphical user interface tool for processing spectra from 1D NMR metabolomics data, facilitating spectral alignment and analysis.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "metabolomics"
+      ],
+      "application_level": "platform",
+      "primary_language": "R",
+      "repo_url": "https://github.com/INRA/NMRProcFlow",
+      "help_website": [
+        "https://nmrprocflow.org"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "nmr",
+        "metabolomics",
+        "gui",
+        "processing"
+      ],
+      "id": 10
+    },
+    {
+      "name": "Rnmr1D",
+      "one_line_profile": "R module for 1D NMR data processing",
+      "detailed_description": "The core R module powering the NMRProcFlow application, providing functions for processing 1D NMR data.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/INRA/Rnmr1D",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nmr",
+        "r-package",
+        "processing"
+      ],
+      "id": 11
+    },
+    {
+      "name": "Spinach",
+      "one_line_profile": "Comprehensive spin dynamics simulation package",
+      "detailed_description": "A spin dynamics simulation package that covers the whole of magnetic resonance spectroscopy and imaging, including NMR, EPR, and MRI.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "spin_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/IlyaKuprov/Spinach",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "spin-dynamics",
+        "simulation",
+        "mri"
+      ],
+      "id": 12
+    },
+    {
+      "name": "ChemSharp",
+      "one_line_profile": "C# library for processing spectroscopy and structural files",
+      "detailed_description": "A .NET library for processing chemistry-related files, with a focus on spectroscopy data and structural file formats.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "file_io"
+      ],
+      "application_level": "library",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/JensKrumsieck/ChemSharp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spectroscopy",
+        "c-sharp",
+        "file-processing"
+      ],
+      "id": 13
+    },
+    {
+      "name": "NMR.jl",
+      "one_line_profile": "NMR data processing library for Julia",
+      "detailed_description": "A Julia library designed for the processing and analysis of Nuclear Magnetic Resonance (NMR) data.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaSpect/NMR.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nmr",
+        "julia",
+        "processing"
+      ],
+      "id": 14
+    },
+    {
+      "name": "MolPuzzle",
+      "one_line_profile": "Multimodal benchmark for molecular structure elucidation",
+      "detailed_description": "A benchmark suite designed to evaluate the capabilities of Large Language Models (LLMs) in solving molecular structure elucidation puzzles.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "structure_elucidation",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KehanGuo2/MolPuzzle",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "benchmark",
+        "structure-elucidation",
+        "llm"
+      ],
+      "id": 15
+    },
+    {
+      "name": "NMR2Struct",
+      "one_line_profile": "NMR structure elucidation tool",
+      "detailed_description": "A Python-based tool for elucidating molecular structures from NMR data.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "structure_elucidation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MarklandGroup/NMR2Struct",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "structure-elucidation"
+      ],
+      "id": 16
+    },
+    {
+      "name": "nmrkit",
+      "one_line_profile": "Microservices for NMR data processing",
+      "detailed_description": "A collection of microservices designed to simplify and automate NMR data processing and analysis workflows.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "workflow_automation"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NFDI4Chem/nmrkit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "microservices",
+        "processing"
+      ],
+      "id": 17
+    },
+    {
+      "name": "nmrxiv",
+      "one_line_profile": "FAIR NMR data repository and analysis platform",
+      "detailed_description": "A consensus-driven platform for the storage, management, sharing, and analysis of NMR data, adhering to FAIR principles.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_management",
+        "data_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Vue",
+      "repo_url": "https://github.com/NFDI4Chem/nmrxiv",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "repository",
+        "fair-data",
+        "platform"
+      ],
+      "id": 18
+    },
+    {
+      "name": "nmrpy",
+      "one_line_profile": "Python module for processing NMR spectra",
+      "detailed_description": "A Python library providing functionality for the processing and analysis of NMR spectral data.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NMRPy/nmrpy",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "nmr",
+        "python",
+        "processing"
+      ],
+      "id": 19
+    },
+    {
+      "name": "NMR-Analysis",
+      "one_line_profile": "Interactive UI for solid state NMR analysis",
+      "detailed_description": "An interactive desktop application built with PyQt5 and nmrglue for performing solid-state NMR analysis.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "solid_state_nmr"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NOBLES5E/NMR-Analysis",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nmr",
+        "solid-state",
+        "gui"
+      ],
+      "id": 20
+    },
+    {
+      "name": "openchrom",
+      "one_line_profile": "Platform for mass spectrometry and chromatography data analysis",
+      "detailed_description": "An open-source software for the visualization and analysis of mass spectrometric and chromatographic data.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/OpenChrom/openchrom",
+      "help_website": [],
+      "license": "EPL-2.0",
+      "tags": [
+        "mass-spectrometry",
+        "chromatography",
+        "visualization"
+      ],
+      "id": 21
+    },
+    {
+      "name": "MS-BART",
+      "one_line_profile": "Unified modeling of mass spectra and molecules for structure elucidation",
+      "detailed_description": "A BART-based model for molecular structure elucidation from mass spectra, unifying the representation of spectra and molecules.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "structure_elucidation",
+        "mass_spectrometry"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/OpenDFM/MS-BART",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "mass-spectrometry",
+        "structure-elucidation",
+        "bart",
+        "deep-learning"
+      ],
+      "id": 22
+    },
+    {
+      "name": "PINT",
+      "one_line_profile": "NMR software for line shape fitting and analysis",
+      "detailed_description": "Software designed for NMR spectroscopy, focusing on line shape fitting and downstream data analysis.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "spectral_fitting",
+        "data_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/PINT-NMR/PINT",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "nmr",
+        "line-shape-fitting",
+        "analysis"
+      ],
+      "id": 23
+    },
+    {
+      "name": "CSpred",
+      "one_line_profile": "Protein NMR chemical shift prediction tool (UCBShift)",
+      "detailed_description": "A machine learning-based program (UCBShift) for predicting chemical shifts of backbone atoms and beta-carbons in proteins using 3D structural features.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "chemical_shift_prediction",
+        "protein_nmr"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/THGLab/CSpred",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nmr",
+        "chemical-shift",
+        "protein",
+        "prediction"
+      ],
+      "id": 24
+    },
+    {
+      "name": "GFN2NMR",
+      "one_line_profile": "Deep Graph Convolutional Network for 13C NMR chemical shift calculation",
+      "detailed_description": "A deep graph convolutional network model designed to calculate 13C NMR chemical shifts with accuracy comparable to Density Functional Theory (DFT), aiding in structure assignment.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "chemical_shift_prediction",
+        "structure_assignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Wen-Xuan-Wang/GFN2NMR",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "nmr",
+        "chemical-shift",
+        "gcn",
+        "structure-assignment"
+      ],
+      "id": 25
+    },
+    {
+      "name": "nmrpro",
+      "one_line_profile": "Python package for processing NMR Spectra",
+      "detailed_description": "A Python package providing tools and functions for the processing and analysis of NMR spectra.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ahmohamed/nmrpro",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nmr",
+        "processing",
+        "python"
+      ],
+      "id": 26
+    },
+    {
+      "name": "py-4-pp",
+      "one_line_profile": "Python applications for petrophysics and NMR data processing",
+      "detailed_description": "A collection of Python applications and routines for petrophysics, including specific tools for NMR data processing, well log interpretation, and data analysis.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "petrophysics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/antontalankin/py-4-pp",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nmr",
+        "petrophysics",
+        "data-processing"
+      ],
+      "id": 27
+    },
+    {
+      "name": "stiefelFM",
+      "one_line_profile": "Stiefel Flow Matching for moment-constrained structure elucidation",
+      "detailed_description": "A Python implementation of Stiefel Flow Matching, a generative modeling approach for structure elucidation in chemistry, specifically designed to handle moment constraints.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "structure_elucidation",
+        "generative_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/aspuru-guzik-group/stiefelFM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "flow-matching",
+        "structure-elucidation",
+        "generative-model"
+      ],
+      "id": 28
+    },
+    {
+      "name": "pyNMR",
+      "one_line_profile": "Python module for importing and handling NMR data from various vendor formats",
+      "detailed_description": "A Python library designed to import Nuclear Magnetic Resonance (NMR) data stored in formats such as Bruker (TopSpin), TecMag (NTNMR), Magritek (Kea), or Chemagnetics (Spinsight).",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_import",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bennomeier/pyNMR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "data-import",
+        "bruker",
+        "tecmag"
+      ],
+      "id": 29
+    },
+    {
+      "name": "PyNMRSTAR",
+      "one_line_profile": "Library for reading, writing, and manipulating NMR-STAR files",
+      "detailed_description": "A Python module maintained by the BMRB for handling NMR-STAR files, which are the standard format for storing biomolecular NMR data.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_io",
+        "data_standardization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bmrb-io/PyNMRSTAR",
+      "help_website": [
+        "https://pynmrstar.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nmr-star",
+        "bmrb",
+        "bioinformatics",
+        "data-parsing"
+      ],
+      "id": 30
+    },
+    {
+      "name": "ChemoSpec",
+      "one_line_profile": "Exploratory Chemometrics for Spectroscopy",
+      "detailed_description": "A collection of R functions for the chemometric analysis of spectroscopic data, including NMR, IR, and Raman spectra. It supports data plotting, PCA, HCA, and other multivariate analysis techniques.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "chemometrics",
+        "data_analysis",
+        "pca"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/bryanhanson/ChemoSpec",
+      "help_website": [
+        "https://bryanhanson.github.io/ChemoSpec/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "chemometrics",
+        "spectroscopy",
+        "nmr",
+        "ir",
+        "raman"
+      ],
+      "id": 31
+    },
+    {
+      "name": "nmrium",
+      "one_line_profile": "Web-based component for displaying and processing NMR spectra",
+      "detailed_description": "A comprehensive React-based component and platform for visualizing, processing, and assigning 1D and 2D NMR spectra directly in the browser.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_processing",
+        "assignment"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/cheminfo/nmrium",
+      "help_website": [
+        "https://www.nmrium.org"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "visualization",
+        "web-based",
+        "assignment"
+      ],
+      "id": 32
+    },
+    {
+      "name": "ANATOLIA",
+      "one_line_profile": "NMR spectra total lineshape analysis program",
+      "detailed_description": "A C++ program for total lineshape analysis of NMR spectra, capable of fitting complex spectral models to experimental data.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "lineshape_analysis",
+        "spectral_fitting"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/dcheshkov/ANATOLIA",
+      "help_website": [
+        "http://anatolia.nmrclub.ru"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "nmr",
+        "lineshape-analysis",
+        "fitting",
+        "spectroscopy"
+      ],
+      "id": 33
+    },
+    {
+      "name": "mrsimulator",
+      "one_line_profile": "Fast solid-state NMR spectrum simulation and analysis library",
+      "detailed_description": "A Python library for fast simulation and analysis of solid-state NMR spectra, supporting various spin systems and experimental conditions.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "spectral_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepanshs/mrsimulator",
+      "help_website": [
+        "https://mrsimulator.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "solid-state-nmr",
+        "simulation",
+        "spectroscopy"
+      ],
+      "id": 34
+    },
+    {
+      "name": "PALMA",
+      "one_line_profile": "Algorithm for DOSY signal processing",
+      "detailed_description": "An improved algorithm for processing Diffusion Ordered Spectroscopy (DOSY) NMR data, implementing the PALMA (Proximal Algorithm for L1-MInimization Analysis) method.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "signal_processing",
+        "dosy"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/delsuc/PALMA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nmr",
+        "dosy",
+        "signal-processing",
+        "inverse-problems"
+      ],
+      "id": 35
+    },
+    {
+      "name": "projectaria_tools",
+      "one_line_profile": "Toolkit for interacting with Project Aria egocentric data",
+      "detailed_description": "An open-source C++/Python toolkit to interact with data from Project Aria glasses, providing tools for calibration, data retrieval, and processing of egocentric machine perception data (SLAM, eye tracking, audio).",
+      "domains": [
+        "Computer Vision",
+        "Robotics"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "calibration",
+        "slam"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/facebookresearch/projectaria_tools",
+      "help_website": [
+        "https://facebookresearch.github.io/projectaria_tools"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "egocentric-vision",
+        "slam",
+        "calibration",
+        "vr-ar"
+      ],
+      "id": 36
+    },
+    {
+      "name": "ChemEx",
+      "one_line_profile": "Analysis program for chemical exchange detected by NMR",
+      "detailed_description": "A program for analyzing chemical exchange phenomena using NMR data, allowing for the fitting of relaxation dispersion and CPMG data.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "dynamics_analysis",
+        "chemical_exchange"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gbouvignies/ChemEx",
+      "help_website": [
+        "https://github.com/gbouvignies/ChemEx/wiki"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "nmr",
+        "chemical-exchange",
+        "dynamics",
+        "relaxation"
+      ],
+      "id": 37
+    },
+    {
+      "name": "ml4nmr",
+      "one_line_profile": "Machine learning-based correction for computed NMR chemical shifts",
+      "detailed_description": "A Python package that uses machine learning to correct systematic errors in quantum chemical calculations of NMR chemical shifts.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "chemical_shift_prediction",
+        "correction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/grimme-lab/ml4nmr",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "machine-learning",
+        "nmr",
+        "chemical-shift",
+        "dft"
+      ],
+      "id": 38
+    },
+    {
+      "name": "nmr_sgnn",
+      "one_line_profile": "Scalable graph neural network for NMR chemical shift prediction",
+      "detailed_description": "Source code for a scalable graph neural network (SGNN) model designed to predict NMR chemical shifts from molecular structures.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "chemical_shift_prediction",
+        "deep_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hjm9702/nmr_sgnn",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gnn",
+        "chemical-shift",
+        "prediction",
+        "nmr"
+      ],
+      "id": 39
+    },
+    {
+      "name": "nmrglue",
+      "one_line_profile": "Module for working with NMR data in Python",
+      "detailed_description": "A robust Python module for reading, writing, and processing NMR data from various vendor formats (Bruker, Varian, Pipe, Sparky, etc.).",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "data_io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jjhelmus/nmrglue",
+      "help_website": [
+        "http://nmrglue.readthedocs.org/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "nmr",
+        "data-processing",
+        "spectroscopy",
+        "python"
+      ],
+      "id": 40
+    },
+    {
+      "name": "shiftml",
+      "one_line_profile": "Prediction of chemical shieldings of organic solids",
+      "detailed_description": "A Python package for the machine learning-based prediction of NMR chemical shieldings in organic solids.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "chemical_shift_prediction",
+        "solid_state_nmr"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lab-cosmo/shiftml",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "nmr",
+        "machine-learning",
+        "solid-state",
+        "chemical-shielding"
+      ],
+      "id": 41
+    },
+    {
+      "name": "SECS",
+      "one_line_profile": "Machine learning framework for structure elucidation from spectra",
+      "detailed_description": "A machine learning framework designed for Structure Elucidation from Spectra (SECS), supporting data types such as NMR and IR.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "structure_elucidation",
+        "machine_learning"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/lamalab-org/secs",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "structure-elucidation",
+        "nmr",
+        "ir",
+        "machine-learning"
+      ],
+      "id": 42
+    },
+    {
+      "name": "MAVEN",
+      "one_line_profile": "Tool for elucidating compound mechanism of action",
+      "detailed_description": "A tool to elucidate and visualize a compound's mechanism of action by combining structure-based target prediction with gene expression-based causal reasoning.",
+      "domains": [
+        "Bioinformatics",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "target_prediction",
+        "mechanism_of_action"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/laylagerami/MAVEN",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "drug-discovery",
+        "target-prediction",
+        "gene-expression",
+        "systems-biology"
+      ],
+      "id": 43
+    },
+    {
+      "name": "3D-DenseNet-ChemShift",
+      "one_line_profile": "3D-DenseNet for Chemical Shift Prediction in NMR Crystallography",
+      "detailed_description": "A Multi-Resolution 3D-DenseNet deep learning model for predicting NMR chemical shifts in crystallography contexts.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "chemical_shift_prediction",
+        "crystallography"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/liushuai10000/3D-DenseNet-ChemShift",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deep-learning",
+        "nmr",
+        "crystallography",
+        "chemical-shift"
+      ],
+      "id": 44
+    },
+    {
+      "name": "NMR.jl",
+      "one_line_profile": "Tools for NMR spectroscopy in Julia",
+      "detailed_description": "A Julia package providing tools for NMR spectroscopy, including data processing and simulation capabilities.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/marcel-utz/NMR.jl",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "julia",
+        "nmr",
+        "spectroscopy",
+        "simulation"
+      ],
+      "id": 45
+    },
+    {
+      "name": "sherlock",
+      "one_line_profile": "Web Services for Computer-Assisted Structure Elucidation (CASE)",
+      "detailed_description": "A Java-based set of web services and tools for Computer-Assisted Structure Elucidation (CASE), aiding in the determination of chemical structures from spectral data.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "structure_elucidation",
+        "case"
+      ],
+      "application_level": "service",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/michaelwenk/sherlock",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "case",
+        "structure-elucidation",
+        "nmr",
+        "cheminformatics"
+      ],
+      "id": 46
+    },
+    {
+      "name": "nmrplot",
+      "one_line_profile": "Python tool for plotting NMR spectra",
+      "detailed_description": "A Python utility for visualizing and plotting NMR spectra, facilitating data inspection and presentation.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "plotting"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/miguelarbesu/nmrplot",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "visualization",
+        "plotting",
+        "python"
+      ],
+      "id": 47
+    },
+    {
+      "name": "ChefNMR",
+      "one_line_profile": "Atomic diffusion models for small molecule structure elucidation from NMR spectra",
+      "detailed_description": "Official implementation of ChefNMR (NeurIPS 2025), utilizing atomic diffusion models to elucidate small molecule structures directly from NMR spectral data.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "structure_elucidation",
+        "structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ml-struct-bio/chefnmr",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "diffusion-models",
+        "structure-elucidation",
+        "deep-learning"
+      ],
+      "id": 48
+    },
+    {
+      "name": "GALLOP",
+      "one_line_profile": "Accelerated molecular crystal structure determination from powder diffraction data",
+      "detailed_description": "A tool for accelerated determination of molecular crystal structures using powder diffraction data, employing global optimization techniques.",
+      "domains": [
+        "C4",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "structure_determination",
+        "crystallography"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mspillman/gallop",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "powder-diffraction",
+        "crystal-structure",
+        "crystallography"
+      ],
+      "id": 49
+    },
+    {
+      "name": "speaq",
+      "one_line_profile": "Informatics tools for quantitative analysis of NMR metabolomic profile data",
+      "detailed_description": "A suite of informatics tools designed for the quantitative analysis of NMR metabolomic profile data, facilitating peak alignment and quantification.",
+      "domains": [
+        "C4",
+        "Metabolomics"
+      ],
+      "subtask_category": [
+        "metabolomics_analysis",
+        "spectral_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/nghiavtr/speaq",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "nmr",
+        "metabolomics",
+        "quantitative-analysis"
+      ],
+      "id": 50
+    },
+    {
+      "name": "relax",
+      "one_line_profile": "Software for molecular dynamics analysis from NMR data",
+      "detailed_description": "A software package for the study of molecular dynamics through the analysis of experimental NMR data, supporting model-free analysis and relaxation dispersion.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "dynamics_analysis",
+        "relaxation_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nmr-relax/relax",
+      "help_website": [
+        "http://www.nmr-relax.com"
+      ],
+      "license": null,
+      "tags": [
+        "nmr",
+        "molecular-dynamics",
+        "relaxation",
+        "protein-dynamics"
+      ],
+      "id": 51
+    },
+    {
+      "name": "SpinPlots",
+      "one_line_profile": "Python package for simplified plotting of NMR data",
+      "detailed_description": "A Python package built on top of NMRglue designed to simplify the process of visualizing and plotting NMR spectral data.",
+      "domains": [
+        "C4"
+      ],
+      "subtask_category": [
+        "visualization",
+        "plotting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nuts-org/spinplots",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "visualization",
+        "nmrglue"
+      ],
+      "id": 52
+    },
+    {
+      "name": "CASCADE",
+      "one_line_profile": "Calculation of NMR chemical shifts using deep learning",
+      "detailed_description": "A deep learning-based tool for the prediction and calculation of NMR chemical shifts to assist in structure verification and assignment.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "chemical_shift_prediction",
+        "spectral_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/patonlab/CASCADE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "chemical-shift",
+        "deep-learning",
+        "prediction"
+      ],
+      "id": 53
+    },
+    {
+      "name": "nmrfit",
+      "one_line_profile": "Quantitative NMR analysis through least-squares fitting",
+      "detailed_description": "A Python tool for quantitative NMR analysis performing least-squares fitting of spectroscopy data to determine concentrations or kinetic parameters.",
+      "domains": [
+        "C4"
+      ],
+      "subtask_category": [
+        "quantitative_analysis",
+        "spectral_fitting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pnnl/nmrfit",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nmr",
+        "quantitative-analysis",
+        "fitting"
+      ],
+      "id": 54
+    },
+    {
+      "name": "POKY",
+      "one_line_profile": "Integrated software suite for automated NMR data analysis and structure calculation",
+      "detailed_description": "A next-generation software suite designed for integrated and automated NMR data analysis, including peak picking, assignment, and structure calculation.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "structure_calculation",
+        "automation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/pokynmr/POKY",
+      "help_website": [
+        "https://pokynmr.com"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "nmr",
+        "automation",
+        "structure-calculation"
+      ],
+      "id": 55
+    },
+    {
+      "name": "Legolas",
+      "one_line_profile": "Protein chemical shift prediction with PyTorch",
+      "detailed_description": "A PyTorch-based deep learning model for predicting protein NMR chemical shifts from structure.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "chemical_shift_prediction",
+        "protein_nmr"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/roitberg-group/legolas",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "protein",
+        "chemical-shift",
+        "deep-learning"
+      ],
+      "id": 56
+    },
+    {
+      "name": "spinsolveproc",
+      "one_line_profile": "Library to process Spinsolve NMR experiments",
+      "detailed_description": "A Python library specifically designed to process and analyze data from Spinsolve benchtop NMR spectrometers.",
+      "domains": [
+        "C4"
+      ],
+      "subtask_category": [
+        "spectral_processing",
+        "instrument_control"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rserial/spinsolveproc",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nmr",
+        "spinsolve",
+        "processing"
+      ],
+      "id": 57
+    },
+    {
+      "name": "nmr-to-structure",
+      "one_line_profile": "Prediction of molecular structure from NMR spectra",
+      "detailed_description": "A tool for predicting molecular structures directly from NMR spectral data, likely utilizing machine learning approaches.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "structure_elucidation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rxn4chemistry/nmr-to-structure",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "structure-prediction",
+        "machine-learning"
+      ],
+      "id": 58
+    },
+    {
+      "name": "nmrsim",
+      "one_line_profile": "Python library for NMR simulation",
+      "detailed_description": "A Python library for simulating NMR spectra based on spin systems and pulse sequences.",
+      "domains": [
+        "C4"
+      ],
+      "subtask_category": [
+        "simulation",
+        "spectral_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sametz/nmrsim",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "simulation",
+        "spin-system"
+      ],
+      "id": 59
+    },
+    {
+      "name": "nmr_mpnn_pytorch",
+      "one_line_profile": "Neural Message Passing for NMR Chemical Shift Prediction",
+      "detailed_description": "A PyTorch implementation of Neural Message Passing networks for the prediction of NMR chemical shifts.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "chemical_shift_prediction",
+        "deep_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/seokhokang/nmr_mpnn_pytorch",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nmr",
+        "chemical-shift",
+        "gnn",
+        "message-passing"
+      ],
+      "id": 60
+    },
+    {
+      "name": "AlpsNMR",
+      "one_line_profile": "Automated spectraL Processing System for NMR",
+      "detailed_description": "An R package providing an automated pipeline for processing NMR spectra, including loading, normalization, and peak detection.",
+      "domains": [
+        "C4"
+      ],
+      "subtask_category": [
+        "spectral_processing",
+        "automation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/sipss/AlpsNMR",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nmr",
+        "processing",
+        "automation",
+        "r-package"
+      ],
+      "id": 61
+    },
+    {
+      "name": "ssnake",
+      "one_line_profile": "Program for the analysis of NMR data",
+      "detailed_description": "A software program designed for the analysis of NMR data, facilitating spectral interpretation and quantification.",
+      "domains": [
+        "C4"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "spectral_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/smeerten/ssnake",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nmr",
+        "analysis",
+        "spectroscopy"
+      ],
+      "id": 62
+    },
+    {
+      "name": "SpectroChemPy",
+      "one_line_profile": "Framework for processing and analyzing spectroscopic data",
+      "detailed_description": "A Python framework dedicated to processing, analyzing, and modeling various types of spectroscopic data (NMR, IR, etc.) for chemistry applications.",
+      "domains": [
+        "C4"
+      ],
+      "subtask_category": [
+        "spectral_processing",
+        "data_analysis",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spectrochempy/spectrochempy",
+      "help_website": [
+        "https://www.spectrochempy.fr"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "spectroscopy",
+        "nmr",
+        "ir",
+        "processing"
+      ],
+      "id": 63
+    },
+    {
+      "name": "SPIKE",
+      "one_line_profile": "Collaborative development for FT-spectroscopy processing",
+      "detailed_description": "A collaborative software project for processing Fourier Transform (FT) spectroscopy data, including NMR and other spectral forms.",
+      "domains": [
+        "C4"
+      ],
+      "subtask_category": [
+        "spectral_processing",
+        "ft_spectroscopy"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/spike-project/spike",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "spectroscopy",
+        "nmr",
+        "processing"
+      ],
+      "id": 64
+    },
+    {
+      "name": "SpinachGUI",
+      "one_line_profile": "User interface for Spin Dynamics Simulation",
+      "detailed_description": "A graphical user interface for setting up and running spin dynamics simulations, likely designed to work with the Spinach library.",
+      "domains": [
+        "C4"
+      ],
+      "subtask_category": [
+        "simulation",
+        "spin_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/spinachgui/spinachgui",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nmr",
+        "spin-dynamics",
+        "simulation",
+        "gui"
+      ],
+      "id": 65
+    },
+    {
+      "name": "ukbnmr",
+      "one_line_profile": "Tools for processing Nightingale NMR biomarker data in UK Biobank",
+      "detailed_description": "An R package providing tools specifically for processing and analyzing Nightingale NMR biomarker data from the UK Biobank dataset.",
+      "domains": [
+        "C4",
+        "Metabolomics"
+      ],
+      "subtask_category": [
+        "biomarker_analysis",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/sritchie73/ukbnmr",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nmr",
+        "uk-biobank",
+        "metabolomics",
+        "biomarkers"
+      ],
+      "id": 66
+    },
+    {
+      "name": "4D-CHAINS",
+      "one_line_profile": "Software for protein NMR assignment",
+      "detailed_description": "Software designed for the automated assignment of protein NMR spectra, specifically leveraging 4D spectral data.",
+      "domains": [
+        "C4",
+        "C4-03"
+      ],
+      "subtask_category": [
+        "nmr_assignment",
+        "protein_nmr"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tevang/4D-CHAINS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nmr",
+        "assignment",
+        "protein"
+      ],
+      "id": 67
+    },
+    {
+      "name": "nmr_peak_picker",
+      "one_line_profile": "Automated peak picking for high-dimensional NMR spectra",
+      "detailed_description": "A tool for automated peak picking in high-dimensional NMR spectra, facilitating the initial steps of spectral analysis.",
+      "domains": [
+        "C4"
+      ],
+      "subtask_category": [
+        "peak_picking",
+        "spectral_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tevang/nmr_peak_picker",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "nmr",
+        "peak-picking",
+        "automation"
+      ],
+      "id": 68
+    },
+    {
+      "name": "magres-format",
+      "one_line_profile": "Parser for CCP-NC ab-initio magnetic resonance file format",
+      "detailed_description": "A library for parsing and processing the CCP-NC ab-initio magnetic resonance file format (.magres), enabling analysis of calculated NMR parameters.",
+      "domains": [
+        "C4"
+      ],
+      "subtask_category": [
+        "data_parsing",
+        "ab_initio_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/tfgg/magres-format",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nmr",
+        "magres",
+        "file-format",
+        "ccp-nc"
+      ],
+      "id": 69
+    },
+    {
+      "name": "drawnmr",
+      "one_line_profile": "Draw NMR data in Jupyter Notebooks",
+      "detailed_description": "A tool to visualize NMR data within Jupyter Notebooks, leveraging nmrglue for data handling and bokeh for interactive plotting.",
+      "domains": [
+        "C4"
+      ],
+      "subtask_category": [
+        "visualization",
+        "plotting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tlinnet/drawnmr",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "nmr",
+        "visualization",
+        "jupyter",
+        "bokeh"
+      ],
+      "id": 70
+    },
+    {
+      "name": "mzkit",
+      "one_line_profile": "Comprehensive data toolkit for processing and visualizing NMR, Mass Spectrometry, and Raman spectroscopy data",
+      "detailed_description": "mzkit is a comprehensive toolkit designed for the processing, analysis, and visualization of various spectroscopy and spectrometry data types. It supports Nuclear Magnetic Resonance (NMR), MALDI Mass Spectrometry Imaging (MSI), MALDI single-cell analysis, Raman Spectroscopy, as well as LC-MS and GC-MS raw data. It includes modules for chemoinformatics data analysis and provides visualization capabilities for scientific data.",
+      "domains": [
+        "C4",
+        "C4-03",
+        "C4-01",
+        "C4-04"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "visualization",
+        "chemoinformatics",
+        "spectral_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Visual Basic .NET",
+      "repo_url": "https://github.com/xieguigang/mzkit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "mass-spectrometry",
+        "raman-spectroscopy",
+        "maldi-msi",
+        "chemoinformatics"
+      ],
+      "id": 71
+    }
+  ]
+}

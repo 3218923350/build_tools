@@ -1,0 +1,2553 @@
+{
+  "generated_at": "2025-12-17T12:08:10.315987+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "COSMO1",
+      "leaf_cluster_name": "数值相对论与宇宙尺度计算物理生态",
+      "domain": "Relativity / Cosmology",
+      "typical_objects": "时空度规/曲率, 引力波波形, N-body/LSS, 宇宙学网格场",
+      "task_chain": "建模→高精仿真→波形/统计→推断→benchmark",
+      "tool_form": "专用仿真器 + 波形/后处理 + 推断/采样 + HPC"
+    },
+    "unit": {
+      "unit_id": "COSMO1-05",
+      "unit_name": "推断与统计：采样、贝叶斯、似然与压缩",
+      "target_scale": "250–600",
+      "coverage_tools": "MCMC/SMC、likelihood tools、summary statistics"
+    },
+    "search": {
+      "target_candidates": 600,
+      "queries": [
+        "[GH] zeus",
+        "[GH] PyCBC",
+        "[GH] GetDist",
+        "[GH] CosmoMC",
+        "[GH] dynesty",
+        "[GH] emcee",
+        "[GH] Bilby",
+        "[GH] CosmoSIS",
+        "[GH] MontePython",
+        "[GH] Cobaya",
+        "[GH] cosmological parameter estimation",
+        "[GH] gravitational wave inference",
+        "[GH] Bayesian cosmology",
+        "[GH] MCMC sampler astronomy",
+        "[GH] nested sampling physics",
+        "[GH] likelihood analysis cosmology",
+        "[GH] cosmic microwave background likelihood",
+        "[GH] galaxy clustering statistics",
+        "[GH] gravitational wave parameter estimation",
+        "[GH] posterior analysis",
+        "[GH] simulation-based inference cosmology",
+        "[GH] power spectrum estimation",
+        "[GH] cosmological constraints",
+        "[GH] LIGO inference",
+        "[GH] Hamiltonian Monte Carlo astronomy",
+        "[WEB] cosmology MCMC sampler tools github",
+        "[WEB] gravitational wave parameter estimation software github",
+        "[WEB] Bayesian inference library astrophysics github",
+        "[WEB] cosmological likelihood code github",
+        "[WEB] simulation based inference cosmology github",
+        "[WEB] LIGO Virgo inference tools github"
+      ],
+      "total_candidates": 893,
+      "tool_candidates": 201,
+      "final_tools": 100
+    }
+  },
+  "tools": [
+    {
+      "name": "DR6-ACT-lite",
+      "one_line_profile": "Cobaya likelihood module for ACT DR6 foreground-marginalized data",
+      "detailed_description": "A Cobaya likelihood package designed for analyzing the DR6 foreground-marginalized data from the Atacama Cosmology Telescope (ACT). It enables cosmological parameter inference by integrating ACT data into the Cobaya Bayesian analysis framework.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "likelihood_evaluation",
+        "parameter_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ACTCollaboration/DR6-ACT-lite",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cosmology",
+        "likelihood",
+        "CMB",
+        "ACT",
+        "cobaya"
+      ],
+      "id": 1
+    },
+    {
+      "name": "BayesLIM",
+      "one_line_profile": "Differentiable Bayesian forward modeling for Line Intensity Mapping",
+      "detailed_description": "A differentiable, end-to-end Bayesian forward modeling framework designed for Line Intensity Mapping (LIM) cosmology. It facilitates parameter inference and field reconstruction by modeling the connection between underlying cosmological fields and observed intensity maps.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "forward_modeling",
+        "parameter_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BayesLIM/BayesLIM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cosmology",
+        "line-intensity-mapping",
+        "bayesian",
+        "differentiable-programming"
+      ],
+      "id": 2
+    },
+    {
+      "name": "Cobaya",
+      "one_line_profile": "Code for Bayesian Analysis in Cosmology",
+      "detailed_description": "A general-purpose Bayesian analysis code for cosmology and astrophysics. It orchestrates the sampling of posterior distributions using various samplers (MCMC, PolyChord) and computes likelihoods from cosmological theories and experiments.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "parameter_inference",
+        "sampling",
+        "bayesian_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CobayaSampler/cobaya",
+      "help_website": [
+        "https://cobaya.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cosmology",
+        "MCMC",
+        "bayesian",
+        "inference"
+      ],
+      "id": 3
+    },
+    {
+      "name": "gwpopulation",
+      "one_line_profile": "Gravitational-wave population inference library",
+      "detailed_description": "A CPU/GPU agnostic Python library for performing hierarchical Bayesian inference on gravitational-wave populations. It allows users to constrain population hyperparameters using data from individual gravitational-wave events.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "population_inference",
+        "hierarchical_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ColmTalbot/gwpopulation",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "population-inference",
+        "bayesian",
+        "GPU"
+      ],
+      "id": 4
+    },
+    {
+      "name": "CHIMERA",
+      "one_line_profile": "Hierarchical inference model for EM and GW analysis",
+      "detailed_description": "Combined Hierarchical Inference Model for Electromagnetic and gRavitational Wave Analysis. A tool designed for joint analysis of electromagnetic and gravitational wave data to infer cosmological parameters and source properties.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "multi_messenger_inference",
+        "cosmological_parameter_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CosmoStatGW/CHIMERA",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gravitational-waves",
+        "multi-messenger",
+        "inference",
+        "cosmology"
+      ],
+      "id": 5
+    },
+    {
+      "name": "MGCosmoPop",
+      "one_line_profile": "Hierarchical Bayesian inference for Modified Gravity and Cosmology",
+      "detailed_description": "A hierarchical Bayesian inference package for constraining the Hubble constant, modified gravitational wave propagation, and binary black hole population models using gravitational wave observations.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "parameter_inference",
+        "population_modeling",
+        "cosmology_constraints"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CosmoStatGW/MGCosmoPop",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "modified-gravity",
+        "cosmology",
+        "gravitational-waves",
+        "inference"
+      ],
+      "id": 6
+    },
+    {
+      "name": "GWInferno",
+      "one_line_profile": "Gravitational-Wave Hierarchical Inference with NumPyro",
+      "detailed_description": "A Python library leveraging NumPyro for efficient hierarchical inference of gravitational-wave populations. It utilizes JAX for hardware acceleration and automatic differentiation to speed up the inference process.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "hierarchical_inference",
+        "population_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FarrOutLab/GWInferno",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "numpyro",
+        "jax",
+        "inference"
+      ],
+      "id": 7
+    },
+    {
+      "name": "hera_pspec",
+      "one_line_profile": "Power spectrum estimation for HERA",
+      "detailed_description": "A library for estimating the power spectrum of radio astronomy data, specifically designed for the Hydrogen Epoch of Reionization Array (HERA). It includes tools for data handling, power spectrum estimation, and analysis.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "power_spectrum_estimation",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HERA-Team/hera_pspec",
+      "help_website": [
+        "https://hera-pspec.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "radio-astronomy",
+        "power-spectrum",
+        "HERA",
+        "21cm"
+      ],
+      "id": 8
+    },
+    {
+      "name": "dot-PE",
+      "one_line_profile": "Likelihood factorization based GW inference",
+      "detailed_description": "A tool for performing parameter estimation (inference) on gravitational wave compact object coalescence events. It employs likelihood factorization, sampling, and matrix multiplication techniques to analyze GW data.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "likelihood_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/JonathanMushkin/dot-PE",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gravitational-waves",
+        "inference",
+        "parameter-estimation"
+      ],
+      "id": 9
+    },
+    {
+      "name": "bayesian-pipelines-pixels",
+      "one_line_profile": "Pixel-level Bayesian cosmological inference",
+      "detailed_description": "A pipeline for performing Bayesian cosmological inference directly from pixel-level data. Developed within the LSST Dark Energy Science Collaboration (DESC) to extract cosmological information from survey images.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "cosmological_inference"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/LSSTDESC/bayesian-pipelines-pixels",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cosmology",
+        "LSST",
+        "bayesian",
+        "pixels"
+      ],
+      "id": 10
+    },
+    {
+      "name": "firecrown",
+      "one_line_profile": "DESC Cosmology Likelihood Framework",
+      "detailed_description": "A Python package that provides a framework for implementing and evaluating cosmological likelihoods. It is designed to interface with sampling frameworks like Cobaya and CosmoSIS, focusing on LSST DESC science cases.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "likelihood_framework",
+        "cosmological_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LSSTDESC/firecrown",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cosmology",
+        "likelihood",
+        "LSST",
+        "inference"
+      ],
+      "id": 11
+    },
+    {
+      "name": "MontePython_desilike",
+      "one_line_profile": "DESI BAO likelihood for MontePython",
+      "detailed_description": "An adaptation of the DESI (Dark Energy Spectroscopic Instrument) Baryon Acoustic Oscillation (BAO) likelihood for use within the MontePython cosmological inference code.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "likelihood_implementation",
+        "parameter_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/LauraHerold/MontePython_desilike",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cosmology",
+        "DESI",
+        "BAO",
+        "MontePython"
+      ],
+      "id": 12
+    },
+    {
+      "name": "amplfi",
+      "one_line_profile": "Machine learning based GW parameter estimation",
+      "detailed_description": "A library for performing parameter estimation on gravitational wave data using machine learning techniques, specifically designed to accelerate inference compared to traditional sampling methods.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "machine_learning_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ML4GW/amplfi",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "machine-learning",
+        "parameter-estimation"
+      ],
+      "id": 13
+    },
+    {
+      "name": "allesfitter",
+      "one_line_profile": "Inference framework for exoplanets and stars",
+      "detailed_description": "A wrapper package for modeling and fitting photometric and radial velocity data. It integrates various samplers (emcee, dynesty) and models (ellc, celerite) to perform inference on exoplanets and binary stars.",
+      "domains": [
+        "Astronomy",
+        "Exoplanets"
+      ],
+      "subtask_category": [
+        "light_curve_fitting",
+        "parameter_inference"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/MNGuenther/allesfitter",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "exoplanets",
+        "fitting",
+        "MCMC",
+        "nested-sampling"
+      ],
+      "id": 14
+    },
+    {
+      "name": "MCMC",
+      "one_line_profile": "C++ implementation of the MCMC hammer algorithm",
+      "detailed_description": "A C++ implementation of the affine-invariant ensemble sampler for Markov Chain Monte Carlo (MCMC), commonly known as the 'MCMC hammer' (emcee algorithm). It provides a high-performance sampling tool for statistical inference.",
+      "domains": [
+        "COSMO1-05",
+        "Statistics"
+      ],
+      "subtask_category": [
+        "sampling",
+        "statistical_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/MarianoChaves/MCMC",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "MCMC",
+        "sampling",
+        "cpp",
+        "statistics"
+      ],
+      "id": 15
+    },
+    {
+      "name": "river",
+      "one_line_profile": "ML-based GW parameter estimation",
+      "detailed_description": "A tool for parameter estimation of gravitational waves using machine learning. It aims to provide rapid inference capabilities for GW signals.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/MarinerQ/river",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gravitational-waves",
+        "machine-learning",
+        "inference"
+      ],
+      "id": 16
+    },
+    {
+      "name": "BnsLib",
+      "one_line_profile": "PyCBC-based library for BNS/BBH ML analysis",
+      "detailed_description": "A library built on top of PyCBC for processing binary neutron star (BNS) and binary black hole (BBH) gravitational wave data, specifically tailored for machine learning applications.",
+      "domains": [
+        "COSMO1"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "machine_learning_prep"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MarlinSchaefer/BnsLib",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "PyCBC",
+        "machine-learning"
+      ],
+      "id": 17
+    },
+    {
+      "name": "lss_montepython",
+      "one_line_profile": "LSS likelihoods for MontePython",
+      "detailed_description": "A collection of Large-Scale Structure (LSS) likelihood modules designed for the MontePython cosmological inference code, enabling the use of LSS data for parameter constraints.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "likelihood_implementation",
+        "cosmological_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Michalychforever/lss_montepython",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cosmology",
+        "LSS",
+        "MontePython",
+        "likelihood"
+      ],
+      "id": 18
+    },
+    {
+      "name": "BaCoN",
+      "one_line_profile": "Bayesian Cosmological Network for power spectra classification",
+      "detailed_description": "BAyesian COsmological Network (BaCoN) is a machine learning tool that uses Bayesian neural networks to classify power spectra into different cosmological models (e.g., dark energy, modified gravity).",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "model_classification",
+        "machine_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Mik3M4n/BaCoN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cosmology",
+        "machine-learning",
+        "classification",
+        "bayesian"
+      ],
+      "id": 19
+    },
+    {
+      "name": "peregrine",
+      "one_line_profile": "Simulation-based inference for gravitational waves",
+      "detailed_description": "A library for performing Simulation-Based Inference (SBI) on gravitational wave signals. It enables efficient parameter estimation for a wide class of GW signals using neural posterior estimation.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "simulation_based_inference",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PEREGRINE-GW/peregrine",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "SBI",
+        "inference",
+        "machine-learning"
+      ],
+      "id": 20
+    },
+    {
+      "name": "saqqara",
+      "one_line_profile": "SBI library for stochastic GW background",
+      "detailed_description": "A Simulation-Based Inference (SBI) library specifically designed for analyzing the stochastic gravitational wave background (SGWB). It facilitates the inference of SGWB parameters using simulation-based methods.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "stochastic_background_analysis",
+        "simulation_based_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/PEREGRINE-GW/saqqara",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "SGWB",
+        "SBI",
+        "inference"
+      ],
+      "id": 21
+    },
+    {
+      "name": "gravpop",
+      "one_line_profile": "GW population inference with minimal edge bias",
+      "detailed_description": "A tool for gravitational-wave population inference that is designed to handle narrow population features while minimizing edge bias effects in the inferred distributions.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "population_inference",
+        "bias_correction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Potatoasad/gravpop",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gravitational-waves",
+        "population-inference",
+        "statistics"
+      ],
+      "id": 22
+    },
+    {
+      "name": "reddemcee",
+      "one_line_profile": "Adaptive Parallel Tempering wrapper for emcee",
+      "detailed_description": "A Python wrapper for the emcee sampler that implements adaptive parallel tempering. It improves sampling efficiency for multimodal or difficult posterior distributions in Bayesian inference.",
+      "domains": [
+        "COSMO1-05",
+        "Statistics"
+      ],
+      "subtask_category": [
+        "sampling",
+        "MCMC_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ReddTea/reddemcee",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "MCMC",
+        "parallel-tempering",
+        "sampling",
+        "emcee"
+      ],
+      "id": 23
+    },
+    {
+      "name": "PosteriorAgreement",
+      "one_line_profile": "Quantify consistency between posterior distributions",
+      "detailed_description": "A statistical tool to quantify whether the difference between two posterior distributions (1D or multidimensional) is consistent with zero, useful for tension analysis in cosmology and other fields.",
+      "domains": [
+        "COSMO1-05",
+        "Statistics"
+      ],
+      "subtask_category": [
+        "tension_analysis",
+        "posterior_comparison"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/SebastianBocquet/PosteriorAgreement",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "statistics",
+        "posterior",
+        "tension-metric",
+        "inference"
+      ],
+      "id": 24
+    },
+    {
+      "name": "Shamrock",
+      "one_line_profile": "Multi-GPU hydrodynamics framework for astrophysics",
+      "detailed_description": "An open-source, multi-GPU hydrodynamics framework designed for astrophysics simulations. It supports SPH (Smoothed Particle Hydrodynamics) and AMR (Adaptive Mesh Refinement) and scales from laptops to supercomputers.",
+      "domains": [
+        "COSMO1",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "hydrodynamics_simulation",
+        "astrophysical_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Shamrock-code/Shamrock",
+      "help_website": [],
+      "license": "CECILL-2.1",
+      "tags": [
+        "hydrodynamics",
+        "GPU",
+        "simulation",
+        "astrophysics"
+      ],
+      "id": 25
+    },
+    {
+      "name": "mbDenoise",
+      "one_line_profile": "Microbiome data denoising method",
+      "detailed_description": "A statistical method and R package for denoising microbiome data. It uses a zero-inflated probabilistic PCA (ZIPPCA) model to address issues like zero-inflation, overdispersion, and unequal sequencing depth in microbiome count matrices.",
+      "domains": [
+        "Biology",
+        "Microbiome"
+      ],
+      "subtask_category": [
+        "data_denoising",
+        "statistical_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/YanyZeng/mbDenoise",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "microbiome",
+        "denoising",
+        "PCA",
+        "statistics"
+      ],
+      "id": 26
+    },
+    {
+      "name": "PopFisher",
+      "one_line_profile": "Fisher-matrix formalism for GW population inference",
+      "detailed_description": "A tool implementing the Fisher-matrix formalism for gravitational-wave population inference. It allows for fast forecasting of population constraints without full Bayesian sampling.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "fisher_forecast",
+        "population_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/aantonelli94/PopFisher",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gravitational-waves",
+        "fisher-matrix",
+        "forecasting",
+        "inference"
+      ],
+      "id": 27
+    },
+    {
+      "name": "psd",
+      "one_line_profile": "Adaptive sine-multitaper power spectral density estimation",
+      "detailed_description": "An R package for computing adaptive, sine-multitaper power spectral density (PSD) estimates. It is useful for spectral analysis of time series data in geophysics and other scientific fields.",
+      "domains": [
+        "Signal Processing",
+        "Geophysics"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "psd_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/abarbour/psd",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "spectral-analysis",
+        "multitaper",
+        "R",
+        "time-series"
+      ],
+      "id": 28
+    },
+    {
+      "name": "mbb_emcee",
+      "one_line_profile": "Modified blackbody model implementation for MCMC sampling",
+      "detailed_description": "A specialized Python code implementing a modified blackbody model for use with the emcee MCMC sampler, typically used in astrophysical contexts like dust emission analysis.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aconley/mbb_emcee",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "mcmc",
+        "blackbody",
+        "astrophysics"
+      ],
+      "id": 29
+    },
+    {
+      "name": "CosmoPower",
+      "one_line_profile": "Machine learning accelerated Bayesian inference for cosmology",
+      "detailed_description": "A library for accelerating Bayesian inference in cosmology using machine learning emulators to replace computationally expensive likelihood evaluations.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "inference",
+        "acceleration",
+        "emulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/alessiospuriomancini/cosmopower",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "machine-learning",
+        "bayesian-inference",
+        "cosmology"
+      ],
+      "id": 30
+    },
+    {
+      "name": "BAT.jl",
+      "one_line_profile": "Bayesian Analysis Toolkit in Julia",
+      "detailed_description": "A comprehensive toolkit for Bayesian analysis in Julia, providing algorithms for sampling, integration, and optimization, suitable for high-energy physics and other scientific domains.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "bayesian_inference",
+        "sampling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/bat/BAT.jl",
+      "help_website": [
+        "https://bat.github.io/BAT.jl/stable/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "julia",
+        "bayesian",
+        "mcmc"
+      ],
+      "id": 31
+    },
+    {
+      "name": "Monte Python",
+      "one_line_profile": "Cosmological parameter inference code",
+      "detailed_description": "A Monte Carlo code for Cosmological Parameter extraction, interfacing with the Boltzmann code CLASS. It allows for Bayesian inference using various cosmological datasets.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "cosmology_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/baudren/montepython_public",
+      "help_website": [
+        "https://github.com/brinckmann/montepython_public"
+      ],
+      "license": "MIT",
+      "tags": [
+        "cosmology",
+        "mcmc",
+        "class"
+      ],
+      "id": 32
+    },
+    {
+      "name": "bilby",
+      "one_line_profile": "Bayesian inference library for gravitational-wave astronomy",
+      "detailed_description": "A user-friendly Bayesian inference library designed for gravitational-wave astronomy, providing a unified interface to various stochastic samplers.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "inference",
+        "gravitational_waves"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bilby-dev/bilby",
+      "help_website": [
+        "https://lscsoft.docs.ligo.org/bilby/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "bayesian",
+        "inference"
+      ],
+      "id": 33
+    },
+    {
+      "name": "powsimR",
+      "one_line_profile": "Power analysis for RNA-seq experiments",
+      "detailed_description": "A flexible tool to simulate and evaluate differential expression from bulk and single-cell RNA-seq data for power analysis.",
+      "domains": [
+        "BIO"
+      ],
+      "subtask_category": [
+        "power_analysis",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/bvieth/powsimR",
+      "help_website": [],
+      "license": "Artistic-2.0",
+      "tags": [
+        "rna-seq",
+        "bioinformatics",
+        "simulation"
+      ],
+      "id": 34
+    },
+    {
+      "name": "BISIP",
+      "one_line_profile": "Bayesian inversion for spectral induced polarization data",
+      "detailed_description": "A Python package for the Bayesian inversion of spectral induced polarization (SIP) laboratory data, used in geophysics.",
+      "domains": [
+        "GEO"
+      ],
+      "subtask_category": [
+        "inversion",
+        "geophysics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/clberube/BISIP",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "geophysics",
+        "bayesian",
+        "inversion"
+      ],
+      "id": 35
+    },
+    {
+      "name": "CosmoMC",
+      "one_line_profile": "MCMC parameter sampling code for cosmology",
+      "detailed_description": "A Fortran 2003 Markov-Chain Monte-Carlo (MCMC) engine for exploring cosmological parameter space, often used with CAMB.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "sampling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/cmbant/CosmoMC",
+      "help_website": [
+        "https://cosmologist.info/cosmomc/"
+      ],
+      "license": null,
+      "tags": [
+        "cosmology",
+        "mcmc",
+        "fortran"
+      ],
+      "id": 36
+    },
+    {
+      "name": "GetDist",
+      "one_line_profile": "MCMC sample analysis and plotting tool",
+      "detailed_description": "A Python package for analysing Monte Carlo samples, including correlated samples from Markov Chain Monte Carlo (MCMC). It provides tools for kernel density estimation and plotting.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "analysis",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cmbant/getdist",
+      "help_website": [
+        "https://getdist.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "mcmc",
+        "plotting",
+        "analysis"
+      ],
+      "id": 37
+    },
+    {
+      "name": "CosmoHammer",
+      "one_line_profile": "Cosmological parameter estimation framework",
+      "detailed_description": "A Python framework for cosmological parameter estimation using the MCMC Hammer (emcee).",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "framework"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cosmo-ethz/CosmoHammer",
+      "help_website": [
+        "http://cosmo-docs.phys.ethz.ch/cosmoHammer/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "cosmology",
+        "emcee",
+        "mcmc"
+      ],
+      "id": 38
+    },
+    {
+      "name": "pypower",
+      "one_line_profile": "Power spectrum and window function estimation",
+      "detailed_description": "A package for estimating power spectra and window functions, typically used in large-scale structure cosmology.",
+      "domains": [
+        "COSMO1"
+      ],
+      "subtask_category": [
+        "power_spectrum_estimation",
+        "statistics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cosmodesi/pypower",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cosmology",
+        "power-spectrum",
+        "lss"
+      ],
+      "id": 39
+    },
+    {
+      "name": "emcee",
+      "one_line_profile": "Affine-invariant ensemble MCMC sampler",
+      "detailed_description": "A pure-Python implementation of Goodman & Weare's Affine Invariant Markov chain Monte Carlo (MCMC) Ensemble sampler, widely used in astrophysics.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "sampling",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dfm/emcee",
+      "help_website": [
+        "https://emcee.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "mcmc",
+        "sampling",
+        "python"
+      ],
+      "id": 40
+    },
+    {
+      "name": "emcee-jax",
+      "one_line_profile": "JAX implementation of the emcee sampler",
+      "detailed_description": "An experimental implementation of the emcee affine-invariant MCMC sampler using JAX for hardware acceleration and automatic differentiation.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "sampling",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dfm/emcee-jax",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "jax",
+        "mcmc",
+        "acceleration"
+      ],
+      "id": 41
+    },
+    {
+      "name": "Dingo",
+      "one_line_profile": "Deep inference for gravitational-wave observations",
+      "detailed_description": "A Python library for deep learning-based parameter estimation of gravitational wave signals, using neural posterior estimation.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "inference",
+        "deep_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dingo-gw/dingo",
+      "help_website": [
+        "https://dingo-gw.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "machine-learning",
+        "inference"
+      ],
+      "id": 42
+    },
+    {
+      "name": "bayes-kit",
+      "one_line_profile": "Bayesian inference and posterior analysis tools",
+      "detailed_description": "A collection of tools for Bayesian inference and posterior analysis, developed at the Flatiron Institute.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "inference",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/flatironinstitute/bayes-kit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bayesian",
+        "statistics",
+        "inference"
+      ],
+      "id": 43
+    },
+    {
+      "name": "BCEA",
+      "one_line_profile": "Bayesian Cost Effectiveness Analysis",
+      "detailed_description": "An R package for Bayesian Cost Effectiveness Analysis, producing health economic evaluations from posterior distributions of costs and clinical benefits.",
+      "domains": [
+        "STATS",
+        "BIO"
+      ],
+      "subtask_category": [
+        "cost_effectiveness_analysis",
+        "statistics"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/giabaio/BCEA",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bayesian",
+        "economics",
+        "statistics"
+      ],
+      "id": 44
+    },
+    {
+      "name": "1-OGC",
+      "one_line_profile": "First Open Gravitational-wave Catalog",
+      "detailed_description": "The First Open Gravitational-wave Catalog of Compact Binary Mergers from Advanced LIGO's first observing run.",
+      "domains": [
+        "COSMO1"
+      ],
+      "subtask_category": [
+        "data_catalog"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/gwastro/1-ogc",
+      "help_website": [
+        "https://github.com/gwastro/1-ogc"
+      ],
+      "license": null,
+      "tags": [
+        "gravitational-waves",
+        "catalog",
+        "data"
+      ],
+      "id": 45
+    },
+    {
+      "name": "4-OGC",
+      "one_line_profile": "Fourth Open Gravitational-wave Catalog",
+      "detailed_description": "The Fourth Open Gravitational-wave Catalog of Compact Binary Mergers, including detected mergers and sub-threshold candidates from LIGO and Virgo data.",
+      "domains": [
+        "COSMO1"
+      ],
+      "subtask_category": [
+        "data_catalog"
+      ],
+      "application_level": "dataset",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/gwastro/4-ogc",
+      "help_website": [
+        "https://github.com/gwastro/4-ogc"
+      ],
+      "license": null,
+      "tags": [
+        "gravitational-waves",
+        "catalog",
+        "data"
+      ],
+      "id": 46
+    },
+    {
+      "name": "gwapps",
+      "one_line_profile": "Interactive Web Apps to Explore Gravitational Waves",
+      "detailed_description": "A collection of interactive web applications designed to explore and visualize gravitational wave data.",
+      "domains": [
+        "COSMO1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "education"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/gwastro/gwapps",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gravitational-waves",
+        "visualization",
+        "web-app"
+      ],
+      "id": 47
+    },
+    {
+      "name": "gwin",
+      "one_line_profile": "Bayesian inference package for gravitational-wave data",
+      "detailed_description": "A Python package for performing Bayesian inference on gravitational-wave data.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "inference",
+        "bayesian_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gwastro/gwin",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gravitational-waves",
+        "bayesian",
+        "inference"
+      ],
+      "id": 48
+    },
+    {
+      "name": "PyCBC",
+      "one_line_profile": "Core package for gravitational-wave data analysis and signal detection",
+      "detailed_description": "A comprehensive software package used to analyze gravitational-wave data, detect signals, and estimate their parameters. It was instrumental in the first direct detection of gravitational waves and continues to be a standard tool in LIGO/Virgo data analysis.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "signal_detection",
+        "parameter_estimation",
+        "data_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gwastro/pycbc",
+      "help_website": [
+        "https://pycbc.org/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "gravitational-waves",
+        "ligo",
+        "virgo",
+        "signal-processing"
+      ],
+      "id": 49
+    },
+    {
+      "name": "PyCBC PyLAL",
+      "one_line_profile": "Stripped-down LALSuite library functionality for PyCBC",
+      "detailed_description": "A library providing specific functionalities from the LALSuite (LIGO Algorithm Library) adapted for use within the PyCBC ecosystem, facilitating gravitational wave data analysis.",
+      "domains": [
+        "COSMO1"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "algorithm_library"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gwastro/pycbc-pylal",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "gravitational-waves",
+        "library",
+        "backend"
+      ],
+      "id": 50
+    },
+    {
+      "name": "PyCBC Waveform Errors Plugin",
+      "one_line_profile": "Plugin for PyCBC to incorporate waveform errors in inference",
+      "detailed_description": "A plugin designed for PyCBC to account for waveform model uncertainties during the parameter estimation process of gravitational wave analysis.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "error_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gwastro/pycbc_wferrors_plugin",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "plugin",
+        "waveform-error",
+        "inference"
+      ],
+      "id": 51
+    },
+    {
+      "name": "gwkokab",
+      "one_line_profile": "JAX-based gravitational-wave population inference toolkit",
+      "detailed_description": "An open-source toolkit leveraging JAX for efficient population inference of gravitational wave sources using parametric models, enabling accelerated computation.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "population_inference",
+        "statistical_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gwkokab/gwkokab",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "jax",
+        "gravitational-waves",
+        "population-inference"
+      ],
+      "id": 52
+    },
+    {
+      "name": "bayesfast",
+      "one_line_profile": "Efficient Bayesian posterior sampling and evidence estimation tools",
+      "detailed_description": "Next-generation Bayesian analysis tools designed to accelerate posterior sampling and evidence estimation, particularly useful for high-dimensional cosmological or physical parameter spaces.",
+      "domains": [
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "sampling",
+        "evidence_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/h3jia/bayesfast",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "bayesian",
+        "sampling",
+        "mcmc"
+      ],
+      "id": 53
+    },
+    {
+      "name": "VItamin",
+      "one_line_profile": "Fast gravitational wave parameter estimation using variational inference",
+      "detailed_description": "A machine learning-based tool for rapid Bayesian parameter estimation of gravitational waves using variational inference techniques, significantly faster than traditional sampling methods.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "variational_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hagabbar/VItamin",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "machine-learning",
+        "gravitational-waves",
+        "variational-inference"
+      ],
+      "id": 54
+    },
+    {
+      "name": "cINNamon",
+      "one_line_profile": "Invertible neural network for gravitational wave parameter estimation",
+      "detailed_description": "A tool utilizing conditional Invertible Neural Networks (cINNs) to perform rapid and accurate parameter estimation for gravitational wave signals.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "neural_network"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hagabbar/cINNamon",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "machine-learning",
+        "invertible-neural-networks",
+        "gravitational-waves"
+      ],
+      "id": 55
+    },
+    {
+      "name": "cosmoped",
+      "one_line_profile": "Compressed CMB likelihood code using MOPED compression",
+      "detailed_description": "A Python package that implements the MOPED (Massively Optimised Parameter Estimation and Data compression) scheme to compress Planck power spectrum data for efficient CMB likelihood evaluation.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "likelihood_evaluation",
+        "data_compression"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/heatherprince/cosmoped",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cmb",
+        "likelihood",
+        "compression",
+        "moped"
+      ],
+      "id": 56
+    },
+    {
+      "name": "bilby (genomics)",
+      "one_line_profile": "Jax-based machine learning code for functional genomics",
+      "detailed_description": "A machine learning toolkit implemented in Jax, specifically designed for functional genomics analysis. (Note: Distinct from the gravitational-wave 'bilby' package).",
+      "domains": [
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "genomics_analysis",
+        "machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ihh/bilby",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "genomics",
+        "jax",
+        "machine-learning"
+      ],
+      "id": 57
+    },
+    {
+      "name": "SimpleMC",
+      "one_line_profile": "Simple MCMC code for cosmological parameter estimation",
+      "detailed_description": "A simplified Markov Chain Monte Carlo (MCMC) code designed for cosmological parameter estimation, focusing on expansion history constraints.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "mcmc"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ja-vazquez/SimpleMC",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "cosmology",
+        "mcmc",
+        "expansion-history"
+      ],
+      "id": 58
+    },
+    {
+      "name": "xspec_emcee",
+      "one_line_profile": "Interface to use emcee for XSPEC spectral analysis",
+      "detailed_description": "A Python tool that bridges the XSPEC X-ray spectral fitting package with the emcee MCMC sampler, enabling Bayesian analysis of X-ray spectra.",
+      "domains": [
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "mcmc_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jeremysanders/xspec_emcee",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "xspec",
+        "emcee",
+        "x-ray",
+        "astronomy"
+      ],
+      "id": 59
+    },
+    {
+      "name": "dynesty",
+      "one_line_profile": "Dynamic Nested Sampling package for Bayesian inference",
+      "detailed_description": "A pure Python implementation of Dynamic Nested Sampling, used for estimating Bayesian posteriors and evidences (marginal likelihoods), widely used in astronomy and cosmology.",
+      "domains": [
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "sampling",
+        "evidence_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/joshspeagle/dynesty",
+      "help_website": [
+        "https://dynesty.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nested-sampling",
+        "bayesian",
+        "inference"
+      ],
+      "id": 60
+    },
+    {
+      "name": "SNTD",
+      "one_line_profile": "Supernova Time Delays measurement package",
+      "detailed_description": "A Python package for measuring time delays in strongly lensed and multiply-imaged supernovae, including simulation, fitting, and cosmological constraint propagation.",
+      "domains": [
+        "COSMO1"
+      ],
+      "subtask_category": [
+        "time_delay_measurement",
+        "simulation",
+        "cosmological_constraints"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jpierel14/sntd",
+      "help_website": [
+        "https://sntd.readthedocs.io/"
+      ],
+      "license": null,
+      "tags": [
+        "supernova",
+        "lensing",
+        "time-delay"
+      ],
+      "id": 61
+    },
+    {
+      "name": "cogwheel",
+      "one_line_profile": "Efficient gravitational wave likelihood evaluation using harmonics",
+      "detailed_description": "A tool for combining gravitational wave harmonics to enable efficient evaluation of likelihood functions in parameter estimation.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "likelihood_evaluation",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jroulet/cogwheel",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gravitational-waves",
+        "harmonics",
+        "likelihood"
+      ],
+      "id": 62
+    },
+    {
+      "name": "bayestack",
+      "one_line_profile": "Bayesian stacking software for astronomical data",
+      "detailed_description": "A flexible, fully Bayesian software package designed for stacking analysis of astronomical data sets to infer population properties.",
+      "domains": [
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "stacking_analysis",
+        "population_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jtlz2/bayestack",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "stacking",
+        "bayesian",
+        "astronomy"
+      ],
+      "id": 63
+    },
+    {
+      "name": "jim",
+      "one_line_profile": "JAX-based gravitational-wave data analysis tools",
+      "detailed_description": "A suite of gravitational-wave data analysis tools implemented in JAX, enabling hardware acceleration and automatic differentiation for efficient inference.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kazewong/jim",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "jax",
+        "gravitational-waves",
+        "gpu-accelerated"
+      ],
+      "id": 64
+    },
+    {
+      "name": "GetDistr",
+      "one_line_profile": "Fragment size distribution calculator for genomics",
+      "detailed_description": "A tool to calculate the distribution of observed fragment sizes or insert sizes in various scenarios, aiding in structural variant calling and genome assembly.",
+      "domains": [
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "genome_assembly",
+        "statistics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ksahlin/GetDistr",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "genomics",
+        "structural-variants",
+        "fragment-size"
+      ],
+      "id": 65
+    },
+    {
+      "name": "relativebilbying",
+      "one_line_profile": "Relative binning plugin for Bilby",
+      "detailed_description": "A plugin code to incorporate the relative binning technique into the Bilby gravitational-wave inference library, improving computational efficiency.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "inference_acceleration",
+        "plugin"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lemnis12/relativebilbying",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bilby",
+        "relative-binning",
+        "gravitational-waves"
+      ],
+      "id": 66
+    },
+    {
+      "name": "nrutils_dev",
+      "one_line_profile": "Python API for low-level analysis of Numerical Relativity data",
+      "detailed_description": "A Python API designed for the low-level analysis of Numerical Relativity (NR) data, including Psi4 extraction, strain calculation, and interfaces with LAL and PyCBC.",
+      "domains": [
+        "COSMO1"
+      ],
+      "subtask_category": [
+        "numerical_relativity",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/llondon6/nrutils_dev",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "numerical-relativity",
+        "waveform-analysis",
+        "python-api"
+      ],
+      "id": 67
+    },
+    {
+      "name": "CMBLensing.jl",
+      "one_line_profile": "Differentiable and GPU-compatible CMB lensing analysis toolkit",
+      "detailed_description": "A Julia toolkit for Cosmic Microwave Background (CMB) lensing analysis that supports automatic differentiation and GPU acceleration, facilitating advanced inference tasks.",
+      "domains": [
+        "COSMO1"
+      ],
+      "subtask_category": [
+        "cmb_analysis",
+        "lensing_reconstruction"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/marius311/CMBLensing.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cmb",
+        "lensing",
+        "julia",
+        "differentiable-programming"
+      ],
+      "id": 68
+    },
+    {
+      "name": "cosmoslik",
+      "one_line_profile": "Cosmology Sampler of Likelihoods",
+      "detailed_description": "A Python framework for cosmological parameter estimation, providing tools for sampling likelihoods and interfacing with various cosmological data sets.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "likelihood_sampling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/marius311/cosmoslik",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cosmology",
+        "likelihood",
+        "sampling"
+      ],
+      "id": 69
+    },
+    {
+      "name": "bajes",
+      "one_line_profile": "Bayesian Jenaer software for gravitational wave inference",
+      "detailed_description": "A Python pipeline for Bayesian inference of gravitational-wave and multi-messenger astronomy data, supporting various sampling methods and models.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "bayesian_inference",
+        "multi_messenger_astronomy"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/matteobreschi/bajes",
+      "help_website": [
+        "https://bajes.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "bayesian",
+        "pipeline"
+      ],
+      "id": 70
+    },
+    {
+      "name": "KissMCMC.jl",
+      "one_line_profile": "Simple MCMC implementation in Julia",
+      "detailed_description": "A lightweight, 'Keep It Simple, Stupid' Markov Chain Monte Carlo (MCMC) library for Julia, designed for ease of use in general Bayesian inference problems.",
+      "domains": [
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "sampling",
+        "mcmc"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/mauro3/KissMCMC.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "julia",
+        "mcmc",
+        "bayesian"
+      ],
+      "id": 71
+    },
+    {
+      "name": "pocoMC",
+      "one_line_profile": "Preconditioned Monte Carlo for accelerated Bayesian Computation",
+      "detailed_description": "A Python implementation of the Preconditioned Monte Carlo method, designed to accelerate Bayesian computation and posterior sampling for complex models.",
+      "domains": [
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "sampling",
+        "bayesian_computation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/minaskar/pocomc",
+      "help_website": [
+        "https://pocomc.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "monte-carlo",
+        "sampling",
+        "acceleration"
+      ],
+      "id": 72
+    },
+    {
+      "name": "zeus",
+      "one_line_profile": "Lightning Fast MCMC Ensemble Slice Sampler",
+      "detailed_description": "A fast and efficient Python implementation of the Ensemble Slice Sampling method for MCMC, suitable for cosmological and astrophysical parameter estimation.",
+      "domains": [
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "sampling",
+        "mcmc"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/minaskar/zeus",
+      "help_website": [
+        "https://zeus-mcmc.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "mcmc",
+        "slice-sampling",
+        "inference"
+      ],
+      "id": 73
+    },
+    {
+      "name": "nessai",
+      "one_line_profile": "Nested Sampling with Artificial Intelligence",
+      "detailed_description": "A nested sampling algorithm that uses normalizing flows (AI) to accelerate the sampling process, particularly for gravitational-wave inference.",
+      "domains": [
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "sampling",
+        "nested_sampling",
+        "machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mj-will/nessai",
+      "help_website": [
+        "https://nessai.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nested-sampling",
+        "normalizing-flows",
+        "ai4s"
+      ],
+      "id": 74
+    },
+    {
+      "name": "pocomc-bilby",
+      "one_line_profile": "PocoMC plugin for Bilby",
+      "detailed_description": "A plugin that interfaces the PocoMC sampler with the Bilby gravitational-wave inference library, allowing Bilby users to utilize Preconditioned Monte Carlo.",
+      "domains": [
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "sampling",
+        "plugin"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mj-will/pocomc-bilby",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bilby",
+        "pocomc",
+        "plugin"
+      ],
+      "id": 75
+    },
+    {
+      "name": "gaussbock",
+      "one_line_profile": "Fast parallel-iterative cosmological parameter estimation",
+      "detailed_description": "A tool for fast, parallel-iterative cosmological parameter estimation utilizing Bayesian nonparametrics to accelerate inference.",
+      "domains": [
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "bayesian_nonparametrics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/moews/gaussbock",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cosmology",
+        "parallel-computing",
+        "inference"
+      ],
+      "id": 76
+    },
+    {
+      "name": "ENTERPRISE",
+      "one_line_profile": "Pulsar timing analysis and gravitational-wave search toolbox",
+      "detailed_description": "Enhanced Numerical Toolbox Enabling a Robust PulsaR Inference SuitE (ENTERPRISE) is a pulsar timing analysis code aimed at noise analysis, gravitational-wave searches, and timing model analysis. It uses Bayesian inference methods to analyze pulsar timing array data.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05",
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "inference",
+        "gravitational_wave_search",
+        "noise_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nanograv/enterprise",
+      "help_website": [
+        "https://enterprise.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "pulsar-timing",
+        "gravitational-waves",
+        "bayesian-inference"
+      ],
+      "id": 77
+    },
+    {
+      "name": "Full-Shape Likelihoods",
+      "one_line_profile": "Cosmological power spectrum and bispectrum likelihoods",
+      "detailed_description": "A Python package providing full-shape power spectrum and bispectrum likelihoods for cosmological parameter inference, typically used with large-scale structure data.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "likelihood_analysis",
+        "parameter_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/oliverphilcox/full_shape_likelihoods",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cosmology",
+        "power-spectrum",
+        "bispectrum",
+        "likelihood"
+      ],
+      "id": 78
+    },
+    {
+      "name": "revdbayes",
+      "one_line_profile": "Ratio-of-Uniforms Sampling for Bayesian Extreme Value Analysis",
+      "detailed_description": "An R package providing functions for the Bayesian analysis of extreme value models using Ratio-of-Uniforms sampling. It facilitates posterior simulation for extreme value distributions.",
+      "domains": [
+        "Statistics",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "sampling",
+        "bayesian_inference",
+        "extreme_value_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/paulnorthrop/revdbayes",
+      "help_website": [
+        "https://cran.r-project.org/package=revdbayes"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "bayesian",
+        "mcmc",
+        "extreme-value-theory",
+        "sampling"
+      ],
+      "id": 79
+    },
+    {
+      "name": "lollipop",
+      "one_line_profile": "Cobaya likelihood for Planck 2020 NPIPE low-ell polarization data",
+      "detailed_description": "A specialized likelihood module for the Cobaya sampling framework, designed to handle low-ell polarized data from the Planck 2020 NPIPE release for cosmological inference.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "likelihood_analysis",
+        "cmb_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/planck-npipe/lollipop",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cosmology",
+        "planck",
+        "cmb",
+        "likelihood",
+        "cobaya"
+      ],
+      "id": 80
+    },
+    {
+      "name": "welch-sde",
+      "one_line_profile": "Spectral density and power spectrum estimation in Rust",
+      "detailed_description": "A Rust library for spectral density estimation using Welch's method, useful for analyzing time-series data in physics and astronomy.",
+      "domains": [
+        "Signal Processing",
+        "COSMO1"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/rconan/welch-sde",
+      "help_website": [
+        "https://docs.rs/welch-sde"
+      ],
+      "license": "MIT",
+      "tags": [
+        "spectral-density",
+        "welch-method",
+        "signal-processing"
+      ],
+      "id": 81
+    },
+    {
+      "name": "uvmcmcfit",
+      "one_line_profile": "MCMC fitting for interferometric observations and gravitational lensing",
+      "detailed_description": "A Python tool that uses emcee to fit parametric models to interferometric observations of astronomical sources, specifically designed to account for gravitational lensing effects.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05",
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "model_fitting",
+        "gravitational_lensing",
+        "mcmc"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sbussmann/uvmcmcfit",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "interferometry",
+        "gravitational-lensing",
+        "mcmc",
+        "astronomy"
+      ],
+      "id": 82
+    },
+    {
+      "name": "victor",
+      "one_line_profile": "Likelihood analysis for void-galaxy cross-correlation",
+      "detailed_description": "Python code for performing likelihood analysis and MCMC posterior sampling specifically for void-galaxy cross-correlation data in cosmology.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "likelihood_analysis",
+        "mcmc",
+        "cosmological_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/seshnadathur/victor",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cosmology",
+        "voids",
+        "cross-correlation",
+        "inference"
+      ],
+      "id": 83
+    },
+    {
+      "name": "MGCobaya",
+      "one_line_profile": "Modified Gravity (MGCAMB) interface for Cobaya",
+      "detailed_description": "An interface allowing the use of MGCAMB (Modified Gravity Code for Anisotropies in the Microwave Background) within the Cobaya Bayesian analysis framework.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "inference",
+        "cosmological_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/sfu-cosmo/MGCobaya",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "modified-gravity",
+        "cobaya",
+        "cosmology",
+        "mgcamb"
+      ],
+      "id": 84
+    },
+    {
+      "name": "GWXtreme",
+      "one_line_profile": "Inference tools for extreme matter using GW data",
+      "detailed_description": "A toolkit for performing inferences on extreme matter properties (e.g., neutron stars) using gravitational wave parameter estimation data.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "inference",
+        "parameter_estimation",
+        "gravitational_waves"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shaonghosh/GWXtreme",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gravitational-waves",
+        "neutron-stars",
+        "inference"
+      ],
+      "id": 85
+    },
+    {
+      "name": "rust-emcee",
+      "one_line_profile": "Rust implementation of the emcee MCMC sampler",
+      "detailed_description": "A pure Rust re-implementation of the popular Python affine-invariant ensemble MCMC sampler 'emcee', providing high-performance sampling capabilities.",
+      "domains": [
+        "COSMO1-05",
+        "Statistics"
+      ],
+      "subtask_category": [
+        "sampling",
+        "mcmc"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/simonrw/rust-emcee",
+      "help_website": [
+        "https://docs.rs/emcee"
+      ],
+      "license": "MIT",
+      "tags": [
+        "mcmc",
+        "rust",
+        "sampling",
+        "emcee"
+      ],
+      "id": 86
+    },
+    {
+      "name": "paltas",
+      "one_line_profile": "Simulation-based inference for strong gravitational lensing",
+      "detailed_description": "A package to conduct simulation-based inference on strong gravitational lensing systems, generating realistic simulations for training machine learning models.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "simulation",
+        "inference",
+        "gravitational_lensing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/swagnercarena/paltas",
+      "help_website": [
+        "https://paltas.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "strong-lensing",
+        "simulation-based-inference",
+        "machine-learning"
+      ],
+      "id": 87
+    },
+    {
+      "name": "ggwd",
+      "one_line_profile": "Synthetic gravitational-wave data generator",
+      "detailed_description": "A tool that wraps PyCBC and LALSuite to generate synthetic gravitational-wave data, specifically designed for machine learning applications.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "data_generation",
+        "simulation"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/timothygebhard/ggwd",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gravitational-waves",
+        "data-generation",
+        "machine-learning"
+      ],
+      "id": 88
+    },
+    {
+      "name": "procoli",
+      "one_line_profile": "Profile likelihood extractor for MontePython",
+      "detailed_description": "Code for extracting the 1D profile likelihood of cosmological parameters using the MontePython sampler output.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "likelihood_analysis",
+        "data_analysis"
+      ],
+      "application_level": "tool",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/tkarwal/procoli",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cosmology",
+        "profile-likelihood",
+        "montepython"
+      ],
+      "id": 89
+    },
+    {
+      "name": "kosmo-kompress",
+      "one_line_profile": "Cosmological field compression using IMNN",
+      "detailed_description": "A tool leveraging Information Maximising Neural Networks (IMNN) for optimal compression of cosmological fields and subsequent Bayesian inference of parameters.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "data_compression",
+        "inference",
+        "machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/tlmakinen/kosmo-kompress",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cosmology",
+        "compression",
+        "imnn",
+        "inference"
+      ],
+      "id": 90
+    },
+    {
+      "name": "PACT",
+      "one_line_profile": "Posterior Analysis of Coalescent Trees",
+      "detailed_description": "A Mathematica package for the posterior analysis of coalescent trees, used in phylogenetics and evolutionary biology to infer population dynamics.",
+      "domains": [
+        "Biology",
+        "Phylogenetics"
+      ],
+      "subtask_category": [
+        "inference",
+        "phylogenetics",
+        "posterior_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Mathematica",
+      "repo_url": "https://github.com/trvrb/PACT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phylogenetics",
+        "coalescent-theory",
+        "mathematica"
+      ],
+      "id": 91
+    },
+    {
+      "name": "bayes_spec",
+      "one_line_profile": "Bayesian Spectral Line Modeling Framework",
+      "detailed_description": "A Bayesian framework for modeling spectral lines in astronomical data, enabling probabilistic inference of physical parameters from spectra.",
+      "domains": [
+        "Astronomy",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "modeling",
+        "inference",
+        "spectral_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tvwenger/bayes_spec",
+      "help_website": [
+        "https://bayes-spec.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "spectroscopy",
+        "bayesian",
+        "astronomy"
+      ],
+      "id": 92
+    },
+    {
+      "name": "pySODM",
+      "one_line_profile": "Simulating and Optimising Dynamical Models",
+      "detailed_description": "A Python package for simulating and optimizing dynamical models, often used in epidemiology (e.g., COVID-19 modeling) and social dynamics.",
+      "domains": [
+        "Epidemiology",
+        "Dynamical Systems"
+      ],
+      "subtask_category": [
+        "simulation",
+        "optimization",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/twallema/pySODM",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dynamical-models",
+        "optimization",
+        "simulation"
+      ],
+      "id": 93
+    },
+    {
+      "name": "peregrine",
+      "one_line_profile": "Simulation-based inference for gravitational waves",
+      "detailed_description": "A simulation-based inference (SBI) library designed to perform analysis on a wide class of gravitational wave signals, enabling efficient parameter estimation.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "inference",
+        "gravitational_waves",
+        "sbi"
+      ],
+      "application_level": "library",
+      "primary_language": null,
+      "repo_url": "https://github.com/undark-lab/peregrine-public",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "sbi",
+        "inference"
+      ],
+      "id": 94
+    },
+    {
+      "name": "swyft",
+      "one_line_profile": "Scalable simulation-based inference system",
+      "detailed_description": "A system for scientific simulation-based inference (SBI) at scale, designed to handle complex physical simulations and perform efficient marginal posterior estimation.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05",
+        "Physics"
+      ],
+      "subtask_category": [
+        "inference",
+        "sbi",
+        "simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/undark-lab/swyft",
+      "help_website": [
+        "https://swyft.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "sbi",
+        "inference",
+        "machine-learning"
+      ],
+      "id": 95
+    },
+    {
+      "name": "dmdd",
+      "one_line_profile": "Bayesian analysis for dark matter direct detection",
+      "detailed_description": "A Python package for simulation and Bayesian posterior analysis of nuclear-recoil data from dark matter direct detection experiments.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05",
+        "Particle Physics"
+      ],
+      "subtask_category": [
+        "inference",
+        "simulation",
+        "dark_matter"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/veragluscevic/dmdd",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dark-matter",
+        "bayesian",
+        "direct-detection"
+      ],
+      "id": 96
+    },
+    {
+      "name": "ptemcee",
+      "one_line_profile": "Parallel-tempered ensemble MCMC sampler",
+      "detailed_description": "A parallel-tempered version of the emcee MCMC sampler, designed to improve sampling efficiency for multimodal posterior distributions.",
+      "domains": [
+        "COSMO1-05",
+        "Statistics"
+      ],
+      "subtask_category": [
+        "sampling",
+        "mcmc"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/willvousden/ptemcee",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcmc",
+        "parallel-tempering",
+        "sampling"
+      ],
+      "id": 97
+    },
+    {
+      "name": "spt_likelihoods",
+      "one_line_profile": "Cobaya likelihoods for South Pole Telescope data",
+      "detailed_description": "A collection of likelihood modules for the Cobaya framework, specifically for analyzing data from the South Pole Telescope (SPT) experiment.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "likelihood_analysis",
+        "cmb_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xgarrido/spt_likelihoods",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cosmology",
+        "spt",
+        "likelihood",
+        "cobaya"
+      ],
+      "id": 98
+    },
+    {
+      "name": "radex_emcee",
+      "one_line_profile": "MCMC modeling of molecular lines using RADEX",
+      "detailed_description": "A Python tool combining the RADEX radiative transfer code with emcee to perform MCMC modeling of interstellar molecular lines.",
+      "domains": [
+        "Astronomy",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "modeling",
+        "inference",
+        "radiative_transfer"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yangcht/radex_emcee",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "astrochemistry",
+        "mcmc",
+        "radiative-transfer"
+      ],
+      "id": 99
+    },
+    {
+      "name": "xspec_emcee",
+      "one_line_profile": "MCMC sampler implementation for XSPEC",
+      "detailed_description": "An implementation of the emcee MCMC algorithm specifically designed to work within the XSPEC X-ray spectral fitting package.",
+      "domains": [
+        "Astronomy",
+        "COSMO1-05"
+      ],
+      "subtask_category": [
+        "sampling",
+        "spectral_fitting",
+        "mcmc"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/zoghbi-a/xspec_emcee",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "x-ray",
+        "spectroscopy",
+        "mcmc",
+        "xspec"
+      ],
+      "id": 100
+    }
+  ]
+}

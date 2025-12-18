@@ -1,0 +1,4623 @@
+{
+  "generated_at": "2025-12-16T06:49:37.910181+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "D2",
+      "leaf_cluster_name": "科研工作流生态（Nextflow/Snakemake等）",
+      "domain": "Data/Workflow",
+      "typical_objects": "pipelines",
+      "task_chain": "组件→组合→执行→测试→复现",
+      "tool_form": "workflow engine + modules"
+    },
+    "unit": {
+      "unit_id": "D2-03",
+      "unit_name": "依赖/容器/环境集成",
+      "target_scale": "150–350",
+      "coverage_tools": "containers、env integration"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] Guix",
+        "[GH] Nix",
+        "[GH] Lmod",
+        "[GH] EasyBuild",
+        "[GH] Spack",
+        "[GH] Mamba",
+        "[GH] Conda",
+        "[GH] Apptainer",
+        "[GH] Singularity",
+        "[GH] Docker",
+        "[GH] scientific container",
+        "[GH] reproducible environment",
+        "[GH] singularity definition",
+        "[GH] apptainer definition",
+        "[GH] conda environment",
+        "[GH] bioconda recipes",
+        "[GH] spack package manager",
+        "[GH] easybuild configuration",
+        "[GH] hpc environment modules",
+        "[GH] containerized workflow",
+        "[GH] dockerfile scientific",
+        "[GH] dependency management hpc",
+        "[GH] nix scientific computing",
+        "[GH] software containerization",
+        "[WEB] scientific workflow container integration github",
+        "[WEB] hpc package management tools github",
+        "[WEB] reproducible research environment setup github",
+        "[WEB] singularity apptainer docker conversion github",
+        "[WEB] conda mamba environment management github"
+      ],
+      "total_candidates": 1076,
+      "tool_candidates": 705,
+      "final_tools": 181
+    }
+  },
+  "tools": [
+    {
+      "name": "omnipkg",
+      "one_line_profile": "Python environment manager wrapper for Conda/Pip",
+      "detailed_description": "A tool to manage Python environments and dependencies, leveraging conda-forge to resolve conflicts and ensure reproducibility in scientific computing setups.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "dependency_resolution"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/1minds3t/omnipkg",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "conda",
+        "python-environment",
+        "reproducibility"
+      ],
+      "id": 1
+    },
+    {
+      "name": "ACCESS-OM2",
+      "one_line_profile": "Global coupled ocean-sea ice model",
+      "detailed_description": "The ACCESS-OM2 (Australian Community Climate and Earth System Simulator - Ocean Model 2) is a global coupled ocean-sea ice model used for climate research and simulation.",
+      "domains": [
+        "D1",
+        "D1-02"
+      ],
+      "subtask_category": [
+        "climate_modeling",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/ACCESS-NRI/ACCESS-OM2",
+      "help_website": [
+        "https://access-om2.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "oceanography",
+        "climate-model",
+        "sea-ice"
+      ],
+      "id": 2
+    },
+    {
+      "name": "access-spack-packages",
+      "one_line_profile": "Spack package repository for ACCESS-NRI models",
+      "detailed_description": "A Spack package repository maintained by ACCESS-NRI, containing package recipes for building Australian climate and earth system simulator models and dependencies.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "hpc_deployment"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ACCESS-NRI/access-spack-packages",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "spack",
+        "hpc",
+        "climate-science"
+      ],
+      "id": 3
+    },
+    {
+      "name": "mSSA",
+      "one_line_profile": "Multivariate Singular Spectrum Analysis algorithm",
+      "detailed_description": "An implementation of Multivariate Singular Spectrum Analysis (mSSA) for forecasting and imputation of multivariate time series data, applicable in various scientific data analysis contexts.",
+      "domains": [
+        "D4",
+        "D4-02"
+      ],
+      "subtask_category": [
+        "time_series_analysis",
+        "imputation",
+        "forecasting"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/AbdullahO/mSSA",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "time-series",
+        "mssa",
+        "forecasting"
+      ],
+      "id": 4
+    },
+    {
+      "name": "nbdev",
+      "one_line_profile": "Literate programming environment for Jupyter Notebooks",
+      "detailed_description": "A system that allows researchers to develop, document, test, and distribute software directly from Jupyter Notebooks, promoting literate programming and reproducibility in scientific computing.",
+      "domains": [
+        "D2",
+        "D2-04"
+      ],
+      "subtask_category": [
+        "literate_programming",
+        "documentation",
+        "reproducibility"
+      ],
+      "application_level": "tool",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/AnswerDotAI/nbdev",
+      "help_website": [
+        "https://nbdev.fast.ai/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "jupyter",
+        "literate-programming",
+        "python"
+      ],
+      "id": 5
+    },
+    {
+      "name": "boltz_apptainer",
+      "one_line_profile": "Apptainer definition for Boltz-1 model",
+      "detailed_description": "Configuration files to build an Apptainer (Singularity) container image for the Boltz-1 biomolecular modeling tool, facilitating reproducible deployment in HPC environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "containerization",
+        "deployment"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Dockerfile",
+      "repo_url": "https://github.com/Australian-Structural-Biology-Computing/boltz_apptainer",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "apptainer",
+        "structural-biology",
+        "hpc"
+      ],
+      "id": 6
+    },
+    {
+      "name": "Batch Shipyard",
+      "one_line_profile": "HPC and Batch workload management on Azure",
+      "detailed_description": "A tool to provision and execute Docker and Singularity container-based batch processing and HPC workloads on Azure Batch, supporting complex scientific workflows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "hpc_scheduling",
+        "cloud_computing",
+        "container_orchestration"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Azure/batch-shipyard",
+      "help_website": [
+        "https://batch-shipyard.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "azure",
+        "hpc",
+        "docker",
+        "singularity"
+      ],
+      "id": 7
+    },
+    {
+      "name": "PiGx",
+      "one_line_profile": "Reproducible genomics pipelines",
+      "detailed_description": "A collection of genomics pipelines (RNA-seq, ChIP-seq, BS-seq, etc.) built with GNU Guix for reproducibility and ease of use in bioinformatics analysis.",
+      "domains": [
+        "D2",
+        "D2-01"
+      ],
+      "subtask_category": [
+        "genomics_pipeline",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/BIMSBbioinfo/pigx",
+      "help_website": [
+        "http://pigx.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "genomics",
+        "pipeline",
+        "guix",
+        "reproducibility"
+      ],
+      "id": 8
+    },
+    {
+      "name": "PiGx RNA-seq",
+      "one_line_profile": "Bulk RNA-seq analysis pipeline",
+      "detailed_description": "A dedicated pipeline within the PiGx ecosystem for processing, quality control, and downstream analysis of bulk RNA-seq data.",
+      "domains": [
+        "D2",
+        "D2-01"
+      ],
+      "subtask_category": [
+        "rna_seq_analysis",
+        "quality_control"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BIMSBbioinfo/pigx_rnaseq",
+      "help_website": [
+        "http://pigx.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "rna-seq",
+        "bioinformatics",
+        "pipeline"
+      ],
+      "id": 9
+    },
+    {
+      "name": "swineherd",
+      "one_line_profile": "Guix System container manager for PiGx",
+      "detailed_description": "A tool to manage GNU Guix System containers, specifically designed to support the execution and isolation of PiGx genomics pipelines.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "container_management",
+        "environment_isolation"
+      ],
+      "application_level": "tool",
+      "primary_language": "TeX",
+      "repo_url": "https://github.com/BIMSBbioinfo/swineherd",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "guix",
+        "containers",
+        "bioinformatics"
+      ],
+      "id": 10
+    },
+    {
+      "name": "DGBench",
+      "one_line_profile": "Benchmark for robotic grasping in dynamic environments",
+      "detailed_description": "An open-source, reproducible benchmark suite for evaluating robotic grasping algorithms in dynamic settings, providing simulation environments and metrics.",
+      "domains": [
+        "D1",
+        "D1-06"
+      ],
+      "subtask_category": [
+        "robotic_grasping",
+        "benchmarking",
+        "simulation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "C",
+      "repo_url": "https://github.com/BenBurgessLimerick/DGBench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "robotics",
+        "benchmark",
+        "grasping"
+      ],
+      "id": 11
+    },
+    {
+      "name": "mulled",
+      "one_line_profile": "Automated container generation for bioinformatics",
+      "detailed_description": "A tool used by the BioContainers project to automatically generate Docker and Singularity containers from Conda packages, ensuring software availability for bioinformatics workflows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "container_generation",
+        "package_encapsulation"
+      ],
+      "application_level": "tool",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/BioContainers/mulled",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "biocontainers",
+        "docker",
+        "singularity",
+        "bioinformatics"
+      ],
+      "id": 12
+    },
+    {
+      "name": "BlueBrain Spack Packages",
+      "one_line_profile": "Spack packages for Blue Brain Project",
+      "detailed_description": "A repository of Spack package recipes maintained by the Blue Brain Project, facilitating the deployment of neuroscience simulation software on HPC systems.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "hpc_deployment"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BlueBrain/spack-packages",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "spack",
+        "neuroscience",
+        "hpc"
+      ],
+      "id": 13
+    },
+    {
+      "name": "spack-c2sm",
+      "one_line_profile": "Spack configuration for C2SM",
+      "detailed_description": "Spack configuration and package repository for the Center for Climate Systems Modeling (C2SM), managing software environments for climate research.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "environment_configuration"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/C2SM/spack-c2sm",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spack",
+        "climate-modeling",
+        "hpc"
+      ],
+      "id": 14
+    },
+    {
+      "name": "HPK",
+      "one_line_profile": "Kubernetes to HPC translator",
+      "detailed_description": "A tool that allows running Kubernetes-native applications within HPC environments by translating deployments to Slurm jobs and Singularity/Apptainer containers.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "workload_translation",
+        "hpc_integration"
+      ],
+      "application_level": "tool",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/CARV-ICS-FORTH/HPK",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "kubernetes",
+        "hpc",
+        "slurm",
+        "singularity"
+      ],
+      "id": 15
+    },
+    {
+      "name": "envmodule_setup",
+      "one_line_profile": "Lmod setup scripts",
+      "detailed_description": "Scripts to assist in setting up Lmod, a Lua-based environment module system widely used in HPC to manage software dependencies.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_modules",
+        "hpc_setup"
+      ],
+      "application_level": "tool",
+      "primary_language": "Lua",
+      "repo_url": "https://github.com/CLIUtils/envmodule_setup",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "lmod",
+        "hpc",
+        "environment-modules"
+      ],
+      "id": 16
+    },
+    {
+      "name": "CSC Singularity Recipes",
+      "one_line_profile": "Apptainer recipes for CSC HPC",
+      "detailed_description": "A collection of Apptainer/Singularity recipe files for building scientific software containers used on CSC (IT Center for Science) HPC environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "container_recipes",
+        "hpc_software"
+      ],
+      "application_level": "dataset",
+      "primary_language": "R",
+      "repo_url": "https://github.com/CSCfi/singularity-recipes",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "singularity",
+        "apptainer",
+        "hpc",
+        "csc"
+      ],
+      "id": 17
+    },
+    {
+      "name": "jupyter_environment_kernels",
+      "one_line_profile": "Conda/Virtualenv kernel detection for Jupyter",
+      "detailed_description": "A Jupyter plugin that automatically detects Conda and Virtualenv environments and makes them available as kernels, simplifying environment management for data scientists.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "kernel_management",
+        "environment_integration"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Cadair/jupyter_environment_kernels",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "jupyter",
+        "conda",
+        "virtualenv"
+      ],
+      "id": 18
+    },
+    {
+      "name": "ChangeMamba",
+      "one_line_profile": "Remote sensing change detection model",
+      "detailed_description": "A deep learning model based on Spatio-Temporal State Space Model (Mamba architecture) for change detection in remote sensing imagery.",
+      "domains": [
+        "D4",
+        "D4-03"
+      ],
+      "subtask_category": [
+        "change_detection",
+        "remote_sensing",
+        "image_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ChenHongruixuan/ChangeMamba",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "remote-sensing",
+        "mamba",
+        "change-detection"
+      ],
+      "id": 19
+    },
+    {
+      "name": "dodola",
+      "one_line_profile": "CMIP6 bias-adjustment workflow tool",
+      "detailed_description": "A containerized application for performing bias adjustment and downscaling tasks on CMIP6 climate data, designed to run within larger orchestrated workflows.",
+      "domains": [
+        "D2",
+        "D2-01"
+      ],
+      "subtask_category": [
+        "bias_adjustment",
+        "climate_downscaling",
+        "workflow_task"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ClimateImpactLab/dodola",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cmip6",
+        "climate-data",
+        "bias-correction"
+      ],
+      "id": 20
+    },
+    {
+      "name": "KCES",
+      "one_line_profile": "Workflow containerization scheduling scheme",
+      "detailed_description": "A research implementation of a scheduling scheme for containerized workflows in a cloud-edge collaboration framework, optimizing task execution.",
+      "domains": [
+        "D2",
+        "D2-02"
+      ],
+      "subtask_category": [
+        "workflow_scheduling",
+        "cloud_edge_computing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/CloudControlSystems/KCES",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "scheduling",
+        "workflow",
+        "cloud-edge"
+      ],
+      "id": 21
+    },
+    {
+      "name": "KubeAdaptor",
+      "one_line_profile": "Cloud-native workflow engine adaptor",
+      "detailed_description": "A framework to implement workflow containerization on Kubernetes, connecting workflow systems to K8s and ensuring consistency in task scheduling.",
+      "domains": [
+        "D2",
+        "D2-02"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "kubernetes_integration"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/CloudControlSystems/KubeAdaptor",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "kubernetes",
+        "workflow",
+        "cloud-native"
+      ],
+      "id": 22
+    },
+    {
+      "name": "ZigMa",
+      "one_line_profile": "Mamba-based diffusion model",
+      "detailed_description": "Implementation of 'ZigMa: A DiT-Style Mamba-based Diffusion Model', a generative model architecture for computer vision tasks.",
+      "domains": [
+        "D4",
+        "D4-03"
+      ],
+      "subtask_category": [
+        "generative_modeling",
+        "image_synthesis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CompVis/zigma",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "diffusion-model",
+        "mamba",
+        "computer-vision"
+      ],
+      "id": 23
+    },
+    {
+      "name": "EasyBuild ComputeCanada Config",
+      "one_line_profile": "EasyBuild configuration for Compute Canada",
+      "detailed_description": "Custom configuration and recipes for EasyBuild, used by Compute Canada to manage software builds and modules on their HPC clusters.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "software_build",
+        "hpc_configuration"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ComputeCanada/easybuild-computecanada-config",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "easybuild",
+        "hpc",
+        "software-management"
+      ],
+      "id": 24
+    },
+    {
+      "name": "private-conda-repo",
+      "one_line_profile": "Private Conda package repository server",
+      "detailed_description": "A tool to host a private Conda channel/repository, allowing organizations to manage and serve custom or private scientific software packages.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_hosting",
+        "environment_infrastructure"
+      ],
+      "application_level": "service",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/DanielBok/private-conda-repo",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "conda",
+        "repository",
+        "package-management"
+      ],
+      "id": 25
+    },
+    {
+      "name": "mach-nix",
+      "one_line_profile": "Reproducible Python environments with Nix",
+      "detailed_description": "A tool that simplifies the creation of highly reproducible Python environments using the Nix package manager, solving dependency hell in scientific computing.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "reproducibility"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DavHau/mach-nix",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nix",
+        "python",
+        "reproducibility"
+      ],
+      "id": 26
+    },
+    {
+      "name": "cotainr",
+      "one_line_profile": "User-space Apptainer container builder",
+      "detailed_description": "A tool that allows users to build Apptainer/Singularity containers in user space (without root privileges) from Conda environments, tailored for HPC usage.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "container_building",
+        "hpc_deployment"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DeiC-HPC/cotainr",
+      "help_website": [
+        "https://cotainr.readthedocs.io/"
+      ],
+      "license": "EUPL-1.2",
+      "tags": [
+        "apptainer",
+        "singularity",
+        "hpc",
+        "conda"
+      ],
+      "id": 27
+    },
+    {
+      "name": "Dugong",
+      "one_line_profile": "Scientific Linux Container",
+      "detailed_description": "A Docker container definition designed for scientific computing, pre-configured with bioinformatics and data science tools.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "container_environment",
+        "bioinformatics_setup"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Dockerfile",
+      "repo_url": "https://github.com/DugongBioinformatics/Dugong",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "docker",
+        "bioinformatics",
+        "scientific-computing"
+      ],
+      "id": 28
+    },
+    {
+      "name": "E4S",
+      "one_line_profile": "Extreme-scale Scientific Software Stack",
+      "detailed_description": "The Extreme-scale Scientific Software Stack (E4S) is a community effort to provide a comprehensive suite of open-source software packages for HPC, integrated with Spack.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "software_stack",
+        "hpc_environment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/E4S-Project/e4s",
+      "help_website": [
+        "https://e4s.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "hpc",
+        "spack",
+        "scientific-software"
+      ],
+      "id": 29
+    },
+    {
+      "name": "E4S à la carte",
+      "one_line_profile": "Custom HPC container image builder",
+      "detailed_description": "A tool that allows users to customize E4S container images by adding specific system and Spack packages, tailoring the environment for specific scientific workflows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "container_customization",
+        "image_building"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/E4S-Project/e4s-alc",
+      "help_website": [
+        "https://e4s-alc.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "hpc",
+        "container",
+        "spack"
+      ],
+      "id": 30
+    },
+    {
+      "name": "e4s-cl",
+      "one_line_profile": "Container launcher for E4S",
+      "detailed_description": "A tool to simplify the launch of MPI applications inside E4S containers on HPC systems, handling library binding and environment setup.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "container_runtime",
+        "mpi_execution"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/E4S-Project/e4s-cl",
+      "help_website": [
+        "https://e4s-cl.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "hpc",
+        "mpi",
+        "container-launcher"
+      ],
+      "id": 31
+    },
+    {
+      "name": "ESCOMP-Containers",
+      "one_line_profile": "Containerized versions of ESCOMP Earth System modeling software",
+      "detailed_description": "Provides Docker and Singularity containers for the Community Earth System Model (CESM) and other ESCOMP software, facilitating reproducible climate simulations.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "environment_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/ESCOMP/ESCOMP-Containers",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "climate-modeling",
+        "containers",
+        "cesm",
+        "hpc"
+      ],
+      "id": 32
+    },
+    {
+      "name": "EXP-container",
+      "one_line_profile": "Container recipes for the EXP N-body simulation code",
+      "detailed_description": "Provides recipes and build configurations for creating Docker and Apptainer/Singularity containers for the EXP galaxy formation simulation software.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "environment_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EXP-code/EXP-container",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "n-body",
+        "astrophysics",
+        "containers",
+        "apptainer"
+      ],
+      "id": 33
+    },
+    {
+      "name": "bioconda_recipepod",
+      "one_line_profile": "Gitpod environment for developing Bioconda recipes",
+      "detailed_description": "A development environment configuration for creating, testing, and maintaining Bioconda recipes, streamlining the bioinformatics software supply chain.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "bioinformatics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Dockerfile",
+      "repo_url": "https://github.com/FloWuenne/bioconda_recipepod",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bioconda",
+        "gitpod",
+        "packaging"
+      ],
+      "id": 34
+    },
+    {
+      "name": "openfoam-apptainer-packaging",
+      "one_line_profile": "Automated Apptainer container builds for OpenFOAM CFD software",
+      "detailed_description": "Automates the packaging of OpenFOAM and related HPC packages into Apptainer containers, ensuring portability for Computational Fluid Dynamics workflows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "environment_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FoamScience/openfoam-apptainer-packaging",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "openfoam",
+        "cfd",
+        "apptainer",
+        "hpc"
+      ],
+      "id": 35
+    },
+    {
+      "name": "EBcb",
+      "one_line_profile": "Docker container for building scientific software with EasyBuild",
+      "detailed_description": "A containerized environment designed to run EasyBuild, facilitating the building and installation of scientific software stacks in a reproducible manner.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "build_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/FredHutch/EBcb",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "easybuild",
+        "hpc",
+        "containers"
+      ],
+      "id": 36
+    },
+    {
+      "name": "MARS",
+      "one_line_profile": "Containerized bioinformatics workflow integration and management tool",
+      "detailed_description": "Simplifies bioinformatics workflows by providing a containerized approach to tool integration and management, ensuring reproducibility in genomic analysis.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "pipeline_integration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/GenomicAI/mars",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bioinformatics",
+        "containers",
+        "workflow"
+      ],
+      "id": 37
+    },
+    {
+      "name": "hep-spack",
+      "one_line_profile": "Spack package manager overlay for High Energy Physics software",
+      "detailed_description": "A Spack overlay repository containing package recipes specifically for the High Energy Physics (HEP) community, enabling the build of complex HEP software stacks.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HSF/hep-spack",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "hep",
+        "spack",
+        "hpc",
+        "physics"
+      ],
+      "id": 38
+    },
+    {
+      "name": "maru",
+      "one_line_profile": "CLI for containerizing scientific applications",
+      "detailed_description": "A command-line interface designed to quickly and easily containerize scientific applications, simplifying the creation of reproducible research environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "containerization",
+        "environment_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/JaneliaSciComp/maru",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "containers",
+        "reproducibility",
+        "science-ops"
+      ],
+      "id": 39
+    },
+    {
+      "name": "IterativeSolvers.jl",
+      "one_line_profile": "Julia library for iterative linear algebra solvers",
+      "detailed_description": "Provides iterative algorithms for solving linear systems, eigensystems, and singular value problems, essential for scientific simulation and modeling.",
+      "domains": [
+        "D1",
+        "D1-01"
+      ],
+      "subtask_category": [
+        "numerical_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaLinearAlgebra/IterativeSolvers.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "linear-algebra",
+        "julia",
+        "scientific-computing"
+      ],
+      "id": 40
+    },
+    {
+      "name": "Conda.jl",
+      "one_line_profile": "Julia package for managing Conda binary dependencies",
+      "detailed_description": "Allows Julia packages to manage and install binary dependencies via Conda, bridging the gap between Julia and the Python/Conda scientific ecosystem.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "dependency_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaPy/Conda.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "julia",
+        "conda",
+        "package-management"
+      ],
+      "id": 41
+    },
+    {
+      "name": "KrylovKit.jl",
+      "one_line_profile": "Julia library for Krylov methods in linear algebra",
+      "detailed_description": "A Julia library providing Krylov methods for solving linear problems, eigenvalues, and singular values, widely used in physics simulations (e.g., quantum mechanics).",
+      "domains": [
+        "D1",
+        "D1-01"
+      ],
+      "subtask_category": [
+        "numerical_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/Jutho/KrylovKit.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "krylov",
+        "linear-algebra",
+        "julia"
+      ],
+      "id": 42
+    },
+    {
+      "name": "Benchpark",
+      "one_line_profile": "Framework for reproducible HPC benchmarking specifications",
+      "detailed_description": "An open collaborative repository and framework for defining reproducible specifications of HPC benchmarks, aiding in the performance analysis of scientific computing environments.",
+      "domains": [
+        "D2",
+        "D2-04"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "performance_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LLNL/benchpark",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "hpc",
+        "benchmarking",
+        "llnl"
+      ],
+      "id": 43
+    },
+    {
+      "name": "Uberenv",
+      "one_line_profile": "Automation tool for Spack-based software deployment",
+      "detailed_description": "Automates the process of using Spack to build and deploy scientific software stacks, simplifying dependency management on HPC systems.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "deployment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/LLNL/uberenv",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "spack",
+        "hpc",
+        "deployment"
+      ],
+      "id": 44
+    },
+    {
+      "name": "PSCondaEnvs",
+      "one_line_profile": "PowerShell scripts for Conda environment management",
+      "detailed_description": "Provides drop-in replacement scripts to replicate Conda's activate/deactivate commands in PowerShell, enabling scientific Python workflows on Windows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management"
+      ],
+      "application_level": "library",
+      "primary_language": "PowerShell",
+      "repo_url": "https://github.com/Liquidmantis/PSCondaEnvs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "conda",
+        "powershell",
+        "windows"
+      ],
+      "id": 45
+    },
+    {
+      "name": "LUMI-SoftwareStack",
+      "one_line_profile": "Setup tools for the LUMI supercomputer software environment",
+      "detailed_description": "Provides the setup scripts and configurations for the LMOD-based module system and EasyBuild environment on the LUMI supercomputer.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_setup"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Lumi-supercomputer/LUMI-SoftwareStack",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "hpc",
+        "lumi",
+        "easybuild",
+        "lmod"
+      ],
+      "id": 46
+    },
+    {
+      "name": "dsatools",
+      "one_line_profile": "Digital signal analysis and processing library",
+      "detailed_description": "A Python library for digital signal analysis, including SSA, DMD, and EMD methods, used for processing experimental data in physics and engineering.",
+      "domains": [
+        "D3",
+        "D3-01"
+      ],
+      "subtask_category": [
+        "signal_processing",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/MVRonkin/dsatools",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "signal-processing",
+        "ssa",
+        "dmd",
+        "time-series"
+      ],
+      "id": 47
+    },
+    {
+      "name": "facemap",
+      "one_line_profile": "Framework for predicting neural activity from mouse orofacial movements",
+      "detailed_description": "A framework for analyzing behavioral videos to predict neural activity in mice. It tracks orofacial movements using pose estimation and includes singular value decomposition (SVD) for behavioral video analysis.",
+      "domains": [
+        "Neuroscience",
+        "Data/Analysis"
+      ],
+      "subtask_category": [
+        "neural_activity_prediction",
+        "pose_estimation",
+        "behavioral_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MouseLand/facemap",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "neuroscience",
+        "pose-estimation",
+        "neural-activity",
+        "svd"
+      ],
+      "id": 48
+    },
+    {
+      "name": "LightM-UNet",
+      "one_line_profile": "Lightweight Mamba-assisted UNet for medical image segmentation",
+      "detailed_description": "A PyTorch implementation of LightM-UNet, integrating Mamba (State Space Models) into a lightweight UNet architecture specifically designed for medical image segmentation tasks.",
+      "domains": [
+        "Medical Imaging",
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "medical_image_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MrBlankness/LightM-UNet",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-imaging",
+        "segmentation",
+        "mamba",
+        "unet"
+      ],
+      "id": 49
+    },
+    {
+      "name": "Remote Sensing Mamba",
+      "one_line_profile": "Mamba-based model for remote sensing image analysis",
+      "detailed_description": "Official implementation of Remote Sensing Mamba, applying State Space Models to the analysis and processing of remote sensing imagery.",
+      "domains": [
+        "Remote Sensing",
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "remote_sensing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NJU-LHRS/Official_Remote_Sensing_Mamba",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "remote-sensing",
+        "mamba",
+        "deep-learning"
+      ],
+      "id": 50
+    },
+    {
+      "name": "HPC Container Maker",
+      "one_line_profile": "Tool to generate HPC container specifications",
+      "detailed_description": "HPC Container Maker (HPCCM) generates container specification files (Dockerfiles, Singularity definition files) optimized for High Performance Computing (HPC) environments, simplifying the deployment of scientific applications.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "containerization",
+        "environment_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NVIDIA/hpc-container-maker",
+      "help_website": [
+        "https://github.com/NVIDIA/hpc-container-maker"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "hpc",
+        "containers",
+        "docker",
+        "singularity",
+        "reproducibility"
+      ],
+      "id": 51
+    },
+    {
+      "name": "Nix",
+      "one_line_profile": "Purely functional package manager for reproducible builds",
+      "detailed_description": "A powerful package manager for Linux and other Unix systems that makes package management reliable and reproducible. It is widely used in scientific computing to create reproducible research environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "environment_reproducibility"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/NixOS/nix",
+      "help_website": [
+        "https://nixos.org/"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "package-manager",
+        "reproducibility",
+        "build-system"
+      ],
+      "id": 52
+    },
+    {
+      "name": "Nixtla",
+      "one_line_profile": "Time series forecasting and anomaly detection library",
+      "detailed_description": "A library for time series forecasting and anomaly detection, providing access to foundation models like TimeGPT. It supports various domains including scientific monitoring (IoT, energy).",
+      "domains": [
+        "Data/Analysis"
+      ],
+      "subtask_category": [
+        "time_series_forecasting",
+        "anomaly_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Nixtla/nixtla",
+      "help_website": [
+        "https://docs.nixtla.io/"
+      ],
+      "license": null,
+      "tags": [
+        "time-series",
+        "forecasting",
+        "foundation-model"
+      ],
+      "id": 53
+    },
+    {
+      "name": "envkernel",
+      "one_line_profile": "Jupyter kernel manager for various environments",
+      "detailed_description": "A tool to run Jupyter kernels in different environments such as Conda, Virtualenv, Docker, Singularity, and Lmod, facilitating interactive scientific computing across isolated environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_integration",
+        "interactive_computing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NordicHPC/envkernel",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "jupyter",
+        "hpc",
+        "singularity",
+        "conda",
+        "lmod"
+      ],
+      "id": 54
+    },
+    {
+      "name": "pixi-pack",
+      "one_line_profile": "Tool to pack and unpack pixi/conda environments",
+      "detailed_description": "A utility to pack and unpack Conda environments created with Pixi, enabling reproducible environment distribution for scientific workflows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_packaging",
+        "reproducibility"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/Quantco/pixi-pack",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "conda",
+        "pixi",
+        "environment-management",
+        "reproducibility"
+      ],
+      "id": 55
+    },
+    {
+      "name": "pssa",
+      "one_line_profile": "Singular Spectrum Analysis library for time series forecasting",
+      "detailed_description": "A Python implementation of Singular Spectrum Analysis (SSA) for decomposing and forecasting time series data, commonly used in signal processing and econometrics.",
+      "domains": [
+        "Data",
+        "Modeling"
+      ],
+      "subtask_category": [
+        "time_series_analysis",
+        "forecasting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aj-cloete/pssa",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ssa",
+        "time-series",
+        "forecasting"
+      ],
+      "id": 56
+    },
+    {
+      "name": "mamba.py",
+      "one_line_profile": "Efficient implementation of the Mamba state-space model architecture",
+      "detailed_description": "A simple and efficient implementation of the Mamba architecture in pure PyTorch and MLX, enabling scientific modeling and sequence processing tasks.",
+      "domains": [
+        "Modeling",
+        "AI"
+      ],
+      "subtask_category": [
+        "model_architecture",
+        "sequence_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/alxndrTL/mamba.py",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "mamba",
+        "ssm",
+        "pytorch"
+      ],
+      "id": 57
+    },
+    {
+      "name": "AuctionGym",
+      "one_line_profile": "Simulation environment for auction algorithms and reinforcement learning",
+      "detailed_description": "A simulation environment designed for the reproducible evaluation of bandit and reinforcement learning methods in the context of online advertising auctions.",
+      "domains": [
+        "Modeling",
+        "Simulation"
+      ],
+      "subtask_category": [
+        "simulation",
+        "reinforcement_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/amazon-science/auction-gym",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "simulation",
+        "reinforcement-learning",
+        "auctions"
+      ],
+      "id": 58
+    },
+    {
+      "name": "conda-merge",
+      "one_line_profile": "Utility to merge Conda environment files",
+      "detailed_description": "A tool to merge multiple Conda environment specification files into a single file, facilitating complex scientific environment management.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/amitbeka/conda-merge",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "conda",
+        "environment-management",
+        "reproducibility"
+      ],
+      "id": 59
+    },
+    {
+      "name": "nb_conda",
+      "one_line_profile": "Conda environment management extension for Jupyter",
+      "detailed_description": "An extension for Jupyter Notebooks that allows users to manage Conda environments and packages directly from the Jupyter interface.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "interactive_computing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/anaconda/nb_conda",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "jupyter",
+        "conda",
+        "environment-management"
+      ],
+      "id": 60
+    },
+    {
+      "name": "nb_conda_kernels",
+      "one_line_profile": "Automatic Conda environment kernel detection for Jupyter",
+      "detailed_description": "A package that enables Jupyter to automatically detect and use kernels from other Conda environments, streamlining scientific workflows across multiple environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "interactive_computing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/anaconda/nb_conda_kernels",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "jupyter",
+        "conda",
+        "kernels"
+      ],
+      "id": 61
+    },
+    {
+      "name": "Apptainer",
+      "one_line_profile": "Container system for High Performance Computing (HPC)",
+      "detailed_description": "The open-source container system (formerly Singularity) designed for HPC environments, enabling reproducible scientific computing with support for MPI and GPUs.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "containerization",
+        "hpc_execution"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/apptainer/apptainer",
+      "help_website": [
+        "https://apptainer.org/docs/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "hpc",
+        "containers",
+        "singularity",
+        "reproducibility"
+      ],
+      "id": 62
+    },
+    {
+      "name": "Singularity",
+      "one_line_profile": "Container platform for scientific and HPC workloads (Legacy)",
+      "detailed_description": "The original repository for Singularity (now Apptainer), a container platform optimized for scientific workloads, HPC, and reproducible research.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "containerization",
+        "hpc_execution"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/apptainer/singularity",
+      "help_website": [
+        "https://sylabs.io/docs/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "hpc",
+        "containers",
+        "legacy"
+      ],
+      "id": 63
+    },
+    {
+      "name": "Bactopia",
+      "one_line_profile": "Flexible pipeline for complete analysis of bacterial genomes",
+      "detailed_description": "A comprehensive Nextflow pipeline for bacterial genome analysis, integrating numerous bioinformatics tools for assembly, annotation, and variant calling.",
+      "domains": [
+        "D2",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "genome_analysis",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/bactopia/bactopia",
+      "help_website": [
+        "https://bactopia.github.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "bioinformatics",
+        "bacteria",
+        "genomics",
+        "nextflow"
+      ],
+      "id": 64
+    },
+    {
+      "name": "unidep",
+      "one_line_profile": "Unified dependency management for Pip and Conda",
+      "detailed_description": "A tool that manages Python project dependencies by maintaining a single source of truth for both pip and conda requirements, simplifying scientific environment setup.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/basnijholt/unidep",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "dependency-management",
+        "conda",
+        "pip",
+        "reproducibility"
+      ],
+      "id": 65
+    },
+    {
+      "name": "Binder",
+      "one_line_profile": "Service for reproducible executable environments",
+      "detailed_description": "The core software powering mybinder.org, allowing users to create reproducible, interactive computing environments from code repositories.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "reproducibility",
+        "environment_provisioning"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/binder-project/binder",
+      "help_website": [
+        "https://mybinder.readthedocs.io/"
+      ],
+      "license": null,
+      "tags": [
+        "reproducibility",
+        "jupyter",
+        "docker",
+        "science-sharing"
+      ],
+      "id": 66
+    },
+    {
+      "name": "bioconda-utils",
+      "one_line_profile": "Utilities for building and managing Bioconda recipes",
+      "detailed_description": "A set of utilities used to build, test, and manage recipes for the Bioconda channel, essential for the distribution of bioinformatics software.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "build_system"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bioconda/bioconda-utils",
+      "help_website": [
+        "https://bioconda.github.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "bioinformatics",
+        "conda",
+        "packaging"
+      ],
+      "id": 67
+    },
+    {
+      "name": "Master of Pores",
+      "one_line_profile": "Nextflow pipeline for direct RNA Nanopore read analysis",
+      "detailed_description": "A Nextflow pipeline designed for the analysis of direct RNA sequencing data from Oxford Nanopore technologies, including preprocessing, mapping, and modification detection.",
+      "domains": [
+        "Bioinformatics",
+        "D2"
+      ],
+      "subtask_category": [
+        "sequence_analysis",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/biocorecrg/master_of_pores",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nanopore",
+        "rna-seq",
+        "nextflow",
+        "bioinformatics"
+      ],
+      "id": 68
+    },
+    {
+      "name": "Graph-Mamba",
+      "one_line_profile": "Long-range graph sequence modelling with selective state spaces",
+      "detailed_description": "A deep learning framework adapting Mamba (Selective State Spaces) for graph data, enabling efficient modeling of long-range dependencies in graph sequences, applicable to molecular and structural biology tasks.",
+      "domains": [
+        "D1",
+        "D5"
+      ],
+      "subtask_category": [
+        "graph_modeling",
+        "sequence_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bowang-lab/Graph-Mamba",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "graph-neural-networks",
+        "mamba",
+        "deep-learning",
+        "molecular-modeling"
+      ],
+      "id": 69
+    },
+    {
+      "name": "U-Mamba",
+      "one_line_profile": "Hybrid CNN-SSM architecture for biomedical image segmentation",
+      "detailed_description": "A biomedical image segmentation tool that integrates State Space Models (SSM) with U-Net architectures to capture long-range dependencies in high-resolution biomedical images.",
+      "domains": [
+        "D1",
+        "D5"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "biomedical_imaging"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bowang-lab/U-Mamba",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-imaging",
+        "segmentation",
+        "mamba",
+        "u-net"
+      ],
+      "id": 70
+    },
+    {
+      "name": "Cromwell",
+      "one_line_profile": "Scientific workflow engine for genomics and cloud computing",
+      "detailed_description": "A workflow management system geared towards scientific workflows (WDL), supporting execution on various platforms including local, HPC, and cloud environments (GCP, AWS).",
+      "domains": [
+        "D2"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "pipeline_execution"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/broadinstitute/cromwell",
+      "help_website": [
+        "https://cromwell.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "wdl",
+        "genomics",
+        "workflow-engine",
+        "bioinformatics"
+      ],
+      "id": 71
+    },
+    {
+      "name": "lmodule",
+      "one_line_profile": "Python API for Lmod environment modules",
+      "detailed_description": "A Python library that provides an interface to interact with the Lmod environment module system, facilitating the management of scientific software environments in HPC settings.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "hpc_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/buildtesters/lmodule",
+      "help_website": [
+        "https://lmodule.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "lmod",
+        "hpc",
+        "environment-modules",
+        "python-api"
+      ],
+      "id": 72
+    },
+    {
+      "name": "irlba",
+      "one_line_profile": "Fast truncated singular value decomposition (SVD) library",
+      "detailed_description": "An R package for implicitly restarted Lanczos bidiagonalization, enabling fast computation of partial SVD for large sparse matrices common in scientific data analysis.",
+      "domains": [
+        "D3"
+      ],
+      "subtask_category": [
+        "dimensionality_reduction",
+        "matrix_factorization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/bwlewis/irlba",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "svd",
+        "pca",
+        "sparse-matrix",
+        "linear-algebra"
+      ],
+      "id": 73
+    },
+    {
+      "name": "Calkit",
+      "one_line_profile": "Project management and reproducibility tool for research",
+      "detailed_description": "A command-line tool designed to simplify version control, environment management, and pipeline execution specifically for reproducible research projects.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "reproducibility",
+        "project_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/calkit/calkit",
+      "help_website": [
+        "https://calkit.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "reproducible-research",
+        "git",
+        "pipeline",
+        "data-management"
+      ],
+      "id": 74
+    },
+    {
+      "name": "cmcrameri",
+      "one_line_profile": "Perceptually uniform colourmaps for geosciences",
+      "detailed_description": "A Python library providing Fabio Crameri's perceptually uniform scientific colormaps, designed to accurately represent data in geosciences and other scientific fields without visual distortion.",
+      "domains": [
+        "D4"
+      ],
+      "subtask_category": [
+        "scientific_visualization",
+        "plotting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/callumrollo/cmcrameri",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "visualization",
+        "colormaps",
+        "geoscience",
+        "matplotlib"
+      ],
+      "id": 75
+    },
+    {
+      "name": "jupyter-lmod",
+      "one_line_profile": "Jupyter extension for Lmod environment modules",
+      "detailed_description": "A Jupyter notebook extension that allows users to interact with Lmod environment modules directly from the Jupyter interface, bridging interactive data science with HPC environment management.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "interactive_computing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cmd-ntrf/jupyter-lmod",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "jupyter",
+        "lmod",
+        "hpc",
+        "environment-modules"
+      ],
+      "id": 76
+    },
+    {
+      "name": "CompareM2",
+      "one_line_profile": "Microbial genomes-to-report pipeline",
+      "detailed_description": "A bioinformatics pipeline for comparative genomics, automating the process from microbial genomes to analytical reports.",
+      "domains": [
+        "D2",
+        "D5"
+      ],
+      "subtask_category": [
+        "comparative_genomics",
+        "pipeline_execution"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cmkobel/CompareM2",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bioinformatics",
+        "genomics",
+        "microbiology",
+        "pipeline"
+      ],
+      "id": 77
+    },
+    {
+      "name": "Community Collections",
+      "one_line_profile": "Research Computing Framework based on Singularity and Lmod",
+      "detailed_description": "A framework for managing and deploying research software stacks using Singularity containers and Lmod modules, facilitating reproducible research computing environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "containerization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/community-collections/community-collections",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "singularity",
+        "lmod",
+        "hpc",
+        "reproducibility"
+      ],
+      "id": 78
+    },
+    {
+      "name": "conda-env",
+      "one_line_profile": "Unified interface for managing Conda environments",
+      "detailed_description": "A tool (now integrated into conda) for managing isolated package environments, allowing export and recreation of scientific computing environments via YAML configuration.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/conda-archive/conda-env",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "conda",
+        "environment-management",
+        "reproducibility"
+      ],
+      "id": 79
+    },
+    {
+      "name": "Miniforge",
+      "one_line_profile": "Minimal Conda installer with conda-forge pre-configured",
+      "detailed_description": "A distribution of the Conda package manager configured to use the community-driven conda-forge channel, essential for setting up scientific environments on various architectures (including Apple Silicon).",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_provisioning"
+      ],
+      "application_level": "platform",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/conda-forge/miniforge",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "conda",
+        "mamba",
+        "distribution",
+        "scientific-computing"
+      ],
+      "id": 80
+    },
+    {
+      "name": "conda-docker",
+      "one_line_profile": "Tool to create Docker images from Conda environments",
+      "detailed_description": "A library and command-line tool that generates minimal Docker images directly from Conda environments without requiring a Docker daemon, facilitating containerization of scientific workflows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "containerization",
+        "environment_export"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/conda-incubator/conda-docker",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "docker",
+        "conda",
+        "containerization",
+        "reproducibility"
+      ],
+      "id": 81
+    },
+    {
+      "name": "conda-env-builder",
+      "one_line_profile": "Builder for multiple custom Conda environments",
+      "detailed_description": "A tool to build and maintain multiple Conda environments from a single configuration source, streamlining the management of complex dependency sets for research projects.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "build_automation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/conda-incubator/conda-env-builder",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "conda",
+        "environment-management",
+        "automation"
+      ],
+      "id": 82
+    },
+    {
+      "name": "conda-project",
+      "one_line_profile": "Tool for encapsulating and reproducing Conda projects",
+      "detailed_description": "A tool designed to lock down and reproduce entire projects by managing the Conda environment and project-specific commands, ensuring portability of scientific work.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "reproducibility",
+        "project_encapsulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/conda-incubator/conda-project",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "reproducibility",
+        "conda",
+        "project-management"
+      ],
+      "id": 83
+    },
+    {
+      "name": "conda-store",
+      "one_line_profile": "Data science environment management server",
+      "detailed_description": "A server application that builds and serves Conda environments, providing a centralized way to manage and share reproducible data science environments across teams (e.g., via JupyterHub).",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_serving",
+        "collaboration"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/conda-incubator/conda-store",
+      "help_website": [
+        "https://conda-store.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "conda",
+        "jupyterhub",
+        "environment-management",
+        "collaboration"
+      ],
+      "id": 84
+    },
+    {
+      "name": "conda-tree",
+      "one_line_profile": "Dependency tree viewer for Conda environments",
+      "detailed_description": "A utility to inspect the dependency tree of Conda environments, helping users understand package relationships and debug version conflicts in scientific stacks.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "dependency_analysis",
+        "environment_debugging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/conda-incubator/conda-tree",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "conda",
+        "dependency-tree",
+        "debugging"
+      ],
+      "id": 85
+    },
+    {
+      "name": "condacolab",
+      "one_line_profile": "Conda integration for Google Colab",
+      "detailed_description": "A Python package that simplifies the installation and usage of Conda/Mamba on Google Colab, enabling the use of scientific packages not available in the default Colab runtime.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_integration",
+        "cloud_computing"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/conda-incubator/condacolab",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "google-colab",
+        "conda",
+        "mamba",
+        "data-science"
+      ],
+      "id": 86
+    },
+    {
+      "name": "conda-execute",
+      "one_line_profile": "Execute scripts in temporary Conda environments",
+      "detailed_description": "A tool that allows scripts to define their own execution environment requirements in metadata, automatically creating a temporary Conda environment to run the script reproducibly.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "reproducibility",
+        "script_execution"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/conda-tools/conda-execute",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "conda",
+        "reproducibility",
+        "scripting"
+      ],
+      "id": 87
+    },
+    {
+      "name": "Conda",
+      "one_line_profile": "Package and environment manager for scientific computing",
+      "detailed_description": "The de facto standard package and environment management system for data science and scientific computing, handling binary dependencies and isolated environments across languages (Python, R, etc.).",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "environment_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/conda/conda",
+      "help_website": [
+        "https://docs.conda.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "package-manager",
+        "environment-manager",
+        "data-science",
+        "python"
+      ],
+      "id": 88
+    },
+    {
+      "name": "conda-libmamba-solver",
+      "one_line_profile": "Fast libmamba-based solver for the Conda package manager",
+      "detailed_description": "A solver plug-in for Conda that utilizes the libmamba library to significantly speed up dependency resolution in scientific environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "dependency_resolution",
+        "environment_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/conda/conda-libmamba-solver",
+      "help_website": [
+        "https://conda.github.io/conda-libmamba-solver/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "conda",
+        "dependency-solver",
+        "mamba",
+        "package-management"
+      ],
+      "id": 89
+    },
+    {
+      "name": "conda-lock",
+      "one_line_profile": "Lightweight lockfile generator for Conda environments",
+      "detailed_description": "A tool to generate fully reproducible lockfiles for Conda environments, ensuring consistent package versions across different platforms and installations.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "reproducibility",
+        "environment_management"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/conda/conda-lock",
+      "help_website": [
+        "https://conda-incubator.github.io/conda-lock/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "conda",
+        "reproducibility",
+        "lockfile",
+        "environment"
+      ],
+      "id": 90
+    },
+    {
+      "name": "conda-pack",
+      "one_line_profile": "Tool for packaging and redistributing Conda environments",
+      "detailed_description": "A command-line tool that archives Conda environments into portable formats (tarballs/zip) for deployment on systems without Conda installed, such as HPC nodes.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "deployment",
+        "environment_portability"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/conda/conda-pack",
+      "help_website": [
+        "https://conda.github.io/conda-pack/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "conda",
+        "hpc",
+        "deployment",
+        "portability"
+      ],
+      "id": 91
+    },
+    {
+      "name": "constructor",
+      "one_line_profile": "Installer creation tool for Conda packages",
+      "detailed_description": "A tool for constructing cross-platform installers (like Anaconda or Miniforge) from Conda packages, facilitating the distribution of scientific software stacks.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "software_distribution",
+        "installer_generation"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/conda/constructor",
+      "help_website": [
+        "https://github.com/conda/constructor"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "conda",
+        "installer",
+        "distribution",
+        "packaging"
+      ],
+      "id": 92
+    },
+    {
+      "name": "grayskull",
+      "one_line_profile": "Automatic recipe generator for Conda packages",
+      "detailed_description": "A tool that generates Conda recipes from PyPI packages, streamlining the process of packaging scientific software for the Conda ecosystem.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "packaging",
+        "recipe_generation"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/conda/grayskull",
+      "help_website": [
+        "https://github.com/conda/grayskull"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "conda",
+        "pypi",
+        "packaging",
+        "automation"
+      ],
+      "id": 93
+    },
+    {
+      "name": "rattler",
+      "one_line_profile": "Rust library for interacting with the Conda ecosystem",
+      "detailed_description": "A high-performance Rust library that provides functionality to work with Conda packages, environments, and repodata, serving as a building block for next-gen scientific package managers.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "library"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/conda/rattler",
+      "help_website": [
+        "https://docs.rs/rattler/latest/rattler/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "rust",
+        "conda",
+        "package-management",
+        "performance"
+      ],
+      "id": 94
+    },
+    {
+      "name": "MambaIR",
+      "one_line_profile": "Image restoration model based on State-Space Models",
+      "detailed_description": "A deep learning framework and model implementation for low-level vision tasks (image restoration) utilizing the Mamba architecture.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "image_restoration",
+        "scientific_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/csguoh/MambaIR",
+      "help_website": [
+        "https://github.com/csguoh/MambaIR"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "computer-vision",
+        "image-restoration",
+        "mamba",
+        "deep-learning"
+      ],
+      "id": 95
+    },
+    {
+      "name": "mrs_apptainer",
+      "one_line_profile": "Apptainer environment wrappers for UAV research",
+      "detailed_description": "A set of tools and wrappers to manage Apptainer (Singularity) containers specifically for the MRS UAV system research workflows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "robotics_simulation",
+        "environment_management"
+      ],
+      "application_level": "tool",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/ctu-mrs/mrs_apptainer",
+      "help_website": [
+        "https://github.com/ctu-mrs/mrs_apptainer"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "uav",
+        "robotics",
+        "apptainer",
+        "singularity"
+      ],
+      "id": 96
+    },
+    {
+      "name": "Dockstore",
+      "one_line_profile": "Registry and platform for scientific tools and workflows",
+      "detailed_description": "An open platform for sharing Docker-based scientific tools and workflows (CWL, WDL, Nextflow) to enable reproducible research.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "workflow_sharing",
+        "reproducibility"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/dockstore/dockstore",
+      "help_website": [
+        "https://dockstore.org/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "bioinformatics",
+        "workflow",
+        "registry",
+        "docker"
+      ],
+      "id": 97
+    },
+    {
+      "name": "poetry2conda",
+      "one_line_profile": "Converter from Poetry projects to Conda environments",
+      "detailed_description": "A tool that converts Python `pyproject.toml` configuration files into Conda `environment.yaml` files, bridging general Python development with scientific computing environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_conversion",
+        "interoperability"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dojeda/poetry2conda",
+      "help_website": [
+        "https://github.com/dojeda/poetry2conda"
+      ],
+      "license": "MIT",
+      "tags": [
+        "poetry",
+        "conda",
+        "conversion",
+        "environment"
+      ],
+      "id": 98
+    },
+    {
+      "name": "EasyBuild",
+      "one_line_profile": "Software build and installation framework for HPC",
+      "detailed_description": "A software installation framework that automates the management of scientific software stacks on High Performance Computing (HPC) systems in an efficient and reproducible way.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "software_building",
+        "hpc_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/easybuilders/easybuild",
+      "help_website": [
+        "https://easybuild.io/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "hpc",
+        "build-automation",
+        "scientific-software",
+        "reproducibility"
+      ],
+      "id": 99
+    },
+    {
+      "name": "easybuild-easyblocks",
+      "one_line_profile": "Build logic collection for EasyBuild",
+      "detailed_description": "A collection of Python scripts ('easyblocks') that implement the specific build procedures for various scientific software packages within the EasyBuild framework.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "build_logic",
+        "software_installation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/easybuilders/easybuild-easyblocks",
+      "help_website": [
+        "https://docs.easybuild.io/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "hpc",
+        "easybuild",
+        "build-scripts"
+      ],
+      "id": 100
+    },
+    {
+      "name": "easybuild-framework",
+      "one_line_profile": "Core framework for EasyBuild",
+      "detailed_description": "The core Python framework of EasyBuild that provides the functionality to parse build specifications and execute build procedures for scientific software.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "software_building",
+        "framework"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/easybuilders/easybuild-framework",
+      "help_website": [
+        "https://easybuild.io/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "hpc",
+        "python",
+        "framework",
+        "installation"
+      ],
+      "id": 101
+    },
+    {
+      "name": "eb-singularity",
+      "one_line_profile": "Integration tools for EasyBuild and Singularity",
+      "detailed_description": "Tools and scripts to facilitate the integration of the EasyBuild software management system with Singularity containers for HPC environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "container_integration",
+        "hpc_workflow"
+      ],
+      "application_level": "tool",
+      "primary_language": "Roff",
+      "repo_url": "https://github.com/easybuilders/eb-singularity",
+      "help_website": [
+        "https://easybuild.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "singularity",
+        "easybuild",
+        "hpc",
+        "containers"
+      ],
+      "id": 102
+    },
+    {
+      "name": "guix-genomics",
+      "one_line_profile": "Guix package definitions for bioinformatics software",
+      "detailed_description": "A channel providing GNU Guix package definitions specifically for bioinformatics software, enabling reproducible deployment of genomics tools.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "reproducibility"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Scheme",
+      "repo_url": "https://github.com/ekg/guix-genomics",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "guix",
+        "bioinformatics",
+        "genomics",
+        "reproducibility"
+      ],
+      "id": 103
+    },
+    {
+      "name": "gym-wind-turbine",
+      "one_line_profile": "Wind turbine simulation environment for OpenAI Gym",
+      "detailed_description": "An OpenAI Gym environment that realistically reproduces the behavior of a wind turbine using CCBlade aeroelastic code, designed for reinforcement learning research in energy systems.",
+      "domains": [
+        "D2",
+        "D4"
+      ],
+      "subtask_category": [
+        "simulation",
+        "reinforcement_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/emerrf/gym-wind-turbine",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "wind-energy",
+        "simulation",
+        "reinforcement-learning",
+        "openai-gym"
+      ],
+      "id": 104
+    },
+    {
+      "name": "Environment Modules",
+      "one_line_profile": "Dynamic modification of a user's environment for HPC",
+      "detailed_description": "A standard tool in High Performance Computing (HPC) for dynamically modifying a user's environment via modulefiles, managing paths and environment variables for scientific software.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Tcl",
+      "repo_url": "https://github.com/envmodules/modules",
+      "help_website": [
+        "http://modules.sourceforge.net"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "hpc",
+        "environment-management",
+        "modules"
+      ],
+      "id": 105
+    },
+    {
+      "name": "svd3",
+      "one_line_profile": "Fast singular value decomposition for 3x3 matrices",
+      "detailed_description": "A library for fast singular value decomposition (SVD), diagonalization, and QR decomposition specifically optimized for 3x3 matrices, useful in physics simulations and graphics.",
+      "domains": [
+        "D1"
+      ],
+      "subtask_category": [
+        "matrix_decomposition",
+        "numerical_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Mathematica",
+      "repo_url": "https://github.com/ericjang/svd3",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "svd",
+        "linear-algebra",
+        "mathematica"
+      ],
+      "id": 106
+    },
+    {
+      "name": "py2spack",
+      "one_line_profile": "Convert Python packages to Spack recipes",
+      "detailed_description": "A utility tool to automatically convert standard Python packages into Spack package recipes, facilitating the deployment of Python software in HPC environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_conversion",
+        "hpc_deployment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eth-cscs/py2spack",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "spack",
+        "python",
+        "hpc",
+        "packaging"
+      ],
+      "id": 107
+    },
+    {
+      "name": "HumEnv",
+      "one_line_profile": "SMPL humanoid environment for model comparison",
+      "detailed_description": "A simulation environment for SMPL humanoids enabling systematic model comparison and reproducibility in human motion research.",
+      "domains": [
+        "D2",
+        "D4"
+      ],
+      "subtask_category": [
+        "simulation",
+        "human_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/facebookresearch/humenv",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "smpl",
+        "simulation",
+        "humanoid",
+        "reproducibility"
+      ],
+      "id": 108
+    },
+    {
+      "name": "helmod",
+      "one_line_profile": "Harvard Extensions for Lmod deployment",
+      "detailed_description": "A set of tools and Ruby scripts used to generate module files and manage Lmod deployments, developed by Harvard Research Computing.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_deployment",
+        "hpc_admin"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/fasrc/helmod",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "lmod",
+        "hpc",
+        "modulefiles"
+      ],
+      "id": 109
+    },
+    {
+      "name": "easy_update",
+      "one_line_profile": "Update EasyBuild package configuration files",
+      "detailed_description": "A utility script to automate the updating of EasyBuild package configuration files (easyconfigs), specifically for R and Python bundles.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_maintenance",
+        "hpc_admin"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fizwit/easy_update",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "easybuild",
+        "hpc",
+        "automation"
+      ],
+      "id": 110
+    },
+    {
+      "name": "nixpack",
+      "one_line_profile": "Integration of Nix and Spack package managers",
+      "detailed_description": "A tool that combines the reproducibility of Nix with the scientific software ecosystem of Spack, allowing Spack environments to be driven by Nix.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "environment_integration"
+      ],
+      "application_level": "solver",
+      "primary_language": "Nix",
+      "repo_url": "https://github.com/flatironinstitute/nixpack",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nix",
+        "spack",
+        "hpc",
+        "reproducibility"
+      ],
+      "id": 111
+    },
+    {
+      "name": "copip",
+      "one_line_profile": "Environment Development Overlays for Conda",
+      "detailed_description": "A tool to manage development overlays for Conda environments, facilitating the mixing of pip-installed packages with conda environments for scientific workflows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fperez/copip",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "conda",
+        "pip",
+        "environment-management"
+      ],
+      "id": 112
+    },
+    {
+      "name": "SegMamba",
+      "one_line_profile": "3D Medical Image Segmentation using Mamba",
+      "detailed_description": "A deep learning model and tool for 3D medical image segmentation that utilizes the Mamba architecture for long-range sequential modeling.",
+      "domains": [
+        "D4"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "medical_imaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ge-xing/SegMamba",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "medical-imaging",
+        "segmentation",
+        "mamba",
+        "deep-learning"
+      ],
+      "id": 113
+    },
+    {
+      "name": "Popper",
+      "one_line_profile": "Container-native task automation engine for reproducibility",
+      "detailed_description": "A container-native task automation engine designed to implement scientific experimentation pipelines that are reproducible and portable.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "reproducibility"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/getpopper/popper",
+      "help_website": [
+        "https://popper.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "reproducibility",
+        "workflow",
+        "containers",
+        "automation"
+      ],
+      "id": 114
+    },
+    {
+      "name": "kliko",
+      "one_line_profile": "Scientific Compute Container Specification and Library",
+      "detailed_description": "A specification and support library for defining scientific compute containers, enabling standardized execution of scientific code in containerized environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "container_specification",
+        "workflow_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gijzelaerr/kliko",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "containers",
+        "specification",
+        "scientific-computing"
+      ],
+      "id": 115
+    },
+    {
+      "name": "HOOMD-blue",
+      "one_line_profile": "Molecular dynamics and Monte Carlo simulation on GPUs",
+      "detailed_description": "A general-purpose particle simulation toolkit optimized for GPUs, supporting molecular dynamics (MD) and Monte Carlo (MC) simulations for soft matter research.",
+      "domains": [
+        "D4"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "monte_carlo_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/glotzerlab/hoomd-blue",
+      "help_website": [
+        "https://hoomd-blue.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "molecular-dynamics",
+        "gpu",
+        "simulation",
+        "soft-matter"
+      ],
+      "id": 116
+    },
+    {
+      "name": "containerize-conda",
+      "one_line_profile": "Turn conda environments into Singularity containers",
+      "detailed_description": "A tool to automatically build Singularity/Apptainer containers from existing Conda environments, facilitating the transport of scientific environments to HPC systems.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "container_generation",
+        "environment_portability"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/grst/containerize-conda",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "conda",
+        "singularity",
+        "hpc",
+        "containers"
+      ],
+      "id": 117
+    },
+    {
+      "name": "rstudio-server-conda",
+      "one_line_profile": "Integration of RStudio Server with Conda environments via Docker",
+      "detailed_description": "A specialized Docker image and wrapper that allows running RStudio Server within a specific Conda environment, facilitating reproducible data science workflows by managing R dependencies through Conda.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "reproducibility"
+      ],
+      "application_level": "platform",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/grst/rstudio-server-conda",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rstudio",
+        "conda",
+        "docker",
+        "reproducibility"
+      ],
+      "id": 118
+    },
+    {
+      "name": "guix-science",
+      "one_line_profile": "Scientific software channel for the GNU Guix package manager",
+      "detailed_description": "A dedicated channel for the GNU Guix transactional package manager, providing a collection of free scientific software packages aimed at reproducible research and high-performance computing.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "reproducibility"
+      ],
+      "application_level": "service",
+      "primary_language": "Scheme",
+      "repo_url": "https://github.com/guix-science/guix-science",
+      "help_website": [
+        "https://guix-science.org/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "guix",
+        "package-manager",
+        "reproducible-research",
+        "hpc"
+      ],
+      "id": 119
+    },
+    {
+      "name": "HyperFlow",
+      "one_line_profile": "Scientific workflow management system for distributed environments",
+      "detailed_description": "A workflow engine designed for executing scientific workflows in distributed environments like clouds and grids, focusing on complex task dependencies and resource management.",
+      "domains": [
+        "D2"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "distributed_computing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/hyperflow-wms/hyperflow",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "workflow-engine",
+        "distributed-computing",
+        "cloud-computing"
+      ],
+      "id": 120
+    },
+    {
+      "name": "GPU-Jupyter",
+      "one_line_profile": "GPU-accelerated JupyterLab environment for deep learning",
+      "detailed_description": "A specialized Docker environment providing a GPU-enabled JupyterLab instance pre-configured with major data science and deep learning libraries (TensorFlow, PyTorch) for reproducible experiments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "interactive_computing",
+        "environment_provisioning"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/iot-salzburg/gpu-jupyter",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "jupyter",
+        "gpu",
+        "docker",
+        "deep-learning"
+      ],
+      "id": 121
+    },
+    {
+      "name": "conda-minify",
+      "one_line_profile": "Tool to minify Conda environment specifications",
+      "detailed_description": "A utility library and CLI to create minified or relaxed versions of Conda environment specification files, facilitating easier cross-platform sharing and reproducibility of scientific environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "reproducibility"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jamespreed/conda-minify",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "conda",
+        "reproducibility",
+        "environment-management"
+      ],
+      "id": 122
+    },
+    {
+      "name": "Berryconda",
+      "one_line_profile": "Conda distribution for Raspberry Pi",
+      "detailed_description": "A Conda-based Python distribution specifically built for the Raspberry Pi (ARMv7), enabling the deployment of scientific Python stacks on edge devices.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "edge_computing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/jjhelmus/berryconda",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "conda",
+        "raspberry-pi",
+        "arm",
+        "python-distribution"
+      ],
+      "id": 123
+    },
+    {
+      "name": "AQME",
+      "one_line_profile": "Automated Quantum Mechanical Environments for chemistry workflows",
+      "detailed_description": "A suite of automated workflows for computational chemistry, including conformer generation, QM input creation, and post-processing, integrating tools like RDKit, CREST, and xTB.",
+      "domains": [
+        "D2"
+      ],
+      "subtask_category": [
+        "computational_chemistry",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jvalegre/aqme",
+      "help_website": [
+        "https://aqme.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "cheminformatics",
+        "quantum-chemistry",
+        "automation",
+        "rdkit"
+      ],
+      "id": 124
+    },
+    {
+      "name": "apptainer-in-docker",
+      "one_line_profile": "Utility to run Apptainer within Docker containers",
+      "detailed_description": "A tool enabling the execution of Apptainer (formerly Singularity) containers inside Docker environments, facilitating CI/CD pipelines and cross-platform compatibility for scientific HPC workflows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "containerization",
+        "interoperability"
+      ],
+      "application_level": "solver",
+      "primary_language": "Dockerfile",
+      "repo_url": "https://github.com/kaczmarj/apptainer-in-docker",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "apptainer",
+        "singularity",
+        "docker",
+        "hpc"
+      ],
+      "id": 125
+    },
+    {
+      "name": "key4hep-spack",
+      "one_line_profile": "Spack package recipes for the Key4hep software stack",
+      "detailed_description": "The official Spack recipe repository for Key4hep, a turnkey software stack for High Energy Physics, enabling the consistent build and deployment of HEP software across different computing environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "high_energy_physics"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/key4hep/key4hep-spack",
+      "help_website": [
+        "https://key4hep.github.io/key4hep-doc/"
+      ],
+      "license": null,
+      "tags": [
+        "spack",
+        "hep",
+        "high-energy-physics",
+        "package-manager"
+      ],
+      "id": 126
+    },
+    {
+      "name": "pymssa",
+      "one_line_profile": "Multivariate Singular Spectrum Analysis (MSSA) implementation",
+      "detailed_description": "A Python library implementing Multivariate Singular Spectrum Analysis, a technique used for time series analysis, decomposition, and forecasting in scientific domains like geophysics and climate science.",
+      "domains": [
+        "D2"
+      ],
+      "subtask_category": [
+        "time_series_analysis",
+        "statistical_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kieferk/pymssa",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mssa",
+        "time-series",
+        "statistics",
+        "forecasting"
+      ],
+      "id": 127
+    },
+    {
+      "name": "libigl-python-bindings",
+      "one_line_profile": "Python bindings for libigl, a simple C++ geometry processing library",
+      "detailed_description": "Provides Python access to libigl, a library for geometry processing tasks such as meshing, parametrization, and geometric analysis, widely used in computer graphics and physical simulation research.",
+      "domains": [
+        "D4",
+        "D4-01"
+      ],
+      "subtask_category": [
+        "geometry_processing",
+        "meshing",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/libigl/libigl-python-bindings",
+      "help_website": [
+        "https://libigl.github.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "geometry-processing",
+        "meshing",
+        "python-bindings"
+      ],
+      "id": 128
+    },
+    {
+      "name": "Crocoddyl",
+      "one_line_profile": "Optimal control library for robot control under contact sequence",
+      "detailed_description": "An optimal control library for robot control based on Differential Dynamic Programming (DDP). It allows for efficient computation of optimal trajectories and control policies for complex dynamic systems.",
+      "domains": [
+        "D4",
+        "D4-02"
+      ],
+      "subtask_category": [
+        "optimal_control",
+        "robotics",
+        "dynamics_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/loco-3d/crocoddyl",
+      "help_website": [
+        "https://gepettoweb.laas.fr/doc/loco-3d/crocoddyl/master/doxygen-html/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "optimal-control",
+        "robotics",
+        "ddp"
+      ],
+      "id": 129
+    },
+    {
+      "name": "nixml",
+      "one_line_profile": "Tool to generate Nix expressions from YAML for reproducible environments",
+      "detailed_description": "Simplifies the creation of reproducible development environments using Nix by allowing users to define dependencies in a YAML format, specifically targeting scientific reproducibility.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "reproducibility"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/luispedro/nixml",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nix",
+        "reproducibility",
+        "environment-management"
+      ],
+      "id": 130
+    },
+    {
+      "name": "boa",
+      "one_line_profile": "Fast conda package builder based on mamba",
+      "detailed_description": "A package builder for the Conda ecosystem that utilizes Mamba for dependency resolution, significantly speeding up the creation of scientific software packages.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_building",
+        "dependency_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mamba-org/boa",
+      "help_website": [
+        "https://github.com/mamba-org/boa"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "conda",
+        "mamba",
+        "packaging"
+      ],
+      "id": 131
+    },
+    {
+      "name": "gator",
+      "one_line_profile": "Conda environment management extension for Jupyter",
+      "detailed_description": "A JupyterLab extension that provides a graphical interface for managing Conda environments and packages directly within the scientific notebook interface.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "interactive_computing"
+      ],
+      "application_level": "solver",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/mamba-org/gator",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "jupyter",
+        "conda",
+        "environment-management"
+      ],
+      "id": 132
+    },
+    {
+      "name": "mamba",
+      "one_line_profile": "Fast cross-platform package manager compatible with Conda",
+      "detailed_description": "A reimplementation of the Conda package manager in C++, offering significantly faster dependency resolution and package installation for scientific environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "environment_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mamba-org/mamba",
+      "help_website": [
+        "https://mamba.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "package-manager",
+        "conda",
+        "hpc"
+      ],
+      "id": 133
+    },
+    {
+      "name": "micromamba-docker",
+      "one_line_profile": "Docker images for micromamba",
+      "detailed_description": "Provides official Docker images for Micromamba, a tiny and fast Conda-compatible package manager, facilitating containerized scientific workflows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "containerization",
+        "environment_management"
+      ],
+      "application_level": "service",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/mamba-org/micromamba-docker",
+      "help_website": [
+        "https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "docker",
+        "micromamba",
+        "containers"
+      ],
+      "id": 134
+    },
+    {
+      "name": "quetz",
+      "one_line_profile": "Open-source server for Conda packages",
+      "detailed_description": "A server implementation for hosting Conda channels and packages, enabling organizations to manage their own scientific software repositories.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_hosting",
+        "repository_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mamba-org/quetz",
+      "help_website": [
+        "https://quetz.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "conda-server",
+        "package-repository",
+        "infrastructure"
+      ],
+      "id": 135
+    },
+    {
+      "name": "condax",
+      "one_line_profile": "Install and run Conda applications in isolated environments",
+      "detailed_description": "A utility to install and execute applications packaged with Conda in their own isolated environments, similar to pipx, streamlining the use of scientific CLI tools.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "application_management",
+        "environment_isolation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mariusvniekerk/condax",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "conda",
+        "isolation",
+        "cli-tools"
+      ],
+      "id": 136
+    },
+    {
+      "name": "conda-move",
+      "one_line_profile": "Utility to move Conda environments to different directories",
+      "detailed_description": "A tool that enables the relocation of Conda environments by handling the necessary path updates, useful for managing scientific environments on HPC or local systems.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "deployment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/matthuska/conda-move",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "conda",
+        "environment-relocation",
+        "utility"
+      ],
+      "id": 137
+    },
+    {
+      "name": "Syndeo",
+      "one_line_profile": "Run Ray workloads on Slurm clusters using Apptainer",
+      "detailed_description": "A tool developed by MIT Lincoln Laboratory to facilitate running massively parallel jobs using the Ray framework on SLURM-managed HPC clusters via secure Apptainer containers.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "distributed_computing",
+        "hpc_integration",
+        "workflow_orchestration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/mit-ll/Syndeo",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "ray",
+        "slurm",
+        "apptainer",
+        "hpc"
+      ],
+      "id": 138
+    },
+    {
+      "name": "Dockflow",
+      "one_line_profile": "Tool to containerize Bioconductor workflows for reproducible bioinformatics",
+      "detailed_description": "Dockflow provides a streamlined approach to containerize Bioconductor workflows, ensuring reproducibility and ease of deployment in bioinformatics research.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "reproducibility",
+        "containerization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Dockerfile",
+      "repo_url": "https://github.com/nanxstats/dockflow",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "bioconductor",
+        "docker",
+        "bioinformatics"
+      ],
+      "id": 139
+    },
+    {
+      "name": "repo2apptainer",
+      "one_line_profile": "Converts git repositories into Apptainer/Singularity images for HPC",
+      "detailed_description": "A wrapper around repo2docker that produces Jupyter-enabled Apptainer/Singularity images, facilitating the deployment of reproducible research environments on High Performance Computing (HPC) systems.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "reproducibility",
+        "environment_deployment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ncar-xdev/repo2apptainer",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "hpc",
+        "apptainer",
+        "singularity",
+        "reproducibility"
+      ],
+      "id": 140
+    },
+    {
+      "name": "Neurocommand",
+      "one_line_profile": "Data analysis environment manager for reproducible neuroimaging",
+      "detailed_description": "A flexible and scalable data analysis environment designed for reproducible neuroimaging, managing containers and dependencies for neuroscience workflows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "neuroimaging",
+        "environment_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/neurodesk/neurocommand",
+      "help_website": [
+        "https://neurodesk.github.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "neuroscience",
+        "neuroimaging",
+        "reproducibility"
+      ],
+      "id": 141
+    },
+    {
+      "name": "Nextflow",
+      "one_line_profile": "Workflow orchestration engine for data-driven computational pipelines",
+      "detailed_description": "A domain-specific language (DSL) and runtime for creating scalable, portable, and reproducible data-driven computational pipelines, widely used in bioinformatics and scientific computing.",
+      "domains": [
+        "D2"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "pipeline_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Groovy",
+      "repo_url": "https://github.com/nextflow-io/nextflow",
+      "help_website": [
+        "https://www.nextflow.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "workflow",
+        "pipeline",
+        "bioinformatics",
+        "reproducibility"
+      ],
+      "id": 142
+    },
+    {
+      "name": "Nextstrain CLI",
+      "one_line_profile": "CLI for managing Nextstrain pathogen analysis environments",
+      "detailed_description": "The command-line interface for Nextstrain that provides a consistent way to run and visualize pathogen builds across different computing environments like Docker, Conda, and AWS Batch.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "pathogen_analysis",
+        "environment_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nextstrain/cli",
+      "help_website": [
+        "https://docs.nextstrain.org/en/latest/guides/install/cli.html"
+      ],
+      "license": "MIT",
+      "tags": [
+        "epidemiology",
+        "pathogen-genomics",
+        "visualization"
+      ],
+      "id": 143
+    },
+    {
+      "name": "nf-core/sarek",
+      "one_line_profile": "Nextflow pipeline for germline and somatic variant calling",
+      "detailed_description": "A comprehensive analysis pipeline built with Nextflow to detect germline or somatic variants from whole genome or targeted sequencing data, including pre-processing, variant calling, and annotation.",
+      "domains": [
+        "D2"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "genomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/sarek",
+      "help_website": [
+        "https://nf-co.re/sarek"
+      ],
+      "license": "MIT",
+      "tags": [
+        "genomics",
+        "variant-calling",
+        "nextflow"
+      ],
+      "id": 144
+    },
+    {
+      "name": "conda-depgraph",
+      "one_line_profile": "CLI to visualize Conda environment dependencies",
+      "detailed_description": "A command-line utility to generate and plot the dependency graph of a Conda environment, aiding in the management and debugging of scientific software environments.",
+      "domains": [
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "dependency_visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/omegacen/conda-depgraph",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "conda",
+        "dependency-graph",
+        "visualization"
+      ],
+      "id": 145
+    },
+    {
+      "name": "Open-CE",
+      "one_line_profile": "Build recipes for the Open Cognitive Environment AI stack",
+      "detailed_description": "Provides the environment files and version definitions to build the Open-CE software stack, enabling the deployment of open-source AI and machine learning frameworks on various hardware architectures.",
+      "domains": [
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_building",
+        "ai_infrastructure"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/open-ce/open-ce",
+      "help_website": [
+        "https://open-ce.github.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "hpc",
+        "ai",
+        "machine-learning",
+        "conda"
+      ],
+      "id": 146
+    },
+    {
+      "name": "OpenHPC",
+      "one_line_profile": "Integration and packaging for the OpenHPC stack",
+      "detailed_description": "The integration, packaging, and testing repository for OpenHPC, a community effort to provide a comprehensive, integrated collection of HPC-centric components.",
+      "domains": [
+        "D2-03"
+      ],
+      "subtask_category": [
+        "hpc_deployment",
+        "cluster_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "C",
+      "repo_url": "https://github.com/openhpc/ohpc",
+      "help_website": [
+        "https://openhpc.community/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "hpc",
+        "cluster",
+        "supercomputing"
+      ],
+      "id": 147
+    },
+    {
+      "name": "mk",
+      "one_line_profile": "Environment modules manager for scientific computing libraries",
+      "detailed_description": "A tool to manage environment modules for scientific computing libraries and packages, providing portable x86-64 Linux binaries, developed at MOX (Politecnico di Milano).",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/pcafrica/mk",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "hpc",
+        "environment-modules",
+        "scientific-computing"
+      ],
+      "id": 148
+    },
+    {
+      "name": "PLIP",
+      "one_line_profile": "Protein-Ligand Interaction Profiler",
+      "detailed_description": "A tool to analyze and visualize non-covalent protein-ligand interactions in PDB files, detecting hydrogen bonds, hydrophobic contacts, and other interactions.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "structure_analysis",
+        "interaction_profiling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pharmai/plip",
+      "help_website": [
+        "https://plip-tool.biotec.tu-dresden.de/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "bioinformatics",
+        "protein-ligand",
+        "molecular-docking"
+      ],
+      "id": 149
+    },
+    {
+      "name": "logrx",
+      "one_line_profile": "Logging tool for clinical data reproducibility",
+      "detailed_description": "Tools to facilitate logging in a clinical environment to make code easily traceable and reproducible, supporting pharmaverse workflows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "reproducibility",
+        "clinical_data_management"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/pharmaverse/logrx",
+      "help_website": [
+        "https://pharmaverse.github.io/logrx/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "pharma",
+        "clinical-trials",
+        "reproducibility"
+      ],
+      "id": 150
+    },
+    {
+      "name": "Archiconda3",
+      "one_line_profile": "Anaconda distribution for ARM64 devices",
+      "detailed_description": "A lightweight Anaconda environment specifically designed for ARM64 devices (like Raspberry Pi, Jetson), enabling scientific Python stacks on edge devices.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/piyoki/archiconda3",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "conda",
+        "arm64",
+        "scientific-python"
+      ],
+      "id": 151
+    },
+    {
+      "name": "nix-no-root",
+      "one_line_profile": "Rootless Nix/Guix environment manager for HPC",
+      "detailed_description": "A utility to empower Nix and Guix usage without root privileges, facilitating reproducible environments in HPC and restricted systems.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/pjotrp/nix-no-root",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "hpc",
+        "nix",
+        "reproducibility"
+      ],
+      "id": 152
+    },
+    {
+      "name": "pixi",
+      "one_line_profile": "Fast package manager for scientific ecosystems",
+      "detailed_description": "A package manager built on the conda ecosystem that simplifies environment management and reproducibility for scientific projects.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "package_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/prefix-dev/pixi",
+      "help_website": [
+        "https://pixi.sh"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "conda",
+        "package-manager",
+        "reproducibility"
+      ],
+      "id": 153
+    },
+    {
+      "name": "rattler-build",
+      "one_line_profile": "Fast Conda package builder",
+      "detailed_description": "A universal Conda package builder for Windows, macOS, and Linux, designed to be faster than conda-build, facilitating scientific software distribution.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "build_tool"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/prefix-dev/rattler-build",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "conda",
+        "build-tool",
+        "packaging"
+      ],
+      "id": 154
+    },
+    {
+      "name": "alphafold_singularity",
+      "one_line_profile": "Singularity container definition for AlphaFold",
+      "detailed_description": "A Singularity recipe to build and deploy AlphaFold, facilitating the use of this complex protein structure prediction tool in HPC environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "deployment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/prehensilecode/alphafold_singularity",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "alphafold",
+        "singularity",
+        "protein-structure"
+      ],
+      "id": 155
+    },
+    {
+      "name": "PRIMME",
+      "one_line_profile": "High-performance eigensolver library",
+      "detailed_description": "PReconditioned Iterative MultiMethod Eigensolver for solving symmetric/Hermitian eigenvalue problems and singular value problems in scientific computing.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "numerical_solver",
+        "linear_algebra"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/primme/primme",
+      "help_website": [
+        "https://www.cs.wm.edu/~andreas/software/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "eigenvalues",
+        "numerical-methods",
+        "hpc"
+      ],
+      "id": 156
+    },
+    {
+      "name": "PackIt",
+      "one_line_profile": "Virtual environment for geometric planning simulation",
+      "detailed_description": "A virtual environment and dataset generation tool for geometric planning tasks, used for training and evaluating packing algorithms.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "geometric_planning"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/princeton-vl/PackIt",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "simulation",
+        "robotics",
+        "packing-problem"
+      ],
+      "id": 157
+    },
+    {
+      "name": "PyAMG",
+      "one_line_profile": "Algebraic Multigrid Solvers in Python",
+      "detailed_description": "A library of Algebraic Multigrid (AMG) solvers for solving large sparse linear systems, commonly used in scientific simulations.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "numerical_solver",
+        "linear_algebra"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pyamg/pyamg",
+      "help_website": [
+        "https://pyamg.org"
+      ],
+      "license": "MIT",
+      "tags": [
+        "multigrid",
+        "sparse-matrices",
+        "scientific-computing"
+      ],
+      "id": 158
+    },
+    {
+      "name": "PyMTL3",
+      "one_line_profile": "Hardware generation and simulation framework",
+      "detailed_description": "An open-source Python-based framework for hardware generation, simulation, and verification, enabling multi-level modeling of hardware systems.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "hardware_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pymtl/pymtl3",
+      "help_website": [
+        "https://pymtl3.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "eda",
+        "hardware-simulation",
+        "verilog"
+      ],
+      "id": 159
+    },
+    {
+      "name": "qp2-singularity",
+      "one_line_profile": "Singularity container for Quantum Package",
+      "detailed_description": "Definition files to build Singularity containers for Quantum Package, a software for quantum chemistry calculations.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "quantum_chemistry",
+        "deployment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/q-posev/qp2-singularity",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "quantum-chemistry",
+        "singularity",
+        "hpc"
+      ],
+      "id": 160
+    },
+    {
+      "name": "radioconda-installer",
+      "one_line_profile": "Software radio distribution for Conda",
+      "detailed_description": "A software distribution and installer for software-defined radio (SDR) tools within the Conda ecosystem, facilitating engineering and signal processing workflows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "signal_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/radioconda/radioconda-installer",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "sdr",
+        "conda",
+        "radio-astronomy"
+      ],
+      "id": 161
+    },
+    {
+      "name": "poetry-conda",
+      "one_line_profile": "Poetry plugin for Conda environment integration",
+      "detailed_description": "A Poetry plugin that allows creating virtual environments using Poetry without interfering with the active Conda environment, bridging Python dev and scientific stacks.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/renan-r-santos/poetry-conda",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "poetry",
+        "conda",
+        "python-env"
+      ],
+      "id": 162
+    },
+    {
+      "name": "What the Phage",
+      "one_line_profile": "Phage identification workflow",
+      "detailed_description": "A reproducible bioinformatics pipeline for bacteriophage identification and annotation using Nextflow and Docker/Singularity.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "sequence_analysis",
+        "identification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/replikation/What_the_Phage",
+      "help_website": [
+        "https://replikation.github.io/What_the_Phage/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "bioinformatics",
+        "phage",
+        "nextflow"
+      ],
+      "id": 163
+    },
+    {
+      "name": "law",
+      "one_line_profile": "Large-scale task workflow management",
+      "detailed_description": "A library to build large-scale task workflows based on Luigi, supporting job submission, remote targets, and environment sandboxing (Docker/Singularity), widely used in HEP.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "job_scheduling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/riga/law",
+      "help_website": [
+        "https://law.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "hep",
+        "workflow",
+        "luigi"
+      ],
+      "id": 164
+    },
+    {
+      "name": "rix",
+      "one_line_profile": "Reproducible R environments with Nix",
+      "detailed_description": "A tool to create reproducible data science environments for R using Nix, ensuring consistent execution across different systems.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "reproducibility"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ropensci/rix",
+      "help_website": [
+        "https://docs.ropensci.org/rix/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "r",
+        "nix",
+        "reproducibility"
+      ],
+      "id": 165
+    },
+    {
+      "name": "Spack Manager",
+      "one_line_profile": "Deployment workflow manager for Spack environments in HPC",
+      "detailed_description": "A project and machine deployment model using Spack, designed to manage complex Spack stacks and environments across different HPC facilities.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "deployment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sandialabs/spack-manager",
+      "help_website": [
+        "https://github.com/sandialabs/spack-manager"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "spack",
+        "hpc",
+        "deployment",
+        "environment-modules"
+      ],
+      "id": 166
+    },
+    {
+      "name": "Wave CLI",
+      "one_line_profile": "CLI for Wave container provisioning service in scientific workflows",
+      "detailed_description": "Command line tool for the Wave container provisioning service, often used in conjunction with Nextflow to dynamically build and deploy containers for scientific pipelines.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "container_provisioning",
+        "workflow_integration"
+      ],
+      "application_level": "service",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/seqeralabs/wave-cli",
+      "help_website": [
+        "https://github.com/seqeralabs/wave-cli"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "containers",
+        "nextflow",
+        "provisioning",
+        "bioinformatics"
+      ],
+      "id": 167
+    },
+    {
+      "name": "docker2singularity",
+      "one_line_profile": "Converter for Docker images to Singularity format",
+      "detailed_description": "A tool packaged as a Docker image that converts Docker images into Singularity images, facilitating the use of containerized scientific applications in HPC environments.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "container_conversion",
+        "interoperability"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/singularityhub/docker2singularity",
+      "help_website": [
+        "https://github.com/singularityhub/docker2singularity"
+      ],
+      "license": "MIT",
+      "tags": [
+        "docker",
+        "singularity",
+        "hpc",
+        "conversion"
+      ],
+      "id": 168
+    },
+    {
+      "name": "Singularity-HPC",
+      "one_line_profile": "HPC container registry and module management tool",
+      "detailed_description": "A tool to manage a local filesystem registry for containers, specifically intended for HPC environments using Lmod or Environment Modules to expose containers to users.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "container_registry"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/singularityhub/singularity-hpc",
+      "help_website": [
+        "https://singularity-hpc.readthedocs.io"
+      ],
+      "license": "MPL-2.0",
+      "tags": [
+        "hpc",
+        "singularity",
+        "lmod",
+        "modules"
+      ],
+      "id": 169
+    },
+    {
+      "name": "sregistry",
+      "one_line_profile": "Singularity Image Registry Server",
+      "detailed_description": "An open source registry server for the storage and management of Singularity images, enabling institutions to host their own scientific container collections.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "container_storage",
+        "image_management"
+      ],
+      "application_level": "service",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/singularityhub/sregistry",
+      "help_website": [
+        "https://singularityhub.github.io/sregistry"
+      ],
+      "license": "MPL-2.0",
+      "tags": [
+        "singularity",
+        "registry",
+        "hpc",
+        "containers"
+      ],
+      "id": 170
+    },
+    {
+      "name": "LModeA-nano",
+      "one_line_profile": "Chemical bond strength calculator for solids and molecules",
+      "detailed_description": "A tool to calculate chemical bond strength in solids, surfaces, and molecules using local mode analysis, aiding in computational chemistry and materials science research.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "bond_strength_calculation",
+        "chemical_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/smutao/LModeA-nano",
+      "help_website": [
+        "https://github.com/smutao/LModeA-nano"
+      ],
+      "license": null,
+      "tags": [
+        "chemistry",
+        "materials-science",
+        "bond-strength",
+        "local-mode-analysis"
+      ],
+      "id": 171
+    },
+    {
+      "name": "Spack",
+      "one_line_profile": "Flexible package manager for HPC and scientific computing",
+      "detailed_description": "A multi-platform package manager that supports multiple versions, configurations, platforms, and compilers, specifically designed to handle the complex dependency graphs of scientific software.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "package_management",
+        "dependency_resolution"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spack/spack",
+      "help_website": [
+        "https://spack.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "hpc",
+        "package-manager",
+        "scientific-computing",
+        "dependencies"
+      ],
+      "id": 172
+    },
+    {
+      "name": "SSRS",
+      "one_line_profile": "Semantic Segmentation for Remote Sensing",
+      "detailed_description": "A deep learning tool specifically designed for semantic segmentation tasks in remote sensing imagery, enabling analysis of satellite and aerial data.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "remote_sensing_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sstary/SSRS",
+      "help_website": [
+        "https://github.com/sstary/SSRS"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "remote-sensing",
+        "semantic-segmentation",
+        "deep-learning",
+        "satellite-imagery"
+      ],
+      "id": 173
+    },
+    {
+      "name": "Pinocchio",
+      "one_line_profile": "Rigid Body Dynamics algorithms library",
+      "detailed_description": "A fast and flexible C++ library for rigid body dynamics algorithms and their analytical derivatives, widely used in robotics, biomechanics, and physics simulations.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "dynamics_simulation",
+        "motion_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/stack-of-tasks/pinocchio",
+      "help_website": [
+        "https://stack-of-tasks.github.io/pinocchio"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "dynamics",
+        "robotics",
+        "biomechanics",
+        "physics-simulation"
+      ],
+      "id": 174
+    },
+    {
+      "name": "SingularityCE",
+      "one_line_profile": "Container platform for HPC and scientific computing",
+      "detailed_description": "The Community Edition of Singularity, an open source container platform designed to be simple, fast, and secure, specifically optimized for High Performance Computing (HPC) workloads.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "container_runtime",
+        "reproducibility"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/sylabs/singularity",
+      "help_website": [
+        "https://sylabs.io/singularity"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "hpc",
+        "containers",
+        "reproducibility",
+        "scientific-computing"
+      ],
+      "id": 175
+    },
+    {
+      "name": "Konda",
+      "one_line_profile": "Lightweight wrapper to install and manage Conda environments within Google Colab",
+      "detailed_description": "Konda provides a simple interface to install Anaconda/Miniconda and manage Python environments directly within Google Colab notebooks. It bridges the gap between Colab's default environment and the custom dependency requirements often needed in scientific data analysis and AI4S workflows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "dependency_resolution"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tamnguyenvan/konda",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "conda",
+        "google-colab",
+        "python-environment",
+        "reproducibility"
+      ],
+      "id": 176
+    },
+    {
+      "name": "envd",
+      "one_line_profile": "Reproducible development environment manager for AI/Data Science",
+      "detailed_description": "envd is a command-line tool that simplifies the creation of containerized development environments for data science and AI. It abstracts Dockerfile complexity, supports Conda/pip natively, and integrates with Jupyter, ensuring reproducibility across local and cloud infrastructure.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_provisioning",
+        "containerization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/tensorchord/envd",
+      "help_website": [
+        "https://envd.tensorchord.ai"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "development-environment",
+        "docker",
+        "data-science",
+        "reproducibility",
+        "python"
+      ],
+      "id": 177
+    },
+    {
+      "name": "Banpei",
+      "one_line_profile": "Anomaly detection library using Singular Spectrum Transformation (SST)",
+      "detailed_description": "Banpei is a Python library for anomaly detection in time-series data based on Singular Spectrum Transformation (SST). It is used for monitoring and analyzing change points in continuous data streams, applicable in scientific signal processing and system monitoring.",
+      "domains": [
+        "D1"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "time_series_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tsurubee/banpei",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "anomaly-detection",
+        "singular-spectrum-transformation",
+        "time-series",
+        "signal-processing"
+      ],
+      "id": 178
+    },
+    {
+      "name": "Jupyenv",
+      "one_line_profile": "Declarative and reproducible Jupyter environments powered by Nix",
+      "detailed_description": "Jupyenv allows scientists to define Jupyter environments declaratively using Nix. It ensures that kernels, extensions, and system dependencies are bit-for-bit reproducible, addressing the 'works on my machine' problem in scientific computing.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "environment_management",
+        "reproducibility"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nix",
+      "repo_url": "https://github.com/tweag/jupyenv",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nix",
+        "jupyter",
+        "reproducibility",
+        "scientific-computing"
+      ],
+      "id": 179
+    },
+    {
+      "name": "SCIF",
+      "one_line_profile": "Scientific Filesystem standard and client for modular container discovery",
+      "detailed_description": "SCIF (Scientific Filesystem) is a standard and Python client for organizing scientific software within containers. It allows for the installation of multiple applications in a single container with consistent entry points, environment discovery, and metadata management, facilitating complex scientific workflows.",
+      "domains": [
+        "D2",
+        "D2-03"
+      ],
+      "subtask_category": [
+        "container_management",
+        "metadata_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/vsoch/scif",
+      "help_website": [
+        "https://sci-f.github.io"
+      ],
+      "license": "MPL-2.0",
+      "tags": [
+        "containers",
+        "reproducibility",
+        "scientific-filesystem",
+        "hpc"
+      ],
+      "id": 180
+    },
+    {
+      "name": "Mamba-UNet",
+      "one_line_profile": "Mamba-based U-Net architecture zoo for medical image segmentation",
+      "detailed_description": "A deep learning library and model zoo that integrates the Mamba (State Space Model) architecture with U-Net for medical image analysis. It provides implementations of various Mamba-UNet hybrids to enhance long-range dependency modeling in medical image segmentation tasks.",
+      "domains": [
+        "D3",
+        "D1"
+      ],
+      "subtask_category": [
+        "medical_image_segmentation",
+        "image_segmentation",
+        "scientific_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ziyangwang007/Mamba-UNet",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-imaging",
+        "deep-learning",
+        "mamba",
+        "u-net",
+        "segmentation"
+      ],
+      "id": 181
+    }
+  ]
+}

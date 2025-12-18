@@ -1,0 +1,1488 @@
+{
+  "generated_at": "2025-12-16T03:31:05.192646+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "P1",
+      "leaf_cluster_name": "物理仿真-CFD 求解器与湍流生态",
+      "domain": "Physics/CFD",
+      "typical_objects": "meshes/fields",
+      "task_chain": "网格→求解→模型→后处理→验证→UQ",
+      "tool_form": "solver + pre/post + UQ"
+    },
+    "unit": {
+      "unit_id": "P1-05",
+      "unit_name": "UQ/敏感性/优化/伴随",
+      "target_scale": "200–450",
+      "coverage_tools": "UQ、adjoint、calibration"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] Openturns",
+        "[GH] QUESO",
+        "[GH] PyApprox",
+        "[GH] SALib",
+        "[GH] Chaospy",
+        "[GH] dolfin-adjoint",
+        "[GH] OpenMDAO",
+        "[GH] DAFoam",
+        "[GH] SU2",
+        "[GH] Dakota",
+        "[GH] uncertainty quantification cfd",
+        "[GH] adjoint solver",
+        "[GH] shape optimization cfd",
+        "[GH] topology optimization fluid",
+        "[GH] sensitivity analysis cfd",
+        "[GH] bayesian calibration physics",
+        "[GH] inverse problems fluid dynamics",
+        "[GH] surrogate modeling cfd",
+        "[GH] aerodynamic optimization",
+        "[GH] automatic differentiation cfd",
+        "[GH] polynomial chaos expansion",
+        "[GH] data assimilation cfd",
+        "[GH] gradient-based optimization cfd",
+        "[WEB] uncertainty quantification software cfd github",
+        "[WEB] adjoint shape optimization tools github",
+        "[WEB] cfd sensitivity analysis library github",
+        "[WEB] openfoam optimization adjoint github",
+        "[WEB] bayesian inference fluid dynamics github",
+        "[WEB] physics based parameter calibration github"
+      ],
+      "total_candidates": 668,
+      "tool_candidates": 213,
+      "final_tools": 56
+    }
+  },
+  "tools": [
+    {
+      "name": "Dymos",
+      "one_line_profile": "Open source library for optimization of dynamic multidisciplinary systems and trajectories",
+      "detailed_description": "Dymos is a Python library built on top of OpenMDAO for solving optimal control problems involving multidisciplinary systems. It provides a unified interface for trajectory optimization using collocation and pseudospectral methods.",
+      "domains": [
+        "P1-05",
+        "P1"
+      ],
+      "subtask_category": [
+        "optimization",
+        "trajectory_optimization",
+        "dynamic_systems"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenMDAO/dymos",
+      "help_website": [
+        "https://openmdao.github.io/dymos/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "optimization",
+        "optimal-control",
+        "trajectory-optimization",
+        "openmdao"
+      ],
+      "id": 1
+    },
+    {
+      "name": "MPhys",
+      "one_line_profile": "Standardized interface for multiphysics problems within OpenMDAO",
+      "detailed_description": "MPhys provides a standard interface for coupling physics codes in OpenMDAO, facilitating the creation of multiphysics analysis and optimization problems by defining conventions for data exchange.",
+      "domains": [
+        "P1-05",
+        "P1"
+      ],
+      "subtask_category": [
+        "multiphysics_coupling",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenMDAO/mphys",
+      "help_website": [
+        "https://openmdao.github.io/mphys/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "multiphysics",
+        "optimization",
+        "coupling",
+        "openmdao"
+      ],
+      "id": 2
+    },
+    {
+      "name": "pyCycle",
+      "one_line_profile": "Thermodynamic cycle modeling library built on OpenMDAO",
+      "detailed_description": "pyCycle is a library for modeling thermodynamic cycles, particularly for aircraft engine performance analysis. It leverages OpenMDAO to allow for analytic derivatives and optimization of cycle parameters.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "thermodynamic_modeling",
+        "cycle_analysis",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenMDAO/pyCycle",
+      "help_website": [
+        "https://openmdao.github.io/pyCycle/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "thermodynamics",
+        "propulsion",
+        "cycle-analysis",
+        "openmdao"
+      ],
+      "id": 3
+    },
+    {
+      "name": "Zappy",
+      "one_line_profile": "Load flow analysis for AC/DC electric systems with analytic derivatives",
+      "detailed_description": "Zappy is a load flow analysis tool for electric systems implemented in OpenMDAO, providing analytic derivatives to support gradient-based optimization of electrical subsystems.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "load_flow_analysis",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenMDAO/zappy",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "power-systems",
+        "load-flow",
+        "optimization",
+        "openmdao"
+      ],
+      "id": 4
+    },
+    {
+      "name": "PaddleCFD",
+      "one_line_profile": "Deep learning toolkit for fluid mechanics surrogate modeling and optimization",
+      "detailed_description": "PaddleCFD is a toolkit based on PaddlePaddle for applying deep learning to fluid mechanics, including surrogate modeling, equation discovery, shape optimization, and flow control.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "shape_optimization",
+        "equation_discovery"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PaddlePaddle/PaddleCFD",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cfd",
+        "deep-learning",
+        "surrogate-model",
+        "optimization"
+      ],
+      "id": 5
+    },
+    {
+      "name": "SAFE-python",
+      "one_line_profile": "Sensitivity Analysis library for Python (SAFE port)",
+      "detailed_description": "SAFE-python is a Python port of the SAFE (Sensitivity Analysis for Ecological models) toolbox, providing methods for global sensitivity analysis of model outputs.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "sensitivity_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SAFEtoolbox/SAFE-python",
+      "help_website": [
+        "https://safetoolbox.github.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "sensitivity-analysis",
+        "uncertainty-quantification",
+        "gsa"
+      ],
+      "id": 6
+    },
+    {
+      "name": "SALib",
+      "one_line_profile": "Python library for global sensitivity analysis",
+      "detailed_description": "SALib provides a collection of methods for global sensitivity analysis, including Sobol, Morris, and FAST methods, to quantify the influence of model inputs on outputs.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "sensitivity_analysis",
+        "uncertainty_quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SALib/SALib",
+      "help_website": [
+        "https://salib.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "sensitivity-analysis",
+        "sobol",
+        "morris",
+        "uq"
+      ],
+      "id": 7
+    },
+    {
+      "name": "PolyChaos.jl",
+      "one_line_profile": "Julia package for orthogonal polynomials and polynomial chaos expansions",
+      "detailed_description": "PolyChaos.jl is a Julia package for constructing orthogonal polynomials and quadrature rules, facilitating Polynomial Chaos Expansion (PCE) for uncertainty quantification.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "polynomial_chaos_expansion"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/PolyChaos.jl",
+      "help_website": [
+        "https://sciml.github.io/PolyChaos.jl/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "uncertainty-quantification",
+        "pce",
+        "orthogonal-polynomials",
+        "julia"
+      ],
+      "id": 8
+    },
+    {
+      "name": "NeuralABM",
+      "one_line_profile": "Neural parameter calibration for multi-agent models",
+      "detailed_description": "NeuralABM uses neural networks to estimate marginal densities on parameters for calibrating multi-agent models, facilitating inverse modeling and parameter estimation.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "calibration",
+        "parameter_estimation",
+        "inverse_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ThGaskin/NeuralABM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "calibration",
+        "abm",
+        "neural-networks",
+        "parameter-estimation"
+      ],
+      "id": 9
+    },
+    {
+      "name": "FluTO",
+      "one_line_profile": "Graded Multiscale Fluid Topology Optimization using Neural Networks",
+      "detailed_description": "FluTO is a framework for fluid topology optimization that employs neural networks to handle graded multiscale structures, enabling efficient design of fluidic devices.",
+      "domains": [
+        "P1-05",
+        "P1"
+      ],
+      "subtask_category": [
+        "topology_optimization",
+        "fluid_design"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UW-ERSL/FluTO",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "topology-optimization",
+        "fluid-dynamics",
+        "neural-networks"
+      ],
+      "id": 10
+    },
+    {
+      "name": "WISDEM",
+      "one_line_profile": "Wind Plant Integrated System Design and Engineering Model",
+      "detailed_description": "WISDEM is a software set for the integrated design and analysis of wind turbines and wind plants. It includes modules for aerodynamics, structure, and cost, wrapped in an optimization framework.",
+      "domains": [
+        "P1-05",
+        "P1"
+      ],
+      "subtask_category": [
+        "system_design",
+        "optimization",
+        "wind_energy_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/WISDEM/WISDEM",
+      "help_website": [
+        "https://wisdem.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "wind-energy",
+        "optimization",
+        "mdao",
+        "system-design"
+      ],
+      "id": 11
+    },
+    {
+      "name": "emopt",
+      "one_line_profile": "Optimization suite for shape and topology of electromagnetic structures",
+      "detailed_description": "emopt is a Python library for the inverse design and optimization of photonic and electromagnetic devices using the adjoint method.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "topology_optimization",
+        "inverse_design",
+        "electromagnetics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/anstmichaels/emopt",
+      "help_website": [
+        "https://emopt.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "photonics",
+        "optimization",
+        "adjoint-method",
+        "electromagnetics"
+      ],
+      "id": 12
+    },
+    {
+      "name": "BayesFlow",
+      "one_line_profile": "Amortized Bayesian workflows using generative neural networks",
+      "detailed_description": "BayesFlow is a Python library for performing amortized Bayesian inference using invertible neural networks, enabling efficient parameter estimation and model comparison for complex scientific models.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "bayesian_inference",
+        "parameter_estimation",
+        "uncertainty_quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bayesflow-org/bayesflow",
+      "help_website": [
+        "https://bayesflow.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "bayesian-inference",
+        "generative-networks",
+        "uq",
+        "simulation-based-inference"
+      ],
+      "id": 13
+    },
+    {
+      "name": "ImplicitAD.jl",
+      "one_line_profile": "Adjoint differentiation for implicit functions in Julia",
+      "detailed_description": "ImplicitAD.jl automates the calculation of steady and unsteady adjoints for implicit functions, supporting forward and reverse mode algorithmic differentiation, useful for gradient-based optimization in physics solvers.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "adjoint_differentiation",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/byuflowlab/ImplicitAD.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "automatic-differentiation",
+        "adjoint",
+        "optimization",
+        "julia"
+      ],
+      "id": 14
+    },
+    {
+      "name": "OpenMDAO.jl",
+      "one_line_profile": "Julia wrapper for the OpenMDAO optimization framework",
+      "detailed_description": "OpenMDAO.jl provides a Julia interface to the OpenMDAO framework, allowing Julia-based analysis and optimization codes to be integrated into OpenMDAO workflows.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "optimization",
+        "workflow_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/byuflowlab/OpenMDAO.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "optimization",
+        "openmdao",
+        "julia",
+        "wrapper"
+      ],
+      "id": 15
+    },
+    {
+      "name": "CEASIOMpy",
+      "one_line_profile": "Conceptual aircraft design and optimization environment",
+      "detailed_description": "CEASIOMpy is a framework for conceptual aircraft design that integrates various tools for aerodynamics, structure, and stability analysis, supporting optimization workflows.",
+      "domains": [
+        "P1-05",
+        "P1"
+      ],
+      "subtask_category": [
+        "aircraft_design",
+        "optimization",
+        "multidisciplinary_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cfsengineering/CEASIOMpy",
+      "help_website": [
+        "https://ceasiompy.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "aircraft-design",
+        "optimization",
+        "mdo",
+        "aerodynamics"
+      ],
+      "id": 16
+    },
+    {
+      "name": "GMSH-Airfoil-2D",
+      "one_line_profile": "Tool for generating 2D meshes around airfoils using Gmsh",
+      "detailed_description": "GMSH-Airfoil-2D is a Python utility that automates the generation of 2D structured or unstructured meshes around airfoils using the Gmsh API, facilitating CFD preprocessing.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "mesh_generation",
+        "preprocessing"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cfsengineering/GMSH-Airfoil-2D",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mesh-generation",
+        "gmsh",
+        "airfoil",
+        "cfd"
+      ],
+      "id": 17
+    },
+    {
+      "name": "BerkeleyPhotonicInverseDesign",
+      "one_line_profile": "Continuous adjoint optimization for photonic inverse design",
+      "detailed_description": "This tool implements continuous adjoint optimization methods for the inverse design of photonic devices, interfacing with Lumerical FDTD solvers.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "inverse_design",
+        "adjoint_optimization",
+        "photonics"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/chriskeraly/BerkeleyPhotonicInverseDesign",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "photonics",
+        "inverse-design",
+        "adjoint",
+        "optimization"
+      ],
+      "id": 18
+    },
+    {
+      "name": "euler2d",
+      "one_line_profile": "2-D inviscid flow and adjoint solver on unstructured grids",
+      "detailed_description": "A finite volume solver for 2D Euler equations on unstructured grids, featuring adjoint capabilities for sensitivity analysis and optimization.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "simulation",
+        "adjoint_optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/cpraveen/euler2d",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cfd",
+        "adjoint",
+        "euler-equations",
+        "unstructured-grid"
+      ],
+      "id": 19
+    },
+    {
+      "name": "dakotathon",
+      "one_line_profile": "Python API and BMI for the Dakota iterative systems analysis toolkit",
+      "detailed_description": "A Python wrapper and Basic Model Interface (BMI) for the Dakota toolkit, facilitating the integration of Dakota's optimization and uncertainty quantification capabilities into Python workflows.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "optimization",
+        "sensitivity_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/csdms/dakotathon",
+      "help_website": [
+        "https://csdms.colorado.edu/wiki/Model:Dakotathon"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dakota",
+        "optimization",
+        "uncertainty-quantification",
+        "bmi"
+      ],
+      "id": 20
+    },
+    {
+      "name": "OpenLEGO",
+      "one_line_profile": "Interface between AGILE and OpenMDAO for MDO",
+      "detailed_description": "A tool that provides an open-source link between the AGILE collaborative MDO framework and OpenMDAO, enabling multidisciplinary design optimization workflows.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "optimization",
+        "mdo"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/daniel-de-vries/OpenLEGO",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "openmdao",
+        "mdo",
+        "agile",
+        "optimization"
+      ],
+      "id": 21
+    },
+    {
+      "name": "fenics_topopt_foam",
+      "one_line_profile": "Topology optimization framework combining OpenFOAM and FEniCS",
+      "detailed_description": "A workflow tool that couples OpenFOAM for fluid dynamics and FEniCS (dolfin-adjoint) for sensitivity analysis to perform topology optimization.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "optimization",
+        "topology_optimization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/diego-hayashi/fenics_topopt_foam",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "topology-optimization",
+        "openfoam",
+        "fenics",
+        "adjoint"
+      ],
+      "id": 22
+    },
+    {
+      "name": "dolfin-adjoint",
+      "one_line_profile": "Automatic differentiation tool for FEniCS/Dolfin",
+      "detailed_description": "A library that automatically derives the discrete adjoint and tangent linear models from a forward model written in the FEniCS/Dolfin framework, enabling efficient sensitivity analysis and optimization.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "adjoint_differentiation",
+        "sensitivity_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dolfin-adjoint/dolfin-adjoint",
+      "help_website": [
+        "http://www.dolfin-adjoint.org/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "automatic-differentiation",
+        "adjoint",
+        "fenics",
+        "optimization"
+      ],
+      "id": 23
+    },
+    {
+      "name": "angler",
+      "one_line_profile": "Frequency-domain photonic simulation and inverse design optimization",
+      "detailed_description": "A Python package for frequency-domain simulation of linear and nonlinear photonic devices, including adjoint-based inverse design optimization capabilities.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "simulation",
+        "inverse_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fancompute/angler",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "photonics",
+        "inverse-design",
+        "optimization",
+        "fdfd"
+      ],
+      "id": 24
+    },
+    {
+      "name": "savvy",
+      "one_line_profile": "Visualization tool for high dimensionality sensitivity analysis data",
+      "detailed_description": "A tool designed to visualize and explore high-dimensional sensitivity analysis data, aiding in the interpretation of complex model behaviors.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "visualization",
+        "sensitivity_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/houghb/savvy",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "sensitivity-analysis",
+        "visualization",
+        "high-dimensional"
+      ],
+      "id": 25
+    },
+    {
+      "name": "chaospy-attractors",
+      "one_line_profile": "Collection of chaotic attractor simulations in Python",
+      "detailed_description": "A library providing implementations of various chaotic attractors (Lorenz, Rossler, etc.) for simulation and visualization purposes.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hukenovs/chaospy",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "chaos-theory",
+        "attractors",
+        "simulation",
+        "dynamical-systems"
+      ],
+      "id": 26
+    },
+    {
+      "name": "AgentPy",
+      "one_line_profile": "Framework for agent-based modeling in Python",
+      "detailed_description": "An open-source framework for the development, simulation, and analysis of agent-based models, suitable for complex systems research.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "agent_based_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jofmi/agentpy",
+      "help_website": [
+        "https://agentpy.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "agent-based-modeling",
+        "simulation",
+        "complex-systems"
+      ],
+      "id": 27
+    },
+    {
+      "name": "chaospy",
+      "one_line_profile": "Toolbox for uncertainty quantification using polynomial chaos expansions",
+      "detailed_description": "A numerical toolbox for performing uncertainty quantification using polynomial chaos expansions and Monte Carlo integration.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "sensitivity_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jonathf/chaospy",
+      "help_website": [
+        "https://chaospy.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "uncertainty-quantification",
+        "polynomial-chaos",
+        "monte-carlo",
+        "sensitivity-analysis"
+      ],
+      "id": 28
+    },
+    {
+      "name": "DynGFN",
+      "one_line_profile": "Bayesian Dynamic Causal Discovery using Generative Flow Networks",
+      "detailed_description": "A library implementing Generative Flow Networks (GFN) for Bayesian dynamic causal discovery, enabling inference of causal structures from data.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "causal_discovery",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lazaratan/dyn-gfn",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "causal-discovery",
+        "generative-flow-networks",
+        "bayesian-inference"
+      ],
+      "id": 29
+    },
+    {
+      "name": "QUESO",
+      "one_line_profile": "C++ library for uncertainty quantification",
+      "detailed_description": "QUESO (Quantification of Uncertainty for Estimation, Simulation and Optimization) is a library designed to support statistical inverse problems and uncertainty quantification in large-scale computational models.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/libqueso/queso",
+      "help_website": [
+        "http://libqueso.com/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "uncertainty-quantification",
+        "bayesian-inference",
+        "inverse-problems"
+      ],
+      "id": 30
+    },
+    {
+      "name": "QuESo",
+      "one_line_profile": "Quadrature for Embedded Solids library",
+      "detailed_description": "A C++ library providing quadrature rules for embedded domain methods (fictitious domain methods) in finite element analysis.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "finite_element_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/manuelmessmer/QuESo",
+      "help_website": [],
+      "license": "BSD-4-Clause",
+      "tags": [
+        "finite-element",
+        "quadrature",
+        "embedded-domain"
+      ],
+      "id": 31
+    },
+    {
+      "name": "OpenAeroStruct",
+      "one_line_profile": "Aerostructural optimization tool using OpenMDAO",
+      "detailed_description": "A lightweight tool that performs aerostructural optimization by coupling a vortex lattice method (VLM) with a 1D finite element structural model within the OpenMDAO framework.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "optimization",
+        "aerostructural_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mdolab/OpenAeroStruct",
+      "help_website": [
+        "https://openaerostruct.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "mdo",
+        "aerostructural",
+        "optimization",
+        "openmdao"
+      ],
+      "id": 32
+    },
+    {
+      "name": "ADflow",
+      "one_line_profile": "RANS solver for gradient-based aerodynamic design optimization",
+      "detailed_description": "A finite volume RANS solver specifically tailored for gradient-based aerodynamic design optimization, featuring efficient adjoint implementations.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "simulation",
+        "aerodynamic_optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/mdolab/adflow",
+      "help_website": [
+        "https://mdolab-adflow.readthedocs-hosted.com/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "adjoint",
+        "optimization",
+        "rans"
+      ],
+      "id": 33
+    },
+    {
+      "name": "DAFoam",
+      "one_line_profile": "Discrete Adjoint with OpenFOAM for MDO",
+      "detailed_description": "A derivative of OpenFOAM that implements discrete adjoint solvers to enable high-fidelity multidisciplinary design optimization.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "simulation",
+        "adjoint_optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/mdolab/dafoam",
+      "help_website": [
+        "https://dafoam.github.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "openfoam",
+        "adjoint",
+        "mdo",
+        "cfd"
+      ],
+      "id": 34
+    },
+    {
+      "name": "UQPCE",
+      "one_line_profile": "Uncertainty Quantification using Polynomial Chaos Expansion",
+      "detailed_description": "A Python-based research code from NASA for uncertainty quantification using non-intrusive polynomial chaos expansion surrogate modeling.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nasa/UQPCE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "uncertainty-quantification",
+        "polynomial-chaos",
+        "nasa",
+        "surrogate-modeling"
+      ],
+      "id": 35
+    },
+    {
+      "name": "BlenderFOAM",
+      "one_line_profile": "Fluid based shape optimization with Blender and OpenFOAM",
+      "detailed_description": "A tool that integrates Blender's modeling capabilities with OpenFOAM's CFD solvers to perform fluid-based shape optimization.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "optimization",
+        "shape_optimization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nathanrooy/BlenderFOAM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "blender",
+        "openfoam",
+        "shape-optimization",
+        "cfd"
+      ],
+      "id": 36
+    },
+    {
+      "name": "OpenTURNS",
+      "one_line_profile": "Library for uncertainty quantification, probabilistic modeling, and statistics",
+      "detailed_description": "OpenTURNS is a major library for uncertainty treatment, reliability analysis, and sensitivity analysis in scientific simulation.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "sensitivity_analysis",
+        "probabilistic_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/openturns/openturns",
+      "help_website": [
+        "http://openturns.github.io/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "uq",
+        "statistics",
+        "reliability"
+      ],
+      "id": 37
+    },
+    {
+      "name": "otagrum",
+      "one_line_profile": "OpenTURNS module for graphical models using aGrUM",
+      "detailed_description": "A module connecting OpenTURNS with aGrUM to handle Bayesian networks and graphical models within the UQ framework.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "probabilistic_modeling",
+        "bayesian_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/openturns/otagrum",
+      "help_website": [
+        "http://openturns.github.io/otagrum/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "bayesian-networks",
+        "graphical-models"
+      ],
+      "id": 38
+    },
+    {
+      "name": "otfmi",
+      "one_line_profile": "OpenTURNS module for FMI (Functional Mock-up Interface) model manipulation",
+      "detailed_description": "Allows the use of FMU (Functional Mock-up Units) models within OpenTURNS for uncertainty quantification of exchanged simulation models.",
+      "domains": [
+        "P1-05",
+        "P1"
+      ],
+      "subtask_category": [
+        "simulation_coupling",
+        "uncertainty_quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openturns/otfmi",
+      "help_website": [
+        "http://openturns.github.io/otfmi/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "fmi",
+        "fmu",
+        "simulation"
+      ],
+      "id": 39
+    },
+    {
+      "name": "otrobopt",
+      "one_line_profile": "Robust optimization module for OpenTURNS",
+      "detailed_description": "Provides algorithms for robust optimization, handling uncertainties within the optimization loop of scientific models.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "robust_optimization",
+        "uncertainty_quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/openturns/otrobopt",
+      "help_website": [
+        "http://openturns.github.io/otrobopt/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "optimization",
+        "robustness"
+      ],
+      "id": 40
+    },
+    {
+      "name": "torchcde",
+      "one_line_profile": "Differentiable controlled differential equation solvers for PyTorch",
+      "detailed_description": "Provides GPU-accelerated, differentiable solvers for controlled differential equations, essential for continuous-time modeling and adjoint-based sensitivity analysis.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "differential_equations",
+        "adjoint_sensitivity",
+        "scientific_machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/patrick-kidger/torchcde",
+      "help_website": [
+        "https://github.com/patrick-kidger/torchcde"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "cde",
+        "pytorch",
+        "adjoint"
+      ],
+      "id": 41
+    },
+    {
+      "name": "AeroSandbox",
+      "one_line_profile": "Aircraft design optimization framework with automatic differentiation",
+      "detailed_description": "A Python framework for aircraft design optimization that leverages automatic differentiation for fast gradient-based optimization of aerodynamic and structural models.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "design_optimization",
+        "aerodynamics_simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/peterdsharpe/AeroSandbox",
+      "help_website": [
+        "https://peterdsharpe.github.io/AeroSandbox/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "aircraft-design",
+        "optimization",
+        "automatic-differentiation"
+      ],
+      "id": 42
+    },
+    {
+      "name": "CreateFFD",
+      "one_line_profile": "Utility to generate Free-Form Deformation boxes for SU2",
+      "detailed_description": "A specialized tool for generating FFD control volumes used in aerodynamic shape optimization with the SU2 solver.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "mesh_deformation",
+        "shape_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Glyph",
+      "repo_url": "https://github.com/pointwise/CreateFFD",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "su2",
+        "ffd",
+        "optimization"
+      ],
+      "id": 43
+    },
+    {
+      "name": "preCICE",
+      "one_line_profile": "Coupling library for partitioned multi-physics simulations",
+      "detailed_description": "A library that enables the coupling of existing single-physics solvers (like CFD and FEA) to perform partitioned multi-physics simulations.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "multiphysics_coupling",
+        "fluid_structure_interaction"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/precice/precice",
+      "help_website": [
+        "https://precice.org/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "coupling",
+        "fsi",
+        "multiphysics"
+      ],
+      "id": 44
+    },
+    {
+      "name": "su2-adapter",
+      "one_line_profile": "preCICE adapter for the SU2 CFD solver",
+      "detailed_description": "The official adapter allowing the SU2 CFD solver to be coupled with other solvers via the preCICE library for multi-physics simulations.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "multiphysics_coupling",
+        "interface_adaptation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/precice/su2-adapter",
+      "help_website": [
+        "https://precice.org/adapter-su2-overview.html"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "su2",
+        "precice",
+        "coupling"
+      ],
+      "id": 45
+    },
+    {
+      "name": "CFDTool",
+      "one_line_profile": "MATLAB toolbox for CFD simulation using OpenFOAM and SU2",
+      "detailed_description": "A simulation toolbox providing a GUI and workflow for setting up and running CFD simulations with OpenFOAM and SU2 backends.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "cfd_simulation",
+        "pre_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/precise-simulation/cfdtool",
+      "help_website": [
+        "https://www.cfdtool.com"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "gui",
+        "openfoam"
+      ],
+      "id": 46
+    },
+    {
+      "name": "FEATool Multiphysics",
+      "one_line_profile": "Integrated physics simulation platform for FEA and CFD",
+      "detailed_description": "A multi-physics simulation platform integrating various solvers (FEniCS, OpenFOAM, SU2) with a unified GUI for modeling and analysis.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "multiphysics_simulation",
+        "finite_element_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/precise-simulation/featool-multiphysics",
+      "help_website": [
+        "https://www.featool.com"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "fea",
+        "cfd",
+        "multiphysics"
+      ],
+      "id": 47
+    },
+    {
+      "name": "Distribution System Model Calibration",
+      "one_line_profile": "Algorithms for calibrating power grid distribution system models",
+      "detailed_description": "A set of algorithms developed by Sandia National Labs for the calibration of distribution system models, solving inverse problems in power systems.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "model_calibration",
+        "inverse_problem"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sandialabs/distribution-system-model-calibration",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "calibration",
+        "power-grid",
+        "optimization"
+      ],
+      "id": 48
+    },
+    {
+      "name": "pyapprox",
+      "one_line_profile": "Tools for high-dimensional approximation and uncertainty quantification",
+      "detailed_description": "A comprehensive library for high-dimensional function approximation, surrogate modeling, and uncertainty quantification, supporting scientific machine learning workflows.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "surrogate_modeling",
+        "scientific_machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sandialabs/pyapprox",
+      "help_website": [
+        "https://sandialabs.github.io/pyapprox/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "approximation",
+        "uq",
+        "sciml"
+      ],
+      "id": 49
+    },
+    {
+      "name": "cashocs",
+      "one_line_profile": "Adjoint-based shape optimization and optimal control software",
+      "detailed_description": "A software package built on FEniCS for solving shape optimization and optimal control problems using adjoint methods.",
+      "domains": [
+        "P1-05",
+        "P1"
+      ],
+      "subtask_category": [
+        "shape_optimization",
+        "optimal_control",
+        "adjoint_method"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sblauth/cashocs",
+      "help_website": [
+        "https://cashocs.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "optimization",
+        "adjoint",
+        "fenics"
+      ],
+      "id": 50
+    },
+    {
+      "name": "PhotoAcoustic.jl",
+      "one_line_profile": "Forward and adjoint photoacoustic operators in Julia",
+      "detailed_description": "A Julia library providing forward and adjoint operators for photoacoustic imaging, built on the JUDI framework for wave equation solving.",
+      "domains": [
+        "P1-05",
+        "P1"
+      ],
+      "subtask_category": [
+        "wave_simulation",
+        "adjoint_modeling",
+        "inverse_problem"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/slimgroup/PhotoAcoustic.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "photoacoustics",
+        "adjoint",
+        "julia"
+      ],
+      "id": 51
+    },
+    {
+      "name": "Dakota",
+      "one_line_profile": "Toolkit for optimization and uncertainty quantification",
+      "detailed_description": "A comprehensive toolkit from Sandia National Labs for design optimization, parameter estimation, uncertainty quantification, and sensitivity analysis.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "optimization",
+        "sensitivity_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/snl-dakota/dakota",
+      "help_website": [
+        "https://dakota.sandia.gov/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "uq",
+        "optimization",
+        "calibration"
+      ],
+      "id": 52
+    },
+    {
+      "name": "SU2 MeshTools",
+      "one_line_profile": "Mesh generation and manipulation tools for SU2",
+      "detailed_description": "A collection of tools for generating and processing computational meshes specifically for the SU2 CFD solver.",
+      "domains": [
+        "P1"
+      ],
+      "subtask_category": [
+        "mesh_generation",
+        "pre_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/su2code/MeshTools",
+      "help_website": [
+        "https://su2code.github.io/"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "meshing",
+        "su2",
+        "cfd"
+      ],
+      "id": 53
+    },
+    {
+      "name": "SU2",
+      "one_line_profile": "Open-source suite for multiphysics simulation and design",
+      "detailed_description": "A leading open-source suite for solving partial differential equations (PDEs) and performing PDE-constrained optimization, with a focus on CFD and aerodynamics.",
+      "domains": [
+        "P1",
+        "P1-05"
+      ],
+      "subtask_category": [
+        "cfd_simulation",
+        "shape_optimization",
+        "adjoint_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/su2code/SU2",
+      "help_website": [
+        "https://su2code.github.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "optimization",
+        "multiphysics"
+      ],
+      "id": 54
+    },
+    {
+      "name": "WhatsOpt",
+      "one_line_profile": "Web application for multidisciplinary design analysis and optimization (MDO)",
+      "detailed_description": "A web-based platform designed to define, visualize, and manage Multidisciplinary Design Optimization (MDO) architectures. It serves as an ecosystem around OpenMDAO, allowing users to construct surrogate models, manage variable connections, and execute optimization workflows. Developed by ONERA.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "design_optimization",
+        "workflow_management",
+        "surrogate_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/whatsopt/WhatsOpt",
+      "help_website": [
+        "https://whatsopt.readthedocs.io"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "mdo",
+        "optimization",
+        "openmdao",
+        "visualization"
+      ],
+      "id": 55
+    },
+    {
+      "name": "openmdao_extensions",
+      "one_line_profile": "Extensions and solvers for the OpenMDAO optimization framework",
+      "detailed_description": "A Python library providing additional drivers, solvers, and surrogate model generators for OpenMDAO. It includes implementations for specific optimization strategies like SEGOMOE (Super-Efficient Global Optimization with Mixture of Experts) and other MDO utilities developed by ONERA.",
+      "domains": [
+        "P1-05"
+      ],
+      "subtask_category": [
+        "optimization",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/whatsopt/openmdao_extensions",
+      "help_website": [
+        "https://github.com/whatsopt/openmdao_extensions"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "openmdao",
+        "optimization",
+        "solvers",
+        "segomoe"
+      ],
+      "id": 56
+    }
+  ]
+}

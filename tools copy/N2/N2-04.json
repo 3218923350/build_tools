@@ -1,0 +1,1986 @@
+{
+  "generated_at": "2025-12-16T04:46:43.526622+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "N2",
+      "leaf_cluster_name": "神经科学-电生理与神经信号生态",
+      "domain": "Neuro",
+      "typical_objects": "spikes/LFP/EEG",
+      "task_chain": "预处理→事件/分选→解码→实时→评测",
+      "tool_form": "实时系统 + 分析库 + GUI"
+    },
+    "unit": {
+      "unit_id": "N2-04",
+      "unit_name": "实时系统与硬件接口",
+      "target_scale": "100–250",
+      "coverage_tools": "streaming、drivers"
+    },
+    "search": {
+      "target_candidates": 250,
+      "queries": [
+        "[GH] IntanRHX",
+        "[GH] Neuropixels-API",
+        "[GH] OpenBCI_GUI",
+        "[GH] Falcon",
+        "[GH] RTXI",
+        "[GH] BCI2000",
+        "[GH] SpikeGLX",
+        "[GH] Bonsai-rx",
+        "[GH] LabStreamingLayer",
+        "[GH] Open Ephys GUI",
+        "[GH] labstreaminglayer",
+        "[GH] open-ephys-plugin",
+        "[GH] neural-data-streaming",
+        "[GH] real-time-electrophysiology",
+        "[GH] neuropixels-acquisition",
+        "[GH] intan-driver",
+        "[GH] bci-framework",
+        "[GH] closed-loop-neuroscience",
+        "[GH] ephys-acquisition-system",
+        "[GH] spike-streaming",
+        "[GH] lsl-interface",
+        "[GH] real-time-neural-decoding",
+        "[GH] bonsai-workflow",
+        "[WEB] real-time electrophysiology acquisition software github",
+        "[WEB] labstreaminglayer supported devices github",
+        "[WEB] open ephys gui plugins list github",
+        "[WEB] neuropixels data streaming tools github",
+        "[WEB] closed-loop neuroscience framework github",
+        "[WEB] low latency brain computer interface library github"
+      ],
+      "total_candidates": 780,
+      "tool_candidates": 195,
+      "final_tools": 77
+    }
+  },
+  "tools": [
+    {
+      "name": "Miniscope-DAQ-QT-Software",
+      "one_line_profile": "Data acquisition software for Miniscope calcium imaging systems",
+      "detailed_description": "A QT-based software for streaming, recording, and controlling neural and behavioral data from freely behaving animals using the Miniscope platform. It handles real-time video streams and hardware control.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "device_control"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Aharoni-Lab/Miniscope-DAQ-QT-Software",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "miniscope",
+        "calcium-imaging",
+        "daq",
+        "neuroscience"
+      ],
+      "id": 1
+    },
+    {
+      "name": "MIES",
+      "one_line_profile": "Multichannel Igor Electrophysiology Suite",
+      "detailed_description": "A comprehensive data acquisition and analysis environment for intracellular electrophysiology, built on top of IGOR Pro. It supports complex stimulus generation and multi-patch clamp recording.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "electrophysiology_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "IGOR Pro",
+      "repo_url": "https://github.com/AllenInstitute/MIES",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "electrophysiology",
+        "patch-clamp",
+        "igor-pro",
+        "data-acquisition"
+      ],
+      "id": 2
+    },
+    {
+      "name": "dynamic-foraging-task",
+      "one_line_profile": "Bonsai workflow for dynamic foraging behavioral tasks",
+      "detailed_description": "A workflow using Bonsai and Harp hardware for controlling dynamic foraging experiments. It includes a Python GUI for visualization and control of the behavioral task parameters.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "experiment_control",
+        "behavioral_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AllenNeuralDynamics/dynamic-foraging-task",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bonsai",
+        "behavioral-task",
+        "neuroscience",
+        "harp"
+      ],
+      "id": 3
+    },
+    {
+      "name": "tracking-plugin",
+      "one_line_profile": "Open Ephys GUI plugin for real-time animal tracking",
+      "detailed_description": "A plugin for the Open Ephys GUI that enables real-time tracking of animal position using video input, synchronized with electrophysiological data.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "behavioral_tracking"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/CINPLA/tracking-plugin",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "open-ephys",
+        "tracking",
+        "neuroscience",
+        "plugin"
+      ],
+      "id": 4
+    },
+    {
+      "name": "concore",
+      "one_line_profile": "Framework for closed-loop neuromodulation control",
+      "detailed_description": "A framework designed for building closed-loop peripheral neuromodulation control systems, enabling real-time processing and feedback logic for neural interfaces.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "neuromodulation",
+        "closed_loop_control"
+      ],
+      "application_level": "framework",
+      "primary_language": "SWIG",
+      "repo_url": "https://github.com/ControlCore-Project/concore",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "neuromodulation",
+        "closed-loop",
+        "real-time",
+        "control-systems"
+      ],
+      "id": 5
+    },
+    {
+      "name": "CyKit",
+      "one_line_profile": "Python server for streaming EEG data to clients",
+      "detailed_description": "A Python-based server application that interfaces with EEG hardware (like OpenBCI or Emotiv) to deliver neural data to web browsers or generic clients via TCP streams.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_streaming",
+        "visualization"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CymatiCorp/CyKit",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "eeg",
+        "streaming",
+        "openbci",
+        "tcp"
+      ],
+      "id": 6
+    },
+    {
+      "name": "MuseLSL2",
+      "one_line_profile": "Interface to stream Muse EEG signals via LSL",
+      "detailed_description": "A lightweight interface to stream and record EEG signals from Muse headbands using the Lab Streaming Layer (LSL) protocol, facilitating integration with other research software.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_streaming",
+        "data_acquisition"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DominiqueMakowski/MuseLSL2",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "muse",
+        "eeg",
+        "lsl",
+        "streaming"
+      ],
+      "id": 7
+    },
+    {
+      "name": "Emotiv-LSL",
+      "one_line_profile": "Lab Streaming Layer support for EMOTIV Brainwear",
+      "detailed_description": "Provides support for streaming data from EMOTIV Brainwear devices using the Lab Streaming Layer (LSL) protocol, enabling synchronization with other experimental data streams.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_streaming",
+        "data_acquisition"
+      ],
+      "application_level": "library",
+      "primary_language": null,
+      "repo_url": "https://github.com/Emotiv/labstreaminglayer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "emotiv",
+        "lsl",
+        "eeg",
+        "bci"
+      ],
+      "id": 8
+    },
+    {
+      "name": "RTHybrid",
+      "one_line_profile": "Real-time neuron and synapse model library",
+      "detailed_description": "A library for building hybrid circuits with real-time neuron and synapse models, designed for electrophysiology experiments and dynamic clamp applications.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/GNB-UAM/RTHybrid",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "real-time",
+        "neuron-model",
+        "electrophysiology",
+        "dynamic-clamp"
+      ],
+      "id": 9
+    },
+    {
+      "name": "happyFeat",
+      "one_line_profile": "Framework for BCI workflow in clinical applications",
+      "detailed_description": "A software framework designed to simplify the Brain-Computer Interface (BCI) workflow, particularly for feature extraction and classification in clinical settings.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "bci_workflow",
+        "signal_processing"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Inria-NERV/happyFeat",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "bci",
+        "feature-extraction",
+        "clinical-neuroscience",
+        "eeg"
+      ],
+      "id": 10
+    },
+    {
+      "name": "Acquipix",
+      "one_line_profile": "Neuropixels Acquisition toolbox for Matlab",
+      "detailed_description": "A MATLAB toolbox for acquiring and processing data from Neuropixels probes, facilitating integration into electrophysiology workflows.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "probe_control"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/JorritMontijn/Acquipix",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "neuropixels",
+        "matlab",
+        "electrophysiology",
+        "daq"
+      ],
+      "id": 11
+    },
+    {
+      "name": "EyeTracker",
+      "one_line_profile": "Online pupil detection and eye tracking system",
+      "detailed_description": "A system for online pupil detection and video acquisition, featuring synchronization with SpikeGLX for electrophysiology experiments.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "behavioral_tracking",
+        "data_acquisition"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/JorritMontijn/EyeTracker",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "eye-tracking",
+        "pupil-detection",
+        "spikeglx",
+        "neuroscience"
+      ],
+      "id": 12
+    },
+    {
+      "name": "pybci",
+      "one_line_profile": "Real-time BCI creation library using LSL and ML",
+      "detailed_description": "A Python library to create real-time Brain-Computer Interfaces (BCIs) by leveraging Lab Streaming Layer (LSL) for data acquisition and standard ML libraries (PyTorch, SKLearn, TensorFlow) for classification.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "bci_development",
+        "real_time_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LMBooth/pybci",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bci",
+        "lsl",
+        "machine-learning",
+        "real-time"
+      ],
+      "id": 13
+    },
+    {
+      "name": "OpenEphys-PythonPlugin",
+      "one_line_profile": "Open Ephys plugin for Python integration",
+      "detailed_description": "A plugin for the Open Ephys GUI that enables the insertion of custom Cython/Python code into the real-time signal processing chain.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "signal_processing",
+        "plugin_extension"
+      ],
+      "application_level": "solver",
+      "primary_language": "Cython",
+      "repo_url": "https://github.com/NeuroNetMem/PythonPlugin",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "open-ephys",
+        "cython",
+        "real-time",
+        "signal-processing"
+      ],
+      "id": 14
+    },
+    {
+      "name": "OpenBCI_GUI",
+      "one_line_profile": "Cross-platform GUI for OpenBCI biosensing boards",
+      "detailed_description": "The official graphical user interface for visualizing, recording, and streaming data from OpenBCI Cyton and Ganglion biosensing boards.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_visualization",
+        "device_control"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/OpenBCI/OpenBCI_GUI",
+      "help_website": [
+        "https://openbci.com"
+      ],
+      "license": "MIT",
+      "tags": [
+        "openbci",
+        "eeg",
+        "gui",
+        "biosensing"
+      ],
+      "id": 15
+    },
+    {
+      "name": "OpenBCI_GUI_Helpers",
+      "one_line_profile": "Helper libraries for OpenBCI GUI",
+      "detailed_description": "A collection of helper functions and utilities to support the development and operation of the OpenBCI GUI.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "development_support"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/OpenBCI/OpenBCI_GUI_Helpers",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "openbci",
+        "helpers",
+        "gui"
+      ],
+      "id": 16
+    },
+    {
+      "name": "BrainOn",
+      "one_line_profile": "Online BCI framework for feature modulation",
+      "detailed_description": "A Python-based online Brain-Computer Interface (BCI) framework designed for multi-threaded feature modulation and processing, enabling researchers to develop custom online experiments.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "bci_framework",
+        "experiment_design"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OrionHH/BrainOn-an-online-brain-computer-interface-BCI-framework",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bci",
+        "online-processing",
+        "neuroscience",
+        "framework"
+      ],
+      "id": 17
+    },
+    {
+      "name": "RTXI-genicam",
+      "one_line_profile": "GenICam camera control module for RTXI",
+      "detailed_description": "A module for the Real-Time eXperiment Interface (RTXI) that allows control and data acquisition from GenICam-compliant cameras during electrophysiology experiments.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "device_control",
+        "imaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/RTXI/genicam-camera",
+      "help_website": [
+        "http://rtxi.org"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "rtxi",
+        "genicam",
+        "camera-control",
+        "electrophysiology"
+      ],
+      "id": 18
+    },
+    {
+      "name": "RTXI",
+      "one_line_profile": "Real-Time eXperiment Interface",
+      "detailed_description": "A real-time Linux-based software system for hard real-time data acquisition and closed-loop control in biological experiments, particularly electrophysiology.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "experiment_control",
+        "real_time_system"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/RTXI/rtxi",
+      "help_website": [
+        "http://rtxi.org"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "real-time",
+        "linux",
+        "electrophysiology",
+        "closed-loop"
+      ],
+      "id": 19
+    },
+    {
+      "name": "bci-framework",
+      "one_line_profile": "Framework for EEG acquisition and stimuli delivery",
+      "detailed_description": "A Python framework for developing Brain-Computer Interfaces, handling EEG data acquisition, processing, and the delivery of visual or auditory stimuli.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "bci_development",
+        "stimulus_delivery"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UN-GCPDS/bci-framework",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "bci",
+        "eeg",
+        "stimulus",
+        "acquisition"
+      ],
+      "id": 20
+    },
+    {
+      "name": "FrameGrabberPlugin",
+      "one_line_profile": "Video frame grabbing plugin for Open Ephys GUI to synchronize video with electrophysiology",
+      "detailed_description": "A plugin for the Open Ephys GUI that allows capturing video frames from cameras and synchronizing them with electrophysiological data streams in real-time.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "synchronization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/arnefmeyer/FrameGrabberPlugin",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "open-ephys",
+        "video-acquisition",
+        "synchronization"
+      ],
+      "id": 21
+    },
+    {
+      "name": "RPiCameraPlugin",
+      "one_line_profile": "Open Ephys GUI plugin for controlling Raspberry Pi cameras",
+      "detailed_description": "A plugin for the Open Ephys acquisition system that interfaces with and controls Raspberry Pi cameras for behavioral monitoring during electrophysiology experiments.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "hardware_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/arnefmeyer/RPiCameraPlugin",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "open-ephys",
+        "raspberry-pi",
+        "camera-control"
+      ],
+      "id": 22
+    },
+    {
+      "name": "bci-hil",
+      "one_line_profile": "Human-in-the-Loop research framework for Brain-Computer Interfaces",
+      "detailed_description": "A research framework designed for Brain-Computer Interface (BCI) experiments involving human-in-the-loop paradigms, facilitating the development and testing of BCI applications.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "experiment_control",
+        "bci_framework"
+      ],
+      "application_level": "workflow",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/bci-hil/bci-hil",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "bci",
+        "human-in-the-loop",
+        "research-framework"
+      ],
+      "id": 23
+    },
+    {
+      "name": "CatGT",
+      "one_line_profile": "Post-processing tool for SpikeGLX recordings including trigger shifting and artifact removal",
+      "detailed_description": "A C++ command-line tool for post-processing electrophysiology data acquired with SpikeGLX. It performs tasks such as trigger time shifting, common average referencing (CAR), and file concatenation/extraction.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "signal_processing",
+        "artifact_removal",
+        "preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/billkarsh/CatGT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "spikeglx",
+        "electrophysiology",
+        "preprocessing"
+      ],
+      "id": 24
+    },
+    {
+      "name": "SpikeGLX",
+      "one_line_profile": "High-performance data acquisition system for Neuropixels and NI-DAQ probes",
+      "detailed_description": "A recording system GUI and backend designed for high-channel-count electrophysiology, specifically optimized for Neuropixels probes and National Instruments DAQ hardware.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "recording"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/billkarsh/SpikeGLX",
+      "help_website": [
+        "https://billkarsh.github.io/SpikeGLX/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "neuropixels",
+        "data-acquisition",
+        "electrophysiology"
+      ],
+      "id": 25
+    },
+    {
+      "name": "OpenBCI_GUI_PulseSensor",
+      "one_line_profile": "Modified OpenBCI GUI for Pulse Sensor optical heart rate monitoring",
+      "detailed_description": "A variation of the standard OpenBCI GUI tailored to interface with and visualize data from Pulse Sensor optical heart rate monitors alongside EEG data.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Processing",
+      "repo_url": "https://github.com/biomurph/OpenBCI_GUI_PulseSensor",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "openbci",
+        "pulse-sensor",
+        "biosignals"
+      ],
+      "id": 26
+    },
+    {
+      "name": "Bonsai",
+      "one_line_profile": "Visual programming language for reactive data processing and experiment control",
+      "detailed_description": "A visual programming environment based on Rx (Reactive Extensions) for processing data streams in real-time. It is widely used in neuroscience for coordinating hardware, acquiring sensor data, and controlling closed-loop experiments.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "real_time_processing",
+        "experiment_control"
+      ],
+      "application_level": "platform",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/bonsai-rx/bonsai",
+      "help_website": [
+        "https://bonsai-rx.org"
+      ],
+      "license": "MIT",
+      "tags": [
+        "visual-programming",
+        "reactive-programming",
+        "neuroscience"
+      ],
+      "id": 27
+    },
+    {
+      "name": "Bonsai - DeepLabCut",
+      "one_line_profile": "Bonsai interface for real-time pose estimation using DeepLabCut",
+      "detailed_description": "A Bonsai package that provides operators for running DeepLabCut models in real-time within Bonsai workflows, enabling closed-loop behavioral experiments based on pose estimation.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "pose_estimation",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/bonsai-rx/deeplabcut",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bonsai",
+        "deeplabcut",
+        "pose-estimation"
+      ],
+      "id": 28
+    },
+    {
+      "name": "Bonsai - Harp",
+      "one_line_profile": "Bonsai library for Harp hardware protocol data acquisition",
+      "detailed_description": "Provides Bonsai interfaces for acquiring data from and controlling devices that implement the Harp protocol, facilitating precise hardware synchronization in experiments.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "hardware_control"
+      ],
+      "application_level": "library",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/bonsai-rx/harp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bonsai",
+        "harp-protocol",
+        "hardware-interface"
+      ],
+      "id": 29
+    },
+    {
+      "name": "Bonsai - MachineLearning",
+      "one_line_profile": "Reactive infrastructure for machine learning within Bonsai",
+      "detailed_description": "A library for Bonsai that provides infrastructure for integrating machine learning models and inference into reactive data processing workflows.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "inference",
+        "machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/bonsai-rx/machinelearning",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bonsai",
+        "machine-learning",
+        "reactive"
+      ],
+      "id": 30
+    },
+    {
+      "name": "Bonsai - Python Scripting",
+      "one_line_profile": "Python scripting interface for Bonsai workflows",
+      "detailed_description": "Allows users to embed Python scripts and runtime within Bonsai workflows, enabling the use of Python libraries for data processing and logic alongside Bonsai's reactive operators.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "workflow_extension",
+        "scripting"
+      ],
+      "application_level": "library",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/bonsai-rx/python-scripting",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bonsai",
+        "python",
+        "interoperability"
+      ],
+      "id": 31
+    },
+    {
+      "name": "Bonsai - SLEAP",
+      "one_line_profile": "Bonsai interface for real-time multi-animal pose tracking using SLEAP",
+      "detailed_description": "A Bonsai package for integrating SLEAP (Social LEAP Estimates Animal Poses) models, allowing for real-time multi-animal pose tracking in experimental workflows.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "pose_tracking",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/bonsai-rx/sleap",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bonsai",
+        "sleap",
+        "pose-tracking"
+      ],
+      "id": 32
+    },
+    {
+      "name": "BonVision",
+      "one_line_profile": "Closed-loop visual environment generator for neuroscience",
+      "detailed_description": "An open-source visual environment generator built on Bonsai, designed for creating complex, closed-loop visual stimuli for behavioral neuroscience experiments.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "stimulus_generation",
+        "experiment_control"
+      ],
+      "application_level": "platform",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/bonvision/BonVision",
+      "help_website": [
+        "https://bonvision.github.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "visual-stimuli",
+        "neuroscience",
+        "virtual-reality"
+      ],
+      "id": 33
+    },
+    {
+      "name": "BRAND",
+      "one_line_profile": "Backend for Real-time Asynchronous Neural Decoding",
+      "detailed_description": "A backend system designed for real-time, asynchronous neural decoding, facilitating the development and deployment of Brain-Computer Interface (BCI) applications.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "neural_decoding",
+        "real_time_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/brandbci/brand",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bci",
+        "neural-decoding",
+        "real-time"
+      ],
+      "id": 34
+    },
+    {
+      "name": "BCPyElectrophys",
+      "one_line_profile": "Python modules for electrophysiology in BCI2000",
+      "detailed_description": "A collection of Python modules designed to work with the BCPy2000 framework, enabling electrophysiological data processing and BCI application development in Python.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "signal_processing",
+        "bci_development"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cboulay/BCPyElectrophys",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bci2000",
+        "python",
+        "electrophysiology"
+      ],
+      "id": 35
+    },
+    {
+      "name": "bci2000web",
+      "one_line_profile": "WebSocket interface for controlling and streaming data from BCI2000",
+      "detailed_description": "A suite of tools that enables web-based control and real-time data access from the BCI2000 system using WebSockets, allowing for browser-based BCI applications.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "interface",
+        "data_streaming"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/cronelab/bci2000web",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bci2000",
+        "websocket",
+        "web-interface"
+      ],
+      "id": 36
+    },
+    {
+      "name": "P3Speller",
+      "one_line_profile": "P300 Speller application for BCI2000",
+      "detailed_description": "An implementation of the P300 Speller paradigm for the BCI2000 system, used for brain-computer interface communication experiments.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "bci_application",
+        "stimulus_presentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/derekja/P3Speller",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bci2000",
+        "p300",
+        "speller"
+      ],
+      "id": 37
+    },
+    {
+      "name": "neuropixel-utils",
+      "one_line_profile": "Utilities for managing Neuropixel datasets and Kilosort results",
+      "detailed_description": "A MATLAB toolbox for handling Neuropixel electrophysiology datasets, including preprocessing, managing Kilosort spike sorting results, and data visualization.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_management",
+        "post_processing",
+        "spike_sorting_utils"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/djoshea/neuropixel-utils",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neuropixels",
+        "matlab",
+        "kilosort"
+      ],
+      "id": 38
+    },
+    {
+      "name": "obci",
+      "one_line_profile": "Real-time processing for 2-photon calcium imaging data",
+      "detailed_description": "A MATLAB-based system for low-latency, real-time processing of 2-photon calcium imaging data streams, specifically designed to interface with PrairieView software.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "real_time_processing",
+        "calcium_imaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/djoshea/obci",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "calcium-imaging",
+        "real-time",
+        "matlab"
+      ],
+      "id": 39
+    },
+    {
+      "name": "PlotJuggler",
+      "one_line_profile": "Time series visualization tool for data streaming and analysis",
+      "detailed_description": "A fast and intuitive time series visualization tool often used in robotics and scientific research to visualize and analyze data streams from various sources (ROS, CSV, ULog, etc.).",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/facontidavide/PlotJuggler",
+      "help_website": [
+        "https://www.plotjuggler.io/"
+      ],
+      "license": "MPL-2.0",
+      "tags": [
+        "visualization",
+        "time-series",
+        "data-analysis"
+      ],
+      "id": 40
+    },
+    {
+      "name": "FALCON",
+      "one_line_profile": "Fast Analysis of LTE Control channels",
+      "detailed_description": "A C++ library and tool for the analysis of LTE control channels, used in telecommunications research to decode and analyze cellular network signals.",
+      "domains": [
+        "N2"
+      ],
+      "subtask_category": [
+        "signal_analysis",
+        "decoding"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/falkenber9/falcon",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "lte",
+        "telecommunications",
+        "signal-processing"
+      ],
+      "id": 41
+    },
+    {
+      "name": "lsl-eego",
+      "one_line_profile": "LabStreamingLayer (LSL) driver for ANT Neuro eego devices",
+      "detailed_description": "A standalone application that interfaces ANT Neuro eego EEG amplifiers with the LabStreamingLayer (LSL) ecosystem, enabling real-time data streaming for research.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "driver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/fcbg-platforms/lsl-eego",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "lsl",
+        "eeg",
+        "driver"
+      ],
+      "id": 42
+    },
+    {
+      "name": "OpenEphysLoader.jl",
+      "one_line_profile": "Julia tools to load data from Open Ephys GUI",
+      "detailed_description": "A Julia package providing functions to load and interact with electrophysiology data recorded using the Open Ephys GUI.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_io",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/galenlynch/OpenEphysLoader.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "julia",
+        "open-ephys",
+        "data-loading"
+      ],
+      "id": 43
+    },
+    {
+      "name": "ClosedLoop",
+      "one_line_profile": "Framework for building closed-loop neurofeedback systems",
+      "detailed_description": "A Python framework designed to facilitate the creation of closed-loop neurofeedback experiments, allowing for real-time processing of neural signals and feedback presentation.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "neurofeedback",
+        "experimental_control"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gretatuckute/ClosedLoop",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "neurofeedback",
+        "bci",
+        "closed-loop"
+      ],
+      "id": 44
+    },
+    {
+      "name": "buffer_bci",
+      "one_line_profile": "Matlab/Octave framework for building Brain-Computer Interfaces",
+      "detailed_description": "A simple framework based on the FieldTrip buffer for creating real-time Brain-Computer Interfaces (BCI) in Matlab or Octave, supporting data acquisition and processing.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "bci_control",
+        "real_time_processing"
+      ],
+      "application_level": "framework",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/jadref/buffer_bci",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bci",
+        "matlab",
+        "fieldtrip",
+        "real-time"
+      ],
+      "id": 45
+    },
+    {
+      "name": "bcisimulator",
+      "one_line_profile": "Closed-loop BCI simulator for testing neural decoding algorithms",
+      "detailed_description": "A simulation tool designed to test real-time neural decoding algorithms by simulating closed-loop Brain-Computer Interface scenarios without the need for live subjects.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "algorithm_validation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jtcostello/bcisimulator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bci",
+        "simulation",
+        "neural-decoding"
+      ],
+      "id": 46
+    },
+    {
+      "name": "psychopy-lsl",
+      "one_line_profile": "LabStreamingLayer integration for PsychoPy",
+      "detailed_description": "A library that enables PsychoPy experiments to send and receive triggers and data streams via LabStreamingLayer (LSL), facilitating synchronization with EEG and other physiological signals.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "stimulus_presentation",
+        "synchronization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kaczmarj/psychopy-lsl",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "psychopy",
+        "lsl",
+        "neuroscience",
+        "trigger"
+      ],
+      "id": 47
+    },
+    {
+      "name": "rteeg",
+      "one_line_profile": "Real-time EEG streaming and analysis library",
+      "detailed_description": "A Python module for streaming and analyzing EEG data in real-time. Note: The repository suggests using MNE-Python for newer projects, but it remains a functional tool for specific workflows.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "real_time_processing",
+        "eeg_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kaczmarj/rteeg",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "eeg",
+        "real-time",
+        "streaming"
+      ],
+      "id": 48
+    },
+    {
+      "name": "App-AudioCapture",
+      "one_line_profile": "Audio streaming application for LabStreamingLayer",
+      "detailed_description": "Official LabStreamingLayer application to capture system audio or microphone input and stream it over LSL for synchronization with physiological data.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "multimodal_sync"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/labstreaminglayer/App-AudioCapture",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "lsl",
+        "audio",
+        "streaming"
+      ],
+      "id": 49
+    },
+    {
+      "name": "App-Gamepad",
+      "one_line_profile": "Gamepad input streamer for LabStreamingLayer",
+      "detailed_description": "Official LabStreamingLayer application to stream analog stick positions and button events from gamepads (e.g., Xbox controllers) as LSL markers/signals.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "behavioral_tracking"
+      ],
+      "application_level": "solver",
+      "primary_language": "QML",
+      "repo_url": "https://github.com/labstreaminglayer/App-Gamepad",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "lsl",
+        "gamepad",
+        "input-device"
+      ],
+      "id": 50
+    },
+    {
+      "name": "App-Input",
+      "one_line_profile": "Mouse and keyboard input streamer for LabStreamingLayer",
+      "detailed_description": "Official LabStreamingLayer application to capture and stream mouse and keyboard events (keystrokes, movements) over LSL for behavioral analysis.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "behavioral_tracking"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/labstreaminglayer/App-Input",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "lsl",
+        "keyboard",
+        "mouse",
+        "input"
+      ],
+      "id": 51
+    },
+    {
+      "name": "App-SigVisualizer",
+      "one_line_profile": "Real-time signal visualization for LabStreamingLayer",
+      "detailed_description": "A PyQt5-based application for visualizing data streams (EEG, EMG, etc.) from LabStreamingLayer in real-time, useful for signal quality checks and monitoring.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "monitoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/labstreaminglayer/App-SigVisualizer",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "lsl",
+        "visualization",
+        "real-time"
+      ],
+      "id": 52
+    },
+    {
+      "name": "App-XDFStreamer",
+      "one_line_profile": "XDF file playback tool for LabStreamingLayer",
+      "detailed_description": "Official application to replay signals stored in Extensible Data Format (XDF) as real-time LSL streams, enabling simulation and testing of real-time pipelines using recorded data.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "data_playback"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/labstreaminglayer/App-XDFStreamer",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "lsl",
+        "xdf",
+        "playback",
+        "streaming"
+      ],
+      "id": 53
+    },
+    {
+      "name": "LSL4Unity",
+      "one_line_profile": "LabStreamingLayer integration for Unity3D",
+      "detailed_description": "A wrapper and integration toolkit for using LabStreamingLayer within Unity3D, enabling the creation of BCI games and VR experiments with synchronized physiological data.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "vr_integration",
+        "experiment_design"
+      ],
+      "application_level": "library",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/labstreaminglayer/LSL4Unity",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "unity",
+        "lsl",
+        "vr",
+        "bci"
+      ],
+      "id": 54
+    },
+    {
+      "name": "liblsl-Matlab",
+      "one_line_profile": "Matlab bindings for LabStreamingLayer",
+      "detailed_description": "Official Matlab interface for LabStreamingLayer, allowing Matlab scripts to send and receive real-time data streams for online analysis and BCI implementation.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_interface",
+        "real_time_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/labstreaminglayer/liblsl-Matlab",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "matlab",
+        "lsl",
+        "bindings"
+      ],
+      "id": 55
+    },
+    {
+      "name": "plugin-UE4",
+      "one_line_profile": "LabStreamingLayer plugin for Unreal Engine 4",
+      "detailed_description": "Official plugin to integrate LabStreamingLayer with Unreal Engine 4, facilitating the development of high-fidelity VR/AR experiments with physiological data synchronization.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "vr_integration",
+        "experiment_design"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/labstreaminglayer/plugin-UE4",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "unreal-engine",
+        "lsl",
+        "vr"
+      ],
+      "id": 56
+    },
+    {
+      "name": "pylsl",
+      "one_line_profile": "Python interface for LabStreamingLayer",
+      "detailed_description": "The official Python interface to the LabStreamingLayer (LSL) library, enabling Python-based real-time data streaming, collection, and analysis pipelines.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_interface",
+        "real_time_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/labstreaminglayer/pylsl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "python",
+        "lsl",
+        "streaming"
+      ],
+      "id": 57
+    },
+    {
+      "name": "mne-cpp",
+      "one_line_profile": "C++ framework for electrophysiology data processing",
+      "detailed_description": "A comprehensive C++ framework for acquiring, processing, and visualizing electrophysiological data (EEG/MEG), offering real-time capabilities and cross-platform support.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "signal_processing",
+        "real_time_analysis",
+        "visualization"
+      ],
+      "application_level": "framework",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mne-tools/mne-cpp",
+      "help_website": [
+        "https://mne-cpp.github.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "eeg",
+        "meg",
+        "c++",
+        "real-time"
+      ],
+      "id": 58
+    },
+    {
+      "name": "mne-lsl",
+      "one_line_profile": "Real-time brain signal streaming framework with MNE-Python",
+      "detailed_description": "A Python package that integrates MNE-Python with LabStreamingLayer (LSL) to provide a high-level interface for real-time brain signal streaming, processing, and visualization.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "real_time_processing",
+        "streaming"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mne-tools/mne-lsl",
+      "help_website": [
+        "https://mne.tools/mne-lsl/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "mne",
+        "lsl",
+        "real-time",
+        "neuroscience"
+      ],
+      "id": 59
+    },
+    {
+      "name": "Open Ephys GUI Binaries",
+      "one_line_profile": "Compiled binary distribution of the Open Ephys GUI for electrophysiology",
+      "detailed_description": "Provides pre-compiled executable binaries for the Open Ephys GUI, a plugin-based software platform for multi-channel electrophysiology data acquisition and real-time processing.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "signal_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": null,
+      "repo_url": "https://github.com/open-ephys-GUI-binaries/open-ephys",
+      "help_website": [
+        "https://open-ephys.org/gui"
+      ],
+      "license": null,
+      "tags": [
+        "electrophysiology",
+        "data-acquisition",
+        "gui",
+        "binaries"
+      ],
+      "id": 60
+    },
+    {
+      "name": "Neuropixels PXI Plugin",
+      "one_line_profile": "Open Ephys GUI plugin for streaming data from Neuropixels probes",
+      "detailed_description": "A plugin for the Open Ephys GUI that enables streaming and recording of neural data from Neuropixels probes via IMEC's PXI basestations and OneBox hardware.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "hardware_interface"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/open-ephys-plugins/neuropixels-pxi",
+      "help_website": [
+        "https://open-ephys.github.io/gui-docs/User-Manual/Plugins/Neuropixels-PXI.html"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "neuropixels",
+        "open-ephys-plugin",
+        "electrophysiology",
+        "streaming"
+      ],
+      "id": 61
+    },
+    {
+      "name": "Open Ephys GUI (Legacy)",
+      "one_line_profile": "Archived source code for the Open Ephys GUI data acquisition platform",
+      "detailed_description": "The legacy source code repository for the Open Ephys GUI. While superseded by the plugin-based architecture in newer repositories, it remains a reference for older electrophysiology data acquisition setups.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "signal_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/open-ephys/GUI",
+      "help_website": [
+        "https://open-ephys.org/"
+      ],
+      "license": null,
+      "tags": [
+        "electrophysiology",
+        "legacy",
+        "data-acquisition"
+      ],
+      "id": 62
+    },
+    {
+      "name": "Open Ephys Analysis Tools",
+      "one_line_profile": "MATLAB and Python tools for reading Open Ephys data formats",
+      "detailed_description": "A collection of archived scripts and functions for loading and analyzing data recorded with the Open Ephys GUI, primarily supporting the legacy Open Ephys data format.",
+      "domains": [
+        "N2"
+      ],
+      "subtask_category": [
+        "data_loading",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/open-ephys/analysis-tools",
+      "help_website": [
+        "https://open-ephys.org/"
+      ],
+      "license": null,
+      "tags": [
+        "matlab",
+        "data-analysis",
+        "electrophysiology",
+        "io"
+      ],
+      "id": 63
+    },
+    {
+      "name": "Bonsai.Onix",
+      "one_line_profile": "Bonsai library for the Open Ephys Onix acquisition system",
+      "detailed_description": "A library for the Bonsai visual reactive programming language that provides interfaces for the Open Ephys Onix hardware acquisition system, enabling real-time neural data processing workflows.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "workflow_automation"
+      ],
+      "application_level": "library",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/open-ephys/bonsai-onix1",
+      "help_website": [
+        "https://bonsai-rx.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "bonsai",
+        "open-ephys",
+        "onix",
+        "reactive-programming"
+      ],
+      "id": 64
+    },
+    {
+      "name": "Open Ephys Matlab Tools",
+      "one_line_profile": "MATLAB interface for Open Ephys data and GUI interaction",
+      "detailed_description": "Official MATLAB tools for interacting with the Open Ephys GUI and loading recorded electrophysiology data, facilitating integration of Open Ephys into MATLAB-based analysis pipelines.",
+      "domains": [
+        "N2"
+      ],
+      "subtask_category": [
+        "data_loading",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/open-ephys/open-ephys-matlab-tools",
+      "help_website": [
+        "https://open-ephys.github.io/gui-docs/User-Manual/Recording-data/Matlab.html"
+      ],
+      "license": "MIT",
+      "tags": [
+        "matlab",
+        "electrophysiology",
+        "data-interface"
+      ],
+      "id": 65
+    },
+    {
+      "name": "Open Ephys Python Tools",
+      "one_line_profile": "Python interface for Open Ephys data and GUI interaction",
+      "detailed_description": "Official Python package for loading data recorded by the Open Ephys GUI and communicating with the GUI via network events, supporting data analysis in Python environments.",
+      "domains": [
+        "N2"
+      ],
+      "subtask_category": [
+        "data_loading",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/open-ephys/open-ephys-python-tools",
+      "help_website": [
+        "https://open-ephys.github.io/gui-docs/User-Manual/Recording-data/Python.html"
+      ],
+      "license": "MIT",
+      "tags": [
+        "python",
+        "electrophysiology",
+        "data-interface"
+      ],
+      "id": 66
+    },
+    {
+      "name": "Open Ephys GUI",
+      "one_line_profile": "Plugin-based platform for multichannel electrophysiology",
+      "detailed_description": "The primary source code repository for the Open Ephys GUI, a plugin-based application for acquiring, processing, and visualizing extracellular electrophysiology data in real-time.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "signal_processing",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/open-ephys/plugin-GUI",
+      "help_website": [
+        "https://open-ephys.github.io/gui-docs/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "electrophysiology",
+        "neuroscience",
+        "real-time",
+        "data-acquisition"
+      ],
+      "id": 67
+    },
+    {
+      "name": "OpenBCI Processing GUI",
+      "one_line_profile": "Visualization and processing software for OpenBCI hardware",
+      "detailed_description": "The legacy Processing-based GUI for OpenBCI biosensing hardware, used for visualizing EEG, EMG, and ECG signals and configuring the acquisition boards.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/openbci-archive/-DEPRECATED-OpenBCI_Processing",
+      "help_website": [
+        "https://docs.openbci.com/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "eeg",
+        "bci",
+        "visualization",
+        "openbci"
+      ],
+      "id": 68
+    },
+    {
+      "name": "LieSL",
+      "one_line_profile": "Library for processing LabStreamingLayer (LSL) streams",
+      "detailed_description": "A Python library designed to read, record, and process LabStreamingLayer (LSL) data streams on the fly, facilitating real-time neuroimaging and behavioral experiments.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_streaming",
+        "signal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pyreiz/pyliesl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "lsl",
+        "labstreaminglayer",
+        "real-time",
+        "neuroscience"
+      ],
+      "id": 69
+    },
+    {
+      "name": "Reiz",
+      "one_line_profile": "Auditory and visual stimulus presentation with LSL synchronization",
+      "detailed_description": "A Python toolbox for presenting auditory and visual stimuli in neuroscience experiments, with built-in support for sending event markers via LabStreamingLayer (LSL) for synchronization.",
+      "domains": [
+        "N2"
+      ],
+      "subtask_category": [
+        "stimulus_presentation",
+        "experiment_control"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pyreiz/pyreiz",
+      "help_website": [
+        "https://github.com/pyreiz/pyreiz"
+      ],
+      "license": "MIT",
+      "tags": [
+        "stimulus",
+        "psychophysics",
+        "lsl",
+        "experiment-control"
+      ],
+      "id": 70
+    },
+    {
+      "name": "LabStreamingLayer (LSL)",
+      "one_line_profile": "Unified system for real-time measurement and synchronization of time-series data",
+      "detailed_description": "The main repository for LabStreamingLayer, a system for the unified collection of measurement time series in research experiments, handling networking, time-synchronization, and real-time access.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_streaming",
+        "synchronization"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/sccn/labstreaminglayer",
+      "help_website": [
+        "https://labstreaminglayer.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "lsl",
+        "eeg",
+        "synchronization",
+        "real-time"
+      ],
+      "id": 71
+    },
+    {
+      "name": "CoBeL-RL",
+      "one_line_profile": "Closed-loop simulator for behavior and learning in neuroscience",
+      "detailed_description": "A simulation framework for modeling complex behavior and learning in closed-loop environments using reinforcement learning and deep neural networks, tailored for computational neuroscience.",
+      "domains": [
+        "N2"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sencheng/CoBeL-RL",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "reinforcement-learning",
+        "neuroscience",
+        "simulation",
+        "closed-loop"
+      ],
+      "id": 72
+    },
+    {
+      "name": "Cleo",
+      "one_line_profile": "Closed-loop electrophysiology and optophysiology simulation testbed",
+      "detailed_description": "A Python-based simulation testbed for mesoscale neuroscience that integrates electrophysiology and optophysiology models to facilitate the development and testing of closed-loop control algorithms.",
+      "domains": [
+        "N2"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/siplab-gt/cleo",
+      "help_website": [
+        "https://cleosim.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "optogenetics",
+        "electrophysiology",
+        "simulation",
+        "closed-loop"
+      ],
+      "id": 73
+    },
+    {
+      "name": "AugmentedBCIFramework",
+      "one_line_profile": "Framework for P300-based Brain-Computer Interfaces",
+      "detailed_description": "An augmented Brain-Computer Interface (BCI) framework based on the P300 paradigm, including modules for acquiring eye gaze and physiological features alongside EEG.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "bci_control"
+      ],
+      "application_level": "framework",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/slabua/AugmentedBCIFramework",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bci",
+        "p300",
+        "eeg",
+        "eye-tracking"
+      ],
+      "id": 74
+    },
+    {
+      "name": "Thunder Streaming",
+      "one_line_profile": "Streaming analysis for large-scale neural data",
+      "detailed_description": "A library for performing streaming analysis on large-scale spatial-temporal neural data, enabling real-time processing of calcium imaging or electrophysiology datasets.",
+      "domains": [
+        "N2"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "streaming_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/thunder-project/thunder-streaming",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "neural-data",
+        "streaming",
+        "big-data",
+        "analysis"
+      ],
+      "id": 75
+    },
+    {
+      "name": "Phase Calculator",
+      "one_line_profile": "Real-time phase estimator plugin for Open Ephys",
+      "detailed_description": "A plugin for the Open Ephys GUI that estimates the continuous phase of neural oscillations in real-time, useful for phase-dependent stimulation experiments.",
+      "domains": [
+        "N2",
+        "N2-04"
+      ],
+      "subtask_category": [
+        "signal_processing",
+        "real_time_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/tne-lab/phase-calculator",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "open-ephys-plugin",
+        "phase-estimation",
+        "real-time",
+        "electrophysiology"
+      ],
+      "id": 76
+    },
+    {
+      "name": "Falcon",
+      "one_line_profile": "Visualization library for brushing and linking big data",
+      "detailed_description": "A visualization library designed for interactive exploration of large datasets through brushing and linking, often used in data science and scientific data analysis contexts.",
+      "domains": [
+        "N2"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_exploration"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/vega/falcon",
+      "help_website": [
+        "https://github.com/vega/falcon"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "visualization",
+        "big-data",
+        "interactive",
+        "vega"
+      ],
+      "id": 77
+    }
+  ]
+}

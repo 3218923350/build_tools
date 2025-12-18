@@ -1,0 +1,2638 @@
+{
+  "generated_at": "2025-12-16T12:46:01.610148+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "A1",
+      "leaf_cluster_name": "天文-观测数据处理与源检测生态",
+      "domain": "Astronomy",
+      "typical_objects": "FITS/images",
+      "task_chain": "校准→源检测→测光→匹配→平台",
+      "tool_form": "管线 + 库 + 平台"
+    },
+    "unit": {
+      "unit_id": "A1-04",
+      "unit_name": "巡天数据管理/可视化平台",
+      "target_scale": "150–350",
+      "coverage_tools": "portals、browsers"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] Gingr",
+        "[GH] Topcat",
+        "[GH] Glue",
+        "[GH] JS9",
+        "[GH] WorldWide Telescope",
+        "[GH] Firefly",
+        "[GH] CARTA",
+        "[GH] SAOImage DS9",
+        "[GH] Aladin",
+        "[GH] fits viewer",
+        "[GH] sky survey visualization",
+        "[GH] astronomical data portal",
+        "[GH] virtual observatory",
+        "[GH] hips viewer",
+        "[GH] catalog browser",
+        "[GH] image cutout service",
+        "[GH] astronomy web viewer",
+        "[GH] fits visualization",
+        "[GH] sky map",
+        "[GH] survey data archive",
+        "[GH] interactive sky chart",
+        "[GH] astronomy dashboard",
+        "[WEB] astronomy survey data visualization tools github",
+        "[WEB] web based fits viewer github",
+        "[WEB] virtual observatory client github",
+        "[WEB] interactive sky map library github",
+        "[WEB] astronomical data archive platform github"
+      ],
+      "total_candidates": 963,
+      "tool_candidates": 417,
+      "final_tools": 100
+    }
+  },
+  "tools": [
+    {
+      "name": "CARTA",
+      "one_line_profile": "Cube Analysis and Rendering Tool for Astronomy",
+      "detailed_description": "CARTA is a next-generation image visualization and analysis tool designed for ALMA, VLA, and SKA pathfinders. It provides a client-server architecture for viewing large astronomical images and cubes efficiently.",
+      "domains": [
+        "Astronomy",
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_analysis",
+        "cube_rendering"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/CARTAvis/carta",
+      "help_website": [
+        "https://cartavis.org/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "astronomy",
+        "visualization",
+        "fits",
+        "cube-analysis"
+      ],
+      "id": 1
+    },
+    {
+      "name": "CARTA Backend",
+      "one_line_profile": "Backend server for the CARTA visualization tool",
+      "detailed_description": "The backend component of CARTA, responsible for handling data access, image processing, and streaming visualization data to the frontend.",
+      "domains": [
+        "Astronomy",
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_server"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/CARTAvis/carta-backend",
+      "help_website": [
+        "https://cartavis.org/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "astronomy",
+        "backend",
+        "visualization"
+      ],
+      "id": 2
+    },
+    {
+      "name": "CARTA Frontend",
+      "one_line_profile": "Frontend interface for the CARTA visualization tool",
+      "detailed_description": "The web-based frontend component of CARTA, providing the user interface for interacting with astronomical images and cubes.",
+      "domains": [
+        "Astronomy",
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "user_interface"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/CARTAvis/carta-frontend",
+      "help_website": [
+        "https://cartavis.org/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "astronomy",
+        "frontend",
+        "visualization"
+      ],
+      "id": 3
+    },
+    {
+      "name": "voe",
+      "one_line_profile": "Virtual Observatory Events for Fast Radio Bursts",
+      "detailed_description": "A Python library for handling Virtual Observatory Events (VOEvents) specifically tailored for Fast Radio Burst (FRB) detection and alerts, developed by the CHIME/FRB collaboration.",
+      "domains": [
+        "Astronomy",
+        "A1"
+      ],
+      "subtask_category": [
+        "data_management",
+        "alert_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CHIMEFRB/voe",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "astronomy",
+        "frb",
+        "voevent",
+        "chime"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Firefly (IPAC)",
+      "one_line_profile": "Web-based UI library for astronomical data archive access and visualization",
+      "detailed_description": "Firefly is a web framework for building astronomical data access and visualization applications. It is used by IPAC for archives like IRSA and LSST.",
+      "domains": [
+        "Astronomy",
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_access",
+        "archive_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/Caltech-IPAC/firefly",
+      "help_website": [
+        "https://github.com/Caltech-IPAC/firefly"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "astronomy",
+        "visualization",
+        "fits",
+        "archive"
+      ],
+      "id": 5
+    },
+    {
+      "name": "ASTAP",
+      "one_line_profile": "Astrometric Stacking Program and Plate Solver",
+      "detailed_description": "ASTAP is a free astrometric solver, stacking program, and FITS viewer. It is widely used for plate solving in astrophotography to determine the precise celestial coordinates of an image.",
+      "domains": [
+        "Astronomy",
+        "A1"
+      ],
+      "subtask_category": [
+        "plate_solving",
+        "image_stacking",
+        "astrometry"
+      ],
+      "application_level": "solver",
+      "primary_language": "Pascal",
+      "repo_url": "https://github.com/CanardConfit/ASTAP",
+      "help_website": [
+        "https://www.hnsky.org/astap.htm"
+      ],
+      "license": "MPL-2.0",
+      "tags": [
+        "astronomy",
+        "plate-solving",
+        "stacking",
+        "fits"
+      ],
+      "id": 6
+    },
+    {
+      "name": "toasty",
+      "one_line_profile": "Pipeline for creating WWT TOAST data tiles",
+      "detailed_description": "A Python library to generate TOAST (Tessellated Octahedral Adaptive Subdivision Transform) tiles from astronomical images for visualization in the WorldWide Telescope (WWT) ecosystem.",
+      "domains": [
+        "Astronomy",
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_processing",
+        "tiling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ChrisBeaumont/toasty",
+      "help_website": [
+        "https://toasty.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "visualization",
+        "wwt",
+        "toast"
+      ],
+      "id": 7
+    },
+    {
+      "name": "HORAYZON",
+      "one_line_profile": "Terrain parameter and shadow map computation tool",
+      "detailed_description": "A package to efficiently compute terrain parameters (horizon, sky view factor, slope) and shadow maps from high-resolution digital elevation models (DEM), useful for meteorology and earth science.",
+      "domains": [
+        "Earth Science",
+        "Geography"
+      ],
+      "subtask_category": [
+        "modeling",
+        "spatial_analysis",
+        "solar_radiation"
+      ],
+      "application_level": "library",
+      "primary_language": "Cython",
+      "repo_url": "https://github.com/ChristianSteger/HORAYZON",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "earth-science",
+        "dem",
+        "shadow-mapping",
+        "terrain-analysis"
+      ],
+      "id": 8
+    },
+    {
+      "name": "whampy",
+      "one_line_profile": "Analysis and visualization tool for WHAM Sky Survey",
+      "detailed_description": "A Python package designed to interact with, visualize, and analyze data from the Wisconsin H-Alpha Mapper (WHAM) Sky Survey.",
+      "domains": [
+        "Astronomy",
+        "A1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_analysis",
+        "spectroscopy"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Deech08/whampy",
+      "help_website": [
+        "https://whampy.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "astronomy",
+        "wham",
+        "h-alpha",
+        "visualization"
+      ],
+      "id": 9
+    },
+    {
+      "name": "stac-finder",
+      "one_line_profile": "API for browsing SpatioTemporal Asset Catalogs (STAC)",
+      "detailed_description": "A STAC-compliant API implementation for browsing and searching SpatioTemporal Asset Catalogs, facilitating the discovery of geospatial and earth observation data.",
+      "domains": [
+        "Earth Science",
+        "Geospatial"
+      ],
+      "subtask_category": [
+        "data_management",
+        "data_discovery"
+      ],
+      "application_level": "service",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/GeoStack-Solutions/stac-finder",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "stac",
+        "geospatial",
+        "earth-observation",
+        "catalog"
+      ],
+      "id": 10
+    },
+    {
+      "name": "fitsgeo",
+      "one_line_profile": "PHITS geometry development and visualization tool",
+      "detailed_description": "A Python package for developing and visualizing geometries for the PHITS (Particle and Heavy Ion Transport code System) Monte Carlo transport code.",
+      "domains": [
+        "Physics",
+        "Nuclear Physics"
+      ],
+      "subtask_category": [
+        "modeling",
+        "visualization",
+        "geometry_setup"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GordoNice/fitsgeo",
+      "help_website": [
+        "https://pypi.org/project/fitsgeo/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "phits",
+        "monte-carlo",
+        "geometry",
+        "visualization"
+      ],
+      "id": 11
+    },
+    {
+      "name": "dustmaps3d",
+      "one_line_profile": "3D dust map based on Gaia and LAMOST data",
+      "detailed_description": "A tool/library to access and visualize an all-sky 3D dust map derived from Gaia and LAMOST survey data, useful for studying interstellar medium extinction.",
+      "domains": [
+        "Astronomy",
+        "A1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_access",
+        "extinction_correction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Grapeknight/dustmaps3d",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "dust-map",
+        "gaia",
+        "lamost"
+      ],
+      "id": 12
+    },
+    {
+      "name": "swarmlib",
+      "one_line_profile": "Library implementing swarm optimization algorithms for scientific computing",
+      "detailed_description": "A Python library that implements and visualizes various swarm intelligence optimization algorithms (PSO, ACO, GWO, etc.), which are commonly used in scientific modeling and parameter estimation tasks.",
+      "domains": [
+        "General Science",
+        "Optimization"
+      ],
+      "subtask_category": [
+        "optimization",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HaaLeo/swarmlib",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "optimization",
+        "swarm-intelligence",
+        "pso",
+        "scientific-computing"
+      ],
+      "id": 13
+    },
+    {
+      "name": "gw_sky",
+      "one_line_profile": "Gravitational wave sky map visualization tool",
+      "detailed_description": "A Python project designed for generating sky maps and animations specifically for gravitational wave astronomy, aiding in the visualization of source localization.",
+      "domains": [
+        "Astronomy",
+        "Gravitational Waves"
+      ],
+      "subtask_category": [
+        "visualization",
+        "sky_mapping"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Hazboun6/gw_sky",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "astronomy",
+        "visualization",
+        "sky-maps"
+      ],
+      "id": 14
+    },
+    {
+      "name": "gleamvo-client",
+      "one_line_profile": "Client API for GLEAM Virtual Observatory access",
+      "detailed_description": "A Python client library for accessing the GLEAM (GaLactic and Extragalactic All-sky MWA) Virtual Observatory, facilitating astronomical data retrieval and query.",
+      "domains": [
+        "Astronomy",
+        "Radio Astronomy"
+      ],
+      "subtask_category": [
+        "data_access",
+        "virtual_observatory"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ICRAR/gleamvo-client",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "virtual-observatory",
+        "astronomy",
+        "data-access",
+        "gleam"
+      ],
+      "id": 15
+    },
+    {
+      "name": "CartAGen (Java)",
+      "one_line_profile": "Cartographic generalisation plugin for GeOxygene",
+      "detailed_description": "A Java-based plugin for the GeOxygene platform dedicated to cartographic generalisation, a process in GIS and geography for deriving smaller scale maps from larger scale data.",
+      "domains": [
+        "Geography",
+        "GIS"
+      ],
+      "subtask_category": [
+        "cartography",
+        "generalization"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/IGNF/CartAGen",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "gis",
+        "cartography",
+        "generalization",
+        "geoxygene"
+      ],
+      "id": 16
+    },
+    {
+      "name": "ImagePy",
+      "one_line_profile": "Extensible image processing framework for scientific imaging",
+      "detailed_description": "An open-source image processing framework written in Python, designed to be extensible like ImageJ. It integrates with Scipy, Scikit-image, and OpenCV to provide a platform for scientific image analysis.",
+      "domains": [
+        "General Science",
+        "Bioimaging"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Image-Py/imagepy",
+      "help_website": [
+        "http://imagepy.org"
+      ],
+      "license": "BSD-4-Clause",
+      "tags": [
+        "image-processing",
+        "scientific-imaging",
+        "microscopy",
+        "framework"
+      ],
+      "id": 17
+    },
+    {
+      "name": "AstroImages.jl",
+      "one_line_profile": "Astronomical image visualization library for Julia",
+      "detailed_description": "A Julia library dedicated to the visualization of astronomical images, providing tools to handle and display FITS data and other astronomical formats within the Julia ecosystem.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaAstro/AstroImages.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "julia",
+        "astronomy",
+        "visualization",
+        "fits"
+      ],
+      "id": 18
+    },
+    {
+      "name": "SAOImageDS9.jl",
+      "one_line_profile": "Julia interface to SAOImage DS9",
+      "detailed_description": "A Julia package that provides an interface to the SAOImage DS9 astronomical imaging and data visualization application via the XPA messaging system.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "visualization",
+        "interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaAstro/SAOImageDS9.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "julia",
+        "ds9",
+        "astronomy",
+        "visualization"
+      ],
+      "id": 19
+    },
+    {
+      "name": "FIt-SNE",
+      "one_line_profile": "Fast Fourier Transform-accelerated Interpolation-based t-SNE",
+      "detailed_description": "A highly optimized implementation of t-SNE using FFT acceleration, widely used in bioinformatics (e.g., single-cell RNA-seq) and data science for visualizing high-dimensional datasets.",
+      "domains": [
+        "Bioinformatics",
+        "Data Science"
+      ],
+      "subtask_category": [
+        "dimensionality_reduction",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/KlugerLab/FIt-SNE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "t-sne",
+        "dimensionality-reduction",
+        "visualization",
+        "bioinformatics"
+      ],
+      "id": 20
+    },
+    {
+      "name": "auto_stretch",
+      "one_line_profile": "Automated contrast stretching for FITS image visualization",
+      "detailed_description": "A Python tool developed by LCOGT to automatically determine optimal contrast stretch parameters for astronomical FITS images, facilitating quick visualization.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LCOGT/auto_stretch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fits",
+        "visualization",
+        "astronomy",
+        "image-processing"
+      ],
+      "id": 21
+    },
+    {
+      "name": "skyproj",
+      "one_line_profile": "Astronomical sky mapping with Matplotlib and PROJ",
+      "detailed_description": "A Python library from LSST DESC for creating publication-quality sky maps using Matplotlib and PROJ, supporting various cartographic projections relevant to astronomy.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "visualization",
+        "sky_mapping"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/LSSTDESC/skyproj",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "astronomy",
+        "visualization",
+        "sky-maps",
+        "matplotlib"
+      ],
+      "id": 22
+    },
+    {
+      "name": "X-LoVoCCS-Data",
+      "one_line_profile": "Data processing workflow for LoVoCCS X-ray survey",
+      "detailed_description": "A repository containing the code and pipelines used to create the multi-mission X-ray data archive for the Local Volume Complete Cluster Survey (LoVoCCS).",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/LoVoCCS/X-LoVoCCS-Data",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "x-ray",
+        "astronomy",
+        "pipeline",
+        "survey-data"
+      ],
+      "id": 23
+    },
+    {
+      "name": "cartagen (Python)",
+      "one_line_profile": "Python library for cartographic generalisation",
+      "detailed_description": "An open-source Python library for cartographic generalisation, providing algorithms to simplify map data while preserving essential topological and geographic characteristics.",
+      "domains": [
+        "Geography",
+        "GIS"
+      ],
+      "subtask_category": [
+        "cartography",
+        "generalization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LostInZoom/cartagen",
+      "help_website": [],
+      "license": "EUPL-1.2",
+      "tags": [
+        "cartography",
+        "gis",
+        "generalization",
+        "python"
+      ],
+      "id": 24
+    },
+    {
+      "name": "OpenSpace",
+      "one_line_profile": "Open-source astrovisualization software",
+      "detailed_description": "A comprehensive open-source software platform for visualizing the entire known universe, portraying ongoing efforts to investigate the cosmos. It supports interactive data visualization for astronomy and space science.",
+      "domains": [
+        "Astronomy",
+        "Space Science"
+      ],
+      "subtask_category": [
+        "visualization",
+        "simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenSpace/OpenSpace",
+      "help_website": [
+        "http://docs.openspaceproject.com"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "visualization",
+        "astronomy",
+        "space-science",
+        "rendering"
+      ],
+      "id": 25
+    },
+    {
+      "name": "SAOImageDS9",
+      "one_line_profile": "Astronomical imaging and data visualization application",
+      "detailed_description": "SAOImage DS9 is a visualization application for astronomical imaging and data analysis. It supports FITS images and binary tables, multiple frame buffers, region manipulation, and arbitrary scale algorithms and colormaps.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "C",
+      "repo_url": "https://github.com/SAOImageDS9/SAOImageDS9",
+      "help_website": [
+        "https://ds9.si.edu/site/Home.html"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "astronomy",
+        "fits",
+        "visualization",
+        "imaging"
+      ],
+      "id": 26
+    },
+    {
+      "name": "BAStag",
+      "one_line_profile": "Data processing for British Antarctic Survey archival tags",
+      "detailed_description": "A package for processing light-level geolocation data from British Antarctic Survey archival tags. It provides functions to detect twilight events and estimate locations for tracking marine animals.",
+      "domains": [
+        "Ecology",
+        "Geoscience"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "geolocation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/SWotherspoon/BAStag",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "geolocation",
+        "tracking",
+        "ecology",
+        "antarctic"
+      ],
+      "id": 27
+    },
+    {
+      "name": "FITS-Rating-Tool",
+      "one_line_profile": "Tool for viewing and automatically grading FITS files",
+      "detailed_description": "A tool designed to view and automatically grade (quality control) astronomical images in FITS format. It helps astronomers sort and filter images based on quality metrics.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "image_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/TheCyberBrick/FITS-Rating-Tool",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "fits",
+        "astronomy",
+        "quality-control",
+        "imaging"
+      ],
+      "id": 28
+    },
+    {
+      "name": "pywwt",
+      "one_line_profile": "Python interface to WorldWide Telescope",
+      "detailed_description": "The Python interface to WorldWide Telescope (WWT), allowing users to control the WWT visualization engine, load data, and create visualizations directly from Python environments like Jupyter notebooks.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_exploration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/WorldWideTelescope/pywwt",
+      "help_website": [
+        "https://pywwt.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "astronomy",
+        "visualization",
+        "jupyter",
+        "wwt"
+      ],
+      "id": 29
+    },
+    {
+      "name": "wwt-excel-plugin",
+      "one_line_profile": "Excel Plugin for WorldWide Telescope",
+      "detailed_description": "An add-in for Microsoft Excel that enables the visualization of astronomical data stored in spreadsheets directly within the WorldWide Telescope environment.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_integration"
+      ],
+      "application_level": "solver",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/WorldWideTelescope/wwt-excel-plugin",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "excel",
+        "visualization",
+        "astronomy",
+        "plugin"
+      ],
+      "id": 30
+    },
+    {
+      "name": "wwt-jupyterlab",
+      "one_line_profile": "WorldWide Telescope JupyterLab extension",
+      "detailed_description": "A JupyterLab extension that embeds the WorldWide Telescope visualization engine as a widget, enabling interactive astronomical visualization within the JupyterLab interface.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "visualization",
+        "interactive_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/WorldWideTelescope/wwt-jupyterlab",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "jupyterlab",
+        "visualization",
+        "astronomy",
+        "extension"
+      ],
+      "id": 31
+    },
+    {
+      "name": "wwt-remote",
+      "one_line_profile": "Cluster Controller for WorldWide Telescope",
+      "detailed_description": "A cluster controller for WorldWide Telescope designed for multi-channel domes, power walls, and other multi-machine visualization environments used in planetariums and research labs.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "visualization",
+        "infrastructure"
+      ],
+      "application_level": "platform",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/WorldWideTelescope/wwt-remote",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "cluster-control",
+        "planetarium",
+        "astronomy"
+      ],
+      "id": 32
+    },
+    {
+      "name": "wwt-web-client",
+      "one_line_profile": "WorldWide Telescope Web Client",
+      "detailed_description": "The web-based client for WorldWide Telescope, allowing users to explore the universe, visualize astronomical data, and tour the sky directly in a web browser.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "visualization",
+        "education"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/WorldWideTelescope/wwt-web-client",
+      "help_website": [
+        "http://worldwidetelescope.org/webclient/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "web-client",
+        "visualization",
+        "astronomy",
+        "webgl"
+      ],
+      "id": 33
+    },
+    {
+      "name": "wwt-webgl-engine",
+      "one_line_profile": "WorldWide Telescope WebGL rendering engine",
+      "detailed_description": "The core JavaScript/WebGL rendering engine that powers the WorldWide Telescope web client, providing high-performance astronomical visualization capabilities for web applications.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "visualization",
+        "rendering"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/WorldWideTelescope/wwt-webgl-engine",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "webgl",
+        "rendering",
+        "astronomy",
+        "engine"
+      ],
+      "id": 34
+    },
+    {
+      "name": "wwt-windows-client",
+      "one_line_profile": "WorldWide Telescope Windows Application",
+      "detailed_description": "The native Windows desktop application for WorldWide Telescope, providing a comprehensive environment for astronomical data visualization and exploration.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_exploration"
+      ],
+      "application_level": "platform",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/WorldWideTelescope/wwt-windows-client",
+      "help_website": [
+        "http://worldwidetelescope.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "windows",
+        "visualization",
+        "astronomy",
+        "desktop-app"
+      ],
+      "id": 35
+    },
+    {
+      "name": "Firefly (ageller)",
+      "one_line_profile": "WebGL interactive particle viewer for astronomy",
+      "detailed_description": "A WebGL-based interactive viewer designed for visualizing particle data from astronomical simulations (e.g., star clusters, galaxies). It allows users to explore 3D datasets in a browser.",
+      "domains": [
+        "Astronomy",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "simulation_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ageller/Firefly",
+      "help_website": [
+        "https://ageller.github.io/Firefly/"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "visualization",
+        "particles",
+        "webgl",
+        "astronomy"
+      ],
+      "id": 36
+    },
+    {
+      "name": "fink-client",
+      "one_line_profile": "Client for Fink broker alerts",
+      "detailed_description": "A light-weight Python client to manipulate and retrieve astronomical alerts from the Fink broker, which processes data from surveys like ZTF and LSST.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "data_access",
+        "alert_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/astrolabsoftware/fink-client",
+      "help_website": [
+        "https://fink-broker.readthedocs.io/en/latest/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "astronomy",
+        "alerts",
+        "broker",
+        "ztf"
+      ],
+      "id": 37
+    },
+    {
+      "name": "STIFF",
+      "one_line_profile": "FITS to TIFF converter for visualization",
+      "detailed_description": "STIFF is a program that converts scientific FITS images to the TIFF format for visualization and illustration purposes, handling high dynamic range data effectively.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": null,
+      "repo_url": "https://github.com/astromatic/stiff",
+      "help_website": [
+        "https://www.astromatic.net/software/stiff"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "fits",
+        "tiff",
+        "visualization",
+        "astromatic"
+      ],
+      "id": 38
+    },
+    {
+      "name": "pyvo",
+      "one_line_profile": "Python access to Virtual Observatory services",
+      "detailed_description": "An Astropy affiliated package that provides access to remote data and services of the Virtual Observatory (VO) using Python, enabling astronomers to query and retrieve data from standardized archives.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "data_access",
+        "database_query"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/astropy/pyvo",
+      "help_website": [
+        "https://pyvo.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "virtual-observatory",
+        "astronomy",
+        "data-access",
+        "astropy"
+      ],
+      "id": 39
+    },
+    {
+      "name": "lenspyx",
+      "one_line_profile": "Curved-sky CMB lensing simulation and processing package",
+      "detailed_description": "A Python package for curved-sky Cosmic Microwave Background (CMB) lensing simulation and analysis, providing tools for generating lensed maps and processing spherical harmonic transforms.",
+      "domains": [
+        "Astronomy",
+        "Cosmology"
+      ],
+      "subtask_category": [
+        "simulation",
+        "data_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/carronj/lenspyx",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cmb",
+        "lensing",
+        "cosmology",
+        "simulation"
+      ],
+      "id": 40
+    },
+    {
+      "name": "Aladin Desktop",
+      "one_line_profile": "Interactive software sky atlas for astronomical data visualization and exploration",
+      "detailed_description": "The desktop application of the CDS Aladin Sky Atlas project, allowing users to visualize digitized astronomical images, superimpose entries from astronomical catalogs, and interactively access related data and information from the Simbad database, the VizieR service, and other archives.",
+      "domains": [
+        "Astronomy",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_exploration"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/cds-astro/aladin",
+      "help_website": [
+        "https://aladin.cds.unistra.fr/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "sky-atlas",
+        "visualization",
+        "fits",
+        "virtual-observatory"
+      ],
+      "id": 41
+    },
+    {
+      "name": "Aladin Lite",
+      "one_line_profile": "Lightweight astronomical HiPS visualizer for web browsers",
+      "detailed_description": "A lightweight version of the Aladin Sky Atlas running in the browser, enabling visualization of HiPS (Hierarchical Progressive Surveys) based sky maps and overlay of catalogs.",
+      "domains": [
+        "Astronomy",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/cds-astro/aladin-lite",
+      "help_website": [
+        "https://aladin.cds.unistra.fr/AladinLite/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "hips",
+        "visualization",
+        "web-component",
+        "astronomy"
+      ],
+      "id": 42
+    },
+    {
+      "name": "fitsrs",
+      "one_line_profile": "Pure Rust library for reading FITS astronomical data files",
+      "detailed_description": "A Rust implementation for parsing and reading Flexible Image Transport System (FITS) files, the standard data format used in astronomy.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "io"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/cds-astro/fitsrs",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "fits",
+        "rust",
+        "io",
+        "astronomy"
+      ],
+      "id": 43
+    },
+    {
+      "name": "ipyaladin",
+      "one_line_profile": "Jupyter widget for the Aladin Lite sky viewer",
+      "detailed_description": "A Python library enabling the use of Aladin Lite within Jupyter notebooks, allowing interactive visualization of astronomical images and catalogs directly in a research workflow.",
+      "domains": [
+        "Astronomy",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "interactive_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cds-astro/ipyaladin",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "jupyter",
+        "visualization",
+        "aladin",
+        "python"
+      ],
+      "id": 44
+    },
+    {
+      "name": "Virtual Language Observatory",
+      "one_line_profile": "Platform for exploring linguistic resources and data",
+      "detailed_description": "A browser-based virtual observatory developed by CLARIN ERIC for searching and exploring linguistic resources, tools, and data across various repositories.",
+      "domains": [
+        "Linguistics",
+        "Humanities"
+      ],
+      "subtask_category": [
+        "data_exploration",
+        "data_access"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/clarin-eric/VLO",
+      "help_website": [
+        "https://vlo.clarin.eu/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "linguistics",
+        "virtual-observatory",
+        "clarin",
+        "data-portal"
+      ],
+      "id": 45
+    },
+    {
+      "name": "SemBERT",
+      "one_line_profile": "Semantics-aware BERT model for natural language understanding",
+      "detailed_description": "An implementation of SemBERT, a model that incorporates explicit contextual semantics (Semantic Role Labeling) into BERT for improved natural language understanding tasks.",
+      "domains": [
+        "Computer Science",
+        "NLP"
+      ],
+      "subtask_category": [
+        "inference",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cooelf/SemBERT",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bert",
+        "nlp",
+        "semantics",
+        "deep-learning"
+      ],
+      "id": 46
+    },
+    {
+      "name": "HERMES",
+      "one_line_profile": "Framework for line-of-sight integration of galactic radiative processes",
+      "detailed_description": "A computational framework designed to generate sky maps in HEALPix format by performing line-of-sight integration over galactic radiative processes, useful for astrophysical simulations.",
+      "domains": [
+        "Astronomy",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "data_generation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/cosmicrays/hermes",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "radiative-processes",
+        "sky-maps",
+        "healpix",
+        "simulation"
+      ],
+      "id": 47
+    },
+    {
+      "name": "CASDA VO Tools",
+      "one_line_profile": "Implementation of Virtual Observatory protocols for ASKAP data",
+      "detailed_description": "A set of tools implementing Virtual Observatory (VO) protocols such as TAP, Cone Search, DataLink, and SIAP, specifically for the CSIRO ASKAP Science Data Archive.",
+      "domains": [
+        "Astronomy",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "data_access",
+        "data_management"
+      ],
+      "application_level": "service",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/csiro-rds/casda_vo_tools",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "virtual-observatory",
+        "tap",
+        "askap",
+        "csiro"
+      ],
+      "id": 48
+    },
+    {
+      "name": "GlueStick",
+      "one_line_profile": "Deep matcher for joint points and lines in images",
+      "detailed_description": "A deep learning model for joint matching of points and lines in images, improving upon local feature matching tasks in computer vision.",
+      "domains": [
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "image_matching",
+        "feature_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/cvg/GlueStick",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "feature-matching",
+        "deep-learning",
+        "computer-vision"
+      ],
+      "id": 49
+    },
+    {
+      "name": "LightGlue",
+      "one_line_profile": "Lightweight local feature matching model",
+      "detailed_description": "A deep network for local feature matching that is faster and more memory-efficient than SuperGlue, designed for high-performance computer vision tasks.",
+      "domains": [
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "image_matching",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cvg/LightGlue",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "feature-matching",
+        "deep-learning",
+        "computer-vision"
+      ],
+      "id": 50
+    },
+    {
+      "name": "glue-factory",
+      "one_line_profile": "Training library for local feature detection and matching models",
+      "detailed_description": "A library for training and evaluating local feature detection and matching pipelines, supporting research in geometric computer vision.",
+      "domains": [
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "training",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cvg/glue-factory",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "training",
+        "feature-detection",
+        "computer-vision"
+      ],
+      "id": 51
+    },
+    {
+      "name": "jupyterlab_thredds",
+      "one_line_profile": "JupyterLab extension for browsing THREDDS data catalogs",
+      "detailed_description": "A JupyterLab extension that allows users to browse and access datasets served by THREDDS Data Servers (TDS), commonly used in Earth science and astronomy.",
+      "domains": [
+        "Earth Science",
+        "Astronomy",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "data_access",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eWaterCycle/jupyterlab_thredds",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "jupyterlab",
+        "thredds",
+        "data-catalog",
+        "opendap"
+      ],
+      "id": 52
+    },
+    {
+      "name": "Ginga",
+      "one_line_profile": "A toolkit for building scientific image viewers and a full-featured FITS viewer",
+      "detailed_description": "Ginga is a toolkit designed for building viewers for scientific image data in Python, visualizing 2D numpy arrays. It also includes a reference FITS file viewer with a plugin architecture for astronomical data analysis.",
+      "domains": [
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ejeschke/ginga",
+      "help_website": [
+        "https://ginga.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "fits-viewer",
+        "astronomy",
+        "visualization",
+        "python-toolkit"
+      ],
+      "id": 53
+    },
+    {
+      "name": "JS9",
+      "one_line_profile": "Web-based astronomical image display and analysis",
+      "detailed_description": "JS9 is a JavaScript-based astronomical image display that allows users to view and analyze FITS images directly in the browser, supporting region analysis, scaling, and colormaps.",
+      "domains": [
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/ericmandel/js9",
+      "help_website": [
+        "https://js9.si.edu/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "fits",
+        "web-viewer",
+        "astronomy"
+      ],
+      "id": 54
+    },
+    {
+      "name": "pyds9",
+      "one_line_profile": "Python connection to SAOimage DS9 via XPA",
+      "detailed_description": "pyds9 provides a Python interface to the DS9 astronomical image viewer, allowing users to control DS9 and interact with data via the XPA messaging system.",
+      "domains": [
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/ericmandel/pyds9",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ds9",
+        "python-binding",
+        "xpa",
+        "astronomy"
+      ],
+      "id": 55
+    },
+    {
+      "name": "pyjs9",
+      "one_line_profile": "Python connection to JS9",
+      "detailed_description": "pyjs9 provides a Python interface to communicate with the JS9 web-based astronomical image viewer, enabling server-side scripting and control of the client-side display.",
+      "domains": [
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ericmandel/pyjs9",
+      "help_website": [
+        "https://js9.si.edu/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "js9",
+        "python-binding",
+        "astronomy"
+      ],
+      "id": 56
+    },
+    {
+      "name": "OITOOLS.jl",
+      "one_line_profile": "Tools for optical interferometry data processing and modeling",
+      "detailed_description": "A collection of Julia tools to load, visualize, model-fit, and image optical interferometry data from observatories like CHARA, NPOI, and VLTI.",
+      "domains": [
+        "A1"
+      ],
+      "subtask_category": [
+        "image_reconstruction",
+        "model_fitting",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/fabienbaron/OITOOLS.jl",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "interferometry",
+        "optical-astronomy",
+        "julia"
+      ],
+      "id": 57
+    },
+    {
+      "name": "GLUE (Omics)",
+      "one_line_profile": "Graph-linked unified embedding for single-cell multi-omics data integration",
+      "detailed_description": "GLUE is a deep learning framework for integrating single-cell multi-omics data by learning a unified embedding space using graph constraints.",
+      "domains": [
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "data_integration",
+        "embedding",
+        "multi_omics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gao-lab/GLUE",
+      "help_website": [
+        "https://glue-genomics.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "multi-omics",
+        "deep-learning"
+      ],
+      "id": 58
+    },
+    {
+      "name": "Glue Viz",
+      "one_line_profile": "Multi-dimensional linked data visualization tool",
+      "detailed_description": "Glue is a Python library to explore relationships within and between related datasets. It is widely used in astronomy (and other fields) for interactive visualization of high-dimensional data.",
+      "domains": [
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_exploration"
+      ],
+      "application_level": "application",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/glue-viz/glue",
+      "help_website": [
+        "http://glueviz.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "visualization",
+        "interactive",
+        "astronomy",
+        "data-science"
+      ],
+      "id": 59
+    },
+    {
+      "name": "AstronomicAL",
+      "one_line_profile": "Interactive dashboard for astronomical data classification using Active Learning",
+      "detailed_description": "AstronomicAL is a software tool for visualizing, integrating, and classifying astronomical data, specifically designed to use active learning to optimize human-in-the-loop classification tasks.",
+      "domains": [
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "classification",
+        "visualization",
+        "active_learning"
+      ],
+      "application_level": "application",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/grant-m-s/AstronomicAL",
+      "help_website": [
+        "https://astronomical.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "active-learning",
+        "classification",
+        "dashboard",
+        "astronomy"
+      ],
+      "id": 60
+    },
+    {
+      "name": "ASTAP",
+      "one_line_profile": "Astrometric solver, FITS viewer, and stacking program",
+      "detailed_description": "ASTAP (Astrometric STAcking Program) is a free astrometric solver, image stacker, and FITS viewer capable of solving astronomical images by matching star patterns.",
+      "domains": [
+        "A1"
+      ],
+      "subtask_category": [
+        "astrometry",
+        "stacking",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Pascal",
+      "repo_url": "https://github.com/han-k59/astap",
+      "help_website": [
+        "https://www.hnsky.org/astap.htm"
+      ],
+      "license": "MPL-2.0",
+      "tags": [
+        "astrometry",
+        "plate-solving",
+        "stacking",
+        "fits"
+      ],
+      "id": 61
+    },
+    {
+      "name": "milkyway_plot",
+      "one_line_profile": "Plotting face-on and all-sky maps of the Milky Way",
+      "detailed_description": "A Python package for generating face-on and all-sky maps of the Milky Way galaxy using Matplotlib and Bokeh, useful for visualizing galactic structures.",
+      "domains": [
+        "A1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "mapping"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/henrysky/milkyway_plot",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "milky-way",
+        "plotting",
+        "astronomy"
+      ],
+      "id": 62
+    },
+    {
+      "name": "iDaVIE",
+      "one_line_profile": "Immersive Data Visualisation Interactive Explorer for VR",
+      "detailed_description": "iDaVIE is a virtual reality software designed for the immersive visualization and interrogation of 3D astronomical data (spectral cubes), enabling researchers to explore structures in 3D space.",
+      "domains": [
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "vr_exploration"
+      ],
+      "application_level": "application",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/idia-astro/iDaVIE",
+      "help_website": [
+        "https://idavie.readthedocs.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "vr",
+        "visualization",
+        "astronomy",
+        "3d-data"
+      ],
+      "id": 63
+    },
+    {
+      "name": "NADA",
+      "one_line_profile": "National Data Archive cataloging system for research data",
+      "detailed_description": "NADA is an open-source data cataloging system used by researchers to browse, search, and access census or survey datasets. It serves as a portal for research data management.",
+      "domains": [
+        "Social Science",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "data_management",
+        "cataloging"
+      ],
+      "application_level": "platform",
+      "primary_language": "PHP",
+      "repo_url": "https://github.com/ihsn/nada",
+      "help_website": [
+        "https://nada.ihsn.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "data-catalog",
+        "research-data",
+        "portal"
+      ],
+      "id": 64
+    },
+    {
+      "name": "gdr2_completeness",
+      "one_line_profile": "Tool for downloading Gaia DR2 data and generating completeness maps",
+      "detailed_description": "A Python package designed to assist astronomers in downloading Gaia Data Release 2 (DR2) data. It provides functionality to generate approximate completeness maps over the sky and per G magnitude bin, and includes functions to query the GDR2 Radial Velocity Spectrometer (RVS) sample selection function.",
+      "domains": [
+        "A1",
+        "A1-01"
+      ],
+      "subtask_category": [
+        "data_retrieval",
+        "quality_control",
+        "completeness_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/jan-rybizki/gdr2_completeness",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "astronomy",
+        "gaia",
+        "completeness-map",
+        "data-processing"
+      ],
+      "id": 65
+    },
+    {
+      "name": "AstroView",
+      "one_line_profile": "Browser-based FITS viewer and analysis tool",
+      "detailed_description": "A web-based tool for viewing and analyzing astronomical data in the FITS (Flexible Image Transport System) format directly within a web browser. It enables astronomers to visualize observational data without requiring local software installation.",
+      "domains": [
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/jonyardley/AstroView",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "astronomy",
+        "fits-viewer",
+        "web-based",
+        "visualization"
+      ],
+      "id": 66
+    },
+    {
+      "name": "DNASkittle",
+      "one_line_profile": "Web-based interactive genome browser",
+      "detailed_description": "A web-based genome browser that provides interactive visualization of raw DNA sequences. It utilizes signal processing techniques to extract and visualize tandem repeats and other genomic elements, capable of fitting 10Kbp of nucleotide data on a single screen.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "sequence_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/josiahseaman/skittle",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "genomics",
+        "genome-browser",
+        "visualization",
+        "dna-sequence"
+      ],
+      "id": 67
+    },
+    {
+      "name": "Luminosity",
+      "one_line_profile": "Web application for visualizing astronomical FITS data",
+      "detailed_description": "A web application designed for visualizing astronomical data stored in the FITS format. It supports the rendering of images, tabular data, and data cubes, providing a portal for astronomers to inspect observational data.",
+      "domains": [
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_inspection"
+      ],
+      "application_level": "platform",
+      "primary_language": "CSS",
+      "repo_url": "https://github.com/kapadia/Luminosity",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "astronomy",
+        "fits",
+        "visualization",
+        "web-app"
+      ],
+      "id": 68
+    },
+    {
+      "name": "bkmr_MI",
+      "one_line_profile": "Visualization tool for Bayesian Kernel Machine Regression fits",
+      "detailed_description": "An R package containing code to visualize a unified dose-response surface by combining information from multiple Bayesian Kernel Machine Regression (BKMR) fits. It is used in epidemiological statistics to analyze the health effects of mixtures.",
+      "domains": [
+        "Statistics",
+        "Epidemiology"
+      ],
+      "subtask_category": [
+        "visualization",
+        "statistical_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/kdevick/bkmr_MI",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "statistics",
+        "bkmr",
+        "dose-response",
+        "visualization"
+      ],
+      "id": 69
+    },
+    {
+      "name": "cartan-quantum-synthesizer",
+      "one_line_profile": "Quantum unitary synthesis based on Cartan decomposition",
+      "detailed_description": "A Python tool for quantum computing that performs unitary synthesis based on Cartan decomposition. It is used for decomposing quantum gates and optimizing quantum circuits.",
+      "domains": [
+        "Physics",
+        "Quantum Computing"
+      ],
+      "subtask_category": [
+        "modeling",
+        "synthesis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kemperlab/cartan-quantum-synthesizer",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "quantum-computing",
+        "cartan-decomposition",
+        "unitary-synthesis"
+      ],
+      "id": 70
+    },
+    {
+      "name": "swarms-pytorch",
+      "one_line_profile": "Swarm intelligence optimization algorithms in PyTorch",
+      "detailed_description": "A PyTorch implementation of various swarm intelligence algorithms such as Particle Swarm Optimization (PSO), Ant Colony Optimization, and Sakana. These algorithms are used for optimization tasks in scientific modeling and AI research.",
+      "domains": [
+        "AI4S",
+        "Optimization"
+      ],
+      "subtask_category": [
+        "optimization",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kyegomez/swarms-pytorch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "swarm-intelligence",
+        "optimization",
+        "pso"
+      ],
+      "id": 71
+    },
+    {
+      "name": "tessmaps",
+      "one_line_profile": "Sky-map generator for TESS observations",
+      "detailed_description": "A Python tool designed to create sky maps of objects observed by the Transiting Exoplanet Survey Satellite (TESS). It aids astronomers in visualizing the spatial distribution of TESS targets.",
+      "domains": [
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "mapping"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lgbouma/tessmaps",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "tess",
+        "sky-maps",
+        "visualization"
+      ],
+      "id": 72
+    },
+    {
+      "name": "fastSHT",
+      "one_line_profile": "Fast Spherical Harmonic Transforms library",
+      "detailed_description": "A Fortran library for performing fast Spherical Harmonic Transforms (SHT) on a large number of sky maps. This is a core computational tool in astrophysics for analyzing data on spherical domains, such as CMB analysis.",
+      "domains": [
+        "A1",
+        "Physics"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "mathematical_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/liuhao-cn/fastSHT",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "spherical-harmonics",
+        "fortran",
+        "astrophysics",
+        "sky-maps"
+      ],
+      "id": 73
+    },
+    {
+      "name": "ALADIN (Drug-Target)",
+      "one_line_profile": "Drug-Target Interaction Prediction model",
+      "detailed_description": "Implementation of ALADIN, a computational approach for predicting drug-target interactions. This tool is used in bioinformatics and computational drug discovery to identify potential binding partners for drug candidates.",
+      "domains": [
+        "Bioinformatics",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "prediction",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lpeska/ALADIN",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "drug-discovery",
+        "interaction-prediction",
+        "bioinformatics"
+      ],
+      "id": 74
+    },
+    {
+      "name": "all_sky_phot",
+      "one_line_profile": "All-sky camera transparency map generator",
+      "detailed_description": "A set of tools developed for the LSST (Legacy Survey of Space and Time) to convert images from all-sky cameras into transparency maps. This is used for atmospheric calibration and monitoring in astronomical observatories.",
+      "domains": [
+        "A1",
+        "A1-01"
+      ],
+      "subtask_category": [
+        "calibration",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/lsst/all_sky_phot",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "astronomy",
+        "lsst",
+        "calibration",
+        "all-sky-camera"
+      ],
+      "id": 75
+    },
+    {
+      "name": "SuperGluePretrainedNetwork",
+      "one_line_profile": "Graph Neural Network for feature matching",
+      "detailed_description": "Pretrained network for SuperGlue, a feature matching algorithm using Graph Neural Networks. While developed for computer vision, it is widely used in scientific imaging tasks such as astrometry, robotics, and structure-from-motion.",
+      "domains": [
+        "Computer Vision",
+        "AI4S"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "feature_matching"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/magicleap/SuperGluePretrainedNetwork",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "computer-vision",
+        "feature-matching",
+        "gnn",
+        "deep-learning"
+      ],
+      "id": 76
+    },
+    {
+      "name": "Wind-Speed-Forecasting-ANN",
+      "one_line_profile": "Neural network model for wind speed forecasting",
+      "detailed_description": "A machine learning project implementing Artificial Neural Networks (ANN) and LSTM architectures to forecast wind speeds for wind power generation. It uses historical data to predict future wind conditions, aiding in renewable energy management.",
+      "domains": [
+        "Meteorology",
+        "Energy"
+      ],
+      "subtask_category": [
+        "forecasting",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/mahdi-usask/Wind-Speed-Forecasting-for-wind-power-generation-plant.-Neural-Network-ML-based-prediction-algo.-",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "wind-energy",
+        "forecasting",
+        "neural-network",
+        "lstm"
+      ],
+      "id": 77
+    },
+    {
+      "name": "fips3",
+      "one_line_profile": "OpenGL-based FITS image viewer",
+      "detailed_description": "A high-performance FITS image viewer built with C++ and OpenGL. It allows astronomers to visualize and inspect large astronomical images with hardware acceleration.",
+      "domains": [
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_viewing"
+      ],
+      "application_level": "application",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/matwey/fips3",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "astronomy",
+        "fits-viewer",
+        "opengl",
+        "visualization"
+      ],
+      "id": 78
+    },
+    {
+      "name": "menpo",
+      "one_line_profile": "Toolkit for building and fitting deformable models",
+      "detailed_description": "A Python toolkit for statistical modeling, specifically designed for building, fitting, visualizing, and testing deformable models (such as Active Appearance Models). It is used in computer vision and biological morphometrics.",
+      "domains": [
+        "Computer Vision",
+        "Biology"
+      ],
+      "subtask_category": [
+        "modeling",
+        "image_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/menpo/menpo",
+      "help_website": [
+        "http://www.menpo.org/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "deformable-models",
+        "computer-vision",
+        "statistical-modeling",
+        "morphometrics"
+      ],
+      "id": 79
+    },
+    {
+      "name": "Skywalker",
+      "one_line_profile": "ML mapping of muscle movements to robotic arm control",
+      "detailed_description": "A research project using machine learning algorithms to learn patterns of human muscle movements and map them to the control of a 5-fingered robotic arm. This falls under bio-robotics and human-machine interface research.",
+      "domains": [
+        "Robotics",
+        "Bioengineering"
+      ],
+      "subtask_category": [
+        "modeling",
+        "control"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/meowoodie/Skywalker",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "machine-learning",
+        "robotics",
+        "muscle-movement",
+        "prosthetics"
+      ],
+      "id": 80
+    },
+    {
+      "name": "ALADIN (Image-Text)",
+      "one_line_profile": "Image-Text Matching and Retrieval model",
+      "detailed_description": "Official implementation of the ALADIN method for distilling fine-grained alignment scores for efficient image-text matching and retrieval. It is a tool for multi-modal AI research.",
+      "domains": [
+        "Computer Vision",
+        "AI"
+      ],
+      "subtask_category": [
+        "analysis",
+        "alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mesnico/ALADIN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "image-text-matching",
+        "deep-learning",
+        "computer-vision",
+        "retrieval"
+      ],
+      "id": 81
+    },
+    {
+      "name": "VS Code STAC",
+      "one_line_profile": "VS Code extension for browsing SpatioTemporal Asset Catalog (STAC) APIs",
+      "detailed_description": "An extension for Visual Studio Code that allows users to connect to and browse STAC (SpatioTemporal Asset Catalog) APIs directly within the editor. It supports exploring catalogs, viewing metadata, and visualizing geospatial assets, facilitating access to Earth observation and astronomical survey data.",
+      "domains": [
+        "Earth Science",
+        "Astronomy",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "data_access",
+        "data_visualization",
+        "catalog_browsing"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/microsoft/vscode-stac",
+      "help_website": [
+        "https://marketplace.visualstudio.com/items?itemName=ms-azure-orbital.vscode-stac"
+      ],
+      "license": "MIT",
+      "tags": [
+        "stac",
+        "vscode-extension",
+        "geospatial",
+        "data-catalog"
+      ],
+      "id": 82
+    },
+    {
+      "name": "d3-celestial",
+      "one_line_profile": "Interactive star map visualization library based on D3.js",
+      "detailed_description": "A JavaScript library built on D3.js for creating interactive, projection-based celestial maps. It displays stars, deep sky objects (DSOs), constellations, and coordinate lines, widely used in astronomy portals and web-based visualization tools.",
+      "domains": [
+        "Astronomy",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "scientific_visualization",
+        "sky_mapping"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/ofrohn/d3-celestial",
+      "help_website": [
+        "https://github.com/ofrohn/d3-celestial"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "astronomy",
+        "visualization",
+        "d3",
+        "star-map"
+      ],
+      "id": 83
+    },
+    {
+      "name": "EFSA Catalogue Browser",
+      "one_line_profile": "Browser for EFSA standard catalogues and controlled terminologies",
+      "detailed_description": "A Java application developed for the European Food Safety Authority (EFSA) to browse, search, and manage standardized catalogues (such as the Standard Sample Description). It supports scientific data standardization and reporting in food safety research.",
+      "domains": [
+        "Food Science",
+        "Data Management"
+      ],
+      "subtask_category": [
+        "data_management",
+        "standardization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/openefsa/catalogue-browser",
+      "help_website": [
+        "https://github.com/openefsa/catalogue-browser"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "efsa",
+        "food-safety",
+        "data-catalog",
+        "terminology"
+      ],
+      "id": 84
+    },
+    {
+      "name": "visualkeras",
+      "one_line_profile": "Visualization library for Keras neural network architectures",
+      "detailed_description": "A Python package to generate layered style or graph style architecture visualizations for Keras/TensorFlow neural networks. It aids in the documentation and presentation of deep learning models used in scientific research.",
+      "domains": [
+        "AI4S",
+        "Computer Science"
+      ],
+      "subtask_category": [
+        "scientific_visualization",
+        "model_interpretation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/paulgavrikov/visualkeras",
+      "help_website": [
+        "https://github.com/paulgavrikov/visualkeras"
+      ],
+      "license": "MIT",
+      "tags": [
+        "keras",
+        "visualization",
+        "neural-networks",
+        "deep-learning"
+      ],
+      "id": 85
+    },
+    {
+      "name": "skymapper",
+      "one_line_profile": "Python library for mapping astronomical survey data",
+      "detailed_description": "A Python tool designed to facilitate the creation of publication-quality maps and visualizations from astronomical survey data. It handles projection, coordinate systems, and overlay of catalogs on images.",
+      "domains": [
+        "Astronomy",
+        "A1"
+      ],
+      "subtask_category": [
+        "scientific_visualization",
+        "sky_mapping"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pmelchior/skymapper",
+      "help_website": [
+        "https://github.com/pmelchior/skymapper"
+      ],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "visualization",
+        "mapping",
+        "survey-data"
+      ],
+      "id": 86
+    },
+    {
+      "name": "Simple FITS Viewer",
+      "one_line_profile": "VS Code extension for viewing FITS astronomical image files",
+      "detailed_description": "A Visual Studio Code extension that provides a built-in viewer for FITS (Flexible Image Transport System) files, allowing astronomers to inspect image data and headers directly within their development environment.",
+      "domains": [
+        "Astronomy",
+        "A1"
+      ],
+      "subtask_category": [
+        "scientific_visualization",
+        "data_inspection"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/ppp-one/simple-fits-viewer",
+      "help_website": [
+        "https://marketplace.visualstudio.com/items?itemName=ppp-one.simple-fits-viewer"
+      ],
+      "license": null,
+      "tags": [
+        "fits",
+        "astronomy",
+        "vscode-extension",
+        "image-viewer"
+      ],
+      "id": 87
+    },
+    {
+      "name": "STAC Browser",
+      "one_line_profile": "Web interface for browsing SpatioTemporal Asset Catalogs",
+      "detailed_description": "A Vue-based web application for browsing and searching static STAC catalogs and STAC APIs. It is a standard tool in the Earth Science and Astronomy communities for discovering and visualizing geospatial datasets.",
+      "domains": [
+        "Earth Science",
+        "Astronomy",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "data_access",
+        "catalog_browsing",
+        "data_discovery"
+      ],
+      "application_level": "platform",
+      "primary_language": "Vue",
+      "repo_url": "https://github.com/radiantearth/stac-browser",
+      "help_website": [
+        "https://github.com/radiantearth/stac-browser"
+      ],
+      "license": "ISC",
+      "tags": [
+        "stac",
+        "geospatial",
+        "catalog",
+        "browser"
+      ],
+      "id": 88
+    },
+    {
+      "name": "Tigger",
+      "one_line_profile": "Radio astronomy Local Sky Model (LSM) manager and FITS viewer",
+      "detailed_description": "A tool for managing Local Sky Models (LSM) and viewing FITS images, primarily used in radio astronomy for calibration and imaging workflows (often in conjunction with MeqTrees).",
+      "domains": [
+        "Astronomy",
+        "Radio Astronomy",
+        "A1"
+      ],
+      "subtask_category": [
+        "data_management",
+        "scientific_visualization",
+        "model_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ratt-ru/tigger",
+      "help_website": [
+        "https://github.com/ratt-ru/tigger"
+      ],
+      "license": null,
+      "tags": [
+        "radio-astronomy",
+        "fits",
+        "sky-model",
+        "visualization"
+      ],
+      "id": 89
+    },
+    {
+      "name": "AERIE-LiFF",
+      "one_line_profile": "Likelihood Fitting Framework for HAWC Observatory sky maps",
+      "detailed_description": "A software framework for the high-level analysis of sky map data collected by the HAWC (High-Altitude Water Cherenkov) Observatory. It performs likelihood fitting to analyze gamma-ray sources.",
+      "domains": [
+        "Astronomy",
+        "High Energy Physics",
+        "A1"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "statistical_inference",
+        "fitting"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rjlauer/aerie-liff",
+      "help_website": [
+        "https://github.com/rjlauer/aerie-liff"
+      ],
+      "license": null,
+      "tags": [
+        "hawc",
+        "gamma-ray",
+        "likelihood-fitting",
+        "astrophysics"
+      ],
+      "id": 90
+    },
+    {
+      "name": "FitsMap",
+      "one_line_profile": "Tool to convert FITS files into interactive web maps",
+      "detailed_description": "FitsMap is a Python tool that converts astronomical image data (FITS files) and catalogs into a folder of tiles and a simple HTML file, allowing for interactive visualization in a web browser using Leaflet.",
+      "domains": [
+        "Astronomy",
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_conversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ryanhausen/fitsmap",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fits",
+        "astronomy",
+        "visualization",
+        "leaflet"
+      ],
+      "id": 91
+    },
+    {
+      "name": "QuickLook.Plugin.FitsViewer",
+      "one_line_profile": "Windows QuickLook plugin for previewing FITS images",
+      "detailed_description": "A plugin for the Windows QuickLook tool that allows users to preview astronomical FITS (Flexible Image Transport System) files directly in the file explorer without opening specialized software.",
+      "domains": [
+        "Astronomy",
+        "A1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_preview"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/siyu6974/QuickLook.Plugin.FitsViewer",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "fits",
+        "visualization",
+        "quicklook",
+        "astronomy"
+      ],
+      "id": 92
+    },
+    {
+      "name": "Kowalski",
+      "one_line_profile": "Multi-survey data archive and alert broker for time-domain astronomy",
+      "detailed_description": "Kowalski is a system for archiving and accessing massive astronomical survey data, specifically designed for time-domain astronomy. It serves as an alert broker and data management platform.",
+      "domains": [
+        "Astronomy",
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "data_management",
+        "alert_brokering",
+        "survey_archive"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/skyportal/kowalski",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "time-domain",
+        "data-archive",
+        "alert-broker"
+      ],
+      "id": 93
+    },
+    {
+      "name": "SkyPortal",
+      "one_line_profile": "Collaborative platform for time-domain astronomy",
+      "detailed_description": "SkyPortal is a web-based platform designed to facilitate collaboration in time-domain astronomy. It allows researchers to manage, visualize, and analyze astronomical events and targets from various surveys.",
+      "domains": [
+        "Astronomy",
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "collaboration_platform",
+        "visualization",
+        "data_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/skyportal/skyportal",
+      "help_website": [
+        "https://skyportal.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "astronomy",
+        "time-domain",
+        "collaboration",
+        "visualization"
+      ],
+      "id": 94
+    },
+    {
+      "name": "jdaviz",
+      "one_line_profile": "Interactive data visualization tools for astronomical observations",
+      "detailed_description": "Jdaviz provides a set of interactive visualization tools for astronomical data analysis, built on the Jupyter ecosystem. It is designed to work with data from JWST and other observatories.",
+      "domains": [
+        "Astronomy",
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "spectral_analysis",
+        "image_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spacetelescope/jdaviz",
+      "help_website": [
+        "https://jdaviz.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "astronomy",
+        "visualization",
+        "jupyter",
+        "jwst"
+      ],
+      "id": 95
+    },
+    {
+      "name": "Starplot",
+      "one_line_profile": "Library for creating star charts and maps",
+      "detailed_description": "Starplot is a Python library for creating static star charts and maps, suitable for generating publication-quality astronomical figures or observational aids.",
+      "domains": [
+        "Astronomy",
+        "A1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "plotting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/steveberardi/starplot",
+      "help_website": [
+        "https://starplot.dev"
+      ],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "star-chart",
+        "visualization",
+        "plotting"
+      ],
+      "id": 96
+    },
+    {
+      "name": "dash_aladin_lite",
+      "one_line_profile": "Dash component for the Aladin Sky Atlas",
+      "detailed_description": "A Plotly Dash component that wraps the Aladin Lite sky atlas, allowing developers to embed interactive astronomical sky maps into Dash applications for scientific data portals.",
+      "domains": [
+        "Astronomy",
+        "A1",
+        "A1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "web_component"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/toltec-astro/dash_aladin_lite",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "astronomy",
+        "visualization",
+        "dash",
+        "aladin"
+      ],
+      "id": 97
+    },
+    {
+      "name": "OpenGlue",
+      "one_line_profile": "Graph Neural Net Based Pipeline for Image Matching",
+      "detailed_description": "OpenGlue is an open-source implementation of the SuperGlue graph neural network for local feature matching. It is used in computer vision tasks such as image registration, which is applicable in astrometry and remote sensing.",
+      "domains": [
+        "Computer Vision",
+        "Astrometry"
+      ],
+      "subtask_category": [
+        "image_matching",
+        "feature_matching"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ucuapps/OpenGlue",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "computer-vision",
+        "image-matching",
+        "deep-learning",
+        "gnn"
+      ],
+      "id": 98
+    },
+    {
+      "name": "GiNGR",
+      "one_line_profile": "Generalized iterative Non-Rigid Point Cloud and Surface Registration",
+      "detailed_description": "GiNGR is a tool for non-rigid registration of point clouds and surfaces using Gaussian Process Regression. It is applicable in scientific modeling, biological structure analysis, and medical imaging.",
+      "domains": [
+        "Scientific Modeling",
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "registration",
+        "surface_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Scala",
+      "repo_url": "https://github.com/unibas-gravis/GiNGR",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "point-cloud",
+        "registration",
+        "gaussian-process",
+        "scientific-modeling"
+      ],
+      "id": 99
+    },
+    {
+      "name": "MambaGlue",
+      "one_line_profile": "Fast and Robust Local Feature Matching With Mamba",
+      "detailed_description": "MambaGlue is a deep learning model for local feature matching that leverages the Mamba architecture. It is designed for tasks requiring robust image correspondence, such as SLAM or scientific image alignment.",
+      "domains": [
+        "Computer Vision",
+        "Astrometry"
+      ],
+      "subtask_category": [
+        "image_matching",
+        "feature_matching"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/url-kaist/MambaGlue",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "computer-vision",
+        "image-matching",
+        "mamba",
+        "deep-learning"
+      ],
+      "id": 100
+    }
+  ]
+}

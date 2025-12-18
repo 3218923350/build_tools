@@ -1,0 +1,5046 @@
+{
+  "generated_at": "2025-12-16T17:20:51.831578+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "B2",
+      "leaf_cluster_name": "生信-变异检测与基因分型生态",
+      "domain": "Bioinfo",
+      "typical_objects": "BAM/CRAM/VCF",
+      "task_chain": "QC→calling→过滤/分型→注释→benchmark",
+      "tool_form": "CLI + 评测套件 + 数据集"
+    },
+    "unit": {
+      "unit_id": "B2-04",
+      "unit_name": "phasing/单倍型与群体推断",
+      "target_scale": "150–350",
+      "coverage_tools": "phasing、imputation、population genetics"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] Relate",
+        "[GH] GCTA",
+        "[GH] ADMIXTURE",
+        "[GH] PLINK",
+        "[GH] Minimac4",
+        "[GH] IMPUTE5",
+        "[GH] Whatshap",
+        "[GH] Eagle2",
+        "[GH] Beagle",
+        "[GH] SHAPEIT4",
+        "[GH] haplotype phasing",
+        "[GH] genotype imputation",
+        "[GH] population genetics",
+        "[GH] read-backed phasing",
+        "[GH] statistical phasing",
+        "[GH] population structure",
+        "[GH] admixture analysis",
+        "[GH] demographic inference",
+        "[GH] IBD detection",
+        "[GH] genetic relatedness",
+        "[GH] VCF phasing",
+        "[GH] haplotype estimation",
+        "[GH] ancestral recombination graph",
+        "[WEB] haplotype phasing tools github",
+        "[WEB] genotype imputation software github",
+        "[WEB] population genetics analysis pipeline github",
+        "[WEB] read-backed phasing algorithm github",
+        "[WEB] genetic admixture analysis tools github"
+      ],
+      "total_candidates": 993,
+      "tool_candidates": 477,
+      "final_tools": 204
+    }
+  },
+  "tools": [
+    {
+      "name": "neural-admixture",
+      "one_line_profile": "Rapid population clustering tool using autoencoders",
+      "detailed_description": "A library for rapid population clustering and admixture analysis using autoencoders, providing a faster alternative to traditional methods like ADMIXTURE.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure",
+        "admixture_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AI-sandbox/neural-admixture",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "population-genetics",
+        "clustering",
+        "autoencoder",
+        "admixture"
+      ],
+      "id": 1
+    },
+    {
+      "name": "plinkr",
+      "one_line_profile": "R interface for PLINK",
+      "detailed_description": "A package that allows running PLINK commands and handling PLINK files directly from within the R environment.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "interface_wrapper"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/AJResearchGroup/plinkr",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "plink",
+        "r",
+        "genetics"
+      ],
+      "id": 2
+    },
+    {
+      "name": "angsd-wrapper",
+      "one_line_profile": "Wrapper utilities for ANGSD analysis",
+      "detailed_description": "A set of wrapper utilities to facilitate the analysis of next-generation sequencing data using ANGSD, simplifying command-line interactions.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "variant_calling"
+      ],
+      "application_level": "library",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/ANGSD-wrapper/angsd-wrapper",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "angsd",
+        "ngs",
+        "wrapper"
+      ],
+      "id": 3
+    },
+    {
+      "name": "KGD",
+      "one_line_profile": "Kinship estimation for GBS data",
+      "detailed_description": "A tool for estimating kinship (genetic relatedness) specifically designed for Genotyping-by-Sequencing (GBS) data with depth adjustment.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "kinship_inference",
+        "relatedness_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/AgResearch/KGD",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "kinship",
+        "gbs",
+        "genetics"
+      ],
+      "id": 4
+    },
+    {
+      "name": "snipar",
+      "one_line_profile": "Family-based GWAS and imputation tool",
+      "detailed_description": "A tool for imputation of parental genotypes, inference of sibling IBD segments, family-based GWAS, and polygenic score analyses.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "imputation",
+        "gwas",
+        "ibd_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AlexTISYoung/snipar",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gwas",
+        "imputation",
+        "family-based"
+      ],
+      "id": 5
+    },
+    {
+      "name": "AlphaImpute2",
+      "one_line_profile": "Pedigree and population-based genotype imputation",
+      "detailed_description": "Software for genotype imputation that leverages both pedigree information and population haplotypes to impute missing genotypes.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "imputation",
+        "genotyping"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AlphaGenes/AlphaImpute2",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "imputation",
+        "pedigree",
+        "genetics"
+      ],
+      "id": 6
+    },
+    {
+      "name": "AlphaPlantImpute2",
+      "one_line_profile": "Genotype imputation for plant populations",
+      "detailed_description": "A specialized version of AlphaImpute designed for genotype imputation in plant breeding populations.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "imputation",
+        "plant_breeding"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AlphaGenes/AlphaPlantImpute2",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "imputation",
+        "plants",
+        "breeding"
+      ],
+      "id": 7
+    },
+    {
+      "name": "DPGT",
+      "one_line_profile": "Distributed population genetics analysis tool",
+      "detailed_description": "A distributed tool for population genetics analysis enabling joint calling on millions of whole genome sequencing samples.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "population_genetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/BGI-flexlab/DPGT",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "distributed",
+        "wgs",
+        "joint-calling"
+      ],
+      "id": 8
+    },
+    {
+      "name": "PopGen.jl",
+      "one_line_profile": "Population Genetics library in Julia",
+      "detailed_description": "A comprehensive Julia package for population genetics analysis, providing functions for data manipulation and statistical inference.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_genetics",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/BioJulia/PopGen.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "population-genetics",
+        "statistics"
+      ],
+      "id": 9
+    },
+    {
+      "name": "bpp-popgen",
+      "one_line_profile": "Bio++ Population Genetics Library",
+      "detailed_description": "The population genetics component of the Bio++ library, offering classes and functions for analyzing genetic diversity and structure.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_genetics",
+        "library"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/BioPP/bpp-popgen",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "c++",
+        "bio++",
+        "genetics"
+      ],
+      "id": 10
+    },
+    {
+      "name": "simuPOP",
+      "one_line_profile": "Forward-time population genetics simulation environment",
+      "detailed_description": "A general-purpose forward-time simulation environment for population genetics, allowing modeling of complex evolutionary scenarios.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "evolutionary_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/BoPeng/simuPOP",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "simulation",
+        "forward-time",
+        "evolution"
+      ],
+      "id": 11
+    },
+    {
+      "name": "bayesian-matrix-population-model",
+      "one_line_profile": "Bayesian matrix population model",
+      "detailed_description": "A Bayesian approach to size-structured matrix population modeling to estimate rates of cell division, growth, and respiration.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "modeling",
+        "population_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/CBIOMES/bayesian-matrix-population-model",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bayesian",
+        "ecology",
+        "modeling"
+      ],
+      "id": 12
+    },
+    {
+      "name": "impute-pipe",
+      "one_line_profile": "SGE cluster genotype imputation pipeline",
+      "detailed_description": "A canonical pipeline for genotype imputation designed to run on SGE (Sun Grid Engine) clusters.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "imputation",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/CNSGenomics/impute-pipe",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pipeline",
+        "imputation",
+        "cluster"
+      ],
+      "id": 13
+    },
+    {
+      "name": "SimRA",
+      "one_line_profile": "Simulation framework for evolutionary scenarios",
+      "detailed_description": "A framework for simulating generic and complex evolutionary scenarios of multiple populations with subdivision and admixture using random-graphs algorithms.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "evolutionary_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/ComputationalGenomics/SimRA",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "simulation",
+        "evolution",
+        "arg"
+      ],
+      "id": 14
+    },
+    {
+      "name": "AdmixTools",
+      "one_line_profile": "Tools for admixture analysis",
+      "detailed_description": "A software package for inferring admixture and population history from genetic data, including f-statistics and admixture graphs.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "admixture_analysis",
+        "population_history"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/DReichLab/AdmixTools",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "admixture",
+        "f-statistics",
+        "genetics"
+      ],
+      "id": 15
+    },
+    {
+      "name": "graphtyper",
+      "one_line_profile": "Population-scale genotyping using pangenome graphs",
+      "detailed_description": "A tool for population-scale genotyping that utilizes pangenome graphs to improve variant calling accuracy.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "genotyping",
+        "variant_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/DecodeGenetics/graphtyper",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pangenome",
+        "graph",
+        "genotyping"
+      ],
+      "id": 16
+    },
+    {
+      "name": "MARBLE",
+      "one_line_profile": "Representation learning for non-linear dynamics",
+      "detailed_description": "A package for data-driven representation of non-linear dynamics over manifolds, applicable to neural systems and dynamical systems.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "modeling",
+        "dynamics_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Dynamics-of-Neural-Systems-Lab/MARBLE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dynamics",
+        "manifold",
+        "neural-systems"
+      ],
+      "id": 17
+    },
+    {
+      "name": "strataG",
+      "one_line_profile": "Toolkit for population structure analysis",
+      "detailed_description": "An R toolkit for haploid sequence and multilocus genetic data summaries, and analyses of population structure.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/EricArcher/strataG",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "r",
+        "population-structure",
+        "genetics"
+      ],
+      "id": 18
+    },
+    {
+      "name": "tidypopgen",
+      "one_line_profile": "Tidy grammar for population genetics in R",
+      "detailed_description": "An R package providing a tidy grammar for population genetics, facilitating the manipulation and analysis of large SNP datasets.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "data_manipulation",
+        "population_genetics"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/EvolEcolGroup/tidypopgen",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "r",
+        "tidyverse",
+        "genetics"
+      ],
+      "id": 19
+    },
+    {
+      "name": "RelateAnything",
+      "one_line_profile": "Visual mask identification model",
+      "detailed_description": "A model capable of taking an image as input and utilizing SAM (Segment Anything Model) to identify corresponding masks, applicable in computer vision tasks.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EvolvingLMMs-Lab/RelateAnything",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "computer-vision",
+        "segmentation",
+        "sam"
+      ],
+      "id": 20
+    },
+    {
+      "name": "VGpop",
+      "one_line_profile": "Population genetics analysis toolkit for Variation Graphs (VG)",
+      "detailed_description": "A Python package designed to perform population genetics analyses directly on Variation Graphs (pangenome graphs), enabling the study of genetic variation within a graph-based reference framework.",
+      "domains": [
+        "Bioinfo",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_genetics",
+        "graph_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Flavia95/VGpop",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "variation-graph",
+        "pangenomics",
+        "population-genetics"
+      ],
+      "id": 21
+    },
+    {
+      "name": "haploMAGIC",
+      "one_line_profile": "Haplotype reconstruction and phasing tool for multiparental populations",
+      "detailed_description": "An R package for phasing, haplotype reconstruction, and crossover detection using SNP data, specifically optimized for multiparental populations in plant or animal breeding.",
+      "domains": [
+        "Bioinfo",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phasing",
+        "haplotype_reconstruction"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/GoliczGenomeLab/haploMAGIC",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "phasing",
+        "haplotype",
+        "breeding"
+      ],
+      "id": 22
+    },
+    {
+      "name": "MultLocMixMod",
+      "one_line_profile": "Multi-locus mixed-model approach for GWAS in structured populations",
+      "detailed_description": "An efficient multi-locus mixed-model implementation for Genome-Wide Association Studies (GWAS), designed to handle population structure and improve power in detecting associations.",
+      "domains": [
+        "Bioinfo",
+        "B2"
+      ],
+      "subtask_category": [
+        "gwas",
+        "statistical_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/Gregor-Mendel-Institute/MultLocMixMod",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gwas",
+        "mixed-model",
+        "population-structure"
+      ],
+      "id": 23
+    },
+    {
+      "name": "mlmm",
+      "one_line_profile": "Efficient multi-locus mixed-model for GWAS",
+      "detailed_description": "A computational tool implementing the Multi-Locus Mixed-Model (MLMM) method for Genome-Wide Association Studies, correcting for population structure and confounding factors.",
+      "domains": [
+        "Bioinfo",
+        "B2"
+      ],
+      "subtask_category": [
+        "gwas",
+        "statistical_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Gregor-Mendel-Institute/mlmm",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gwas",
+        "mixed-model",
+        "genetics"
+      ],
+      "id": 24
+    },
+    {
+      "name": "mtmm",
+      "one_line_profile": "Multi-trait mixed-model for GWAS of correlated traits",
+      "detailed_description": "A mixed-model approach for Genome-Wide Association Studies that analyzes multiple correlated traits simultaneously in structured populations to increase detection power.",
+      "domains": [
+        "Bioinfo",
+        "B2"
+      ],
+      "subtask_category": [
+        "gwas",
+        "statistical_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/Gregor-Mendel-Institute/mtmm",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gwas",
+        "multi-trait",
+        "mixed-model"
+      ],
+      "id": 25
+    },
+    {
+      "name": "STEAM",
+      "one_line_profile": "Significance Threshold Estimation for Admixture Mapping",
+      "detailed_description": "An R package for estimating significance thresholds in admixture mapping studies, helping to correct for multiple testing in admixed populations.",
+      "domains": [
+        "Bioinfo",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "statistical_inference",
+        "admixture_mapping"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/GrindeLab/STEAM",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "admixture",
+        "statistics",
+        "genetics"
+      ],
+      "id": 26
+    },
+    {
+      "name": "inPHAP",
+      "one_line_profile": "Interactive visualization tool for phased haplotypes",
+      "detailed_description": "A Java-based interactive viewer for phased haplotype data, allowing researchers to visualize and explore haplotype structures and phasing results.",
+      "domains": [
+        "Bioinfo",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "phasing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/Integrative-Transcriptomics/inPHAP",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "haplotype",
+        "visualization",
+        "phasing"
+      ],
+      "id": 27
+    },
+    {
+      "name": "easyfinemap",
+      "one_line_profile": "User-friendly pipeline for GWAS fine-mapping",
+      "detailed_description": "A Python-based pipeline designed to simplify the process of fine-mapping causal variants in Genome-Wide Association Studies (GWAS) loci.",
+      "domains": [
+        "Bioinfo",
+        "B2"
+      ],
+      "subtask_category": [
+        "fine_mapping",
+        "gwas"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Jianhua-Wang/easyfinemap",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gwas",
+        "fine-mapping",
+        "pipeline"
+      ],
+      "id": 28
+    },
+    {
+      "name": "admix-kit",
+      "one_line_profile": "Toolkit for analyzing genetics data from admixed populations",
+      "detailed_description": "A Python toolkit providing utilities for processing and analyzing genetic data specifically from admixed populations, including local ancestry inference handling.",
+      "domains": [
+        "Bioinfo",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_genetics",
+        "admixture_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KangchengHou/admix-kit",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "admixture",
+        "ancestry",
+        "genetics"
+      ],
+      "id": 29
+    },
+    {
+      "name": "hapcorrect",
+      "one_line_profile": "Correction of haplotype phase-switching errors in long reads",
+      "detailed_description": "A tool for correcting phase-switching errors in haplotype assembly using long-read sequencing data, improving the quality of phased assemblies.",
+      "domains": [
+        "Bioinfo",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phasing",
+        "error_correction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KolmogorovLab/hapcorrect",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "long-read",
+        "phasing",
+        "assembly"
+      ],
+      "id": 30
+    },
+    {
+      "name": "ENIGMA Toolbox",
+      "one_line_profile": "Toolbox for accessing and analyzing ENIGMA neuroimaging data",
+      "detailed_description": "An open-source repository for accessing ENIGMA statistical maps, visualizing cortical/subcortical surface data, and relating neuroimaging findings to brain organization.",
+      "domains": [
+        "Neuroscience"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MICA-MNI/ENIGMA",
+      "help_website": [
+        "https://enigma-toolbox.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "neuroimaging",
+        "brain-mapping",
+        "statistics"
+      ],
+      "id": 31
+    },
+    {
+      "name": "IsoMaTrix",
+      "one_line_profile": "Visualization and uncertainty quantification for matrix games in structured populations",
+      "detailed_description": "A framework to visualize the isoclines of matrix games and quantify uncertainty in structured populations, often used in mathematical oncology and evolutionary game theory.",
+      "domains": [
+        "MathOnco",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "modeling",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/MathOnco/IsoMaTrix",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "evolutionary-game-theory",
+        "oncology",
+        "population-dynamics"
+      ],
+      "id": 32
+    },
+    {
+      "name": "SLiM",
+      "one_line_profile": "Genetically explicit forward simulation framework for population genetics",
+      "detailed_description": "A powerful and flexible forward simulation software package for population genetics and evolutionary biology, featuring a built-in scripting language (Eidos) and a graphical modeling environment.",
+      "domains": [
+        "Bioinfo",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/MesserLab/SLiM",
+      "help_website": [
+        "https://messerlab.org/slim/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "simulation",
+        "population-genetics",
+        "evolution"
+      ],
+      "id": 33
+    },
+    {
+      "name": "ADMIXTURE",
+      "one_line_profile": "Tool for maximum likelihood estimation of individual ancestries",
+      "detailed_description": "A software tool for maximum likelihood estimation of individual ancestries from multilocus SNP genotype datasets, widely used for population structure analysis.",
+      "domains": [
+        "Bioinfo",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "ancestry_inference",
+        "population_structure"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/NovembreLab/admixture",
+      "help_website": [
+        "https://dalexander.github.io/admixture/"
+      ],
+      "license": null,
+      "tags": [
+        "ancestry",
+        "population-structure",
+        "genetics"
+      ],
+      "id": 34
+    },
+    {
+      "name": "ADMIXTURE.jl",
+      "one_line_profile": "Julia wrapper for the ADMIXTURE ancestry estimation program",
+      "detailed_description": "A Julia interface to the ADMIXTURE software, allowing users to run ancestry estimation analyses directly from the Julia programming environment.",
+      "domains": [
+        "Bioinfo",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "ancestry_inference",
+        "interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/OpenMendel/ADMIXTURE.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "admixture",
+        "wrapper"
+      ],
+      "id": 35
+    },
+    {
+      "name": "SnpArrays.jl",
+      "one_line_profile": "Efficient compressed storage for SNP data in Julia",
+      "detailed_description": "A Julia package providing efficient, compressed storage and manipulation utilities for Single Nucleotide Polymorphism (SNP) data, optimized for large-scale genetic analyses.",
+      "domains": [
+        "Bioinfo",
+        "B2"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "storage"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/OpenMendel/SnpArrays.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "snp",
+        "data-structure",
+        "julia"
+      ],
+      "id": 36
+    },
+    {
+      "name": "VarianceComponentModels.jl",
+      "one_line_profile": "Utilities for fitting variance component models in genetics",
+      "detailed_description": "A Julia package for fitting and testing variance component models (linear mixed models), commonly used in statistical genetics for heritability estimation and association testing.",
+      "domains": [
+        "Bioinfo",
+        "B2"
+      ],
+      "subtask_category": [
+        "statistical_modeling",
+        "variance_component_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/OpenMendel/VarianceComponentModels.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "statistics",
+        "mixed-model",
+        "genetics"
+      ],
+      "id": 37
+    },
+    {
+      "name": "POSYDON",
+      "one_line_profile": "Binary-star population synthesis code with full stellar structure",
+      "detailed_description": "A next-generation population synthesis code for single and binary stars that incorporates full stellar structure and evolution modeling using MESA grids.",
+      "domains": [
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "population_synthesis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/POSYDON-code/POSYDON",
+      "help_website": [
+        "https://posydon.org"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "astrophysics",
+        "stellar-evolution",
+        "simulation"
+      ],
+      "id": 38
+    },
+    {
+      "name": "ARG-Needle",
+      "one_line_profile": "Library for analyzing Ancestral Recombination Graphs (ARGs)",
+      "detailed_description": "A library for representing, manipulating, and analyzing Ancestral Recombination Graphs (ARGs), which describe the joint genealogy of sampled DNA sequences along the genome.",
+      "domains": [
+        "Bioinfo",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "arg_inference",
+        "population_genetics"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/PalamaraLab/arg-needle-lib",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "arg",
+        "recombination",
+        "ancestry"
+      ],
+      "id": 39
+    },
+    {
+      "name": "IBDGem",
+      "one_line_profile": "IBD detection and genetic identification from low-coverage data",
+      "detailed_description": "A program designed for positive genetic identification and Identity-By-Descent (IBD) segment detection, specifically optimized for low-coverage sequencing data such as ancient DNA.",
+      "domains": [
+        "Bioinfo",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "ibd_detection",
+        "identification"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/Paleogenomics/IBDGem",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "ancient-dna",
+        "ibd",
+        "low-coverage"
+      ],
+      "id": 40
+    },
+    {
+      "name": "FASconCAT-G",
+      "one_line_profile": "Tool for concatenating and editing sequence alignments",
+      "detailed_description": "A versatile tool for concatenating, editing, and formatting multiple nucleotide or amino acid sequence alignment files for phylogenetic and population genetic analyses.",
+      "domains": [
+        "Bioinfo",
+        "B2"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "alignment_manipulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/PatrickKueck/FASconCAT-G",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phylogenetics",
+        "alignment",
+        "concatenation"
+      ],
+      "id": 41
+    },
+    {
+      "name": "TreeKnit.jl",
+      "one_line_profile": "Inference of Ancestral Reassortment Graphs for segmented genomes",
+      "detailed_description": "A Julia package that infers Ancestral Reassortment Graphs (ARGs) for segmented genomes, such as human influenza viruses, by knitting together phylogenetic trees.",
+      "domains": [
+        "Bioinfo",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "arg_inference",
+        "phylogenetics"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/PierreBarrat/TreeKnit.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "arg",
+        "reassortment",
+        "virus"
+      ],
+      "id": 42
+    },
+    {
+      "name": "BEDMatrix",
+      "one_line_profile": "Matrix-like wrapper for PLINK .bed files",
+      "detailed_description": "An R package that provides a matrix-like wrapper around PLINK binary (.bed) genotype files, allowing for memory-efficient access and manipulation of large genetic datasets.",
+      "domains": [
+        "Bioinfo",
+        "B2"
+      ],
+      "subtask_category": [
+        "data_access",
+        "file_io"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/QuantGen/BEDMatrix",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "plink",
+        "genotypes",
+        "matrix"
+      ],
+      "id": 43
+    },
+    {
+      "name": "quetzal-CoaTL",
+      "one_line_profile": "C++ toolbox for geospatial population genetics simulation",
+      "detailed_description": "A C++ template library for building spatially explicit, coalescent-based population genetics simulators, designed for modeling complex demographic and spatial scenarios.",
+      "domains": [
+        "Bioinfo",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "population_genetics"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Quetzal-framework/quetzal-CoaTL",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "simulation",
+        "spatial-genetics",
+        "coalescent"
+      ],
+      "id": 44
+    },
+    {
+      "name": "HaploNet",
+      "one_line_profile": "Neural network-based haplotype and population structure inference",
+      "detailed_description": "HaploNet is a deep learning framework designed for haplotype estimation and population structure inference, leveraging neural networks to model complex genetic relationships.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "haplotype_inference",
+        "population_structure_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Rosemeis/HaploNet",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "deep-learning",
+        "haplotype",
+        "population-genetics"
+      ],
+      "id": 45
+    },
+    {
+      "name": "hapla",
+      "one_line_profile": "Haplotype clustering tool for phased genotype data",
+      "detailed_description": "Hapla provides functionality for clustering haplotypes within phased genotype datasets, useful for analyzing local population structure.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "haplotype_clustering"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Rosemeis/hapla",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "haplotype",
+        "clustering",
+        "genomics"
+      ],
+      "id": 46
+    },
+    {
+      "name": "PyClone",
+      "one_line_profile": "Probabilistic model for inferring clonal population structure",
+      "detailed_description": "PyClone is a probabilistic model used to infer the clonal population structure of cancers from deep NGS sequencing data, analyzing single nucleotide variants (SNVs).",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "clonal_structure_inference",
+        "cancer_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Roth-Lab/pyclone",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cancer",
+        "clonal-evolution",
+        "bayesian"
+      ],
+      "id": 47
+    },
+    {
+      "name": "PyClone-VI",
+      "one_line_profile": "Fast variational inference for cancer clonal population structure",
+      "detailed_description": "PyClone-VI is a faster implementation of the PyClone model using variational inference, designed to infer cancer clonal population structure from SNV data efficiently.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "clonal_structure_inference",
+        "cancer_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Roth-Lab/pyclone-vi",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "variational-inference",
+        "cancer",
+        "clonality"
+      ],
+      "id": 48
+    },
+    {
+      "name": "PhasedDiploidGenomeAssemblyPipeline",
+      "one_line_profile": "Pipeline for reference-free diploid genome assembly using read phasing",
+      "detailed_description": "A pipeline that combines de-novo assembly and read-phasing techniques to construct reference-free diploid genome assemblies.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "genome_assembly",
+        "phasing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/SAMtoBAM/PhasedDiploidGenomeAssemblyPipeline",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "assembly",
+        "diploid",
+        "phasing"
+      ],
+      "id": 49
+    },
+    {
+      "name": "DosageConvertor",
+      "one_line_profile": "Converter for VCF dosage files from Minimac to other formats",
+      "detailed_description": "DosageConvertor is a C++ utility to convert dosage files in VCF format (generated by Minimac3/4) to formats compatible with MaCH or PLINK.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "file_conversion",
+        "imputation_post_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Santy-8128/DosageConvertor",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vcf",
+        "minimac",
+        "conversion"
+      ],
+      "id": 50
+    },
+    {
+      "name": "Minimac3",
+      "one_line_profile": "Efficient genotype imputation algorithm",
+      "detailed_description": "Minimac3 is a low-memory, computationally efficient implementation of genotype imputation algorithms, designed to handle large reference panels without loss of accuracy.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "imputation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Santy-8128/Minimac3",
+      "help_website": [
+        "https://genome.sph.umich.edu/wiki/Minimac3"
+      ],
+      "license": null,
+      "tags": [
+        "imputation",
+        "genotype",
+        "bioinformatics"
+      ],
+      "id": 51
+    },
+    {
+      "name": "PhaseGen",
+      "one_line_profile": "Inference on coalescent distributions under demographic scenarios",
+      "detailed_description": "PhaseGen performs computation and inference on exact solutions of coalescent distributions under diverse demographic scenarios, aiding in population genetic modeling.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "demographic_inference",
+        "coalescent_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Sendrowski/PhaseGen",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "coalescent",
+        "demography",
+        "population-genetics"
+      ],
+      "id": 52
+    },
+    {
+      "name": "alstructure",
+      "one_line_profile": "R package for estimating admixture models of population structure",
+      "detailed_description": "alstructure implements the ALStructure algorithm to estimate admixture models of genetic population structure from genotype data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure_inference",
+        "admixture_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/StoreyLab/alstructure",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "admixture",
+        "population-structure",
+        "r-package"
+      ],
+      "id": 53
+    },
+    {
+      "name": "AdmixturePlotter",
+      "one_line_profile": "Visualization script for ADMIXTURE results",
+      "detailed_description": "An R script designed to generate plots for ADMIXTURE runs across multiple K values, facilitating the interpretation of population structure analysis.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "admixture_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/TCLamnidis/AdmixturePlotter",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "visualization",
+        "admixture",
+        "plotting"
+      ],
+      "id": 54
+    },
+    {
+      "name": "genome_structure_analysis",
+      "one_line_profile": "Analysis code for population and single-cell Hi-C data",
+      "detailed_description": "Provides functions for calculating Void regions, A/B compartments, and spatial density enrichment in population and single-cell Hi-C data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "genome_structure_analysis",
+        "hic_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/TheLaueLab/genome_structure_analysis",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "hi-c",
+        "genome-structure",
+        "single-cell"
+      ],
+      "id": 55
+    },
+    {
+      "name": "Diablo G25",
+      "one_line_profile": "VCF to 23AndMe converter and admixture score calculator",
+      "detailed_description": "A tool for converting VCF files to 23AndMe format and calculating admixture scores, useful for personal genomics and ancestry analysis.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "file_conversion",
+        "admixture_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TheSergeyPixel/Diablo_G25",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ancestry",
+        "vcf",
+        "admixture"
+      ],
+      "id": 56
+    },
+    {
+      "name": "vcfdist",
+      "one_line_profile": "Benchmarking tool for phased variant calls",
+      "detailed_description": "vcfdist is designed to accurately benchmark phased variant calls, evaluating the quality of phasing and variant detection.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "quality_control",
+        "phasing_evaluation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/TimD1/vcfdist",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "benchmarking",
+        "phasing",
+        "variant-calling"
+      ],
+      "id": 57
+    },
+    {
+      "name": "mapmixture",
+      "one_line_profile": "Spatial visualisation of admixture on projected maps",
+      "detailed_description": "An R package and web app for the spatial visualisation of admixture proportions on projected maps, aiding in the geographic interpretation of population genetics data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "spatial_genetics"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/Tom-Jenkins/mapmixture",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "visualization",
+        "admixture",
+        "geospatial"
+      ],
+      "id": 58
+    },
+    {
+      "name": "Tom-Jenkins/utility_scripts",
+      "one_line_profile": "Collection of scripts for population genetics analysis",
+      "detailed_description": "A repository containing various utility scripts specifically designed for performing population genetics analyses.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "population_genetics"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/Tom-Jenkins/utility_scripts",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "scripts",
+        "population-genetics",
+        "r"
+      ],
+      "id": 59
+    },
+    {
+      "name": "Genotype_Imputation_Pipeline",
+      "one_line_profile": "Pipeline for processing and imputing TOPMED/dbGaP datasets",
+      "detailed_description": "A comprehensive pipeline for processing genotype data, including QC, ancestry analysis, phasing, and imputation, specifically tailored for TOPMED and dbGaP datasets.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "imputation",
+        "phasing",
+        "quality_control"
+      ],
+      "application_level": "workflow",
+      "primary_language": "FreeBASIC",
+      "repo_url": "https://github.com/TorkamaniLab/Genotype_Imputation_Pipeline",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pipeline",
+        "imputation",
+        "topmed"
+      ],
+      "id": 60
+    },
+    {
+      "name": "GENESIS",
+      "one_line_profile": "Statistical methods for analyzing genetic data with population structure",
+      "detailed_description": "GENESIS (GENetic EStimation and Inference in Structured samples) provides statistical methods for analyzing genetic data from samples with population structure and/or relatedness.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure_inference",
+        "statistical_genetics"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/UW-GAC/GENESIS",
+      "help_website": [
+        "https://bioconductor.org/packages/GENESIS"
+      ],
+      "license": null,
+      "tags": [
+        "bioconductor",
+        "population-structure",
+        "relatedness"
+      ],
+      "id": 61
+    },
+    {
+      "name": "UW-GAC Analysis Pipeline",
+      "one_line_profile": "Analysis pipeline for TOPMed data",
+      "detailed_description": "The analysis pipeline used by the UW-GAC for processing and analyzing TOPMed sequencing data, covering various genomic analysis steps.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "genomic_analysis",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/UW-GAC/analysis_pipeline",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "topmed",
+        "pipeline",
+        "genomics"
+      ],
+      "id": 62
+    },
+    {
+      "name": "visual-physiology-opsin-db",
+      "one_line_profile": "Database and ML models for opsin genotype-phenotype prediction",
+      "detailed_description": "A database containing opsin genotype-phenotype data along with machine-learning models trained to predict opsin phenotypes from genotype data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phenotype_prediction",
+        "database"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/VisualPhysiologyDB/visual-physiology-opsin-db",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "machine-learning",
+        "opsin",
+        "genotype-phenotype"
+      ],
+      "id": 63
+    },
+    {
+      "name": "scIBD",
+      "one_line_profile": "Doublet detection tool for scCAS data",
+      "detailed_description": "scIBD is a tool designed for detecting doublets in single-cell combinatorial indexing ATAC-seq (scCAS) data.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "doublet_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Ying-Lab/scIBD",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "doublet-detection",
+        "atac-seq"
+      ],
+      "id": 64
+    },
+    {
+      "name": "PhaseGrass",
+      "one_line_profile": "Reference-based phasing workflow for diploid assembly",
+      "detailed_description": "PhaseGrass is a workflow for generating chromosome-level haplotype-resolved diploid assemblies for highly heterozygous genomes using reference-based phasing.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phasing",
+        "genome_assembly"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/Yutang-ETH/PhaseGrass",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "phasing",
+        "assembly",
+        "heterozygous"
+      ],
+      "id": 65
+    },
+    {
+      "name": "NGSadmix",
+      "one_line_profile": "Tool for inferring admixture proportions from NGS data",
+      "detailed_description": "NGSadmix infers admixture proportions directly from Next Generation Sequencing (NGS) data, accounting for genotype uncertainty.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "admixture_analysis",
+        "population_structure_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/aalbrechtsen/NGSadmix",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "admixture",
+        "ngs",
+        "population-genetics"
+      ],
+      "id": 66
+    },
+    {
+      "name": "fastman",
+      "one_line_profile": "R package for fast visualization of GWAS results",
+      "detailed_description": "fastman is an R package designed for efficient generation of Q-Q and Manhattan plots directly from PLINK output files for GWAS visualization.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "visualization",
+        "gwas_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/adhikari-statgen-lab/fastman",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gwas",
+        "visualization",
+        "manhattan-plot"
+      ],
+      "id": 67
+    },
+    {
+      "name": "pgs",
+      "one_line_profile": "Population of Genome Structures modeling tools",
+      "detailed_description": "A package containing tools for modeling populations of genome structures, likely for 3D genome analysis.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "modeling",
+        "genome_structure"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/alberlab/pgs",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "genome-structure",
+        "modeling",
+        "population"
+      ],
+      "id": 68
+    },
+    {
+      "name": "arginfer",
+      "one_line_profile": "Tool for inferring Ancestral Recombination Graphs",
+      "detailed_description": "arginfer is a tool for inferring Ancestral Recombination Graphs (ARGs), which are central to understanding the evolutionary history of sequences.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "arg_inference",
+        "evolutionary_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/alimahmoudi29/arginfer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "arg",
+        "recombination",
+        "inference"
+      ],
+      "id": 69
+    },
+    {
+      "name": "mrpast",
+      "one_line_profile": "Demographic inference from Ancestral Recombination Graphs",
+      "detailed_description": "mrpast performs demographic inference using Ancestral Recombination Graphs (ARGs) as input.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "demographic_inference",
+        "arg_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/aprilweilab/mrpast",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "demography",
+        "arg",
+        "inference"
+      ],
+      "id": 70
+    },
+    {
+      "name": "eigensoft",
+      "one_line_profile": "Principal components analysis for population genetics",
+      "detailed_description": "EIGENSOFT provides tools for performing principal components analysis (PCA) on population genetics data to detect population structure.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure_inference",
+        "pca"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/argriffing/eigensoft",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pca",
+        "population-structure",
+        "genetics"
+      ],
+      "id": 71
+    },
+    {
+      "name": "clustOpt",
+      "one_line_profile": "Optimization of RADseq clustering thresholds",
+      "detailed_description": "Scripts designed to optimize clustering thresholds for RADseq data analysis in the context of population genetics.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "parameter_optimization",
+        "clustering"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/atcg/clustOpt",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "radseq",
+        "clustering",
+        "optimization"
+      ],
+      "id": 72
+    },
+    {
+      "name": "GWASpy",
+      "one_line_profile": "Pipeline for GWAS QC, PCA, haplotype phasing, and genotype imputation",
+      "detailed_description": "A Python-based pipeline designed for Genome-Wide Association Studies (GWAS) that automates quality control, Principal Component Analysis (PCA), haplotype phasing, and genotype imputation.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "phasing",
+        "imputation",
+        "population_structure"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/atgu/GWASpy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gwas",
+        "phasing",
+        "imputation",
+        "qc"
+      ],
+      "id": 73
+    },
+    {
+      "name": "ADMIXTURE (R implementation)",
+      "one_line_profile": "Accelerated EM implementation of the ADMIXTURE model for population structure",
+      "detailed_description": "A simple accelerated Expectation-Maximization (EM) implementation of the ADMIXTURE model in R, used for estimating individual ancestries from multilocus genotype data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure",
+        "ancestry_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "OpenEdge ABL",
+      "repo_url": "https://github.com/azzaea/admixture",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "population-genetics",
+        "admixture",
+        "ancestry"
+      ],
+      "id": 74
+    },
+    {
+      "name": "Mandrake",
+      "one_line_profile": "Visualization of pathogen population structure using Stochastic Cluster Embedding",
+      "detailed_description": "A tool for fast visualisation of the population structure of pathogens, utilizing Stochastic Cluster Embedding to project high-dimensional genetic data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "population_structure"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bacpop/mandrake",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pathogen",
+        "population-structure",
+        "visualization"
+      ],
+      "id": 75
+    },
+    {
+      "name": "Loter",
+      "one_line_profile": "Local ancestry inference and haplotype phasing software",
+      "detailed_description": "A software package designed for local ancestry inference (LAI) and haplotype phasing, particularly useful in admixed populations.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phasing",
+        "ancestry_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/bcm-uga/Loter",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "haplotype-phasing",
+        "local-ancestry",
+        "admixture"
+      ],
+      "id": 76
+    },
+    {
+      "name": "TESS3",
+      "one_line_profile": "Spatial population structure estimation using matrix factorization",
+      "detailed_description": "A program for estimating spatial population structure based on geographically constrained non-negative matrix factorization and population genetics models.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure",
+        "spatial_genetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/bcm-uga/TESS3_encho_sen",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "spatial-genetics",
+        "population-structure",
+        "nmf"
+      ],
+      "id": 77
+    },
+    {
+      "name": "BEAGLE Library",
+      "one_line_profile": "High-performance library for phylogenetic likelihood calculations",
+      "detailed_description": "A general purpose library for evaluating the likelihood of sequence evolution on trees, used as a computational backend for many phylogenetics and population genetics software.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phylogenetics",
+        "likelihood_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/beagle-dev/beagle-lib",
+      "help_website": [
+        "https://github.com/beagle-dev/beagle-lib"
+      ],
+      "license": "MIT",
+      "tags": [
+        "phylogenetics",
+        "likelihood",
+        "hpc"
+      ],
+      "id": 78
+    },
+    {
+      "name": "flopp",
+      "one_line_profile": "Single individual haplotype phasing for polyploid organisms",
+      "detailed_description": "A software package for single individual haplotype phasing of polyploid organisms using long read sequencing data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phasing",
+        "polyploid_genetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/bluenote-1577/flopp",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phasing",
+        "polyploid",
+        "long-read"
+      ],
+      "id": 79
+    },
+    {
+      "name": "GATK (Legacy)",
+      "one_line_profile": "Genome Analysis Toolkit (Versions 1.0-3.7)",
+      "detailed_description": "The legacy repository for the Genome Analysis Toolkit (GATK), containing tools for variant discovery and genotyping (versions 1.0 through 3.7).",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "genotyping"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/broadgsa/gatk-protected",
+      "help_website": [
+        "https://gatk.broadinstitute.org/"
+      ],
+      "license": null,
+      "tags": [
+        "variant-calling",
+        "genotyping",
+        "legacy"
+      ],
+      "id": 80
+    },
+    {
+      "name": "GATK",
+      "one_line_profile": "Genome Analysis Toolkit for variant discovery",
+      "detailed_description": "The official repository for GATK 4+, the industry-standard toolkit for variant discovery in high-throughput sequencing data, including germline and somatic variant calling.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "genotyping",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/broadinstitute/gatk",
+      "help_website": [
+        "https://gatk.broadinstitute.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "variant-calling",
+        "genomics",
+        "gatk"
+      ],
+      "id": 81
+    },
+    {
+      "name": "mobster",
+      "one_line_profile": "Model-based tumour subclonal deconvolution",
+      "detailed_description": "A tool for model-based tumour subclonal deconvolution using population genetics principles to infer evolutionary dynamics from sequencing data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "deconvolution",
+        "population_genetics",
+        "cancer_evolution"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/caravagnalab/mobster",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cancer",
+        "subclonal-deconvolution",
+        "population-genetics"
+      ],
+      "id": 82
+    },
+    {
+      "name": "TRACK",
+      "one_line_profile": "Pipeline for analyzing tandem repeats in reference genomes",
+      "detailed_description": "A Snakemake pipeline that generates TR catalogs, identifies homologous TRs, and performs population-level genotyping and population genetics analyses on PacBio HiFi data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "genotyping",
+        "variant_analysis",
+        "population_genetics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/caroladam/track",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "tandem-repeats",
+        "pacbio",
+        "genotyping"
+      ],
+      "id": 83
+    },
+    {
+      "name": "PAMES",
+      "one_line_profile": "Tumor purity estimation using DNA methylation",
+      "detailed_description": "A tool to estimate the purity of tumor samples by exploiting DNA Methylation data, aiding in accurate variant interpretation.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "purity_estimation",
+        "cancer_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/cgplab/PAMES",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "methylation",
+        "tumor-purity",
+        "cancer"
+      ],
+      "id": 84
+    },
+    {
+      "name": "PLINK 2.0 (plink-ng)",
+      "one_line_profile": "Whole genome association analysis toolset",
+      "detailed_description": "A comprehensive update to PLINK, designed for high-throughput whole genome association analysis, offering extreme computational efficiency for large-scale genotype data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "gwas",
+        "population_genetics",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/chrchang/plink-ng",
+      "help_website": [
+        "https://www.cog-genomics.org/plink/2.0/"
+      ],
+      "license": null,
+      "tags": [
+        "gwas",
+        "genetics",
+        "bioinformatics"
+      ],
+      "id": 85
+    },
+    {
+      "name": "DILS",
+      "one_line_profile": "Demographic Inferences with Linked Selection",
+      "detailed_description": "A tool for performing demographic inferences while accounting for linked selection, useful in population genetics studies.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "demographic_inference",
+        "population_genetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/dils-popgen/dils",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "demography",
+        "selection",
+        "inference"
+      ],
+      "id": 86
+    },
+    {
+      "name": "liftover_plink_beds",
+      "one_line_profile": "Workflow for lifting over PLINK BED files",
+      "detailed_description": "A WDL-based workflow for converting UK Biobank genome-wide genotyping data (PLINK format) from one reference build to another (liftover).",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "liftover"
+      ],
+      "application_level": "workflow",
+      "primary_language": "WDL",
+      "repo_url": "https://github.com/dnanexus-rnd/liftover_plink_beds",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "liftover",
+        "plink",
+        "uk-biobank"
+      ],
+      "id": 87
+    },
+    {
+      "name": "GenoTools",
+      "one_line_profile": "Suite for genotype data processing, QC, and ancestry estimation",
+      "detailed_description": "A robust suite for processing genotype data, offering genotype calling (.idat to PLINK), comprehensive sample/variant QC, and ancestry estimation. Ideal for computational biology and genetics research.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "genotype_calling",
+        "quality_control",
+        "ancestry_estimation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dvitale199/GenoTools",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "genotyping",
+        "ancestry",
+        "qc",
+        "bioinformatics"
+      ],
+      "id": 88
+    },
+    {
+      "name": "genimpute",
+      "one_line_profile": "Portable genotype imputation pipeline",
+      "detailed_description": "Portable genotype imputation pipeline used by the eQTL Catalogue, implemented in Nextflow for reproducibility and scalability.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "imputation",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/eQTL-Catalogue/genimpute",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "imputation",
+        "nextflow",
+        "genomics"
+      ],
+      "id": 89
+    },
+    {
+      "name": "ERStruct",
+      "one_line_profile": "Inferring population structure using eigenvalue ratios",
+      "detailed_description": "The Official Python Version for the method 'An Eigenvalue Ratio Approach to Inferring Population Structure from Whole Genome Sequencing Data'.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ecielyang/ERStruct",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "population-structure",
+        "eigenvalue",
+        "wgs"
+      ],
+      "id": 90
+    },
+    {
+      "name": "scphaser",
+      "one_line_profile": "Haplotype phasing using single-cell RNA-seq data",
+      "detailed_description": "R package designed for haplotype phasing specifically using single-cell RNA-seq data, enabling allele-specific expression analysis.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phasing",
+        "scRNA-seq"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/edsgard/scphaser",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "haplotype-phasing",
+        "single-cell",
+        "rna-seq"
+      ],
+      "id": 91
+    },
+    {
+      "name": "pegas",
+      "one_line_profile": "Population and Evolutionary Genetics Analysis System",
+      "detailed_description": "An R package for the analysis of population genetics data, including functions for haplotype networks, diversity indices, and population structure.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_genetics",
+        "evolutionary_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/emmanuelparadis/pegas",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "population-genetics",
+        "r-package",
+        "evolution"
+      ],
+      "id": 92
+    },
+    {
+      "name": "netviewr",
+      "one_line_profile": "Population structure inference using mutual nearest neighbor graphs",
+      "detailed_description": "A tool for population structure inference and visualization using mutual nearest neighbor graphs, implemented in Rust.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure_inference",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/esteinig/netviewr",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "population-structure",
+        "graph-theory",
+        "rust"
+      ],
+      "id": 93
+    },
+    {
+      "name": "VCF-Simplify",
+      "one_line_profile": "Parser to simplify and build VCF files",
+      "detailed_description": "A python parser designed to simplify and reconstruct VCF (Variant Call Format) files for easier handling and processing.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "vcf_manipulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/everestial/VCF-Simplify",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vcf",
+        "bioinformatics",
+        "parser"
+      ],
+      "id": 94
+    },
+    {
+      "name": "phase-extender",
+      "one_line_profile": "Extends ReadBack phased haplotypes",
+      "detailed_description": "A python program that uses ReadBack phased haplotypes in a population of samples and returns extended haplotype blocks.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phasing",
+        "haplotype_extension"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/everestial/phase-extender",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phasing",
+        "haplotype",
+        "readbacked-phasing"
+      ],
+      "id": 95
+    },
+    {
+      "name": "phase-stitcher",
+      "one_line_profile": "Stitches ReadBack phased haplotypes in F1 hybrids",
+      "detailed_description": "A python program designed to stitch ReadBack phased haplotypes specifically for F1 hybrid organisms.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phasing",
+        "haplotype_stitching"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/everestial/phase-stitcher",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phasing",
+        "f1-hybrid",
+        "haplotype"
+      ],
+      "id": 96
+    },
+    {
+      "name": "imputePipe",
+      "one_line_profile": "Efficient genotype imputation pipeline",
+      "detailed_description": "A pipeline to impute to 1000 genomes efficiently by distributing to SGE, handling alignment, haplotyping, imputing, and filtering.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "imputation",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/explodecomputer/imputePipe",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "imputation",
+        "1000-genomes",
+        "sge"
+      ],
+      "id": 97
+    },
+    {
+      "name": "plinkbinr",
+      "one_line_profile": "R package providing PLINK binaries",
+      "detailed_description": "R package that distributes PLINK binaries for Windows, Mac, and Linux, facilitating the use of PLINK within R workflows.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "utility",
+        "tool_distribution"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/explodecomputer/plinkbinr",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "plink",
+        "r-package",
+        "bioinformatics"
+      ],
+      "id": 98
+    },
+    {
+      "name": "kpop",
+      "one_line_profile": "Python package for population structure analysis",
+      "detailed_description": "A python package designed for performing population structure analysis on genetic data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fabiommendes/kpop",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "population-structure",
+        "python",
+        "genetics"
+      ],
+      "id": 99
+    },
+    {
+      "name": "bed-reader",
+      "one_line_profile": "Fast reader/writer for PLINK Bed files",
+      "detailed_description": "A library for easy, fast, and efficient reading and writing of PLINK Bed files (binary genotype format).",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "data_io",
+        "file_format_handling"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/fastlmm/bed-reader",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "plink",
+        "bed-format",
+        "io"
+      ],
+      "id": 100
+    },
+    {
+      "name": "BioBricks",
+      "one_line_profile": "Simulation framework for parental and admixture offsprings",
+      "detailed_description": "A simple framework to simulate parental and admixture offsprings, allowing for benchmarking of inheritance block distinction.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "admixture_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/fritzsedlazeck/BioBricks",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "simulation",
+        "admixture",
+        "genetics"
+      ],
+      "id": 101
+    },
+    {
+      "name": "plink2R",
+      "one_line_profile": "Import PLINK data into R",
+      "detailed_description": "A tool to read PLINK BED/BIM/FAM files directly into R for downstream analysis.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "data_io",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/gabraham/plink2R",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "plink",
+        "r",
+        "data-import"
+      ],
+      "id": 102
+    },
+    {
+      "name": "conStruct",
+      "one_line_profile": "Model continuous and discrete population genetic structure",
+      "detailed_description": "A method and tool for modeling continuous and discrete population genetic structure, providing an alternative to discrete-only models like STRUCTURE.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/gbradburd/conStruct",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "population-structure",
+        "modeling",
+        "spatial-genetics"
+      ],
+      "id": 103
+    },
+    {
+      "name": "Michigan Imputation Server",
+      "one_line_profile": "Web-based service for genotype imputation",
+      "detailed_description": "Source code for the Michigan Imputation Server, a web-based service that facilitates access to reference panels and improves genotype imputation productivity.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "imputation",
+        "web_service"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/genepi/imputationserver",
+      "help_website": [
+        "https://imputationserver.sph.umich.edu"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "imputation",
+        "server",
+        "genomics"
+      ],
+      "id": 104
+    },
+    {
+      "name": "imputationserver2",
+      "one_line_profile": "Scalable genotype imputation workflow",
+      "detailed_description": "The workflow engine for Imputation Server 2, designed to facilitate genotype imputation at scale using Nextflow.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "imputation",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/genepi/imputationserver2",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "imputation",
+        "nextflow",
+        "scalability"
+      ],
+      "id": 105
+    },
+    {
+      "name": "rpd-sg10k-grch38-gatk4-gvcf-freebayes-vcf",
+      "one_line_profile": "WGS analysis workflow for SG10K Health",
+      "detailed_description": "Main genome analytics workflow powering the production analysis of WGS samples for the Singapore NPM Program, integrating GATK4 and Freebayes.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/gis-rpd/rpd-sg10k-grch38-gatk4-gvcf-freebayes-vcf",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "wgs",
+        "variant-calling",
+        "nextflow"
+      ],
+      "id": 106
+    },
+    {
+      "name": "haphpipe",
+      "one_line_profile": "NGS viral assembly and population genetics pipeline",
+      "detailed_description": "A pipeline for NGS viral assembly and population genetics, designed to handle viral diversity and haplotype reconstruction.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "viral_assembly",
+        "population_genetics",
+        "haplotype_reconstruction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gwcbi/haphpipe",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "viral-genomics",
+        "assembly",
+        "population-genetics"
+      ],
+      "id": 107
+    },
+    {
+      "name": "chipimputation",
+      "one_line_profile": "Genotype Imputation Pipeline for H3Africa",
+      "detailed_description": "A Nextflow-based genotype imputation pipeline developed for the H3Africa consortium.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "imputation",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/h3abionet/chipimputation",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "imputation",
+        "h3africa",
+        "nextflow"
+      ],
+      "id": 108
+    },
+    {
+      "name": "popgen",
+      "one_line_profile": "Population genetics analysis tools",
+      "detailed_description": "A collection of tools and libraries for performing population genetics analyses.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_genetics_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/harrisonlab/popgen",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "population-genetics",
+        "analysis"
+      ],
+      "id": 109
+    },
+    {
+      "name": "mvBIMBAM",
+      "one_line_profile": "Genetic association analysis of multiple related phenotypes",
+      "detailed_description": "BIMBAM extension for genetic association analysis of multiple related phenotypes, facilitating multi-variate analysis.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "association_analysis",
+        "phenotype_correlation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/heejungshim/mvBIMBAM",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gwas",
+        "association-analysis",
+        "bimbam"
+      ],
+      "id": 110
+    },
+    {
+      "name": "GLOBETROTTER",
+      "one_line_profile": "Haplotype-based admixture inference and dating software",
+      "detailed_description": "A software tool for inferring admixture events and dating them using haplotype data, widely used in population genetics to understand historical gene flow.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_inference",
+        "admixture_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/hellenthal-group-UCL/GLOBETROTTER",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "haplotype",
+        "admixture",
+        "population-genetics"
+      ],
+      "id": 111
+    },
+    {
+      "name": "fastGLOBETROTTER",
+      "one_line_profile": "Accelerated haplotype-based admixture inference software",
+      "detailed_description": "An optimized version of the GLOBETROTTER software, designed to perform haplotype-based admixture inference and dating more efficiently.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_inference",
+        "admixture_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/hellenthal-group-UCL/fastGLOBETROTTER",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "haplotype",
+        "admixture",
+        "optimization"
+      ],
+      "id": 112
+    },
+    {
+      "name": "metacarpa",
+      "one_line_profile": "Meta-analysis of genetic association studies accounting for relatedness",
+      "detailed_description": "A tool for performing meta-analysis of genetic association studies while explicitly accounting for sample relatedness and population structure.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "association_testing",
+        "meta_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/hmgu-itg/metacarpa",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gwas",
+        "meta-analysis",
+        "relatedness"
+      ],
+      "id": 113
+    },
+    {
+      "name": "gwas-assoc",
+      "one_line_profile": "IKMB GWAS Association Testing Pipeline",
+      "detailed_description": "A pipeline for performing Genome-Wide Association Studies (GWAS) association testing, developed by IKMB.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "association_testing",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ikmb/gwas-assoc",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gwas",
+        "pipeline",
+        "genetics"
+      ],
+      "id": 114
+    },
+    {
+      "name": "imputeqc",
+      "one_line_profile": "R package to estimate the quality of imputation of genotypes",
+      "detailed_description": "An R package designed to assess and estimate the quality of genotype imputation results, crucial for downstream genetic analysis.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "imputation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/inzilico/imputeqc",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "imputation",
+        "quality-control",
+        "genotyping"
+      ],
+      "id": 115
+    },
+    {
+      "name": "GeneticsGPT",
+      "one_line_profile": "LLM-based interface for querying Open Targets genetics database",
+      "detailed_description": "An application leveraging GPT-3.5 to translate natural language queries into GraphQL for exploring the Open Targets genetics database.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "data_retrieval",
+        "knowledge_discovery"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/itsOwen/GeneticsGPT",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "genetics",
+        "open-targets"
+      ],
+      "id": 116
+    },
+    {
+      "name": "ohana",
+      "one_line_profile": "Population structure and admixture analysis tool",
+      "detailed_description": "A software suite for mixture classification, constraint optimization, outlier detection, population structure inference, admixture history, and selection detection.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_inference",
+        "admixture_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/jade-cheng/ohana",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "population-structure",
+        "admixture",
+        "selection-detection"
+      ],
+      "id": 117
+    },
+    {
+      "name": "popart",
+      "one_line_profile": "General purpose population genetics software",
+      "detailed_description": "Software for population genetics analysis, likely focusing on haplotype networks and diversity statistics (inferred from context of common PopART tool).",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_inference",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/jessicawleigh/popart",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "population-genetics",
+        "haplotype-networks"
+      ],
+      "id": 118
+    },
+    {
+      "name": "mycorrhiza-algorithm",
+      "one_line_profile": "Ancestry prediction using phylogenetic networks and Random Forests",
+      "detailed_description": "An algorithm combining phylogenetic networks and Random Forests to predict ancestry from multilocus genotype data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "ancestry_inference",
+        "phylogenetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jgeofil/mycorrhiza-algorithm",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "ancestry",
+        "phylogenetics",
+        "machine-learning"
+      ],
+      "id": 119
+    },
+    {
+      "name": "GCTA",
+      "one_line_profile": "Genome-wide Complex Trait Analysis software",
+      "detailed_description": "A widely used software tool for estimating the proportion of phenotypic variance explained by genome-wide SNPs (GREML), and other complex trait analyses including PCA and relatedness estimation.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "heritability_estimation",
+        "relatedness_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/jianyangqt/gcta",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gwas",
+        "complex-traits",
+        "relatedness"
+      ],
+      "id": 120
+    },
+    {
+      "name": "MMQTL",
+      "one_line_profile": "Meta-analysis package for detecting multiple QTL signals",
+      "detailed_description": "A statistical package applying meta-analysis to detect multiple QTL signals integrating signals among conditions, with control for population structure and relatedness.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "qtl_mapping",
+        "meta_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/jxzb1988/MMQTL",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "qtl",
+        "meta-analysis",
+        "population-structure"
+      ],
+      "id": 121
+    },
+    {
+      "name": "kWIP",
+      "one_line_profile": "De novo estimates of genetic relatedness from NGS data",
+      "detailed_description": "A tool for estimating genetic relatedness directly from next-generation sequencing data without requiring a reference genome (alignment-free/de novo).",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "relatedness_estimation",
+        "alignment_free_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/kdm9/kWIP",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "relatedness",
+        "ngs",
+        "alignment-free"
+      ],
+      "id": 122
+    },
+    {
+      "name": "kp_dadi",
+      "one_line_profile": "Workflow for optimizing dadi demographic inference",
+      "detailed_description": "A workflow wrapper for manually optimizing the Diffusion Approximations for Demographic Inference (dadi) tool for population genomics analyses.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "demographic_inference",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kepra3/kp_dadi",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dadi",
+        "demography",
+        "population-genomics"
+      ],
+      "id": 123
+    },
+    {
+      "name": "tskit_arg_visualizer",
+      "one_line_profile": "Interactive visualization for ancestral recombination graphs",
+      "detailed_description": "A Python tool for interactively visualizing Ancestral Recombination Graphs (ARGs) generated by tskit-compatible software.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "arg_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kitchensjn/tskit_arg_visualizer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "arg",
+        "tskit"
+      ],
+      "id": 124
+    },
+    {
+      "name": "diveRsity",
+      "one_line_profile": "Comprehensive population genetics analysis package",
+      "detailed_description": "An R package for calculating various diversity statistics and population differentiation measures (e.g., Fst, Gst) with bootstrapping capabilities.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_inference",
+        "diversity_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/kkeenan02/diveRsity",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "population-genetics",
+        "diversity",
+        "r-package"
+      ],
+      "id": 125
+    },
+    {
+      "name": "PLINK.jl",
+      "one_line_profile": "Julia module to handle PLINK BED files",
+      "detailed_description": "A Julia library for reading and manipulating PLINK binary genotype files (BED/BIM/FAM), facilitating bioinformatics analysis in Julia.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "data_io",
+        "format_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/klkeys/PLINK.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "plink",
+        "julia",
+        "genomics"
+      ],
+      "id": 126
+    },
+    {
+      "name": "discoal",
+      "one_line_profile": "Coalescent simulation with recombination and selection",
+      "detailed_description": "A coalescent simulation program capable of simulating models with recombination, selective sweeps, and demographic changes including population splits and admixture.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "population_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "TeX",
+      "repo_url": "https://github.com/kr-colab/discoal",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "simulation",
+        "coalescent",
+        "selection"
+      ],
+      "id": 127
+    },
+    {
+      "name": "prism",
+      "one_line_profile": "Statistical phasing software for long read data",
+      "detailed_description": "A statistical tool for phasing genotypes using long-read sequencing data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phasing",
+        "haplotype_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kuleshov/prism",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "phasing",
+        "long-read",
+        "genotyping"
+      ],
+      "id": 128
+    },
+    {
+      "name": "MetaDome",
+      "one_line_profile": "Visualization of genetic variation in protein domain context",
+      "detailed_description": "A tool to visualize the position of mutations of interest in the context of general population-based genetic variation and homologous domain positions.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "variant_interpretation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/laurensvdwiel/metadome",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "protein-domains",
+        "genetic-variation"
+      ],
+      "id": 129
+    },
+    {
+      "name": "NAToRA",
+      "one_line_profile": "Relatedness-pruning method for genetic analyses",
+      "detailed_description": "A toolkit to execute kinship control analyses, minimizing the loss of dataset size in genetic and omics analyses by optimizing relatedness pruning.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "sample_filtering",
+        "relatedness_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ldgh/NAToRA_Public",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "kinship",
+        "pruning",
+        "relatedness"
+      ],
+      "id": 130
+    },
+    {
+      "name": "pyplink",
+      "one_line_profile": "Python module to read binary Plink files",
+      "detailed_description": "A Python library for parsing and reading binary PLINK genotype files, enabling custom analysis pipelines in Python.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "data_io",
+        "format_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lemieuxl/pyplink",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "plink",
+        "python",
+        "bioinformatics"
+      ],
+      "id": 131
+    },
+    {
+      "name": "dipcall",
+      "one_line_profile": "Reference-based variant calling pipeline for phased haplotype assemblies",
+      "detailed_description": "A pipeline for generating a VCF file from a pair of phased haplotype assemblies, typically used for evaluating de novo assembly quality and calling variants in phased genomes.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "phasing",
+        "assembly_evaluation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/lh3/dipcall",
+      "help_website": [
+        "https://github.com/lh3/dipcall"
+      ],
+      "license": "MIT",
+      "tags": [
+        "variant-calling",
+        "phasing",
+        "assembly",
+        "vcf"
+      ],
+      "id": 132
+    },
+    {
+      "name": "pandas-plink",
+      "one_line_profile": "Python library for reading PLINK genotype files into Pandas dataframes",
+      "detailed_description": "A Python library that provides an interface to read PLINK binary files (bed/bim/fam) directly into Pandas dataframes and Dask arrays, facilitating genomic data analysis in Python.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "file_io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/limix/pandas-plink",
+      "help_website": [
+        "https://pandas-plink.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "plink",
+        "genomics",
+        "python",
+        "bioinformatics"
+      ],
+      "id": 133
+    },
+    {
+      "name": "Octopus",
+      "one_line_profile": "Bayesian haplotype-based mutation calling tool",
+      "detailed_description": "A sophisticated variant caller that uses a Bayesian haplotype-based model to detect germline and somatic mutations, capable of handling complex variants and polyploid organisms.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "haplotype_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/luntergroup/octopus",
+      "help_website": [
+        "https://luntergroup.github.io/octopus/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "variant-calling",
+        "bayesian",
+        "haplotype",
+        "ngs"
+      ],
+      "id": 134
+    },
+    {
+      "name": "SMC++ (smcsmc)",
+      "one_line_profile": "Demographic inference from whole genomes using SMC++",
+      "detailed_description": "A tool for inferring population history and demography from whole-genome sequence data using the Sequentially Markovian Coalescent (SMC) model.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_genetics",
+        "demographic_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/luntergroup/smcsmc",
+      "help_website": [
+        "https://github.com/luntergroup/smcsmc"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "population-genetics",
+        "demography",
+        "coalescent",
+        "inference"
+      ],
+      "id": 135
+    },
+    {
+      "name": "witsGWAS",
+      "one_line_profile": "Pipeline for Human GWAS analysis compatible with Affymetrix and Illumina data",
+      "detailed_description": "A bioinformatics pipeline designed to facilitate Genome-Wide Association Studies (GWAS) by handling data from major genotyping platforms like Affymetrix and Illumina.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "gwas",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/magosil86/witsGWAS",
+      "help_website": [
+        "https://github.com/magosil86/witsGWAS"
+      ],
+      "license": "MIT",
+      "tags": [
+        "gwas",
+        "pipeline",
+        "genotyping",
+        "bioinformatics"
+      ],
+      "id": 136
+    },
+    {
+      "name": "admixture_graph",
+      "one_line_profile": "R module for analysing admixture graphs",
+      "detailed_description": "An R package that provides tools for building, fitting, and visualizing admixture graphs to infer population history and relationships.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_genetics",
+        "admixture_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/mailund/admixture_graph",
+      "help_website": [
+        "https://github.com/mailund/admixture_graph"
+      ],
+      "license": null,
+      "tags": [
+        "admixture",
+        "population-genetics",
+        "r-package",
+        "graph"
+      ],
+      "id": 137
+    },
+    {
+      "name": "admixr",
+      "one_line_profile": "R interface for ADMIXTOOLS",
+      "detailed_description": "An R package that provides a convenient interface for running ADMIXTOOLS analyses (D-statistics, f3/f4 statistics) entirely within R.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_genetics",
+        "admixture_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/martinsikora/admixr",
+      "help_website": [
+        "https://bodkan.net/admixr/"
+      ],
+      "license": null,
+      "tags": [
+        "admixtools",
+        "population-genetics",
+        "r",
+        "ancient-dna"
+      ],
+      "id": 138
+    },
+    {
+      "name": "ArgWeaver",
+      "one_line_profile": "Sampling and manipulating genome-wide ancestral recombination graphs",
+      "detailed_description": "A tool for sampling and manipulating Ancestral Recombination Graphs (ARGs) to infer population history, recombination rates, and coalescence times from genome-wide data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_genetics",
+        "arg_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mdrasmus/argweaver",
+      "help_website": [
+        "https://github.com/mdrasmus/argweaver"
+      ],
+      "license": "MIT",
+      "tags": [
+        "arg",
+        "population-genetics",
+        "recombination",
+        "coalescent"
+      ],
+      "id": 139
+    },
+    {
+      "name": "Meteor",
+      "one_line_profile": "Platform for quantitative metagenomics profiling and strain-level inference",
+      "detailed_description": "A platform for quantitative metagenomics profiling that performs species-level taxonomic profiling, functional analysis, and strain-level population structure inference.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "metagenomics",
+        "population_structure",
+        "taxonomic_profiling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/metagenopolis/meteor",
+      "help_website": [
+        "https://github.com/metagenopolis/meteor"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "metagenomics",
+        "profiling",
+        "strain-level",
+        "microbiome"
+      ],
+      "id": 140
+    },
+    {
+      "name": "plinkQC",
+      "one_line_profile": "R package for quality control of PLINK genetic datasets",
+      "detailed_description": "An R package designed to perform comprehensive quality control on genotype data in PLINK format, including individual and marker filtering.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "genotyping"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/meyer-lab-cshl/plinkQC",
+      "help_website": [
+        "https://meyer-lab-cshl.github.io/plinkQC/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "qc",
+        "plink",
+        "genotyping",
+        "r-package"
+      ],
+      "id": 141
+    },
+    {
+      "name": "libplinkio",
+      "one_line_profile": "C and Python library for reading PLINK genotype files",
+      "detailed_description": "A lightweight library for reading and parsing PLINK binary genotype files (BED/BIM/FAM), supporting both C and Python applications.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "file_io"
+      ],
+      "application_level": "library",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/mfranberg/libplinkio",
+      "help_website": [
+        "https://github.com/mfranberg/libplinkio"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "plink",
+        "c",
+        "python",
+        "library"
+      ],
+      "id": 142
+    },
+    {
+      "name": "Copenhagen",
+      "one_line_profile": "Collection of scripts for NGS and population genetics analysis",
+      "detailed_description": "A repository containing various scripts and tools for the analysis of genotyping and next-generation sequencing data, focusing on medical and population genetics.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_genetics",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/mfumagalli/Copenhagen",
+      "help_website": [
+        "https://github.com/mfumagalli/Copenhagen"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "ngs",
+        "population-genetics",
+        "scripts",
+        "bioinformatics"
+      ],
+      "id": 143
+    },
+    {
+      "name": "ngsPopGen",
+      "one_line_profile": "Population genetics analyses from NGS data",
+      "detailed_description": "A suite of tools for performing population genetics analyses directly from Next-Generation Sequencing data, accounting for genotype uncertainty.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_genetics",
+        "ngs_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mfumagalli/ngsPopGen",
+      "help_website": [
+        "https://github.com/mfumagalli/ngsPopGen"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "population-genetics",
+        "ngs",
+        "inference",
+        "c++"
+      ],
+      "id": 144
+    },
+    {
+      "name": "ngsTools",
+      "one_line_profile": "Programs to analyse NGS data for population genetics purposes",
+      "detailed_description": "A collection of programs for population genetics analysis of NGS data, including estimation of genetic diversity, differentiation, and other summary statistics from probabilistic genotypes.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_genetics",
+        "statistical_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/mfumagalli/ngsTools",
+      "help_website": [
+        "https://github.com/mfumagalli/ngsTools"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "ngs",
+        "population-genetics",
+        "angsd",
+        "statistics"
+      ],
+      "id": 145
+    },
+    {
+      "name": "fineRADstructure",
+      "one_line_profile": "Population structure inference from RAD-seq data",
+      "detailed_description": "A software package for inferring fine-scale population structure from RAD-seq data using a haplotype-based approach.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure",
+        "rad-seq"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/millanek/fineRADstructure",
+      "help_website": [
+        "http://cichlid.gurdon.cam.ac.uk/fineRADstructure.html"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "rad-seq",
+        "population-structure",
+        "inference",
+        "haplotype"
+      ],
+      "id": 146
+    },
+    {
+      "name": "GeneticsMakie.jl",
+      "one_line_profile": "High-performance genetics data visualization using Makie.jl",
+      "detailed_description": "A Julia package for creating high-performance, interactive visualizations of genetics and genomics data, such as GWAS plots and LD matrices.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "visualization",
+        "gwas"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/mmkim1210/GeneticsMakie.jl",
+      "help_website": [
+        "https://github.com/mmkim1210/GeneticsMakie.jl"
+      ],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "julia",
+        "genetics",
+        "makie"
+      ],
+      "id": 147
+    },
+    {
+      "name": "knockoffgwas",
+      "one_line_profile": "Multi-resolution localization of causal variants using knockoffs",
+      "detailed_description": "A tool implementing the knockoff filter for Genome-Wide Association Studies (GWAS) to control the false discovery rate while accounting for population structure.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "gwas",
+        "statistical_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/msesia/knockoffgwas",
+      "help_website": [
+        "https://github.com/msesia/knockoffgwas"
+      ],
+      "license": null,
+      "tags": [
+        "gwas",
+        "knockoff",
+        "fdr-control",
+        "statistics"
+      ],
+      "id": 148
+    },
+    {
+      "name": "nf-core/phaseimpute",
+      "one_line_profile": "Bioinformatics pipeline to phase and impute genetic data",
+      "detailed_description": "A Nextflow pipeline developed by nf-core for phasing and imputing genomic data, ensuring reproducibility and scalability.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phasing",
+        "imputation",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/phaseimpute",
+      "help_website": [
+        "https://nf-co.re/phaseimpute"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nextflow",
+        "phasing",
+        "imputation",
+        "workflow"
+      ],
+      "id": 149
+    },
+    {
+      "name": "StructuRly",
+      "one_line_profile": "Interactive plots for STRUCTURE and ADMIXTURE analysis",
+      "detailed_description": "An R package for creating comprehensive and interactive visualizations of population structure analysis results from software like STRUCTURE and ADMIXTURE.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "population_structure"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/nicocriscuolo/StructuRly",
+      "help_website": [
+        "https://github.com/nicocriscuolo/StructuRly"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "visualization",
+        "structure",
+        "admixture",
+        "r-package"
+      ],
+      "id": 150
+    },
+    {
+      "name": "Sarge",
+      "one_line_profile": "Heuristic ancestral recombination graph inference",
+      "detailed_description": "A tool for inferring Ancestral Recombination Graphs (ARGs) using a heuristic, parsimony-based approach, suitable for analyzing population history.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_genetics",
+        "arg_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/nkschaefer/sarge",
+      "help_website": [
+        "https://github.com/nkschaefer/sarge"
+      ],
+      "license": null,
+      "tags": [
+        "arg",
+        "inference",
+        "population-genetics",
+        "parsimony"
+      ],
+      "id": 151
+    },
+    {
+      "name": "GRIMM",
+      "one_line_profile": "Graph Imputation and Matching for HLA Genotypes",
+      "detailed_description": "A tool for HLA genotype imputation and matching using graph-based methods, developed by the National Marrow Donor Program bioinformatics group.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "imputation",
+        "hla_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nmdp-bioinformatics/grimm",
+      "help_website": [
+        "https://github.com/nmdp-bioinformatics/grimm"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "hla",
+        "imputation",
+        "graph",
+        "immunogenetics"
+      ],
+      "id": 152
+    },
+    {
+      "name": "rBAPS",
+      "one_line_profile": "R implementation of Bayesian Analysis of Population Structure",
+      "detailed_description": "An R package implementing the BAPS algorithm for Bayesian inference of population structure, allowing for efficient analysis of genetic data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure",
+        "bayesian_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ocbe-uio/rBAPS",
+      "help_website": [
+        "https://github.com/ocbe-uio/rBAPS"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "population-structure",
+        "bayesian",
+        "r-package",
+        "clustering"
+      ],
+      "id": 153
+    },
+    {
+      "name": "SHAPEIT4",
+      "one_line_profile": "Segmented Haplotype Estimation and Imputation Tool v4",
+      "detailed_description": "A fast and accurate method for estimation of haplotypes (phasing) for SNP array and sequencing data, representing the 4th version of the SHAPEIT algorithm.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phasing",
+        "imputation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/odelaneau/shapeit4",
+      "help_website": [
+        "https://odelaneau.github.io/shapeit4/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "phasing",
+        "imputation",
+        "haplotype",
+        "genetics"
+      ],
+      "id": 154
+    },
+    {
+      "name": "SHAPEIT5",
+      "one_line_profile": "Segmented Haplotype Estimation and Imputation Tool v5",
+      "detailed_description": "The latest version of the SHAPEIT algorithm for haplotype estimation and imputation, optimized for large-scale sequencing datasets like the UK Biobank.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phasing",
+        "imputation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/odelaneau/shapeit5",
+      "help_website": [
+        "https://odelaneau.github.io/shapeit5/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "phasing",
+        "imputation",
+        "large-scale",
+        "biobank"
+      ],
+      "id": 155
+    },
+    {
+      "name": "MsPAC",
+      "one_line_profile": "Tool to phase reads, assemble haplotypes and detect SVs",
+      "detailed_description": "A tool designed to phase sequencing reads, assemble haplotypes, and detect structural variants (SVs) using a multiple-sample approach.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phasing",
+        "assembly",
+        "sv_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/oscarlr/MsPAC",
+      "help_website": [
+        "https://github.com/oscarlr/MsPAC"
+      ],
+      "license": null,
+      "tags": [
+        "phasing",
+        "assembly",
+        "structural-variants",
+        "haplotype"
+      ],
+      "id": 156
+    },
+    {
+      "name": "sparg",
+      "one_line_profile": "Spatial inference from ancestral recombination graphs",
+      "detailed_description": "A Python package for performing spatial inference using ancestral recombination graphs (ARGs), useful in population genetics to understand the geographic history of genetic lineages.",
+      "domains": [
+        "Bioinfo",
+        "Population Genetics"
+      ],
+      "subtask_category": [
+        "spatial_inference",
+        "population_genetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/osmond-lab/sparg",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "arg",
+        "spatial-inference",
+        "population-genetics"
+      ],
+      "id": 157
+    },
+    {
+      "name": "pLink2",
+      "one_line_profile": "Software for analysis of chemically cross-linked proteins using mass spectrometry",
+      "detailed_description": "A search engine dedicated to the identification of cross-linked peptides and protein complexes from mass spectrometry data, supporting various cross-linkers.",
+      "domains": [
+        "Bioinfo",
+        "Proteomics"
+      ],
+      "subtask_category": [
+        "mass_spectrometry_analysis",
+        "protein_structure_identification"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pFindStudio/pLink2",
+      "help_website": [
+        "http://pfind.ict.ac.cn/software/pLink/"
+      ],
+      "license": null,
+      "tags": [
+        "mass-spectrometry",
+        "cross-linking",
+        "proteomics"
+      ],
+      "id": 158
+    },
+    {
+      "name": "pLink3",
+      "one_line_profile": "Search engine for identification of cross-linked protein complexes",
+      "detailed_description": "The successor to pLink2, providing advanced search capabilities for identifying cross-linked protein complexes or proteomes from mass spectrometry data.",
+      "domains": [
+        "Bioinfo",
+        "Proteomics"
+      ],
+      "subtask_category": [
+        "mass_spectrometry_analysis",
+        "protein_structure_identification"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pFindStudio/pLink3",
+      "help_website": [
+        "http://pfind.ict.ac.cn/software/pLink/"
+      ],
+      "license": null,
+      "tags": [
+        "mass-spectrometry",
+        "cross-linking",
+        "proteomics"
+      ],
+      "id": 159
+    },
+    {
+      "name": "opqua",
+      "one_line_profile": "Epidemiological modeling framework for pathogen population genetics",
+      "detailed_description": "An epidemiological modeling framework that integrates pathogen population genetics and evolution, allowing for the simulation of disease spread and genetic variation.",
+      "domains": [
+        "Bioinfo",
+        "Epidemiology"
+      ],
+      "subtask_category": [
+        "epidemiological_modeling",
+        "population_genetics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pablocarderam/opqua",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "epidemiology",
+        "simulation",
+        "pathogen-evolution"
+      ],
+      "id": 160
+    },
+    {
+      "name": "polyploid-demography",
+      "one_line_profile": "Demographic inference in polyploids",
+      "detailed_description": "A tool for performing demographic inference specifically designed for polyploid organisms, addressing the complexities of multiple chromosome sets.",
+      "domains": [
+        "Bioinfo",
+        "Population Genetics"
+      ],
+      "subtask_category": [
+        "demographic_inference",
+        "polyploidy"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pblischak/polyploid-demography",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "polyploidy",
+        "demography",
+        "inference"
+      ],
+      "id": 161
+    },
+    {
+      "name": "harpy",
+      "one_line_profile": "Processing pipeline for linked-read data to phased haplotypes",
+      "detailed_description": "A comprehensive pipeline to process linked-read data (e.g., 10x Genomics) from raw sequences to phased haplotypes, also supporting WGS data.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "haplotype_phasing",
+        "read_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pdimens/harpy",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "linked-reads",
+        "phasing",
+        "haplotype"
+      ],
+      "id": 162
+    },
+    {
+      "name": "talos",
+      "one_line_profile": "Rare disease variant reanalysis tool",
+      "detailed_description": "A tool designed for the reanalysis of variants in rare disease genomics, aiding in the identification of pathogenic variants.",
+      "domains": [
+        "Bioinfo",
+        "Clinical Genomics"
+      ],
+      "subtask_category": [
+        "variant_analysis",
+        "rare_disease_diagnosis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/populationgenomics/talos",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "variant-analysis",
+        "rare-disease",
+        "genomics"
+      ],
+      "id": 163
+    },
+    {
+      "name": "Eagle",
+      "one_line_profile": "Haplotype phasing software",
+      "detailed_description": "A highly accurate and efficient software for phasing genotypes across large cohorts, widely used in population genetics and imputation pipelines.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "haplotype_phasing",
+        "genotype_phasing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/poruloh/Eagle",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phasing",
+        "haplotype",
+        "gwas"
+      ],
+      "id": 164
+    },
+    {
+      "name": "DATES",
+      "one_line_profile": "Method for dating admixture in ancient DNA specimens",
+      "detailed_description": "A software tool for estimating the time of admixture events in ancient DNA samples by analyzing the decay of ancestry covariance.",
+      "domains": [
+        "Bioinfo",
+        "Population Genetics"
+      ],
+      "subtask_category": [
+        "admixture_dating",
+        "ancient_dna_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/priyamoorjani/DATES",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ancient-dna",
+        "admixture",
+        "population-history"
+      ],
+      "id": 165
+    },
+    {
+      "name": "MagicalRsq",
+      "one_line_profile": "Machine-learning-based genotype imputation quality calibration",
+      "detailed_description": "A tool that uses machine learning to calibrate and improve the quality metrics (Rsq) of genotype imputation results.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "imputation_quality_control",
+        "genotype_imputation"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/quansun98/MagicalRsq",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "imputation",
+        "quality-control",
+        "machine-learning"
+      ],
+      "id": 166
+    },
+    {
+      "name": "fastStructure",
+      "one_line_profile": "Variational framework for inferring population structure",
+      "detailed_description": "An algorithm for inferring population structure from large SNP genotype data using a variational Bayesian framework, offering faster performance than traditional STRUCTURE methods.",
+      "domains": [
+        "Bioinfo",
+        "Population Genetics"
+      ],
+      "subtask_category": [
+        "population_structure_inference",
+        "admixture_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rajanil/fastStructure",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "population-structure",
+        "variational-inference",
+        "snp"
+      ],
+      "id": 167
+    },
+    {
+      "name": "slimr",
+      "one_line_profile": "R interface for SLiM population genetics simulations",
+      "detailed_description": "An R package that allows users to write, run, and analyze SLiM population genetics forward simulations directly from the R environment.",
+      "domains": [
+        "Bioinfo",
+        "Population Genetics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "population_genetics_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/rdinnager/slimr",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "simulation",
+        "slim",
+        "r-package"
+      ],
+      "id": 168
+    },
+    {
+      "name": "HaplotypeTools",
+      "one_line_profile": "Toolkit for identifying recombination and recombinant genotypes",
+      "detailed_description": "A collection of tools designed to identify recombination events and recombinant genotypes within haplotype data.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "recombination_detection",
+        "haplotype_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/rhysf/HaplotypeTools",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "recombination",
+        "haplotype",
+        "genomics"
+      ],
+      "id": 169
+    },
+    {
+      "name": "demon_model",
+      "one_line_profile": "Spatially explicit model of intra-tumour population genetics",
+      "detailed_description": "A deme-based, spatially explicit simulation model for studying the population genetics and evolution within tumors.",
+      "domains": [
+        "Bioinfo",
+        "Cancer Genomics"
+      ],
+      "subtask_category": [
+        "tumor_evolution_modeling",
+        "population_genetics_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/robjohnnoble/demon_model",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cancer-evolution",
+        "simulation",
+        "spatial-modeling"
+      ],
+      "id": 170
+    },
+    {
+      "name": "pophelper",
+      "one_line_profile": "R package to analyse and visualise admixture proportions",
+      "detailed_description": "An R package designed to process and visualize output from population structure analysis software like STRUCTURE, fastSTRUCTURE, and ADMIXTURE.",
+      "domains": [
+        "Bioinfo",
+        "Population Genetics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "admixture_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/royfrancis/pophelper",
+      "help_website": [
+        "http://royfrancis.github.io/pophelper/"
+      ],
+      "license": null,
+      "tags": [
+        "visualization",
+        "admixture",
+        "population-structure"
+      ],
+      "id": 171
+    },
+    {
+      "name": "pophelperShiny",
+      "one_line_profile": "Interactive web interface for pophelper",
+      "detailed_description": "A Shiny-based web application that provides an interactive graphical user interface for the pophelper R package.",
+      "domains": [
+        "Bioinfo",
+        "Population Genetics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "gui"
+      ],
+      "application_level": "platform",
+      "primary_language": "R",
+      "repo_url": "https://github.com/royfrancis/pophelperShiny",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "shiny",
+        "visualization",
+        "gui"
+      ],
+      "id": 172
+    },
+    {
+      "name": "qtl2geno",
+      "one_line_profile": "R/qtl2 module for genotype treatment",
+      "detailed_description": "A component of the R/qtl2 software suite, focusing on genotype data processing, including imputation, probability calculation, and map estimation for QTL analysis.",
+      "domains": [
+        "Bioinfo",
+        "Genetics"
+      ],
+      "subtask_category": [
+        "genotype_imputation",
+        "qtl_mapping"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/rqtl/qtl2geno",
+      "help_website": [
+        "https://kbroman.org/qtl2/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "qtl",
+        "genotype",
+        "imputation"
+      ],
+      "id": 173
+    },
+    {
+      "name": "STITCH",
+      "one_line_profile": "Sequencing To Imputation Through Constructing Haplotypes",
+      "detailed_description": "A method for haplotype imputation and phasing from low-coverage sequencing data without requiring a reference panel.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "genotype_imputation",
+        "haplotype_phasing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/rwdavies/STITCH",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "imputation",
+        "phasing",
+        "low-coverage-sequencing"
+      ],
+      "id": 174
+    },
+    {
+      "name": "sapphire",
+      "one_line_profile": "Polishing of Phased Haplotypes Integrating Read Enhancements",
+      "detailed_description": "A tool for improving the accuracy of phased haplotypes by integrating information from sequencing reads (SAPPHIRE).",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "haplotype_phasing",
+        "error_correction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rwk-unil/sapphire",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "phasing",
+        "haplotype",
+        "polishing"
+      ],
+      "id": 175
+    },
+    {
+      "name": "mlinker",
+      "one_line_profile": "Haplotype phasing from long/linked read sequencing",
+      "detailed_description": "A tool designed to determine haplotype phase using data from long-read or linked-read sequencing technologies.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "haplotype_phasing",
+        "long_read_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rwtourdot/mlinker",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "phasing",
+        "long-reads",
+        "haplotype"
+      ],
+      "id": 176
+    },
+    {
+      "name": "seirsplus",
+      "one_line_profile": "Extended SEIRS epidemic dynamics models",
+      "detailed_description": "A Python package implementing extended SEIRS models for epidemic dynamics, supporting network-structured populations, testing, contact tracing, and interventions.",
+      "domains": [
+        "Bioinfo",
+        "Epidemiology"
+      ],
+      "subtask_category": [
+        "epidemiological_modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ryansmcgee/seirsplus",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "epidemiology",
+        "seirs",
+        "network-model"
+      ],
+      "id": 177
+    },
+    {
+      "name": "starmie",
+      "one_line_profile": "Plotting and inference for population structure models",
+      "detailed_description": "An R package providing utilities for plotting and performing inference on population structure models, facilitating the analysis of genetic clustering results.",
+      "domains": [
+        "Bioinfo",
+        "Population Genetics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "population_structure_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/sa-lee/starmie",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "population-structure",
+        "visualization",
+        "r-package"
+      ],
+      "id": 178
+    },
+    {
+      "name": "InStruct",
+      "one_line_profile": "Bayesian MCMC Global Population Structure Analysis Program",
+      "detailed_description": "A tool for inferring population structure and selfing rates from genotype data using a Bayesian MCMC approach.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/slowkoni/InStruct",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "population-genetics",
+        "bayesian-inference",
+        "structure-analysis"
+      ],
+      "id": 179
+    },
+    {
+      "name": "admixture-simulation",
+      "one_line_profile": "Simulation of admixed individuals using Wright-Fisher forward model",
+      "detailed_description": "A utility for simulating admixed individuals from pure ancestry individuals, useful for validating admixture inference tools.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "data_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/slowkoni/admixture-simulation",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "simulation",
+        "admixture",
+        "population-genetics"
+      ],
+      "id": 180
+    },
+    {
+      "name": "RFMIX",
+      "one_line_profile": "Local Ancestry and Admixture Inference Tool",
+      "detailed_description": "A discriminative method for modeling local ancestry in admixed populations, widely used for phasing and ancestry inference.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "local_ancestry_inference",
+        "admixture_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/slowkoni/rfmix",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ancestry-inference",
+        "admixture",
+        "genotyping"
+      ],
+      "id": 181
+    },
+    {
+      "name": "SCOPE",
+      "one_line_profile": "Scalable population structure inference",
+      "detailed_description": "A method for scalable population structure inference from genomic data, developed by Sriram Lab.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/sriramlab/SCOPE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "population-structure",
+        "genomics",
+        "inference"
+      ],
+      "id": 182
+    },
+    {
+      "name": "liftOverPlink",
+      "one_line_profile": "Wrapper for liftOver to convert PLINK genotype data",
+      "detailed_description": "A tool to convert PLINK binary genotype data between different genome reference builds using UCSC liftOver.",
+      "domains": [
+        "B2"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "genome_assembly_liftover"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sritchie73/liftOverPlink",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "plink",
+        "liftover",
+        "genotype-data"
+      ],
+      "id": 183
+    },
+    {
+      "name": "admixturePipeline",
+      "one_line_profile": "Pipeline for running ADMIXTURE analysis from VCF",
+      "detailed_description": "A pipeline that automates the process of running ADMIXTURE analysis starting from VCF files.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "population_structure_inference",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stevemussmann/admixturePipeline",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "admixture",
+        "vcf",
+        "pipeline"
+      ],
+      "id": 184
+    },
+    {
+      "name": "admix",
+      "one_line_profile": "Admixture analysis tool for Python",
+      "detailed_description": "A Python library for admixture analysis supporting raw data from DTC genetic testing services like 23andMe.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "admixture_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stevenliuyi/admix",
+      "help_website": [
+        "https://admix.readthedocs.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "admixture",
+        "python",
+        "ancestry"
+      ],
+      "id": 185
+    },
+    {
+      "name": "popgen-stats",
+      "one_line_profile": "Scripts to calculate population genetics statistics",
+      "detailed_description": "A collection of Python scripts for calculating common population genetics statistics.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "statistics_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tatumdmortimer/popgen-stats",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "population-genetics",
+        "statistics",
+        "python"
+      ],
+      "id": 186
+    },
+    {
+      "name": "MultiTypeTree",
+      "one_line_profile": "BEAST 2 package for structured population phylogenetics",
+      "detailed_description": "A BEAST 2 package that provides support for multi-type trees, enabling phylogenetic inference on structured populations.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "population_structure_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/tgvaughan/MultiTypeTree",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "beast2",
+        "phylogenetics",
+        "structured-populations"
+      ],
+      "id": 187
+    },
+    {
+      "name": "MethPhaser",
+      "one_line_profile": "Methylation-based haplotype phasing of human genomes",
+      "detailed_description": "A tool for phasing human genomes using methylation data, leveraging the correlation between methylation patterns and haplotypes.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "haplotype_phasing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/treangenlab/methphaser",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "phasing",
+        "methylation",
+        "genomics"
+      ],
+      "id": 188
+    },
+    {
+      "name": "cobraa",
+      "one_line_profile": "Coalescent based reconstruction of ancient admixture",
+      "detailed_description": "A hidden Markov model to infer ghost admixture using just a diploid sequence based on coalescent theory.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "admixture_inference",
+        "demographic_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/trevorcousins/cobraa",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "coalescent",
+        "admixture",
+        "ancient-dna"
+      ],
+      "id": 189
+    },
+    {
+      "name": "msprime",
+      "one_line_profile": "Efficient coalescent simulation of genomic data",
+      "detailed_description": "A robust and efficient simulator of ancestry and genomic sequence data using population genetic models.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "data_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tskit-dev/msprime",
+      "help_website": [
+        "https://tskit.dev/msprime/docs/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "simulation",
+        "coalescent",
+        "population-genetics"
+      ],
+      "id": 190
+    },
+    {
+      "name": "tskit",
+      "one_line_profile": "Tree sequence toolkit for population genetics",
+      "detailed_description": "A library for succinct storage and processing of large-scale genetic genealogy and population genetic data.",
+      "domains": [
+        "B2",
+        "B2-04"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "ancestry_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tskit-dev/tskit",
+      "help_website": [
+        "https://tskit.dev/tskit/docs/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "tree-sequence",
+        "population-genetics",
+        "arg"
+      ],
+      "id": 191
+    },
+    {
+      "name": "deep_ev_tracker",
+      "one_line_profile": "Data-driven Feature Tracking for Event Cameras",
+      "detailed_description": "A deep learning based feature tracker specifically designed for event cameras.",
+      "domains": [
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "feature_tracking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uzh-rpg/deep_ev_tracker",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "event-camera",
+        "tracking",
+        "deep-learning"
+      ],
+      "id": 192
+    },
+    {
+      "name": "rl_vo",
+      "one_line_profile": "Reinforcement Learning Meets Visual Odometry",
+      "detailed_description": "A reinforcement learning approach to visual odometry for robotics navigation.",
+      "domains": [
+        "Robotics",
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "visual_odometry"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/uzh-rpg/rl_vo",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "visual-odometry",
+        "reinforcement-learning",
+        "robotics"
+      ],
+      "id": 193
+    },
+    {
+      "name": "rpg_timelens",
+      "one_line_profile": "Event-based Video Frame Interpolation",
+      "detailed_description": "A method for video frame interpolation using event camera data.",
+      "domains": [
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "frame_interpolation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uzh-rpg/rpg_timelens",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "video-interpolation",
+        "event-camera",
+        "computer-vision"
+      ],
+      "id": 194
+    },
+    {
+      "name": "finemapr",
+      "one_line_profile": "R wrapper pipeline for genetic fine-mapping tools",
+      "detailed_description": "An R package that implements a workflow for fine-mapping of genetic variants, wrapping external tools such as FINEMAP, CAVIAR, PAINTOR, and GCTA-COJO to streamline the analysis process.",
+      "domains": [
+        "B2",
+        "Genetics"
+      ],
+      "subtask_category": [
+        "fine_mapping",
+        "variant_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/variani/finemapr",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "fine-mapping",
+        "gwas",
+        "genetics"
+      ],
+      "id": 195
+    },
+    {
+      "name": "ancestry",
+      "one_line_profile": "Admixture coefficient estimation from genotype data",
+      "detailed_description": "A program designed to estimate admixture coefficients for individuals using genotype or sequence data, useful in population genetics for inferring ancestry proportions.",
+      "domains": [
+        "B2-04",
+        "Population Genetics"
+      ],
+      "subtask_category": [
+        "admixture_estimation",
+        "ancestry_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/vibansal/ancestry",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "admixture",
+        "population-genetics",
+        "ancestry"
+      ],
+      "id": 196
+    },
+    {
+      "name": "HapCUT",
+      "one_line_profile": "Haplotype phasing from DNA sequence reads",
+      "detailed_description": "A tool for assembling haplotypes from sequence reads, capable of handling data from various sequencing technologies to resolve phase information of variants.",
+      "domains": [
+        "B2-04",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "phasing",
+        "haplotype_assembly"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/vibansal/hapcut",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phasing",
+        "haplotype",
+        "sequencing"
+      ],
+      "id": 197
+    },
+    {
+      "name": "WhatsHap",
+      "one_line_profile": "Read-based phasing of genomic variants",
+      "detailed_description": "A software for phasing genomic variants using DNA sequencing reads, also known as haplotype assembly. It works with long reads (PacBio, Nanopore) and supports various phasing modes.",
+      "domains": [
+        "B2-04",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "phasing",
+        "haplotype_assembly"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/whatshap/whatshap",
+      "help_website": [
+        "https://whatshap.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "phasing",
+        "long-reads",
+        "haplotype"
+      ],
+      "id": 198
+    },
+    {
+      "name": "admix-simu",
+      "one_line_profile": "Simulation of admixture between multiple populations",
+      "detailed_description": "A program to simulate admixture events involving multiple ancestral populations, useful for testing population genetics models and inference tools.",
+      "domains": [
+        "B2-04",
+        "Population Genetics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "population_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/williamslab/admix-simu",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "simulation",
+        "admixture",
+        "population-genetics"
+      ],
+      "id": 199
+    },
+    {
+      "name": "PSVCP",
+      "one_line_profile": "Pan-genome construction and variation calling pipeline",
+      "detailed_description": "A pipeline designed for constructing pan-genomes and calling population structure variations, facilitating the analysis of genetic diversity across populations.",
+      "domains": [
+        "B2",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "pangenome_construction",
+        "variant_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wjian8/psvcp_v1.01",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "pangenome",
+        "structural-variation",
+        "pipeline"
+      ],
+      "id": 200
+    },
+    {
+      "name": "TrackVLA",
+      "one_line_profile": "Embodied visual tracking model for robotics",
+      "detailed_description": "A vision-language-action model implementation for embodied visual tracking in the wild, enabling robots to track objects based on visual and semantic cues.",
+      "domains": [
+        "Robotics",
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "visual_tracking",
+        "embodied_ai"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wsakobe/TrackVLA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "robotics",
+        "visual-tracking",
+        "vlm"
+      ],
+      "id": 201
+    },
+    {
+      "name": "HapHiC",
+      "one_line_profile": "Allele-aware scaffolding tool using Hi-C data",
+      "detailed_description": "A fast, reference-independent scaffolding tool that uses Hi-C data to correct assembly errors and anchor contigs to chromosomes, with allele-aware capabilities for phasing.",
+      "domains": [
+        "B2-04",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "scaffolding",
+        "phasing",
+        "genome_assembly"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zengxiaofei/HapHiC",
+      "help_website": [
+        "https://haphic.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "hi-c",
+        "scaffolding",
+        "assembly"
+      ],
+      "id": 202
+    },
+    {
+      "name": "seqminer",
+      "one_line_profile": "Efficient query of genomic sequence data in R",
+      "detailed_description": "An R package for efficiently querying and retrieving data from VCF, BCF, and BGEN files, facilitating the handling of large-scale genomic datasets in R environments.",
+      "domains": [
+        "B2",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "data_access",
+        "data_query"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/zhanxw/seqminer",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "vcf",
+        "bgen",
+        "data-handling"
+      ],
+      "id": 203
+    },
+    {
+      "name": "HIBAG",
+      "one_line_profile": "HLA genotype imputation with attribute bagging",
+      "detailed_description": "An R package for imputing HLA genotypes using SNP data, employing an attribute bagging method to handle the high polymorphism of the HLA region.",
+      "domains": [
+        "B2-04",
+        "Immunogenetics"
+      ],
+      "subtask_category": [
+        "imputation",
+        "hla_typing"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/zhengxwen/HIBAG",
+      "help_website": [
+        "https://bioconductor.org/packages/HIBAG"
+      ],
+      "license": null,
+      "tags": [
+        "hla",
+        "imputation",
+        "bioconductor"
+      ],
+      "id": 204
+    }
+  ]
+}

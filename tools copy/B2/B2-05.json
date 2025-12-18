@@ -1,0 +1,5176 @@
+{
+  "generated_at": "2025-12-16T17:56:44.638889+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "B2",
+      "leaf_cluster_name": "生信-变异检测与基因分型生态",
+      "domain": "Bioinfo",
+      "typical_objects": "BAM/CRAM/VCF",
+      "task_chain": "QC→calling→过滤/分型→注释→benchmark",
+      "tool_form": "CLI + 评测套件 + 数据集"
+    },
+    "unit": {
+      "unit_id": "B2-05",
+      "unit_name": "注释与变异效应预测",
+      "target_scale": "200–450",
+      "coverage_tools": "annotation engines、pathogenicity predictors"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] bcftools annotate",
+        "[GH] REVEL",
+        "[GH] CADD",
+        "[GH] InterVar",
+        "[GH] AlphaMissense",
+        "[GH] SpliceAI",
+        "[GH] Funcotator",
+        "[GH] ANNOVAR",
+        "[GH] SnpEff",
+        "[GH] VEP",
+        "[GH] variant annotation",
+        "[GH] variant effect prediction",
+        "[GH] VCF annotation",
+        "[GH] functional annotation",
+        "[GH] pathogenicity prediction",
+        "[GH] clinical variant interpretation",
+        "[GH] ACMG classification",
+        "[GH] splice prediction",
+        "[GH] missense prediction",
+        "[GH] genomic annotator",
+        "[GH] variant prioritization",
+        "[GH] deleteriousness score",
+        "[GH] variant classifier",
+        "[WEB] variant annotation tools github",
+        "[WEB] variant effect prediction deep learning github",
+        "[WEB] VCF annotation pipeline github",
+        "[WEB] pathogenicity prediction tools github",
+        "[WEB] ACMG variant classification github",
+        "[WEB] clinical genomics annotation github"
+      ],
+      "total_candidates": 1032,
+      "tool_candidates": 402,
+      "final_tools": 207
+    }
+  },
+  "tools": [
+    {
+      "name": "ASC3",
+      "one_line_profile": "Variant prioritization tool for rare Mendelian diseases using multiple instance learning",
+      "detailed_description": "A variant prioritization tool that leverages multiple instance learning (MIL) to identify causal variants in rare Mendelian disease genomic testing.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_prioritization",
+        "pathogenicity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/4pygmalion/ASC3",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "variant-prioritization",
+        "mendelian-disease",
+        "machine-learning"
+      ],
+      "id": 1
+    },
+    {
+      "name": "MIRACUM-Pipe",
+      "one_line_profile": "Whole exome sequencing pipeline with variant annotation and reporting",
+      "detailed_description": "A comprehensive Whole Exome Sequencing (WES) pipeline that includes advanced variant annotation features and automated PDF reporting capabilities.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "variant_annotation",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/AG-Boerries/MIRACUM-Pipe",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "wes",
+        "variant-annotation",
+        "pipeline"
+      ],
+      "id": 2
+    },
+    {
+      "name": "PIntron",
+      "one_line_profile": "Pipeline for gene-structure prediction via spliced alignment",
+      "detailed_description": "A pipeline for gene-structure prediction based on spliced alignment of transcript sequences (ESTs and mRNAs) against a genomic sequence.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "gene_prediction",
+        "alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/AlgoLab/PIntron",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "gene-structure",
+        "spliced-alignment",
+        "genomics"
+      ],
+      "id": 3
+    },
+    {
+      "name": "stmp",
+      "one_line_profile": "Sequence to Medical Phenotypes pipeline for variant annotation and prioritization",
+      "detailed_description": "A pipeline featuring variant annotation, prioritization, pharmacogenomics, and tools for analyzing genomic trios (mother, father, child).",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "variant_prioritization",
+        "pharmacogenomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AshleyLab/stmp",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "genomics",
+        "trio-analysis",
+        "phenotype"
+      ],
+      "id": 4
+    },
+    {
+      "name": "simple_sv_annotation",
+      "one_line_profile": "Utility to simplify snpEff annotations for structural variants",
+      "detailed_description": "A tool designed to simplify and streamline snpEff annotations for interesting structural variant cases.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "structural_variants"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AstraZeneca-NGS/simple_sv_annotation",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "snpeff",
+        "structural-variants",
+        "annotation"
+      ],
+      "id": 5
+    },
+    {
+      "name": "AlphScore",
+      "one_line_profile": "Pathogenicity prediction of missense variants using AlphaFold features",
+      "detailed_description": "A tool for improving pathogenicity prediction of missense variants by incorporating features derived from AlphaFold protein structures.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "pathogenicity_prediction",
+        "variant_effect_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/Ax-Sch/AlphScore",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "alphafold",
+        "missense-variants",
+        "pathogenicity"
+      ],
+      "id": 6
+    },
+    {
+      "name": "AlphaMissenseCheck",
+      "one_line_profile": "Tool to check variant pathogenicity using AlphaMissense predictions",
+      "detailed_description": "A utility to analyze personal genomic data (e.g., 23andMe) against AlphaMissense pathogenicity predictions.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "pathogenicity_prediction",
+        "personal_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Belval/AlphaMissenseCheck",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "alphamissense",
+        "23andme",
+        "pathogenicity"
+      ],
+      "id": 7
+    },
+    {
+      "name": "Watershed",
+      "one_line_profile": "Probabilistic model for rare variant prioritization using RNA-seq",
+      "detailed_description": "A tool for the prioritization of functional rare genetic variants by integrating genomic annotations and RNA-seq data.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_prioritization",
+        "multi_omics"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/BennyStrobes/Watershed",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rna-seq",
+        "rare-variants",
+        "probabilistic-model"
+      ],
+      "id": 8
+    },
+    {
+      "name": "VariantAnnotation",
+      "one_line_profile": "Bioconductor package for annotation of genetic variants",
+      "detailed_description": "A Bioconductor package for reading, writing, and annotating genetic variants in VCF format.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "vcf_manipulation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/Bioconductor/VariantAnnotation",
+      "help_website": [
+        "https://bioconductor.org/packages/VariantAnnotation"
+      ],
+      "license": null,
+      "tags": [
+        "bioconductor",
+        "vcf",
+        "annotation"
+      ],
+      "id": 9
+    },
+    {
+      "name": "ensemblVEP",
+      "one_line_profile": "R Interface to Ensembl Variant Effect Predictor",
+      "detailed_description": "A Bioconductor package providing an R interface to the Ensembl Variant Effect Predictor (VEP) for querying variant effects.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "annotation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/Bioconductor/ensemblVEP",
+      "help_website": [
+        "https://bioconductor.org/packages/ensemblVEP"
+      ],
+      "license": null,
+      "tags": [
+        "vep",
+        "ensembl",
+        "bioconductor"
+      ],
+      "id": 10
+    },
+    {
+      "name": "geneXtendeR",
+      "one_line_profile": "R package for functional annotation of ChIP-seq data",
+      "detailed_description": "An R/Bioconductor package designed for optimized functional annotation of ChIP-seq data, focusing on gene extensions.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "chip_seq_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/Bohdan-Khomtchouk/geneXtendeR",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "chip-seq",
+        "annotation",
+        "bioconductor"
+      ],
+      "id": 11
+    },
+    {
+      "name": "SURFY2",
+      "one_line_profile": "Classifier for predicting human transmembrane protein surface location",
+      "detailed_description": "A machine learning classifier to predict whether a human transmembrane protein is located at the cell surface or in intracellular membranes.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "protein_localization_prediction",
+        "classification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Bribak/SURFY2",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "transmembrane-protein",
+        "surfaceome",
+        "machine-learning"
+      ],
+      "id": 12
+    },
+    {
+      "name": "FANTASIA",
+      "one_line_profile": "Functional annotation tool based on embedding space similarity",
+      "detailed_description": "A tool for Functional ANnoTAtion based on embedding space SImilArity, leveraging representation learning.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "embedding"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CBBIO/FANTASIA",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "functional-annotation",
+        "embeddings",
+        "similarity"
+      ],
+      "id": 13
+    },
+    {
+      "name": "introme",
+      "one_line_profile": "Tool to prioritise splice-altering variants for clinical interpretation",
+      "detailed_description": "Introme prioritises coding and noncoding splice-altering variants for clinical variant interpretation.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_prioritization",
+        "splicing_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/CCICB/introme",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "splicing",
+        "variant-prioritization",
+        "clinical-genomics"
+      ],
+      "id": 14
+    },
+    {
+      "name": "vep_pipeline",
+      "one_line_profile": "Pipeline for variant annotation using VEP",
+      "detailed_description": "A pipeline designed to automate variant annotation processes using the Ensembl Variant Effect Predictor (VEP).",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/CERC-Genomic-Medicine/vep_pipeline",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vep",
+        "annotation",
+        "workflow"
+      ],
+      "id": 15
+    },
+    {
+      "name": "genmod",
+      "one_line_profile": "Tool to annotate genetic inheritance patterns in VCF files",
+      "detailed_description": "A tool to annotate models of genetic inheritance patterns in variant files (VCF), aiding in the identification of disease-causing variants.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "inheritance_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Clinical-Genomics/genmod",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vcf",
+        "inheritance-models",
+        "annotation"
+      ],
+      "id": 16
+    },
+    {
+      "name": "stranger",
+      "one_line_profile": "Annotates repeat expansion variants with pathologic implications",
+      "detailed_description": "A tool to annotate output files from ExpansionHunter and TRGT with the pathologic implications of the repeat expansions.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "repeat_expansions"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Clinical-Genomics/stranger",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "repeat-expansion",
+        "annotation",
+        "expansionhunter"
+      ],
+      "id": 17
+    },
+    {
+      "name": "GenomicInteractions",
+      "one_line_profile": "R package for handling and annotating genomic interaction data",
+      "detailed_description": "An R/Bioconductor package for handling genomic interaction data, annotating genomic features with interaction information, and producing summary statistics.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "genomic_interaction_analysis",
+        "annotation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ComputationalRegulatoryGenomicsICL/GenomicInteractions",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bioconductor",
+        "genomic-interactions",
+        "hic"
+      ],
+      "id": 18
+    },
+    {
+      "name": "snpEff (DBHi-BiC fork)",
+      "one_line_profile": "Variant annotation tool (Fork with HGVS support)",
+      "detailed_description": "A version of snpEff that includes HGVS annotations for nucleotide changes, predicting the functional effects of genomic variants.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "variant_effect_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/DBHi-BiC/snpEff",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "snpeff",
+        "hgvs",
+        "annotation"
+      ],
+      "id": 19
+    },
+    {
+      "name": "vcf_annotation_pipeline",
+      "one_line_profile": "Snakemake workflow for VCF filtering and annotation",
+      "detailed_description": "A Snakemake workflow to filter, annotate, and prepare variant call format (VCF) data using GATK4, SnpSift, VEP, and genmod.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "filtering",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ESR-NZ/vcf_annotation_pipeline",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "snakemake",
+        "vcf",
+        "annotation"
+      ],
+      "id": 20
+    },
+    {
+      "name": "svpop",
+      "one_line_profile": "Pipeline for variant annotation and merging",
+      "detailed_description": "A pipeline for variant annotation and merging, developed by the Eichler Lab.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "variant_merging"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EichlerLab/svpop",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "structural-variants",
+        "annotation",
+        "pipeline"
+      ],
+      "id": 21
+    },
+    {
+      "name": "VEP_plugins",
+      "one_line_profile": "Collection of plugins for Ensembl VEP",
+      "detailed_description": "Official repository for plugins that extend the functionality of the Ensembl Variant Effect Predictor (VEP).",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "annotation"
+      ],
+      "application_level": "library",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/Ensembl/VEP_plugins",
+      "help_website": [
+        "http://www.ensembl.org/info/docs/tools/vep/script/vep_plugins.html"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "vep",
+        "plugins",
+        "ensembl"
+      ],
+      "id": 22
+    },
+    {
+      "name": "Ensembl VEP",
+      "one_line_profile": "Standard tool for predicting functional effects of genomic variants",
+      "detailed_description": "The Ensembl Variant Effect Predictor (VEP) predicts the functional effects of genomic variants on genes, transcripts, and protein sequence, as well as regulatory regions.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/Ensembl/ensembl-vep",
+      "help_website": [
+        "http://www.ensembl.org/info/docs/tools/vep/index.html"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "vep",
+        "variant-effect",
+        "genomics"
+      ],
+      "id": 23
+    },
+    {
+      "name": "Envision",
+      "one_line_profile": "Predictor of protein variant molecular effect",
+      "detailed_description": "A machine learning predictor of protein variant molecular effect, trained using large-scale experimental mutagenesis data.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "protein_engineering"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/FowlerLab/Envision2017",
+      "help_website": [
+        "https://envision.gs.washington.edu/"
+      ],
+      "license": null,
+      "tags": [
+        "variant-effect",
+        "mutagenesis",
+        "prediction"
+      ],
+      "id": 24
+    },
+    {
+      "name": "ExPecto",
+      "one_line_profile": "Ab initio prediction of expression effects of genomic variants",
+      "detailed_description": "A deep learning framework for predicting expression effects of human genome variants ab initio from sequence.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "gene_expression_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FunctionLab/ExPecto",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deep-learning",
+        "gene-expression",
+        "variant-effect"
+      ],
+      "id": 25
+    },
+    {
+      "name": "genieBPC",
+      "one_line_profile": "R package for creating analytic cohorts from GENIE BPC data",
+      "detailed_description": "A tool for creating analytic cohorts from AACR Project GENIE BPC clinically annotated genomic data.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "cohort_creation",
+        "clinical_genomics"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/GENIE-BPC/genieBPC",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "genie",
+        "clinical-genomics",
+        "cohort-analysis"
+      ],
+      "id": 26
+    },
+    {
+      "name": "GenomeView",
+      "one_line_profile": "Stand-alone genome browser and editor",
+      "detailed_description": "A stand-alone genome browser and editor that provides interactive visualization of sequences, annotations, alignments, and syntenic mappings.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "visualization",
+        "genome_browsing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/GenomeView/genomeview",
+      "help_website": [
+        "http://genomeview.org"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "genome-browser",
+        "visualization",
+        "genomics"
+      ],
+      "id": 27
+    },
+    {
+      "name": "ClassifyCNV",
+      "one_line_profile": "Tool for clinical annotation of copy-number variants",
+      "detailed_description": "A command-line tool for the clinical annotation and classification of copy-number variants (CNVs) according to ACMG guidelines.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "cnv_annotation",
+        "clinical_classification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Genotek/ClassifyCNV",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cnv",
+        "acmg",
+        "clinical-annotation"
+      ],
+      "id": 28
+    },
+    {
+      "name": "USeq",
+      "one_line_profile": "Suite of Java applications for NGS data analysis",
+      "detailed_description": "A comprehensive suite of over 180 Java applications for analyzing next-generation sequencing data, including ChIP-seq, RNA-seq, and variant annotation.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "ngs_analysis",
+        "variant_annotation",
+        "chip_seq_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/HuntsmanCancerInstitute/USeq",
+      "help_website": [
+        "http://useq.sourceforge.net/"
+      ],
+      "license": null,
+      "tags": [
+        "ngs",
+        "bioinformatics-suite",
+        "java"
+      ],
+      "id": 29
+    },
+    {
+      "name": "table_annovar-nf",
+      "one_line_profile": "Nextflow pipeline for variant annotation using ANNOVAR",
+      "detailed_description": "A Nextflow pipeline designed to automate the annotation of genetic variants using ANNOVAR, facilitating reproducible and scalable bioinformatics workflows.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/IARCbioinfo/table_annovar-nf",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "nextflow",
+        "annovar",
+        "variant-annotation",
+        "bioinformatics"
+      ],
+      "id": 30
+    },
+    {
+      "name": "SpliceAI",
+      "one_line_profile": "Deep learning tool for splice variant prediction",
+      "detailed_description": "A deep learning-based tool that accurately predicts splice junctions from pre-mRNA sequence, aiding in the identification of non-coding variants that affect splicing.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "splicing_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Illumina/SpliceAI",
+      "help_website": [
+        "https://pypi.org/project/spliceai/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "deep-learning",
+        "splicing",
+        "genomics",
+        "variant-prediction"
+      ],
+      "id": 31
+    },
+    {
+      "name": "UTRannotator",
+      "one_line_profile": "VEP plugin for 5' UTR variant annotation",
+      "detailed_description": "A VEP (Variant Effect Predictor) plugin designed to annotate high-impact variants in the 5' untranslated regions (UTR), specifically looking for uORF-creating variants.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "variant_effect_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/ImperialCardioGenetics/UTRannotator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vep-plugin",
+        "utr",
+        "annotation",
+        "genomics"
+      ],
+      "id": 32
+    },
+    {
+      "name": "Seave",
+      "one_line_profile": "Web platform for filtering and annotating genetic variants",
+      "detailed_description": "A web-based platform that enables the filtering and annotation of genetic variants with in silico pathogenicity scores and disease database information, supporting exome and genome data.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_filtering",
+        "variant_annotation"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/KCCG/seave",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "web-platform",
+        "variant-filtering",
+        "clinical-genomics"
+      ],
+      "id": 33
+    },
+    {
+      "name": "gnomAD_DB",
+      "one_line_profile": "SQLite database converter for gnomAD VCF files",
+      "detailed_description": "A package that scales large gnomAD VCF files into a SQLite database to facilitate fast querying of minor allele frequencies (MAF) for variant analysis.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "variant_annotation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KalinNonchev/gnomAD_DB",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gnomad",
+        "sqlite",
+        "vcf",
+        "allele-frequency"
+      ],
+      "id": 34
+    },
+    {
+      "name": "OpenCRAVAT",
+      "one_line_profile": "Modular variant annotation and prioritization tool",
+      "detailed_description": "A dynamic, modular tool for the annotation and prioritization of genomic variants, supporting a wide range of annotators and visualization options.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "variant_prioritization"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/KarchinLab/open-cravat",
+      "help_website": [
+        "https://opencravat.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "annotation",
+        "bioinformatics",
+        "genomics",
+        "variant-analysis"
+      ],
+      "id": 35
+    },
+    {
+      "name": "SOSTAR",
+      "one_line_profile": "Pipeline for RNA isoform annotation and diversity mapping",
+      "detailed_description": "A bioinformatics pipeline for fine-mapping RNA isoform diversity using targeted long-read RNA sequencing, facilitating isoform annotation.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "isoform_annotation",
+        "rna_seq_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LBGC-CFB/SOSTAR",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "rna-seq",
+        "isoforms",
+        "long-read",
+        "annotation"
+      ],
+      "id": 36
+    },
+    {
+      "name": "SPiP",
+      "one_line_profile": "Splicing Prediction Pipeline for variant effect analysis",
+      "detailed_description": "A tool designed to predict the splicing effects of genetic variants, aiding in the interpretation of potential splice-altering mutations.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "splicing_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/LBGC-CFB/SPiP",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "splicing",
+        "prediction",
+        "variants",
+        "r"
+      ],
+      "id": 37
+    },
+    {
+      "name": "Parsing-SnpEff",
+      "one_line_profile": "Parser for SnpEff annotation results",
+      "detailed_description": "A utility to parse SnpEff output into tabular formats, facilitating downstream analysis of annotated SNPs.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "variant_annotation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Leo-Poon-Lab/Parsing-SnpEff",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "snpeff",
+        "parsing",
+        "vcf",
+        "annotation"
+      ],
+      "id": 38
+    },
+    {
+      "name": "DBFE",
+      "one_line_profile": "Distribution-Based Feature Extraction for genomic variants",
+      "detailed_description": "A Python library for extracting features from distributions of genomic variants to facilitate machine learning classifier development.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "feature_extraction",
+        "machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/MNMdiagnostics/dbfe",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "feature-extraction",
+        "genomics",
+        "machine-learning"
+      ],
+      "id": 39
+    },
+    {
+      "name": "PyMissense",
+      "one_line_profile": "Pathogenicity plotting tool for AlphaMissense data",
+      "detailed_description": "A tool to create pathogenicity plots and modified PDB structures for custom proteins based on AlphaMissense predictions.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "visualization",
+        "variant_effect_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MPI-Dortmund/pymissense",
+      "help_website": [],
+      "license": "MPL-2.0",
+      "tags": [
+        "alphamissense",
+        "visualization",
+        "protein-structure",
+        "pathogenicity"
+      ],
+      "id": 40
+    },
+    {
+      "name": "FASSO",
+      "one_line_profile": "Functional Annotations using Sequence and Structure Orthology",
+      "detailed_description": "A tool for generating functional annotations for maize genetics using sequence and structural orthology information.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "orthology"
+      ],
+      "application_level": "solver",
+      "primary_language": "PHP",
+      "repo_url": "https://github.com/Maize-Genetics-and-Genomics-Database/FASSO",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "maize",
+        "annotation",
+        "orthology",
+        "genomics"
+      ],
+      "id": 41
+    },
+    {
+      "name": "NeoPredPipe",
+      "one_line_profile": "Neoantigen prediction pipeline from VCF files",
+      "detailed_description": "A pipeline for predicting neoantigens from single or multi-region VCF files, utilizing ANNOVAR for annotation and netMHCpan for binding prediction.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "neoantigen_prediction",
+        "variant_annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MathOnco/NeoPredPipe",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "neoantigen",
+        "immunotherapy",
+        "cancer-genomics",
+        "pipeline"
+      ],
+      "id": 42
+    },
+    {
+      "name": "SpliceR",
+      "one_line_profile": "Prediction of BE-splice sgRNAs for base editing",
+      "detailed_description": "A program designed to predict base editor-mediated splice sgRNAs for knockout experiments.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "crispr_design",
+        "splicing_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/MoriarityLab/SpliceR",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "base-editing",
+        "crispr",
+        "splicing",
+        "sgrna-design"
+      ],
+      "id": 43
+    },
+    {
+      "name": "EVE",
+      "one_line_profile": "Evolutionary model for variant effect prediction",
+      "detailed_description": "A deep learning model that uses evolutionary data to predict the clinical significance of genetic variants, enabling large-scale interpretation.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "pathogenicity_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OATML/EVE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "evolutionary-biology",
+        "variant-interpretation",
+        "clinical-genomics"
+      ],
+      "id": 44
+    },
+    {
+      "name": "GenNotes",
+      "one_line_profile": "Public consensus annotation system for genetic variants",
+      "detailed_description": "A platform and toolset for the public consensus annotation of genetic variants, facilitating community-driven variant interpretation.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "community_curation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenHumans/gennotes",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "annotation",
+        "crowdsourcing",
+        "genomics",
+        "open-science"
+      ],
+      "id": 45
+    },
+    {
+      "name": "CLEAN-Contact",
+      "one_line_profile": "Enzyme functional annotation with structural inference",
+      "detailed_description": "A contrastive learning-enabled model for predicting enzyme functional annotations by incorporating structural inference.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "enzyme_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PNNL-CompBio/CLEAN-Contact",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "contrastive-learning",
+        "enzymes",
+        "structure-prediction",
+        "annotation"
+      ],
+      "id": 46
+    },
+    {
+      "name": "PlasticityRegularisations_G3",
+      "one_line_profile": "Regularised VEP Stokes routines for geophysics",
+      "detailed_description": "Julia routines for Visco-Elasto-Plastic (VEP) Stokes solvers with regularization, used in geophysical fluid dynamics simulations.",
+      "domains": [
+        "Physics",
+        "Geophysics"
+      ],
+      "subtask_category": [
+        "scientific_modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/PTsolvers/PlasticityRegularisations_G3",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "geophysics",
+        "stokes-flow",
+        "julia",
+        "simulation"
+      ],
+      "id": 47
+    },
+    {
+      "name": "Stokes2D_simpleVEP",
+      "one_line_profile": "2D Stokes solver with VEP rheology",
+      "detailed_description": "A simple implementation of Visco-Elasto-Plastic (VEP) rheology for 2D Stokes solvers, applicable in geodynamic modeling.",
+      "domains": [
+        "Physics",
+        "Geophysics"
+      ],
+      "subtask_category": [
+        "scientific_modeling",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/PTsolvers/Stokes2D_simpleVEP",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "geophysics",
+        "stokes-solver",
+        "rheology",
+        "julia"
+      ],
+      "id": 48
+    },
+    {
+      "name": "StructuralVariantAnnotation",
+      "one_line_profile": "R package for structural variant analysis",
+      "detailed_description": "An R package that provides infrastructure for analyzing and annotating structural variants, integrating with the Bioconductor ecosystem.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "structural_variant_analysis",
+        "annotation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/PapenfussLab/StructuralVariantAnnotation",
+      "help_website": [
+        "https://bioconductor.org/packages/StructuralVariantAnnotation/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "structural-variants",
+        "r",
+        "bioconductor",
+        "annotation"
+      ],
+      "id": 49
+    },
+    {
+      "name": "get_MNV",
+      "one_line_profile": "Tool for identifying and reclassifying MNVs",
+      "detailed_description": "A tool that identifies multiple SNVs within the same codon from genomic reads, reclassifies them as Multi-Nucleotide Variants (MNVs), and computes amino acid changes.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "variant_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/PathoGenOmics-Lab/get_MNV",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "mnv",
+        "variant-calling",
+        "rust",
+        "genomics"
+      ],
+      "id": 50
+    },
+    {
+      "name": "PharmCAT",
+      "one_line_profile": "Pharmacogenomic Clinical Annotation Tool",
+      "detailed_description": "A tool designed to extract pharmacogenomic variants from VCF files and generate clinical reports based on CPIC guidelines.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "clinical_annotation",
+        "pharmacogenomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/PharmGKB/PharmCAT",
+      "help_website": [
+        "https://pharmcat.org/"
+      ],
+      "license": "MPL-2.0",
+      "tags": [
+        "pharmacogenomics",
+        "clinical-annotation",
+        "pgx",
+        "vcf"
+      ],
+      "id": 51
+    },
+    {
+      "name": "ProteinGym-Base",
+      "one_line_profile": "Infrastructure for variant effect prediction datasets",
+      "detailed_description": "Provides the data infrastructure and classes to combine assays, sequences, MSAs, and structures for variant effect prediction research.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "data_management"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ProteinGym/proteingym-base",
+      "help_website": [
+        "https://proteingym.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "benchmarking",
+        "variant-effect-prediction",
+        "protein-engineering"
+      ],
+      "id": 52
+    },
+    {
+      "name": "ProteinGym-Benchmark",
+      "one_line_profile": "Benchmarks for variant effect prediction models",
+      "detailed_description": "A collection of variant effect prediction models and pipelines to benchmark them against the ProteinGym datasets.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "model_evaluation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ProteinGym/proteingym-benchmark",
+      "help_website": [
+        "https://proteingym.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "benchmarking",
+        "variant-effect-prediction",
+        "machine-learning"
+      ],
+      "id": 53
+    },
+    {
+      "name": "RiboSplitter",
+      "one_line_profile": "RNA alternative splicing and translation prediction",
+      "detailed_description": "A tool for predicting protein translation consequences of RNA alternative splicing events.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "splicing_prediction",
+        "translation_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/R-Najjar/RiboSplitter",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "alternative-splicing",
+        "translation",
+        "rna",
+        "r"
+      ],
+      "id": 54
+    },
+    {
+      "name": "spyrmsd",
+      "one_line_profile": "Symmetry-corrected RMSD calculation tool",
+      "detailed_description": "A Python tool for calculating symmetry-corrected Root Mean Square Deviation (RMSD), essential for comparing molecular structures.",
+      "domains": [
+        "Chemistry",
+        "Structural Biology"
+      ],
+      "subtask_category": [
+        "structural_analysis",
+        "rmsd_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RMeli/spyrmsd",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rmsd",
+        "molecular-structure",
+        "cheminformatics",
+        "python"
+      ],
+      "id": 55
+    },
+    {
+      "name": "CAVA",
+      "one_line_profile": "Clinical Annotation of Variants",
+      "detailed_description": "A fast and lightweight tool for the clinical annotation of genomic variants, designed to be compatible with standard VCF formats.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "clinical_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RahmanTeam/CAVA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "annotation",
+        "clinical",
+        "vcf",
+        "genomics"
+      ],
+      "id": 56
+    },
+    {
+      "name": "NCBoost",
+      "one_line_profile": "Pathogenicity classifier for non-coding variants",
+      "detailed_description": "A machine learning classifier specifically designed to predict the pathogenicity of non-coding variants in Mendelian diseases.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "non_coding_variants"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RausellLab/NCBoost",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "non-coding",
+        "pathogenicity",
+        "machine-learning",
+        "genomics"
+      ],
+      "id": 57
+    },
+    {
+      "name": "HRIBO",
+      "one_line_profile": "Workflow for bacterial Ribo-seq annotation",
+      "detailed_description": "A high-throughput workflow for the analysis and annotation of bacterial Ribo-seq data, including ORF prediction and quality control.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "ribo_seq_analysis",
+        "annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RickGelhausen/HRIBO",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "ribo-seq",
+        "bacteria",
+        "orf-prediction",
+        "workflow"
+      ],
+      "id": 58
+    },
+    {
+      "name": "VirMake",
+      "one_line_profile": "Viral metagenomic analysis pipeline",
+      "detailed_description": "A Snakemake-based pipeline for viral metagenomic data analysis, offering taxonomic and functional annotation.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "metagenomics",
+        "functional_annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Rounge-lab/VirMake",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "viral-metagenomics",
+        "snakemake",
+        "annotation",
+        "pipeline"
+      ],
+      "id": 59
+    },
+    {
+      "name": "fastDFE",
+      "one_line_profile": "Inference of the distribution of fitness effects (DFE) from VCF data",
+      "detailed_description": "A Python package for the fast and flexible inference of the distribution of fitness effects (DFE) of mutations. It includes functionality for parsing VCF files to Site Frequency Spectra (SFS) with ancestral allele and site-degeneracy annotation.",
+      "domains": [
+        "Bioinfo",
+        "Evolutionary Biology"
+      ],
+      "subtask_category": [
+        "inference",
+        "statistical_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Sendrowski/fastDFE",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "population-genetics",
+        "dfe",
+        "sfs",
+        "vcf"
+      ],
+      "id": 60
+    },
+    {
+      "name": "PROST",
+      "one_line_profile": "Protein stability change predictor for missense mutations",
+      "detailed_description": "A tool for predicting the effects of missense mutations on protein stability changes using protein sequence data. It leverages AlphaFold2 for predicting PDB structures from FASTA sequences to inform the stability analysis.",
+      "domains": [
+        "Bioinfo",
+        "Protein Engineering"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "variant_effect_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ShahidIqb/PROST",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-stability",
+        "missense-mutation",
+        "alphafold2"
+      ],
+      "id": 61
+    },
+    {
+      "name": "HgvsGo",
+      "one_line_profile": "HGVS notation analyzer for SNVs and indels",
+      "detailed_description": "A program designed for analyzing 'c.' and 'p.' HGVS (Human Genome Variation Society) notations for single nucleotide variations (SNVs) and small insertions/deletions (indels) after variant calling. It serves as an alternative to tools like snpEff and VEP.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "annotation",
+        "variant_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/SoloEdward/HgvsGo",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "hgvs",
+        "variant-annotation",
+        "snv",
+        "indel"
+      ],
+      "id": 62
+    },
+    {
+      "name": "LipidLynxX",
+      "one_line_profile": "Lipidome annotation converter and linker",
+      "detailed_description": "A tool that provides the possibility to convert, cross-match, and link various lipid annotations to tools supporting lipid ontology, pathway, and network analysis, aiming for systems-wide integration of lipidome dynamics.",
+      "domains": [
+        "Bioinfo",
+        "Metabolomics"
+      ],
+      "subtask_category": [
+        "annotation",
+        "data_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SysMedOs/LipidLynxX",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "lipidomics",
+        "ontology",
+        "pathway-analysis"
+      ],
+      "id": 63
+    },
+    {
+      "name": "covigator-ngs-pipeline",
+      "one_line_profile": "Nextflow pipeline for SARS-CoV-2 NGS variant calling",
+      "detailed_description": "A Nextflow pipeline for NGS variant calling on SARS-CoV-2 data. It processes FASTQ files to produce normalized and annotated VCF files using tools like GATK, BCFtools, LoFreq, and iVar.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "workflow",
+        "variant_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/TRON-Bioinformatics/covigator-ngs-pipeline",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sars-cov-2",
+        "ngs",
+        "variant-calling",
+        "nextflow"
+      ],
+      "id": 64
+    },
+    {
+      "name": "vafator",
+      "one_line_profile": "Technical annotation of VCF variants from BAM files",
+      "detailed_description": "A tool to annotate variants in a VCF file with technical annotations (such as allele frequencies and read depths) derived directly from one or more BAM alignment files.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "annotation",
+        "variant_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TRON-Bioinformatics/vafator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vcf",
+        "bam",
+        "annotation",
+        "variant-calling"
+      ],
+      "id": 65
+    },
+    {
+      "name": "Diablo_ACMG",
+      "one_line_profile": "Automated ACMG classification for genetic variants",
+      "detailed_description": "A tool for the automated classification of genetic variants according to the criteria established by the American College of Medical Genetics and Genomics (ACMG).",
+      "domains": [
+        "Bioinfo",
+        "Clinical Genetics"
+      ],
+      "subtask_category": [
+        "classification",
+        "variant_interpretation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TheSergeyPixel/Diablo_ACMG",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "acmg",
+        "variant-classification",
+        "clinical-genomics"
+      ],
+      "id": 66
+    },
+    {
+      "name": "coMET",
+      "one_line_profile": "Visualization tool for EWAS and genomic association scans",
+      "detailed_description": "An R-based package and web-based plotting tool to visualize genome-wide association scans, particularly Epigenome-Wide Association Scans (EWAS). It visualizes association signals, methylation correlation (co-methylation), and functional genomic annotations.",
+      "domains": [
+        "Bioinfo",
+        "Epigenetics"
+      ],
+      "subtask_category": [
+        "visualization",
+        "statistical_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/TiphaineCMartin/coMET_original",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "ewas",
+        "visualization",
+        "methylation",
+        "genomics"
+      ],
+      "id": 67
+    },
+    {
+      "name": "GenePy",
+      "one_line_profile": "Gene scoring tool using VEP annotation",
+      "detailed_description": "A tool for gene scoring and prioritization that utilizes Ensembl VEP annotations and gnomAD data. It is designed to handle variant effect prediction and scoring for genetic analysis.",
+      "domains": [
+        "Bioinfo",
+        "Genetics"
+      ],
+      "subtask_category": [
+        "scoring",
+        "annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UoS-HGIG/GenePy-1.4",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vep",
+        "gene-scoring",
+        "variant-analysis"
+      ],
+      "id": 68
+    },
+    {
+      "name": "VPOT",
+      "one_line_profile": "Variant Prioritisation Ordering Tool for ANNOVAR VCFs",
+      "detailed_description": "A Python tool designed to allow prioritization of variants in VCF files that have been annotated with ANNOVAR. It helps in ordering variants based on specific criteria for downstream analysis.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "prioritization",
+        "filtering"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/VCCRI/VPOT",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "variant-prioritization",
+        "annovar",
+        "vcf"
+      ],
+      "id": 69
+    },
+    {
+      "name": "InterVar",
+      "one_line_profile": "Clinical interpretation of genetic variants by ACMG-AMP guidelines",
+      "detailed_description": "A bioinformatics software tool for the clinical interpretation of genetic variants according to the 2015 ACMG-AMP guidelines. It automates the classification of variants based on various evidence criteria.",
+      "domains": [
+        "Bioinfo",
+        "Clinical Genetics"
+      ],
+      "subtask_category": [
+        "variant_interpretation",
+        "classification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/WGLab/InterVar",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "acmg",
+        "clinical-genomics",
+        "variant-interpretation"
+      ],
+      "id": 70
+    },
+    {
+      "name": "PhenoSV",
+      "one_line_profile": "Phenotype-aware prioritization of structural variants",
+      "detailed_description": "An interpretable phenotype-aware model for the prioritization of genes affected by structural variants (SVs). It integrates phenotype information to improve the identification of pathogenic SVs.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "prioritization",
+        "structural_variant_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/WGLab/PhenoSV",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variants",
+        "phenotype",
+        "prioritization"
+      ],
+      "id": 71
+    },
+    {
+      "name": "ICAnet",
+      "one_line_profile": "ICA-based functional module detection for cell clustering",
+      "detailed_description": "A tool that uses Independent Component Analysis (ICA) to decipher functional modules for better cell clustering and annotation, likely in the context of single-cell data analysis.",
+      "domains": [
+        "Bioinfo",
+        "Single-cell Biology"
+      ],
+      "subtask_category": [
+        "clustering",
+        "annotation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/WWXkenmo/ICAnet",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ica",
+        "clustering",
+        "single-cell",
+        "functional-modules"
+      ],
+      "id": 72
+    },
+    {
+      "name": "VVP",
+      "one_line_profile": "VAAST Variant Prioritizer",
+      "detailed_description": "VVP (VAAST Variant Prioritizer) is a tool for rapidly prioritizing genetic variants. It is designed to work with VAAST output or similar data to identify likely pathogenic variants.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "prioritization",
+        "variant_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/Yandell-Lab/VVP-pub",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "variant-prioritization",
+        "vaast",
+        "genetics"
+      ],
+      "id": 73
+    },
+    {
+      "name": "Maverick",
+      "one_line_profile": "Deep learning variant effect prediction",
+      "detailed_description": "A Mendelian approach to variant effect prediction built in Keras. It uses deep learning to predict the pathogenicity or effect of genetic variants.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "prediction",
+        "variant_effect_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ZuchnerLab/Maverick",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "variant-prediction",
+        "keras"
+      ],
+      "id": 74
+    },
+    {
+      "name": "hpcleap_dnds",
+      "one_line_profile": "Sliding window dN/dS vs functional domain comparison",
+      "detailed_description": "A tool for comparing sliding window dN/dS ratios against functional protein domain annotations. It aggregates bioinformatics information for VectorBase gene IDs to analyze selective pressures along protein sequences.",
+      "domains": [
+        "Bioinfo",
+        "Evolutionary Biology"
+      ],
+      "subtask_category": [
+        "analysis",
+        "comparative_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "OpenEdge ABL",
+      "repo_url": "https://github.com/a1ultima/hpcleap_dnds",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dnds",
+        "evolution",
+        "protein-domains",
+        "selection-pressure"
+      ],
+      "id": 75
+    },
+    {
+      "name": "deepSimDEF",
+      "one_line_profile": "Deep learning for functional analysis of genes via GO annotations",
+      "detailed_description": "Offers single- and multi-channel deep learning models for the functional analysis of genes using Gene Ontology (GO) annotations of gene products (RNAs, proteins).",
+      "domains": [
+        "Bioinfo",
+        "Functional Genomics"
+      ],
+      "subtask_category": [
+        "functional_analysis",
+        "annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ahmadpgh/deepSimDEF",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "gene-ontology",
+        "functional-analysis"
+      ],
+      "id": 76
+    },
+    {
+      "name": "genofan",
+      "one_line_profile": "Workflow for bacterial genome functional annotation",
+      "detailed_description": "A workflow designed for the functional annotation of a set of bacterial genomes, facilitating comparative genomics and functional analysis.",
+      "domains": [
+        "Bioinfo",
+        "Microbiology"
+      ],
+      "subtask_category": [
+        "workflow",
+        "annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/alexmsalmeida/genofan",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bacterial-genomics",
+        "annotation",
+        "workflow"
+      ],
+      "id": 77
+    },
+    {
+      "name": "StrVCTVRE",
+      "one_line_profile": "Structural variant classifier for exonic deletions and duplications",
+      "detailed_description": "StrVCTVRE is a classifier designed to predict the pathogenicity of structural variants, specifically exonic deletions and duplications, distinguishing between pathogenic and benign variants.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "classification",
+        "variant_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/andrewSharo/StrVCTVRE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variants",
+        "pathogenicity",
+        "classifier"
+      ],
+      "id": 78
+    },
+    {
+      "name": "distillR",
+      "one_line_profile": "Distilling functional annotations of genomes and metagenomes",
+      "detailed_description": "An R package for distilling and summarizing functional annotations of bacterial genomes and metagenomes, aiding in the interpretation of complex functional profiles.",
+      "domains": [
+        "Bioinfo",
+        "Metagenomics"
+      ],
+      "subtask_category": [
+        "annotation",
+        "summarization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/anttonalberdi/distillR",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "metagenomics",
+        "functional-annotation",
+        "r-package"
+      ],
+      "id": 79
+    },
+    {
+      "name": "eXtasy",
+      "one_line_profile": "Variant prioritization by genomic data fusion",
+      "detailed_description": "A tool for variant prioritization that uses genomic data fusion to rank variants based on their likelihood of being causal or pathogenic.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "prioritization",
+        "data_fusion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/asifrim/eXtasy",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "variant-prioritization",
+        "genomics",
+        "data-fusion"
+      ],
+      "id": 80
+    },
+    {
+      "name": "Variant Agents",
+      "one_line_profile": "Multi-agent system for genomic analysis",
+      "detailed_description": "A multi-agent system designed for genomic analysis, likely facilitating distributed or modular processing of genomic data.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "analysis",
+        "distributed_computing"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/ayoisio/variant-agents",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "multi-agent",
+        "genomics",
+        "analysis"
+      ],
+      "id": 81
+    },
+    {
+      "name": "mavis",
+      "one_line_profile": "Merging, Annotation, Validation, and Illustration of Structural variants",
+      "detailed_description": "A comprehensive tool for the post-processing of structural variant calls. It handles merging, annotation, validation, and visualization (illustration) of structural variants from sequencing data.",
+      "domains": [
+        "Bioinfo",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "annotation",
+        "visualization",
+        "validation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bcgsc/mavis",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "structural-variants",
+        "visualization",
+        "annotation"
+      ],
+      "id": 82
+    },
+    {
+      "name": "auto-acmg",
+      "one_line_profile": "Automatic classification of sequence variants and CNVs according to ACMG criteria",
+      "detailed_description": "A tool for automatic classification of sequence variants and Copy Number Variants (CNVs) based on the guidelines from the American College of Medical Genetics and Genomics (ACMG).",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_classification",
+        "clinical_interpretation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bihealth/auto-acmg",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "acmg",
+        "variant-classification",
+        "cnv",
+        "clinical-genomics"
+      ],
+      "id": 83
+    },
+    {
+      "name": "DeepSVP",
+      "one_line_profile": "Prioritizing Copy Number Variants (CNV) using Phenotype and Gene Functional Similarity",
+      "detailed_description": "A method for prioritizing Copy Number Variants (CNVs) by integrating phenotype information and gene functional similarity measures.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_prioritization",
+        "cnv_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bio-ontology-research-group/DeepSVP",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cnv",
+        "phenotype",
+        "prioritization",
+        "genomics"
+      ],
+      "id": 84
+    },
+    {
+      "name": "phenomenet-vp",
+      "one_line_profile": "Phenotype-based tool for variant prioritization in WES and WGS data",
+      "detailed_description": "A tool designed to prioritize variants in Whole Exome Sequencing (WES) and Whole Genome Sequencing (WGS) data by leveraging phenotype associations.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_prioritization",
+        "phenotype_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/bio-ontology-research-group/phenomenet-vp",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "variant-prioritization",
+        "wes",
+        "wgs",
+        "phenotype"
+      ],
+      "id": 85
+    },
+    {
+      "name": "Howard",
+      "one_line_profile": "Highly Open Workflow for Annotation & Ranking toward genomic variant Discovery",
+      "detailed_description": "A workflow designed for the annotation and ranking of genomic variants to facilitate variant discovery.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "variant_ranking"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bioinfo-chru-strasbourg/howard",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "variant-annotation",
+        "ranking",
+        "workflow",
+        "genomics"
+      ],
+      "id": 86
+    },
+    {
+      "name": "IDP",
+      "one_line_profile": "Statistical isoform prediction method using hybrid sequencing data",
+      "detailed_description": "A statistical isoform prediction method that constructs possible isoform candidates by combining long reads and short reads with spliced alignment.",
+      "domains": [
+        "B1",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "isoform_prediction",
+        "transcript_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bioinform/IDP",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "isoform-prediction",
+        "long-reads",
+        "rna-seq",
+        "splicing"
+      ],
+      "id": 87
+    },
+    {
+      "name": "MyVariant.info",
+      "one_line_profile": "BioThings API for human variant annotations",
+      "detailed_description": "A high-performance API service for querying and retrieving aggregated human variant annotations from multiple sources.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "data_retrieval"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/biothings/myvariant.info",
+      "help_website": [
+        "http://myvariant.info"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "api",
+        "variant-annotation",
+        "biothings",
+        "human-genetics"
+      ],
+      "id": 88
+    },
+    {
+      "name": "spliceAI-pytorch",
+      "one_line_profile": "PyTorch implementation of SpliceAI for splicing prediction",
+      "detailed_description": "A PyTorch implementation of the SpliceAI model, used for predicting splice junctions and splicing effects of genomic variants.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "splicing_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/boxiangliu/spliceAI-pytorch",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "spliceai",
+        "deep-learning",
+        "pytorch",
+        "splicing"
+      ],
+      "id": 89
+    },
+    {
+      "name": "Varitas",
+      "one_line_profile": "Variant analysis with rapid incorporation of tabular annotation sources",
+      "detailed_description": "A pipeline for variant analysis that facilitates the rapid incorporation and querying of tabular annotation sources.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_analysis",
+        "annotation_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/bpow/varitas",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "variant-analysis",
+        "annotation",
+        "pipeline"
+      ],
+      "id": 90
+    },
+    {
+      "name": "echtvar",
+      "one_line_profile": "Rapid variant annotation and filtering tool",
+      "detailed_description": "A high-performance tool for rapid annotation and filtering of genomic variants, designed to be efficient with large datasets.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "variant_filtering"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/brentp/echtvar",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "variant-annotation",
+        "filtering",
+        "rust",
+        "performance"
+      ],
+      "id": 91
+    },
+    {
+      "name": "geneimpacts",
+      "one_line_profile": "Prioritize effects of variant annotations from VEP and SnpEff",
+      "detailed_description": "A library and tool to prioritize and normalize variant effect annotations from standard tools like VEP and SnpEff.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_prioritization",
+        "annotation_normalization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/brentp/geneimpacts",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vep",
+        "snpeff",
+        "variant-impact",
+        "prioritization"
+      ],
+      "id": 92
+    },
+    {
+      "name": "slivar",
+      "one_line_profile": "Genetic variant expressions, annotation, and filtering",
+      "detailed_description": "A tool for filtering and annotating genetic variants in VCF format using simple expressions, designed for speed and flexibility.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_filtering",
+        "variant_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Nim",
+      "repo_url": "https://github.com/brentp/slivar",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "variant-filtering",
+        "vcf",
+        "annotation",
+        "nim"
+      ],
+      "id": 93
+    },
+    {
+      "name": "vcfanno",
+      "one_line_profile": "Annotate a VCF with other VCFs, BEDs, or tabixed files",
+      "detailed_description": "A fast and flexible tool for annotating VCF files with data from other VCFs, BED files, or tabixed files.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/brentp/vcfanno",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vcf",
+        "annotation",
+        "genomics",
+        "go"
+      ],
+      "id": 94
+    },
+    {
+      "name": "SpliceAI-lookup",
+      "one_line_profile": "Interface for checking variant SpliceAI and Pangolin scores",
+      "detailed_description": "A tool and web interface for looking up precomputed SpliceAI and Pangolin scores for genomic variants to assess splicing impact.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "splicing_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/broadinstitute/SpliceAI-lookup",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spliceai",
+        "pangolin",
+        "splicing",
+        "variant-lookup"
+      ],
+      "id": 95
+    },
+    {
+      "name": "bystro-vcf",
+      "one_line_profile": "Extremely fast Variant Call Format annotation",
+      "detailed_description": "A high-performance VCF annotation tool designed for speed and scalability in genomic data processing.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/bystrogenomics/bystro-vcf",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "vcf",
+        "annotation",
+        "high-performance",
+        "genomics"
+      ],
+      "id": 96
+    },
+    {
+      "name": "VAGrENT",
+      "one_line_profile": "Variation Annotation Generator for Reference Enriched Nucleotide Tracks",
+      "detailed_description": "A toolset for comparing genomic variants to reference genome annotation to identify potential biological consequences.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "consequence_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/cancerit/VAGrENT",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "variant-annotation",
+        "genomics",
+        "perl"
+      ],
+      "id": 97
+    },
+    {
+      "name": "vcf2maf",
+      "one_line_profile": "Convert VCF into TCGA MAF format",
+      "detailed_description": "A tool to convert Variant Call Format (VCF) files into Mutation Annotation Format (MAF), commonly used in cancer genomics (TCGA).",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "annotation_formatting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cbare/vcf2maf",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vcf",
+        "maf",
+        "tcga",
+        "cancer-genomics"
+      ],
+      "id": 98
+    },
+    {
+      "name": "CHAP",
+      "one_line_profile": "Functional annotation of ion channel structures",
+      "detailed_description": "A tool for the functional annotation of ion channel structures, analyzing pore dimensions and hydrophobicity profiles.",
+      "domains": [
+        "B2-05",
+        "B4"
+      ],
+      "subtask_category": [
+        "structural_annotation",
+        "functional_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/channotation/chap",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "ion-channel",
+        "structural-biology",
+        "annotation",
+        "pore-analysis"
+      ],
+      "id": 99
+    },
+    {
+      "name": "AutoCirc",
+      "one_line_profile": "Identification of back-splice junctions of potential circular RNAs",
+      "detailed_description": "A computational toolkit for fast and automatic identification of back-splice junctions of potential circular RNAs (circRNAs) from RNA-seq data.",
+      "domains": [
+        "B1",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "circrna_detection",
+        "splicing_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/chanzhou/AutoCirc",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "circrna",
+        "rna-seq",
+        "splicing",
+        "annotation"
+      ],
+      "id": 100
+    },
+    {
+      "name": "bcbio.prioritize",
+      "one_line_profile": "Prioritize small variants and structural variants based on biological inputs",
+      "detailed_description": "A tool to prioritize small variants, structural variants, and coverage regions based on known biological inputs and databases.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_prioritization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Clojure",
+      "repo_url": "https://github.com/chapmanb/bcbio.prioritize",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "variant-prioritization",
+        "bcbio",
+        "genomics"
+      ],
+      "id": 101
+    },
+    {
+      "name": "Jannovar",
+      "one_line_profile": "Annotation of VCF variants with functional impact",
+      "detailed_description": "A Java-based tool and library for annotating VCF variants with functional impact and information from various databases.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "effect_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/charite/jannovar",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "variant-annotation",
+        "functional-impact",
+        "vcf",
+        "java"
+      ],
+      "id": 102
+    },
+    {
+      "name": "nf-ncov-voc",
+      "one_line_profile": "Workflow for generating mutation profiles of SARS-CoV-2 or Mpox genomes",
+      "detailed_description": "A Nextflow workflow for analyzing and generating mutation profiles for SARS-CoV-2 or Mpox genomes, often used for variant of concern (VOC) tracking.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "viral_variant_analysis",
+        "mutation_profiling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cidgoh/nf-ncov-voc",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sars-cov-2",
+        "mpox",
+        "variant-profiling",
+        "nextflow"
+      ],
+      "id": 103
+    },
+    {
+      "name": "EukMetaSanity",
+      "one_line_profile": "Structural and functional annotation of eukaryotic metagenome-assembled genomes",
+      "detailed_description": "A pipeline for the structural and functional annotation of eukaryotic metagenome-assembled genomes (MAGs).",
+      "domains": [
+        "B2-05",
+        "B3"
+      ],
+      "subtask_category": [
+        "genome_annotation",
+        "metagenomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cjneely10/EukMetaSanity",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "metagenomics",
+        "eukaryotic-annotation",
+        "mags",
+        "pipeline"
+      ],
+      "id": 104
+    },
+    {
+      "name": "anor",
+      "one_line_profile": "Annotation and visualization system based on R and Shiny",
+      "detailed_description": "An R and Shiny-based system for annotation and visualization, likely designed for genomic or clinical data analysis.",
+      "domains": [
+        "B2-05"
+      ],
+      "subtask_category": [
+        "data_annotation",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "R",
+      "repo_url": "https://github.com/clindet/anor",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "r",
+        "shiny",
+        "annotation",
+        "visualization"
+      ],
+      "id": 105
+    },
+    {
+      "name": "SUsPECT",
+      "one_line_profile": "Variant effect prediction based on custom long-read transcriptomes",
+      "detailed_description": "A tool for predicting the effects of variants using custom transcriptomes derived from long-read sequencing data.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "long_read_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/cmbi/SUsPECT",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "variant-effect",
+        "long-read",
+        "transcriptomics",
+        "nextflow"
+      ],
+      "id": 106
+    },
+    {
+      "name": "CellFunTopic",
+      "one_line_profile": "Functional Annotation for Single-Cell Transcriptomics",
+      "detailed_description": "A tool for functional annotation of single-cell transcriptomics data, enabling biological interpretation of cell clusters.",
+      "domains": [
+        "B1",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "single_cell_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/compbioNJU/CellFunTopic",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "single-cell",
+        "functional-annotation",
+        "transcriptomics",
+        "r"
+      ],
+      "id": 107
+    },
+    {
+      "name": "paprbag",
+      "one_line_profile": "Pathogenicity prediction of bacterial genomes",
+      "detailed_description": "A tool for predicting the pathogenicity of bacterial genomes, useful for assessing the potential risk of bacterial variants or strains.",
+      "domains": [
+        "B2-05",
+        "B3"
+      ],
+      "subtask_category": [
+        "pathogenicity_prediction",
+        "bacterial_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/crarlus/paprbag",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pathogenicity",
+        "bacteria",
+        "prediction",
+        "r"
+      ],
+      "id": 108
+    },
+    {
+      "name": "LncADeep",
+      "one_line_profile": "Ab initio lncRNA identification and functional annotation tool",
+      "detailed_description": "A deep learning-based tool for the ab initio identification and functional annotation of long non-coding RNAs (lncRNAs).",
+      "domains": [
+        "B1",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "lncrna_identification",
+        "functional_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Roff",
+      "repo_url": "https://github.com/cyang235/LncADeep",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "lncrna",
+        "deep-learning",
+        "annotation",
+        "genomics"
+      ],
+      "id": 109
+    },
+    {
+      "name": "SSNIP",
+      "one_line_profile": "Spatial Splicing-derived Neoantigen Identifier Pipeline",
+      "detailed_description": "A pipeline for identifying neoantigens derived from cancer-specific splicing events (neojunctions), including neojunction calling and neopeptide prediction.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "neoantigen_prediction",
+        "splicing_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/dakwok/SSNIP",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "neoantigen",
+        "splicing",
+        "cancer-genomics",
+        "immunotherapy"
+      ],
+      "id": 110
+    },
+    {
+      "name": "euryale",
+      "one_line_profile": "Pipeline for taxonomic classification and functional annotation of metagenomic reads",
+      "detailed_description": "A Nextflow pipeline for the taxonomic classification and functional annotation of metagenomic reads, based on MEDUSA.",
+      "domains": [
+        "B2-05",
+        "B3"
+      ],
+      "subtask_category": [
+        "metagenomic_annotation",
+        "taxonomic_classification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/dalmolingroup/euryale",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "metagenomics",
+        "annotation",
+        "classification",
+        "nextflow"
+      ],
+      "id": 111
+    },
+    {
+      "name": "GenOtoScope",
+      "one_line_profile": "Automated ACMG/AMP classification for congenital hearing loss variants",
+      "detailed_description": "A tool for the automated classification of human genetic variants associated with congenital hearing loss according to ACMG/AMP guidelines. It streamlines the interpretation process for specific disease-associated variants.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_classification",
+        "clinical_interpretation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/damianosmel/GenOtoScope",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "acmg",
+        "hearing-loss",
+        "variant-classification"
+      ],
+      "id": 112
+    },
+    {
+      "name": "vase",
+      "one_line_profile": "Variant Annotation, Segregation and Exclusion tool",
+      "detailed_description": "A tool for variant annotation, segregation, and exclusion designed for family or cohort-based rare disease sequencing studies. It processes VCF files to filter variants based on inheritance models and allele frequencies.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "variant_filtering"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/david-a-parry/vase",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rare-disease",
+        "vcf-filtering",
+        "segregation-analysis"
+      ],
+      "id": 113
+    },
+    {
+      "name": "sansa",
+      "one_line_profile": "Structural variant VCF annotation and comparison tool",
+      "detailed_description": "A command-line tool for annotating, deduplicating, and comparing structural variants (SVs) in VCF format. It is part of the Delly ecosystem and facilitates SV analysis.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "structural_variant_annotation",
+        "vcf_manipulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/dellytools/sansa",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "structural-variants",
+        "vcf",
+        "annotation"
+      ],
+      "id": 114
+    },
+    {
+      "name": "CharGer",
+      "one_line_profile": "Characterization of Germline variants tool",
+      "detailed_description": "A software tool for interpreting and characterizing germline variants, often used in the context of cancer genomics to classify pathogenicity based on clinical evidence and databases.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_classification",
+        "germline_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ding-lab/CharGer",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "germline",
+        "cancer-genomics",
+        "variant-interpretation"
+      ],
+      "id": 115
+    },
+    {
+      "name": "dms-vep-pipeline",
+      "one_line_profile": "Pipeline for analyzing deep mutational scanning of viral entry proteins",
+      "detailed_description": "A computational pipeline designed to analyze data from deep mutational scanning (DMS) experiments, specifically focusing on viral entry proteins to assess mutational effects.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "dms_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/dms-vep/dms-vep-pipeline-3",
+      "help_website": [
+        "https://dms-vep.github.io/"
+      ],
+      "license": null,
+      "tags": [
+        "deep-mutational-scanning",
+        "virology",
+        "variant-effect"
+      ],
+      "id": 116
+    },
+    {
+      "name": "spliceai-pytorch",
+      "one_line_profile": "PyTorch implementation of SpliceAI for splicing effect prediction",
+      "detailed_description": "A PyTorch implementation of the SpliceAI model, a deep neural network that predicts the effects of genetic variants on pre-mRNA splicing.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "splicing_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dohlee/spliceai-pytorch",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deep-learning",
+        "splicing",
+        "pytorch"
+      ],
+      "id": 117
+    },
+    {
+      "name": "UNIFAN",
+      "one_line_profile": "Unsupervised cell functional annotation for single-cell RNA-Seq",
+      "detailed_description": "A tool for unsupervised functional annotation of cells in single-cell RNA sequencing data, aiding in the biological interpretation of cell clusters.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "single_cell_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/doraadong/UNIFAN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scrna-seq",
+        "functional-annotation",
+        "unsupervised-learning"
+      ],
+      "id": 118
+    },
+    {
+      "name": "eggnog-mapper",
+      "one_line_profile": "Fast genome-wide functional annotation through orthology assignment",
+      "detailed_description": "A tool for fast functional annotation of novel sequences. It uses precomputed orthologous groups and phylogenies from the eggNOG database to transfer functional information with high precision.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "orthology_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eggnogdb/eggnog-mapper",
+      "help_website": [
+        "http://eggnog-mapper.embl.de/"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "orthology",
+        "functional-annotation",
+        "phylogeny"
+      ],
+      "id": 119
+    },
+    {
+      "name": "Exomiser",
+      "one_line_profile": "Tool to annotate and prioritize exome variants",
+      "detailed_description": "A Java program that functionally annotates and prioritizes variants from whole-exome sequencing data, utilizing phenotype comparisons and model organism data to identify disease-causing variants.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_prioritization",
+        "phenotype_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/exomiser/Exomiser",
+      "help_website": [
+        "https://exomiser.github.io/Exomiser/"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "exome",
+        "rare-disease",
+        "phenotype"
+      ],
+      "id": 120
+    },
+    {
+      "name": "GO FEAT",
+      "one_line_profile": "Rapid web-based functional annotation tool",
+      "detailed_description": "A web-based platform and tool for the rapid functional annotation of genomic and transcriptomic data, leveraging Gene Ontology (GO) terms.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "gene_ontology"
+      ],
+      "application_level": "platform",
+      "primary_language": "PHP",
+      "repo_url": "https://github.com/fab-araujo/gofeat",
+      "help_website": [
+        "http://computationalbiology.ufpa.br/gofeat/"
+      ],
+      "license": null,
+      "tags": [
+        "gene-ontology",
+        "transcriptomics",
+        "web-tool"
+      ],
+      "id": 121
+    },
+    {
+      "name": "vcf-reformatter",
+      "one_line_profile": "VCF file parser and reformatter with VEP annotation support",
+      "detailed_description": "A high-performance tool written in Rust to parse and reformat VCF files, specifically designed to handle complex VEP (Variant Effect Predictor) annotations and convert them into analyzable formats.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "vcf_processing",
+        "annotation_parsing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/flalom/vcf-reformatter",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vcf",
+        "vep",
+        "rust"
+      ],
+      "id": 122
+    },
+    {
+      "name": "VarGenius",
+      "one_line_profile": "Pipeline for variant discovery and annotation",
+      "detailed_description": "A comprehensive software pipeline for variant calling and annotation. It manages data, submits jobs to clusters, and populates a PostgreSQL database with variant data for downstream analysis.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_calling_pipeline",
+        "variant_annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/frankMusacchia/VarGenius",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pipeline",
+        "variant-calling",
+        "database"
+      ],
+      "id": 123
+    },
+    {
+      "name": "SURVIVOR_ant",
+      "one_line_profile": "Framework to annotate structural variants",
+      "detailed_description": "A module within the SURVIVOR framework designed to annotate structural variants (SVs) using known SV databases (VCF) or genomic features (GFF/BED).",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "structural_variant_annotation",
+        "sv_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/fritzsedlazeck/SURVIVOR_ant",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variants",
+        "annotation",
+        "survivor"
+      ],
+      "id": 124
+    },
+    {
+      "name": "MMSplice / MTSplice",
+      "one_line_profile": "Tissue-specific variant effect predictions on splicing",
+      "detailed_description": "A set of machine learning models (MMSplice and MTSplice) for predicting the effects of genetic variants on splicing, including tissue-specific splicing alterations.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "splicing_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gagneurlab/MMSplice_MTSplice",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "splicing",
+        "machine-learning",
+        "tissue-specific"
+      ],
+      "id": 125
+    },
+    {
+      "name": "GeneMark-EP-plus",
+      "one_line_profile": "Automatic eukaryotic gene prediction supported by proteins",
+      "detailed_description": "A gene prediction tool for eukaryotic genomes that utilizes spliced aligned protein data to improve the accuracy of gene structure annotation.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "gene_prediction",
+        "genome_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/gatech-genemark/GeneMark-EP-plus",
+      "help_website": [
+        "http://exon.gatech.edu/GeneMark/"
+      ],
+      "license": null,
+      "tags": [
+        "gene-prediction",
+        "eukaryotes",
+        "protein-mapping"
+      ],
+      "id": 126
+    },
+    {
+      "name": "GeneSCF",
+      "one_line_profile": "Gene Set Clustering based on Functional annotation",
+      "detailed_description": "A command-line tool for clustering gene sets based on functional annotations (e.g., GO, KEGG), facilitating functional enrichment analysis.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "functional_enrichment",
+        "gene_set_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/genescf/GeneSCF",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "enrichment-analysis",
+        "clustering",
+        "functional-annotation"
+      ],
+      "id": 127
+    },
+    {
+      "name": "genome-nexus-annotation-tools",
+      "one_line_profile": "Tools for annotating VCF and MAF files for AACR GENIE",
+      "detailed_description": "A collection of tools developed for the AACR GENIE project to annotate VCF and MAF files from various sequencing centers and merge the results, ensuring consistent variant annotation.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "data_harmonization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/genome-nexus/annotation-tools",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "genie",
+        "maf",
+        "vcf"
+      ],
+      "id": 128
+    },
+    {
+      "name": "ALOFT",
+      "one_line_profile": "Annotation Of Loss-of-Function Transcripts",
+      "detailed_description": "A tool that provides extensive functional annotations and pathogenicity predictions specifically for predicted loss-of-function (LoF) variants in the human genome.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "lof_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gersteinlab/aloft",
+      "help_website": [
+        "http://aloft.gersteinlab.org/"
+      ],
+      "license": "CC0-1.0",
+      "tags": [
+        "loss-of-function",
+        "pathogenicity",
+        "variant-annotation"
+      ],
+      "id": 129
+    },
+    {
+      "name": "FA-nf",
+      "one_line_profile": "Functional annotation pipeline in Nextflow",
+      "detailed_description": "A Nextflow pipeline for the functional annotation of proteins, specifically designed for non-model organisms, integrating various annotation databases and tools.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/guigolab/FA-nf",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "nextflow",
+        "non-model-organisms",
+        "protein-annotation"
+      ],
+      "id": 130
+    },
+    {
+      "name": "HiGlass App",
+      "one_line_profile": "Application for viewing and exploring genomic data",
+      "detailed_description": "A web-based application wrapper around the HiGlass library, enabling users to visualize, explore, and annotate 1D and 2D genomic data (e.g., Hi-C matrices, tracks).",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "genomic_visualization",
+        "data_exploration"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/higlass/higlass-app",
+      "help_website": [
+        "http://higlass.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "hi-c",
+        "genomics"
+      ],
+      "id": 131
+    },
+    {
+      "name": "VCF.Filter",
+      "one_line_profile": "Graphical tool to filter VCF files",
+      "detailed_description": "A Java application providing a graphical interface to filter and prioritize genomic sequence variants in VCF files based on custom annotations.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_filtering",
+        "vcf_visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/hmueller80/VCF.Filter",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gui",
+        "vcf",
+        "filtering"
+      ],
+      "id": 132
+    },
+    {
+      "name": "MoDAFold",
+      "one_line_profile": "Protein structure-based missense mutant prediction strategy using AlphaFold2 and MD",
+      "detailed_description": "A strategy for predicting the structures of missense mutant proteins by combining AlphaFold2 for initial structure generation and Molecular Dynamics (MD) simulations for refinement, aiding in variant effect interpretation.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/idrblab/MoDAFold",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "alphafold2",
+        "molecular-dynamics",
+        "missense-variants"
+      ],
+      "id": 133
+    },
+    {
+      "name": "aiDIVA",
+      "one_line_profile": "Pathogenicity prediction and prioritization of genetic variants",
+      "detailed_description": "A tool for predicting the pathogenicity of genetic variants and prioritizing them for clinical diagnostics, likely utilizing machine learning approaches.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "pathogenicity_prediction",
+        "variant_prioritization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/imgag/aiDIVA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "variant-prioritization",
+        "pathogenicity",
+        "clinical-genomics"
+      ],
+      "id": 134
+    },
+    {
+      "name": "goldmine",
+      "one_line_profile": "Genomic context annotation and functional element enrichment discovery",
+      "detailed_description": "An R package for annotating genomic regions with context information and performing enrichment analysis to discover functional elements associated with the regions of interest.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "enrichment_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/jeffbhasin/goldmine",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "genomic-annotation",
+        "functional-enrichment",
+        "r-package"
+      ],
+      "id": 135
+    },
+    {
+      "name": "needLR",
+      "one_line_profile": "Structural variant filtering and prioritization for long-read data",
+      "detailed_description": "A tool designed to filter and prioritize structural variants (SVs) detected in long-read sequencing data, helping to reduce false positives and identify relevant variants.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_filtering",
+        "structural_variant_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/jgust1/needLR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "long-read",
+        "structural-variants",
+        "filtering"
+      ],
+      "id": 136
+    },
+    {
+      "name": "variant_annotation_wf",
+      "one_line_profile": "Workflow for annotating SNVs, indels, and structural variants",
+      "detailed_description": "A comprehensive workflow for annotating various types of genetic variants including Single Nucleotide Variants (SNVs), insertions/deletions (indels), and Structural Variants (SVs).",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jmonlong/variant_annotation_wf",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "snv",
+        "indel",
+        "structural-variants",
+        "annotation-pipeline"
+      ],
+      "id": 137
+    },
+    {
+      "name": "JCVI_HMP_metagenomic_pipeline",
+      "one_line_profile": "Metagenomic functional annotation pipeline for HMP",
+      "detailed_description": "The metagenomic functional annotation pipeline used by the J. Craig Venter Institute (JCVI) for the Human Microbiome Project (HMP), facilitating the processing and annotation of metagenomic datasets.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "metagenomic_annotation",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/jorvis/JCVI_HMP_metagenomic_pipeline",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "metagenomics",
+        "hmp",
+        "functional-annotation"
+      ],
+      "id": 138
+    },
+    {
+      "name": "LaBranchoR",
+      "one_line_profile": "RNA splicing branchpoint prediction using LSTM",
+      "detailed_description": "A deep learning tool using LSTM networks to predict RNA splicing branchpoints based on upstream sequence features, aiding in the understanding of splicing mechanisms and variant effects.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "splicing_prediction",
+        "variant_effect_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/jpaggi/labranchor",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rna-splicing",
+        "lstm",
+        "deep-learning"
+      ],
+      "id": 139
+    },
+    {
+      "name": "genomics.ai",
+      "one_line_profile": "Web application for single-cell data annotation and visualization",
+      "detailed_description": "A web-based platform leveraging neural networks to annotate and visualize single-cell sequencing data, providing an interactive interface for data exploration.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "single_cell_analysis",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/jst-seminar-rostlab-tum/genomics.ai",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "visualization",
+        "web-app"
+      ],
+      "id": 140
+    },
+    {
+      "name": "pyVEP",
+      "one_line_profile": "Python interface to Ensembl Variant Effect Predictor (VEP)",
+      "detailed_description": "A Python wrapper/interface for the Ensembl Variant Effect Predictor (VEP), allowing users to interact with VEP programmatically within Python scripts and workflows.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kantale/pyVEP",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vep",
+        "python-wrapper",
+        "variant-effect"
+      ],
+      "id": 141
+    },
+    {
+      "name": "gw",
+      "one_line_profile": "Fast genome browser and variant annotation tool",
+      "detailed_description": "A high-performance genome browser and variant annotation tool designed for visualizing sequencing data (BAM/CRAM/VCF) and inspecting variants with speed and efficiency.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "visualization",
+        "variant_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/kcleal/gw",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "genome-browser",
+        "visualization",
+        "vcf"
+      ],
+      "id": 142
+    },
+    {
+      "name": "functional-annotation",
+      "one_line_profile": "Pipeline for functional annotation integrating multi-omics data",
+      "detailed_description": "A pipeline designed to functionally annotate genomes by integrating data from various assays such as RNA-seq, ChIP-seq, and DNase-seq.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "multi_omics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kernco/functional-annotation",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "multi-omics",
+        "genome-annotation",
+        "pipeline"
+      ],
+      "id": 143
+    },
+    {
+      "name": "TiSAn",
+      "one_line_profile": "Tissue-specific variant annotation tool",
+      "detailed_description": "An R package for tissue-specific annotation of genetic variants, helping to interpret the functional impact of variants in specific biological contexts.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "tissue_specificity"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/kevinVervier/TiSAn",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "tissue-specific",
+        "annotation",
+        "r-package"
+      ],
+      "id": 144
+    },
+    {
+      "name": "kipoi-veff",
+      "one_line_profile": "Variant effect prediction plugin for Kipoi model zoo",
+      "detailed_description": "A plugin for the Kipoi model zoo that enables variant effect prediction using various deep learning models hosted on Kipoi.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "deep_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kipoi/kipoi-veff",
+      "help_website": [
+        "https://kipoi.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "kipoi",
+        "variant-effect",
+        "model-zoo"
+      ],
+      "id": 145
+    },
+    {
+      "name": "SGSeq",
+      "one_line_profile": "Splice event prediction and quantification from RNA-seq data",
+      "detailed_description": "A software package for analyzing splice events from RNA-seq data, allowing for the prediction and quantification of alternative splicing isoforms.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "splicing_analysis",
+        "quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ldg21/SGSeq",
+      "help_website": [
+        "https://bioconductor.org/packages/SGSeq/"
+      ],
+      "license": null,
+      "tags": [
+        "rna-seq",
+        "splicing",
+        "bioconductor"
+      ],
+      "id": 146
+    },
+    {
+      "name": "gcv",
+      "one_line_profile": "Genome Context Viewer for comparative genomics and synteny",
+      "detailed_description": "A web-based visualization tool for comparative genomics, focusing on synteny and functional annotations to federate and explore genomic data across species.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "comparative_genomics",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/legumeinfo/gcv",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "synteny",
+        "genome-visualization",
+        "comparative-genomics"
+      ],
+      "id": 147
+    },
+    {
+      "name": "SVScore",
+      "one_line_profile": "Structural variant prioritization using CADD scores",
+      "detailed_description": "A command-line tool that aggregates CADD scores to prioritize structural variants (SVs), providing a pathogenicity scoring metric for larger genomic events.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_prioritization",
+        "structural_variant_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/lganel/SVScore",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variants",
+        "cadd",
+        "prioritization"
+      ],
+      "id": 148
+    },
+    {
+      "name": "AlphaRING",
+      "one_line_profile": "Protein structure-based missense variant deleteriousness prediction",
+      "detailed_description": "A package for predicting the deleteriousness of missense variants using protein structure information, designed to be interpretable.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "structure_based_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/loggy01/alpharing",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "missense-variants",
+        "protein-structure",
+        "pathogenicity"
+      ],
+      "id": 149
+    },
+    {
+      "name": "BedAnno",
+      "one_line_profile": "Genomic variation annotation using BED format databases",
+      "detailed_description": "A tool to annotate genomic variations (hg19) using custom or standard databases provided in BED format, facilitating flexible annotation workflows.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "data_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/ltnetcase/BedAnno",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "bed",
+        "annotation",
+        "genomics"
+      ],
+      "id": 150
+    },
+    {
+      "name": "PenLight",
+      "one_line_profile": "Protein representation learning for structural and functional annotation",
+      "detailed_description": "A deep learning tool using graph neural networks and contrastive learning to generate protein representations for downstream structural and functional annotation tasks.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "protein_annotation",
+        "representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/luo-group/PenLight",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "contrastive-learning",
+        "protein-function"
+      ],
+      "id": 151
+    },
+    {
+      "name": "renovo",
+      "one_line_profile": "Machine-learning based interpreter of germline mutations",
+      "detailed_description": "A clinical machine-learning tool for interpreting the pathogenicity of germline mutations, designed to assist in medical genetics contexts.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_interpretation",
+        "clinical_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mazzalab-ieo/renovo",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "germline",
+        "machine-learning",
+        "variant-interpretation"
+      ],
+      "id": 152
+    },
+    {
+      "name": "variant_calling_pipeline",
+      "one_line_profile": "Variant calling and annotation pipeline using BWA and GATK",
+      "detailed_description": "A Python-based pipeline automating variant calling and annotation steps, integrating standard tools like BWA, GATK, and ENSEMBL for reproducible analysis.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/melbournebioinformatics/variant_calling_pipeline",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gatk",
+        "bwa",
+        "pipeline"
+      ],
+      "id": 153
+    },
+    {
+      "name": "pipette",
+      "one_line_profile": "Variant discovery and annotation pipeline wrapper",
+      "detailed_description": "A Ruby-based wrapper/pipeline for variant discovery and annotation, utilizing GATK and Ensembl resources to streamline genomic analysis.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "annotation_pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/metalhelix/pipette",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gatk",
+        "ensembl",
+        "ruby"
+      ],
+      "id": 154
+    },
+    {
+      "name": "epilogos",
+      "one_line_profile": "Visualization and summarization of multi-biosample functional annotations",
+      "detailed_description": "A method and tool for summarizing and visualizing functional genomic annotations across multiple biosamples, aiding in epigenomic data interpretation.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "epigenomics",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/meuleman/epilogos",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "epigenomics",
+        "visualization",
+        "functional-genomics"
+      ],
+      "id": 155
+    },
+    {
+      "name": "hgvd2annovar",
+      "one_line_profile": "Converter for HGVD data to ANNOVAR database format",
+      "detailed_description": "A utility script to convert Human Genetic Variation Database (HGVD) table files into the generic database format required by ANNOVAR for variant annotation.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "database_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/misshie/hgvd2annovar",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "annovar",
+        "hgvd",
+        "format-conversion"
+      ],
+      "id": 156
+    },
+    {
+      "name": "update_annovar_db",
+      "one_line_profile": "Automation scripts for updating ANNOVAR databases",
+      "detailed_description": "A set of scripts designed to automate the process of downloading and updating the annotation databases used by ANNOVAR.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "database_management",
+        "automation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mobidic/update_annovar_db",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "annovar",
+        "database-update",
+        "automation"
+      ],
+      "id": 157
+    },
+    {
+      "name": "NGS_DNA",
+      "one_line_profile": "Best practice pipeline for Illumina NGS DNA analysis",
+      "detailed_description": "A comprehensive pipeline for analyzing Illumina NGS DNA data, covering alignment, variant calling, annotation, and quality control, following best practices.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/molgenis/NGS_DNA",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "ngs",
+        "pipeline",
+        "illumina"
+      ],
+      "id": 158
+    },
+    {
+      "name": "Squirls",
+      "one_line_profile": "Interpretable prioritization of splice variants in diagnostic NGS",
+      "detailed_description": "Squirls is a tool for the interpretable prioritization of splice variants in diagnostic next-generation sequencing data. It assesses the potential impact of variants on splicing and prioritizes them for clinical diagnosis.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_prioritization",
+        "variant_effect_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/monarch-initiative/Squirls",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "splicing",
+        "variant-prioritization",
+        "diagnostics"
+      ],
+      "id": 159
+    },
+    {
+      "name": "SvAnna",
+      "one_line_profile": "Pathogenicity prediction for structural variants in long-read sequencing",
+      "detailed_description": "SvAnna (Structural Variant Annotation and Analysis) provides efficient and accurate pathogenicity prediction for coding and regulatory structural variants detected in long-read genome sequencing data.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "structural_variant_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/monarch-initiative/SvAnna",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "structural-variants",
+        "pathogenicity-prediction",
+        "long-read-sequencing"
+      ],
+      "id": 160
+    },
+    {
+      "name": "vcf2maf",
+      "one_line_profile": "Convert VCF to MAF with isoform-specific annotation",
+      "detailed_description": "vcf2maf is a widely used utility that converts Variant Call Format (VCF) files into Mutation Annotation Format (MAF). It selects the most deleterious effect for each variant across all possible gene isoforms, simplifying downstream analysis.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "variant_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/mskcc/vcf2maf",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "vcf",
+        "maf",
+        "annotation",
+        "conversion"
+      ],
+      "id": 161
+    },
+    {
+      "name": "AlphaMissenseR",
+      "one_line_profile": "R interface for accessing AlphaMissense pathogenicity predictions",
+      "detailed_description": "AlphaMissenseR provides an R interface to access and utilize AlphaMissense data resources, enabling researchers to incorporate AlphaMissense pathogenicity predictions into their R-based bioinformatics workflows.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_effect_prediction",
+        "data_access"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/mtmorgan/AlphaMissenseR",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "alphamissense",
+        "pathogenicity",
+        "r-package"
+      ],
+      "id": 162
+    },
+    {
+      "name": "VarNote",
+      "one_line_profile": "Fast and scalable variant annotation tool",
+      "detailed_description": "VarNote is a high-performance variant annotation tool designed for speed and scalability. It supports rapid annotation of massive variant datasets, making it suitable for large-scale genomic studies.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/mulinlab/VarNote",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "annotation",
+        "genomics",
+        "high-performance"
+      ],
+      "id": 163
+    },
+    {
+      "name": "FlickersOnTop",
+      "one_line_profile": "SSVEP and c-VEP flicker superposition tool for BCI research",
+      "detailed_description": "FlickersOnTop is a C# program designed to superpose SSVEP (Steady-State Visually Evoked Potential) and c-VEP flickers on top of other graphical interfaces, facilitating Brain-Computer Interface (BCI) experiments and data generation.",
+      "domains": [
+        "Neuroscience",
+        "Bioinfo"
+      ],
+      "subtask_category": [
+        "stimulus_presentation",
+        "data_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/neuroergoISAE/FlickersOnTop",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bci",
+        "ssvep",
+        "neuroscience",
+        "stimulus"
+      ],
+      "id": 164
+    },
+    {
+      "name": "smallvariants",
+      "one_line_profile": "Nextflow pipeline for calling and annotating small germline variants",
+      "detailed_description": "A bioinformatics pipeline built with Nextflow for calling and annotating small germline variants (SNVs and indels) from short DNA reads, supporting WES and WGS data analysis.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "variant_annotation",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-cmgg/smallvariants",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nextflow",
+        "germline",
+        "variant-calling",
+        "wgs",
+        "wes"
+      ],
+      "id": 165
+    },
+    {
+      "name": "structural",
+      "one_line_profile": "Pipeline for calling structural variants, CNVs, and repeat expansions",
+      "detailed_description": "A best-practice bioinformatics analysis pipeline for detecting structural variants (SVs), copy number variants (CNVs), and repeat region expansions (RREs) from short-read DNA sequencing data.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "structural_variant_calling",
+        "cnv_detection",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-cmgg/structural",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structural-variants",
+        "cnv",
+        "nextflow",
+        "pipeline"
+      ],
+      "id": 166
+    },
+    {
+      "name": "sarek",
+      "one_line_profile": "Comprehensive pipeline for germline and somatic variant calling",
+      "detailed_description": "nf-core/sarek is a comprehensive analysis pipeline to detect germline or somatic variants from Whole Genome Sequencing (WGS) or targeted sequencing data. It handles preprocessing, variant calling, and annotation.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "variant_annotation",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/sarek",
+      "help_website": [
+        "https://nf-co.re/sarek"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nf-core",
+        "variant-calling",
+        "germline",
+        "somatic",
+        "wgs"
+      ],
+      "id": 167
+    },
+    {
+      "name": "Annotatability",
+      "one_line_profile": "Method to identify patterns in single-cell genomics via annotation-trainability",
+      "detailed_description": "Annotatability is a computational method that identifies meaningful patterns in single-cell genomics data by analyzing the training dynamics of deep neural networks to estimate annotation congruence.",
+      "domains": [
+        "Bioinfo",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "single_cell_analysis",
+        "annotation_quality_assessment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nitzanlab/Annotatability",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "single-cell",
+        "deep-learning",
+        "annotation"
+      ],
+      "id": 168
+    },
+    {
+      "name": "oncokb-annotator",
+      "one_line_profile": "Annotates variants in MAF with OncoKB precision oncology data",
+      "detailed_description": "The oncokb-annotator is a tool that annotates genetic variants in MAF format with clinical and biological information from the OncoKB precision oncology knowledge base.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "clinical_interpretation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/oncokb/oncokb-annotator",
+      "help_website": [
+        "https://www.oncokb.org/"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "oncokb",
+        "cancer-genomics",
+        "annotation",
+        "maf"
+      ],
+      "id": 169
+    },
+    {
+      "name": "ngs_pipeline",
+      "one_line_profile": "Snakemake pipeline for Exome/Capture/RNASeq analysis",
+      "detailed_description": "A Snakemake-based pipeline implementation for processing Exome, Capture, and RNA-Seq data, facilitating reproducible NGS data analysis.",
+      "domains": [
+        "Bioinfo",
+        "B2"
+      ],
+      "subtask_category": [
+        "workflow",
+        "ngs_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/patidarr/ngs_pipeline",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "snakemake",
+        "ngs",
+        "pipeline",
+        "exome"
+      ],
+      "id": 170
+    },
+    {
+      "name": "SIFT4G_Create_Genomic_DB",
+      "one_line_profile": "Create genomic databases for SIFT4G annotation",
+      "detailed_description": "A tool to create genomic databases containing SIFT predictions from an organism's genomic DNA and gene annotation files. These databases are used by SIFT4G_Annotator to annotate VCF files with functional predictions.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "database_creation",
+        "variant_effect_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/pauline-ng/SIFT4G_Create_Genomic_DB",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "sift",
+        "database",
+        "annotation",
+        "genomics"
+      ],
+      "id": 171
+    },
+    {
+      "name": "2vcf",
+      "one_line_profile": "Convert 23andMe/Ancestry raw data to VCF",
+      "detailed_description": "A utility to convert raw genotype calls from direct-to-consumer testing services like 23andMe or Ancestry.com into the standard VCF format, adding dbSNP annotations.",
+      "domains": [
+        "Bioinfo",
+        "B2"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "genotyping"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/plantimals/2vcf",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "23andme",
+        "ancestry",
+        "vcf",
+        "conversion"
+      ],
+      "id": 172
+    },
+    {
+      "name": "pylabel",
+      "one_line_profile": "Library for computer vision labeling and annotation format conversion",
+      "detailed_description": "PyLabel is a Python library for managing computer vision labeling tasks. It facilitates the translation of bounding box annotations between different formats (e.g., COCO to YOLO), supporting scientific image analysis workflows.",
+      "domains": [
+        "Computer Vision",
+        "AI4S"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "annotation_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pylabel-project/pylabel",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "labeling",
+        "computer-vision",
+        "annotation",
+        "format-conversion"
+      ],
+      "id": 173
+    },
+    {
+      "name": "phagetb",
+      "one_line_profile": "Prediction of bacteriophage-host interactions",
+      "detailed_description": "PhageTB is a tool for the multi-level prediction of interactions between bacteriophages and pathogenic bacterial hosts, aiding in the study of phage therapy and bacterial genomics.",
+      "domains": [
+        "Bioinfo",
+        "Microbiology"
+      ],
+      "subtask_category": [
+        "interaction_prediction",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/raghavagps/phagetb",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bacteriophage",
+        "host-pathogen",
+        "prediction",
+        "machine-learning"
+      ],
+      "id": 174
+    },
+    {
+      "name": "pynnotator",
+      "one_line_profile": "Genome Annotation Framework for Mendelian Disorders",
+      "detailed_description": "Pynnotator is a genome annotation framework designed to annotate VCF files (Exomes or Genomes) specifically for patients with Mendelian disorders, facilitating variant prioritization and diagnosis.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "workflow"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/raonyguimaraes/pynnotator",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "annotation",
+        "mendelian-disorders",
+        "vcf",
+        "genomics"
+      ],
+      "id": 175
+    },
+    {
+      "name": "MetaboAnnotation",
+      "one_line_profile": "High-level functionality for metabolomics data annotation",
+      "detailed_description": "MetaboAnnotation provides high-level functions to support and simplify the annotation of metabolomics data, integrating with the R/Bioconductor mass spectrometry ecosystem.",
+      "domains": [
+        "Bioinfo",
+        "Metabolomics"
+      ],
+      "subtask_category": [
+        "metabolite_annotation",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/rformassspectrometry/MetaboAnnotation",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "metabolomics",
+        "mass-spectrometry",
+        "annotation",
+        "r"
+      ],
+      "id": 176
+    },
+    {
+      "name": "iAnnotateSV",
+      "one_line_profile": "Tool to annotate and visualize structural variants",
+      "detailed_description": "iAnnotateSV is a Python library and command-line toolkit designed to annotate and visualize structural variants detected from Next Generation Sequencing (NGS) data, aiding in the interpretation of complex genomic rearrangements.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "structural_variant_annotation",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rhshah/iAnnotateSV",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "structural-variants",
+        "annotation",
+        "visualization",
+        "ngs"
+      ],
+      "id": 177
+    },
+    {
+      "name": "HmtNote",
+      "one_line_profile": "Human mitochondrial variants annotation using HmtVar",
+      "detailed_description": "HmtNote is a tool for the annotation of human mitochondrial variants using data from HmtVar. It provides a simple interface to retrieve variability and pathogenicity data for mitochondrial DNA variants.",
+      "domains": [
+        "Bioinfo",
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_annotation",
+        "mitochondrial_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/robertopreste/HmtNote",
+      "help_website": [
+        "https://hmtnote.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "mitochondria",
+        "annotation",
+        "hmtvar",
+        "variants"
+      ],
+      "id": 178
+    },
+    {
+      "name": "mode-of-inheritance",
+      "one_line_profile": "Machine learning tool for predicting the mode of inheritance for missense variants",
+      "detailed_description": "A Random Forest based classifier that predicts whether a missense variant is likely to be dominant or recessive, aiding in the interpretation of variants in human genetics.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_prediction",
+        "inheritance_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/rondolab/mode-of-inheritance",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "genetics",
+        "missense-variants",
+        "machine-learning"
+      ],
+      "id": 179
+    },
+    {
+      "name": "vcf-annotator",
+      "one_line_profile": "Lightweight Python tool to add biological annotations to VCF files",
+      "detailed_description": "A script that adds annotations (such as gene information, product, etc.) to variants in a VCF file, facilitating downstream analysis.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rpetit3/vcf-annotator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vcf",
+        "annotation",
+        "bioinformatics"
+      ],
+      "id": 180
+    },
+    {
+      "name": "clinvar_db_for_annovar",
+      "one_line_profile": "Utility to automate ClinVar database updates for ANNOVAR",
+      "detailed_description": "A shell script designed to automatically download, format, and update the ClinVar database for use with the ANNOVAR annotation tool.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "database_management",
+        "annotation_support"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/ryuzheng/clinvar_db_for_annovar",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "annovar",
+        "clinvar",
+        "database-update"
+      ],
+      "id": 181
+    },
+    {
+      "name": "SnpEffWrapper",
+      "one_line_profile": "Wrapper to apply GFF annotations to VCFs using SnpEff",
+      "detailed_description": "A Python wrapper developed by Sanger Pathogens to facilitate the annotation of VCF files using SnpEff with custom GFF files.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sanger-pathogens/SnpEffWrapper",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "snpeff",
+        "vcf",
+        "gff"
+      ],
+      "id": 182
+    },
+    {
+      "name": "vcf-filtering",
+      "one_line_profile": "Scripts for filtering annotated VCF files",
+      "detailed_description": "A collection of shell scripts designed to filter variant call format (VCF) files based on annotations, useful for post-annotation quality control.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "filtering",
+        "variant_prioritization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/scholl-lab/vcf-filtering",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vcf",
+        "filtering",
+        "bash"
+      ],
+      "id": 183
+    },
+    {
+      "name": "PCfun",
+      "one_line_profile": "Machine learning tool for functional annotation of protein complexes",
+      "detailed_description": "A tool that uses hybrid unsupervised and supervised machine learning on PubMed Central full-text word embeddings to functionally annotate protein complexes.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "text_mining"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sharmavaruns/PCfun",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "protein-complex",
+        "nlp",
+        "machine-learning"
+      ],
+      "id": 184
+    },
+    {
+      "name": "region_analysis",
+      "one_line_profile": "Tool for annotating genomic intervals",
+      "detailed_description": "A Python script used to annotate genomic intervals, likely for identifying genomic features overlapping with regions of interest.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "annotation",
+        "genomic_interval_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shenlab-sinai/region_analysis",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "genomics",
+        "annotation",
+        "intervals"
+      ],
+      "id": 185
+    },
+    {
+      "name": "ggcoverage",
+      "one_line_profile": "R package for visualizing and annotating genomic coverage",
+      "detailed_description": "A ggplot2-based R package to visualize genomic coverage data (from BAM/BigWig) and annotate it with gene structures or other features.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "visualization",
+        "coverage_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/showteeth/ggcoverage",
+      "help_website": [
+        "https://showteeth.github.io/ggcoverage/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "visualization",
+        "ggplot2",
+        "genomics"
+      ],
+      "id": 186
+    },
+    {
+      "name": "gvanno",
+      "one_line_profile": "Generic human DNA variant annotation pipeline",
+      "detailed_description": "A comprehensive pipeline for annotating human DNA variants, integrating multiple tools and databases to provide functional context.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "annotation",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sigven/gvanno",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "variant-annotation",
+        "pipeline",
+        "human-genetics"
+      ],
+      "id": 187
+    },
+    {
+      "name": "spliceai-reforged",
+      "one_line_profile": "Optimized GPU implementation of SpliceAI",
+      "detailed_description": "A GPU-friendly reimplementation of SpliceAI, a deep learning tool for predicting splicing variants and their effects.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_prediction",
+        "splicing_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/skoblov-lab/spliceai-reforged",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deep-learning",
+        "splicing",
+        "gpu"
+      ],
+      "id": 188
+    },
+    {
+      "name": "veppy",
+      "one_line_profile": "Python interface for Variant Effect Predictor (VEP)",
+      "detailed_description": "A Python library that provides an interface to the Ensembl Variant Effect Predictor (VEP), facilitating its integration into Python-based workflows.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "annotation",
+        "variant_effect_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/solvebio/veppy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vep",
+        "python",
+        "ensembl"
+      ],
+      "id": 189
+    },
+    {
+      "name": "CPT",
+      "one_line_profile": "Cross-protein transfer learning for variant effect prediction",
+      "detailed_description": "A machine learning framework utilizing cross-protein transfer learning to improve the prediction of variant effects, particularly for proteins with limited data.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_prediction",
+        "machine_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/songlab-cal/CPT",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "transfer-learning",
+        "variant-effect",
+        "protein"
+      ],
+      "id": 190
+    },
+    {
+      "name": "annotate-peaks",
+      "one_line_profile": "Scripts for genomic region annotation of BED files",
+      "detailed_description": "A set of R scripts designed to annotate genomic regions (provided in BED format) with gene information and other genomic features.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "annotation",
+        "peak_annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/stevekm/annotate-peaks",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bed",
+        "chip-seq",
+        "annotation"
+      ],
+      "id": 191
+    },
+    {
+      "name": "reportIT",
+      "one_line_profile": "Clinical variant reporting pipeline for IonTorrent data",
+      "detailed_description": "A pipeline for processing and reporting variants from IonTorrent cancer panels, focused on clinical interpretation.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "clinical_reporting",
+        "variant_interpretation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stevekm/reportIT",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "iontorrent",
+        "clinical-genomics",
+        "cancer"
+      ],
+      "id": 192
+    },
+    {
+      "name": "annotateMaf",
+      "one_line_profile": "Tool to add functional annotations to MAF files",
+      "detailed_description": "An R-based tool designed to append functional variant annotations to Mutation Annotation Format (MAF) files, commonly used in cancer genomics.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "annotation",
+        "cancer_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/taylor-lab/annotateMaf",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "maf",
+        "cancer",
+        "annotation"
+      ],
+      "id": 193
+    },
+    {
+      "name": "adam-fx",
+      "one_line_profile": "ADAM extension for loading SnpEff/SnpSift annotated VCFs",
+      "detailed_description": "A library extending the ADAM genomics framework to support loading and processing of VCF files that have been annotated with SnpEff and SnpSift.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "data_loading",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/tmoerman/adam-fx",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "adam",
+        "spark",
+        "snpeff"
+      ],
+      "id": 194
+    },
+    {
+      "name": "mvPPT",
+      "one_line_profile": "Pathogenicity Prediction Tool for missense variants",
+      "detailed_description": "A comprehensive tool for predicting the pathogenicity of missense variants, likely utilizing multiple features or ensemble methods.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_prediction",
+        "pathogenicity"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tongshiyuan/mvPPT",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "missense",
+        "pathogenicity",
+        "prediction"
+      ],
+      "id": 195
+    },
+    {
+      "name": "snpeffToMaf",
+      "one_line_profile": "Converter from SnpEff annotated VCF to MAF format",
+      "detailed_description": "A Perl script that parses SnpEff annotations in a VCF file and converts them into the Mutation Annotation Format (MAF).",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "annotation_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/tsy19900929/snpeffToMaf",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "snpeff",
+        "maf",
+        "conversion"
+      ],
+      "id": 196
+    },
+    {
+      "name": "VAPr",
+      "one_line_profile": "NoSQL variant data storage, annotation, and prioritization platform",
+      "detailed_description": "A Python package that facilitates the storage of variant data in NoSQL databases (MongoDB) and provides tools for annotation and prioritization.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "annotation",
+        "data_storage",
+        "prioritization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ucsd-ccbb/VAPr",
+      "help_website": [
+        "https://vapr.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nosql",
+        "mongodb",
+        "variant-analysis"
+      ],
+      "id": 197
+    },
+    {
+      "name": "annonars",
+      "one_line_profile": "High-performance genome annotation tool using Rust and RocksDB",
+      "detailed_description": "A fast genome annotation tool built with Rust and RocksDB, designed to handle large-scale genomic data efficiently.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "annotation",
+        "high_performance_computing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/varfish-org/annonars",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "rust",
+        "rocksdb",
+        "genome-annotation"
+      ],
+      "id": 198
+    },
+    {
+      "name": "mehari",
+      "one_line_profile": "VEP-like tool for Sequence Ontology and HGVS annotation",
+      "detailed_description": "A Rust-based tool that provides variant effect prediction capabilities similar to VEP, focusing on Sequence Ontology and HGVS nomenclature annotation.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "annotation",
+        "variant_effect_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/varfish-org/mehari",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rust",
+        "hgvs",
+        "vep-alternative"
+      ],
+      "id": 199
+    },
+    {
+      "name": "varianttools",
+      "one_line_profile": "Tool for manipulation, annotation, and analysis of variants",
+      "detailed_description": "A software suite for the manipulation, annotation, selection, and analysis of genetic variants derived from next-generation sequencing data.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_analysis",
+        "annotation",
+        "filtering"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/vatlab/varianttools",
+      "help_website": [
+        "http://vatlab.github.io/varianttools/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "ngs",
+        "variant-analysis",
+        "annotation"
+      ],
+      "id": 200
+    },
+    {
+      "name": "Postre",
+      "one_line_profile": "Prediction of Structural Variant Effects",
+      "detailed_description": "A tool designed to predict the effects of structural variants, addressing a gap in variant effect prediction which often focuses on small variants.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "variant_prediction",
+        "structural_variants"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/vicsanga/Postre",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "structural-variants",
+        "prediction",
+        "genomics"
+      ],
+      "id": 201
+    },
+    {
+      "name": "MACARON",
+      "one_line_profile": "Multi-base Codon-Associated variant Re-annotation tool",
+      "detailed_description": "A tool for re-annotating variants that affect multiple bases within a codon, improving the accuracy of variant effect prediction for complex changes.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "annotation",
+        "variant_reannotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/waqasuddinkhan/MACARON-GenMed-LabEx",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "codon",
+        "reannotation",
+        "mnv"
+      ],
+      "id": 202
+    },
+    {
+      "name": "superSFS",
+      "one_line_profile": "Tool for ancestral allele speculation and SFS calculation",
+      "detailed_description": "A Python tool for speculating ancestral alleles, calculating the Site Frequency Spectrum (SFS), and visualizing the results, used in population genetics.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "population_genetics",
+        "sfs_calculation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xhchauvet/superSFS",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "sfs",
+        "population-genetics",
+        "ancestral-allele"
+      ],
+      "id": 203
+    },
+    {
+      "name": "AnnoPred",
+      "one_line_profile": "Genetic risk prediction integrating LD and functional annotations",
+      "detailed_description": "A Bayesian framework for genetic risk prediction that integrates linkage disequilibrium (LD) information and functional annotations to improve accuracy.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "risk_prediction",
+        "polygenic_risk_score"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yiminghu/AnnoPred",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "prs",
+        "bayesian",
+        "functional-annotation"
+      ],
+      "id": 204
+    },
+    {
+      "name": "anno",
+      "one_line_profile": "Efficient C++ variant annotation tool",
+      "detailed_description": "A command-line tool written in C++ for annotating genetic variants, designed for speed and efficiency in processing large datasets.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/zhanxw/anno",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cpp",
+        "high-performance",
+        "annotation"
+      ],
+      "id": 205
+    },
+    {
+      "name": "seqminer",
+      "one_line_profile": "R package to query sequence data (VCF/BCF/BGEN)",
+      "detailed_description": "An R package that provides efficient access to query and retrieve data from various sequence file formats like VCF, BCF, and BGEN.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "data_access",
+        "data_query"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/zhanxw/seqminer",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "r-package",
+        "vcf",
+        "bgen"
+      ],
+      "id": 206
+    },
+    {
+      "name": "POCKET",
+      "one_line_profile": "Tool for prioritizing candidate genes using knowledge and GWAS/TWAS",
+      "detailed_description": "A tool for prioritizing candidate genes by incorporating knowledge-based gene sets, variant effects, and results from GWAS and TWAS studies.",
+      "domains": [
+        "B2",
+        "B2-05"
+      ],
+      "subtask_category": [
+        "gene_prioritization",
+        "post_gwas_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhaouu/POCKET",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gwas",
+        "twas",
+        "prioritization"
+      ],
+      "id": 207
+    }
+  ]
+}

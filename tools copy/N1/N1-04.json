@@ -1,0 +1,2211 @@
+{
+  "generated_at": "2025-12-16T02:36:32.318706+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "N1",
+      "leaf_cluster_name": "神经科学-神经影像与连接组生态",
+      "domain": "Neuro",
+      "typical_objects": "fMRI/DTI/EEG",
+      "task_chain": "预处理→配准→连接组→统计→评测",
+      "tool_form": "pipelines + 图分析 + 可视化"
+    },
+    "unit": {
+      "unit_id": "N1-04",
+      "unit_name": "AI影像表征与诊断辅助",
+      "target_scale": "200–450",
+      "coverage_tools": "foundation models、UQ"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] BrainGNN",
+        "[GH] Nilearn",
+        "[GH] DeepNeuro",
+        "[GH] SynthSeg",
+        "[GH] Nobrainer",
+        "[GH] TorchIO",
+        "[GH] nnU-Net",
+        "[GH] FastSurfer",
+        "[GH] MONAI",
+        "[GH] neuroimaging foundation model",
+        "[GH] medical image uncertainty quantification",
+        "[GH] brain mri deep learning",
+        "[GH] fmri transformer",
+        "[GH] neuroimaging diagnosis ai",
+        "[GH] medical image representation learning",
+        "[GH] brain tumor segmentation unet",
+        "[GH] alzheimer detection deep learning",
+        "[GH] self-supervised learning mri",
+        "[GH] gnn brain network analysis",
+        "[GH] neuroimaging generative models",
+        "[GH] medical vision transformer",
+        "[GH] brain connectivity classification",
+        "[WEB] neuroimaging foundation models github",
+        "[WEB] uncertainty quantification medical imaging github",
+        "[WEB] deep learning brain mri diagnosis tools github",
+        "[WEB] self-supervised learning neuroimaging benchmark github",
+        "[WEB] graph neural network brain connectome github"
+      ],
+      "total_candidates": 856,
+      "tool_candidates": 314,
+      "final_tools": 86
+    }
+  },
+  "tools": [
+    {
+      "name": "DINOv2-3D-Med",
+      "one_line_profile": "3D implementation of DINOv2 for self-supervised pretraining on volumetric medical images",
+      "detailed_description": "A library providing a 3D implementation of the DINOv2 self-supervised learning method, specifically adapted for volumetric medical imaging data. It integrates with Lightly, MONAI, and PyTorch Lightning to facilitate pretraining on 3D datasets.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "model_training",
+        "pretraining",
+        "representation_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AIM-Harvard/DINOv2-3D-Med",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "self-supervised-learning",
+        "3d-medical-imaging",
+        "foundation-model",
+        "monai"
+      ],
+      "id": 1
+    },
+    {
+      "name": "SynthSeg",
+      "one_line_profile": "Contrast-agnostic segmentation of MRI scans",
+      "detailed_description": "A deep learning tool for segmentation of brain MRI scans that is robust to variations in contrast and resolution. It allows for consistent segmentation across different MRI sequences without retraining.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "image_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BBillot/SynthSeg",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mri-segmentation",
+        "domain-generalization",
+        "neuroimaging"
+      ],
+      "id": 2
+    },
+    {
+      "name": "3D-TransUNet",
+      "one_line_profile": "Vision Transformers for 3D medical image segmentation",
+      "detailed_description": "Implementation of the 3D TransUNet architecture, which combines Vision Transformers with U-Net for medical image segmentation tasks. It serves as a strong baseline and reusable model for volumetric segmentation.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "model_training"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Beckschen/3D-TransUNet",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "transformer",
+        "medical-image-segmentation",
+        "deep-learning"
+      ],
+      "id": 3
+    },
+    {
+      "name": "BiTr-Unet",
+      "one_line_profile": "CNN-Transformer Combined Network for MRI Brain Tumor Segmentation",
+      "detailed_description": "Source code for BiTr-Unet, a hybrid architecture combining CNNs and Transformers for efficient and accurate brain tumor segmentation in MRI images.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "tumor_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BruceResearch/BiTr-Unet",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "brain-tumor",
+        "segmentation",
+        "transformer",
+        "cnn"
+      ],
+      "id": 4
+    },
+    {
+      "name": "HD-BET",
+      "one_line_profile": "Automated deep-learning based brain extraction tool",
+      "detailed_description": "A robust brain extraction (skull stripping) tool based on deep learning, designed to work across a broad range of MRI sequence types, including those with pathologies.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "skull_stripping",
+        "segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CCI-Bonn/HD-BET",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "brain-extraction",
+        "neuroimaging",
+        "mri",
+        "preprocessing"
+      ],
+      "id": 5
+    },
+    {
+      "name": "HD-BM",
+      "one_line_profile": "Automated deep-learning based segmentation of brain metastases",
+      "detailed_description": "A specialized deep learning tool for the automatic segmentation of brain metastases in MRI scans, developed by the CCI Bonn group.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "metastasis_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CCI-Bonn/HD-BM",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "brain-metastases",
+        "segmentation",
+        "mri"
+      ],
+      "id": 6
+    },
+    {
+      "name": "HD-GLIO",
+      "one_line_profile": "Automated deep-learning based brain tumor segmentation",
+      "detailed_description": "A deep learning tool specifically designed for the segmentation of glioblastomas in MRI data, providing automated contouring for neuro-oncology applications.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "tumor_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CCI-Bonn/HD-GLIO",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "glioblastoma",
+        "segmentation",
+        "neuro-oncology"
+      ],
+      "id": 7
+    },
+    {
+      "name": "adell-mri",
+      "one_line_profile": "Deep learning library for radiology data analysis",
+      "detailed_description": "A PyTorch-based library for segmentation, classification, object detection, and self-supervised learning specifically tailored for radiology and MRI data.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "classification",
+        "self_supervised_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CCIG-Champalimaud/adell-mri",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "radiology",
+        "mri",
+        "deep-learning-library"
+      ],
+      "id": 8
+    },
+    {
+      "name": "bfm",
+      "one_line_profile": "General-Purpose Brain Foundation Models for Time-Series Neuroimaging",
+      "detailed_description": "Implementation of general-purpose foundation models designed for analyzing time-series neuroimaging data (such as fMRI), enabling various downstream tasks.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "modeling",
+        "time_series_analysis",
+        "foundation_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CERC-AAI/bfm",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "foundation-model",
+        "fmri",
+        "time-series"
+      ],
+      "id": 9
+    },
+    {
+      "name": "BIBSnet",
+      "one_line_profile": "BIDS App for infant brain segmentation",
+      "detailed_description": "A BIDS App that leverages nnU-Net for anatomical MRI segmentation and masking specifically for infant brains. It is designed to integrate into BIDS processing pipelines.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "preprocessing",
+        "bids_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DCAN-Labs/BIBSnet",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "infant-brain",
+        "segmentation",
+        "bids-app"
+      ],
+      "id": 10
+    },
+    {
+      "name": "SlicerAutomatedDentalTools",
+      "one_line_profile": "3D Slicer extension for automated dental and craniofacial analysis",
+      "detailed_description": "A 3D Slicer extension that provides automated tools for dental and craniofacial image analysis, including segmentation and landmarking.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "visualization",
+        "image_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DCBIA-OrthoLab/SlicerAutomatedDentalTools",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "3d-slicer",
+        "dental-imaging",
+        "medical-image-analysis"
+      ],
+      "id": 11
+    },
+    {
+      "name": "FastSurfer",
+      "one_line_profile": "Fast and accurate deep learning based neuroimaging pipeline",
+      "detailed_description": "A fast and accurate deep learning-based neuroimaging pipeline that serves as a rapid alternative to FreeSurfer for whole-brain segmentation and cortical surface reconstruction.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "surface_reconstruction",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Deep-MI/FastSurfer",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "neuroimaging",
+        "freesurfer",
+        "segmentation",
+        "cortical-surface"
+      ],
+      "id": 12
+    },
+    {
+      "name": "FastSurfer-LIT",
+      "one_line_profile": "Lesion Inpainting Tool for FastSurfer",
+      "detailed_description": "A tool for inpainting lesions in MRI scans, designed to improve the performance of whole-brain segmentation and surface reconstruction pipelines in the presence of pathologies.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "inpainting",
+        "preprocessing",
+        "artifact_removal"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Deep-MI/LIT",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "lesion-inpainting",
+        "mri",
+        "neuroimaging"
+      ],
+      "id": 13
+    },
+    {
+      "name": "fsqc",
+      "one_line_profile": "Quality control scripts for FreeSurfer and FastSurfer data",
+      "detailed_description": "A collection of scripts and tools for performing quality control on structural MRI data processed with FreeSurfer or FastSurfer pipelines.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "data_validation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Deep-MI/fsqc",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "quality-control",
+        "freesurfer",
+        "fastsurfer"
+      ],
+      "id": 14
+    },
+    {
+      "name": "nitools",
+      "one_line_profile": "Basic Neuroimaging utility functions",
+      "detailed_description": "A Python library providing a set of basic neuroimaging functions and utilities that complement existing libraries like nibabel and nilearn, developed by the Diedrichsen Lab.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "utility"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DiedrichsenLab/nitools",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neuroimaging",
+        "utilities",
+        "python"
+      ],
+      "id": 15
+    },
+    {
+      "name": "rustDTW",
+      "one_line_profile": "Fast Dynamic Time Warping implementation in Rust/Python",
+      "detailed_description": "A high-performance implementation of Dynamic Time Warping (DTW) written in Rust with Python bindings, useful for analyzing time-series data such as fMRI or EEG signals.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "time_series_analysis",
+        "alignment"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/FL33TW00D/rustDTW",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dtw",
+        "time-series",
+        "rust",
+        "python-binding"
+      ],
+      "id": 16
+    },
+    {
+      "name": "TotalSegmentator-AIDE",
+      "one_line_profile": "TotalSegmentator packaged as a MONAI AIDE Application",
+      "detailed_description": "A deployment of the TotalSegmentator tool packaged according to the MONAI Application Package (MAP) standard, facilitating integration into clinical AI deployment environments (AIDE).",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "deployment"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GSTT-CSC/TotalSegmentator-AIDE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "monai",
+        "aide",
+        "segmentation",
+        "deployment"
+      ],
+      "id": 17
+    },
+    {
+      "name": "LDAE",
+      "one_line_profile": "Latent Diffusion Autoencoders for medical imaging",
+      "detailed_description": "A framework for unsupervised representation learning in 3D medical imaging using Latent Diffusion Autoencoders, enabling efficient semantic control and generation.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "representation_learning",
+        "generative_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/GabrieleLozupone/LDAE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "diffusion-models",
+        "medical-imaging",
+        "unsupervised-learning"
+      ],
+      "id": 18
+    },
+    {
+      "name": "TFF",
+      "one_line_profile": "End-to-end transformer framework for analyzing 4D fMRI time-series data",
+      "detailed_description": "A Python framework designed for the analysis of fMRI time-series data using Transformer architectures. It provides an end-to-end pipeline for processing 4D neuroimaging data, enabling researchers to apply attention-based deep learning models to functional magnetic resonance imaging tasks.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "time_series_analysis",
+        "classification"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GonyRosenman/TFF",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "fmri",
+        "transformers",
+        "time-series",
+        "neuroimaging"
+      ],
+      "id": 19
+    },
+    {
+      "name": "LViT",
+      "one_line_profile": "Language-Vision Transformer for medical image segmentation",
+      "detailed_description": "The official implementation of the LViT (Language meets Vision Transformer) model for medical image segmentation. It integrates text information with visual features to improve segmentation performance, specifically targeting semi-supervised learning scenarios in medical imaging.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "multimodal_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HUANGLIZI/LViT",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "medical-image-segmentation",
+        "vision-transformer",
+        "multimodal"
+      ],
+      "id": 20
+    },
+    {
+      "name": "IBGNN",
+      "one_line_profile": "Interpretable Graph Neural Networks for connectome-based brain disorder analysis",
+      "detailed_description": "Implementation of an interpretable Graph Neural Network (GNN) framework for analyzing brain connectomes. It is designed to classify brain disorders while providing interpretability regarding the underlying brain network connections.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "classification",
+        "graph_learning",
+        "connectomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HennyJie/IBGNN",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gnn",
+        "brain-network",
+        "connectome",
+        "interpretability"
+      ],
+      "id": 21
+    },
+    {
+      "name": "EKAID",
+      "one_line_profile": "Expert Knowledge-Aware Image Difference Graph Representation Learning",
+      "detailed_description": "Code for a difference-aware medical visual question answering (VQA) system. It utilizes expert knowledge and graph representation learning to analyze differences in medical images, aiding in diagnostic interpretation.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "visual_question_answering",
+        "representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Holipori/EKAID",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vqa",
+        "medical-imaging",
+        "graph-neural-networks"
+      ],
+      "id": 22
+    },
+    {
+      "name": "lstm_multi_modal_UNet",
+      "one_line_profile": "LSTM multi-modal U-Net for brain tumor segmentation",
+      "detailed_description": "Implementation of a deep learning model combining LSTM and U-Net architectures for segmenting brain tumors from multi-modal MRI data. It captures spatial and sequence information to improve segmentation accuracy.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HowieMa/lstm_multi_modal_UNet",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "brain-tumor-segmentation",
+        "lstm",
+        "u-net",
+        "mri"
+      ],
+      "id": 23
+    },
+    {
+      "name": "Brain-tumor-segmentation",
+      "one_line_profile": "Deep learning approach for brain tumor MRI segmentation",
+      "detailed_description": "A widely referenced implementation of deep learning models for brain tumor segmentation using MRI data. It serves as a solver and reference codebase for researchers working on BraTS datasets.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Issam28/Brain-tumor-segmentation",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "brats",
+        "mri",
+        "segmentation",
+        "deep-learning"
+      ],
+      "id": 24
+    },
+    {
+      "name": "MEW-UNet",
+      "one_line_profile": "Multi-axis representation learning in frequency domain for segmentation",
+      "detailed_description": "Official implementation of MEW-UNet, a medical image segmentation model that leverages multi-axis representation learning in the frequency domain to capture global and local features effectively.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JCruan519/MEW-UNet",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-segmentation",
+        "frequency-domain",
+        "u-net"
+      ],
+      "id": 25
+    },
+    {
+      "name": "VS_Seg",
+      "one_line_profile": "Automatic Segmentation of Vestibular Schwannoma with MONAI",
+      "detailed_description": "A specialized tool for the automatic segmentation of Vestibular Schwannoma from MRI scans, built using the MONAI framework. Developed by KCL-BMEIS, it provides a robust pipeline for this specific clinical application.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KCL-BMEIS/VS_Seg",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "monai",
+        "vestibular-schwannoma",
+        "mri-segmentation"
+      ],
+      "id": 26
+    },
+    {
+      "name": "benchmark_rsfMRI_prediction",
+      "one_line_profile": "Benchmarking scripts for resting-state fMRI prediction",
+      "detailed_description": "A collection of scripts and tools for benchmarking predictive models on resting-state fMRI datasets. It facilitates the evaluation of different machine learning approaches for rs-fMRI analysis.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "prediction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KamalakerDadi/benchmark_rsfMRI_prediction",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rs-fmri",
+        "benchmarking",
+        "predictive-modeling"
+      ],
+      "id": 27
+    },
+    {
+      "name": "ITKPOCUS",
+      "one_line_profile": "Library for streaming and preprocessing point-of-care ultrasound video",
+      "detailed_description": "An open-source library developed by Kitware for handling point-of-care ultrasound (POCUS) video data. It supports streaming, preprocessing, and integration with ITK, facilitating the development of AI applications for ultrasound.",
+      "domains": [
+        "N1-04"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "video_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/KitwareMedical/ITKPOCUS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "ultrasound",
+        "itk",
+        "pocus",
+        "video-streaming"
+      ],
+      "id": 28
+    },
+    {
+      "name": "MEDIAR",
+      "one_line_profile": "Data-Centric and Model-Centric framework for Multi-Modality Microscopy",
+      "detailed_description": "The winning solution for the NeurIPS 2022 CellSeg Challenge. It provides a robust framework for cell segmentation in multi-modality microscopy images, combining data-centric and model-centric approaches.",
+      "domains": [
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "microscopy"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Lee-Gihun/MEDIAR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cell-segmentation",
+        "microscopy",
+        "neurips-challenge"
+      ],
+      "id": 29
+    },
+    {
+      "name": "BrainGNN_Pytorch",
+      "one_line_profile": "Graph Neural Network for fMRI analysis",
+      "detailed_description": "A PyTorch implementation of BrainGNN, a graph neural network designed for analyzing functional magnetic resonance imaging (fMRI) data to identify biomarkers and classify brain disorders.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "classification",
+        "graph_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LifangHe/BrainGNN_Pytorch",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gnn",
+        "fmri",
+        "brain-network"
+      ],
+      "id": 30
+    },
+    {
+      "name": "3DUNet-BraTS-PyTorch",
+      "one_line_profile": "PyTorch 3D U-Net implementation for BraTS 2021",
+      "detailed_description": "A robust PyTorch implementation of the 3D U-Net architecture specifically optimized for the Multimodal Brain Tumor Segmentation (BraTS) 2021 challenge. It serves as a baseline and tool for brain tumor segmentation tasks.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LightersWang/3DUNet-BraTS-PyTorch",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "brats",
+        "3d-unet",
+        "pytorch",
+        "segmentation"
+      ],
+      "id": 31
+    },
+    {
+      "name": "fastMONAI",
+      "one_line_profile": "High-level wrapper for MONAI to simplify medical deep learning",
+      "detailed_description": "A library that simplifies the use of MONAI (Medical Open Network for AI) by providing a high-level API similar to fastai. It facilitates rapid development and training of deep learning models for medical imaging.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "training_framework",
+        "image_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/MMIV-ML/fastMONAI",
+      "help_website": [
+        "https://fastmonai.no"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "monai",
+        "fastai",
+        "medical-imaging",
+        "deep-learning"
+      ],
+      "id": 32
+    },
+    {
+      "name": "mindGlide",
+      "one_line_profile": "Brain Segmentation with MONAI and Dynamic Unet",
+      "detailed_description": "A tool for brain segmentation leveraging MONAI and Dynamic U-Net architectures. It provides a streamlined approach for segmenting brain structures from MRI data.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MS-PINPOINT/mindGlide",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "monai",
+        "brain-segmentation",
+        "dynamic-unet"
+      ],
+      "id": 33
+    },
+    {
+      "name": "brain-segmentation",
+      "one_line_profile": "Skull stripping and FLAIR abnormality segmentation tool",
+      "detailed_description": "A deep learning-based tool for skull stripping and segmenting FLAIR abnormalities in brain MRI using U-Net. Developed by the Mazurowski Lab, it provides pre-trained models and inference scripts.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MaciejMazurowski/brain-segmentation",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "skull-stripping",
+        "flair",
+        "mri",
+        "segmentation"
+      ],
+      "id": 34
+    },
+    {
+      "name": "Brain-Tumor-Segmentation",
+      "one_line_profile": "Attention-Guided 2D U-Net for brain tumor segmentation",
+      "detailed_description": "An implementation of an Attention-Guided U-Net for automatic brain tumor segmentation. It is a popular resource for researchers working on 2D slice-based segmentation of MRI data.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "attention-unet",
+        "brain-tumor",
+        "segmentation"
+      ],
+      "id": 35
+    },
+    {
+      "name": "Pytorch-Medical-Segmentation",
+      "one_line_profile": "Collection of PyTorch implementations for medical image segmentation",
+      "detailed_description": "A comprehensive repository containing implementations of various state-of-the-art deep learning models for medical image segmentation in both 2D and 3D. It serves as a library/reference for applying these models to new datasets.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "model_library"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MontaEllis/Pytorch-Medical-Segmentation",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "medical-segmentation",
+        "3d-unet",
+        "vnet"
+      ],
+      "id": 36
+    },
+    {
+      "name": "monai-cloud-api",
+      "one_line_profile": "Client library for MONAI Cloud API",
+      "detailed_description": "The official client library and development tools for the MONAI Cloud API, enabling integration of MONAI's intelligent imaging and learning tools into cloud-based workflows and services.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "cloud_computing",
+        "api_client"
+      ],
+      "application_level": "service",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/NVIDIA/monai-cloud-api",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "monai",
+        "cloud-api",
+        "nvidia",
+        "medical-imaging"
+      ],
+      "id": 37
+    },
+    {
+      "name": "CNN_design_for_AD",
+      "one_line_profile": "Deep learning model for early Alzheimer’s disease detection",
+      "detailed_description": "Code for a generalizable deep learning model designed for the early detection of Alzheimer’s disease from structural MRI scans. Developed by NYU MedML, it provides a robust solver for this diagnostic task.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "classification",
+        "diagnosis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/NYUMedML/CNN_design_for_AD",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "alzheimers",
+        "deep-learning",
+        "mri",
+        "classification"
+      ],
+      "id": 38
+    },
+    {
+      "name": "MobileUNETR",
+      "one_line_profile": "Lightweight hybrid Vision Transformer for medical image segmentation",
+      "detailed_description": "A lightweight end-to-end hybrid Vision Transformer (ViT) designed for efficient medical image segmentation, offering a balance between performance and computational cost.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "medical_imaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OSUPCVLab/MobileUNETR",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "transformer",
+        "segmentation",
+        "medical-imaging"
+      ],
+      "id": 39
+    },
+    {
+      "name": "MedViT",
+      "one_line_profile": "Robust Vision Transformer for generalized medical image classification",
+      "detailed_description": "A robust Vision Transformer architecture tailored for medical image classification tasks, addressing generalization challenges in healthcare imaging data.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "classification",
+        "medical_imaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Omid-Nejati/MedViT",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vision-transformer",
+        "classification",
+        "medical-imaging"
+      ],
+      "id": 40
+    },
+    {
+      "name": "MONAI Generative Models",
+      "one_line_profile": "Generative models framework for medical imaging",
+      "detailed_description": "A library within the MONAI ecosystem dedicated to training, evaluating, and deploying generative models (GANs, Diffusion Models) for medical imaging applications.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "image_synthesis",
+        "generative_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Project-MONAI/GenerativeModels",
+      "help_website": [
+        "https://monai.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "generative-ai",
+        "diffusion-models",
+        "medical-imaging"
+      ],
+      "id": 41
+    },
+    {
+      "name": "MONAI",
+      "one_line_profile": "AI Toolkit for Healthcare Imaging",
+      "detailed_description": "A comprehensive, community-supported, PyTorch-based framework for deep learning in healthcare imaging, providing domain-optimized foundational capabilities for data loading, preprocessing, and model training.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "deep_learning_framework",
+        "image_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/MONAI",
+      "help_website": [
+        "https://monai.io/",
+        "https://docs.monai.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "deep-learning",
+        "healthcare",
+        "medical-imaging"
+      ],
+      "id": 42
+    },
+    {
+      "name": "MONAI Label",
+      "one_line_profile": "Intelligent open source image labeling and learning tool",
+      "detailed_description": "A server-client system that facilitates AI-assisted annotation of medical imaging data, integrating with viewers like 3D Slicer and OHIF to accelerate dataset creation.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "annotation",
+        "active_learning"
+      ],
+      "application_level": "application",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/MONAILabel",
+      "help_website": [
+        "https://monai.io/label.html"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "annotation",
+        "segmentation",
+        "active-learning"
+      ],
+      "id": 43
+    },
+    {
+      "name": "SlicerMONAIViz",
+      "one_line_profile": "3D Slicer extension for MONAI model visualization",
+      "detailed_description": "A 3D Slicer extension that enables visualization and interaction with MONAI models and their outputs directly within the Slicer environment.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "integration"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/SlicerMONAIViz",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "3d-slicer",
+        "visualization",
+        "plugin"
+      ],
+      "id": 44
+    },
+    {
+      "name": "VISTA",
+      "one_line_profile": "Versatile Imaging Segmentation and Annotation foundation model",
+      "detailed_description": "A foundation model framework for versatile medical image segmentation and annotation, designed to handle diverse segmentation tasks across different modalities.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "foundation_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/VISTA",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "foundation-model",
+        "segmentation",
+        "annotation"
+      ],
+      "id": 45
+    },
+    {
+      "name": "MONAI Deploy",
+      "one_line_profile": "Framework for deploying medical AI applications",
+      "detailed_description": "A framework designed to become the standard for developing, packaging, testing, and running medical AI applications in clinical production environments.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "deployment",
+        "clinical_workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/Project-MONAI/monai-deploy",
+      "help_website": [
+        "https://monai.io/deploy.html"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "deployment",
+        "clinical-ai",
+        "workflow"
+      ],
+      "id": 46
+    },
+    {
+      "name": "MONAI Deploy App SDK",
+      "one_line_profile": "SDK for developing AI-driven healthcare imaging applications",
+      "detailed_description": "A software development kit providing tools and interfaces to design, develop, and verify AI applications (MAPs) for healthcare imaging.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "application_development",
+        "deployment"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Project-MONAI/monai-deploy-app-sdk",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "sdk",
+        "deployment",
+        "healthcare"
+      ],
+      "id": 47
+    },
+    {
+      "name": "MONAI Deploy Informatics Gateway",
+      "one_line_profile": "DICOM integration and data ingestion service",
+      "detailed_description": "A service that facilitates integration with DICOM systems, enabling ingestion of imaging data and triggering of AI workflows in clinical settings.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "data_ingestion",
+        "dicom_integration"
+      ],
+      "application_level": "service",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/Project-MONAI/monai-deploy-informatics-gateway",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dicom",
+        "integration",
+        "pacs"
+      ],
+      "id": 48
+    },
+    {
+      "name": "DeepNeuro",
+      "one_line_profile": "Deep learning python package for neuroimaging data",
+      "detailed_description": "A Python package providing deep learning tools specifically for neuroimaging data analysis, including preprocessing and segmentation utilities.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "neuroimaging_analysis",
+        "segmentation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/QTIM-Lab/DeepNeuro",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neuroimaging",
+        "deep-learning",
+        "python"
+      ],
+      "id": 49
+    },
+    {
+      "name": "PRIOR",
+      "one_line_profile": "Prototype Representation Joint Learning from Medical Images and Reports",
+      "detailed_description": "Implementation of a method for joint learning from medical images and reports using prototype representations, useful for multi-modal medical AI research.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "multi_modal_learning",
+        "representation_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/QtacierP/PRIOR",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "multi-modal",
+        "medical-reports",
+        "representation-learning"
+      ],
+      "id": 50
+    },
+    {
+      "name": "RAUNet",
+      "one_line_profile": "Residual Attention U-Net for tumor segmentation",
+      "detailed_description": "Implementation of a Residual Attention U-Net architecture specifically designed for tumor segmentation in liver and brain MRI images.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "tumor_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RanSuLab/RAUNet-tumor-segmentation",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "unet",
+        "attention-mechanism",
+        "segmentation"
+      ],
+      "id": 51
+    },
+    {
+      "name": "EViT-Unet",
+      "one_line_profile": "Efficient Vision Transformer for medical image segmentation",
+      "detailed_description": "A U-Net like Efficient Vision Transformer model designed for medical image segmentation, optimized for mobile and edge devices.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "edge_computing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Retinal-Research/EVIT-UNET",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vision-transformer",
+        "segmentation",
+        "efficient-ai"
+      ],
+      "id": 52
+    },
+    {
+      "name": "TorchIO",
+      "one_line_profile": "Medical imaging processing for AI applications",
+      "detailed_description": "A Python library for efficient loading, preprocessing, augmentation, and patch-based sampling of 3D medical images for deep learning.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "data_augmentation",
+        "image_preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TorchIO-project/torchio",
+      "help_website": [
+        "https://torchio.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "augmentation",
+        "preprocessing",
+        "3d-imaging"
+      ],
+      "id": 53
+    },
+    {
+      "name": "SwiFT",
+      "one_line_profile": "Swin 4D fMRI Transformer",
+      "detailed_description": "Implementation of a Swin Transformer-based model for analyzing 4D fMRI data, enabling advanced functional connectivity studies.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "fmri_analysis",
+        "spatiotemporal_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Transconnectome/SwiFT",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "fmri",
+        "transformer",
+        "4d-analysis"
+      ],
+      "id": 54
+    },
+    {
+      "name": "Generative Brain ControlNet",
+      "one_line_profile": "ControlNet training on Brain data using MONAI",
+      "detailed_description": "A repository providing implementations for training ControlNet models on brain MRI data (UK Biobank) using the MONAI Generative Models framework.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "image_synthesis",
+        "generative_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Warvito/generative_brain_controlnet",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "controlnet",
+        "brain-mri",
+        "generative-ai"
+      ],
+      "id": 55
+    },
+    {
+      "name": "Generative Chest X-ray",
+      "one_line_profile": "Latent Diffusion Models for Chest X-ray",
+      "detailed_description": "A repository for training Latent Diffusion Models on Chest X-ray data using MONAI, serving as a reference implementation for medical image generation.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "image_synthesis",
+        "generative_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Warvito/generative_chestxray",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "diffusion-models",
+        "chest-xray",
+        "generative-ai"
+      ],
+      "id": 56
+    },
+    {
+      "name": "Generative MONAI",
+      "one_line_profile": "Generative AI extension for the MONAI medical imaging framework",
+      "detailed_description": "A dedicated extension of the MONAI framework focused on generative models for medical imaging, enabling tasks such as image synthesis, translation, and augmentation using state-of-the-art diffusion and GAN-based approaches.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "synthesis",
+        "augmentation",
+        "image_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Warvito/generative_monai",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "medical-imaging",
+        "generative-ai",
+        "diffusion-models",
+        "monai"
+      ],
+      "id": 57
+    },
+    {
+      "name": "FLARE22 Champion Solution",
+      "one_line_profile": "Efficient 3D medical image segmentation solution based on nnU-Net",
+      "detailed_description": "The champion solution for the MICCAI FLARE22 challenge, providing a highly optimized and efficient implementation of nnU-Net for 3D abdominal organ segmentation, serving as a strong baseline and solver for similar volumetric segmentation tasks.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "image_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Ziyan-Huang/FLARE22",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "segmentation",
+        "nnunet",
+        "medical-imaging",
+        "miccai"
+      ],
+      "id": 58
+    },
+    {
+      "name": "im2im-uq",
+      "one_line_profile": "Image-to-image regression with distribution-free uncertainty quantification",
+      "detailed_description": "A PyTorch library for performing image-to-image regression tasks with rigorous, distribution-free uncertainty quantification, applicable to scientific imaging tasks like reconstruction and denoising where reliability is critical.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "image_regression",
+        "reconstruction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aangelopoulos/im2im-uq",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "uncertainty-quantification",
+        "pytorch",
+        "image-regression",
+        "conformal-prediction"
+      ],
+      "id": 59
+    },
+    {
+      "name": "BrainDiVE",
+      "one_line_profile": "Brain diffusion model for cortical discovery and visual exploration",
+      "detailed_description": "A generative model framework leveraging diffusion models to explore and visualize cortical patterns, enabling the discovery of brain surface features and synthesis of neuroimaging data.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "synthesis",
+        "structure_prediction",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aluo-x/BrainDiVE",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "diffusion-models",
+        "neuroimaging",
+        "cortical-surface",
+        "generative-ai"
+      ],
+      "id": 60
+    },
+    {
+      "name": "ClinicaDL",
+      "one_line_profile": "Framework for reproducible deep learning processing of neuroimaging data",
+      "detailed_description": "An open-source software framework for reproducible clinical neuroimaging analysis using deep learning, providing workflows for data preprocessing, classification, reconstruction, and interpretation of MRI and PET data.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "classification",
+        "reconstruction",
+        "preprocessing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aramis-lab/clinicadl",
+      "help_website": [
+        "https://clinicadl.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "neuroimaging",
+        "deep-learning",
+        "reproducibility",
+        "alzheimers-disease"
+      ],
+      "id": 61
+    },
+    {
+      "name": "Context-Aware SSL",
+      "one_line_profile": "Graph-based self-supervised representation learning for medical images",
+      "detailed_description": "A PyTorch implementation of a context-aware self-supervised learning framework that utilizes graph structures to learn robust representations from medical images, improving downstream analysis tasks.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "representation_learning",
+        "image_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/batmanlab/Context_Aware_SSL",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "self-supervised-learning",
+        "medical-imaging",
+        "graph-neural-networks",
+        "representation-learning"
+      ],
+      "id": 62
+    },
+    {
+      "name": "rs_signal_extract",
+      "one_line_profile": "BIDS App for resting state fMRI signal extraction",
+      "detailed_description": "A BIDS App designed to extract resting-state fMRI signals using nilearn, facilitating standardized post-processing workflows within the BIDS ecosystem.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "signal_extraction",
+        "preprocessing",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bids-apps/rs_signal_extract",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "bids-app",
+        "fmri",
+        "nilearn",
+        "signal-processing"
+      ],
+      "id": 63
+    },
+    {
+      "name": "Synthetic Sleep EEG Diffusion",
+      "one_line_profile": "Latent diffusion models for synthetic sleep EEG signal generation",
+      "detailed_description": "A deep learning tool utilizing latent diffusion models to generate high-fidelity synthetic sleep EEG signals, aiding in data augmentation and model training for sleep analysis.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "synthesis",
+        "data_generation",
+        "augmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bruAristimunha/Synthetic-Sleep-EEG-Signal-Generation-using-Latent-Diffusion-Models",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "eeg",
+        "diffusion-models",
+        "synthetic-data",
+        "sleep-analysis"
+      ],
+      "id": 64
+    },
+    {
+      "name": "DNNWSP",
+      "one_line_profile": "Deep neural network with weight sparsity control for brain connectivity classification",
+      "detailed_description": "A deep learning solver implementing L1-norm regularization (weight sparsity) to improve classification performance on whole-brain resting-state functional connectivity patterns, specifically for schizophrenia diagnosis.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "classification",
+        "biomarker_identification",
+        "analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/bsplku/dnnwsp",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "fmri",
+        "schizophrenia",
+        "deep-learning",
+        "connectivity"
+      ],
+      "id": 65
+    },
+    {
+      "name": "Self-Supervised MRI Reconstruction",
+      "one_line_profile": "Parallel network training framework for self-supervised MRI reconstruction",
+      "detailed_description": "A self-supervised learning framework for MRI reconstruction that employs a parallel network training strategy to achieve high-quality image reconstruction without fully sampled ground truth.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "reconstruction",
+        "image_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chenhu96/Self-Supervised-MRI-Reconstruction",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mri-reconstruction",
+        "self-supervised-learning",
+        "medical-imaging"
+      ],
+      "id": 66
+    },
+    {
+      "name": "ViT-AE++",
+      "one_line_profile": "Improved Vision Transformer Autoencoder for medical image representation learning",
+      "detailed_description": "An advanced Vision Transformer Autoencoder (ViT-AE) architecture designed to learn robust and transferable self-supervised representations from medical images.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "representation_learning",
+        "image_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chinmay5/vit_ae_plus_plus",
+      "help_website": [],
+      "license": "CC0-1.0",
+      "tags": [
+        "vision-transformer",
+        "self-supervised-learning",
+        "medical-imaging",
+        "autoencoder"
+      ],
+      "id": 67
+    },
+    {
+      "name": "ASCENT",
+      "one_line_profile": "Toolbox for cardiac ultrasound segmentation and color-Doppler dealiasing",
+      "detailed_description": "A comprehensive toolbox for cardiac ultrasound analysis, providing tools for segmentation and color-Doppler dealiasing, supporting advanced cardiovascular imaging research.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "denoising",
+        "image_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/creatis-myriad/ASCENT",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ultrasound",
+        "cardiac-imaging",
+        "segmentation",
+        "dealiasing"
+      ],
+      "id": 68
+    },
+    {
+      "name": "C2FViT",
+      "one_line_profile": "Affine medical image registration using Coarse-to-Fine Vision Transformer",
+      "detailed_description": "A deep learning solver for affine medical image registration that utilizes a Coarse-to-Fine Vision Transformer architecture to achieve robust and accurate alignment of 3D medical images.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "registration",
+        "alignment",
+        "image_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cwmok/C2FViT",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "image-registration",
+        "vision-transformer",
+        "medical-imaging",
+        "affine-registration"
+      ],
+      "id": 69
+    },
+    {
+      "name": "PyNets",
+      "one_line_profile": "Workflow for structural and functional connectome ensemble learning",
+      "detailed_description": "A reproducible workflow and software package for ensemble learning on structural and functional connectomes, facilitating complex network analysis and predictive modeling in neuroscience.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "connectome_analysis",
+        "network_generation",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dPys/PyNets",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "connectomics",
+        "machine-learning",
+        "network-analysis",
+        "neuroimaging"
+      ],
+      "id": 70
+    },
+    {
+      "name": "SALMON",
+      "one_line_profile": "MONAI-based deep learning toolbox for 3D medical image segmentation",
+      "detailed_description": "A deep learning segmentation toolbox built on MONAI, designed for single and multi-label segmentation of 3D medical images, providing a robust pipeline for clinical and research applications.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "image_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/davidiommi/Pytorch--3D-Medical-Images-Segmentation--SALMON",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "segmentation",
+        "monai",
+        "medical-imaging",
+        "deep-learning"
+      ],
+      "id": 71
+    },
+    {
+      "name": "SlicerTorchIO",
+      "one_line_profile": "3D Slicer module for TorchIO medical image processing",
+      "detailed_description": "A 3D Slicer extension that integrates TorchIO, enabling advanced medical image augmentation and preprocessing directly within the Slicer environment.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "augmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fepegar/SlicerTorchIO",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "3d-slicer",
+        "torchio",
+        "augmentation",
+        "medical-imaging"
+      ],
+      "id": 72
+    },
+    {
+      "name": "BolT",
+      "one_line_profile": "Fused Window Transformers for fMRI time series analysis",
+      "detailed_description": "A deep learning model (Fused Window Transformers) designed specifically for analyzing fMRI time series data, capturing temporal dependencies for brain activity analysis.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "analysis",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/icon-lab/BolT",
+      "help_website": [
+        "https://www.sciencedirect.com/science/article/pii/S1361841523001019"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "fmri",
+        "transformer",
+        "time-series",
+        "deep-learning"
+      ],
+      "id": 73
+    },
+    {
+      "name": "ResViT",
+      "one_line_profile": "Residual Vision Transformers for multi-modal medical image synthesis",
+      "detailed_description": "A generative adversarial network (GAN) based on vision transformers for synthesizing medical images (e.g., MRI to CT) with high fidelity.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "synthesis",
+        "generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/icon-lab/ResViT",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "image-synthesis",
+        "vision-transformer",
+        "gan",
+        "medical-imaging"
+      ],
+      "id": 74
+    },
+    {
+      "name": "deepbrain",
+      "one_line_profile": "Deep learning library for brain extraction and processing",
+      "detailed_description": "A specialized library providing deep learning-based tools for brain extraction (skull stripping) from MRI images, packaged for easy use.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "skull_stripping"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/iitzco/deepbrain",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "brain-extraction",
+        "skull-stripping",
+        "mri",
+        "deep-learning"
+      ],
+      "id": 75
+    },
+    {
+      "name": "SlicerMONAIAuto3DSeg",
+      "one_line_profile": "3D Slicer extension for MONAI Auto3DSeg models",
+      "detailed_description": "An extension for 3D Slicer that enables users to run MONAI's Auto3DSeg automated segmentation models directly within the Slicer interface.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lassoan/SlicerMONAIAuto3DSeg",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "3d-slicer",
+        "monai",
+        "segmentation",
+        "auto3dseg"
+      ],
+      "id": 76
+    },
+    {
+      "name": "GLoRIA",
+      "one_line_profile": "Multimodal global-local representation learning for medical image recognition",
+      "detailed_description": "A framework for learning global and local representations from multimodal medical data (images and text), serving as a foundation model for various downstream medical recognition tasks.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "representation_learning",
+        "classification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/marshuang80/gloria",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "multimodal",
+        "representation-learning",
+        "foundation-model",
+        "medical-imaging"
+      ],
+      "id": 77
+    },
+    {
+      "name": "NoBrainer",
+      "one_line_profile": "Framework for developing 3D neuroimaging neural network models",
+      "detailed_description": "A framework based on TensorFlow/Keras for developing and training 3D neural network models specifically for neuroimaging data processing, including segmentation and regression tasks.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "modeling",
+        "image_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neuronets/nobrainer",
+      "help_website": [
+        "https://nobrainer.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "neuroimaging",
+        "deep-learning",
+        "3d-segmentation",
+        "mri"
+      ],
+      "id": 78
+    },
+    {
+      "name": "NoBrainer Zoo",
+      "one_line_profile": "CLI for pre-trained deep learning models in neuroimaging",
+      "detailed_description": "A command-line interface and collection of pre-trained deep learning models for 3D brain MRI processing tasks such as brain extraction and segmentation, facilitating easy inference.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "inference",
+        "segmentation",
+        "brain_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neuronets/nobrainer-zoo",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "model-zoo",
+        "inference",
+        "neuroimaging",
+        "cli"
+      ],
+      "id": 79
+    },
+    {
+      "name": "TotalSpineSeg",
+      "one_line_profile": "Robust segmentation of spinal structures in MRI",
+      "detailed_description": "A tool for robust segmentation and labeling of vertebrae, intervertebral discs, spinal cord, and spinal canal in MRI images using nnU-Net and iterative algorithms.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "labeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neuropoly/totalspineseg",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "spine-segmentation",
+        "mri",
+        "nnunet",
+        "medical-imaging"
+      ],
+      "id": 80
+    },
+    {
+      "name": "Nilearn",
+      "one_line_profile": "Machine learning for NeuroImaging in Python",
+      "detailed_description": "A Python module for fast and easy statistical learning on NeuroImaging data. It leverages the scikit-learn Python toolbox for multivariate statistics with applications such as predictive modeling, classification, decoding, or connectivity analysis.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "statistical_analysis",
+        "visualization",
+        "decoding",
+        "connectivity_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nilearn/nilearn",
+      "help_website": [
+        "https://nilearn.github.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "neuroimaging",
+        "machine-learning",
+        "fmri",
+        "visualization"
+      ],
+      "id": 81
+    },
+    {
+      "name": "neuropredict",
+      "one_line_profile": "Assessment of predictive power for neuroimaging features",
+      "detailed_description": "A tool for easy and comprehensive assessment of predictive power of features, specifically designed with support for neuroimaging data, enabling standardized evaluation of machine learning models in neuroscience.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "predictive_modeling",
+        "feature_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/raamana/neuropredict",
+      "help_website": [
+        "https://raamana.github.io/neuropredict"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "predictive-modeling",
+        "neuroimaging",
+        "evaluation",
+        "biomarkers"
+      ],
+      "id": 82
+    },
+    {
+      "name": "hcp-utils",
+      "one_line_profile": "Utilities for working with Human Connectome Project data",
+      "detailed_description": "A collection of utilities to facilitate the use of Human Connectome Project (HCP) and HCP-like data, particularly integrating with nilearn and other Python neuroimaging tools for visualization and processing.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "visualization",
+        "data_loading"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rmldj/hcp-utils",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "hcp",
+        "connectome",
+        "visualization",
+        "nilearn"
+      ],
+      "id": 83
+    },
+    {
+      "name": "Patch-based 3D U-Net (brats17)",
+      "one_line_profile": "Implementation of patch-based 3D U-Net for brain tumor segmentation",
+      "detailed_description": "A deep learning implementation for volumetric segmentation of brain tumors using a patch-based 3D U-Net architecture, specifically designed for the BraTS challenge dataset.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "image_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xf4j/brats17",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "brain-tumor",
+        "segmentation",
+        "u-net",
+        "mri",
+        "brats"
+      ],
+      "id": 84
+    },
+    {
+      "name": "BrainGNN",
+      "one_line_profile": "Graph Neural Network for fMRI analysis and brain network representation",
+      "detailed_description": "A PyTorch implementation of BrainGNN, a graph neural network framework designed to analyze functional magnetic resonance imaging (fMRI) data by modeling brain regions as nodes and their connections as edges for classification and biomarker identification.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "classification",
+        "network_analysis",
+        "biomarker_discovery"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xxlya/BrainGNN_Pytorch",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gnn",
+        "fmri",
+        "brain-network",
+        "pytorch",
+        "neuroimaging"
+      ],
+      "id": 85
+    },
+    {
+      "name": "U-Net Brain Tumor Segmentation",
+      "one_line_profile": "Deep learning framework for brain tumor segmentation using U-Net",
+      "detailed_description": "A widely used implementation of the U-Net architecture for segmenting brain tumors from MRI data. It serves as a reference baseline and practical solver for medical image segmentation tasks.",
+      "domains": [
+        "N1",
+        "N1-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "image_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zsdonghao/u-net-brain-tumor",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "u-net",
+        "brain-tumor",
+        "segmentation",
+        "medical-imaging",
+        "deep-learning"
+      ],
+      "id": 86
+    }
+  ]
+}

@@ -1,0 +1,1231 @@
+{
+  "generated_at": "2025-12-17T11:04:02.424820+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "FUS1",
+      "leaf_cluster_name": "核科学与核聚变计算生态",
+      "domain": "Nuclear / Fusion / Plasma",
+      "typical_objects": "等离子体场, 粒子分布, 磁约束几何, 诊断信号, 输运方程",
+      "task_chain": "建模→仿真→诊断/反演→控制/优化→验证→工作流",
+      "tool_form": "大型仿真器 + 诊断/反演工具 + 控制/优化 + HPC"
+    },
+    "unit": {
+      "unit_id": "FUS1-02",
+      "unit_name": "装置几何、网格与磁约束建模工具链",
+      "target_scale": "200–450",
+      "coverage_tools": "geometry/CAD、磁场/线圈建模、网格生成与适配"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] PyEquilib",
+        "[GH] SMARDDA",
+        "[GH] HELENA",
+        "[GH] CHEASE",
+        "[GH] OMFIT",
+        "[GH] FREEGS",
+        "[GH] DESC",
+        "[GH] VMEC",
+        "[GH] EFIT",
+        "[GH] tokamak equilibrium solver",
+        "[GH] stellarator optimization",
+        "[GH] grad-shafranov",
+        "[GH] magnetic field tracing",
+        "[GH] fusion device cad",
+        "[GH] tokamak mesh generation",
+        "[GH] plasma boundary reconstruction",
+        "[GH] magnetic coil design",
+        "[GH] geqdsk tools",
+        "[GH] mhd equilibrium",
+        "[GH] flux surface coordinates",
+        "[GH] vmec wrapper",
+        "[GH] fusion geometry",
+        "[WEB] tokamak magnetic equilibrium solver github",
+        "[WEB] stellarator coil design optimization github",
+        "[WEB] grad-shafranov python solver github",
+        "[WEB] fusion reactor cad to mesh github",
+        "[WEB] plasma physics magnetic field line tracing github",
+        "[WEB] vmec desc stellarator github"
+      ],
+      "total_candidates": 511,
+      "tool_candidates": 137,
+      "final_tools": 46
+    }
+  },
+  "tools": [
+    {
+      "name": "tokamesh",
+      "one_line_profile": "Mesh generation and geometry matrix construction tool for tokamak tomography",
+      "detailed_description": "A Python package designed to construct meshes and geometry matrices specifically for tomography problems in tokamak fusion devices, facilitating plasma diagnostic analysis.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "mesh_generation",
+        "tomography",
+        "geometry_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/C-bowman/tokamesh",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "tokamak",
+        "mesh",
+        "tomography",
+        "fusion"
+      ],
+      "id": 1
+    },
+    {
+      "name": "freegs4e",
+      "one_line_profile": "Free boundary Grad-Shafranov solver for time evolution",
+      "detailed_description": "A solver for the Grad-Shafranov equation focusing on free boundary conditions and time evolution, used for modeling plasma equilibrium in fusion devices.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "plasma_equilibrium",
+        "solver",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FusionComputingLab/freegs4e",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "grad-shafranov",
+        "plasma",
+        "equilibrium",
+        "tokamak"
+      ],
+      "id": 2
+    },
+    {
+      "name": "FreeGSNKE",
+      "one_line_profile": "Evolutive free-boundary tokamak plasma equilibrium simulation code",
+      "detailed_description": "A Python code for simulating evolutive free-boundary tokamak plasma equilibrium, building upon the FreeGS framework.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "plasma_equilibrium",
+        "simulation",
+        "tokamak_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FusionComputingLab/freegsnke",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "plasma",
+        "equilibrium",
+        "tokamak",
+        "simulation"
+      ],
+      "id": 3
+    },
+    {
+      "name": "TextDescriptives",
+      "one_line_profile": "Library for calculating linguistic metrics from text",
+      "detailed_description": "A Python library for calculating a large variety of metrics from text, including descriptive statistics, readability, and dependency distance, used in computational linguistics and social science research.",
+      "domains": [
+        "NLP",
+        "Linguistics"
+      ],
+      "subtask_category": [
+        "text_analysis",
+        "metric_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HLasse/TextDescriptives",
+      "help_website": [
+        "https://hlasse.github.io/TextDescriptives/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "nlp",
+        "linguistics",
+        "metrics",
+        "text-analysis"
+      ],
+      "id": 4
+    },
+    {
+      "name": "EFIT.jl",
+      "one_line_profile": "Julia interface for reading EFIT geqdsk files",
+      "detailed_description": "Provides routines to read and handle EFIT geqdsk files, which are standard formats for storing magnetic equilibrium data in fusion research.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "data_io",
+        "plasma_equilibrium"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaFusion/EFIT.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "efit",
+        "geqdsk",
+        "fusion",
+        "julia"
+      ],
+      "id": 5
+    },
+    {
+      "name": "Equilibrium.jl",
+      "one_line_profile": "Julia routines for MHD Equilibrium analysis",
+      "detailed_description": "A Julia library providing routines for working with Magnetohydrodynamic (MHD) equilibrium, essential for plasma physics and fusion reactor modeling.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "mhd_equilibrium",
+        "plasma_physics"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaFusion/Equilibrium.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "mhd",
+        "equilibrium",
+        "plasma",
+        "julia"
+      ],
+      "id": 6
+    },
+    {
+      "name": "Describe Anything",
+      "one_line_profile": "Detailed localized image and video captioning model",
+      "detailed_description": "Implementation of 'Describe Anything', a model for generating detailed localized captions for images and videos, serving as a foundational tool for visual data analysis and annotation.",
+      "domains": [
+        "Computer Vision",
+        "AI4S"
+      ],
+      "subtask_category": [
+        "image_captioning",
+        "data_annotation"
+      ],
+      "application_level": "model",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NVlabs/describe-anything",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "captioning",
+        "vision-language",
+        "ai",
+        "annotation"
+      ],
+      "id": 7
+    },
+    {
+      "name": "Open FUSION Toolkit",
+      "one_line_profile": "Modeling tools suite for plasma and fusion research",
+      "detailed_description": "A suite of modeling tools and underlying finite element framework for solving problems in plasma and fusion research and engineering in arbitrary 2D and 3D geometries.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "plasma_modeling",
+        "finite_element_analysis",
+        "geometry_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/OpenFUSIONToolkit/OpenFUSIONToolkit",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "fusion",
+        "plasma",
+        "fem",
+        "modeling"
+      ],
+      "id": 8
+    },
+    {
+      "name": "DESC",
+      "one_line_profile": "Stellarator Equilibrium and Optimization Suite",
+      "detailed_description": "A code suite for solving and optimizing 3D MHD equilibrium in stellarators and other magnetic confinement devices using a pseudo-spectral method.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "stellarator_optimization",
+        "mhd_equilibrium",
+        "magnetic_confinement"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PlasmaControl/DESC",
+      "help_website": [
+        "https://desc-docs.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "stellarator",
+        "optimization",
+        "mhd",
+        "equilibrium"
+      ],
+      "id": 9
+    },
+    {
+      "name": "Stellarator-Database-Tools",
+      "one_line_profile": "Tools for uploading results to the stellarator database",
+      "detailed_description": "Functions and utilities required to upload DESC or VMEC equilibrium results to the community stellarator database, facilitating data sharing and analysis.",
+      "domains": [
+        "FUS1"
+      ],
+      "subtask_category": [
+        "data_management",
+        "database_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/PlasmaControl/Stellarator-Database",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "stellarator",
+        "database",
+        "fusion",
+        "data-upload"
+      ],
+      "id": 10
+    },
+    {
+      "name": "FOCUS",
+      "one_line_profile": "Flexible Optimized Coils Using Space curves",
+      "detailed_description": "A code for designing optimized magnetic coils for stellarators and tokamaks using space curves representation, critical for magnetic confinement geometry.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "coil_design",
+        "optimization",
+        "magnetic_field_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/PrincetonUniversity/FOCUS",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "coils",
+        "stellarator",
+        "optimization",
+        "magnetic-field"
+      ],
+      "id": 11
+    },
+    {
+      "name": "SPEC",
+      "one_line_profile": "Stepped-Pressure Equilibrium Code for MRxMHD",
+      "detailed_description": "An advanced Multi-Region Relaxed MHD (MRxMHD) equilibrium solver capable of handling stepped-pressure profiles, used for stellarator and tokamak physics.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "mhd_equilibrium",
+        "plasma_physics",
+        "solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/PrincetonUniversity/SPEC",
+      "help_website": [
+        "https://princetonuniversity.github.io/SPEC/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "mhd",
+        "equilibrium",
+        "stellarator",
+        "plasma"
+      ],
+      "id": 12
+    },
+    {
+      "name": "STELLOPT",
+      "one_line_profile": "Stellarator optimization code",
+      "detailed_description": "The state-of-the-art code for stellarator optimization, used to design magnetic configurations that meet specific physics and engineering criteria.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "stellarator_optimization",
+        "magnetic_configuration",
+        "design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/PrincetonUniversity/STELLOPT",
+      "help_website": [
+        "https://princetonuniversity.github.io/STELLOPT/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "stellarator",
+        "optimization",
+        "fusion",
+        "plasma"
+      ],
+      "id": 13
+    },
+    {
+      "name": "PyGS",
+      "one_line_profile": "Magnetic flux rope detection and reconstruction tool",
+      "detailed_description": "A Python tool for magnetic flux rope detection and reconstruction based on the extended Grad-Shafranov equation, used in space and plasma physics.",
+      "domains": [
+        "FUS1",
+        "Space Physics"
+      ],
+      "subtask_category": [
+        "flux_rope_detection",
+        "reconstruction",
+        "grad_shafranov"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PyGSDR/PyGS",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "flux-rope",
+        "grad-shafranov",
+        "plasma",
+        "reconstruction"
+      ],
+      "id": 14
+    },
+    {
+      "name": "ThinWire_MRIGradientCoilDesign",
+      "one_line_profile": "Gradient coil design tool for MRI",
+      "detailed_description": "A MATLAB-based tool for designing gradient coils for Magnetic Resonance Imaging (MRI), utilizing thin-wire approximations for electromagnetic design.",
+      "domains": [
+        "Medical Physics",
+        "Electromagnetics"
+      ],
+      "subtask_category": [
+        "coil_design",
+        "mri",
+        "electromagnetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/Sebastian-MR/ThinWire_MRIGradientCoilDesign",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mri",
+        "coil-design",
+        "gradient-coils",
+        "matlab"
+      ],
+      "id": 15
+    },
+    {
+      "name": "eqdsk2helena",
+      "one_line_profile": "Converter for EQDSK equilibrium files to HELENA format",
+      "detailed_description": "A utility to convert magnetic equilibrium data from the standard EQDSK format into the input format required by the HELENA stability code.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "file_format_conversion"
+      ],
+      "application_level": "utility",
+      "primary_language": "Prolog",
+      "repo_url": "https://github.com/bendudson/eqdsk2helena",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "eqdsk",
+        "helena",
+        "fusion",
+        "converter"
+      ],
+      "id": 16
+    },
+    {
+      "name": "descriptastorus",
+      "one_line_profile": "Chemistry descriptor computation and storage library",
+      "detailed_description": "A library for computing chemical descriptors and optionally storing them, designed for machine learning applications in chemistry and cheminformatics.",
+      "domains": [
+        "Chemistry",
+        "Cheminformatics"
+      ],
+      "subtask_category": [
+        "descriptor_calculation",
+        "molecular_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bp-kelley/descriptastorus",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "chemistry",
+        "descriptors",
+        "machine-learning",
+        "cheminformatics"
+      ],
+      "id": 17
+    },
+    {
+      "name": "cfsem-py",
+      "one_line_profile": "Quasi-steady electromagnetics solver for fusion magnets",
+      "detailed_description": "A Python library for quasi-steady electromagnetics modeling, including filamentized approximations, Biot-Savart law calculations, and Grad-Shafranov equilibrium solving, developed by CFS.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "electromagnetics",
+        "grad_shafranov",
+        "magnet_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/cfs-energy/cfsem-py",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "electromagnetics",
+        "fusion",
+        "magnets",
+        "biot-savart"
+      ],
+      "id": 18
+    },
+    {
+      "name": "cfsem-rs",
+      "one_line_profile": "Rust library for quasi-steady electromagnetics and equilibrium solving in fusion",
+      "detailed_description": "A library providing tools for quasi-steady electromagnetics, including filamentized approximations, Biot-Savart law calculations, and Grad-Shafranov equilibrium solving, developed by Commonwealth Fusion Systems.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "magnetic_modeling",
+        "equilibrium_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/cfs-energy/cfsem-rs",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "electromagnetics",
+        "grad-shafranov",
+        "biot-savart",
+        "fusion-energy"
+      ],
+      "id": 19
+    },
+    {
+      "name": "interplanetary-grad-shafranov",
+      "one_line_profile": "Grad-Shafranov reconstruction tool for interplanetary magnetic flux ropes",
+      "detailed_description": "A MATLAB toolkit for performing Grad-Shafranov reconstruction on interplanetary magnetic flux ropes, useful for analyzing magnetic field structures in space plasma physics.",
+      "domains": [
+        "Space Physics",
+        "Plasma Physics"
+      ],
+      "subtask_category": [
+        "magnetic_reconstruction",
+        "data_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/cmoestl/interplanetary-grad-shafranov",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "grad-shafranov",
+        "magnetic-flux-ropes",
+        "space-weather",
+        "mhd"
+      ],
+      "id": 20
+    },
+    {
+      "name": "data-describe",
+      "one_line_profile": "Pythonic accelerator for exploratory data analysis (EDA)",
+      "detailed_description": "A Python library designed to accelerate Exploratory Data Analysis (EDA) for data science, providing tools for data summarization, visualization, and quality assessment.",
+      "domains": [
+        "Data Science",
+        "General Science"
+      ],
+      "subtask_category": [
+        "exploratory_data_analysis",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/data-describe/data-describe",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "eda",
+        "data-analysis",
+        "visualization"
+      ],
+      "id": 21
+    },
+    {
+      "name": "Stein-Variational-Gradient-Descent",
+      "one_line_profile": "Implementation of Stein Variational Gradient Descent (SVGD) for Bayesian inference",
+      "detailed_description": "Code implementation for the paper 'Stein Variational Gradient Descent (SVGD): A General Purpose Bayesian Inference Algorithm', providing a method for variational inference in probabilistic models.",
+      "domains": [
+        "Machine Learning",
+        "Statistics"
+      ],
+      "subtask_category": [
+        "bayesian_inference",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dilinwang820/Stein-Variational-Gradient-Descent",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "svgd",
+        "bayesian-inference",
+        "variational-inference"
+      ],
+      "id": 22
+    },
+    {
+      "name": "LANLGeoMag",
+      "one_line_profile": "Library for magnetic field models and coordinate transformations in geophysics",
+      "detailed_description": "A C-based library from Los Alamos National Laboratory providing magnetic field models, coordinate conversions, and tools for magnetic field line tracing and drift shell tracing in geophysical research.",
+      "domains": [
+        "Geophysics",
+        "Space Physics"
+      ],
+      "subtask_category": [
+        "magnetic_field_modeling",
+        "coordinate_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/drsteve/LANLGeoMag",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "geomagnetism",
+        "magnetic-field",
+        "coordinate-systems",
+        "lanl"
+      ],
+      "id": 23
+    },
+    {
+      "name": "room_transfer_function_toolkit",
+      "one_line_profile": "Toolkit for room transfer function representation and sound source localization",
+      "detailed_description": "A library for sparse representation of room transfer functions and algorithms for localizing sound sources in a room using a single microphone.",
+      "domains": [
+        "Acoustics",
+        "Signal Processing"
+      ],
+      "subtask_category": [
+        "signal_processing",
+        "source_localization"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/epfl-lts2/room_transfer_function_toolkit",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "acoustics",
+        "transfer-function",
+        "localization"
+      ],
+      "id": 24
+    },
+    {
+      "name": "grounded-video-description",
+      "one_line_profile": "Video grounding and captioning model",
+      "detailed_description": "A research tool for video grounding and captioning, enabling the association of textual descriptions with specific temporal segments in videos.",
+      "domains": [
+        "Computer Vision",
+        "AI"
+      ],
+      "subtask_category": [
+        "video_analysis",
+        "captioning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/facebookresearch/grounded-video-description",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "video-grounding",
+        "video-captioning",
+        "deep-learning"
+      ],
+      "id": 25
+    },
+    {
+      "name": "freegs",
+      "one_line_profile": "Free boundary Grad-Shafranov solver for plasma equilibrium",
+      "detailed_description": "A Python-based free boundary Grad-Shafranov solver designed to calculate the equilibrium of plasma in magnetic confinement devices like tokamaks.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "equilibrium_solver",
+        "plasma_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/freegs-plasma/freegs",
+      "help_website": [
+        "https://freegs.readthedocs.io/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "grad-shafranov",
+        "plasma-equilibrium",
+        "tokamak",
+        "mhd"
+      ],
+      "id": 26
+    },
+    {
+      "name": "cad_to_dagmc",
+      "one_line_profile": "Tool to convert CAD geometry to DAGMC h5m format",
+      "detailed_description": "A tool that converts CAD geometry (STP files) or Cadquery assemblies into DAGMC-compatible h5m files for use in neutronics and fusion simulations.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "geometry_conversion",
+        "mesh_generation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fusion-energy/cad_to_dagmc",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cad",
+        "dagmc",
+        "neutronics",
+        "fusion-energy"
+      ],
+      "id": 27
+    },
+    {
+      "name": "cad_to_h5m",
+      "one_line_profile": "CAD to h5m converter using Cubit Python API",
+      "detailed_description": "A Python tool that converts CAD files (STP, SAT) to h5m files compatible with DAGMC-based simulations, utilizing the Cubit Python API for geometry processing.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "geometry_conversion",
+        "mesh_generation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fusion-energy/cad_to_h5m",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cubit",
+        "dagmc",
+        "cad-conversion",
+        "fusion-energy"
+      ],
+      "id": 28
+    },
+    {
+      "name": "paramak",
+      "one_line_profile": "Parametric 3D fusion reactor CAD and neutronics model generator",
+      "detailed_description": "A Python tool for creating parametric 3D CAD models of fusion reactors and automatically generating neutronics models for simulation.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "parametric_modeling",
+        "cad_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fusion-energy/paramak",
+      "help_website": [
+        "https://paramak.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fusion-reactor",
+        "parametric-cad",
+        "neutronics",
+        "3d-modeling"
+      ],
+      "id": 29
+    },
+    {
+      "name": "omas",
+      "one_line_profile": "Ordered Multidimensional Array Structure for fusion data",
+      "detailed_description": "A Python library providing an interface for the ITER Integrated Modeling & Analysis Suite (IMAS) data structure, facilitating data exchange and storage in fusion research.",
+      "domains": [
+        "FUS1"
+      ],
+      "subtask_category": [
+        "data_management",
+        "interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gafusion/omas",
+      "help_website": [
+        "https://gafusion.github.io/omas/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "imas",
+        "iter",
+        "fusion-data",
+        "data-structure"
+      ],
+      "id": 30
+    },
+    {
+      "name": "CoFF",
+      "one_line_profile": "Cross-Modal Feature Fusion for point cloud registration",
+      "detailed_description": "Implementation of 'Cross-Modal Feature Fusion for Robust Point Cloud Registration with Ambiguous Geometry', a method for aligning 3D point cloud data.",
+      "domains": [
+        "Computer Vision",
+        "Geometry"
+      ],
+      "subtask_category": [
+        "point_cloud_registration",
+        "feature_fusion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gseg-ethz/CoFF",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "point-cloud",
+        "registration",
+        "computer-vision"
+      ],
+      "id": 31
+    },
+    {
+      "name": "gvec",
+      "one_line_profile": "Galerkin Variational Equilibrium Code for 3D MHD",
+      "detailed_description": "A flexible 3D ideal MHD equilibrium solver using a Galerkin variational approach, designed for generating three-dimensional magnetohydrodynamic equilibria.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "equilibrium_solver",
+        "mhd_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/gvec-group/gvec",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mhd",
+        "equilibrium",
+        "galerkin",
+        "fusion"
+      ],
+      "id": 32
+    },
+    {
+      "name": "simsopt",
+      "one_line_profile": "Simons Stellarator Optimizer for magnetic configuration optimization",
+      "detailed_description": "A framework for optimizing stellarator magnetic configurations and other plasma physics problems, developed by the Hidden Symmetries project.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "optimization",
+        "magnetic_configuration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hiddenSymmetries/simsopt",
+      "help_website": [
+        "https://simsopt.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "stellarator",
+        "optimization",
+        "plasma-physics",
+        "magnetic-field"
+      ],
+      "id": 33
+    },
+    {
+      "name": "efficient-descriptors",
+      "one_line_profile": "Binary local image descriptors for resource-limited devices",
+      "detailed_description": "Implementation of efficient binary local image descriptors designed for computer vision applications on resource-constrained devices.",
+      "domains": [
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "feature_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/iago-suarez/efficient-descriptors",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "image-descriptors",
+        "computer-vision",
+        "binary-descriptors"
+      ],
+      "id": 34
+    },
+    {
+      "name": "DiffVAE",
+      "one_line_profile": "Generative model for modelling cell differentiation",
+      "detailed_description": "Code for the paper 'Unsupervised generative and graph neural methods for modelling cell differentiation', providing a VAE-based approach to model biological processes.",
+      "domains": [
+        "Biology",
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "modeling",
+        "cell_differentiation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ioanabica/DiffVAE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vae",
+        "single-cell",
+        "differentiation",
+        "generative-model"
+      ],
+      "id": 35
+    },
+    {
+      "name": "vae_mhd_solver",
+      "one_line_profile": "VAE-based neural network for ideal MHD equilibrium solving",
+      "detailed_description": "A Variational Autoencoder (VAE)-like neural network designed to solve the ideal MHD equilibrium problem in tokamak geometries.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "equilibrium_solver",
+        "ai_for_science"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jaem-seo/vae_mhd_solver",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mhd",
+        "tokamak",
+        "vae",
+        "neural-network"
+      ],
+      "id": 36
+    },
+    {
+      "name": "LFASR-FS-GAF",
+      "one_line_profile": "Deep coarse-to-fine dense light field reconstruction",
+      "detailed_description": "Implementation of a deep learning approach for dense light field reconstruction with flexible sampling and geometry-aware fusion.",
+      "domains": [
+        "Computer Vision",
+        "Imaging"
+      ],
+      "subtask_category": [
+        "image_reconstruction",
+        "light_field"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jingjin25/LFASR-FS-GAF",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "light-field",
+        "reconstruction",
+        "deep-learning"
+      ],
+      "id": 37
+    },
+    {
+      "name": "gradient-descent-the-ultimate-optimizer",
+      "one_line_profile": "Code for 'Gradient Descent: The Ultimate Optimizer' paper",
+      "detailed_description": "Implementation of the optimization algorithms and experiments described in the NeurIPS 2022 paper 'Gradient Descent: The Ultimate Optimizer'.",
+      "domains": [
+        "Machine Learning",
+        "Optimization"
+      ],
+      "subtask_category": [
+        "optimization",
+        "algorithm_research"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kach/gradient-descent-the-ultimate-optimizer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gradient-descent",
+        "optimization",
+        "neurips"
+      ],
+      "id": 38
+    },
+    {
+      "name": "matlabVMEC",
+      "one_line_profile": "MATLAB interface for VMEC equilibrium code",
+      "detailed_description": "A repository containing MATLAB routines and wrappers for interacting with the VMEC (Variational Moments Equilibrium Code) MHD equilibrium solver.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "equilibrium_solver",
+        "interface"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/lazersos/matlabVMEC",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "vmec",
+        "matlab",
+        "mhd",
+        "equilibrium"
+      ],
+      "id": 39
+    },
+    {
+      "name": "HELENA_Channel_Estimation",
+      "one_line_profile": "Deep learning-based channel estimation tool",
+      "detailed_description": "Code for the paper 'HELENA: High-Efficiency Learning-Based Channel Estimation Using Neural Attention', providing tools for channel estimation in telecommunications.",
+      "domains": [
+        "Telecommunications",
+        "Signal Processing"
+      ],
+      "subtask_category": [
+        "channel_estimation",
+        "deep_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/miguelhdo/HELENA_Channel_Estimation",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "channel-estimation",
+        "neural-attention",
+        "telecom"
+      ],
+      "id": 40
+    },
+    {
+      "name": "SimNDT",
+      "one_line_profile": "Ultrasonic NDT Simulator based on EFIT",
+      "detailed_description": "An ultrasonic Nondestructive Testing (NDT) simulator using the Elastodynamic Finite Integration Technique (EFIT) for wave propagation simulation.",
+      "domains": [
+        "Physics",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "simulation",
+        "nondestructive_testing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mmolero/SimNDT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ndt",
+        "ultrasonic",
+        "efit",
+        "simulation"
+      ],
+      "id": 41
+    },
+    {
+      "name": "vmecpp",
+      "one_line_profile": "Reimplementation of the VMEC equilibrium code for stellarator fusion devices",
+      "detailed_description": "A C++ and Python reimplementation of the Variational Moments Equilibrium Code (VMEC), a standard tool for computing 3D MHD equilibrium in stellarators and tokamaks. It offers improved performance and modern interfaces compared to the legacy Fortran version.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "equilibrium_calculation",
+        "stellarator_physics",
+        "mhd_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/proximafusion/vmecpp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fusion",
+        "stellarator",
+        "mhd",
+        "equilibrium"
+      ],
+      "id": 42
+    },
+    {
+      "name": "SpacePy",
+      "one_line_profile": "Library for space science data analysis, modeling, and visualization",
+      "detailed_description": "A Python library for space science applications, providing tools for magnetic field modeling, drift shell tracing, time coordinate conversions, and data analysis for space plasma physics.",
+      "domains": [
+        "FUS1",
+        "SPACE_PHYSICS"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "magnetic_field_modeling",
+        "coordinate_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spacepy/spacepy",
+      "help_website": [
+        "https://spacepy.github.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "space-science",
+        "plasma",
+        "magnetic-field",
+        "data-analysis"
+      ],
+      "id": 43
+    },
+    {
+      "name": "GSFit",
+      "one_line_profile": "Grad-Shafranov equilibrium fitting code for tokamak plasma reconstruction",
+      "detailed_description": "A Rust-based implementation of the Grad-Shafranov equilibrium fitting algorithm, used for reconstructing plasma shapes and profiles in tokamak fusion devices from diagnostic data.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "equilibrium_fitting",
+        "plasma_reconstruction",
+        "data_inversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/tokamak-energy/gsfit",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "tokamak",
+        "grad-shafranov",
+        "plasma-reconstruction",
+        "rust"
+      ],
+      "id": 44
+    },
+    {
+      "name": "Paramak",
+      "one_line_profile": "Tool for creating parametric 3D CAD models of fusion reactors",
+      "detailed_description": "A Python tool for generating parametric 3D CAD models of fusion reactors. It automates the creation of complex geometries for neutronics, thermal, and mechanical analysis.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "cad_generation",
+        "geometry_modeling",
+        "neutronics_preparation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ukaea/paramak",
+      "help_website": [
+        "https://paramak.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fusion",
+        "cad",
+        "parametric-modeling",
+        "neutronics"
+      ],
+      "id": 45
+    },
+    {
+      "name": "ESSOS",
+      "one_line_profile": "e-Stellarator Simulation and Optimization Suite for fusion device design",
+      "detailed_description": "A suite for the simulation and optimization of stellarator fusion devices, focusing on equilibrium configurations and coil design optimization.",
+      "domains": [
+        "FUS1",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "stellarator_optimization",
+        "plasma_simulation",
+        "coil_design"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uwplasma/ESSOS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "stellarator",
+        "optimization",
+        "fusion",
+        "simulation"
+      ],
+      "id": 46
+    }
+  ]
+}

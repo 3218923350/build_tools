@@ -1,0 +1,1051 @@
+{
+  "generated_at": "2025-12-17T11:52:22.479581+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "FUS1",
+      "leaf_cluster_name": "核科学与核聚变计算生态",
+      "domain": "Nuclear / Fusion / Plasma",
+      "typical_objects": "等离子体场, 粒子分布, 磁约束几何, 诊断信号, 输运方程",
+      "task_chain": "建模→仿真→诊断/反演→控制/优化→验证→工作流",
+      "tool_form": "大型仿真器 + 诊断/反演工具 + 控制/优化 + HPC"
+    },
+    "unit": {
+      "unit_id": "FUS1-05",
+      "unit_name": "数据同化、状态估计与不确定性量化",
+      "target_scale": "200–450",
+      "coverage_tools": "DA/UQ、滤波、贝叶斯推断、误差传播"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] OMFIT",
+        "[GH] SALMON",
+        "[GH] UQ-PyL",
+        "[GH] QUESO",
+        "[GH] Minerva",
+        "[GH] EFIT",
+        "[GH] V3FIT",
+        "[GH] Chaospy",
+        "[GH] EasyVVUQ",
+        "[GH] Dakota",
+        "[GH] plasma data assimilation",
+        "[GH] fusion uncertainty quantification",
+        "[GH] tokamak state estimation",
+        "[GH] bayesian inference plasma",
+        "[GH] kalman filter fusion",
+        "[GH] equilibrium reconstruction",
+        "[GH] surrogate modeling plasma",
+        "[GH] sensitivity analysis fusion",
+        "[GH] inverse problem tokamak",
+        "[GH] profile fitting fusion",
+        "[GH] error propagation nuclear",
+        "[GH] MHD parameter estimation",
+        "[GH] plasma diagnostics inversion",
+        "[WEB] data assimilation fusion plasma github",
+        "[WEB] uncertainty quantification nuclear fusion tools github",
+        "[WEB] tokamak equilibrium reconstruction software github",
+        "[WEB] bayesian inference plasma diagnostics github",
+        "[WEB] sensitivity analysis fusion simulation github"
+      ],
+      "total_candidates": 454,
+      "tool_candidates": 231,
+      "final_tools": 39
+    }
+  },
+  "tools": [
+    {
+      "name": "SalmonTools",
+      "one_line_profile": "Useful tools for working with Salmon output",
+      "detailed_description": "A collection of scripts and tools to assist in processing and analyzing output from the Salmon transcript quantification tool.",
+      "domains": [
+        "BIO",
+        "BIO-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/COMBINE-lab/SalmonTools",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "bioinformatics",
+        "rna-seq",
+        "salmon",
+        "quantification"
+      ],
+      "id": 1
+    },
+    {
+      "name": "Salmon",
+      "one_line_profile": "Highly-accurate transcript-level quantification from RNA-seq reads",
+      "detailed_description": "Salmon is a tool for wicked-fast transcript quantification from RNA-seq data. It requires a set of target transcripts (either from a reference or de-novo assembly) to quantify the expression of transcripts.",
+      "domains": [
+        "BIO",
+        "BIO-03"
+      ],
+      "subtask_category": [
+        "quantification",
+        "alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/COMBINE-lab/salmon",
+      "help_website": [
+        "https://combine-lab.github.io/salmon/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "bioinformatics",
+        "rna-seq",
+        "quantification",
+        "transcriptomics"
+      ],
+      "id": 2
+    },
+    {
+      "name": "wasabi",
+      "one_line_profile": "Prepare Sailfish and Salmon output for downstream analysis",
+      "detailed_description": "An R package to prepare the output of Sailfish and Salmon for downstream analysis, facilitating integration with other bioinformatics pipelines.",
+      "domains": [
+        "BIO",
+        "BIO-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "normalization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/COMBINE-lab/wasabi",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "bioinformatics",
+        "r",
+        "rna-seq",
+        "data-preparation"
+      ],
+      "id": 3
+    },
+    {
+      "name": "ESKF",
+      "one_line_profile": "ROS Error-State Kalman Filter for sensor fusion",
+      "detailed_description": "A ROS implementation of an Error-State Kalman Filter (ESKF) based on PX4/ecl, performing fusion of GPS, Magnetometer, Vision Pose, Optical Flow, and RangeFinder data with IMU for state estimation.",
+      "domains": [
+        "FUS1",
+        "FUS1-05",
+        "ROB"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "sensor_fusion"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/EliaTarasov/ESKF",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "kalman-filter",
+        "ros",
+        "sensor-fusion",
+        "state-estimation"
+      ],
+      "id": 4
+    },
+    {
+      "name": "FreeGSNKE",
+      "one_line_profile": "Evolutive free-boundary tokamak plasma equilibrium simulations",
+      "detailed_description": "A Python code for evolutive free-boundary tokamak plasma equilibrium simulations, used in nuclear fusion research for modeling plasma configurations.",
+      "domains": [
+        "FUS1",
+        "FUS1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "equilibrium_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FusionComputingLab/freegsnke",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "tokamak",
+        "plasma-physics",
+        "equilibrium",
+        "nuclear-fusion"
+      ],
+      "id": 5
+    },
+    {
+      "name": "AliNe",
+      "one_line_profile": "Nextflow Alignment Pipeline",
+      "detailed_description": "A Nextflow pipeline for alignment of sequencing data, processing from fastq.gz to sorted bam files.",
+      "domains": [
+        "BIO",
+        "BIO-03"
+      ],
+      "subtask_category": [
+        "alignment",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/Juke34/AliNe",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bioinformatics",
+        "nextflow",
+        "alignment",
+        "ngs"
+      ],
+      "id": 6
+    },
+    {
+      "name": "EFIT.jl",
+      "one_line_profile": "Reader for EFIT geqdsk files in Julia",
+      "detailed_description": "Provides routines to read EFIT geqdsk files, which are standard for storing magnetic equilibrium reconstructions in fusion research.",
+      "domains": [
+        "FUS1",
+        "FUS1-01"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "file_io"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaFusion/EFIT.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "fusion",
+        "plasma",
+        "efit",
+        "julia"
+      ],
+      "id": 7
+    },
+    {
+      "name": "GarminCustomMaps",
+      "one_line_profile": "QGIS plugin to export maps for Garmin GPS units",
+      "detailed_description": "A QGIS plugin that exports the current map canvas to a .kmz file compatible with Garmin Custom Maps format, facilitating field work and geospatial data usage.",
+      "domains": [
+        "GEO"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_export"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NINAnor/GarminCustomMaps",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "qgis",
+        "gis",
+        "mapping",
+        "garmin"
+      ],
+      "id": 8
+    },
+    {
+      "name": "ESEKF_IMU_GNSS_Lidar",
+      "one_line_profile": "Error State Extended Kalman Filter for sensor fusion",
+      "detailed_description": "Implementation of an Error State Extended Kalman Filter (ES-EKF) for sensor fusion between IMU, GNSS, and Lidar data, useful for state estimation in robotics and navigation.",
+      "domains": [
+        "FUS1",
+        "FUS1-05",
+        "ROB"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "sensor_fusion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NekSfyris/ESEKF_IMU_GNSS_Lidar",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "kalman-filter",
+        "sensor-fusion",
+        "state-estimation",
+        "gnss"
+      ],
+      "id": 9
+    },
+    {
+      "name": "PISCES",
+      "one_line_profile": "Pipeline for transcript quantitation and QC using Salmon",
+      "detailed_description": "PISCES is a pipeline for rapid transcript quantitation, genetic fingerprinting, and quality control assessment of RNAseq libraries, leveraging Salmon for quantification.",
+      "domains": [
+        "BIO",
+        "BIO-03"
+      ],
+      "subtask_category": [
+        "quantification",
+        "quality_control",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Novartis/pisces",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "bioinformatics",
+        "rna-seq",
+        "pipeline",
+        "qc"
+      ],
+      "id": 10
+    },
+    {
+      "name": "Dakota Driver",
+      "one_line_profile": "OpenMDAO driver for DAKOTA",
+      "detailed_description": "An OpenMDAO driver for DAKOTA (Design Analysis Kit for Optimization and Terascale Applications), enabling optimization and uncertainty quantification workflows.",
+      "domains": [
+        "FUS1",
+        "FUS1-05",
+        "GEN"
+      ],
+      "subtask_category": [
+        "optimization",
+        "uncertainty_quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/OpenMDAO-Plugins/dakota_driver",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "openmdao",
+        "dakota",
+        "optimization",
+        "uq"
+      ],
+      "id": 11
+    },
+    {
+      "name": "eqtools",
+      "one_line_profile": "Python tools for magnetic equilibria in tokamak plasmas",
+      "detailed_description": "A Python library providing tools for working with magnetic equilibria in tokamak plasmas, supporting data processing and analysis for fusion research.",
+      "domains": [
+        "FUS1",
+        "FUS1-01"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PSFCPlasmaTools/eqtools",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "fusion",
+        "plasma",
+        "tokamak",
+        "equilibrium"
+      ],
+      "id": 12
+    },
+    {
+      "name": "Minerva",
+      "one_line_profile": "Neural network tools for land cover data",
+      "detailed_description": "A package that aids in the fitting and testing of neural network models for geospatial data, specifically designed for use with torchgeo datasets and land cover data.",
+      "domains": [
+        "GEO",
+        "AI"
+      ],
+      "subtask_category": [
+        "modeling",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Pale-Blue-Dot-97/Minerva",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "geospatial",
+        "deep-learning",
+        "torchgeo",
+        "land-cover"
+      ],
+      "id": 13
+    },
+    {
+      "name": "FUSE.jl",
+      "one_line_profile": "Integrated fusion energy power plant synthesis and simulation engine",
+      "detailed_description": "FUSE (FUsion Synthesis Engine) is a Julia-based framework for the integrated design and simulation of fusion power plants. It couples physics models, engineering constraints, and cost analysis to synthesize and optimize tokamak fusion reactor designs.",
+      "domains": [
+        "FUS1",
+        "FUS1-01",
+        "FUS1-02"
+      ],
+      "subtask_category": [
+        "simulation",
+        "system_design",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/ProjectTorreyPines/FUSE.jl",
+      "help_website": [
+        "https://projecttorreypines.github.io/FUSE.jl/dev/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "fusion-energy",
+        "tokamak",
+        "system-code",
+        "julia"
+      ],
+      "id": 14
+    },
+    {
+      "name": "SALMON-TDDFT",
+      "one_line_profile": "First-principles electron dynamics simulator based on TDDFT",
+      "detailed_description": "SALMON (Scalable Ab-initio Light-Matter simulator for Optics and Nanoscience) is a software package for simulating electron dynamics and optical properties of molecules, nanostructures, and solids using Time-Dependent Density Functional Theory (TDDFT).",
+      "domains": [
+        "PHY",
+        "MAT",
+        "FUS1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "quantum_dynamics",
+        "optical_response"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/SALMON-TDDFT/SALMON",
+      "help_website": [
+        "https://salmon-tddft.jp/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "tddft",
+        "electron-dynamics",
+        "first-principles",
+        "optics"
+      ],
+      "id": 15
+    },
+    {
+      "name": "SALMON2",
+      "one_line_profile": "Development repository for SALMON v2.0",
+      "detailed_description": "Development version of the SALMON (Scalable Ab-initio Light-Matter simulator) software, focusing on new features and improvements for first-principles electron dynamics simulations.",
+      "domains": [
+        "PHY",
+        "MAT"
+      ],
+      "subtask_category": [
+        "simulation",
+        "development"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/SALMON-TDDFT/SALMON2",
+      "help_website": [
+        "https://salmon-tddft.jp/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "tddft",
+        "simulation",
+        "development"
+      ],
+      "id": 16
+    },
+    {
+      "name": "EasyVVUQ",
+      "one_line_profile": "Library for verification, validation and uncertainty quantification",
+      "detailed_description": "EasyVVUQ is a Python library designed to facilitate Verification, Validation, and Uncertainty Quantification (VVUQ) for a wide variety of simulations. It provides a unified interface for sampling, execution, and analysis of UQ campaigns.",
+      "domains": [
+        "FUS1-05",
+        "GEN"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "sensitivity_analysis",
+        "sampling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UCL-CCS/EasyVVUQ",
+      "help_website": [
+        "https://easyvvuq.readthedocs.io/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "uq",
+        "vvuq",
+        "simulation",
+        "sampling"
+      ],
+      "id": 17
+    },
+    {
+      "name": "dakotathon",
+      "one_line_profile": "Python API and BMI for the Dakota iterative systems analysis toolkit",
+      "detailed_description": "Dakotathon is a Python wrapper and Basic Model Interface (BMI) for the Dakota toolkit, enabling users to configure and run Dakota for optimization and uncertainty quantification tasks within Python workflows.",
+      "domains": [
+        "FUS1-05",
+        "GEN"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "optimization",
+        "workflow_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/csdms/dakotathon",
+      "help_website": [
+        "https://dakotathon.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dakota",
+        "optimization",
+        "uq",
+        "bmi"
+      ],
+      "id": 18
+    },
+    {
+      "name": "SALMON-Segmentation",
+      "one_line_profile": "Deep learning tool for 3D medical image segmentation",
+      "detailed_description": "SALMON (Segmentation ALgorithm based on MONai) is a PyTorch-based deep learning framework for single and multi-label segmentation of 3D medical images, leveraging the MONAI toolbox.",
+      "domains": [
+        "MED",
+        "BIO"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "medical_imaging",
+        "deep_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/davidiommi/Pytorch--3D-Medical-Images-Segmentation--SALMON",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "medical-imaging",
+        "segmentation",
+        "monai",
+        "pytorch"
+      ],
+      "id": 19
+    },
+    {
+      "name": "OMAS",
+      "one_line_profile": "Python library for handling fusion energy data using the IMAS data model",
+      "detailed_description": "Ordered Multidimensional Array Structure (OMAS) is a library designed to simplify the interface with the ITER Integrated Modeling and Analysis Suite (IMAS) data structure. It allows researchers to store, manipulate, and exchange fusion experimental and simulation data in a standardized format.",
+      "domains": [
+        "FUS1"
+      ],
+      "subtask_category": [
+        "data_management",
+        "data_standardization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gafusion/omas",
+      "help_website": [
+        "https://gafusion.github.io/omas/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fusion-energy",
+        "imas",
+        "data-structure",
+        "iter"
+      ],
+      "id": 20
+    },
+    {
+      "name": "TORAX",
+      "one_line_profile": "Differentiable tokamak transport simulator based on JAX",
+      "detailed_description": "TORAX is a physics-based differentiable simulator for tokamak core transport. Built on JAX, it enables fast simulation and gradient-based optimization for fusion plasma control and design, supporting data assimilation and machine learning integration.",
+      "domains": [
+        "FUS1",
+        "FUS1-05"
+      ],
+      "subtask_category": [
+        "simulation",
+        "transport_modeling",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/google-deepmind/torax",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "nuclear-fusion",
+        "tokamak",
+        "jax",
+        "differentiable-physics"
+      ],
+      "id": 21
+    },
+    {
+      "name": "SALMON",
+      "one_line_profile": "Deep learning framework for survival analysis using multi-omics data",
+      "detailed_description": "SALMON (Survival Analysis Learning with Multi-Omics Neural Networks) is a tool for conducting survival analysis by integrating multi-omics data through neural networks, aiming to improve prognostic predictions in biomedical research.",
+      "domains": [
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "survival_analysis",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/huangzhii/SALMON",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "multi-omics",
+        "survival-analysis",
+        "deep-learning"
+      ],
+      "id": 22
+    },
+    {
+      "name": "SalmonTE",
+      "one_line_profile": "Pipeline for quantification of transposable elements from RNA-seq data",
+      "detailed_description": "SalmonTE is an ultra-fast and scalable pipeline designed to quantify the abundance of Transposable Elements (TEs) from RNA-seq data, facilitating genomic research into repetitive DNA sequences.",
+      "domains": [
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "quantification",
+        "genomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hyunhwan-jeong/SalmonTE",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "rna-seq",
+        "transposable-elements",
+        "bioinformatics"
+      ],
+      "id": 23
+    },
+    {
+      "name": "Chaospy",
+      "one_line_profile": "Numerical tool for uncertainty quantification using polynomial chaos expansions",
+      "detailed_description": "Chaospy is a Python toolbox for performing uncertainty quantification (UQ) using polynomial chaos expansions and Monte Carlo integration. It provides methods for creating surrogate models and analyzing uncertainty propagation in physical simulations.",
+      "domains": [
+        "FUS1-05",
+        "Scientific Computing"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jonathf/chaospy",
+      "help_website": [
+        "https://chaospy.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "uncertainty-quantification",
+        "polynomial-chaos",
+        "monte-carlo"
+      ],
+      "id": 24
+    },
+    {
+      "name": "Minerva",
+      "one_line_profile": "Web-based framework for scientific data management and visualization",
+      "detailed_description": "Minerva is a client/server system developed by Kitware for the management, analysis, and visualization of complex scientific data, often used in geospatial and medical imaging contexts.",
+      "domains": [
+        "Scientific Visualization"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kitware-data-solutions/minerva",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "visualization",
+        "kitware",
+        "scientific-data"
+      ],
+      "id": 25
+    },
+    {
+      "name": "Minerva Author",
+      "one_line_profile": "Authoring tool for creating Minerva Story histology visualizations",
+      "detailed_description": "Minerva Author is a utility to process high-resolution tissue images and generate configuration files for Minerva Story, enabling researchers to create interactive narratives for complex histology data.",
+      "domains": [
+        "Bioimaging"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_processing"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/labsyspharm/minerva-author",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "histology",
+        "bioimaging",
+        "visualization"
+      ],
+      "id": 26
+    },
+    {
+      "name": "Minerva Story",
+      "one_line_profile": "Interactive viewer for complex high-resolution tissue images",
+      "detailed_description": "Minerva Story is a web-based image viewer designed to make complex tissue images (e.g., CyCIF, CODEX) accessible to non-experts, supporting zooming, panning, and channel toggling for biological data exploration.",
+      "domains": [
+        "Bioimaging"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_exploration"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/labsyspharm/minerva-story",
+      "help_website": [
+        "https://minerva-story.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "bioimaging",
+        "histology",
+        "openseadragon"
+      ],
+      "id": 27
+    },
+    {
+      "name": "MinervaChem",
+      "one_line_profile": "Library for cheminformatics and machine learning in drug discovery",
+      "detailed_description": "MinervaChem is a Python library developed at LANL for cheminformatics tasks, facilitating machine learning applications in chemistry such as molecular property prediction and drug discovery.",
+      "domains": [
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "cheminformatics",
+        "molecular_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lanl/minervachem",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cheminformatics",
+        "machine-learning",
+        "drug-discovery"
+      ],
+      "id": 28
+    },
+    {
+      "name": "QUESO",
+      "one_line_profile": "C++ library for uncertainty quantification and Bayesian inference",
+      "detailed_description": "QUESO (Quantification of Uncertainty for Estimation, Simulation and Optimization) is a collection of C++ algorithms and libraries for solving statistical inverse problems, Bayesian inference, and model validation in scientific computing.",
+      "domains": [
+        "FUS1-05",
+        "Scientific Computing"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "bayesian_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/libqueso/queso",
+      "help_website": [
+        "http://libqueso.com"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "uq",
+        "bayesian",
+        "inverse-problems"
+      ],
+      "id": 29
+    },
+    {
+      "name": "Sandy",
+      "one_line_profile": "Tool for nuclear data sampling and uncertainty quantification",
+      "detailed_description": "Sandy is a code for sampling nuclear data files (ENDF-6 format) to produce perturbed files for uncertainty quantification and sensitivity analysis in nuclear physics simulations.",
+      "domains": [
+        "FUS1",
+        "FUS1-05"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "nuclear_data_processing"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/luca-fiorito-11/sandy",
+      "help_website": [
+        "https://sandy-code.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nuclear-data",
+        "uncertainty",
+        "endf"
+      ],
+      "id": 30
+    },
+    {
+      "name": "QuESo",
+      "one_line_profile": "C++ library for quadrature on embedded solids in finite element analysis",
+      "detailed_description": "QuESo (Quadrature for Embedded Solids) is a library designed to perform numerical integration (quadrature) on trimmed B-spline elements, supporting immersed boundary methods and finite element analysis in mechanics.",
+      "domains": [
+        "Mechanics",
+        "Scientific Computing"
+      ],
+      "subtask_category": [
+        "numerical_integration",
+        "finite_element_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/manuelmessmer/QuESo",
+      "help_website": [],
+      "license": "BSD-4-Clause",
+      "tags": [
+        "finite-element",
+        "quadrature",
+        "b-splines"
+      ],
+      "id": 31
+    },
+    {
+      "name": "UQTk",
+      "one_line_profile": "Lightweight C++/Python toolkit for uncertainty quantification in numerical models",
+      "detailed_description": "The Sandia Uncertainty Quantification Toolkit (UQTk) is a library of C++ classes and Python scripts for quantifying uncertainty in numerical model predictions. It offers tools for polynomial chaos expansions (PCE), Bayesian inference, model calibration, and sensitivity analysis, specifically designed for computational physics and engineering applications.",
+      "domains": [
+        "FUS1",
+        "FUS1-05"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "bayesian_inference",
+        "model_calibration"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/sandialabs/UQTk",
+      "help_website": [
+        "https://www.sandia.gov/uqtoolkit/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "uncertainty-quantification",
+        "bayesian",
+        "polynomial-chaos",
+        "scientific-computing"
+      ],
+      "id": 32
+    },
+    {
+      "name": "Dakota",
+      "one_line_profile": "A multilevel parallel object-oriented framework for design optimization, parameter estimation, and uncertainty quantification",
+      "detailed_description": "Dakota provides a flexible and extensible interface between analysis codes and iterative systems analysis methods. It contains algorithms for optimization with gradient and nongradient methods, uncertainty quantification with sampling, reliability, stochastic expansion, and parameter estimation.",
+      "domains": [
+        "FUS1",
+        "FUS1-05",
+        "General_Engineering"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "optimization",
+        "calibration"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/snl-dakota/dakota",
+      "help_website": [
+        "https://dakota.sandia.gov/"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "uncertainty-quantification",
+        "optimization",
+        "sensitivity-analysis"
+      ],
+      "id": 33
+    },
+    {
+      "name": "imu_ekf",
+      "one_line_profile": "Extended Kalman Filter implementation for 6-axis IMU sensor fusion",
+      "detailed_description": "A Python implementation of an Extended Kalman Filter (EKF) for fusing data from a 6-axis IMU (3-axis accelerometer and 3-axis gyroscope) to estimate orientation and state.",
+      "domains": [
+        "Robotics",
+        "FUS1-05"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "sensor_fusion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/soarbear/imu_ekf",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "kalman-filter",
+        "imu",
+        "sensor-fusion"
+      ],
+      "id": 34
+    },
+    {
+      "name": "Minerva",
+      "one_line_profile": "An out-of-the-box GUI tool for offline deep reinforcement learning",
+      "detailed_description": "Minerva is a GUI tool designed for offline deep reinforcement learning, allowing users to train and evaluate agents using datasets without writing code. It supports various algorithms and visualization of training processes.",
+      "domains": [
+        "AI4S",
+        "Machine_Learning"
+      ],
+      "subtask_category": [
+        "reinforcement_learning",
+        "modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/takuseno/minerva",
+      "help_website": [
+        "https://minerva-ui.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "reinforcement-learning",
+        "gui",
+        "offline-rl"
+      ],
+      "id": 35
+    },
+    {
+      "name": "fishpond",
+      "one_line_profile": "Differential expression and allelic analysis for RNA-seq data",
+      "detailed_description": "Fishpond contains methods for differential expression analysis of RNA-seq data using inferential replicates from quantification tools like Salmon. It handles nonparametric statistics and allelic analysis.",
+      "domains": [
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "differential_expression",
+        "statistical_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/thelovelab/fishpond",
+      "help_website": [
+        "https://bioconductor.org/packages/fishpond"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "rna-seq",
+        "differential-expression",
+        "bioconductor"
+      ],
+      "id": 36
+    },
+    {
+      "name": "rtgsfit",
+      "one_line_profile": "Real-Time Grad-Shafranov equilibrium reconstruction code",
+      "detailed_description": "A Python code for real-time equilibrium reconstruction of tokamak plasma using the Grad-Shafranov equation. Developed by Tokamak Energy.",
+      "domains": [
+        "FUS1",
+        "Plasma_Physics"
+      ],
+      "subtask_category": [
+        "equilibrium_reconstruction",
+        "plasma_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tokamak-energy/rtgsfit",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "tokamak",
+        "equilibrium-reconstruction",
+        "grad-shafranov"
+      ],
+      "id": 37
+    },
+    {
+      "name": "robot_localization",
+      "one_line_profile": "Nonlinear state estimation package for sensor fusion in 3D space",
+      "detailed_description": "A ROS package that provides nonlinear state estimation through Extended Kalman Filter (EKF) and Unscented Kalman Filter (UKF) for fusing data from arbitrary numbers of sensors (IMU, GPS, Odometry).",
+      "domains": [
+        "Robotics",
+        "FUS1-05"
+      ],
+      "subtask_category": [
+        "state_estimation",
+        "sensor_fusion"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/weihsinc/robot_localization",
+      "help_website": [
+        "http://docs.ros.org/en/noetic/api/robot_localization/html/index.html"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "kalman-filter",
+        "ros",
+        "sensor-fusion"
+      ],
+      "id": 38
+    },
+    {
+      "name": "ikra",
+      "one_line_profile": "RNA-seq analysis pipeline centered on Salmon",
+      "detailed_description": "An automated pipeline for RNA-seq analysis that integrates Salmon for quantification, facilitating reproducible transcriptomic workflows.",
+      "domains": [
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "rna_seq_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/yyoshiaki/ikra",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rna-seq",
+        "pipeline",
+        "salmon"
+      ],
+      "id": 39
+    }
+  ]
+}

@@ -1,0 +1,2204 @@
+{
+  "generated_at": "2025-12-17T05:43:18.025786+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "AI6",
+      "leaf_cluster_name": "可复现运行时与加速生态（容器/HPC）",
+      "domain": "Infra/HPC",
+      "typical_objects": "jobs/artifacts",
+      "task_chain": "环境→调度→缓存→追踪→加速",
+      "tool_form": "容器/调度 + 追踪/成本"
+    },
+    "unit": {
+      "unit_id": "AI6-05",
+      "unit_name": "可观测性/成本/监控",
+      "target_scale": "150–300",
+      "coverage_tools": "monitoring、cost tools"
+    },
+    "search": {
+      "target_candidates": 300,
+      "queries": [
+        "[GH] Netdata",
+        "[GH] Ganglia",
+        "[GH] NVIDIA Nsight",
+        "[GH] Aim",
+        "[GH] Weights & Biases",
+        "[GH] OpenCost",
+        "[GH] Kubecost",
+        "[GH] DCGM-Exporter",
+        "[GH] Grafana",
+        "[GH] Prometheus",
+        "[GH] gpu-monitoring",
+        "[GH] ml-observability",
+        "[GH] cluster-monitoring",
+        "[GH] cloud-cost-management",
+        "[GH] hpc-profiling",
+        "[GH] slurm-accounting",
+        "[GH] kubernetes-cost",
+        "[GH] training-metrics",
+        "[GH] resource-usage-tracking",
+        "[GH] finops-ml",
+        "[GH] nvidia-dcgm-exporter",
+        "[GH] job-scheduler-monitoring",
+        "[GH] ml-experiment-tracking",
+        "[WEB] gpu monitoring tools for ai github",
+        "[WEB] mlops cost management tools github",
+        "[WEB] hpc cluster observability github",
+        "[WEB] kubernetes gpu cost monitoring github",
+        "[WEB] slurm job accounting tools github"
+      ],
+      "total_candidates": 1128,
+      "tool_candidates": 609,
+      "final_tools": 85
+    }
+  },
+  "tools": [
+    {
+      "name": "ssh-dashboard",
+      "one_line_profile": "Lightweight CLI dashboard for monitoring GPU/CPU usage across SSH servers",
+      "detailed_description": "A terminal-based dashboard that aggregates and visualizes real-time resource usage (CPU, RAM, Disk, and specifically NVIDIA/AMD GPUs) from multiple remote servers via SSH. It is particularly useful for researchers managing small-scale AI/HPC clusters or GPU workstations.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "resource_visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/AlpinDale/ssh-dashboard",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gpu-monitoring",
+        "ssh",
+        "cli",
+        "hpc-monitoring"
+      ],
+      "id": 1
+    },
+    {
+      "name": "TensorDash",
+      "one_line_profile": "Remote monitoring application for deep learning model training",
+      "detailed_description": "A tool that allows researchers to remotely monitor their deep learning model's training metrics (loss, accuracy, etc.) in real-time via a mobile app or dashboard. It supports major frameworks like TensorFlow, PyTorch, and Keras, enabling tracking of long-running scientific experiments.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "monitoring"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/CleanPegasus/TensorDash",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "monitoring",
+        "mobile-app",
+        "experiment-tracking"
+      ],
+      "id": 2
+    },
+    {
+      "name": "coffeeshop",
+      "one_line_profile": "Slack notification tool for deep learning training metrics",
+      "detailed_description": "A Python library that integrates with deep learning training loops to send real-time metrics and status updates (epoch completion, crash alerts) to a Slack channel. It facilitates remote monitoring of scientific machine learning experiments.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "alerting",
+        "experiment_tracking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CleanPegasus/coffeeshop",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "slack",
+        "notification",
+        "deep-learning",
+        "monitoring"
+      ],
+      "id": 3
+    },
+    {
+      "name": "Graphical Prototyping Toolbox for ML Experimentation",
+      "one_line_profile": "Web-based toolbox for ML experiment setup, data preparation, and tracking",
+      "detailed_description": "A composition of web applications for machine learning experimentation, including components for data preparation, experiment setup, and algorithm tracking (MLflow integration), developed by Fraunhofer MEVIS.",
+      "domains": [
+        "AI6",
+        "AI6-05",
+        "Medical Imaging"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "workflow_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FraunhoferMEVIS/Graphical_prototyping_Toolbox_for_ML_Experimentation",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "ml-experimentation",
+        "workflow",
+        "fraunhofer"
+      ],
+      "id": 4
+    },
+    {
+      "name": "prometheus-cluster-exporter",
+      "one_line_profile": "Prometheus exporter for Lustre and Slurm metrics on HPC clusters",
+      "detailed_description": "A monitoring tool that exports Lustre metadata operations and IO throughput metrics associated with SLURM accounts and user processes, designed for HPC cluster observability.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "hpc_monitoring",
+        "resource_observability"
+      ],
+      "application_level": "service",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/GSI-HPC/prometheus-cluster-exporter",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "hpc",
+        "lustre",
+        "slurm",
+        "prometheus",
+        "monitoring"
+      ],
+      "id": 5
+    },
+    {
+      "name": "Tattle",
+      "one_line_profile": "Self-service dashboard application for Graphite and Ganglia monitoring",
+      "detailed_description": "A lightweight web application providing dashboards for Graphite and Ganglia, which are legacy but widely used monitoring systems in HPC environments.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "hpc_monitoring",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "PHP",
+      "repo_url": "https://github.com/Graphite-Tattle/Tattle",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ganglia",
+        "graphite",
+        "dashboard",
+        "hpc"
+      ],
+      "id": 6
+    },
+    {
+      "name": "CompressAI-Trainer",
+      "one_line_profile": "Training platform for end-to-end deep learning compression models",
+      "detailed_description": "A platform for training, evaluating, and benchmarking end-to-end compression models using the CompressAI library, supporting scientific signal processing research.",
+      "domains": [
+        "Computer Science",
+        "Signal Processing"
+      ],
+      "subtask_category": [
+        "model_training",
+        "compression"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/InterDigitalInc/CompressAI-Trainer",
+      "help_website": [],
+      "license": "BSD-3-Clause-Clear",
+      "tags": [
+        "compression",
+        "deep-learning",
+        "compressai"
+      ],
+      "id": 7
+    },
+    {
+      "name": "NVTX.jl",
+      "one_line_profile": "Julia bindings for NVIDIA Tools Extension (NVTX) profiling",
+      "detailed_description": "Provides Julia bindings for NVTX, allowing researchers to instrument Julia scientific code for profiling with NVIDIA Nsight Systems.",
+      "domains": [
+        "AI6",
+        "AI6-05",
+        "Scientific Computing"
+      ],
+      "subtask_category": [
+        "profiling",
+        "performance_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaGPU/NVTX.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "gpu",
+        "profiling",
+        "nvtx",
+        "hpc"
+      ],
+      "id": 8
+    },
+    {
+      "name": "KohakuBoard",
+      "one_line_profile": "Lightweight local ML experiment tracking system",
+      "detailed_description": "A high-efficiency, self-hosted machine learning experiment tracking dashboard, serving as a lightweight alternative to tools like TensorBoard or MLflow for researchers.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KohakuBlueleaf/KohakuBoard",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "mlops",
+        "experiment-tracking",
+        "visualization"
+      ],
+      "id": 9
+    },
+    {
+      "name": "BlendingToolKit",
+      "one_line_profile": "Simulation and analysis toolkit for galaxy blending in astronomy",
+      "detailed_description": "Tools to create blend catalogs, produce training samples, and implement blending metrics for astronomical surveys, specifically for the LSST Dark Energy Science Collaboration.",
+      "domains": [
+        "Astronomy",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/LSSTDESC/BlendingToolKit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "lsst",
+        "galaxy-blending",
+        "simulation"
+      ],
+      "id": 10
+    },
+    {
+      "name": "extra_keras_metrics",
+      "one_line_profile": "Library of additional metrics for Keras models",
+      "detailed_description": "Integrates a comprehensive set of additional training and evaluation metrics into the Keras neural network library, facilitating detailed model performance analysis.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "metrics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LucaCappelletti94/extra_keras_metrics",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "keras",
+        "metrics",
+        "deep-learning",
+        "evaluation"
+      ],
+      "id": 11
+    },
+    {
+      "name": "Vernier",
+      "one_line_profile": "Caliper-based profiler for scientific code on HPC platforms",
+      "detailed_description": "A profiling tool developed by the Met Office designed for scientific applications on High Performance Computing (HPC) platforms, using a caliper-based approach.",
+      "domains": [
+        "AI6",
+        "AI6-05",
+        "HPC"
+      ],
+      "subtask_category": [
+        "profiling",
+        "performance_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/MetOffice/Vernier",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "hpc",
+        "profiling",
+        "met-office",
+        "performance"
+      ],
+      "id": 12
+    },
+    {
+      "name": "dynolog",
+      "one_line_profile": "Telemetry daemon for AI/HPC performance monitoring and tracing",
+      "detailed_description": "A telemetry daemon that exports metrics from Linux kernel, CPU, GPU, and integrates with PyTorch to trigger traces for distributed training applications, developed by Moore Threads.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "profiling",
+        "telemetry",
+        "distributed_training"
+      ],
+      "application_level": "service",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/MooreThreads/dynolog",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "telemetry",
+        "pytorch",
+        "gpu",
+        "profiling",
+        "hpc"
+      ],
+      "id": 13
+    },
+    {
+      "name": "dcgm-exporter",
+      "one_line_profile": "NVIDIA GPU metrics exporter for Prometheus",
+      "detailed_description": "A tool that leverages the NVIDIA Data Center GPU Manager (DCGM) to export GPU metrics to Prometheus, essential for monitoring AI and HPC clusters.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "gpu_monitoring",
+        "infrastructure_observability"
+      ],
+      "application_level": "service",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/NVIDIA/dcgm-exporter",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "nvidia",
+        "gpu",
+        "prometheus",
+        "monitoring",
+        "dcgm"
+      ],
+      "id": 14
+    },
+    {
+      "name": "gpu-monitoring-tools",
+      "one_line_profile": "Legacy tools for monitoring NVIDIA GPUs on Linux",
+      "detailed_description": "A collection of tools for monitoring NVIDIA GPUs, including wrappers and exporters, widely used in HPC and AI infrastructure before the consolidation into dcgm-exporter.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "gpu_monitoring",
+        "resource_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/NVIDIA/gpu-monitoring-tools",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "nvidia",
+        "gpu",
+        "monitoring",
+        "linux"
+      ],
+      "id": 15
+    },
+    {
+      "name": "nsight-python",
+      "one_line_profile": "Python bindings for NVIDIA Nsight profiling tools",
+      "detailed_description": "Provides a Python interface to NVIDIA Nsight tools, enabling researchers to profile and optimize Python-based scientific and AI applications on GPUs.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "profiling",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NVIDIA/nsight-python",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "profiling",
+        "nvidia",
+        "python",
+        "cuda",
+        "nsight"
+      ],
+      "id": 16
+    },
+    {
+      "name": "slurm2sql",
+      "one_line_profile": "Tool to convert Slurm accounting logs to SQLite for analysis",
+      "detailed_description": "A utility that dumps the Slurm workload manager's accounting database into a SQLite3 database, facilitating easy analysis of HPC usage and costs.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "cost_analysis",
+        "usage_reporting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NordicHPC/slurm2sql",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "slurm",
+        "hpc",
+        "accounting",
+        "sqlite"
+      ],
+      "id": 17
+    },
+    {
+      "name": "sonar",
+      "one_line_profile": "HPC resource usage profiling tool",
+      "detailed_description": "A tool designed to profile the usage of HPC resources by regularly probing processes, helping to identify performance bottlenecks and resource efficiency.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "profiling",
+        "resource_monitoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/NordicHPC/sonar",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "hpc",
+        "profiling",
+        "rust",
+        "monitoring"
+      ],
+      "id": 18
+    },
+    {
+      "name": "Slurm_tools",
+      "one_line_profile": "Collection of utilities for managing and monitoring Slurm HPC clusters",
+      "detailed_description": "A comprehensive set of shell scripts and tools for the Slurm HPC workload manager, providing functionality for job monitoring, node management, and accounting.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "cluster_management",
+        "job_monitoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/OleHolmNielsen/Slurm_tools",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "slurm",
+        "hpc",
+        "scripts",
+        "administration"
+      ],
+      "id": 19
+    },
+    {
+      "name": "Jobstats",
+      "one_line_profile": "Job monitoring platform for CPU and GPU clusters in HPC environments",
+      "detailed_description": "A job monitoring platform designed for CPU and GPU clusters, providing insights into job performance and resource utilization, specifically tailored for academic or research high-performance computing environments.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "resource_profiling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PrincetonUniversity/jobstats",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "hpc",
+        "cluster-monitoring",
+        "slurm",
+        "gpu-monitoring"
+      ],
+      "id": 20
+    },
+    {
+      "name": "ROCmValidationSuite",
+      "one_line_profile": "System validation and diagnostics tool for AMD GPUs in HPC",
+      "detailed_description": "A system validation and diagnostics tool designed for monitoring, stress testing, detecting, and troubleshooting issues impacting AMD GPUs specifically in high-performance computing environments.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "hardware_validation",
+        "diagnostics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ROCm/ROCmValidationSuite",
+      "help_website": [
+        "https://rocm.docs.amd.com/projects/RVS/en/latest/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "rocm",
+        "amd-gpu",
+        "hpc",
+        "diagnostics",
+        "stress-testing"
+      ],
+      "id": 21
+    },
+    {
+      "name": "gpu-utils",
+      "one_line_profile": "Utilities for monitoring and customizing GPU performance",
+      "detailed_description": "A set of utilities for monitoring and customizing GPU performance, useful for optimizing scientific computing workloads on GPU infrastructure.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "performance_tuning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Ricks-Lab/gpu-utils",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gpu",
+        "monitoring",
+        "performance",
+        "nvidia"
+      ],
+      "id": 22
+    },
+    {
+      "name": "easy_metric_learning",
+      "one_line_profile": "Library for training metric learning models",
+      "detailed_description": "A Python library designed to simplify the training of metric learning models, facilitating scientific data analysis and machine learning research tasks.",
+      "domains": [
+        "AI4"
+      ],
+      "subtask_category": [
+        "model_training",
+        "metric_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RocketFlash/easy_metric_learning",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "metric-learning",
+        "machine-learning",
+        "deep-learning"
+      ],
+      "id": 23
+    },
+    {
+      "name": "StoneNeedle",
+      "one_line_profile": "I/O workload profiling tool for HPC and Cloud computing",
+      "detailed_description": "A tool running in the Linux kernel environment to statistic I/O workload profiling data, aimed at enabling I/O optimizations for HPC and Cloud computing in the exascale era.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "io_profiling",
+        "performance_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/Samsung/StoneNeedle",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "hpc",
+        "io-profiling",
+        "linux-kernel",
+        "performance"
+      ],
+      "id": 24
+    },
+    {
+      "name": "slurm_exporter",
+      "one_line_profile": "Prometheus exporter for Slurm-managed clusters metrics",
+      "detailed_description": "A Prometheus exporter designed to scrape and expose performance and scheduling metrics from Slurm-managed clusters, supporting CPU and GPU resource accounting for HPC environments.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "resource_accounting"
+      ],
+      "application_level": "service",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/SckyzO/slurm_exporter",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "slurm",
+        "prometheus-exporter",
+        "hpc",
+        "monitoring"
+      ],
+      "id": 25
+    },
+    {
+      "name": "gpu_mon",
+      "one_line_profile": "Lightweight Python script for monitoring GPU access",
+      "detailed_description": "A Python script designed to monitor GPU access and usage, providing a simple way to track GPU resources in scientific computing setups.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "monitoring"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Shmuma/gpu_mon",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gpu",
+        "monitoring",
+        "python"
+      ],
+      "id": 26
+    },
+    {
+      "name": "nvtop",
+      "one_line_profile": "Interactive GPU process monitor for NVIDIA, AMD, and others",
+      "detailed_description": "A task monitor for GPUs and accelerators (AMD, Apple, Huawei, Intel, NVIDIA, Qualcomm), essential for monitoring scientific training and inference jobs.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "process_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/Syllo/nvtop",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "gpu",
+        "monitoring",
+        "hpc",
+        "nvidia",
+        "amd"
+      ],
+      "id": 27
+    },
+    {
+      "name": "HPCPerfStats",
+      "one_line_profile": "Automated resource-usage monitoring and analysis for HPC Clusters",
+      "detailed_description": "An automated resource-usage monitoring and analysis package specifically designed for HPC Clusters, developed by TACC (Texas Advanced Computing Center).",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "performance_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "C",
+      "repo_url": "https://github.com/TACC/HPCPerfStats",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "hpc",
+        "monitoring",
+        "performance",
+        "tacc"
+      ],
+      "id": 28
+    },
+    {
+      "name": "GFPGAN",
+      "one_line_profile": "Practical algorithms for real-world face restoration",
+      "detailed_description": "A deep learning tool for blind face restoration, utilizing Generative Facial Prior (GFP) for scientific image processing and computer vision research.",
+      "domains": [
+        "AI4"
+      ],
+      "subtask_category": [
+        "image_restoration",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TencentARC/GFPGAN",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "gan",
+        "face-restoration",
+        "computer-vision",
+        "deep-learning"
+      ],
+      "id": 29
+    },
+    {
+      "name": "uetai",
+      "one_line_profile": "Custom ML tracking experiment and debugging tools",
+      "detailed_description": "A toolset for tracking machine learning experiments and debugging, facilitating the scientific process of model development and evaluation.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "debugging"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UETAILab/uetai",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ml-tracking",
+        "experiment-management",
+        "debugging"
+      ],
+      "id": 30
+    },
+    {
+      "name": "TEGNAS",
+      "one_line_profile": "Neural Architecture Search with Training-Free Metrics",
+      "detailed_description": "Implementation of 'Understanding and Accelerating Neural Architecture Search with Training-Free and Theory-Grounded Metrics', a tool for scientific modeling and AI research.",
+      "domains": [
+        "AI4"
+      ],
+      "subtask_category": [
+        "neural_architecture_search",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/VITA-Group/TEGNAS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nas",
+        "deep-learning",
+        "neural-architecture-search"
+      ],
+      "id": 31
+    },
+    {
+      "name": "VevestaX",
+      "one_line_profile": "Lightweight ML experiment tracking and EDA tool",
+      "detailed_description": "A library to track machine learning experiments, perform exploratory data analysis (EDA), and manage versioning, supporting scientific data analysis workflows.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "eda"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Vevesta/VevestaX",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ml-tracking",
+        "eda",
+        "data-science"
+      ],
+      "id": 32
+    },
+    {
+      "name": "nvitop",
+      "one_line_profile": "Interactive NVIDIA-GPU process viewer and management tool",
+      "detailed_description": "An interactive process viewer for NVIDIA GPUs, providing a one-stop solution for GPU process management and monitoring, critical for AI and HPC workloads.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "process_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/XuehaiPan/nvitop",
+      "help_website": [
+        "https://nvitop.readthedocs.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "gpu",
+        "nvidia",
+        "monitoring",
+        "hpc"
+      ],
+      "id": 33
+    },
+    {
+      "name": "Aim",
+      "one_line_profile": "Open-source experiment tracking tool for machine learning",
+      "detailed_description": "Aim is an easy-to-use and supercharged open-source experiment tracker that logs training runs, hyperparameters, and metrics, enabling researchers to compare and analyze machine learning experiments.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "model_monitoring"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aimhubio/aim",
+      "help_website": [
+        "https://aimstack.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "experiment-tracking",
+        "mlops",
+        "visualization"
+      ],
+      "id": 34
+    },
+    {
+      "name": "Prometheus (Drone)",
+      "one_line_profile": "Open source software platform for autonomous drone research",
+      "detailed_description": "Prometheus is an open-source software project for autonomous drones, providing a complete set of solutions for mapping, localization, planning, and control, facilitating robotics research.",
+      "domains": [
+        "AI6"
+      ],
+      "subtask_category": [
+        "robotics_control",
+        "simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/amov-lab/Prometheus",
+      "help_website": [
+        "https://github.com/amov-lab/Prometheus/wiki"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "robotics",
+        "drones",
+        "autonomous-control"
+      ],
+      "id": 35
+    },
+    {
+      "name": "MOCHA",
+      "one_line_profile": "Dataset and metrics for evaluating reading comprehension models",
+      "detailed_description": "MOCHA is a dataset and evaluation suite for training and evaluating reading comprehension metrics, supporting scientific analysis of NLP models.",
+      "domains": [
+        "AI6"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "dataset"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/anthonywchen/MOCHA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nlp",
+        "evaluation-metric",
+        "dataset"
+      ],
+      "id": 36
+    },
+    {
+      "name": "Apache Ambari",
+      "one_line_profile": "Platform for provisioning and managing Hadoop clusters",
+      "detailed_description": "Apache Ambari is a tool for provisioning, managing, and monitoring Apache Hadoop clusters, which are essential infrastructure for big data scientific computing.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "cluster_management",
+        "monitoring"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/apache/ambari",
+      "help_website": [
+        "https://ambari.apache.org/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "hadoop",
+        "cluster-management",
+        "big-data"
+      ],
+      "id": 37
+    },
+    {
+      "name": "k8s-gpu-hpa",
+      "one_line_profile": "Horizontal Pod Autoscaling for Kubernetes using Nvidia GPU Metrics",
+      "detailed_description": "A tool to enable Horizontal Pod Autoscaling (HPA) in Kubernetes based on custom Nvidia GPU metrics, essential for optimizing AI/HPC workloads.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "resource_optimization",
+        "autoscaling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/ashrafgt/k8s-gpu-hpa",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "kubernetes",
+        "gpu",
+        "autoscaling"
+      ],
+      "id": 38
+    },
+    {
+      "name": "SageMaker Experiments",
+      "one_line_profile": "Experiment tracking library for Amazon SageMaker",
+      "detailed_description": "A library for tracking, organizing, and comparing machine learning experiments on Amazon SageMaker, facilitating scientific reproducibility.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "model_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aws/sagemaker-experiments",
+      "help_website": [
+        "https://docs.aws.amazon.com/sagemaker/latest/dg/experiments.html"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "sagemaker",
+        "experiment-tracking",
+        "ml"
+      ],
+      "id": 39
+    },
+    {
+      "name": "selFIe",
+      "one_line_profile": "Lightweight profiling engine for Linux commands and HPC codes",
+      "detailed_description": "A very light profiling tool designed for Linux commands and HPC codes, developed by CEA-HPC. It provides self-profiling capabilities to analyze runtime performance.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "profiling",
+        "performance_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/cea-hpc/selFIe",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "hpc",
+        "profiling",
+        "linux",
+        "performance"
+      ],
+      "id": 40
+    },
+    {
+      "name": "ceph-scripts",
+      "one_line_profile": "Helper scripts for monitoring and managing Ceph clusters",
+      "detailed_description": "A collection of helper scripts developed by CERN for monitoring and managing Ceph storage clusters, facilitating infrastructure operations in scientific computing environments.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "storage_management",
+        "monitoring"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cernceph/ceph-scripts",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "ceph",
+        "storage",
+        "cern",
+        "monitoring"
+      ],
+      "id": 41
+    },
+    {
+      "name": "chaiNNer",
+      "one_line_profile": "Node-based image processing GUI for AI upscaling and manipulation",
+      "detailed_description": "A node-based image processing GUI aimed at making chaining image processing tasks easy and customizable. It supports AI upscaling and programmatic image processing workflows.",
+      "domains": [
+        "AI-Workflow",
+        "Image-Processing"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "upscaling",
+        "workflow_automation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chaiNNer-org/chaiNNer",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "image-processing",
+        "gui",
+        "ai-upscaling",
+        "workflow"
+      ],
+      "id": 42
+    },
+    {
+      "name": "nsys2json",
+      "one_line_profile": "Converter for NVIDIA Nsight Systems output to JSON format",
+      "detailed_description": "A Python script to convert the output of NVIDIA Nsight Systems (SQLite format) to JSON in Google Chrome Trace Event Format, facilitating performance analysis of GPU workloads.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "profiling",
+        "visualization",
+        "format_conversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chenyu-jiang/nsys2json",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nvidia",
+        "nsight",
+        "profiling",
+        "gpu"
+      ],
+      "id": 43
+    },
+    {
+      "name": "gputasker",
+      "one_line_profile": "Lightweight GPU task scheduler for cluster management",
+      "detailed_description": "A lightweight and effective GPU cluster task scheduling tool designed to manage and orchestrate GPU tasks.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "job_scheduling",
+        "resource_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cnstark/gputasker",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gpu",
+        "scheduler",
+        "cluster-management"
+      ],
+      "id": 44
+    },
+    {
+      "name": "mactop",
+      "one_line_profile": "Real-time monitoring tool for Apple Silicon chips",
+      "detailed_description": "A terminal-based monitoring tool specifically for Apple Silicon (M1/M2/M3) chips, displaying real-time metrics for CPU, GPU, and Neural Engine usage, useful for local AI development monitoring.",
+      "domains": [
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "hardware_monitoring",
+        "resource_profiling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/context-labs/mactop",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "apple-silicon",
+        "monitoring",
+        "gpu",
+        "cli"
+      ],
+      "id": 45
+    },
+    {
+      "name": "netdata_nv_plugin",
+      "one_line_profile": "NetData plugin for NVIDIA GPU statistics",
+      "detailed_description": "A plugin for NetData to poll and display statistics from NVIDIA GPUs, enabling infrastructure monitoring for AI/HPC nodes.",
+      "domains": [
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "hardware_monitoring",
+        "gpu_metrics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/coraxx/netdata_nv_plugin",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "netdata",
+        "nvidia",
+        "gpu",
+        "monitoring"
+      ],
+      "id": 46
+    },
+    {
+      "name": "torch-log-wmse",
+      "one_line_profile": "Audio quality metric and loss function for source separation",
+      "detailed_description": "Implementation of logWMSE, an audio quality metric and loss function with support for digital silence targets, useful for training and evaluating audio source separation systems.",
+      "domains": [
+        "AI-Model",
+        "Audio"
+      ],
+      "subtask_category": [
+        "model_training",
+        "evaluation_metric"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/crlandsc/torch-log-wmse",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "audio",
+        "loss-function",
+        "pytorch",
+        "source-separation"
+      ],
+      "id": 47
+    },
+    {
+      "name": "dantegpu-core",
+      "one_line_profile": "Core microservices for DanteGPU distributed GPU network",
+      "detailed_description": "Core microservices powering the DanteGPU distributed GPU network. It manages providers, orchestrates AI job scheduling, and handles authentication and monitoring for distributed AI computing.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "job_scheduling",
+        "distributed_computing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/dante-gpu/dantegpu-core",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gpu",
+        "distributed-systems",
+        "scheduler",
+        "ai-infra"
+      ],
+      "id": 48
+    },
+    {
+      "name": "socpowerbud",
+      "one_line_profile": "Real-time power and frequency monitor for Apple Silicon",
+      "detailed_description": "A sudoless alternative to powermetrics for Apple Silicon, providing real-time monitoring of CPU & GPU frequency, voltage, and usage, useful for local scientific computing profiling.",
+      "domains": [
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "hardware_monitoring",
+        "power_profiling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Objective-C",
+      "repo_url": "https://github.com/dehydratedpotato/socpowerbud",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "apple-silicon",
+        "power-monitoring",
+        "profiling"
+      ],
+      "id": 49
+    },
+    {
+      "name": "kronos",
+      "one_line_profile": "HPC workload analysis and modeling tool",
+      "detailed_description": "Tools for analysing profiling information, modeling, and generating portable HPC workloads, developed by ECMWF (European Centre for Medium-Range Weather Forecasts).",
+      "domains": [
+        "AI6",
+        "HPC"
+      ],
+      "subtask_category": [
+        "workload_modeling",
+        "profiling",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ecmwf/kronos",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "hpc",
+        "workload-generation",
+        "ecmwf",
+        "profiling"
+      ],
+      "id": 50
+    },
+    {
+      "name": "mltraq",
+      "one_line_profile": "Experiment tracking tool for ML and AI",
+      "detailed_description": "A tool to track and collaborate on Machine Learning and AI experiments, supporting metadata logging and experiment management.",
+      "domains": [
+        "AI6-05",
+        "MLOps"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "metadata_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/elehcimd/mltraq",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "mlops",
+        "experiment-tracking",
+        "reproducibility"
+      ],
+      "id": 51
+    },
+    {
+      "name": "evidently",
+      "one_line_profile": "Open-source ML and LLM observability framework",
+      "detailed_description": "An open-source framework to evaluate, test, and monitor ML models and LLMs in production, covering data drift, model performance, and data quality metrics.",
+      "domains": [
+        "AI6-05",
+        "MLOps"
+      ],
+      "subtask_category": [
+        "model_monitoring",
+        "data_drift_detection",
+        "evaluation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/evidentlyai/evidently",
+      "help_website": [
+        "https://docs.evidentlyai.com/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "mlops",
+        "observability",
+        "data-drift",
+        "llm-monitoring"
+      ],
+      "id": 52
+    },
+    {
+      "name": "Dynolog",
+      "one_line_profile": "Telemetry daemon for performance monitoring and tracing of AI/HPC workloads",
+      "detailed_description": "Dynolog is a telemetry daemon designed for performance monitoring and tracing in distributed training applications. It integrates with PyTorch to export metrics from system components (CPU, GPU, Linux kernel) and correlates them with training events, enabling performance analysis of AI models.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "performance_monitoring",
+        "distributed_training_tracing"
+      ],
+      "application_level": "service",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/facebookincubator/dynolog",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "telemetry",
+        "pytorch",
+        "hpc",
+        "gpu-monitoring"
+      ],
+      "id": 53
+    },
+    {
+      "name": "OmniSealBench",
+      "one_line_profile": "Benchmark and toolkit for evaluating neural watermarking techniques",
+      "detailed_description": "A comprehensive benchmark suite for evaluating the performance and robustness of neural watermarking techniques. It includes datasets, evaluation metrics, and tools for training and testing neural networks specifically for watermarking research.",
+      "domains": [
+        "AI4",
+        "AI4-11"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "watermarking_benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/facebookresearch/omnisealbench",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "neural-watermarking",
+        "benchmark",
+        "model-security"
+      ],
+      "id": 54
+    },
+    {
+      "name": "gpuview",
+      "one_line_profile": "Lightweight web dashboard for monitoring GPU usage in AI labs",
+      "detailed_description": "A lightweight web-based dashboard for monitoring GPU status (usage, temperature, memory) across multiple machines. It is designed to help researchers and AI engineers track resource utilization in GPU clusters or local labs.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "resource_monitoring",
+        "gpu_management"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fgaim/gpuview",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gpu",
+        "monitoring",
+        "dashboard",
+        "nvidia"
+      ],
+      "id": 55
+    },
+    {
+      "name": "Ganglia Web",
+      "one_line_profile": "Web frontend for the Ganglia distributed monitoring system",
+      "detailed_description": "The web interface for Ganglia, a scalable distributed monitoring system for high-performance computing systems such as clusters and grids. It visualizes metrics collected by the Ganglia monitor core.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "hpc_monitoring",
+        "cluster_visualization"
+      ],
+      "application_level": "service",
+      "primary_language": "PHP",
+      "repo_url": "https://github.com/ganglia/ganglia-web",
+      "help_website": [
+        "http://ganglia.sourceforge.net/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "hpc",
+        "monitoring",
+        "cluster",
+        "visualization"
+      ],
+      "id": 56
+    },
+    {
+      "name": "Ganglia Contrib",
+      "one_line_profile": "Collection of user-contributed tools for Ganglia monitoring system",
+      "detailed_description": "A repository containing various add-ons, scripts, and extensions for the Ganglia monitoring system, enhancing its capability to monitor specific scientific and HPC workloads.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "hpc_monitoring",
+        "metrics_collection"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/ganglia/ganglia_contrib",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "hpc",
+        "monitoring",
+        "extensions"
+      ],
+      "id": 57
+    },
+    {
+      "name": "JMXetric",
+      "one_line_profile": "Java JVM instrumentation for Ganglia monitoring",
+      "detailed_description": "A tool that provides a bridge between JMX (Java Management Extensions) and Ganglia, allowing monitoring of Java-based scientific applications and HPC middleware.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "application_monitoring",
+        "jvm_metrics"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/ganglia/jmxetric",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "java",
+        "jmx",
+        "ganglia",
+        "monitoring"
+      ],
+      "id": 58
+    },
+    {
+      "name": "Ganglia Monitor Core",
+      "one_line_profile": "Scalable distributed monitoring system for HPC clusters",
+      "detailed_description": "The core component of Ganglia, a scalable distributed monitoring system for high-performance computing systems such as clusters and grids. It handles metric collection and distribution.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "hpc_monitoring",
+        "resource_tracking"
+      ],
+      "application_level": "service",
+      "primary_language": "C",
+      "repo_url": "https://github.com/ganglia/monitor-core",
+      "help_website": [
+        "http://ganglia.info/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "hpc",
+        "cluster",
+        "monitoring",
+        "distributed-systems"
+      ],
+      "id": 59
+    },
+    {
+      "name": "GPUStack",
+      "one_line_profile": "GPU cluster manager for optimized AI model deployment",
+      "detailed_description": "A GPU cluster manager designed to streamline the deployment of AI models. It optimizes resource allocation and scheduling specifically for AI inference and training workloads across GPU clusters.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "model_deployment",
+        "gpu_scheduling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gpustack/gpustack",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gpu-cluster",
+        "ai-deployment",
+        "llm-serving",
+        "resource-management"
+      ],
+      "id": 60
+    },
+    {
+      "name": "Ganglia API",
+      "one_line_profile": "RESTful API layer for Ganglia distributed monitoring system",
+      "detailed_description": "A Python-based API that exposes Ganglia monitoring data in a RESTful JSON format, enabling programmatic access to HPC cluster metrics for scientific infrastructure observability.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "observability"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/guardian/ganglia-api",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ganglia",
+        "hpc",
+        "monitoring",
+        "api"
+      ],
+      "id": 61
+    },
+    {
+      "name": "Slurm Job Exporter",
+      "one_line_profile": "Prometheus exporter for Slurm job statistics and GPU usage",
+      "detailed_description": "A Prometheus exporter that collects statistics from Slurm cgroup accounting, including NVIDIA GPU usage per job, specifically designed for monitoring scientific HPC workloads.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "resource_tracking"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/guilbaults/slurm-job-exporter",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "slurm",
+        "prometheus",
+        "gpu-monitoring",
+        "hpc"
+      ],
+      "id": 62
+    },
+    {
+      "name": "Guild AI",
+      "one_line_profile": "Experiment tracking and ML developer tool",
+      "detailed_description": "An open-source experiment tracking tool for machine learning that manages runs, hyperparameters, and results, facilitating reproducible scientific research and model development.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "experiment_tracking",
+        "reproducibility"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/guildai/guildai",
+      "help_website": [
+        "https://guild.ai"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "experiment-tracking",
+        "mlops",
+        "reproducibility"
+      ],
+      "id": 63
+    },
+    {
+      "name": "gvtop",
+      "one_line_profile": "Interactive TUI for monitoring NVIDIA GPUs",
+      "detailed_description": "A terminal-based user interface (TUI) for monitoring NVIDIA GPU status, utilization, and processes, providing real-time observability for scientific computing resources.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "gpu_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gvlassis/gvtop",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gpu",
+        "monitoring",
+        "nvidia",
+        "tui"
+      ],
+      "id": 64
+    },
+    {
+      "name": "OptScale",
+      "one_line_profile": "FinOps and cloud cost optimization platform for ML/AI workloads",
+      "detailed_description": "A comprehensive FinOps and cloud cost optimization platform that supports Kubernetes and AI/ML workloads, helping scientific organizations manage and optimize computing costs across various cloud providers.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "cost_optimization",
+        "resource_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hystax/optscale",
+      "help_website": [
+        "https://my.optscale.com"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "finops",
+        "cost-optimization",
+        "kubernetes",
+        "ml-cost"
+      ],
+      "id": 65
+    },
+    {
+      "name": "LLaMA-Omni",
+      "one_line_profile": "Low-latency end-to-end speech interaction model",
+      "detailed_description": "A speech interaction model built upon Llama-3.1-8B-Instruct, designed for low-latency and high-quality end-to-end speech processing, serving as a solver for scientific speech tasks.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "inference",
+        "speech_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ictnlp/LLaMA-Omni",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "speech-interaction",
+        "model",
+        "inference"
+      ],
+      "id": 66
+    },
+    {
+      "name": "LACT",
+      "one_line_profile": "Linux GPU configuration and monitoring tool",
+      "detailed_description": "A robust tool for configuring and monitoring AMD and NVIDIA GPUs on Linux, providing essential hardware control and observability for scientific computing workstations and nodes.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "hardware_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/ilya-zlobintsev/LACT",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gpu",
+        "linux",
+        "monitoring",
+        "overclocking"
+      ],
+      "id": 67
+    },
+    {
+      "name": "all-smi",
+      "one_line_profile": "Unified command-line utility for monitoring GPU hardware",
+      "detailed_description": "A command-line tool that aggregates monitoring data from both NVIDIA (nvidia-smi) and AMD (rocm-smi) GPUs, facilitating unified observability in heterogeneous scientific computing environments.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "observability"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/inureyes/all-smi",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gpu",
+        "monitoring",
+        "nvidia",
+        "amd"
+      ],
+      "id": 68
+    },
+    {
+      "name": "gpu-sentry",
+      "one_line_profile": "Flask-based package for monitoring NVIDIA GPU utilization",
+      "detailed_description": "A lightweight monitoring package that exposes NVIDIA GPU utilization metrics via a web interface, useful for tracking resource usage in scientific deep learning servers.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "monitoring",
+        "observability"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jacenkow/gpu-sentry",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gpu",
+        "monitoring",
+        "flask",
+        "nvidia"
+      ],
+      "id": 69
+    },
+    {
+      "name": "Jina Serve",
+      "one_line_profile": "Cloud-native framework for building multimodal AI applications",
+      "detailed_description": "A framework for building and serving multimodal AI applications, providing the runtime infrastructure for deploying scientific AI models (e.g., neural search, generative AI) as services.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "serving",
+        "inference_infrastructure"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jina-ai/serve",
+      "help_website": [
+        "https://jina.ai"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "ai-serving",
+        "multimodal",
+        "cloud-native",
+        "inference"
+      ],
+      "id": 70
+    },
+    {
+      "name": "gpud",
+      "one_line_profile": "Automated monitoring and diagnostics tool for GPU infrastructure in AI/HPC",
+      "detailed_description": "GPUd is a lightweight daemon and library designed to automate the monitoring, diagnostics, and issue identification of NVIDIA GPUs in AI and HPC clusters. It provides real-time visibility into GPU health, ECC errors, NVLink topology, and thermal states, enabling researchers and cluster administrators to maintain the reliability of scientific computing infrastructure.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "infrastructure_monitoring",
+        "hardware_diagnostics"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/leptonai/gpud",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gpu-monitoring",
+        "hpc",
+        "ai-infrastructure",
+        "nvidia",
+        "diagnostics"
+      ],
+      "id": 71
+    },
+    {
+      "name": "torcheval",
+      "one_line_profile": "Performant model evaluation metrics library for PyTorch",
+      "detailed_description": "Torcheval is a library that provides a rich collection of performant metrics for evaluating PyTorch models. It supports distributed training scenarios and offers a simple interface to create custom metrics, facilitating the scientific analysis of model performance in AI research.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "metrics_computation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/meta-pytorch/torcheval",
+      "help_website": [
+        "https://pytorch.org/torcheval"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "pytorch",
+        "metrics",
+        "model-evaluation",
+        "distributed-training"
+      ],
+      "id": 72
+    },
+    {
+      "name": "gmonitor",
+      "one_line_profile": "NVIDIA GPU monitoring tool for terminal",
+      "detailed_description": "A command-line tool for monitoring NVIDIA GPU metrics such as usage, memory, and temperature, essential for tracking resource utilization in AI/HPC compute clusters.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "resource_monitoring",
+        "gpu_observability"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mountassir/gmonitor",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gpu-monitoring",
+        "nvidia",
+        "hpc",
+        "observability"
+      ],
+      "id": 73
+    },
+    {
+      "name": "SparseCT",
+      "one_line_profile": "Framework for sparse-view CT reconstruction research",
+      "detailed_description": "A framework designed for developing, training, and benchmarking sparse-view Computed Tomography (CT) reconstruction algorithms, providing datasets, metrics, and baselines for medical imaging research.",
+      "domains": [
+        "Medical Imaging",
+        "Physics"
+      ],
+      "subtask_category": [
+        "image_reconstruction",
+        "scientific_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mozanunal/SparseCT",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ct-reconstruction",
+        "medical-imaging",
+        "sparse-view",
+        "deep-learning"
+      ],
+      "id": 74
+    },
+    {
+      "name": "gpu_monitor",
+      "one_line_profile": "Multi-node GPU monitoring utility",
+      "detailed_description": "A Python-based tool to monitor GPU status across single machines or clusters, facilitating resource tracking for distributed AI training and scientific computing workloads.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "resource_monitoring",
+        "cluster_observability"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/msalvaris/gpu_monitor",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gpu",
+        "monitoring",
+        "cluster",
+        "distributed-computing"
+      ],
+      "id": 75
+    },
+    {
+      "name": "nviwatch",
+      "one_line_profile": "TUI for NVIDIA GPU process management and monitoring",
+      "detailed_description": "A terminal user interface (TUI) built in Rust for real-time monitoring and management of NVIDIA GPU processes, aiding in the optimization and debugging of AI/HPC jobs.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "resource_monitoring",
+        "process_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/msminhas93/nviwatch",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gpu",
+        "nvidia",
+        "tui",
+        "monitoring",
+        "rust"
+      ],
+      "id": 76
+    },
+    {
+      "name": "datadog_nvml",
+      "one_line_profile": "NVIDIA GPU monitoring integration for Datadog",
+      "detailed_description": "A utility that collects NVIDIA GPU metrics via NVML and sends them to Datadog, enabling centralized monitoring of GPU resources in scientific computing environments.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "resource_monitoring",
+        "observability"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ngi644/datadog_nvml",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "gpu",
+        "datadog",
+        "nvml",
+        "monitoring"
+      ],
+      "id": 77
+    },
+    {
+      "name": "OpenLIT",
+      "one_line_profile": "OpenTelemetry-native observability and evaluation platform for LLMs and GenAI",
+      "detailed_description": "OpenLIT is an observability and evaluation platform designed for AI engineering. It provides automatic instrumentation for LLMs, vector databases, and GPU accelerators, enabling developers to trace model execution, monitor costs, and perform evaluations (e.g., hallucination detection) on AI model outputs.",
+      "domains": [
+        "AI6",
+        "AI6-05"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "observability",
+        "performance_profiling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openlit/openlit",
+      "help_website": [
+        "https://docs.openlit.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm-ops",
+        "observability",
+        "evaluation",
+        "gpu-monitoring",
+        "opentelemetry"
+      ],
+      "id": 78
+    },
+    {
+      "name": "EconML",
+      "one_line_profile": "A Python package for estimating heterogeneous treatment effects and causal inference",
+      "detailed_description": "ALICE (Automated Learning and Intelligence for Causation and Economics) is a Microsoft Research project. EconML is a toolkit that combines state-of-the-art machine learning techniques with econometrics to solve complex causal inference problems. It implements orthogonal machine learning algorithms such as double machine learning, enabling the measurement of causal effects of treatment variables on outcomes while controlling for high-dimensional features.",
+      "domains": [
+        "AI3-02",
+        "Social Science"
+      ],
+      "subtask_category": [
+        "causal_inference",
+        "estimation",
+        "statistical_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/py-why/EconML",
+      "help_website": [
+        "https://econml.azurewebsites.net/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "causal-inference",
+        "econometrics",
+        "machine-learning",
+        "treatment-effect"
+      ],
+      "id": 79
+    },
+    {
+      "name": "ApeBench",
+      "one_line_profile": "Benchmark suite for autoregressive neural emulation of PDEs",
+      "detailed_description": "A benchmark suite designed for evaluating autoregressive neural networks in the context of emulating Partial Differential Equations (PDEs), supporting 1D, 2D, and 3D physics simulations.",
+      "domains": [
+        "AI4S",
+        "Physics"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "scientific_modeling",
+        "pde_solver"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tum-pbs/apebench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pde",
+        "physics-ml",
+        "benchmark",
+        "neural-emulation"
+      ],
+      "id": 80
+    },
+    {
+      "name": "stubl",
+      "one_line_profile": "SLURM Tools and UBiLities for HPC job management",
+      "detailed_description": "A collection of shell scripts and utilities to facilitate the management and monitoring of jobs on Slurm-based HPC clusters, simplifying common tasks for researchers.",
+      "domains": [
+        "AI6",
+        "HPC"
+      ],
+      "subtask_category": [
+        "job_scheduling",
+        "cluster_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/ubccr/stubl",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "slurm",
+        "hpc",
+        "job-management",
+        "cluster-tools"
+      ],
+      "id": 81
+    },
+    {
+      "name": "HiddenLayer",
+      "one_line_profile": "Neural network graph visualization and training metrics library",
+      "detailed_description": "A lightweight library for visualizing neural network architectures (graphs) and tracking training metrics for PyTorch, TensorFlow, and Keras, aiding in model debugging and analysis.",
+      "domains": [
+        "AI6-05",
+        "AI3"
+      ],
+      "subtask_category": [
+        "model_visualization",
+        "training_monitoring"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/waleedka/hiddenlayer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "deep-learning",
+        "pytorch",
+        "tensorflow"
+      ],
+      "id": 82
+    },
+    {
+      "name": "GPUSitter",
+      "one_line_profile": "Lightweight GPU job scheduler for idle resource utilization",
+      "detailed_description": "A tool to monitor GPU usage and automatically launch jobs when resources are idle, designed for maximizing utilization in shared research server environments.",
+      "domains": [
+        "AI6",
+        "HPC"
+      ],
+      "subtask_category": [
+        "job_scheduling",
+        "resource_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wilmerwang/GPUSitter",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gpu",
+        "scheduling",
+        "automation",
+        "hpc"
+      ],
+      "id": 83
+    },
+    {
+      "name": "gpustat",
+      "one_line_profile": "Command-line utility for monitoring GPU status",
+      "detailed_description": "A standard command-line tool for querying and monitoring NVIDIA GPU status (usage, memory, temperature, processes) on Linux, widely used in AI/HPC research environments.",
+      "domains": [
+        "AI6-05",
+        "HPC"
+      ],
+      "subtask_category": [
+        "resource_monitoring",
+        "observability"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wookayin/gpustat",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gpu",
+        "monitoring",
+        "nvidia",
+        "cli"
+      ],
+      "id": 84
+    },
+    {
+      "name": "gpustat-web",
+      "one_line_profile": "Web interface for gpustat monitoring",
+      "detailed_description": "A web-based interface for the gpustat utility, allowing remote monitoring of GPU cluster status through a browser.",
+      "domains": [
+        "AI6-05",
+        "HPC"
+      ],
+      "subtask_category": [
+        "resource_monitoring",
+        "observability"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wookayin/gpustat-web",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gpu",
+        "monitoring",
+        "web-ui",
+        "cluster"
+      ],
+      "id": 85
+    }
+  ]
+}

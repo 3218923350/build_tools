@@ -1,0 +1,1641 @@
+{
+  "generated_at": "2025-12-17T11:13:29.787555+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "SYSBIO1",
+      "leaf_cluster_name": "计算系统生物学与动力学生态",
+      "domain": "Systems Biology",
+      "typical_objects": "ODE/PDE 模型, 代谢网络, 信号通路, 参数与不确定性",
+      "task_chain": "建模→参数估计→仿真→敏感性/UQ→反演→验证",
+      "tool_form": "建模语言/仿真器 + 参数估计/UQ + 数据拟合工作流"
+    },
+    "unit": {
+      "unit_id": "SYSBIO1-03",
+      "unit_name": "参数估计、模型校准与反演",
+      "target_scale": "200–450",
+      "coverage_tools": "optimization、Bayesian inference、identifiability"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] DiffEqParamEstim.jl",
+        "[GH] PyDREAM",
+        "[GH] dMod",
+        "[GH] COPASI",
+        "[GH] BioNetFit",
+        "[GH] pyABC",
+        "[GH] MEIGO",
+        "[GH] Data2Dynamics",
+        "[GH] AMICI",
+        "[GH] pyPESTO",
+        "[GH] parameter estimation systems biology",
+        "[GH] model calibration ODE",
+        "[GH] Bayesian inference MCMC biology",
+        "[GH] identifiability analysis",
+        "[GH] profile likelihood",
+        "[GH] inverse problems systems biology",
+        "[GH] kinetic parameter fitting",
+        "[GH] Approximate Bayesian Computation ABC",
+        "[GH] nonlinear least squares biology",
+        "[GH] PEtab",
+        "[GH] global optimization algorithms biology",
+        "[GH] SBML parameter estimation",
+        "[GH] sensitivity analysis ODE",
+        "[WEB] systems biology parameter estimation tools github",
+        "[WEB] ODE model calibration software github",
+        "[WEB] structural identifiability analysis tools github",
+        "[WEB] Bayesian inference for biochemical networks github",
+        "[WEB] PEtab benchmark problems github"
+      ],
+      "total_candidates": 598,
+      "tool_candidates": 158,
+      "final_tools": 62
+    }
+  },
+  "tools": [
+    {
+      "name": "AMICI",
+      "one_line_profile": "High-performance interface for ODE model simulation and sensitivity analysis",
+      "detailed_description": "A sophisticated interface for the SUNDIALS solvers CVODES and IDAS, designed to perform efficient simulation and sensitivity analysis for large-scale ordinary differential equation (ODE) models in systems biology.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "sensitivity_analysis",
+        "simulation",
+        "gradient_computation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AMICI-dev/AMICI",
+      "help_website": [
+        "https://amici.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "ode",
+        "sensitivity-analysis",
+        "systems-biology",
+        "sundials"
+      ],
+      "id": 1
+    },
+    {
+      "name": "Benchmark-Models-PEtab",
+      "one_line_profile": "Collection of benchmark problems for parameter estimation in systems biology",
+      "detailed_description": "A curated collection of mathematical models and experimental data standardized in the PEtab format, serving as a benchmark suite to evaluate methodologies for data-based modeling and parameter estimation.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "model_calibration"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Benchmarking-Initiative/Benchmark-Models-PEtab",
+      "help_website": [
+        "https://github.com/Benchmarking-Initiative/Benchmark-Models-PEtab"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "petab",
+        "benchmark",
+        "parameter-estimation"
+      ],
+      "id": 2
+    },
+    {
+      "name": "CosmoABC",
+      "one_line_profile": "Approximate Bayesian Computation (ABC) sampler for parameter inference",
+      "detailed_description": "A Python package developed by the Cosmostatistics Initiative for parameter inference using Approximate Bayesian Computation, applicable to simulation-based inference problems.",
+      "domains": [
+        "ASTROPHYSICS",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "bayesian_inference",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/COINtoolbox/CosmoABC",
+      "help_website": [
+        "https://github.com/COINtoolbox/CosmoABC"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "abc",
+        "inference",
+        "cosmology"
+      ],
+      "id": 3
+    },
+    {
+      "name": "pycotools",
+      "one_line_profile": "Python interface for the COPASI systems biology toolkit",
+      "detailed_description": "A Python toolbox that provides an interface to COPASI, enabling programmatic creation, manipulation, and simulation of biochemical network models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "model_simulation",
+        "workflow_automation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CiaranWelsh/pycotools",
+      "help_website": [
+        "https://pycotools.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "copasi",
+        "systems-biology",
+        "python-wrapper"
+      ],
+      "id": 4
+    },
+    {
+      "name": "pycotools3",
+      "one_line_profile": "Updated Python interface for COPASI modeling tasks",
+      "detailed_description": "The successor to pycotools, providing enhanced Python bindings for COPASI to support modeling, simulation, and parameter estimation tasks in systems biology.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "model_simulation",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CiaranWelsh/pycotools3",
+      "help_website": [
+        "https://pycotools3.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "copasi",
+        "systems-biology",
+        "modeling"
+      ],
+      "id": 5
+    },
+    {
+      "name": "MATLODE",
+      "one_line_profile": "MATLAB toolbox for ODE simulation and sensitivity analysis",
+      "detailed_description": "A MATLAB toolbox providing a suite of ordinary differential equation solvers and sensitivity analysis methods, tailored for computational science applications.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "sensitivity_analysis",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/ComputationalScienceLaboratory/MATLODE",
+      "help_website": [
+        "https://github.com/ComputationalScienceLaboratory/MATLODE"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "ode",
+        "matlab",
+        "sensitivity-analysis"
+      ],
+      "id": 6
+    },
+    {
+      "name": "ProfileLikelihood.jl",
+      "one_line_profile": "Julia package for profile likelihood analysis",
+      "detailed_description": "A Julia library implementing methods for profile likelihood analysis, used to assess parameter identifiability and confidence intervals in statistical models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "identifiability_analysis",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/DanielVandH/ProfileLikelihood.jl",
+      "help_website": [
+        "https://danielvandh.github.io/ProfileLikelihood.jl/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "likelihood",
+        "identifiability"
+      ],
+      "id": 7
+    },
+    {
+      "name": "Data2Dynamics",
+      "one_line_profile": "Modeling environment for parameter estimation in dynamical systems",
+      "detailed_description": "A comprehensive MATLAB modeling environment tailored for parameter estimation, model selection, and uncertainty analysis in dynamical systems, particularly for systems biology.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "model_selection",
+        "uncertainty_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/Data2Dynamics/d2d",
+      "help_website": [
+        "https://github.com/Data2Dynamics/d2d/wiki"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "dynamical-systems",
+        "matlab",
+        "parameter-estimation"
+      ],
+      "id": 8
+    },
+    {
+      "name": "astroABC",
+      "one_line_profile": "ABC SMC sampler for parameter estimation in astrophysics",
+      "detailed_description": "A Python implementation of an Approximate Bayesian Computation Sequential Monte Carlo (ABC SMC) sampler, designed for parameter estimation in astrophysical problems but applicable to general inference tasks.",
+      "domains": [
+        "ASTROPHYSICS",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "bayesian_inference",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EliseJ/astroABC",
+      "help_website": [
+        "https://astroabc.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "abc",
+        "smc",
+        "inference"
+      ],
+      "id": 9
+    },
+    {
+      "name": "PESTO",
+      "one_line_profile": "Parameter Estimation Toolbox for MATLAB",
+      "detailed_description": "A MATLAB toolbox for parameter estimation in dynamical systems, offering various optimization algorithms and visualization tools for systems biology models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/ICB-DCM/PESTO",
+      "help_website": [
+        "https://github.com/ICB-DCM/PESTO"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "matlab",
+        "optimization",
+        "systems-biology"
+      ],
+      "id": 10
+    },
+    {
+      "name": "fiddy",
+      "one_line_profile": "Finite difference methods for gradient approximation",
+      "detailed_description": "A Python library providing finite difference methods for numerical gradient approximation, supporting parameter estimation workflows in computational biology.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "numerical_differentiation",
+        "optimization_support"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ICB-DCM/fiddy",
+      "help_website": [
+        "https://fiddy.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "finite-difference",
+        "gradients",
+        "numerical-methods"
+      ],
+      "id": 11
+    },
+    {
+      "name": "parPE",
+      "one_line_profile": "Scalable parameter estimation for dynamical models",
+      "detailed_description": "A C++ library for high-performance parameter estimation of dynamical models, leveraging MPI for distributed computing and supporting large-scale datasets.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "hpc"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ICB-DCM/parPE",
+      "help_website": [
+        "https://github.com/ICB-DCM/parPE"
+      ],
+      "license": "MIT",
+      "tags": [
+        "hpc",
+        "mpi",
+        "parameter-estimation"
+      ],
+      "id": 12
+    },
+    {
+      "name": "pyABC",
+      "one_line_profile": "Distributed, likelihood-free inference (ABC-SMC)",
+      "detailed_description": "A Python framework for approximate Bayesian computation (ABC) using Sequential Monte Carlo (SMC), designed for distributed execution and efficient parameter inference in complex models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "bayesian_inference",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ICB-DCM/pyABC",
+      "help_website": [
+        "https://pyabc.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "abc",
+        "smc",
+        "inference",
+        "distributed-computing"
+      ],
+      "id": 13
+    },
+    {
+      "name": "pyPESTO",
+      "one_line_profile": "Python Parameter Estimation Toolbox",
+      "detailed_description": "A comprehensive Python toolbox for parameter estimation, including optimization, profile likelihood analysis, and sampling for dynamical systems in biology.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "optimization",
+        "uncertainty_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ICB-DCM/pyPESTO",
+      "help_website": [
+        "https://pypesto.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "parameter-estimation",
+        "optimization",
+        "systems-biology"
+      ],
+      "id": 14
+    },
+    {
+      "name": "ABCdiscrete",
+      "one_line_profile": "ABC optimization for discrete data",
+      "detailed_description": "A Python tool for black-box optimization on discrete data, combining ideas from Approximate Bayesian Computation and Differential Evolution.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "optimization",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/IlzeAmandaA/ABCdiscrete",
+      "help_website": [
+        "https://github.com/IlzeAmandaA/ABCdiscrete"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "abc",
+        "optimization",
+        "discrete-data"
+      ],
+      "id": 15
+    },
+    {
+      "name": "Catalax",
+      "one_line_profile": "JAX-based framework for biological system modeling",
+      "detailed_description": "A JAX-based framework designed to model biological systems, enabling differentiable programming and efficient simulation/optimization of kinetic models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation",
+        "differentiable_programming"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JR-1991/Catalax",
+      "help_website": [
+        "https://github.com/JR-1991/Catalax"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "jax",
+        "systems-biology",
+        "kinetic-modeling"
+      ],
+      "id": 16
+    },
+    {
+      "name": "stepmix",
+      "one_line_profile": "Generalized mixture modeling and clustering tool",
+      "detailed_description": "A Python package for model-based clustering and generalized mixture modeling (latent class/profile analysis), handling missing values and continuous/categorical data, useful for identifying subpopulations in scientific data.",
+      "domains": [
+        "STATISTICS",
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "clustering",
+        "mixture_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Labo-Lacourse/stepmix",
+      "help_website": [
+        "https://stepmix.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "clustering",
+        "mixture-models",
+        "latent-class-analysis"
+      ],
+      "id": 17
+    },
+    {
+      "name": "PyDREAM",
+      "one_line_profile": "MT-DREAM(ZS) algorithm for Bayesian model calibration",
+      "detailed_description": "A Python implementation of the MT-DREAM(ZS) algorithm, enabling efficient Bayesian parameter estimation, model calibration, and uncertainty quantification for high-dimensional models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "bayesian_inference",
+        "model_calibration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LoLab-MSM/PyDREAM",
+      "help_website": [
+        "https://pydream.readthedocs.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "mcmc",
+        "dream-algorithm",
+        "calibration"
+      ],
+      "id": 18
+    },
+    {
+      "name": "pythonABC",
+      "one_line_profile": "Lightweight Approximate Bayesian Computation library",
+      "detailed_description": "A Python library implementing Approximate Bayesian Computation (ABC) algorithms for parameter inference in simulation-based models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "bayesian_inference",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Neojume/pythonABC",
+      "help_website": [
+        "https://github.com/Neojume/pythonABC"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "abc",
+        "inference",
+        "python"
+      ],
+      "id": 19
+    },
+    {
+      "name": "PEtab",
+      "one_line_profile": "Data standard for parameter estimation in systems biology",
+      "detailed_description": "Defines a standard format (based on SBML and TSV) for specifying parameter estimation problems in systems biology, facilitating interoperability between modeling tools.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "data_standardization",
+        "interoperability"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PEtab-dev/PEtab",
+      "help_website": [
+        "https://petab.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "standard",
+        "sbml",
+        "parameter-estimation"
+      ],
+      "id": 20
+    },
+    {
+      "name": "libpetab-python",
+      "one_line_profile": "Python library for handling PEtab files",
+      "detailed_description": "A Python library providing functionality to read, write, validate, and manipulate PEtab files, serving as a reference implementation for the PEtab standard.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PEtab-dev/libpetab-python",
+      "help_website": [
+        "https://petab.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "petab",
+        "python",
+        "data-handling"
+      ],
+      "id": 21
+    },
+    {
+      "name": "petab_select",
+      "one_line_profile": "Model selection extension for PEtab",
+      "detailed_description": "A Python tool and extension to the PEtab standard for specifying and performing model selection problems in systems biology.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "model_selection",
+        "workflow_automation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PEtab-dev/petab_select",
+      "help_website": [
+        "https://github.com/PEtab-dev/petab_select"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "model-selection",
+        "petab",
+        "systems-biology"
+      ],
+      "id": 22
+    },
+    {
+      "name": "petab_test_suite",
+      "one_line_profile": "Compliance test suite for PEtab support",
+      "detailed_description": "A test suite designed to verify the compliance of software tools with the PEtab standard, ensuring correct interpretation and processing of parameter estimation problems.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "validation",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PEtab-dev/petab_test_suite",
+      "help_website": [
+        "https://github.com/PEtab-dev/petab_test_suite"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "testing",
+        "compliance",
+        "petab"
+      ],
+      "id": 23
+    },
+    {
+      "name": "petabvis",
+      "one_line_profile": "Visualization tool for PEtab data",
+      "detailed_description": "A Python tool for visualizing PEtab problem definitions, including measurement data, simulation conditions, and parameter bounds.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_inspection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PEtab-dev/petabvis",
+      "help_website": [
+        "https://github.com/PEtab-dev/petabvis"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "visualization",
+        "petab",
+        "data-analysis"
+      ],
+      "id": 24
+    },
+    {
+      "name": "DiffEqParamEstim.jl",
+      "one_line_profile": "Parameter estimation for differential equations in the SciML ecosystem",
+      "detailed_description": "A component of the SciML ecosystem providing parameter estimation tools for differential equations, offering various loss functions and optimization methods.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "model_calibration"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DiffEqParamEstim.jl",
+      "help_website": [
+        "https://docs.sciml.ai/DiffEqParamEstim/stable/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "sciml",
+        "parameter-estimation",
+        "differential-equations"
+      ],
+      "id": 25
+    },
+    {
+      "name": "GlobalSensitivity.jl",
+      "one_line_profile": "Global Sensitivity Analysis (GSA) library for Julia",
+      "detailed_description": "A Julia library for performing Global Sensitivity Analysis (GSA) to assess how uncertainty in model output can be apportioned to different sources of uncertainty in model input.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "sensitivity_analysis",
+        "uncertainty_quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/GlobalSensitivity.jl",
+      "help_website": [
+        "https://docs.sciml.ai/GlobalSensitivity/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "gsa",
+        "sensitivity-analysis",
+        "sciml"
+      ],
+      "id": 26
+    },
+    {
+      "name": "SciMLSensitivity.jl",
+      "one_line_profile": "Sensitivity analysis and adjoints for scientific machine learning",
+      "detailed_description": "Provides sensitivity analysis and automatic differentiation support for differential equation solvers, enabling gradient-based optimization for scientific machine learning applications.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "sensitivity_analysis",
+        "gradient_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/SciMLSensitivity.jl",
+      "help_website": [
+        "https://docs.sciml.ai/SciMLSensitivity/stable/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "adjoints",
+        "automatic-differentiation",
+        "sciml"
+      ],
+      "id": 27
+    },
+    {
+      "name": "StructuralIdentifiability.jl",
+      "one_line_profile": "Tool for structural identifiability analysis of ODE systems",
+      "detailed_description": "A Julia package for fast and automatic structural identifiability analysis of ordinary differential equation (ODE) models, determining which parameters can be uniquely estimated.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "identifiability_analysis",
+        "model_diagnostics"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/StructuralIdentifiability.jl",
+      "help_website": [
+        "https://docs.sciml.ai/StructuralIdentifiability/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "identifiability",
+        "ode",
+        "systems-biology"
+      ],
+      "id": 28
+    },
+    {
+      "name": "StrikePy",
+      "one_line_profile": "Python toolbox for structural identifiability analysis",
+      "detailed_description": "A Python toolbox for analyzing structural properties of nonlinear models, including identifiability and observability, ported from the STRIKE-GOLDD MATLAB toolbox.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "identifiability_analysis",
+        "observability_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/afvillaverde/StrikePy",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "identifiability",
+        "nonlinear-systems",
+        "systems-biology"
+      ],
+      "id": 29
+    },
+    {
+      "name": "STRIKE-GOLDD",
+      "one_line_profile": "MATLAB toolbox for structural identifiability and observability",
+      "detailed_description": "STRuctural Identifiability and observability of non-linear Kinetic Energy models (STRIKE-GOLDD) is a MATLAB toolbox for analyzing structural properties of nonlinear ODE models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "identifiability_analysis",
+        "observability_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/afvillaverde/strike-goldd",
+      "help_website": [
+        "https://sites.google.com/site/strikegolddtoolbox/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "matlab",
+        "identifiability",
+        "ode"
+      ],
+      "id": 30
+    },
+    {
+      "name": "sf3dmodels",
+      "one_line_profile": "3D modelling package for star-forming regions",
+      "detailed_description": "A Python package for 3D modelling of star-forming regions, allowing the construction of complex geometries and physical properties for radiative transfer simulations.",
+      "domains": [
+        "ASTROPHYSICS"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation_setup"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/andizq/sf3dmodels",
+      "help_website": [
+        "https://sf3dmodels.readthedocs.io/"
+      ],
+      "license": null,
+      "tags": [
+        "astrophysics",
+        "3d-modeling",
+        "radiative-transfer"
+      ],
+      "id": 31
+    },
+    {
+      "name": "WHAM",
+      "one_line_profile": "Weighted Histogram Analysis Method for free energy profiles",
+      "detailed_description": "A Python package to construct free energy profiles from biased molecular simulation data using log-likelihood maximization and self-consistent iteration approaches.",
+      "domains": [
+        "CHEMISTRY",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "free_energy_calculation",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/apallath/WHAM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-dynamics",
+        "free-energy",
+        "wham"
+      ],
+      "id": 32
+    },
+    {
+      "name": "AMICI (Azizi Lab)",
+      "one_line_profile": "Cell-cell interaction inference from spatial transcriptomics",
+      "detailed_description": "A tool for inferring cell-cell interactions from spatial transcriptomics (ST) data using a cross-attention-based approach.",
+      "domains": [
+        "BIOINFORMATICS",
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "inference",
+        "interaction_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/azizilab/amici",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "spatial-transcriptomics",
+        "cell-interaction",
+        "inference"
+      ],
+      "id": 33
+    },
+    {
+      "name": "COPASI",
+      "one_line_profile": "Software for simulation and analysis of biochemical networks",
+      "detailed_description": "COPASI (COmplex PAthway SImulator) is a software application for simulation and analysis of biochemical networks and their dynamics, supporting ODEs and stochastic methods.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling",
+        "parameter_estimation"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/copasi/COPASI",
+      "help_website": [
+        "http://copasi.org/"
+      ],
+      "license": "Artistic-2.0",
+      "tags": [
+        "systems-biology",
+        "simulation",
+        "biochemical-networks"
+      ],
+      "id": 34
+    },
+    {
+      "name": "BASICO",
+      "one_line_profile": "Simplified Python interface to COPASI",
+      "detailed_description": "A simplified Python interface to COPASI, allowing users to create, manipulate, and simulate biochemical models using COPASI's backend from Python.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/copasi/basico",
+      "help_website": [
+        "https://basico.readthedocs.io/"
+      ],
+      "license": "Artistic-2.0",
+      "tags": [
+        "copasi",
+        "python-bindings",
+        "systems-biology"
+      ],
+      "id": 35
+    },
+    {
+      "name": "dMod",
+      "one_line_profile": "Dynamic modeling and parameter estimation in R",
+      "detailed_description": "An R package for dynamic modeling and parameter estimation in the context of systems biology, supporting ODE models and profile likelihood analysis.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/dkaschek/dMod",
+      "help_website": [
+        "https://cran.r-project.org/package=dMod"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "r",
+        "systems-biology",
+        "parameter-estimation"
+      ],
+      "id": 36
+    },
+    {
+      "name": "KissABC.jl",
+      "one_line_profile": "Efficient Approximate Bayesian Computation in Julia",
+      "detailed_description": "A pure Julia implementation of Multiple Affine Invariant Sampling for efficient Approximate Bayesian Computation (ABC).",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "bayesian_inference",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/francescoalemanno/KissABC.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "abc",
+        "bayesian-inference",
+        "julia"
+      ],
+      "id": 37
+    },
+    {
+      "name": "GenSSI",
+      "one_line_profile": "Generating Series for testing Structural Identifiability",
+      "detailed_description": "A MATLAB toolbox for structural identifiability analysis of non-linear dynamic models using generating series approaches.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "identifiability_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/genssi-developer/GenSSI",
+      "help_website": [
+        "https://github.com/genssi-developer/GenSSI/wiki"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "identifiability",
+        "matlab",
+        "systems-biology"
+      ],
+      "id": 38
+    },
+    {
+      "name": "LikelihoodProfiler.jl",
+      "one_line_profile": "Identifiability analysis and confidence intervals in Julia",
+      "detailed_description": "A Julia package for practical identifiability analysis and confidence intervals estimation using profile likelihood methods.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "identifiability_analysis",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/insysbio/LikelihoodProfiler.jl",
+      "help_website": [
+        "https://insysbio.github.io/LikelihoodProfiler.jl/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "profile-likelihood",
+        "identifiability",
+        "julia"
+      ],
+      "id": 39
+    },
+    {
+      "name": "RaptorX-3DModeling",
+      "one_line_profile": "Protein structure prediction tool",
+      "detailed_description": "A tool for protein structure prediction (3D modeling), part of the RaptorX suite.",
+      "domains": [
+        "BIOINFORMATICS"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/j3xugit/RaptorX-3DModeling",
+      "help_website": [
+        "http://raptorx.uchicago.edu/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "protein-structure",
+        "bioinformatics",
+        "folding"
+      ],
+      "id": 40
+    },
+    {
+      "name": "abcpmc",
+      "one_line_profile": "Approximate Bayesian Computation Population Monte Carlo",
+      "detailed_description": "A Python implementation of Approximate Bayesian Computation (ABC) using Population Monte Carlo (PMC) for parameter inference.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "bayesian_inference",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jakeret/abcpmc",
+      "help_website": [
+        "http://abcpmc.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "abc",
+        "monte-carlo",
+        "inference"
+      ],
+      "id": 41
+    },
+    {
+      "name": "SignatureABC",
+      "one_line_profile": "Approximate Bayesian Computation (ABC) using path signatures for summary statistics",
+      "detailed_description": "A Python library implementing Approximate Bayesian Computation (ABC) where path signatures are used as summary statistics for time-series data, facilitating parameter estimation in stochastic models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "bayesian_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/joelnmdyer/SignatureABC",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "abc",
+        "path-signatures",
+        "inference"
+      ],
+      "id": 42
+    },
+    {
+      "name": "CoRC",
+      "one_line_profile": "High-level R API for the COPASI biochemical simulator",
+      "detailed_description": "The COPASI R Connector (CoRC) provides an R interface to the COPASI software, enabling biochemical network modeling, simulation, and parameter estimation directly from the R environment.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/jpahle/CoRC",
+      "help_website": [
+        "https://jpahle.github.io/CoRC/"
+      ],
+      "license": "Artistic-2.0",
+      "tags": [
+        "copasi",
+        "systems-biology",
+        "r-interface"
+      ],
+      "id": 43
+    },
+    {
+      "name": "slicedwass_abc",
+      "one_line_profile": "Sliced-Wasserstein Approximate Bayesian Computation",
+      "detailed_description": "An implementation of Approximate Bayesian Computation (ABC) utilizing the Sliced-Wasserstein distance, offering an alternative metric for likelihood-free inference in complex models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "bayesian_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kimiandj/slicedwass_abc",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "abc",
+        "wasserstein-distance",
+        "inference"
+      ],
+      "id": 44
+    },
+    {
+      "name": "sbinn",
+      "one_line_profile": "Systems-biology-informed neural networks for parameter identification",
+      "detailed_description": "A framework combining neural networks with systems biology models to perform structural identifiability analysis and parameter estimation for ordinary differential equations (ODEs).",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "identifiability_analysis",
+        "parameter_estimation",
+        "scientific_machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lu-group/sbinn",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pinn",
+        "identifiability",
+        "ode"
+      ],
+      "id": 45
+    },
+    {
+      "name": "ApproxBayes.jl",
+      "one_line_profile": "Approximate Bayesian Computation (ABC) algorithms in Julia",
+      "detailed_description": "A Julia package providing various Approximate Bayesian Computation algorithms for likelihood-free inference, suitable for parameter estimation in simulation-based models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "bayesian_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/marcjwilliams1/ApproxBayes.jl",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "abc",
+        "julia",
+        "inference"
+      ],
+      "id": 46
+    },
+    {
+      "name": "ABCdeZ.jl",
+      "one_line_profile": "ABC with differential evolution and model evidence estimation",
+      "detailed_description": "A Julia library for Approximate Bayesian Computation that incorporates differential evolution moves and provides estimates for model evidence (Z), aiding in model selection and parameter inference.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "model_selection",
+        "bayesian_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/mauricelanghinrichs/ABCdeZ.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "abc",
+        "differential-evolution",
+        "model-evidence"
+      ],
+      "id": 47
+    },
+    {
+      "name": "ABC-DLS",
+      "one_line_profile": "Deep Learning assisted Approximate Bayesian Computation",
+      "detailed_description": "A framework combining Deep Learning (TensorFlow Keras) with Sequential Monte Carlo for Approximate Bayesian Computation, aiming to improve efficiency in likelihood-free inference.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "bayesian_inference",
+        "scientific_machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mayukhmondal/ABC-DLS",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "abc",
+        "deep-learning",
+        "smc"
+      ],
+      "id": 48
+    },
+    {
+      "name": "pyABC",
+      "one_line_profile": "Distributed, likelihood-free inference (ABC-SMC)",
+      "detailed_description": "A comprehensive Python framework for distributed Approximate Bayesian Computation (ABC) using Sequential Monte Carlo (SMC), supporting massive parallelization and adaptive population strategies.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "bayesian_inference",
+        "model_selection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neuralyzer/pyabc",
+      "help_website": [
+        "https://pyabc.readthedocs.io/"
+      ],
+      "license": null,
+      "tags": [
+        "abc-smc",
+        "distributed-computing",
+        "inference"
+      ],
+      "id": 49
+    },
+    {
+      "name": "mapsTo3DModels",
+      "one_line_profile": "Workflow for converting geologic maps to 3D models using GemPy",
+      "detailed_description": "A workflow tool leveraging GemPy to construct 3D geological models directly from geologic map data, facilitating structural geology analysis and visualization.",
+      "domains": [
+        "GEOSCIENCE"
+      ],
+      "subtask_category": [
+        "geological_modeling",
+        "3d_reconstruction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/nfcd/mapsTo3DModels",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "geology",
+        "gempy",
+        "3d-modeling"
+      ],
+      "id": 50
+    },
+    {
+      "name": "3Dmodel_scripts",
+      "one_line_profile": "Scripts for automated 3D printing workflows of scientific models",
+      "detailed_description": "A collection of Python scripts used in the NIH 3D Print Exchange workflows to process and prepare scientific 3D models (e.g., molecular structures, anatomy) for 3D printing.",
+      "domains": [
+        "BIOINFORMATICS",
+        "STRUCTURAL_BIOLOGY"
+      ],
+      "subtask_category": [
+        "3d_printing_prep",
+        "molecular_visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/niaid/3Dmodel_scripts",
+      "help_website": [
+        "https://3dprint.nih.gov/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "3d-printing",
+        "nih",
+        "automation"
+      ],
+      "id": 51
+    },
+    {
+      "name": "SBML2Julia",
+      "one_line_profile": "Translator from SBML/PEtab to Julia for ODE parameter optimization",
+      "detailed_description": "A tool that translates systems biology models from SBML and PEtab formats into Julia code compatible with JuMP, enabling efficient parameter optimization of ODE models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "parameter_optimization",
+        "model_translation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/paulflang/SBML2Julia",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sbml",
+        "petab",
+        "julia-optimization"
+      ],
+      "id": 52
+    },
+    {
+      "name": "probdiffeq",
+      "one_line_profile": "Probabilistic ODE solvers in JAX",
+      "detailed_description": "A library providing probabilistic numerical solvers for differential equations using JAX, enabling calibration, uncertainty quantification, and integration with the JAX scientific computing ecosystem.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03",
+        "SCIENTIFIC_COMPUTING"
+      ],
+      "subtask_category": [
+        "ode_solver",
+        "probabilistic_numerics",
+        "uncertainty_quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pnkraemer/probdiffeq",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "jax",
+        "ode",
+        "probabilistic-numerics"
+      ],
+      "id": 53
+    },
+    {
+      "name": "SIAN",
+      "one_line_profile": "Structural Identifiability ANalyser for ODE models",
+      "detailed_description": "A software tool for assessing the structural identifiability of ordinary differential equation (ODE) models, helping researchers determine if model parameters can be uniquely estimated from data.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "identifiability_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "JetBrains MPS",
+      "repo_url": "https://github.com/pogudingleb/SIAN",
+      "help_website": [
+        "https://github.com/pogudingleb/SIAN"
+      ],
+      "license": null,
+      "tags": [
+        "identifiability",
+        "ode",
+        "symbolic-computation"
+      ],
+      "id": 54
+    },
+    {
+      "name": "Sparcle",
+      "one_line_profile": "Spatial reassignment of transcriptomic spots via profile likelihood",
+      "detailed_description": "A tool for the spatial reassignment of spots to cells in transcriptomic images using profile likelihood estimation, improving the accuracy of spatial transcriptomics data analysis.",
+      "domains": [
+        "BIOINFORMATICS",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "spatial_transcriptomics",
+        "parameter_estimation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/sandhya212/Sparcle_for_spot_reassignments",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spatial-transcriptomics",
+        "profile-likelihood",
+        "image-analysis"
+      ],
+      "id": 55
+    },
+    {
+      "name": "cabinetry",
+      "one_line_profile": "Design and steer profile likelihood fits for High Energy Physics",
+      "detailed_description": "A Python library to design and execute profile likelihood fits, primarily for High Energy Physics (HEP) analysis, managing workspace creation, fitting, and visualization of results.",
+      "domains": [
+        "PHYSICS",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "profile_likelihood",
+        "statistical_inference",
+        "model_fitting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scikit-hep/cabinetry",
+      "help_website": [
+        "https://cabinetry.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "hep",
+        "profile-likelihood",
+        "fitting"
+      ],
+      "id": 56
+    },
+    {
+      "name": "PEtab.jl",
+      "one_line_profile": "Julia interface for PEtab parameter estimation problems",
+      "detailed_description": "A Julia package to import and work with parameter estimation problems defined in the PEtab standard format, facilitating the calibration of ODE models in systems biology.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "model_calibration"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/sebapersson/PEtab.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "petab",
+        "ode",
+        "parameter-estimation"
+      ],
+      "id": 57
+    },
+    {
+      "name": "LRmix Studio",
+      "one_line_profile": "Expert system for interpretation of forensic DNA profiles",
+      "detailed_description": "An open-source expert system for interpreting complex forensic DNA mixtures using likelihood ratio models, accounting for allelic drop-out and drop-in uncertainties.",
+      "domains": [
+        "GENETICS",
+        "FORENSICS"
+      ],
+      "subtask_category": [
+        "forensic_analysis",
+        "dna_profiling",
+        "likelihood_estimation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/smartrank/lrmixstudio",
+      "help_website": [
+        "http://lrmixstudio.org/"
+      ],
+      "license": null,
+      "tags": [
+        "forensics",
+        "dna",
+        "likelihood-ratio"
+      ],
+      "id": 58
+    },
+    {
+      "name": "Spatial Model Editor",
+      "one_line_profile": "Editor and simulator for spatial bio-chemical reaction models",
+      "detailed_description": "A software tool for creating, editing, and simulating spatial bio-chemical reaction models, supporting SBML and providing visualization of reaction dynamics.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "spatial_simulation",
+        "model_editing"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/spatial-model-editor/spatial-model-editor",
+      "help_website": [
+        "https://spatial-model-editor.github.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "sbml",
+        "spatial-simulation",
+        "reaction-diffusion"
+      ],
+      "id": 59
+    },
+    {
+      "name": "AbcSmc",
+      "one_line_profile": "Sequential Monte Carlo ABC with Partial Least Squares",
+      "detailed_description": "A C implementation of Sequential Monte Carlo Approximate Bayesian Computation (ABC-SMC) utilizing Partial Least Squares (PLS) for efficient parameter estimation.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-03"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "bayesian_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/tjhladish/AbcSmc",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "abc-smc",
+        "pls",
+        "inference"
+      ],
+      "id": 60
+    },
+    {
+      "name": "procoli",
+      "one_line_profile": "Tool for extracting 1D profile likelihoods from cosmological data",
+      "detailed_description": "A tool designed to extract and analyze 1D profile likelihoods for cosmological parameters using MontePython, aiding in the statistical analysis of cosmological models.",
+      "domains": [
+        "COSMOLOGY",
+        "PHYSICS"
+      ],
+      "subtask_category": [
+        "likelihood_profiling",
+        "cosmology_inference"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/tkarwal/procoli",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cosmology",
+        "profile-likelihood",
+        "montepython"
+      ],
+      "id": 61
+    },
+    {
+      "name": "yaml2sbml",
+      "one_line_profile": "Converter for ODE models from YAML to SBML format",
+      "detailed_description": "A Python utility designed to convert Ordinary Differential Equation (ODE) models specified in a human-readable YAML format into the Systems Biology Markup Language (SBML) standard, facilitating model interoperability and usage with SBML-compliant simulation tools.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "model_conversion",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yaml2sbml-dev/yaml2sbml",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "sbml",
+        "ode",
+        "systems-biology",
+        "model-exchange"
+      ],
+      "id": 62
+    }
+  ]
+}

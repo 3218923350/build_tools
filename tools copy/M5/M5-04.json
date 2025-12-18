@@ -1,0 +1,3489 @@
+{
+  "generated_at": "2025-12-16T12:43:26.870943+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "M5",
+      "leaf_cluster_name": "材料-实验合成与表征自动化生态",
+      "domain": "Materials/Lab",
+      "typical_objects": "lab logs, spectra/images",
+      "task_chain": "采集→计划→执行→记录→复现/审计",
+      "tool_form": "LIMS/设备接口 + 闭环平台"
+    },
+    "unit": {
+      "unit_id": "M5-04",
+      "unit_name": "表征数据解析（谱/显微）",
+      "target_scale": "200–450",
+      "coverage_tools": "parsers、analysis"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] LiberTEM",
+        "[GH] Exspy",
+        "[GH] SciKit-Image",
+        "[GH] Gwyddion",
+        "[GH] Lmfit",
+        "[GH] Pyxem",
+        "[GH] Atomap",
+        "[GH] Diffpy",
+        "[GH] PyFAI",
+        "[GH] HyperSpy",
+        "[GH] spectroscopy analysis",
+        "[GH] microscopy image processing",
+        "[GH] xrd pattern analysis",
+        "[GH] raman spectrum processing",
+        "[GH] xps data parsing",
+        "[GH] afm data analysis",
+        "[GH] sem image segmentation",
+        "[GH] tem diffraction analysis",
+        "[GH] peak fitting python",
+        "[GH] rietveld refinement",
+        "[GH] hyperspectral image analysis",
+        "[GH] materials characterization tools",
+        "[GH] diffraction data reduction",
+        "[GH] eels analysis",
+        "[GH] edx spectrum analysis",
+        "[WEB] spectroscopy analysis python library github",
+        "[WEB] microscopy image analysis tools github",
+        "[WEB] xrd pattern analysis software github",
+        "[WEB] materials science data parsers github",
+        "[WEB] hyperspy extensions github",
+        "[WEB] afm data processing python github"
+      ],
+      "total_candidates": 932,
+      "tool_candidates": 366,
+      "final_tools": 133
+    }
+  },
+  "tools": [
+    {
+      "name": "emcore",
+      "one_line_profile": "Basic image processing library for Electron Microscopy",
+      "detailed_description": "A C++ library providing basic image processing capabilities specifically tailored for Electron Microscopy data, serving as a foundation for other tools in the 3dem ecosystem.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "microscopy_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/3dem/emcore",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "electron-microscopy",
+        "image-processing",
+        "cryo-em"
+      ],
+      "id": 1
+    },
+    {
+      "name": "RELION",
+      "one_line_profile": "Image-processing software for cryo-electron microscopy",
+      "detailed_description": "A premier software package for the refinement of macromolecular structures from cryo-electron microscopy (cryo-EM) data, widely used for single-particle analysis.",
+      "domains": [
+        "M5",
+        "M5-04",
+        "Bio"
+      ],
+      "subtask_category": [
+        "structure_determination",
+        "image_processing",
+        "reconstruction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/3dem/relion",
+      "help_website": [
+        "https://relion.readthedocs.io"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "cryo-em",
+        "structural-biology",
+        "image-processing"
+      ],
+      "id": 2
+    },
+    {
+      "name": "AFMReader",
+      "one_line_profile": "Library for loading various atomic force microscopy file formats",
+      "detailed_description": "A Python library designed to read and parse data from various proprietary and standard Atomic Force Microscopy (AFM) file formats, facilitating data interoperability.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "data_parsing",
+        "file_io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AFM-SPM/AFMReader",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "afm",
+        "microscopy",
+        "file-reader"
+      ],
+      "id": 3
+    },
+    {
+      "name": "TopoStats",
+      "one_line_profile": "AFM image analysis program for batch processing and statistics",
+      "detailed_description": "A Python toolkit for automated processing and statistical analysis of Atomic Force Microscopy (AFM) images, particularly useful for tracing topographic features.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "statistical_analysis",
+        "batch_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AFM-SPM/TopoStats",
+      "help_website": [
+        "https://topostats.readthedocs.io"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "afm",
+        "topology",
+        "statistics"
+      ],
+      "id": 4
+    },
+    {
+      "name": "PyJibe",
+      "one_line_profile": "GUI for AFM data analysis with an emphasis on biological specimens",
+      "detailed_description": "A graphical user interface tool for analyzing Atomic Force Microscopy data, specifically optimized for biological samples and force spectroscopy analysis.",
+      "domains": [
+        "M5",
+        "M5-04",
+        "Bio"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "visualization",
+        "gui"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AFM-analysis/PyJibe",
+      "help_website": [
+        "https://pyjibe.readthedocs.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "afm",
+        "biology",
+        "gui"
+      ],
+      "id": 5
+    },
+    {
+      "name": "afmformats",
+      "one_line_profile": "Python library for reading common AFM file formats",
+      "detailed_description": "A unified interface for reading multiple Atomic Force Microscopy file formats, providing metadata and data access in a consistent manner.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "data_parsing",
+        "file_io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AFM-analysis/afmformats",
+      "help_website": [
+        "https://afmformats.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "afm",
+        "file-formats",
+        "io"
+      ],
+      "id": 6
+    },
+    {
+      "name": "pyfairdatatools",
+      "one_line_profile": "Python library to help with making data FAIR",
+      "detailed_description": "A library developed by the AI-READI consortium to assist researchers in making their datasets Findable, Accessible, Interoperable, and Reusable (FAIR), specifically for biomedical data.",
+      "domains": [
+        "Data-Management",
+        "Bio"
+      ],
+      "subtask_category": [
+        "data_standardization",
+        "metadata_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AI-READI/pyfairdatatools",
+      "help_website": [
+        "https://pyfairdatatools.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fair-data",
+        "data-management",
+        "biomedical"
+      ],
+      "id": 7
+    },
+    {
+      "name": "ProjectAiAi",
+      "one_line_profile": "Open-source screening tool for Tuberculosis and Lung Cancer using Chest X-Rays",
+      "detailed_description": "An open-source CAD (Computer Aided Diagnosis) tool designed to interpret Chest X-rays for screening Tuberculosis and Lung Cancer, aiming for deployment in emerging nations.",
+      "domains": [
+        "Medical",
+        "Bio"
+      ],
+      "subtask_category": [
+        "medical_imaging",
+        "diagnosis",
+        "screening"
+      ],
+      "application_level": "solver",
+      "primary_language": "Dockerfile",
+      "repo_url": "https://github.com/AiAiHealthcare/ProjectAiAi",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "medical-imaging",
+        "x-ray",
+        "deep-learning"
+      ],
+      "id": 8
+    },
+    {
+      "name": "MIB",
+      "one_line_profile": "Microscopy Image Browser for multi-dimensional microscopy datasets",
+      "detailed_description": "A MATLAB-based package for image processing, segmentation, and visualization of multi-dimensional (2D-4D) microscopy datasets. (Predecessor to MIB2).",
+      "domains": [
+        "M5",
+        "M5-04",
+        "Bio"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "visualization",
+        "microscopy"
+      ],
+      "application_level": "platform",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/Ajaxels/MIB",
+      "help_website": [
+        "http://mib.helsinki.fi"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "microscopy",
+        "segmentation",
+        "matlab"
+      ],
+      "id": 9
+    },
+    {
+      "name": "MIB2",
+      "one_line_profile": "Microscopy Image Browser version 2",
+      "detailed_description": "The second version of the Microscopy Image Browser, offering advanced tools for segmentation and visualization of electron and light microscopy datasets.",
+      "domains": [
+        "M5",
+        "M5-04",
+        "Bio"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "visualization",
+        "microscopy"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/Ajaxels/MIB2",
+      "help_website": [
+        "http://mib.helsinki.fi"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "microscopy",
+        "segmentation",
+        "image-processing"
+      ],
+      "id": 10
+    },
+    {
+      "name": "SpectraFit",
+      "one_line_profile": "Tool for quick data-fitting based on distribution functions",
+      "detailed_description": "A command-line and Jupyter-compatible tool for fitting spectral data using various distribution functions, designed for materials science and chemistry applications.",
+      "domains": [
+        "M5",
+        "M5-04",
+        "Chem"
+      ],
+      "subtask_category": [
+        "spectra_fitting",
+        "data_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Anselmoo/spectrafit",
+      "help_website": [
+        "https://spectrafit.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "spectroscopy",
+        "fitting",
+        "data-analysis"
+      ],
+      "id": 11
+    },
+    {
+      "name": "automatic-sem-image-segmentation",
+      "one_line_profile": "Workflow for Simulation and Automatic Semantic Segmentation of EM Images",
+      "detailed_description": "A workflow developed by BAM for simulating Scanning Electron Microscopy (SEM) images and training models for automatic semantic segmentation of microstructures.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "simulation",
+        "sem"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/BAMresearch/automatic-sem-image-segmentation",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "sem",
+        "segmentation",
+        "simulation"
+      ],
+      "id": 12
+    },
+    {
+      "name": "fitspy",
+      "one_line_profile": "Generic tool dedicated to fit spectra in python",
+      "detailed_description": "A Python-based tool developed by CEA for fitting 1D spectra (X-ray, Raman, etc.) with a graphical interface and support for various peak models.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectra_fitting",
+        "peak_deconvolution"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CEA-MetroCarac/fitspy",
+      "help_website": [
+        "https://fitspy.readthedocs.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "spectroscopy",
+        "fitting",
+        "gui"
+      ],
+      "id": 13
+    },
+    {
+      "name": "MaterialParser",
+      "one_line_profile": "Utility to compile string of chemical terms into data structure",
+      "detailed_description": "A utility from the Ceder Group to parse chemical strings and formulas into structured data, facilitating text mining and materials informatics.",
+      "domains": [
+        "M5",
+        "Materials-Informatics"
+      ],
+      "subtask_category": [
+        "text_mining",
+        "data_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CederGroupHub/MaterialParser",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "materials-science",
+        "nlp",
+        "parsing"
+      ],
+      "id": 14
+    },
+    {
+      "name": "DataLab",
+      "one_line_profile": "Open-source Platform for Scientific and Technical Data Processing and Visualization",
+      "detailed_description": "A comprehensive platform for processing and visualizing scientific data (signals, images, spectra), offering a GUI and plugin system for extensibility.",
+      "domains": [
+        "M5",
+        "General-Science"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "visualization",
+        "signal_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DataLab-Platform/DataLab",
+      "help_website": [
+        "https://datalab-platform.com/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "data-processing",
+        "visualization",
+        "gui"
+      ],
+      "id": 15
+    },
+    {
+      "name": "Photizo",
+      "one_line_profile": "Spectroscopy analysis package",
+      "detailed_description": "A package for the analysis of spectroscopic data, developed by DendrouLab, likely for biological or chemical applications.",
+      "domains": [
+        "M5",
+        "M5-04",
+        "Bio"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/DendrouLab/Photizo",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "spectroscopy",
+        "analysis"
+      ],
+      "id": 16
+    },
+    {
+      "name": "CHIPS",
+      "one_line_profile": "Cellular and Hemodynamic Image Processing Suite",
+      "detailed_description": "A MATLAB toolbox for analyzing functional images of cells and blood vessels, primarily from two-photon microscopy data.",
+      "domains": [
+        "Bio",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "hemodynamics",
+        "microscopy"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/EIN-lab/CHIPS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "microscopy",
+        "matlab",
+        "neuroscience"
+      ],
+      "id": 17
+    },
+    {
+      "name": "ANDA",
+      "one_line_profile": "Automated image analysis of in vitro neuronal cells",
+      "detailed_description": "An open-source tool for high-throughput automated image analysis of in vitro neuronal cells, focusing on morphology and differentiation.",
+      "domains": [
+        "Bio",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "cell_morphology"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EskelandLab/ANDA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neuroscience",
+        "image-analysis",
+        "high-throughput"
+      ],
+      "id": 18
+    },
+    {
+      "name": "PyCorrFit",
+      "one_line_profile": "Data analysis and fitting software for fluorescence correlation spectroscopy (FCS)",
+      "detailed_description": "A versatile tool for fitting and analyzing Fluorescence Correlation Spectroscopy (FCS) data, supporting various model functions and file formats.",
+      "domains": [
+        "M5-04",
+        "Bio",
+        "Chem"
+      ],
+      "subtask_category": [
+        "spectroscopy_fitting",
+        "fcs_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FCS-analysis/PyCorrFit",
+      "help_website": [
+        "https://pycorrfit.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "fcs",
+        "spectroscopy",
+        "fitting"
+      ],
+      "id": 19
+    },
+    {
+      "name": "chisurf",
+      "one_line_profile": "Global analysis platform for fluorescence data",
+      "detailed_description": "A software platform for the global analysis of time-resolved fluorescence data, allowing for complex modeling and parameter estimation.",
+      "domains": [
+        "M5-04",
+        "Bio",
+        "Chem"
+      ],
+      "subtask_category": [
+        "fluorescence_analysis",
+        "time_resolved_spectroscopy"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Fluorescence-Tools/chisurf",
+      "help_website": [
+        "http://chisurf.readthedocs.io"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "fluorescence",
+        "spectroscopy",
+        "global-analysis"
+      ],
+      "id": 20
+    },
+    {
+      "name": "hsi_toolkit",
+      "one_line_profile": "GatorSense Hyperspectral Image Analysis Toolkit",
+      "detailed_description": "A MATLAB toolkit for hyperspectral image analysis, including dimensionality reduction, target detection, and classification algorithms.",
+      "domains": [
+        "Remote-Sensing",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "hyperspectral_analysis",
+        "image_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/GatorSense/hsi_toolkit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "hyperspectral",
+        "remote-sensing",
+        "matlab"
+      ],
+      "id": 21
+    },
+    {
+      "name": "hsi_toolkit_py",
+      "one_line_profile": "GatorSense Hyperspectral Image Analysis Toolkit - Python Implementation",
+      "detailed_description": "The Python implementation of the GatorSense Hyperspectral Image Analysis Toolkit, providing tools for processing HSI data.",
+      "domains": [
+        "Remote-Sensing",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "hyperspectral_analysis",
+        "image_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GatorSense/hsi_toolkit_py",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "hyperspectral",
+        "remote-sensing",
+        "python"
+      ],
+      "id": 22
+    },
+    {
+      "name": "aradeepopsis",
+      "one_line_profile": "Pipeline to extract phenotypic measurements from plant images",
+      "detailed_description": "A Nextflow pipeline for high-throughput phenotyping of Arabidopsis thaliana, extracting measurements from images for genetic analysis.",
+      "domains": [
+        "Bio",
+        "Plant-Science"
+      ],
+      "subtask_category": [
+        "phenotyping",
+        "image_analysis",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/Gregor-Mendel-Institute/aradeepopsis",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "plant-phenotyping",
+        "image-analysis",
+        "nextflow"
+      ],
+      "id": 23
+    },
+    {
+      "name": "pyChemometrics",
+      "one_line_profile": "Objects for multivariate analysis of chemometric and metabonomic datasets",
+      "detailed_description": "A Python library providing tools for chemometric analysis, including PCA, PLS-DA, and other multivariate statistical methods for chemical data.",
+      "domains": [
+        "Chem",
+        "M5"
+      ],
+      "subtask_category": [
+        "chemometrics",
+        "multivariate_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Gscorreia89/pyChemometrics",
+      "help_website": [
+        "https://pychemometrics.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "chemometrics",
+        "statistics",
+        "metabolomics"
+      ],
+      "id": 24
+    },
+    {
+      "name": "semantic-segmentation-editor",
+      "one_line_profile": "Web labeling tool for bitmap images and point clouds",
+      "detailed_description": "A web-based annotation tool for creating semantic segmentation datasets for images and point clouds, essential for training AI models in scientific and industrial applications.",
+      "domains": [
+        "General-AI",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "data_annotation",
+        "labeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/Hitachi-Automotive-And-Industry-Lab/semantic-segmentation-editor",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "annotation",
+        "segmentation",
+        "point-cloud"
+      ],
+      "id": 25
+    },
+    {
+      "name": "Cornell Spectrum Imager",
+      "one_line_profile": "Spectral imaging and EELS analysis tool for electron microscopy",
+      "detailed_description": "A software tool designed for the analysis of spectral imaging data and Electron Energy Loss Spectroscopy (EELS), facilitating the extraction of chemical and physical information from microscopy datasets.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "eels_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/Hovden/cornell-spectrum-imager",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "eels",
+        "spectral-imaging",
+        "electron-microscopy"
+      ],
+      "id": 26
+    },
+    {
+      "name": "Scipion",
+      "one_line_profile": "Image processing framework for 3D electron microscopy (3DEM)",
+      "detailed_description": "An integrative workflow platform for Cryo-Electron Microscopy (Cryo-EM) that orchestrates various software tools to obtain 3D models of macromolecular complexes.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "3d_reconstruction",
+        "workflow_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/I2PC/scipion",
+      "help_website": [
+        "http://scipion.i2pc.es/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cryo-em",
+        "3dem",
+        "workflow"
+      ],
+      "id": 27
+    },
+    {
+      "name": "Xmipp",
+      "one_line_profile": "Image processing suite for single-particle 3D electron microscopy",
+      "detailed_description": "A comprehensive suite of image processing programs specialized for single-particle analysis in 3D electron microscopy, covering steps from projection matching to reconstruction.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "single_particle_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/I2PC/xmipp3",
+      "help_website": [
+        "http://xmipp.cnb.csic.es"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "cryo-em",
+        "image-processing",
+        "single-particle"
+      ],
+      "id": 28
+    },
+    {
+      "name": "RSClassification",
+      "one_line_profile": "Framework for Raman spectroscopy data analysis and classification",
+      "detailed_description": "A Python-based framework designed for the processing and classification of Raman spectroscopy data, likely supporting various machine learning models for spectral analysis.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "classification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ISCLab-Bistu/RSClassification",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "raman-spectroscopy",
+        "classification",
+        "spectral-analysis"
+      ],
+      "id": 29
+    },
+    {
+      "name": "ImagePy",
+      "one_line_profile": "Extensible image processing framework compatible with Numpy and Scipy",
+      "detailed_description": "An open-source image processing framework written in Python, designed to be extensible via plugins (similar to ImageJ) and seamlessly integrated with the scientific Python ecosystem (Numpy, Scipy, Scikit-image).",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "plugin_framework"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Image-Py/imagepy",
+      "help_website": [
+        "http://imagepy.org"
+      ],
+      "license": "BSD-4-Clause",
+      "tags": [
+        "image-processing",
+        "microscopy",
+        "framework"
+      ],
+      "id": 30
+    },
+    {
+      "name": "DeerLab",
+      "one_line_profile": "Data analysis package for dipolar EPR spectroscopy",
+      "detailed_description": "A Python package specifically designed for the analysis of dipolar Electron Paramagnetic Resonance (EPR) spectroscopy data, providing modeling and inference tools.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "epr_spectroscopy"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JeschkeLab/DeerLab",
+      "help_website": [
+        "https://jeschkelab.github.io/DeerLab/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "epr",
+        "spectroscopy",
+        "dipolar-spectroscopy"
+      ],
+      "id": 31
+    },
+    {
+      "name": "BXA",
+      "one_line_profile": "Bayesian X-ray analysis interface for Xspec and Sherpa",
+      "detailed_description": "A tool that connects the nested sampling algorithm (MultiNest/UltraNest) with X-ray spectral fitting software (Xspec and Sherpa) for Bayesian model selection and parameter estimation.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_fitting",
+        "bayesian_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JohannesBuchner/BXA",
+      "help_website": [
+        "https://johannesbuchner.github.io/BXA/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "x-ray",
+        "bayesian",
+        "spectral-fitting"
+      ],
+      "id": 32
+    },
+    {
+      "name": "LG4X-V2",
+      "one_line_profile": "GUI for XPS curve fitting analysis based on lmfit",
+      "detailed_description": "A graphical user interface designed for X-ray Photoelectron Spectroscopy (XPS) data analysis, facilitating curve fitting and result validation using the lmfit library.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_fitting",
+        "xps_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Julian-Hochhaus/LG4X-V2",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "xps",
+        "curve-fitting",
+        "gui"
+      ],
+      "id": 33
+    },
+    {
+      "name": "lmfitxps",
+      "one_line_profile": "XPS-specific fitting models extension for lmfit",
+      "detailed_description": "A Python library that extends lmfit with specialized models for X-ray Photoelectron Spectroscopy (XPS), including Doniach-Sunjic lineshapes and Tougaard/Shirley backgrounds.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_fitting",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Julian-Hochhaus/lmfitxps",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "xps",
+        "fitting-models",
+        "spectroscopy"
+      ],
+      "id": 34
+    },
+    {
+      "name": "FOCUS",
+      "one_line_profile": "High-throughput electron microscopy image processing software",
+      "detailed_description": "A software package for connecting cryo-EM microscopes with data processing pipelines, enabling real-time monitoring and high-throughput image processing.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "pipeline_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/LBEM-CH/focus",
+      "help_website": [
+        "http://focus-em.org"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "cryo-em",
+        "automation",
+        "image-processing"
+      ],
+      "id": 35
+    },
+    {
+      "name": "LiberTEM",
+      "one_line_profile": "High-performance framework for pixelated STEM data processing",
+      "detailed_description": "An open-source platform for high-throughput processing of pixelated Scanning Transmission Electron Microscopy (STEM) data, supporting large datasets and distributed computing.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "stem_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LiberTEM/LiberTEM",
+      "help_website": [
+        "https://libertem.github.io/LiberTEM/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "stem",
+        "4d-stem",
+        "big-data"
+      ],
+      "id": 36
+    },
+    {
+      "name": "LiberTEM-blobfinder",
+      "one_line_profile": "Correlation and refinement library for LiberTEM",
+      "detailed_description": "An extension for LiberTEM providing tools for blob finding, correlation, and refinement in electron microscopy data analysis.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "feature_extraction",
+        "image_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/LiberTEM/LiberTEM-blobfinder",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "stem",
+        "blob-detection",
+        "libertem-plugin"
+      ],
+      "id": 37
+    },
+    {
+      "name": "LiberTEM-holo",
+      "one_line_profile": "Holography reconstruction tools for LiberTEM",
+      "detailed_description": "A library for electron holography reconstruction and preprocessing, designed to work within the LiberTEM ecosystem.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "reconstruction",
+        "holography"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/LiberTEM/LiberTEM-holo",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "holography",
+        "reconstruction",
+        "electron-microscopy"
+      ],
+      "id": 38
+    },
+    {
+      "name": "LiberTEM-live",
+      "one_line_profile": "Real-time processing extension for LiberTEM",
+      "detailed_description": "Enables live data processing and feedback for STEM experiments using the LiberTEM framework.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "real_time_processing",
+        "data_acquisition"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LiberTEM/LiberTEM-live",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "live-processing",
+        "stem",
+        "real-time"
+      ],
+      "id": 39
+    },
+    {
+      "name": "LumiSpy",
+      "one_line_profile": "Luminescence data analysis extension for HyperSpy",
+      "detailed_description": "A Python library extending HyperSpy for the analysis of luminescence spectroscopy data (e.g., cathodoluminescence, photoluminescence).",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "luminescence"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LumiSpy/lumispy",
+      "help_website": [
+        "https://lumispy.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "luminescence",
+        "hyperspy",
+        "spectroscopy"
+      ],
+      "id": 40
+    },
+    {
+      "name": "MIA",
+      "one_line_profile": "Microscopic Image Analyzer for particle analysis",
+      "detailed_description": "A tool for analyzing microscopic images, likely focusing on particle detection, segmentation, and statistical analysis.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "particle_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MIAnalyzer/MIA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "microscopy",
+        "image-analysis",
+        "particle-analysis"
+      ],
+      "id": 41
+    },
+    {
+      "name": "T-MIDAS",
+      "one_line_profile": "Automated batch processing tool for tissue microscopy",
+      "detailed_description": "A software tool designed for the automated batch processing and analysis of tissue microscopy image data.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "batch_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MercaderLabAnatomy/T-MIDAS",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "microscopy",
+        "automation",
+        "tissue-analysis"
+      ],
+      "id": 42
+    },
+    {
+      "name": "napari-tmidas",
+      "one_line_profile": "Napari plugin for T-MIDAS batch processing",
+      "detailed_description": "A plugin for the Napari image viewer that integrates T-MIDAS functionality, enabling batch processing of microscopy data within the Napari ecosystem.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "workflow_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MercaderLabAnatomy/napari-tmidas",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "napari-plugin",
+        "microscopy",
+        "batch-processing"
+      ],
+      "id": 43
+    },
+    {
+      "name": "spectramap",
+      "one_line_profile": "Library for hyperspectral analysis with spectroscopic focus",
+      "detailed_description": "A Python library designed for hyperspectral data analysis, emphasizing a spectroscopic approach to processing and interpretation.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "hyperspectral_imaging"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MicroscopeMaestro/spectramap",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "hyperspectral",
+        "spectroscopy",
+        "mapping"
+      ],
+      "id": 44
+    },
+    {
+      "name": "raman-fitting",
+      "one_line_profile": "Framework for batch processing and deconvolution of Raman spectra",
+      "detailed_description": "A Python framework specifically for the batch processing, fitting, and deconvolution of Raman spectra, with a focus on carbonaceous materials.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_fitting",
+        "deconvolution"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MyPyDavid/raman-fitting",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "raman",
+        "fitting",
+        "spectroscopy"
+      ],
+      "id": 45
+    },
+    {
+      "name": "Pore Space Architecture",
+      "one_line_profile": "MATLAB tool for 3D pore space segmentation and analysis",
+      "detailed_description": "A MATLAB-based tool for the segmentation and characterization of pore spaces in particulate materials, providing 3D structural insights.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "pore_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/Nimisha-Roy/Pore_Space_Architecture",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "porous-media",
+        "segmentation",
+        "matlab"
+      ],
+      "id": 46
+    },
+    {
+      "name": "OXSA",
+      "one_line_profile": "Toolbox for MR spectroscopy data analysis pipelines",
+      "detailed_description": "A MATLAB toolbox for developing analysis pipelines for Magnetic Resonance Spectroscopy (MRS) data, including loading, fitting, and processing functions.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "mrs_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/OXSAtoolbox/OXSA",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "mrs",
+        "spectroscopy",
+        "pipeline"
+      ],
+      "id": 47
+    },
+    {
+      "name": "Tetracorder",
+      "one_line_profile": "Spectral identification and radiative transfer software",
+      "detailed_description": "A software system for the identification and mapping of materials using spectroscopic data, often used in planetary science and remote sensing.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_identification",
+        "radiative_transfer"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/PSI-edu/spectroscopy-tetracorder",
+      "help_website": [
+        "https://github.com/PSI-edu/spectroscopy-tetracorder"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "spectroscopy",
+        "remote-sensing",
+        "material-identification"
+      ],
+      "id": 48
+    },
+    {
+      "name": "TEMUL",
+      "one_line_profile": "Analysis functions for high-resolution electron microscopy and spectroscopy",
+      "detailed_description": "A Python library providing functions for the analysis of Transmission Electron Microscopy (TEM) and Electron Energy Loss Spectroscopy (EELS) data.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "spectral_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PinkShnack/TEMUL",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "tem",
+        "eels",
+        "microscopy"
+      ],
+      "id": 49
+    },
+    {
+      "name": "SpectroscoPyx",
+      "one_line_profile": "Community developed Python package for plasma spectroscopy",
+      "detailed_description": "A Python package designed for spectroscopy analysis, likely with a focus on plasma physics applications as part of the PlasmaPy ecosystem.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "plasma_physics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PlasmaPy/SpectroscoPyx",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "spectroscopy",
+        "plasma-physics",
+        "python"
+      ],
+      "id": 50
+    },
+    {
+      "name": "PyXRD",
+      "one_line_profile": "Python implementation for modeling X-ray diffraction (XRD) patterns of disordered lamellar structures",
+      "detailed_description": "PyXRD is a Python library implementing the matrix algorithm for computer modeling of X-ray diffraction (XRD) patterns, specifically designed for disordered lamellar structures. It allows researchers to simulate and analyze complex XRD data for materials characterization.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "xrd_modeling",
+        "pattern_simulation",
+        "structure_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PyXRD/PyXRD",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "xrd",
+        "diffraction",
+        "materials-science",
+        "lamellar-structures"
+      ],
+      "id": 51
+    },
+    {
+      "name": "seaborn-image",
+      "one_line_profile": "High-level API for attractive and descriptive image visualization in Python",
+      "detailed_description": "Seaborn-image is a Python library that provides a high-level API for scientific image visualization. It is built on top of matplotlib and focuses on providing descriptive and attractive visualizations for 2D image data, common in microscopy and spectroscopy.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_visualization",
+        "data_plotting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SarthakJariwala/seaborn-image",
+      "help_website": [
+        "https://seaborn-image.sarthakjariwala.com"
+      ],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "image-processing",
+        "scientific-plotting"
+      ],
+      "id": 52
+    },
+    {
+      "name": "skultrafast",
+      "one_line_profile": "Python toolbox for analyzing time-resolved spectroscopy data",
+      "detailed_description": "Skultrafast is a Python package designed for the analysis of time-resolved spectroscopy data. It provides tools for data loading, preprocessing, and advanced analysis such as global analysis and lifetime density analysis.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "time_resolved_analysis",
+        "global_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Tillsten/skultrafast",
+      "help_website": [
+        "https://skultrafast.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "spectroscopy",
+        "time-resolved",
+        "data-analysis"
+      ],
+      "id": 53
+    },
+    {
+      "name": "Vespucci",
+      "one_line_profile": "Cross-platform software for spectroscopic data analysis and imaging",
+      "detailed_description": "Vespucci is a free, open-source, cross-platform application for analyzing spectroscopic data and generating chemical images. It supports various hyperspectral data formats and provides tools for univariate and multivariate analysis.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "hyperspectral_imaging",
+        "chemical_mapping"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/VespucciProject/Vespucci",
+      "help_website": [
+        "http://www.vespucciproject.org"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "spectroscopy",
+        "hyperspectral",
+        "imaging",
+        "chemometrics"
+      ],
+      "id": 54
+    },
+    {
+      "name": "XRDpy",
+      "one_line_profile": "Tool for X-Ray Diffraction (XRD) pattern visualization and crystallite size calculation",
+      "detailed_description": "XRDpy is a Python program designed for the quick visualization of X-Ray Diffraction (XRD) patterns. It includes functionality for calculating crystallite size using the Scherrer equation, aiding in the structural characterization of materials.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "xrd_visualization",
+        "crystallite_size_calculation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/andrewrgarcia/XRDpy",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "xrd",
+        "visualization",
+        "scherrer-equation"
+      ],
+      "id": 55
+    },
+    {
+      "name": "powerxrd",
+      "one_line_profile": "Python package for analyzing powder X-ray diffraction data with Rietveld refinement capabilities",
+      "detailed_description": "powerxrd is a Python package built for the analysis of powder X-ray diffraction (XRD) data. It provides tools for data processing and is developing Rietveld refinement methods for structural analysis of materials.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "xrd_analysis",
+        "rietveld_refinement",
+        "powder_diffraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/andrewrgarcia/powerxrd",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "xrd",
+        "powder-diffraction",
+        "rietveld-refinement"
+      ],
+      "id": 56
+    },
+    {
+      "name": "RamanSPy",
+      "one_line_profile": "Open-source Python package for integrative Raman spectroscopy data analysis",
+      "detailed_description": "RamanSPy is a comprehensive Python package for the analysis of Raman spectroscopy data. It offers a modular framework for preprocessing, processing, and analyzing Raman spectra and hyperspectral images, facilitating integrative research.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "raman_spectroscopy",
+        "spectral_analysis",
+        "hyperspectral_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/barahona-research-group/RamanSPy",
+      "help_website": [
+        "https://ramanspy.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "raman",
+        "spectroscopy",
+        "data-analysis"
+      ],
+      "id": 57
+    },
+    {
+      "name": "maskSLIC",
+      "one_line_profile": "Implementation of Simple Linear Iterative Clustering (SLIC) for Region of Interest (ROI) segmentation",
+      "detailed_description": "maskSLIC provides an implementation of the SLIC superpixel algorithm specifically adapted for regions of interest (ROI). This tool is useful for image segmentation tasks in scientific imaging where processing needs to be constrained to specific areas.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "superpixel_segmentation",
+        "roi_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/benjaminirving/maskSLIC",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "segmentation",
+        "slic",
+        "computer-vision"
+      ],
+      "id": 58
+    },
+    {
+      "name": "DPR-Resolution_enhancement",
+      "one_line_profile": "Resolution enhancement algorithm using Deblurring by Pixel Reassignment (DPR)",
+      "detailed_description": "This repository implements the Deblurring by Pixel Reassignment (DPR) algorithm for resolution enhancement in microscopy. It is designed to improve image clarity and resolution by reassigning pixels to correct for blur, applicable in computational optics and microscopy.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_enhancement",
+        "deblurring",
+        "microscopy_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/biomicroscopy/DPR-Resolution_enhancement_with_deblurring_by_pixel_reassignment",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "microscopy",
+        "super-resolution",
+        "deblurring"
+      ],
+      "id": 59
+    },
+    {
+      "name": "ChemoSpec",
+      "one_line_profile": "R package for chemometric analysis of spectroscopic data",
+      "detailed_description": "ChemoSpec is a collection of R functions for the chemometric analysis of spectroscopic data. It includes tools for plotting spectra, performing PCA, HCA, and other exploratory data analysis techniques commonly used in spectroscopy.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "chemometrics",
+        "exploratory_data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/bryanhanson/ChemoSpec",
+      "help_website": [
+        "https://bryanhanson.github.io/ChemoSpec/"
+      ],
+      "license": null,
+      "tags": [
+        "chemometrics",
+        "spectroscopy",
+        "r-package"
+      ],
+      "id": 60
+    },
+    {
+      "name": "HT-tools",
+      "one_line_profile": "Software tools for high-throughput characterization of materials libraries",
+      "detailed_description": "The complete software tools for high-throughput characterization of materials libraries in experimental material science, facilitating automated data analysis.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "high_throughput_characterization",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bxiao5050/HT-tools",
+      "help_website": [
+        "https://github.com/bxiao5050/HT-tools"
+      ],
+      "license": "MIT",
+      "tags": [
+        "high-throughput",
+        "materials-science",
+        "characterization"
+      ],
+      "id": 61
+    },
+    {
+      "name": "rampy",
+      "one_line_profile": "Python library for processing spectroscopic data (IR, Raman, XAS)",
+      "detailed_description": "Python software for spectral data processing including IR, Raman, and XAS data, offering tools for baseline correction, smoothing, and peak fitting.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_processing",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/charlesll/rampy",
+      "help_website": [
+        "https://github.com/charlesll/rampy"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "spectroscopy",
+        "raman",
+        "ir",
+        "xas"
+      ],
+      "id": 62
+    },
+    {
+      "name": "Gwyddion",
+      "one_line_profile": "Modular software for scanning probe microscopy data visualization and analysis",
+      "detailed_description": "A modular program for SPM (scanning probe microscopy) data visualization and analysis. Primarily intended for analysis of height fields obtained by scanning probe microscopy techniques (AFM, MFM, STM, SNOM/NSOM).",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "microscopy_analysis",
+        "spm_analysis",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "C",
+      "repo_url": "https://github.com/christian-sahlmann/gwyddion",
+      "help_website": [
+        "http://gwyddion.net/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "spm",
+        "afm",
+        "microscopy",
+        "data-analysis"
+      ],
+      "id": 63
+    },
+    {
+      "name": "PyARPES",
+      "one_line_profile": "Analysis framework for Angle-Resolved Photoemission Spectroscopy (ARPES)",
+      "detailed_description": "Open source analysis framework for Angle-Resolved Photoemission Spectroscopy (ARPES) data, providing tools for data loading, processing, and visualization.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "arpes"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chstan/arpes",
+      "help_website": [
+        "https://github.com/chstan/arpes"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "arpes",
+        "spectroscopy",
+        "physics"
+      ],
+      "id": 64
+    },
+    {
+      "name": "OCTAVVS",
+      "one_line_profile": "Toolbox for analysis and visualization of vibrational spectroscopy data",
+      "detailed_description": "Open Chemometrics Toolbox for Analysis and Visualization of Vibrational Spectroscopy data. A graphical tool for processing IR and Raman spectra.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "chemometrics"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ctroein/octavvs",
+      "help_website": [
+        "https://github.com/ctroein/octavvs"
+      ],
+      "license": "MIT",
+      "tags": [
+        "spectroscopy",
+        "chemometrics",
+        "gui"
+      ],
+      "id": 65
+    },
+    {
+      "name": "diffpy.pdffit2",
+      "one_line_profile": "Real space structure refinement to atomic Pair Distribution Function (PDF)",
+      "detailed_description": "A component of the DiffPy suite for real space structure refinement to atomic Pair Distribution Function (PDF).",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "structure_refinement",
+        "pdf_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/diffpy/diffpy.pdffit2",
+      "help_website": [
+        "https://www.diffpy.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "crystallography",
+        "pdf",
+        "structure-refinement"
+      ],
+      "id": 66
+    },
+    {
+      "name": "diffpy.pdfgui",
+      "one_line_profile": "GUI for real space structure refinement to PDF",
+      "detailed_description": "Graphical user interface for real space structure refinement to atomic Pair Distribution Function (PDF), part of the DiffPy suite.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "structure_refinement",
+        "pdf_analysis",
+        "gui"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/diffpy/diffpy.pdfgui",
+      "help_website": [
+        "https://www.diffpy.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "gui",
+        "pdf",
+        "crystallography"
+      ],
+      "id": 67
+    },
+    {
+      "name": "diffpy.srfit",
+      "one_line_profile": "Framework for complex modeling and atomic structure optimization",
+      "detailed_description": "Python framework for complex modeling and atomic structure optimization, allowing for flexible definition of refinement problems.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "modeling",
+        "optimization",
+        "structure_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/diffpy/diffpy.srfit",
+      "help_website": [
+        "https://www.diffpy.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "modeling",
+        "optimization",
+        "diffpy"
+      ],
+      "id": 68
+    },
+    {
+      "name": "diffpy.srreal",
+      "one_line_profile": "Library for PDF calculation and real-space utilities",
+      "detailed_description": "C++/Python library for Pair Distribution Function (PDF) calculation and various real-space structure analysis utilities.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "pdf_calculation",
+        "structure_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/diffpy/diffpy.srreal",
+      "help_website": [
+        "https://www.diffpy.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "pdf",
+        "simulation",
+        "diffpy"
+      ],
+      "id": 69
+    },
+    {
+      "name": "diffpy.structure",
+      "one_line_profile": "Crystal structure container and parsers",
+      "detailed_description": "Library providing crystal structure containers and parsers for various structure formats, used within the DiffPy ecosystem.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "data_parsing",
+        "structure_handling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/diffpy/diffpy.structure",
+      "help_website": [
+        "https://www.diffpy.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "crystallography",
+        "parsing",
+        "file-formats"
+      ],
+      "id": 70
+    },
+    {
+      "name": "diffpy.utils",
+      "one_line_profile": "Shared utilities for the DiffPy ecosystem",
+      "detailed_description": "General purpose shared utilities and helper functions used across the DiffPy suite of tools.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "utility",
+        "infrastructure"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/diffpy/diffpy.utils",
+      "help_website": [
+        "https://www.diffpy.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "utils",
+        "diffpy"
+      ],
+      "id": 71
+    },
+    {
+      "name": "libdiffpy",
+      "one_line_profile": "Core C++ library for DiffPy",
+      "detailed_description": "Underlying C++ library for calculation of PDF and other real-space quantities, serving as the computational backend for DiffPy tools.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "computation",
+        "pdf_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/diffpy/libdiffpy",
+      "help_website": [
+        "https://www.diffpy.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "cpp",
+        "backend",
+        "diffpy"
+      ],
+      "id": 72
+    },
+    {
+      "name": "gpa",
+      "one_line_profile": "Geometrical Phase Analysis extension for HyperSpy",
+      "detailed_description": "A HyperSpy extension for performing Geometrical Phase Analysis (GPA) on microscopy images to map strain and lattice distortions.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "microscopy_analysis",
+        "strain_mapping"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ericpre/gpa",
+      "help_website": [
+        "https://github.com/ericpre/gpa"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "hyperspy",
+        "microscopy",
+        "gpa"
+      ],
+      "id": 73
+    },
+    {
+      "name": "faim-ipa",
+      "one_line_profile": "Image Processing and Analysis functions for microscopy",
+      "detailed_description": "A collection of Image Processing and Analysis (IPA) functions used at the Facility for Advanced Imaging and Microscopy (FAIM), providing reusable tools for microscopy data.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "microscopy_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fmi-faim/faim-ipa",
+      "help_website": [
+        "https://github.com/fmi-faim/faim-ipa"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "microscopy",
+        "image-analysis",
+        "faim"
+      ],
+      "id": 74
+    },
+    {
+      "name": "pyglotaran",
+      "one_line_profile": "Global and Target Analysis of time-resolved spectroscopy data",
+      "detailed_description": "A Python library for Global and Target Analysis of time-resolved spectroscopy data, enabling kinetic modeling of spectral evolution.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "kinetic_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/glotaran/pyglotaran",
+      "help_website": [
+        "https://pyglotaran.readthedocs.io/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "spectroscopy",
+        "time-resolved",
+        "global-analysis"
+      ],
+      "id": 75
+    },
+    {
+      "name": "napari-skimage",
+      "one_line_profile": "Napari plugin for scikit-image functions",
+      "detailed_description": "A napari plugin that provides access to various scikit-image image processing functions directly within the napari viewer.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "microscopy_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/guiwitz/napari-skimage",
+      "help_website": [
+        "https://github.com/guiwitz/napari-skimage"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "napari",
+        "scikit-image",
+        "plugin"
+      ],
+      "id": 76
+    },
+    {
+      "name": "napari-skimage-regionprops",
+      "one_line_profile": "Feature extraction for labeled objects in napari",
+      "detailed_description": "A napari plugin for feature extraction of labeled objects (e.g., particles, grains) using regionprops from scikit-image, useful for quantitative microscopy.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "feature_extraction",
+        "quantification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haesleinhuepf/napari-skimage-regionprops",
+      "help_website": [
+        "https://github.com/haesleinhuepf/napari-skimage-regionprops"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "napari",
+        "feature-extraction",
+        "microscopy"
+      ],
+      "id": 77
+    },
+    {
+      "name": "PeakFit",
+      "one_line_profile": "MATLAB-based peak-fitting tool for spectroscopic data",
+      "detailed_description": "A peak-fitting tool based on MATLAB for spectroscopic data analysis, allowing for deconvolution and parameter extraction from spectra.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "peak_fitting"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/heriantolim/PeakFit",
+      "help_website": [
+        "https://github.com/heriantolim/PeakFit"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "spectroscopy",
+        "peak-fitting",
+        "matlab"
+      ],
+      "id": 78
+    },
+    {
+      "name": "Symbolfit",
+      "one_line_profile": "Automatic parametric modeling with symbolic regression",
+      "detailed_description": "A Python library for performing symbolic regression to find mathematical expressions that best fit a given dataset. It is useful for discovering physical laws or material properties from experimental data.",
+      "domains": [
+        "M5",
+        "M5-04",
+        "Scientific_Modeling"
+      ],
+      "subtask_category": [
+        "modeling",
+        "regression",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hftsoi/symbolfit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "symbolic-regression",
+        "curve-fitting",
+        "modeling"
+      ],
+      "id": 79
+    },
+    {
+      "name": "LG4X",
+      "one_line_profile": "GUI for XPS curve fitting analysis based on lmfit",
+      "detailed_description": "A graphical user interface developed for standard X-ray photoemission spectroscopy (XPS) curve fitting analysis. It streamlines fitting procedures, result validation, and consistency checks using the lmfit package.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "curve_fitting",
+        "xps"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hidecode221b/LG4X",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "xps",
+        "spectroscopy",
+        "gui",
+        "fitting"
+      ],
+      "id": 80
+    },
+    {
+      "name": "Open Potato",
+      "one_line_profile": "Analysis platform for functional near-infrared spectroscopy (fNIRS)",
+      "detailed_description": "An open platform providing transparent analysis tools for functional near-infrared spectroscopy (fNIRS) data, facilitating the processing and interpretation of hemodynamic signals.",
+      "domains": [
+        "M5-04",
+        "Biomedical_Imaging"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "signal_processing"
+      ],
+      "application_level": "platform",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/hkwgc/open-potato",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "fnirs",
+        "spectroscopy",
+        "matlab"
+      ],
+      "id": 81
+    },
+    {
+      "name": "ExSpy",
+      "one_line_profile": "EDS and EELS data analysis extension for HyperSpy",
+      "detailed_description": "A HyperSpy extension dedicated to the analysis of Energy-Dispersive X-ray Spectroscopy (EDS) and Electron Energy-Loss Spectroscopy (EELS) data in electron microscopy.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "microscopy_analysis",
+        "eds",
+        "eels"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hyperspy/exspy",
+      "help_website": [
+        "https://hyperspy.org/exspy"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "electron-microscopy",
+        "eds",
+        "eels",
+        "hyperspy"
+      ],
+      "id": 82
+    },
+    {
+      "name": "HoloSpy",
+      "one_line_profile": "Electron holography data analysis extension for HyperSpy",
+      "detailed_description": "A HyperSpy extension for processing and reconstructing electron holography data, enabling phase retrieval and analysis in transmission electron microscopy.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "microscopy_analysis",
+        "holography",
+        "image_reconstruction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hyperspy/holospy",
+      "help_website": [
+        "https://hyperspy.org/holospy"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "electron-holography",
+        "microscopy",
+        "hyperspy"
+      ],
+      "id": 83
+    },
+    {
+      "name": "HyperSpy",
+      "one_line_profile": "Multidimensional data analysis library for microscopy and spectroscopy",
+      "detailed_description": "A leading open-source Python library for the analysis of multidimensional datasets, particularly suited for electron microscopy (EM) and spectroscopy data processing, visualization, and quantification.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "spectroscopy_analysis",
+        "microscopy_analysis",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hyperspy/hyperspy",
+      "help_website": [
+        "https://hyperspy.org"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "microscopy",
+        "spectroscopy",
+        "multidimensional-data",
+        "data-analysis"
+      ],
+      "id": 84
+    },
+    {
+      "name": "HyperSpyUI",
+      "one_line_profile": "Graphical user interface for the HyperSpy library",
+      "detailed_description": "A standalone graphical user interface wrapper for HyperSpy, allowing users to perform multidimensional data analysis without writing code.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "visualization"
+      ],
+      "application_level": "application",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hyperspy/hyperspyUI",
+      "help_website": [
+        "https://hyperspy.org/hyperspyUI"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "gui",
+        "hyperspy",
+        "microscopy"
+      ],
+      "id": 85
+    },
+    {
+      "name": "RosettaSciIO",
+      "one_line_profile": "Scientific data format I/O library",
+      "detailed_description": "A Python library designed to handle reading and writing of various scientific data formats, serving as the I/O backend for the HyperSpy ecosystem.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "data_parsing",
+        "io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hyperspy/rosettasciio",
+      "help_website": [
+        "https://hyperspy.org/rosettasciio"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "file-formats",
+        "io",
+        "microscopy"
+      ],
+      "id": 86
+    },
+    {
+      "name": "PSFEstimation",
+      "one_line_profile": "Spatially-variant CNN-based Point Spread Function estimation",
+      "detailed_description": "A PyTorch implementation for estimating spatially-variant Point Spread Functions (PSF) in optical microscopy, essential for blind deconvolution and depth estimation tasks.",
+      "domains": [
+        "M5-04",
+        "Microscopy"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "psf_estimation",
+        "deconvolution"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/idiap/psfestimation",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "microscopy",
+        "deep-learning",
+        "psf",
+        "deconvolution"
+      ],
+      "id": 87
+    },
+    {
+      "name": "DARA",
+      "one_line_profile": "Data-driven automated Rietveld analysis for powder XRD",
+      "detailed_description": "A tool for automated phase search and Rietveld refinement of powder X-ray diffraction (XRD) data, utilizing data-driven approaches to streamline structural analysis.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "xrd_analysis",
+        "rietveld_refinement",
+        "phase_identification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/idocx/dara",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "xrd",
+        "rietveld",
+        "crystallography"
+      ],
+      "id": 88
+    },
+    {
+      "name": "MultiSpec",
+      "one_line_profile": "Multispectral and hyperspectral image data analysis application",
+      "detailed_description": "A comprehensive freeware application for interactively analyzing Earth observational multispectral and hyperspectral image data, widely used in remote sensing education and research.",
+      "domains": [
+        "Remote_Sensing",
+        "Spectroscopy"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "hyperspectral_analysis",
+        "classification"
+      ],
+      "application_level": "application",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/larrybiehl/MultiSpec",
+      "help_website": [
+        "https://engineering.purdue.edu/~biehl/MultiSpec/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "remote-sensing",
+        "hyperspectral",
+        "image-analysis"
+      ],
+      "id": 89
+    },
+    {
+      "name": "PySpecTools",
+      "one_line_profile": "Routines for rotational spectroscopy analysis",
+      "detailed_description": "A Python library providing routines and tools for the analysis of rotational spectroscopy data, including fitting and spectral prediction.",
+      "domains": [
+        "M5",
+        "M5-04",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "rotational_spectroscopy"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/laserkelvin/PySpecTools",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spectroscopy",
+        "rotational-spectroscopy",
+        "chemistry"
+      ],
+      "id": 90
+    },
+    {
+      "name": "LMFIT",
+      "one_line_profile": "Non-Linear Least-Squares Minimization and Curve-Fitting",
+      "detailed_description": "A robust Python library for non-linear least-squares minimization and curve fitting, building on scipy.optimize to provide a high-level interface for complex modeling tasks in science.",
+      "domains": [
+        "M5",
+        "M5-04",
+        "General_Science"
+      ],
+      "subtask_category": [
+        "curve_fitting",
+        "optimization",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lmfit/lmfit-py",
+      "help_website": [
+        "https://lmfit.github.io/lmfit-py/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "fitting",
+        "optimization",
+        "least-squares"
+      ],
+      "id": 91
+    },
+    {
+      "name": "Chemometrics",
+      "one_line_profile": "Python library for chemometric data analysis",
+      "detailed_description": "A library providing tools for chemometric analysis, including multivariate statistical methods often used in spectroscopy and analytical chemistry.",
+      "domains": [
+        "M5",
+        "M5-04",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "chemometrics",
+        "data_analysis",
+        "multivariate_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/maruedt/chemometrics",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "chemometrics",
+        "spectroscopy",
+        "statistics"
+      ],
+      "id": 92
+    },
+    {
+      "name": "NASA-gamma",
+      "one_line_profile": "Gamma-ray spectroscopy analysis tools with GUI",
+      "detailed_description": "A Python-based tool with a Graphical User Interface for analyzing gamma-ray spectroscopy data, facilitating peak detection and spectrum analysis.",
+      "domains": [
+        "M5-04",
+        "Physics"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "gamma_ray"
+      ],
+      "application_level": "application",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mauricioAyllon/NASA-gamma",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gamma-ray",
+        "spectroscopy",
+        "gui"
+      ],
+      "id": 93
+    },
+    {
+      "name": "Pyfaidx",
+      "one_line_profile": "Efficient random access to FASTA subsequences",
+      "detailed_description": "A Python library that provides efficient, pythonic random access to subsequences in FASTA files, widely used in bioinformatics for genomic data processing.",
+      "domains": [
+        "Bioinformatics"
+      ],
+      "subtask_category": [
+        "data_parsing",
+        "sequence_handling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mdshw5/pyfaidx",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "bioinformatics",
+        "fasta",
+        "genomics"
+      ],
+      "id": 94
+    },
+    {
+      "name": "cupyimg",
+      "one_line_profile": "GPU-accelerated image and signal processing library for scientific data",
+      "detailed_description": "CuPy implementations of image and signal processing functions from NumPy, SciPy and scikit-image, enabling accelerated analysis of microscopy and spectroscopy data.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "signal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mritools/cupyimg",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "gpu",
+        "image-processing",
+        "cupy",
+        "acceleration"
+      ],
+      "id": 95
+    },
+    {
+      "name": "ADDIE",
+      "one_line_profile": "GUI for reduction of Neutron Time-of-Flight Total Scattering Diffraction Data",
+      "detailed_description": "Advanced Diffraction Environment (ADDIE) is a software tool designed for the reduction and analysis of neutron diffraction data, specifically for total scattering experiments.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "data_reduction",
+        "diffraction_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neutrons/addie",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "neutron-scattering",
+        "diffraction",
+        "data-reduction",
+        "gui"
+      ],
+      "id": 96
+    },
+    {
+      "name": "lsmquant",
+      "one_line_profile": "Pipeline for processing and analysis of light-sheet microscopy images",
+      "detailed_description": "A Nextflow pipeline for the automated processing and quantification of light-sheet microscopy data, facilitating high-throughput bioimaging analysis.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "microscopy_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/lsmquant",
+      "help_website": [
+        "https://nf-co.re/lsmquant"
+      ],
+      "license": "MIT",
+      "tags": [
+        "microscopy",
+        "light-sheet",
+        "pipeline",
+        "nf-core"
+      ],
+      "id": 97
+    },
+    {
+      "name": "mcmicro",
+      "one_line_profile": "End-to-end processing pipeline for multi-channel whole-slide images",
+      "detailed_description": "A scalable pipeline that transforms multi-channel whole-slide microscopy images into single-cell data, supporting segmentation and feature extraction.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "single_cell_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/mcmicro",
+      "help_website": [
+        "https://mcmicro.org"
+      ],
+      "license": "MIT",
+      "tags": [
+        "microscopy",
+        "whole-slide-imaging",
+        "pipeline",
+        "segmentation"
+      ],
+      "id": 98
+    },
+    {
+      "name": "spatialvi",
+      "one_line_profile": "Pipeline for processing spatially-resolved gene counts and image data",
+      "detailed_description": "A bioinformatics pipeline designed for 10x Genomics Visium transcriptomics, integrating spatial coordinates with image data processing.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spatial_transcriptomics",
+        "image_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/spatialvi",
+      "help_website": [
+        "https://nf-co.re/spatialvi"
+      ],
+      "license": "MIT",
+      "tags": [
+        "spatial-transcriptomics",
+        "visium",
+        "pipeline",
+        "image-processing"
+      ],
+      "id": 99
+    },
+    {
+      "name": "eels-analysis",
+      "one_line_profile": "Nion Swift package for Electron Energy Loss Spectroscopy (EELS) analysis",
+      "detailed_description": "A Python package integrated with Nion Swift for processing and analyzing EELS data from electron microscopes.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "eels"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nion-software/eels-analysis",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "eels",
+        "microscopy",
+        "spectroscopy",
+        "nion-swift"
+      ],
+      "id": 100
+    },
+    {
+      "name": "PulsePortraiture",
+      "one_line_profile": "Wideband pulsar timing code for phase and dispersion measure",
+      "detailed_description": "A Python-based tool for pulsar timing analysis, capable of simultaneously measuring phase (TOA) and dispersion measure (DM) using wideband data.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "signal_analysis",
+        "astrophysics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pennucci/PulsePortraiture",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "pulsar",
+        "signal-processing",
+        "astronomy",
+        "timing"
+      ],
+      "id": 101
+    },
+    {
+      "name": "phasorpy",
+      "one_line_profile": "Library for analysis of luminescence lifetime and hyperspectral images",
+      "detailed_description": "An open-source Python library implementing the phasor approach for analyzing fluorescence lifetime imaging microscopy (FLIM) and hyperspectral data.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "hyperspectral_analysis",
+        "flim"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/phasorpy/phasorpy",
+      "help_website": [
+        "https://phasorpy.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "phasor",
+        "flim",
+        "hyperspectral",
+        "luminescence"
+      ],
+      "id": 102
+    },
+    {
+      "name": "pytorch_radon",
+      "one_line_profile": "PyTorch implementation of Radon transform for tomography",
+      "detailed_description": "A PyTorch library providing differentiable implementations of the Radon transform, essential for tomographic reconstruction in medical and materials imaging.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "tomography",
+        "image_reconstruction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/phernst/pytorch_radon",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "radon-transform",
+        "tomography",
+        "pytorch",
+        "reconstruction"
+      ],
+      "id": 103
+    },
+    {
+      "name": "Temwizard",
+      "one_line_profile": "Visualization tool for Atomap TEM analysis results",
+      "detailed_description": "A software tool for visualizing atomic column positions and features in transmission electron microscopy images, designed to work with Atomap.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "microscopy_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pnnl/Temwizard",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "tem",
+        "visualization",
+        "atomap",
+        "microscopy"
+      ],
+      "id": 104
+    },
+    {
+      "name": "nmrfit",
+      "one_line_profile": "Quantitative NMR analysis through least-squares fit",
+      "detailed_description": "A Python tool for the quantitative analysis of Nuclear Magnetic Resonance (NMR) spectroscopy data using least-squares fitting techniques.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "nmr"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pnnl/nmrfit",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "nmr",
+        "spectroscopy",
+        "fitting",
+        "quantification"
+      ],
+      "id": 105
+    },
+    {
+      "name": "sigma",
+      "one_line_profile": "Phase identification and spectrum analysis for EDS",
+      "detailed_description": "Python code for analyzing Energy Dispersive X-ray Spectroscopy (EDS) data, including phase identification and spectrum processing.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "eds"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/poyentung/sigma",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "eds",
+        "spectroscopy",
+        "phase-identification",
+        "materials-science"
+      ],
+      "id": 106
+    },
+    {
+      "name": "pycroscopy",
+      "one_line_profile": "Scientific analysis of nanoscale materials imaging data",
+      "detailed_description": "A Python library for processing, analyzing, and visualizing multi-dimensional scientific imaging and spectroscopy data, particularly for nanoscale materials.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "spectroscopy_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/pycroscopy/pycroscopy",
+      "help_website": [
+        "https://pycroscopy.github.io/pycroscopy/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "microscopy",
+        "spectroscopy",
+        "materials-science",
+        "multidimensional-data"
+      ],
+      "id": 107
+    },
+    {
+      "name": "kikuchipy",
+      "one_line_profile": "Toolbox for analysis of electron backscatter diffraction (EBSD) patterns",
+      "detailed_description": "An open-source Python library for processing and analyzing Electron Backscatter Diffraction (EBSD) patterns in scanning electron microscopy.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "diffraction_analysis",
+        "ebsd"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pyxem/kikuchipy",
+      "help_website": [
+        "https://kikuchipy.org"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "ebsd",
+        "diffraction",
+        "microscopy",
+        "crystallography"
+      ],
+      "id": 108
+    },
+    {
+      "name": "pyxem",
+      "one_line_profile": "Library for multi-dimensional diffraction microscopy",
+      "detailed_description": "A Python library for the analysis of multi-dimensional diffraction data, such as 4D-STEM, enabling crystallographic analysis and strain mapping.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "diffraction_analysis",
+        "4d-stem"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pyxem/pyxem",
+      "help_website": [
+        "https://pyxem.readthedocs.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "4d-stem",
+        "diffraction",
+        "microscopy",
+        "crystallography"
+      ],
+      "id": 109
+    },
+    {
+      "name": "raman_tl",
+      "one_line_profile": "Baseline correction and processing of Raman spectra",
+      "detailed_description": "A Python toolkit for preprocessing Raman spectroscopy data, including baseline correction, smoothing, and plotting functions.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectroscopy_preprocessing",
+        "raman"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/radi0sus/raman_tl",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "raman",
+        "spectroscopy",
+        "baseline-correction",
+        "preprocessing"
+      ],
+      "id": 110
+    },
+    {
+      "name": "Raman-noodles",
+      "one_line_profile": "Analysis of Raman and IR spectra datasets",
+      "detailed_description": "A suite of tools for the analysis of Raman and Infrared (IR) spectroscopy datasets, facilitating material identification and characterization.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "raman"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/raman-noodles/Raman-noodles",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "raman",
+        "ir-spectroscopy",
+        "materials-analysis"
+      ],
+      "id": 111
+    },
+    {
+      "name": "raman-spectra-decomp-analysis",
+      "one_line_profile": "Decomposition analysis of materials using Raman spectroscopy",
+      "detailed_description": "Python code designed to identify and calculate the decomposition of materials based on their Raman spectroscopy signatures.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "material_decomposition"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/raman-noodles/raman-spectra-decomp-analysis",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "raman",
+        "decomposition",
+        "spectroscopy"
+      ],
+      "id": 112
+    },
+    {
+      "name": "cuCIM",
+      "one_line_profile": "RAPIDS GPU-accelerated image processing library",
+      "detailed_description": "An open-source, GPU-accelerated library for multidimensional image processing and computer vision, optimized for biomedical and scientific imaging workflows.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "acceleration"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/rapidsai/cucim",
+      "help_website": [
+        "https://github.com/rapidsai/cucim"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "gpu",
+        "rapids",
+        "image-processing",
+        "biomedical-imaging"
+      ],
+      "id": 113
+    },
+    {
+      "name": "Interactive-Semi-Automatic-Image-2D-Bounding-Box-Annotation-Tool",
+      "one_line_profile": "Semi-automatic image annotation tool using multi-template matching",
+      "detailed_description": "An interactive tool for rapidly creating 2D bounding box annotations for object detection datasets, utilizing multi-template matching to suggest annotations.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "data_annotation",
+        "image_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/robertarvind/Interactive-Semi-Automatic-Image-2D-Bounding-Box-Annotation-Tool-using-Multi-Template_Matching",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "annotation",
+        "bounding-box",
+        "template-matching",
+        "dataset-creation"
+      ],
+      "id": 114
+    },
+    {
+      "name": "scikit-image",
+      "one_line_profile": "A collection of algorithms for image processing in Python",
+      "detailed_description": "A comprehensive library for image processing in Python, widely used in scientific research for analyzing microscopy, astronomy, and material science imagery. It includes algorithms for segmentation, geometric transformations, color space manipulation, analysis, filtering, morphology, and feature detection.",
+      "domains": [
+        "General_Science",
+        "Materials",
+        "Biology"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "segmentation",
+        "feature_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scikit-image/scikit-image",
+      "help_website": [
+        "https://scikit-image.org/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "image-processing",
+        "computer-vision",
+        "scientific-computing"
+      ],
+      "id": 115
+    },
+    {
+      "name": "MaNGA DAP",
+      "one_line_profile": "Data Analysis Pipeline for the SDSS-IV MaNGA survey",
+      "detailed_description": "The MaNGA Data Analysis Pipeline (DAP) is the survey-level software used to analyze the integral-field spectroscopy data from the Mapping Nearby Galaxies at Apache Point Observatory (MaNGA) survey. It performs spectral fitting, stellar kinematics extraction, and emission-line measurements.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "pipeline",
+        "integral_field_spectroscopy"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sdss/mangadap",
+      "help_website": [
+        "https://sdss-mangadap.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "astronomy",
+        "spectroscopy",
+        "pipeline"
+      ],
+      "id": 116
+    },
+    {
+      "name": "pyFAI",
+      "one_line_profile": "Fast Azimuthal Integration for X-ray diffraction data",
+      "detailed_description": "A Python library for reducing 2D X-ray diffraction images into 1D powder diffraction patterns (azimuthal integration). It is highly optimized for speed and used extensively in synchrotron research and materials science for crystallographic analysis.",
+      "domains": [
+        "Materials",
+        "Physics",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "diffraction_reduction",
+        "azimuthal_integration",
+        "calibration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/silx-kit/pyFAI",
+      "help_website": [
+        "https://pyfai.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "x-ray",
+        "diffraction",
+        "synchrotron"
+      ],
+      "id": 117
+    },
+    {
+      "name": "CubeViz",
+      "one_line_profile": "Visualization and analysis tool for astronomical data cubes",
+      "detailed_description": "A visualization and analysis tool designed for integral field unit (IFU) data cubes. Built on the Glue visualization library, it allows astronomers to inspect, analyze, and visualize 3D spectral data cubes interactively.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "visualization",
+        "spectral_cube_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spacetelescope/cubeviz",
+      "help_website": [
+        "https://cubeviz.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "astronomy",
+        "visualization",
+        "ifu"
+      ],
+      "id": 118
+    },
+    {
+      "name": "SpecViz",
+      "one_line_profile": "Interactive astronomical 1D spectra analysis tool",
+      "detailed_description": "A tool for visualization and analysis of 1D astronomical spectra. It allows users to measure spectral lines, fit models, and perform basic arithmetic operations on spectral data.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spacetelescope/specviz",
+      "help_website": [
+        "https://specviz.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "astronomy",
+        "spectroscopy",
+        "visualization"
+      ],
+      "id": 119
+    },
+    {
+      "name": "SpectroChemPy",
+      "one_line_profile": "Framework for processing and analyzing spectroscopic data",
+      "detailed_description": "A Python framework dedicated to the processing, analysis, and modeling of spectroscopic data (IR, NMR, Raman, etc.) for chemistry. It provides tools for data import, preprocessing, and multivariate analysis.",
+      "domains": [
+        "Chemistry",
+        "Materials",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "chemometrics",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spectrochempy/spectrochempy",
+      "help_website": [
+        "https://www.spectrochempy.fr/"
+      ],
+      "license": "CeCILL",
+      "tags": [
+        "spectroscopy",
+        "chemistry",
+        "chemometrics"
+      ],
+      "id": 120
+    },
+    {
+      "name": "SPIDER",
+      "one_line_profile": "Image processing system for electron microscopy",
+      "detailed_description": "SPIDER (System for Processing Image Data from Electron microscopy and Related fields) is a long-standing software package for single-particle reconstruction and image processing in electron microscopy.",
+      "domains": [
+        "Biology",
+        "Materials",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "reconstruction",
+        "cryo-em"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/spider-em/SPIDER",
+      "help_website": [
+        "https://spider.wadsworth.org/spider_doc/spider/docs/spider.html"
+      ],
+      "license": "Custom",
+      "tags": [
+        "cryo-em",
+        "image-processing",
+        "reconstruction"
+      ],
+      "id": 121
+    },
+    {
+      "name": "gwyfile",
+      "one_line_profile": "Python interface for Gwyddion file format",
+      "detailed_description": "A pure Python library for reading and writing files in the Gwyddion format (.gwy), which is the standard for scanning probe microscopy (SPM) data analysis.",
+      "domains": [
+        "Materials",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "data_io",
+        "spm_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tuxu/gwyfile",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gwyddion",
+        "spm",
+        "afm"
+      ],
+      "id": 122
+    },
+    {
+      "name": "MATS",
+      "one_line_profile": "Multi-spectrum Analysis Tool for Spectroscopy",
+      "detailed_description": "A software tool developed by NIST for the analysis of spectroscopic data. It supports processing and analysis of multi-spectrum datasets, aiding in material characterization.",
+      "domains": [
+        "Materials",
+        "Chemistry",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "data_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/usnistgov/MATS",
+      "help_website": [],
+      "license": "Public Domain",
+      "tags": [
+        "spectroscopy",
+        "nist",
+        "analysis"
+      ],
+      "id": 123
+    },
+    {
+      "name": "etspy",
+      "one_line_profile": "Electron Tomography tools for HyperSpy",
+      "detailed_description": "A HyperSpy extension package developed by NIST for processing and reconstructing electron tomography data. It provides tools for alignment, reconstruction, and visualization of tilt series data.",
+      "domains": [
+        "Materials",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "tomography_reconstruction",
+        "image_processing",
+        "electron_microscopy"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/usnistgov/etspy",
+      "help_website": [
+        "https://etspy.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "electron-tomography",
+        "hyperspy",
+        "reconstruction"
+      ],
+      "id": 124
+    },
+    {
+      "name": "grain-size-analysis-tools",
+      "one_line_profile": "Automated grain size measurement tools",
+      "detailed_description": "A set of Python tools from NIST for automating the segmentation of metallic grain boundaries in optical/SEM images and measuring grain sizes using intercept methods, adhering to ASTM standards.",
+      "domains": [
+        "Materials",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "microstructure_analysis",
+        "segmentation",
+        "grain_sizing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/usnistgov/grain-size-analysis-tools",
+      "help_website": [],
+      "license": "Public Domain",
+      "tags": [
+        "metallography",
+        "grain-size",
+        "microscopy"
+      ],
+      "id": 125
+    },
+    {
+      "name": "hyperspectralpy",
+      "one_line_profile": "Python tools and GUI for hyperspectral image analysis and material identification",
+      "detailed_description": "A Python package providing tools and a Graphical User Interface (GUI) for the analysis of spectral images. It includes functionalities for target detection, Principal Component Analysis (PCA), material identification, and spectral library management, specifically tailored for hyperspectral data.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectral_analysis",
+        "material_identification",
+        "target_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wbasener/hyperspectralpy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "hyperspectral-imaging",
+        "spectral-analysis",
+        "gui",
+        "material-science"
+      ],
+      "id": 126
+    },
+    {
+      "name": "xia2",
+      "one_line_profile": "Expert system for automated reduction of macromolecular crystallography data",
+      "detailed_description": "An automated system for the reduction of X-ray diffraction data from macromolecular crystals. It integrates with other crystallographic software (like DIALS, XDS) to process raw diffraction images into reduced data suitable for structure solution.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "data_reduction",
+        "diffraction_analysis",
+        "crystallography"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xia2/xia2",
+      "help_website": [
+        "https://xia2.github.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "x-ray-diffraction",
+        "crystallography",
+        "automation",
+        "data-reduction"
+      ],
+      "id": 127
+    },
+    {
+      "name": "mzkit",
+      "one_line_profile": "Comprehensive toolkit for mass spectrometry and metabolomics data processing",
+      "detailed_description": "A toolkit designed for processing various types of spectral data including NMR, MALDI MSI, Raman Spectroscopy, LC-MS, and GC-MS. It provides functionalities for raw data processing, chemoinformatics analysis, and data visualization.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "mass_spectrometry",
+        "spectral_processing",
+        "chemoinformatics"
+      ],
+      "application_level": "library",
+      "primary_language": "Visual Basic .NET",
+      "repo_url": "https://github.com/xieguigang/mzkit",
+      "help_website": [
+        "https://mzkit.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "mass-spectrometry",
+        "metabolomics",
+        "maldi-imaging",
+        "raman-spectroscopy"
+      ],
+      "id": 128
+    },
+    {
+      "name": "AutoFP",
+      "one_line_profile": "Automated tool for FullProf Rietveld refinement",
+      "detailed_description": "An automation tool designed to assist with Rietveld refinement using the FullProf suite. It employs an expert system algorithm to streamline the refinement process for X-ray diffraction data analysis.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "rietveld_refinement",
+        "structure_analysis",
+        "xrd"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xpclove/autofp",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "rietveld-refinement",
+        "fullprof",
+        "crystallography",
+        "automation"
+      ],
+      "id": 129
+    },
+    {
+      "name": "Larch",
+      "one_line_profile": "Analysis library and applications for X-ray absorption and fluorescence spectroscopy",
+      "detailed_description": "A Python library and set of applications for processing and analyzing X-ray Absorption Spectroscopy (XAS, EXAFS, XANES) and X-ray Fluorescence (XRF) data. It supports data visualization, fitting, and processing for synchrotron data analysis.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "xas",
+        "xrf"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xraypy/xraylarch",
+      "help_website": [
+        "https://xraypy.github.io/xraylarch/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "x-ray-spectroscopy",
+        "exafs",
+        "xanes",
+        "synchrotron"
+      ],
+      "id": 130
+    },
+    {
+      "name": "SIDAM",
+      "one_line_profile": "Analysis tools for spectroscopic imaging STM/STS in IGOR Pro",
+      "detailed_description": "A set of analysis tools developed for Spectroscopic Imaging Scanning Tunneling Microscopy (SI-STM) and Spectroscopy (STS). It runs within the IGOR Pro environment, facilitating the processing and visualization of multidimensional microscopy data.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "microscopy_analysis",
+        "stm",
+        "spectroscopy"
+      ],
+      "application_level": "library",
+      "primary_language": "IGOR Pro",
+      "repo_url": "https://github.com/yuksk/SIDAM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "stm",
+        "igor-pro",
+        "microscopy",
+        "spectroscopy"
+      ],
+      "id": 131
+    },
+    {
+      "name": "GPim",
+      "one_line_profile": "Gaussian processes and Bayesian optimization for microscopy and hyperspectral data",
+      "detailed_description": "A Python library applying Gaussian Processes (GP) and Bayesian Optimization to imaging and hyperspectral data. It is designed to assist in the analysis of sparse data and automated experiments in microscopy.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "image_analysis",
+        "bayesian_optimization",
+        "hyperspectral_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ziatdinovmax/GPim",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gaussian-processes",
+        "bayesian-optimization",
+        "microscopy",
+        "machine-learning"
+      ],
+      "id": 132
+    },
+    {
+      "name": "SciLink",
+      "one_line_profile": "LLM-powered agents connecting experimental materials science with modeling",
+      "detailed_description": "A framework that utilizes Large Language Model (LLM) agents to bridge experimental materials science with computational modeling and literature analysis. It automates workflows involving data interpretation and simulation setup.",
+      "domains": [
+        "M5",
+        "M5-04"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "literature_analysis",
+        "scientific_inference"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ziatdinovmax/SciLink",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "llm-agents",
+        "materials-science",
+        "automation",
+        "workflow"
+      ],
+      "id": 133
+    }
+  ]
+}

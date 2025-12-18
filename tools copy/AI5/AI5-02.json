@@ -1,0 +1,2473 @@
+{
+  "generated_at": "2025-12-16T13:32:23.782802+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "AI5",
+      "leaf_cluster_name": "科研代理-工具调用与工作流编排生态",
+      "domain": "AI Toolchain",
+      "typical_objects": "tools/workflows",
+      "task_chain": "规划→调用→追踪→回放→评测→治理",
+      "tool_form": "agent框架 + tracing + registry"
+    },
+    "unit": {
+      "unit_id": "AI5-02",
+      "unit_name": "工具注册表/函数调用/Schema",
+      "target_scale": "150–350",
+      "coverage_tools": "OpenAPI/JSON schema、adapters"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] OpenAPITools",
+        "[GH] Gorilla CLI",
+        "[GH] LlamaIndex Tools",
+        "[GH] Pydantic",
+        "[GH] Toolhouse",
+        "[GH] Composio",
+        "[GH] Instructor",
+        "[GH] Semantic Kernel Plugins",
+        "[GH] LangChain Tools",
+        "[GH] Model Context Protocol",
+        "[GH] llm function calling",
+        "[GH] tool registry agent",
+        "[GH] openapi schema llm",
+        "[GH] json schema generator agent",
+        "[GH] model context protocol",
+        "[GH] agent tool adapter",
+        "[GH] plugin architecture llm",
+        "[GH] api wrapper for agents",
+        "[GH] tool definition interface",
+        "[GH] function calling middleware",
+        "[GH] action schema definition",
+        "[GH] rest api to tool converter",
+        "[GH] pydantic tool wrapper",
+        "[WEB] llm function calling library github",
+        "[WEB] openapi to json schema for ai agents github",
+        "[WEB] model context protocol implementation github",
+        "[WEB] langchain custom tool definition github",
+        "[WEB] agent tool registry framework github",
+        "[WEB] pydantic instructor function calling github"
+      ],
+      "total_candidates": 894,
+      "tool_candidates": 429,
+      "final_tools": 98
+    }
+  },
+  "tools": [
+    {
+      "name": "Instructor (Python)",
+      "one_line_profile": "Library for structured data extraction and validation from LLMs using Pydantic",
+      "detailed_description": "A Python library that simplifies the process of extracting structured data from Large Language Models (LLMs) by leveraging Pydantic for schema validation. It is essential for scientific agents requiring precise data extraction from literature or structured tool inputs.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "structured_extraction",
+        "schema_validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/567-labs/instructor",
+      "help_website": [
+        "https://python.useinstructor.com/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "structured-output",
+        "pydantic",
+        "function-calling"
+      ],
+      "id": 1
+    },
+    {
+      "name": "Instructor (Go)",
+      "one_line_profile": "Go client for structured LLM outputs and data extraction",
+      "detailed_description": "The Go implementation of the Instructor library, enabling structured data extraction and validation from LLMs within Go-based scientific workflows and agent backends.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "structured_extraction",
+        "schema_validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/567-labs/instructor-go",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "go",
+        "llm",
+        "structured-data"
+      ],
+      "id": 2
+    },
+    {
+      "name": "Instructor (TypeScript)",
+      "one_line_profile": "TypeScript library for structured LLM extraction using Zod",
+      "detailed_description": "The TypeScript/JavaScript version of Instructor, utilizing Zod for schema definition to ensure type-safe structured outputs from LLMs, suitable for web-based scientific interfaces and agents.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "structured_extraction",
+        "schema_validation"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/567-labs/instructor-js",
+      "help_website": [
+        "https://js.useinstructor.com/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "typescript",
+        "llm",
+        "zod",
+        "structured-output"
+      ],
+      "id": 3
+    },
+    {
+      "name": "Instructor (Ruby)",
+      "one_line_profile": "Ruby library for structured outputs from LLMs",
+      "detailed_description": "The Ruby implementation of the Instructor pattern, facilitating structured data handling from LLMs for Ruby-based research tools and scripts.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "structured_extraction",
+        "schema_validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/567-labs/instructor-rb",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ruby",
+        "llm",
+        "structured-output"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Instructor (Rust)",
+      "one_line_profile": "Rust crate for structured LLM outputs",
+      "detailed_description": "The Rust implementation of Instructor, providing high-performance, type-safe structured extraction from LLMs, suitable for computationally intensive scientific agent backends.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "structured_extraction",
+        "schema_validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/567-labs/instructor-rs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rust",
+        "llm",
+        "structured-output"
+      ],
+      "id": 5
+    },
+    {
+      "name": "tuui",
+      "one_line_profile": "Desktop client for Model Context Protocol (MCP) orchestration",
+      "detailed_description": "A desktop client designed to accelerate AI adoption through the Model Context Protocol (MCP), enabling cross-vendor LLM API orchestration and tool integration, which is critical for multi-model scientific workflows.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_orchestration",
+        "api_integration"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/AI-QL/tuui",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mcp",
+        "llm-orchestration",
+        "tool-integration"
+      ],
+      "id": 6
+    },
+    {
+      "name": "tiny_fnc_engine",
+      "one_line_profile": "Minimal engine for executing LLM-generated function calls",
+      "detailed_description": "A lightweight Python library that provides a flexible engine for parsing and executing function calls extracted from LLMs, serving as a building block for custom scientific agents.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "function_calling",
+        "tool_execution"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AtakanTekparmak/tiny_fnc_engine",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "function-calling",
+        "llm",
+        "agent-utils"
+      ],
+      "id": 7
+    },
+    {
+      "name": "open-ptc-agent",
+      "one_line_profile": "Agent implementation for programmatic tool calling via MCP",
+      "detailed_description": "An open-source implementation of an AI agent focused on code execution and programmatic tool calling using the Model Context Protocol (MCP), suitable for automating computational scientific tasks.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "tool_use"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Chen-zexi/open-ptc-agent",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "agent",
+        "code-execution"
+      ],
+      "id": 8
+    },
+    {
+      "name": "Composio Function Calling Benchmark",
+      "one_line_profile": "Benchmark suite for LLM function calling capabilities",
+      "detailed_description": "A benchmarking tool designed to evaluate and test the function calling performance of various Large Language Models, aiding researchers in selecting appropriate models for agentic workflows.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "benchmark"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ComposioHQ/Composio-Function-Calling-Benchmark",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "function-calling",
+        "llm-eval"
+      ],
+      "id": 9
+    },
+    {
+      "name": "Composio",
+      "one_line_profile": "Integration platform for AI agents to interface with external tools",
+      "detailed_description": "A comprehensive platform and library that equips AI agents and LLMs with extensive integrations via function calling, serving as a critical infrastructure for building agents that interact with external software and APIs.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_integration",
+        "workflow_automation"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/ComposioHQ/composio",
+      "help_website": [
+        "https://docs.composio.dev/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "agent-integration",
+        "function-calling",
+        "tool-registry"
+      ],
+      "id": 10
+    },
+    {
+      "name": "HuggingFists",
+      "one_line_profile": "Low-code data flow tool for LLM pipelines",
+      "detailed_description": "A low-code data flow tool that facilitates the construction of processing pipelines using LLMs and HuggingFace models, enabling researchers to build complex data processing workflows without extensive coding.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "data_flow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Datayoo/HuggingFists",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "low-code",
+        "llm-workflow",
+        "pipeline"
+      ],
+      "id": 11
+    },
+    {
+      "name": "Chat2Anything",
+      "one_line_profile": "LLM-based knowledge base QA system",
+      "detailed_description": "An LLM-based tool designed to chat with documents and databases, providing a management system for enterprise or research knowledge bases, facilitating literature review and data querying.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "knowledge_retrieval",
+        "document_qa"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DemoGit4LIANG/Chat2Anything",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rag",
+        "knowledge-base",
+        "qa-system"
+      ],
+      "id": 12
+    },
+    {
+      "name": "GPT_ALL",
+      "one_line_profile": "Framework for multi-step asynchronous function calling",
+      "detailed_description": "A project combining LLMs with multi-step asynchronous function calling, NLP, and TTS, providing a framework for building complex, interactive AI agents.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "asynchronous_function_calling",
+        "agent_orchestration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Eloquent-Algorithmics/GPT_ALL",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "function-calling",
+        "async",
+        "agent-framework"
+      ],
+      "id": 13
+    },
+    {
+      "name": "AnyTool",
+      "one_line_profile": "Universal tool-use layer for AI agents",
+      "detailed_description": "A framework implementing a universal tool-use layer for AI agents, designed to enhance the capability of LLMs to interact with a wide variety of tools effectively, supporting complex agentic workflows.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_use_optimization",
+        "agent_capability"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HKUDS/AnyTool",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "agent",
+        "tool-use",
+        "llm"
+      ],
+      "id": 14
+    },
+    {
+      "name": "AutoAgent",
+      "one_line_profile": "Fully-automated zero-code LLM agent framework",
+      "detailed_description": "A framework for generating and managing LLM-based agents without coding, automating the process of agent creation and workflow orchestration, suitable for rapid prototyping of scientific assistants.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "agent_orchestration",
+        "automated_workflow"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HKUDS/AutoAgent",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "agent-framework",
+        "no-code",
+        "automation"
+      ],
+      "id": 15
+    },
+    {
+      "name": "MCP Context Forge",
+      "one_line_profile": "Gateway and registry for Model Context Protocol (MCP) tools and resources",
+      "detailed_description": "A centralized management point for tools, resources, and prompts accessible by MCP-compatible LLM applications. It converts REST API endpoints to MCP, composes virtual MCP servers, and handles protocol conversions, serving as a critical infrastructure component for AI agent toolchains.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_registry",
+        "protocol_conversion"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/IBM/mcp-context-forge",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mcp",
+        "agent-tools",
+        "gateway"
+      ],
+      "id": 16
+    },
+    {
+      "name": "Patito",
+      "one_line_profile": "Data modeling and validation layer for Polars dataframes",
+      "detailed_description": "A library built on top of Polars and Pydantic that provides a structured data modeling layer. It allows for the definition of schemas and validation of dataframes, which is essential for ensuring data quality and consistency in scientific data processing pipelines.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "data_modeling",
+        "schema_validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JakobGM/patito",
+      "help_website": [
+        "https://patito.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "polars",
+        "pydantic",
+        "data-validation"
+      ],
+      "id": 17
+    },
+    {
+      "name": "UniversalLLMFunctionCaller",
+      "one_line_profile": "Planner for enabling function calling on chat-based LLMs via Semantic Kernel",
+      "detailed_description": "A planner integration for Semantic Kernel that enables function calling capabilities on various chat-based Large Language Models (LLMs) such as Mistral, Bard, and Claude. It acts as an adapter to standardize tool invocation across different models.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "function_calling",
+        "agent_planning"
+      ],
+      "application_level": "library",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/Jenscaasen/UniversalLLMFunctionCaller",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "semantic-kernel",
+        "function-calling",
+        "llm-agent"
+      ],
+      "id": 18
+    },
+    {
+      "name": "Composio MCP Server",
+      "one_line_profile": "Model Context Protocol server for Composio tool integration",
+      "detailed_description": "An MCP server implementation that connects LLMs to the Composio platform, enabling agents to access and utilize a wide range of external tools and integrations. It facilitates the orchestration of complex workflows by providing a standardized interface for tool execution.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_integration",
+        "mcp_server"
+      ],
+      "application_level": "service",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/MCP-Mirror/ComposioHQ_composio-mcp-server",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mcp",
+        "composio",
+        "tool-integration"
+      ],
+      "id": 19
+    },
+    {
+      "name": "Open Assistant API",
+      "one_line_profile": "Open-source framework for agent orchestration and tool management",
+      "detailed_description": "A self-hosted framework for creating and orchestrating agents/GPTs. It supports customized extensions for LLMs, RAG (Retrieval-Augmented Generation), function calling, and tool capabilities, providing a backend for building scientific research assistants.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "agent_orchestration",
+        "function_calling"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MLT-OSS/open-assistant-api",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "agent-framework",
+        "rag",
+        "llm-orchestration"
+      ],
+      "id": 20
+    },
+    {
+      "name": "LangChain GPT Researcher",
+      "one_line_profile": "LangChain tool wrapper for the GPT Researcher autonomous agent",
+      "detailed_description": "Integrates GPT Researcher as a tool within the LangChain ecosystem, allowing agents to perform autonomous online research, scrape web content, and synthesize information for scientific literature review and data gathering tasks.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "literature_review",
+        "web_research"
+      ],
+      "application_level": "tool",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Makesh-Srinivasan/LangChain-GPT-Researcher",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "langchain",
+        "research-agent",
+        "automated-research"
+      ],
+      "id": 21
+    },
+    {
+      "name": "ToolAgents",
+      "one_line_profile": "Lightweight framework for creating function-calling agents",
+      "detailed_description": "A flexible framework designed to facilitate the creation of agents capable of function calling with various language models and APIs. It abstracts the complexity of tool definition and invocation, streamlining the development of agentic workflows.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "function_calling",
+        "agent_framework"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Maximilian-Winter/ToolAgents",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "function-calling",
+        "agent-tools",
+        "llm"
+      ],
+      "id": 22
+    },
+    {
+      "name": "MiniMax MCP",
+      "one_line_profile": "Official Model Context Protocol server for MiniMax AI models",
+      "detailed_description": "Provides an MCP interface to interact with MiniMax's suite of AI models, including Text-to-Speech, image generation, and video generation. This server enables scientific agents to leverage multimodal generation capabilities within a standardized protocol.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "model_serving",
+        "mcp_server"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MiniMax-AI/MiniMax-MCP",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "minimax",
+        "multimodal"
+      ],
+      "id": 23
+    },
+    {
+      "name": "ToolRegistry",
+      "one_line_profile": "Protocol-agnostic tool management library for function-calling LLMs",
+      "detailed_description": "A library designed to manage tool definitions and registrations for Large Language Models with function calling capabilities. It provides a unified interface to register tools and generate the necessary schemas for different LLM providers.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_registration",
+        "schema_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Oaklight/ToolRegistry",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "function-calling",
+        "tool-management",
+        "llm"
+      ],
+      "id": 24
+    },
+    {
+      "name": "ToolBridge",
+      "one_line_profile": "Universal function calling adapter for LLMs",
+      "detailed_description": "Enables tool and function calling capabilities for LLMs that do not natively support them, or standardizes the interface across OpenAI and Ollama API formats. It acts as a bridge to add agentic capabilities to a wider range of models.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "function_calling",
+        "adapter"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/Oct4Pie/toolbridge",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "function-calling",
+        "llm-adapter",
+        "ollama"
+      ],
+      "id": 25
+    },
+    {
+      "name": "OpenAPI Generator CLI",
+      "one_line_profile": "CLI tool for generating API clients and servers from OpenAPI specifications",
+      "detailed_description": "The command-line interface for OpenAPI Generator, which allows for the automatic generation of API client libraries, server stubs, and documentation from OpenAPI (Swagger) schemas. In the context of AI agents, it is a fundamental tool for creating the interfaces that allow agents to interact with scientific services and data repositories.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "api_generation",
+        "schema_adaptation"
+      ],
+      "application_level": "tool",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/OpenAPITools/openapi-generator-cli",
+      "help_website": [
+        "https://openapi-generator.tech"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "openapi",
+        "code-generation",
+        "api-client"
+      ],
+      "id": 26
+    },
+    {
+      "name": "Dive",
+      "one_line_profile": "Desktop MCP host application for LLM function calling",
+      "detailed_description": "An open-source desktop application that serves as a host for the Model Context Protocol (MCP). It integrates with LLMs to provide a runtime environment for function calling and tool execution, enabling users to run agentic workflows locally.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "mcp_host",
+        "tool_execution"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/OpenAgentPlatform/Dive",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "desktop-agent",
+        "function-calling"
+      ],
+      "id": 27
+    },
+    {
+      "name": "DeepDoc",
+      "one_line_profile": "Deep research tool for local knowledge base analysis",
+      "detailed_description": "A tool designed for deep research tasks using local knowledge bases. It likely employs RAG (Retrieval-Augmented Generation) techniques to analyze documents and synthesize information, aiding in scientific literature review and data analysis.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "document_analysis",
+        "rag"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Oqura-ai/deepdoc",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "research-tool",
+        "rag",
+        "knowledge-base"
+      ],
+      "id": 28
+    },
+    {
+      "name": "LangChain Prefect",
+      "one_line_profile": "Integration tools for using LangChain within Prefect workflows",
+      "detailed_description": "A library that provides integration between LangChain (agent framework) and Prefect (workflow orchestration). It enables the building of robust, observable, and resilient AI agent workflows for scientific tasks.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "agent_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PrefectHQ/langchain-prefect",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "prefect",
+        "langchain",
+        "workflow"
+      ],
+      "id": 29
+    },
+    {
+      "name": "MCP Framework",
+      "one_line_profile": "TypeScript framework for building Model Context Protocol servers",
+      "detailed_description": "A framework designed to simplify the development of MCP servers in TypeScript. It provides the necessary abstractions and utilities to create tools and resources that comply with the Model Context Protocol, facilitating the expansion of the AI agent tool ecosystem.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "mcp_development",
+        "server_framework"
+      ],
+      "application_level": "framework",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/QuantGeekDev/mcp-framework",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "typescript",
+        "framework"
+      ],
+      "id": 30
+    },
+    {
+      "name": "CoexistAI",
+      "one_line_profile": "Modular research assistant framework for automating workflows with LLMs and tool calls",
+      "detailed_description": "A developer-friendly framework designed to build, search, summarize, and automate research workflows. It integrates LLMs with web search and mapping tools through simple MCP tool calls, enabling the automation of complex information gathering and synthesis tasks in scientific research.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "literature_review"
+      ],
+      "application_level": "framework",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/SPThole/CoexistAI",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "research-assistant",
+        "workflow-automation",
+        "llm-agent"
+      ],
+      "id": 31
+    },
+    {
+      "name": "LLMCompiler",
+      "one_line_profile": "Compiler for optimizing parallel function calling in LLM agents",
+      "detailed_description": "An LLM compiler designed to execute function calls in parallel, significantly speeding up agentic workflows. It analyzes the dependency graph of tool calls generated by the LLM and schedules them for efficient execution, addressing the latency bottleneck in complex sequential reasoning tasks.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "function_calling",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SqueezeAILab/LLMCompiler",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "parallel-execution",
+        "function-calling",
+        "llm-compiler"
+      ],
+      "id": 32
+    },
+    {
+      "name": "AppWorld",
+      "one_line_profile": "Benchmarking environment for interactive coding agents and function calling",
+      "detailed_description": "A controllable environment of apps and people designed to benchmark the capabilities of autonomous agents in function calling and interactive coding. It provides a high-quality dataset and execution environment to evaluate how well agents can interact with APIs and manage state in complex scenarios.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "agent_evaluation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/StonyBrookNLP/appworld",
+      "help_website": [
+        "https://appworld.github.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "function-calling",
+        "interactive-coding"
+      ],
+      "id": 33
+    },
+    {
+      "name": "Tanuki.py",
+      "one_line_profile": "Library for building LLM-powered functions with type safety",
+      "detailed_description": "A library that allows developers to build type-safe functions powered by LLMs. It simplifies the creation of neuro-symbolic applications by patching Python functions with LLM logic, enabling easy integration of alignment and function calling capabilities into software workflows.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "function_construction",
+        "prompt_engineering"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Tanuki/tanuki.py",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm-functions",
+        "type-safety",
+        "neuro-symbolic"
+      ],
+      "id": 34
+    },
+    {
+      "name": "ActionWeaver",
+      "one_line_profile": "Framework for orchestrating function calling and tool management for LLMs",
+      "detailed_description": "A framework designed to simplify the integration of function calling capabilities into LLM applications. It provides tools for managing tool registries, orchestrating complex tool-use workflows, and handling the interaction between language models and external APIs.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_orchestration",
+        "function_calling"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TengHu/ActionWeaver",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "function-calling",
+        "tool-management",
+        "llm-agent"
+      ],
+      "id": 35
+    },
+    {
+      "name": "ToolBrain",
+      "one_line_profile": "Framework for agentic tool use training with reinforcement learning",
+      "detailed_description": "A framework focused on training AI agents to use tools effectively using reinforcement learning techniques. It addresses the challenge of teaching agents to select and execute the correct tools in multi-step reasoning processes.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "agent_training",
+        "tool_learning"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ToolBrain/ToolBrain",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "reinforcement-learning",
+        "tool-use",
+        "agent-training"
+      ],
+      "id": 36
+    },
+    {
+      "name": "Tiger",
+      "one_line_profile": "Middleware library for enhancing AI agents with code execution and tool integration",
+      "detailed_description": "A library that acts as a bridge for AI agents (like LangChain, Autogen, CrewAI), providing them with capabilities such as code execution and advanced tool integration. It aims to enhance the 'brain' of the agent by facilitating complex interactions with the environment.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "agent_enhancement",
+        "code_execution"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Upsonic/Tiger",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "agent-middleware",
+        "code-execution",
+        "tool-integration"
+      ],
+      "id": 37
+    },
+    {
+      "name": "MCP Gateway & Registry",
+      "one_line_profile": "Centralized registry and gateway for managing Model Context Protocol (MCP) tools",
+      "detailed_description": "An enterprise-ready gateway and registry designed to centralize AI development tools. It supports the Model Context Protocol (MCP), enabling secure authentication, dynamic tool discovery, and unified access for autonomous AI agents and coding assistants.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_registry",
+        "tool_discovery"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/agentic-community/mcp-gateway-registry",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mcp",
+        "tool-registry",
+        "gateway"
+      ],
+      "id": 38
+    },
+    {
+      "name": "ACI",
+      "one_line_profile": "Platform for unifying tool calling across agents and IDEs via MCP",
+      "detailed_description": "An open-source tool-calling platform that connects hundreds of tools into agentic IDEs or custom AI agents. It utilizes direct function calling or a unified Model Context Protocol (MCP) server to standardize tool access and integration.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_calling",
+        "integration_platform"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aipotheosis-labs/aci",
+      "help_website": [
+        "https://aci.dev"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "tool-calling",
+        "mcp",
+        "agent-integration"
+      ],
+      "id": 39
+    },
+    {
+      "name": "Spring AI Alibaba",
+      "one_line_profile": "Java framework for building agentic AI applications with tool calling support",
+      "detailed_description": "An implementation of the Spring AI framework tailored for the Alibaba ecosystem. It provides Java developers with the tools to build agentic AI applications, including support for function calling, tool registration, and integration with various LLM providers.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "agent_framework",
+        "tool_integration"
+      ],
+      "application_level": "framework",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/alibaba/spring-ai-alibaba",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "java",
+        "agent-framework",
+        "spring-ai"
+      ],
+      "id": 40
+    },
+    {
+      "name": "LangChain Visualizer",
+      "one_line_profile": "Visualization tool for debugging and analyzing LangChain agent workflows",
+      "detailed_description": "A tool designed to visualize and debug the execution flows of LangChain agents. It helps researchers and developers understand how agents are making decisions, calling tools, and processing data, which is critical for optimizing agentic workflows.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "visualization",
+        "debugging"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/amosjyng/langchain-visualizer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "langchain",
+        "debugging"
+      ],
+      "id": 41
+    },
+    {
+      "name": "Argilla",
+      "one_line_profile": "Platform for data curation and feedback loops to improve AI models",
+      "detailed_description": "A collaboration tool for AI engineers and domain experts to build high-quality datasets. It supports data annotation, curation, and feedback loops (RLHF), which are essential for training and fine-tuning scientific AI models and agents.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "data_curation",
+        "annotation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/argilla-io/argilla",
+      "help_website": [
+        "https://docs.argilla.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "data-curation",
+        "rlhf",
+        "dataset-management"
+      ],
+      "id": 42
+    },
+    {
+      "name": "Airflow AI SDK",
+      "one_line_profile": "SDK for integrating LLMs and AI Agents into Apache Airflow workflows",
+      "detailed_description": "A software development kit that enables the orchestration of AI agents and Large Language Model operations within Apache Airflow pipelines, facilitating complex scientific workflow automation.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "workflow_orchestration",
+        "agent_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/astronomer/airflow-ai-sdk",
+      "help_website": [
+        "https://github.com/astronomer/airflow-ai-sdk"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "airflow",
+        "llm",
+        "agents",
+        "workflow"
+      ],
+      "id": 43
+    },
+    {
+      "name": "mcp-server-mysql",
+      "one_line_profile": "Model Context Protocol server for MySQL database access",
+      "detailed_description": "An implementation of the Model Context Protocol (MCP) that exposes MySQL databases to AI agents, enabling read-only schema inspection and query execution for scientific data retrieval.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "database_interface",
+        "data_retrieval"
+      ],
+      "application_level": "service",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/benborla/mcp-server-mysql",
+      "help_website": [
+        "https://github.com/benborla/mcp-server-mysql"
+      ],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "mysql",
+        "database",
+        "llm-tool"
+      ],
+      "id": 44
+    },
+    {
+      "name": "arxiv-mcp-server",
+      "one_line_profile": "MCP server for searching and analyzing arXiv papers",
+      "detailed_description": "A Model Context Protocol server designed to allow AI agents to search, retrieve, and analyze scientific papers from the arXiv repository, supporting automated literature review workflows.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "literature_search",
+        "data_retrieval"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/blazickjp/arxiv-mcp-server",
+      "help_website": [
+        "https://github.com/blazickjp/arxiv-mcp-server"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "arxiv",
+        "mcp",
+        "literature-review",
+        "research-automation"
+      ],
+      "id": 45
+    },
+    {
+      "name": "brightdata-mcp",
+      "one_line_profile": "MCP server for public web data collection",
+      "detailed_description": "A Model Context Protocol server that provides AI agents with capabilities for web scraping and public data collection, useful for gathering scientific datasets from web sources.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "data_collection",
+        "web_scraping"
+      ],
+      "application_level": "service",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/brightdata/brightdata-mcp",
+      "help_website": [
+        "https://github.com/brightdata/brightdata-mcp"
+      ],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "web-scraping",
+        "data-collection"
+      ],
+      "id": 46
+    },
+    {
+      "name": "DeerFlow",
+      "one_line_profile": "Deep Research framework combining LLMs with external tools",
+      "detailed_description": "A community-driven framework for deep research automation that orchestrates Large Language Models with tools like web search, crawling, and code execution to perform complex information gathering and analysis tasks.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "research_automation",
+        "workflow_orchestration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bytedance/deer-flow",
+      "help_website": [
+        "https://github.com/bytedance/deer-flow"
+      ],
+      "license": "MIT",
+      "tags": [
+        "deep-research",
+        "agent-framework",
+        "llm"
+      ],
+      "id": 47
+    },
+    {
+      "name": "tool2schema",
+      "one_line_profile": "Converter for Python functions to LLM tool schemas",
+      "detailed_description": "A utility library that automatically converts Python function signatures and docstrings into JSON schemas compatible with LLM function calling, facilitating the integration of scientific analysis code into AI agent workflows.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "schema_generation",
+        "function_calling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cadifyai/tool2schema",
+      "help_website": [
+        "https://github.com/cadifyai/tool2schema"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "json-schema",
+        "function-calling",
+        "llm-tools"
+      ],
+      "id": 48
+    },
+    {
+      "name": "Casibase",
+      "one_line_profile": "AI knowledge base and MCP management platform",
+      "detailed_description": "An open-source enterprise-level AI knowledge base and management platform for Model Context Protocol (MCP) and Agent-to-Agent (A2A) interactions, supporting the organization and deployment of scientific knowledge and tools.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "knowledge_management",
+        "tool_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/casibase/casibase",
+      "help_website": [
+        "https://ai.casibase.com"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "knowledge-base",
+        "mcp-manager",
+        "rag"
+      ],
+      "id": 49
+    },
+    {
+      "name": "mcpr",
+      "one_line_profile": "Model Context Protocol (MCP) implementation in Rust",
+      "detailed_description": "A Rust implementation of the Model Context Protocol, providing the infrastructure to build high-performance, memory-safe MCP servers and clients for scientific computing environments.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "protocol_implementation",
+        "infrastructure"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/conikeec/mcpr",
+      "help_website": [
+        "https://github.com/conikeec/mcpr"
+      ],
+      "license": "MIT",
+      "tags": [
+        "rust",
+        "mcp",
+        "protocol"
+      ],
+      "id": 50
+    },
+    {
+      "name": "DeepMCPAgent",
+      "one_line_profile": "LangChain agents powered by MCP tools",
+      "detailed_description": "A framework for creating model-agnostic AI agents that utilize Model Context Protocol (MCP) tools over HTTP/SSE, enabling the integration of diverse scientific tools into LangChain/LangGraph workflows.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "agent_framework",
+        "tool_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cryxnet/DeepMCPAgent",
+      "help_website": [
+        "https://github.com/cryxnet/DeepMCPAgent"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "langchain",
+        "mcp",
+        "agent",
+        "workflow"
+      ],
+      "id": 51
+    },
+    {
+      "name": "talksheet",
+      "one_line_profile": "CLI tool for querying data files with LLMs",
+      "detailed_description": "A command-line interface tool that uses GPT models to answer questions about data contained in spreadsheets (CSV/Excel), facilitating quick exploratory data analysis.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "qa_system"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/danthelion/talksheet",
+      "help_website": [
+        "https://github.com/danthelion/talksheet"
+      ],
+      "license": null,
+      "tags": [
+        "data-analysis",
+        "cli",
+        "llm",
+        "csv"
+      ],
+      "id": 52
+    },
+    {
+      "name": "ChatMCP",
+      "one_line_profile": "AI chat client for Model Context Protocol",
+      "detailed_description": "A desktop client that implements the Model Context Protocol (MCP), allowing researchers to interact with and utilize various MCP-compliant scientific tools and agents through a chat interface.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_interface",
+        "client_application"
+      ],
+      "application_level": "platform",
+      "primary_language": "Dart",
+      "repo_url": "https://github.com/daodao97/chatmcp",
+      "help_website": [
+        "https://github.com/daodao97/chatmcp"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "mcp-client",
+        "chat-interface",
+        "tool-usage"
+      ],
+      "id": 53
+    },
+    {
+      "name": "mysql_mcp_server",
+      "one_line_profile": "Secure MySQL MCP server for LLMs",
+      "detailed_description": "A Model Context Protocol server that provides secure, read-only access to MySQL databases, enabling LLMs to inspect schemas and execute queries for scientific data analysis.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "database_interface",
+        "data_access"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/designcomputer/mysql_mcp_server",
+      "help_website": [
+        "https://github.com/designcomputer/mysql_mcp_server"
+      ],
+      "license": "MIT",
+      "tags": [
+        "mysql",
+        "mcp",
+        "database",
+        "security"
+      ],
+      "id": 54
+    },
+    {
+      "name": "openapi-schema-ref-parser",
+      "one_line_profile": "OpenAPI Schema parser for LLM integration",
+      "detailed_description": "A utility to parse, resolve, and dereference OpenAPI Schema $ref pointers, specifically designed to prepare API definitions for consumption by Large Language Models in agentic workflows.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "schema_parsing",
+        "api_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/devflowinc/openapi-schema-ref-parser",
+      "help_website": [
+        "https://github.com/devflowinc/openapi-schema-ref-parser"
+      ],
+      "license": "MIT",
+      "tags": [
+        "openapi",
+        "json-schema",
+        "llm"
+      ],
+      "id": 55
+    },
+    {
+      "name": "ai-fns",
+      "one_line_profile": "Typesafe OpenAI Function calling utility",
+      "detailed_description": "A lightweight library to facilitate type-safe OpenAI function calling, simplifying the development of AI agents that need to invoke external scientific tools or functions.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "function_calling",
+        "tool_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/dillionverma/ai-fns",
+      "help_website": [
+        "https://github.com/dillionverma/ai-fns"
+      ],
+      "license": "MIT",
+      "tags": [
+        "openai",
+        "function-calling",
+        "typescript"
+      ],
+      "id": 56
+    },
+    {
+      "name": "DocArray",
+      "one_line_profile": "Data structure for multimodal data",
+      "detailed_description": "A library for representing, sending, storing, and searching multimodal data (text, image, audio, video, 3D mesh), serving as a fundamental data structure for AI applications and scientific data processing.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "data_representation",
+        "multimodal_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/docarray/docarray",
+      "help_website": [
+        "https://docarray.jina.ai"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "multimodal",
+        "data-structure",
+        "neural-search"
+      ],
+      "id": 57
+    },
+    {
+      "name": "EmbedElite Semantic Kernel Plugin",
+      "one_line_profile": "Semantic Kernel plugin for EmbedElite",
+      "detailed_description": "A plugin for Microsoft Semantic Kernel that enables AI agents to interact with EmbedElite services, facilitating knowledge retrieval and integration into agent workflows.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "plugin_integration",
+        "knowledge_retrieval"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/embedelite/embedelite-sk-plugin",
+      "help_website": [
+        "https://github.com/embedelite/embedelite-sk-plugin"
+      ],
+      "license": null,
+      "tags": [
+        "semantic-kernel",
+        "plugin",
+        "agent"
+      ],
+      "id": 58
+    },
+    {
+      "name": "Empower Functions",
+      "one_line_profile": "Function calling models and tools for real-world use cases",
+      "detailed_description": "A collection of models and tools optimized for GPT-4 level function calling, designed to enable AI agents to reliably interact with external tools and APIs in complex scenarios.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "function_calling",
+        "model_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/empower-ai/empower-functions",
+      "help_website": [
+        "https://github.com/empower-ai/empower-functions"
+      ],
+      "license": null,
+      "tags": [
+        "function-calling",
+        "llm",
+        "tool-use"
+      ],
+      "id": 59
+    },
+    {
+      "name": "mcp-playwright",
+      "one_line_profile": "Playwright MCP Server for browser automation",
+      "detailed_description": "A Model Context Protocol server that wraps Playwright, allowing AI agents to automate web browsers for tasks such as data collection, testing, and interaction with web-based scientific tools.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "browser_automation",
+        "data_collection"
+      ],
+      "application_level": "service",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/executeautomation/mcp-playwright",
+      "help_website": [
+        "https://github.com/executeautomation/mcp-playwright"
+      ],
+      "license": "MIT",
+      "tags": [
+        "playwright",
+        "mcp",
+        "browser-automation"
+      ],
+      "id": 60
+    },
+    {
+      "name": "mcptools",
+      "one_line_profile": "CLI for interacting with MCP servers",
+      "detailed_description": "A command-line interface tool for testing, debugging, and interacting with Model Context Protocol (MCP) servers, supporting both stdio and HTTP transports to facilitate tool development.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_development",
+        "debugging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/f/mcptools",
+      "help_website": [
+        "https://github.com/f/mcptools"
+      ],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "cli",
+        "debugging"
+      ],
+      "id": 61
+    },
+    {
+      "name": "Fiddler Auditor",
+      "one_line_profile": "Tool to evaluate robustness and correctness of language models",
+      "detailed_description": "A Python library designed to evaluate Large Language Models (LLMs) by assessing their robustness to prompt perturbations and correctness of outputs, essential for ensuring reliability in AI-driven scientific workflows.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "robustness_testing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fiddler-labs/fiddler-auditor",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "llm-evaluation",
+        "robustness",
+        "ai-safety"
+      ],
+      "id": 62
+    },
+    {
+      "name": "Firesearch",
+      "one_line_profile": "AI-powered deep research tool for complex query resolution",
+      "detailed_description": "A deep research tool that leverages Firecrawl and LangGraph to break down complex queries, validate answers, and provide cited comprehensive results, functioning as an automated research assistant.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "research_automation",
+        "information_retrieval"
+      ],
+      "application_level": "solver",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/firecrawl/firesearch",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "research-agent",
+        "information-retrieval",
+        "langgraph"
+      ],
+      "id": 63
+    },
+    {
+      "name": "Toolify",
+      "one_line_profile": "Function calling capabilities enabler for LLMs",
+      "detailed_description": "A library designed to empower Large Language Models with function calling capabilities, facilitating the integration of external tools into AI agents.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "function_calling",
+        "tool_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/funnycups/Toolify",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "llm",
+        "function-calling",
+        "agent-tools"
+      ],
+      "id": 64
+    },
+    {
+      "name": "Microchain",
+      "one_line_profile": "Minimalist framework for function calling-based LLM agents",
+      "detailed_description": "A lightweight Python framework for building Large Language Model agents that rely on function calling, providing a simple abstraction for tool usage and agent orchestration.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "agent_framework",
+        "function_calling"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/galatolofederico/microchain",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm-agent",
+        "function-calling",
+        "minimalist"
+      ],
+      "id": 65
+    },
+    {
+      "name": "Haiku RAG",
+      "one_line_profile": "Agentic RAG framework powered by LanceDB and Pydantic AI",
+      "detailed_description": "An opinionated agentic Retrieval-Augmented Generation (RAG) tool that integrates LanceDB, Pydantic AI, and Docling to build advanced research agents capable of handling complex document queries.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "rag_agent",
+        "information_retrieval"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ggozad/haiku.rag",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rag",
+        "agent",
+        "lancedb"
+      ],
+      "id": 66
+    },
+    {
+      "name": "Gorilla CLI",
+      "one_line_profile": "LLM-powered command line interface tool",
+      "detailed_description": "A tool that leverages Large Language Models to generate and execute command-line commands, acting as an intelligent agent for system interaction and automation.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "command_generation",
+        "tool_use"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gorilla-llm/gorilla-cli",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cli",
+        "llm",
+        "automation"
+      ],
+      "id": 67
+    },
+    {
+      "name": "MCP Adapt",
+      "one_line_profile": "Adapter to unlock MCP servers tools in agentic frameworks",
+      "detailed_description": "A Python library that acts as an adapter to make Model Context Protocol (MCP) servers and their tools accessible within various agentic frameworks, expanding the toolset available to AI agents.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "protocol_adaptation",
+        "tool_integration"
+      ],
+      "application_level": "adapter",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/grll/mcpadapt",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "agent-adapter",
+        "interoperability"
+      ],
+      "id": 68
+    },
+    {
+      "name": "Chrome MCP Server",
+      "one_line_profile": "Model Context Protocol server for browser automation",
+      "detailed_description": "A Chrome extension-based Model Context Protocol (MCP) server that exposes browser functionality to AI assistants, enabling agents to perform browser automation, content analysis, and semantic search.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "browser_automation",
+        "tool_server"
+      ],
+      "application_level": "service",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/hangwin/mcp-chrome",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "browser-automation",
+        "chrome-extension"
+      ],
+      "id": 69
+    },
+    {
+      "name": "Excel MCP Server",
+      "one_line_profile": "Model Context Protocol server for Excel file manipulation",
+      "detailed_description": "A Model Context Protocol (MCP) server designed to allow AI agents to interact with and manipulate Excel files, facilitating data processing and analysis workflows.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "data_manipulation",
+        "tool_server"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haris-musa/excel-mcp-server",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "excel",
+        "data-processing"
+      ],
+      "id": 70
+    },
+    {
+      "name": "AgentSilex",
+      "one_line_profile": "Transparent and minimal agent framework",
+      "detailed_description": "A minimal and hackable Python framework for building AI agents, focusing on transparency and control without complex abstractions, suitable for research and custom agent development.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "agent_framework",
+        "orchestration"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/howl-anderson/agentsilex",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "agent-framework",
+        "minimalist",
+        "python"
+      ],
+      "id": 71
+    },
+    {
+      "name": "LangChainGo MCP Adapter",
+      "one_line_profile": "Adapter bridging LangChain Go tools with MCP servers",
+      "detailed_description": "A Go adapter that enables the integration of LangChain Go tools with Model Context Protocol (MCP) servers, facilitating interoperability in the AI agent ecosystem.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "protocol_adaptation",
+        "tool_integration"
+      ],
+      "application_level": "adapter",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/i2y/langchaingo-mcp-adapter",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "langchain",
+        "go",
+        "adapter"
+      ],
+      "id": 72
+    },
+    {
+      "name": "Ruby Nano Bots",
+      "one_line_profile": "Ruby implementation of small, AI-powered bots with tool calling",
+      "detailed_description": "A Ruby library for creating small, shareable AI-powered bots that support multiple LLM providers and tool calling (functions), enabling agentic workflows in Ruby environments.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "agent_framework",
+        "function_calling"
+      ],
+      "application_level": "library",
+      "primary_language": "Lua",
+      "repo_url": "https://github.com/icebaker/ruby-nano-bots",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ruby",
+        "agent",
+        "bot",
+        "function-calling"
+      ],
+      "id": 73
+    },
+    {
+      "name": "Swama",
+      "one_line_profile": "CLI tool for interacting with Swagger/OpenAPI definitions",
+      "detailed_description": "A command-line interface tool for interacting with Swagger and OpenAPI definitions, useful for managing and testing API schemas used in AI tool calling and registry contexts.",
+      "domains": [
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "api_interaction",
+        "schema_handling"
+      ],
+      "application_level": "tool",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/idsulik/swama",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "openapi",
+        "swagger",
+        "cli",
+        "schema"
+      ],
+      "id": 74
+    },
+    {
+      "name": "Instructor Evals",
+      "one_line_profile": "Evaluation tool for extraction and reasoning capabilities",
+      "detailed_description": "A Python library for evaluating the quality and capabilities of extractions and reasoning performed by instructor clients, supporting the validation of structured outputs from LLMs.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "extraction_evaluation",
+        "model_validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/instructor-ai/evals",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "evaluation",
+        "structured-output",
+        "llm"
+      ],
+      "id": 75
+    },
+    {
+      "name": "openapi2jsonschema",
+      "one_line_profile": "Converter from OpenAPI definitions to JSON schemas",
+      "detailed_description": "A tool to convert OpenAPI definitions into JSON schemas, facilitating the use of API specifications in contexts requiring JSON schema validation, such as LLM function calling definitions.",
+      "domains": [
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "schema_conversion",
+        "interoperability"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/instrumenta/openapi2jsonschema",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "openapi",
+        "json-schema",
+        "conversion"
+      ],
+      "id": 76
+    },
+    {
+      "name": "Function Calling Eval",
+      "one_line_profile": "Framework for evaluating function calls made by LLMs",
+      "detailed_description": "A framework designed to evaluate the accuracy and correctness of function calls generated by Large Language Models, essential for benchmarking and improving agentic tool use.",
+      "domains": [
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "function_calling_evaluation",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/interstellarninja/function-calling-eval",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "evaluation",
+        "function-calling",
+        "llm"
+      ],
+      "id": 77
+    },
+    {
+      "name": "Native Tool Call Adapter",
+      "one_line_profile": "Adapter for translating tool calls into native API formats",
+      "detailed_description": "A Python library that helps agents work more efficiently by translating tool calls from specific formats (like cline/Roo-Code) into native tool calls required by APIs, enhancing interoperability.",
+      "domains": [
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_adaptation",
+        "interoperability"
+      ],
+      "application_level": "adapter",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/irreg/native_tool_call_adapter",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "tool-calling",
+        "adapter",
+        "api"
+      ],
+      "id": 78
+    },
+    {
+      "name": "Acte",
+      "one_line_profile": "Framework to build GUI-like Agent Tools",
+      "detailed_description": "A Python framework designed to build GUI-like Agent Tools, providing an enhancement to standard LLM function calling by structuring tool interactions more effectively.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "tool_ui_framework",
+        "function_calling_enhancement"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/j66n/acte",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "agent-tools",
+        "gui",
+        "framework"
+      ],
+      "id": 79
+    },
+    {
+      "name": "Magentic",
+      "one_line_profile": "Seamless integration of LLMs as Python functions",
+      "detailed_description": "A Python library that allows developers to seamlessly integrate Large Language Models as Python functions, simplifying the process of function calling and structured output generation.",
+      "domains": [
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "function_calling",
+        "structured_output"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jackmpcollins/magentic",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "python",
+        "function-calling",
+        "decorators"
+      ],
+      "id": 80
+    },
+    {
+      "name": "LLM Auto Forge",
+      "one_line_profile": "Tool for dynamic creation and retrieval of agent tools",
+      "detailed_description": "A LangChain-based tool that enables agents to dynamically create, use, store, and retrieve tools to solve problems, enhancing the adaptability of AI agents.",
+      "domains": [
+        "AI5"
+      ],
+      "subtask_category": [
+        "tool_generation",
+        "tool_management"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jbpayton/llm-auto-forge",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "langchain",
+        "agent-tools",
+        "dynamic-tools"
+      ],
+      "id": 81
+    },
+    {
+      "name": "instructor-clj",
+      "one_line_profile": "Clojure library for structured output extraction from LLMs",
+      "detailed_description": "A Clojure implementation of the Instructor pattern, enabling reliable extraction of structured data (JSON/Schema) from Large Language Models. This is essential for converting unstructured scientific text into structured datasets for analysis.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "structured_output",
+        "schema_adaptation"
+      ],
+      "application_level": "library",
+      "primary_language": "Clojure",
+      "repo_url": "https://github.com/kapilreddy/instructor-clj",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "clojure",
+        "llm",
+        "structured-data",
+        "json-schema"
+      ],
+      "id": 82
+    },
+    {
+      "name": "ChatGPT CLI",
+      "one_line_profile": "CLI tool for LLM interaction with Model Context Protocol (MCP) support",
+      "detailed_description": "A command-line interface for interacting with various LLM providers (OpenAPI, Azure, etc.) that supports the Model Context Protocol (MCP). This allows researchers to inject live data and context into LLM sessions, facilitating agentic workflows and tool usage.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_calling",
+        "mcp_client"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/kardolus/chatgpt-cli",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "mcp",
+        "llm-client",
+        "context-injection"
+      ],
+      "id": 83
+    },
+    {
+      "name": "SemanticKernel.Assistants",
+      "one_line_profile": "Assistant extensions for Microsoft Semantic Kernel",
+      "detailed_description": "A library extending Microsoft Semantic Kernel to support hierarchical assistants and multi-assistant conversations. It enables the orchestration of complex agentic workflows where different agents (tools) collaborate on tasks.",
+      "domains": [
+        "AI5",
+        "AI5-01"
+      ],
+      "subtask_category": [
+        "agent_orchestration",
+        "workflow_management"
+      ],
+      "application_level": "library",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/kbeaugrand/SemanticKernel.Assistants",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "semantic-kernel",
+        "agents",
+        "orchestration",
+        "dotnet"
+      ],
+      "id": 84
+    },
+    {
+      "name": "datamodel-code-generator",
+      "one_line_profile": "Generator for Pydantic models from JSON Schema and OpenAPI",
+      "detailed_description": "A utility that generates Pydantic models and dataclasses from JSON Schema, OpenAPI, and YAML data sources. In the context of AI Agents, this is a critical infrastructure tool for defining tool interfaces and validating structured outputs from LLMs.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "schema_adaptation",
+        "code_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/koxudaxi/datamodel-code-generator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pydantic",
+        "json-schema",
+        "openapi",
+        "data-modeling"
+      ],
+      "id": 85
+    },
+    {
+      "name": "Deepagents",
+      "one_line_profile": "Agent harness for complex tasks built on LangChain/LangGraph",
+      "detailed_description": "An agent framework equipped with planning tools, filesystem backends, and sub-agent spawning capabilities. It is designed to handle complex, multi-step agentic tasks, suitable for orchestrating scientific research workflows.",
+      "domains": [
+        "AI5",
+        "AI5-01"
+      ],
+      "subtask_category": [
+        "agent_orchestration",
+        "planning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/langchain-ai/deepagents",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "agents",
+        "langgraph",
+        "planning",
+        "orchestration"
+      ],
+      "id": 86
+    },
+    {
+      "name": "LangChain",
+      "one_line_profile": "Framework for developing applications powered by language models",
+      "detailed_description": "The de facto standard framework for building context-aware reasoning applications. It provides the essential infrastructure for scientific agents, including tool calling, memory, and chain-of-thought reasoning capabilities.",
+      "domains": [
+        "AI5",
+        "AI5-01"
+      ],
+      "subtask_category": [
+        "agent_orchestration",
+        "tool_calling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/langchain-ai/langchain",
+      "help_website": [
+        "https://python.langchain.com/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "agents",
+        "framework",
+        "tool-integration"
+      ],
+      "id": 87
+    },
+    {
+      "name": "langchain-mcp-adapters",
+      "one_line_profile": "LangChain adapters for Model Context Protocol (MCP)",
+      "detailed_description": "Provides adapters to integrate Model Context Protocol (MCP) tools into LangChain applications. This enables LangChain-based scientific agents to communicate with external data sources and tools using the standardized MCP interface.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_calling",
+        "protocol_adaptation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/langchain-ai/langchain-mcp-adapters",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "langchain",
+        "adapter",
+        "interoperability"
+      ],
+      "id": 88
+    },
+    {
+      "name": "langchainjs-mcp-adapters",
+      "one_line_profile": "TypeScript adapters for Model Context Protocol (MCP) in LangChain.js",
+      "detailed_description": "The TypeScript/JavaScript equivalent of the MCP adapters for LangChain, enabling web-based or Node.js-based scientific agents to utilize MCP-compliant tools and data sources.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_calling",
+        "protocol_adaptation"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/langchain-ai/langchainjs-mcp-adapters",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "langchain-js",
+        "typescript",
+        "adapter"
+      ],
+      "id": 89
+    },
+    {
+      "name": "LangChain4j",
+      "one_line_profile": "Java library for integrating LLMs and agents",
+      "detailed_description": "A Java library that simplifies the integration of LLMs into Java applications. It supports RAG, tool calling (including MCP), and agent orchestration, providing a robust foundation for enterprise-grade scientific applications in the Java ecosystem.",
+      "domains": [
+        "AI5",
+        "AI5-01"
+      ],
+      "subtask_category": [
+        "agent_orchestration",
+        "tool_calling"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/langchain4j/langchain4j",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "java",
+        "llm",
+        "agents",
+        "mcp"
+      ],
+      "id": 90
+    },
+    {
+      "name": "mcp-agent",
+      "one_line_profile": "Framework for building agents using Model Context Protocol",
+      "detailed_description": "A Python library designed to build effective agents specifically leveraging the Model Context Protocol (MCP) and simple workflow patterns. It streamlines the creation of agents that can discover and utilize standardized tools.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "agent_orchestration",
+        "mcp_implementation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lastmile-ai/mcp-agent",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mcp",
+        "agents",
+        "workflow",
+        "protocol"
+      ],
+      "id": 91
+    },
+    {
+      "name": "Code-Interpreter-Api",
+      "one_line_profile": "Open source implementation of ChatGPT Code Interpreter",
+      "detailed_description": "A Python library that provides a sandbox for LLMs to execute Python code, generate charts, and analyze data. This mimics the OpenAI Code Interpreter functionality, allowing local or custom agents to perform rigorous data analysis and visualization tasks.",
+      "domains": [
+        "AI5",
+        "AI5-01"
+      ],
+      "subtask_category": [
+        "code_execution",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/leezhuuuuu/Code-Interpreter-Api",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "code-interpreter",
+        "sandbox",
+        "data-analysis",
+        "visualization"
+      ],
+      "id": 92
+    },
+    {
+      "name": "ollama-instructor",
+      "one_line_profile": "Structured output validation for Ollama models",
+      "detailed_description": "A Python library for the instruction and reliable validation of structured outputs (JSON) from LLMs running via Ollama. It uses Pydantic for schema definition, enabling deterministic data extraction workflows with local models.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "structured_output",
+        "schema_validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lennartpollvogt/ollama-instructor",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ollama",
+        "pydantic",
+        "structured-output",
+        "local-llm"
+      ],
+      "id": 93
+    },
+    {
+      "name": "tool-ahead-of-time",
+      "one_line_profile": "Shim to add tool calling capabilities to LLMs",
+      "detailed_description": "A Python package that adds tool calling capabilities to LLM classes (like LangChain's ChatOpenAI) that might not natively support them or are waiting for framework updates. It facilitates the immediate use of new models in agentic tool-use workflows.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_calling",
+        "compatibility_layer"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/leockl/tool-ahead-of-time",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "tool-calling",
+        "langchain",
+        "llm-adapter"
+      ],
+      "id": 94
+    },
+    {
+      "name": "toolhub",
+      "one_line_profile": "Collection of tools for LLM function calling",
+      "detailed_description": "A library providing a collection of pre-built tools designed for LLM function calling. It serves as a registry of ready-to-use functions that agents can invoke to perform specific tasks.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "tool_registry",
+        "function_calling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/levrofin/toolhub",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "tools",
+        "function-calling",
+        "registry"
+      ],
+      "id": 95
+    },
+    {
+      "name": "mcp-go",
+      "one_line_profile": "Go implementation of the Model Context Protocol (MCP)",
+      "detailed_description": "A Go library implementing the Model Context Protocol (MCP), enabling the creation of high-performance MCP servers and clients. This is core infrastructure for integrating external tools and data sources into the AI research agent ecosystem.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "mcp_implementation",
+        "protocol_infrastructure"
+      ],
+      "application_level": "library",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/mark3labs/mcp-go",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "go",
+        "mcp",
+        "protocol",
+        "interoperability"
+      ],
+      "id": 96
+    },
+    {
+      "name": "mcphost",
+      "one_line_profile": "CLI host for Model Context Protocol (MCP) tools",
+      "detailed_description": "A CLI application that acts as a host for Large Language Models to interact with external tools via the Model Context Protocol. It provides a runtime environment for testing and deploying MCP-compliant tools.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "mcp_hosting",
+        "tool_execution"
+      ],
+      "application_level": "solver",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/mark3labs/mcphost",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "mcp",
+        "host",
+        "runtime"
+      ],
+      "id": 97
+    },
+    {
+      "name": "Retrieval-Framework",
+      "one_line_profile": "Tool for converting scientific PDFs into plain text for RAG and agents",
+      "detailed_description": "A specialized tool designed to process scientific PDFs and convert them into plain text, facilitating the creation of RAG systems or agents specifically for academic knowledge and literature review.",
+      "domains": [
+        "AI5",
+        "AI5-02"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "literature_review"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/tensorsense/Retrieval-Framework",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pdf-parsing",
+        "scientific-literature",
+        "rag",
+        "academic-knowledge"
+      ],
+      "id": 98
+    }
+  ]
+}

@@ -1,0 +1,3502 @@
+{
+  "generated_at": "2025-12-16T04:30:34.342518+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "M2",
+      "leaf_cluster_name": "材料-分子动力学与力场生态",
+      "domain": "Materials",
+      "typical_objects": "trajectories/force fields",
+      "task_chain": "力场→模拟→分析→可视化→闭环",
+      "tool_form": "MD引擎 + 势模型 + 分析"
+    },
+    "unit": {
+      "unit_id": "M2-03",
+      "unit_name": "神经网络势/机器学习势工具链",
+      "target_scale": "250–600",
+      "coverage_tools": "NN potentials、training toolkits"
+    },
+    "search": {
+      "target_candidates": 600,
+      "queries": [
+        "[GH] PaiNN",
+        "[GH] AMP",
+        "[GH] sGDML",
+        "[GH] aenet",
+        "[GH] Allegro",
+        "[GH] MACE",
+        "[GH] TorchANI",
+        "[GH] SchNetPack",
+        "[GH] NequIP",
+        "[GH] DeepMD-kit",
+        "[GH] neural network potential",
+        "[GH] machine learning potential",
+        "[GH] machine learning force field",
+        "[GH] interatomic potential machine learning",
+        "[GH] deep learning molecular dynamics",
+        "[GH] atomistic machine learning",
+        "[GH] equivariant neural network potential",
+        "[GH] graph neural network potential",
+        "[GH] force field training",
+        "[GH] MLFF",
+        "[GH] NNP",
+        "[GH] molecular dynamics potentials",
+        "[GH] high-dimensional neural network potential",
+        "[WEB] neural network potential tools github",
+        "[WEB] machine learning force field software github",
+        "[WEB] deep learning interatomic potential github",
+        "[WEB] equivariant graph neural network potential github",
+        "[WEB] molecular dynamics machine learning potentials github"
+      ],
+      "total_candidates": 959,
+      "tool_candidates": 449,
+      "final_tools": 138
+    }
+  },
+  "tools": [
+    {
+      "name": "ACEpotentials.jl",
+      "one_line_profile": "Julia implementation of Atomic Cluster Expansion (ACE) potentials",
+      "detailed_description": "A Julia library for fitting and evaluating machine learning interatomic potentials based on the Atomic Cluster Expansion (ACE) framework. It provides tools for parameterizing potentials for molecular dynamics simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_fitting",
+        "molecular_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/ACEsuit/ACEpotentials.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "ace",
+        "interatomic-potentials",
+        "machine-learning"
+      ],
+      "id": 1
+    },
+    {
+      "name": "MACE",
+      "one_line_profile": "Higher-order equivariant message passing neural network potentials",
+      "detailed_description": "MACE (Multi-Atomic Cluster Expansion) is a machine learning interatomic potential that combines the efficiency of message passing with the accuracy of high-body order equivariant features. It is used for fast and accurate molecular dynamics simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_fitting",
+        "molecular_dynamics",
+        "structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ACEsuit/mace",
+      "help_website": [
+        "https://mace-docs.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "equivariant-gnn",
+        "force-field",
+        "molecular-dynamics",
+        "pytorch"
+      ],
+      "id": 2
+    },
+    {
+      "name": "MACE-Foundations",
+      "one_line_profile": "Pre-trained foundation models for MACE potentials",
+      "detailed_description": "A repository hosting foundation models based on the MACE architecture, including models trained on the Materials Project (MP) and other large datasets, enabling zero-shot or few-shot application to materials modeling tasks.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "model_deployment",
+        "inference"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/ACEsuit/mace-foundations",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "foundation-models",
+        "pretrained-models",
+        "materials-science"
+      ],
+      "id": 3
+    },
+    {
+      "name": "MACE-JAX",
+      "one_line_profile": "JAX implementation of MACE potentials",
+      "detailed_description": "The JAX implementation of the MACE interatomic potential, leveraging JAX's compilation and automatic differentiation capabilities for efficient training and inference in molecular simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_fitting",
+        "molecular_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ACEsuit/mace-jax",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "jax",
+        "force-field",
+        "molecular-dynamics"
+      ],
+      "id": 4
+    },
+    {
+      "name": "MACE-Layer",
+      "one_line_profile": "Core equivariant graph neural network layers for MACE",
+      "detailed_description": "Provides the underlying higher-order equivariant graph neural network layers for 3D point clouds used in constructing MACE potentials. It serves as a building block for developing equivariant models in materials science.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "model_development"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ACEsuit/mace-layer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "equivariant-gnn",
+        "deep-learning",
+        "point-clouds"
+      ],
+      "id": 5
+    },
+    {
+      "name": "MACE-OFF",
+      "one_line_profile": "MACE models for organic molecules (MACE-OFF23)",
+      "detailed_description": "A collection of MACE models specifically trained for organic chemistry applications (MACE-OFF23), suitable for simulating organic molecules and drug-like compounds.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "inference",
+        "molecular_dynamics"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/ACEsuit/mace-off",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "organic-chemistry",
+        "force-field",
+        "pretrained-models"
+      ],
+      "id": 6
+    },
+    {
+      "name": "MOFSimBench",
+      "one_line_profile": "Benchmark for ML potentials in Metal-Organic Frameworks",
+      "detailed_description": "A benchmarking toolkit designed to evaluate the performance of universal machine learning interatomic potentials specifically for molecular modeling of Metal-Organic Frameworks (MOFs).",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "validation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/AI4ChemS/mofsim-bench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mof",
+        "benchmarking",
+        "machine-learning-potentials"
+      ],
+      "id": 7
+    },
+    {
+      "name": "ESP_DNN",
+      "one_line_profile": "GNN for predicting electrostatic potential surfaces",
+      "detailed_description": "A Graph-Convolutional Deep Neural Network designed to predict electrostatic potential (ESP) surfaces of molecules, facilitating rapid evaluation of molecular properties for drug discovery and chemistry.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "electrostatics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AstexUK/ESP_DNN",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "gnn",
+        "electrostatic-potential",
+        "chemistry"
+      ],
+      "id": 8
+    },
+    {
+      "name": "Equitrain",
+      "one_line_profile": "Unified framework for training ML interatomic potentials",
+      "detailed_description": "A unified framework designed for training and fine-tuning various machine learning interatomic potentials. It streamlines the workflow for developing potentials from ab initio data.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_training",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BAMeScience/equitrain",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "training-framework",
+        "machine-learning-potentials",
+        "fine-tuning"
+      ],
+      "id": 9
+    },
+    {
+      "name": "PES-Learn",
+      "one_line_profile": "Automated generation of ML models for Potential Energy Surfaces",
+      "detailed_description": "A Python library that automates the generation of machine learning models for molecular Potential Energy Surfaces (PES). It handles data generation, sampling, and model training to create accurate PES representations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "pes_construction",
+        "model_generation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CCQC/PES-Learn",
+      "help_website": [
+        "https://pes-learn.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "potential-energy-surface",
+        "machine-learning",
+        "quantum-chemistry"
+      ],
+      "id": 10
+    },
+    {
+      "name": "CHGNet",
+      "one_line_profile": "Charge-informed universal neural network potential",
+      "detailed_description": "A pretrained universal neural network potential that incorporates charge information for atomistic modeling. CHGNet is capable of predicting energies, forces, stresses, and magnetic moments for a wide range of materials.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_inference",
+        "molecular_dynamics",
+        "material_property_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CederGroupHub/chgnet",
+      "help_website": [
+        "https://chgnet.lbl.gov"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "universal-potential",
+        "charge-transfer",
+        "materials-science"
+      ],
+      "id": 11
+    },
+    {
+      "name": "NequIP-LES",
+      "one_line_profile": "Local Environment Selection extension for NequIP",
+      "detailed_description": "An extension package for the NequIP code that implements Local Environment Selection (LES). This technique improves the scalability and efficiency of equivariant neural network potentials for large-scale simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_optimization",
+        "simulation_efficiency"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ChengUCB/NequIP-LES",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nequip",
+        "optimization",
+        "molecular-dynamics"
+      ],
+      "id": 12
+    },
+    {
+      "name": "n2p2",
+      "one_line_profile": "Neural Network Potential Package for MD simulations",
+      "detailed_description": "n2p2 (Neural Network Potential Package) is a C++ software for training and using high-dimensional neural network potentials. It is widely used for atomistic simulations and integrates with LAMMPS.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_training",
+        "molecular_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/CompPhysVienna/n2p2",
+      "help_website": [
+        "https://compphysvienna.github.io/n2p2/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "neural-network-potential",
+        "lammps-interface",
+        "cpp"
+      ],
+      "id": 13
+    },
+    {
+      "name": "FitSNAP",
+      "one_line_profile": "Software for generating machine-learning interatomic potentials for LAMMPS",
+      "detailed_description": "FitSNAP is a software package designed to generate machine-learning interatomic potentials (ML-IAP) specifically for use with the LAMMPS molecular dynamics engine. It automates the training process of potentials like SNAP (Spectral Neighbor Analysis Potential) using quantum mechanical data.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_training",
+        "force_field_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FitSNAP/FitSNAP",
+      "help_website": [
+        "https://fitsnap.github.io/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "lammps",
+        "machine-learning-potential",
+        "snap",
+        "molecular-dynamics"
+      ],
+      "id": 14
+    },
+    {
+      "name": "lammps-tersoff-vector",
+      "one_line_profile": "Vectorized Implementation of the Tersoff Potential for LAMMPS",
+      "detailed_description": "This repository provides an optimized, vectorized implementation of the Tersoff interatomic potential for the LAMMPS molecular dynamics software, aiming to improve simulation performance for materials modeled with this potential.",
+      "domains": [
+        "M2",
+        "M2-01"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "potential_implementation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/HPAC/lammps-tersoff-vector",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "lammps",
+        "tersoff-potential",
+        "optimization",
+        "molecular-dynamics"
+      ],
+      "id": 15
+    },
+    {
+      "name": "aenet-lammps",
+      "one_line_profile": "Interface module between aenet and LAMMPS for ANN potentials",
+      "detailed_description": "This package provides an interface to couple the Atomic Energy Network (aenet) software with LAMMPS, enabling the use of Artificial Neural Network (ANN) potentials trained in aenet within LAMMPS molecular dynamics simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "interface_bridge",
+        "molecular_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/HidekiMori-CIT/aenet-lammps",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "lammps",
+        "aenet",
+        "neural-network-potential",
+        "interface"
+      ],
+      "id": 16
+    },
+    {
+      "name": "DPmoire",
+      "one_line_profile": "Tool for constructing machine learning force fields in moiré systems",
+      "detailed_description": "DPmoire is a specialized tool designed to construct accurate machine learning force fields specifically for moiré systems, addressing the challenges of modeling large-scale twisted bilayer structures.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "force_field_generation",
+        "potential_training"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/JiaxuanLiu-Arsko/DPmoire",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "moire-systems",
+        "machine-learning-potential",
+        "force-field"
+      ],
+      "id": 17
+    },
+    {
+      "name": "CatBench",
+      "one_line_profile": "Benchmark Framework of Machine Learning Interatomic Potentials",
+      "detailed_description": "CatBench is a benchmarking framework designed to evaluate the performance of Machine Learning Interatomic Potentials (MLIPs), specifically focusing on their accuracy in predicting adsorption energies in catalytic systems.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "model_evaluation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JinukMoon/CatBench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmarking",
+        "mlip",
+        "adsorption-energy",
+        "catalysis"
+      ],
+      "id": 18
+    },
+    {
+      "name": "cp2k_2_deepmdkit",
+      "one_line_profile": "Tool for converting CP2K output to DeepMD-kit input",
+      "detailed_description": "A utility tool designed to facilitate the workflow between CP2K (ab initio molecular dynamics) and DeepMD-kit (machine learning potentials) by converting CP2K output data into the input format required for training DeepMD models.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "format_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KMNitesh05/cp2k_2_deepmdkit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cp2k",
+        "deepmd-kit",
+        "data-conversion",
+        "workflow-tool"
+      ],
+      "id": 19
+    },
+    {
+      "name": "MatPL",
+      "one_line_profile": "Material Potential Library for generating machine learning force fields",
+      "detailed_description": "MatPL (formerly PWMLFF) is an open-source software package designed to rapidly generate machine learning force fields with accuracy comparable to Ab Initio Molecular Dynamics (AIMD). It supports the training and usage of ML potentials for material simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "force_field_generation",
+        "potential_training",
+        "molecular_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/LonxunQuantum/MatPL",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "machine-learning-potential",
+        "force-field",
+        "aimd",
+        "materials-science"
+      ],
+      "id": 20
+    },
+    {
+      "name": "SIMPLE-NN",
+      "one_line_profile": "SNU Interatomic Machine-learning PotentiaL packagE",
+      "detailed_description": "SIMPLE-NN is a package for generating and using neural network-based interatomic potentials. It provides tools for training potentials from ab initio data and using them for atomistic simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_training",
+        "force_field_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MDIL-SNU/SIMPLE-NN",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "neural-network-potential",
+        "machine-learning",
+        "atomistic-simulation"
+      ],
+      "id": 21
+    },
+    {
+      "name": "SPINNER",
+      "one_line_profile": "Structure Prediction of Inorganic crystals using Neural Network potentials",
+      "detailed_description": "SPINNER is a tool for predicting the structures of inorganic crystals. It combines Neural Network potentials with evolutionary and random search algorithms to efficiently explore the potential energy surface and identify stable crystal structures.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "crystal_structure_search"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/MDIL-SNU/SPINNER",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "structure-prediction",
+        "neural-network-potential",
+        "evolutionary-algorithm",
+        "inorganic-crystals"
+      ],
+      "id": 22
+    },
+    {
+      "name": "SevenNet",
+      "one_line_profile": "Graph neural network interatomic potential package",
+      "detailed_description": "SevenNet is a graph neural network (GNN) based interatomic potential package. It is designed for efficient multi-GPU parallel molecular dynamics simulations, offering high performance and accuracy for material modeling.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "potential_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MDIL-SNU/SevenNet",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "graph-neural-network",
+        "molecular-dynamics",
+        "multi-gpu",
+        "interatomic-potential"
+      ],
+      "id": 23
+    },
+    {
+      "name": "k_SRME",
+      "one_line_profile": "Heat-conductivity benchmark test for foundational machine-learning potentials",
+      "detailed_description": "k_SRME is a benchmark suite designed to evaluate the performance of foundational machine-learning potentials specifically in the context of heat conductivity calculations, providing standardized tests for thermal properties.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "property_prediction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MPA2suite/k_SRME",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "heat-conductivity",
+        "benchmarking",
+        "machine-learning-potential",
+        "thermal-properties"
+      ],
+      "id": 24
+    },
+    {
+      "name": "PyXtal_FF",
+      "one_line_profile": "Machine Learning Interatomic Potential Predictions",
+      "detailed_description": "PyXtal_FF is a Python package for developing and using machine learning interatomic potentials. It supports various descriptors and regression methods to model atomic interactions for materials simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_training",
+        "force_field_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MaterSim/PyXtal_FF",
+      "help_website": [
+        "https://pyxtal-ff.readthedocs.io/"
+      ],
+      "license": null,
+      "tags": [
+        "machine-learning-potential",
+        "materials-science",
+        "python",
+        "force-field"
+      ],
+      "id": 25
+    },
+    {
+      "name": "gamd-openmm",
+      "one_line_profile": "Gaussian Accelerated Molecular Dynamics (GaMD) for OpenMM",
+      "detailed_description": "This repository implements Gaussian Accelerated Molecular Dynamics (GaMD) as a plugin/extension for the OpenMM simulation toolkit. It enables unconstrained enhanced sampling and free energy calculations for biomolecules.",
+      "domains": [
+        "Bio",
+        "M2"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "enhanced_sampling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MiaoLab20/gamd-openmm",
+      "help_website": [
+        "http://miao.compbio.ku.edu/GaMD/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "openmm",
+        "gamd",
+        "enhanced-sampling",
+        "biomolecular-simulation"
+      ],
+      "id": 26
+    },
+    {
+      "name": "dem_hyperelasticity",
+      "one_line_profile": "Deep Energy Method for solving hyperelasticity PDEs",
+      "detailed_description": "Implements the 'Deep Energy Method' (DEM), a neural network-based approach to solve partial differential equations in nonlinear elasticity at finite strain by minimizing potential energy.",
+      "domains": [
+        "Physics",
+        "M2"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "mechanics_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MinhNguyenIKM/dem_hyperelasticity",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pinn",
+        "hyperelasticity",
+        "mechanics",
+        "deep-energy-method"
+      ],
+      "id": 27
+    },
+    {
+      "name": "nnpdf",
+      "one_line_profile": "Machine learning framework for global analyses of parton distributions",
+      "detailed_description": "NNPDF is an open-source machine learning framework used in High Energy Physics to determine the parton distribution functions (PDFs) of the proton using experimental data and neural networks.",
+      "domains": [
+        "Physics"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "parameter_estimation"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NNPDF/nnpdf",
+      "help_website": [
+        "https://docs.nnpdf.science/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "high-energy-physics",
+        "parton-distribution",
+        "qcd",
+        "machine-learning"
+      ],
+      "id": 28
+    },
+    {
+      "name": "cuEquivariance",
+      "one_line_profile": "Math library for accelerating equivariant neural networks in science",
+      "detailed_description": "cuEquivariance is a specialized library providing low-level primitives and tensor operations to accelerate equivariant neural networks used in scientific models like DiffDock, MACE, Allegro, and NEQUIP.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "model_acceleration",
+        "infrastructure"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NVIDIA/cuEquivariance",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "equivariant-neural-networks",
+        "cuda",
+        "acceleration",
+        "scientific-ml"
+      ],
+      "id": 29
+    },
+    {
+      "name": "nnpf",
+      "one_line_profile": "Machine Learning applied to Phase Field methods",
+      "detailed_description": "nnpf is a tool/framework that applies machine learning techniques to accelerate or enhance Phase Field methods, which are widely used for simulating microstructure evolution in materials.",
+      "domains": [
+        "M2",
+        "Physics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "phase_field_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PhaseFieldICJ/nnpf",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "phase-field",
+        "machine-learning",
+        "materials-science",
+        "microstructure"
+      ],
+      "id": 30
+    },
+    {
+      "name": "NNP-MM",
+      "one_line_profile": "Interface scripts coupling TorchANI neural network potentials with NAMD",
+      "detailed_description": "A set of scripts and tools designed to interface the TorchANI neural network potential library with the NAMD molecular dynamics engine, enabling QM/MM-style simulations or pure ML-potential driven MD within NAMD.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "simulation_coupling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RowleyGroup/NNP-MM",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "namd",
+        "torchani",
+        "interface",
+        "molecular-dynamics"
+      ],
+      "id": 31
+    },
+    {
+      "name": "MLFF-Framework",
+      "one_line_profile": "Machine Learning Force Field Framework by SAIT",
+      "detailed_description": "A software package provided by Samsung Advanced Institute of Technology (SAIT) for developing, training, and deploying machine learning force fields for atomistic simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "force_field_training",
+        "potential_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SAITPublic/MLFF-Framework",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "machine-learning-force-field",
+        "materials-science",
+        "sait"
+      ],
+      "id": 32
+    },
+    {
+      "name": "DScribe",
+      "one_line_profile": "Library for creating machine learning descriptors for atomistic systems",
+      "detailed_description": "A Python package for transforming atomic structures into fixed-size numerical fingerprints (descriptors) such as Coulomb matrix, Sine matrix, Ewald sum matrix, ACSF, and SOAP, suitable for machine learning models in materials science.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "feature_engineering",
+        "representation_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/SINGROUP/dscribe",
+      "help_website": [
+        "https://singroup.github.io/dscribe/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "descriptors",
+        "soap",
+        "acsf",
+        "atomistic-systems"
+      ],
+      "id": 33
+    },
+    {
+      "name": "PDMD",
+      "one_line_profile": "Potential-free Data-driven Molecular Dynamics",
+      "detailed_description": "A data-driven molecular dynamics simulation tool developed by TACC that bypasses explicit potential functions, using data-driven methods to propagate molecular systems.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/TACC/PDMD",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "molecular-dynamics",
+        "data-driven",
+        "tacc"
+      ],
+      "id": 34
+    },
+    {
+      "name": "NNsForMD",
+      "one_line_profile": "Neural network class for molecular dynamics predictions",
+      "detailed_description": "A Python library developed by the AiMat lab (KIT) providing neural network classes specifically designed for molecular dynamics, capable of predicting potential energy, forces, and non-adiabatic couplings.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "property_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aimat-lab/NNsForMD",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-dynamics",
+        "neural-networks",
+        "aimat"
+      ],
+      "id": 35
+    },
+    {
+      "name": "AIMNet",
+      "one_line_profile": "Atoms In Molecules Neural Network Potential",
+      "detailed_description": "Implementation of the AIMNet (Atoms In Molecules Neural Network) architecture, a modular and transferable neural network potential for modeling molecular systems and chemical reactions.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_energy_surface",
+        "molecular_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiqm/aimnet",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nnp",
+        "aimnet",
+        "quantum-chemistry"
+      ],
+      "id": 36
+    },
+    {
+      "name": "aiqm-nnp",
+      "one_line_profile": "Common tools for PyTorch based neural network potentials",
+      "detailed_description": "A utility library providing common components and tools for developing and running PyTorch-based neural network potentials, maintained by the AIQM organization (developers of TorchANI).",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "development_utility",
+        "model_training"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiqm/nnp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "nnp",
+        "utility"
+      ],
+      "id": 37
+    },
+    {
+      "name": "TorchANI",
+      "one_line_profile": "PyTorch implementation of ANI neural network potentials",
+      "detailed_description": "TorchANI is a PyTorch-based library for training and using ANI (Accurate Neural network engine for molecular Energies) deep learning models for interatomic potentials, enabling highly accurate molecular dynamics simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "potential_energy_surface"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiqm/torchani",
+      "help_website": [
+        "https://aiqm.github.io/torchani/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "ani",
+        "neural-network-potential",
+        "pytorch",
+        "molecular-dynamics"
+      ],
+      "id": 38
+    },
+    {
+      "name": "apax",
+      "one_line_profile": "Flexible and performant framework for training machine learning potentials in JAX",
+      "detailed_description": "Apax is a package for training machine learning interatomic potentials (MLIPs) using JAX. It focuses on scalability and performance, enabling efficient training of potentials for atomistic simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "model_training",
+        "potential_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/apax-hub/apax",
+      "help_website": [
+        "https://apax.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "machine-learning-potentials",
+        "jax",
+        "molecular-dynamics",
+        "force-field"
+      ],
+      "id": 39
+    },
+    {
+      "name": "arcann_training",
+      "one_line_profile": "Automated enhanced sampling for generating training sets for reactive ML potentials",
+      "detailed_description": "A workflow tool designed to automate the generation of training datasets for chemically reactive machine learning interatomic potentials through enhanced sampling techniques.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "data_generation",
+        "active_learning",
+        "sampling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/arcann-chem/arcann_training",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "active-learning",
+        "training-set-generation",
+        "reactive-chemistry",
+        "machine-learning-potentials"
+      ],
+      "id": 40
+    },
+    {
+      "name": "active-learning-md",
+      "one_line_profile": "Active learning workflow for generating machine learning interatomic potentials",
+      "detailed_description": "A workflow implementation for generating machine learning inter-atomic potentials driven by active learning, demonstrated on amorphous and liquid systems.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "active_learning",
+        "model_training",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/argonne-lcf/active-learning-md",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "active-learning",
+        "molecular-dynamics",
+        "machine-learning-potentials"
+      ],
+      "id": 41
+    },
+    {
+      "name": "mlip-arena",
+      "one_line_profile": "Benchmark platform for machine learning interatomic potentials",
+      "detailed_description": "A fair and transparent benchmarking framework for machine learning interatomic potentials (MLIPs), evaluating them beyond basic error metrics to include stability and physical properties.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "model_evaluation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/atomind-ai/mlip-arena",
+      "help_website": [
+        "https://openreview.net/forum?id=SAT0KPA5UO"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "mlip",
+        "interatomic-potentials",
+        "evaluation"
+      ],
+      "id": 42
+    },
+    {
+      "name": "SchNetPack",
+      "one_line_profile": "Deep Neural Networks for Atomistic Systems",
+      "detailed_description": "SchNetPack is a toolbox for the development and application of deep neural networks to the prediction of potential energy surfaces and other quantum-chemical properties of molecules and materials.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "model_training",
+        "property_prediction",
+        "molecular_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/atomistic-machine-learning/schnetpack",
+      "help_website": [
+        "https://schnetpack.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "atomistic-simulation",
+        "force-field",
+        "schnet"
+      ],
+      "id": 43
+    },
+    {
+      "name": "G-SchNet",
+      "one_line_profile": "Generative neural networks for 3D molecular structures",
+      "detailed_description": "An extension for SchNetPack that implements G-SchNet, a generative model for sampling 3D molecular structures.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "molecule_generation",
+        "generative_model"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/atomistic-machine-learning/schnetpack-gschnet",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "generative-models",
+        "drug-design",
+        "molecular-generation"
+      ],
+      "id": 44
+    },
+    {
+      "name": "ANI-1xnr",
+      "one_line_profile": "Machine learning potential for reactive chemistry",
+      "detailed_description": "Implementation of the ANI-1xnr machine learning interatomic potential designed for condensed-phase reactive chemistry simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "chemical_reaction_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/atomistic-ml/ani-1xnr",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "reactive-chemistry",
+        "ani-potential",
+        "molecular-dynamics"
+      ],
+      "id": 45
+    },
+    {
+      "name": "aenet",
+      "one_line_profile": "Atomic Energy NETwork - ANN potentials for atomistic simulations",
+      "detailed_description": "The Atomic Energy NETwork (ænet) package is a collection of tools for the construction and application of atomic interaction potentials based on artificial neural networks (ANNs).",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "model_training",
+        "potential_generation",
+        "molecular_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/atomisticnet/aenet",
+      "help_website": [
+        "http://ann.atomistic.net/"
+      ],
+      "license": "MPL-2.0",
+      "tags": [
+        "neural-network-potentials",
+        "fortran",
+        "atomistic-simulation"
+      ],
+      "id": 46
+    },
+    {
+      "name": "aenet-PyTorch",
+      "one_line_profile": "PyTorch implementation of the aenet package",
+      "detailed_description": "A GPU-supported PyTorch implementation for training machine learning atomic potentials, compatible with the original aenet framework.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "model_training",
+        "potential_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/atomisticnet/aenet-PyTorch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "gpu-acceleration",
+        "neural-network-potentials"
+      ],
+      "id": 47
+    },
+    {
+      "name": "aenet-lammps",
+      "one_line_profile": "LAMMPS interface for aenet potentials",
+      "detailed_description": "Provides an interface to use aenet neural network potentials within the LAMMPS molecular dynamics software.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "simulation_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/atomisticnet/aenet-lammps",
+      "help_website": [],
+      "license": "MPL-2.0",
+      "tags": [
+        "lammps",
+        "interface",
+        "molecular-dynamics"
+      ],
+      "id": 48
+    },
+    {
+      "name": "FastTrack",
+      "one_line_profile": "Mass transport estimation using ML force fields",
+      "detailed_description": "A tool for fast estimation of mass transport properties (like diffusion) in materials based on machine learning force fields.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "property_estimation",
+        "mass_transport"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/atomly-materials-research-lab/FastTrack",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion",
+        "mass-transport",
+        "machine-learning-force-field"
+      ],
+      "id": 49
+    },
+    {
+      "name": "uMLIP-Interactive",
+      "one_line_profile": "GUI for universal machine learning interatomic potentials",
+      "detailed_description": "A graphical user interface for running and visualizing simulations with various universal machine learning interatomic potentials like MACE, CHGNet, and SevenNet.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "simulation_gui",
+        "visualization",
+        "molecular_dynamics"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bracerino/uMLIP-Interactive",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gui",
+        "molecular-dynamics",
+        "universal-potentials",
+        "visualization"
+      ],
+      "id": 50
+    },
+    {
+      "name": "BAMBOO",
+      "one_line_profile": "AI-driven machine learning force field for electrolytes",
+      "detailed_description": "BAMBOO (Bytedance AI Molecular BOOster) is a machine learning force field specifically designed for precise and efficient simulations of electrolyte systems.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "electrolyte_simulation",
+        "force_field"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bytedance/bamboo",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "electrolytes",
+        "machine-learning-force-field",
+        "molecular-dynamics"
+      ],
+      "id": 51
+    },
+    {
+      "name": "Cairn.jl",
+      "one_line_profile": "Enhanced sampling algorithms for active learning of ML-IPs",
+      "detailed_description": "A Julia package implementing enhanced sampling algorithms specifically designed for the active learning of machine learning interatomic potentials (ML-IPs).",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "active_learning",
+        "sampling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/cesmix-mit/Cairn.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "active-learning",
+        "sampling",
+        "mlip",
+        "julia"
+      ],
+      "id": 52
+    },
+    {
+      "name": "PotentialLearning.jl",
+      "one_line_profile": "Atomistic data optimization and interatomic potential modeling tool",
+      "detailed_description": "A Julia package for optimizing atomistic data and fitting interatomic potential models within molecular dynamics workflows.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_fitting",
+        "data_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/cesmix-mit/PotentialLearning.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "interatomic-potentials",
+        "molecular-dynamics",
+        "julia"
+      ],
+      "id": 53
+    },
+    {
+      "name": "IANN",
+      "one_line_profile": "Equivariant interatomic neural network potential framework",
+      "detailed_description": "IANN (InterAtomic Neural Network Framework) is a package for creating and training equivariant interatomic neural network potentials.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_training",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/changzhiai/IANN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-network-potential",
+        "equivariant-nn",
+        "force-field"
+      ],
+      "id": 54
+    },
+    {
+      "name": "ParamGULP",
+      "one_line_profile": "Interatomic potential fitting tool for GULP",
+      "detailed_description": "A tool for fitting interatomic potentials for molecular dynamics simulations, designed to work with GULP.",
+      "domains": [
+        "M2",
+        "M2-01"
+      ],
+      "subtask_category": [
+        "potential_fitting",
+        "parameterization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chejunwei2/ParamGULP",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gulp",
+        "potential-fitting",
+        "molecular-dynamics"
+      ],
+      "id": 55
+    },
+    {
+      "name": "muse",
+      "one_line_profile": "Builder for amorphous solids and liquid mixtures using MLIPs",
+      "detailed_description": "A Python package for fast building of amorphous solids and liquid mixtures structures using Materials Project data and machine learning interatomic potentials.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "structure_generation",
+        "simulation_setup"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chiang-yuan/muse",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "structure-building",
+        "amorphous-solids",
+        "mlip"
+      ],
+      "id": 56
+    },
+    {
+      "name": "modelforge",
+      "one_line_profile": "Infrastructure to implement and train Neural Network Potentials",
+      "detailed_description": "A library providing infrastructure to implement, train, and deploy neural network potentials (NNPs) for molecular simulation.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_training",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/choderalab/modelforge",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nnp",
+        "molecular-simulation",
+        "training-infrastructure"
+      ],
+      "id": 57
+    },
+    {
+      "name": "ART-SM",
+      "one_line_profile": "Backmapping framework from Coarse-Grained to Atomistic resolution",
+      "detailed_description": "A fragment-based machine learning framework for backmapping coarse-grained (CG) structures to atomistic resolution.",
+      "domains": [
+        "M2",
+        "M2-04"
+      ],
+      "subtask_category": [
+        "backmapping",
+        "multiscale_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chrispfae/ART-SM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "backmapping",
+        "coarse-grained",
+        "machine-learning"
+      ],
+      "id": 58
+    },
+    {
+      "name": "mlip-cleavage-benchmark",
+      "one_line_profile": "Benchmark for MLIPs on surface stability and cleavage energy",
+      "detailed_description": "A benchmarking suite for evaluating Machine Learning Interatomic Potentials (MLIPs) specifically on surface stability and cleavage energy predictions.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "validation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/d2r2group/mlip-cleavage-benchmark",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "benchmark",
+        "mlip",
+        "surface-energy"
+      ],
+      "id": 59
+    },
+    {
+      "name": "deepmd-gnn",
+      "one_line_profile": "GNN plugin for DeePMD-kit",
+      "detailed_description": "A plugin for DeePMD-kit that enables the use of various graph neural network (GNN) models within the DeePMD framework.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "potential_representation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepmodeling/deepmd-gnn",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "gnn",
+        "deepmd-kit",
+        "plugin"
+      ],
+      "id": 60
+    },
+    {
+      "name": "DeePMD-kit",
+      "one_line_profile": "Deep learning package for many-body potential energy and MD",
+      "detailed_description": "A comprehensive deep learning package for generating many-body potential energy representations and performing molecular dynamics simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_training",
+        "molecular_dynamics"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepmodeling/deepmd-kit",
+      "help_website": [
+        "http://www.deepmd.org"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "deep-potential",
+        "molecular-dynamics",
+        "force-field"
+      ],
+      "id": 61
+    },
+    {
+      "name": "DP-GEN",
+      "one_line_profile": "Deep potential generator workflow tool",
+      "detailed_description": "A workflow tool designed to generate deep-learning based models of interatomic potential energy and force fields using active learning strategies.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "active_learning"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepmodeling/dpgen",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "active-learning",
+        "workflow",
+        "deep-potential"
+      ],
+      "id": 62
+    },
+    {
+      "name": "ReactBench",
+      "one_line_profile": "Benchmark for ML-enhanced transition state search",
+      "detailed_description": "A benchmarking tool and source code for harnessing machine learning to enhance transition state search with interatomic potentials and generative models.",
+      "domains": [
+        "M2",
+        "M2-03",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "transition_state_search"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepprinciple/ReactBench",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "transition-state",
+        "benchmark",
+        "generative-models"
+      ],
+      "id": 63
+    },
+    {
+      "name": "PhaseForge",
+      "one_line_profile": "Framework for alloy phase diagram prediction using MLIPs",
+      "detailed_description": "A framework for high-throughput alloy phase diagram prediction integrating machine learning interatomic potentials (MLIPs) with ATAT and CALPHAD modeling.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "phase_diagram_prediction",
+        "thermodynamics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/dogusariturk/PhaseForge",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "calphad",
+        "phase-diagram",
+        "mlip",
+        "alloy"
+      ],
+      "id": 64
+    },
+    {
+      "name": "OMNI-P2x",
+      "one_line_profile": "Universal neural network potential for excited states",
+      "detailed_description": "A universal neural network potential designed specifically for modeling excited states in atomistic systems.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_model",
+        "excited_states"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/dralgroup/omni-p2x",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "excited-states",
+        "neural-network-potential",
+        "universal-potential"
+      ],
+      "id": 65
+    },
+    {
+      "name": "curator",
+      "one_line_profile": "Tool for building robust machine learning potentials",
+      "detailed_description": "A tool designed to assist in the curation of data and building of robust machine learning potentials for atomistic simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "data_curation",
+        "potential_training"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dtu-energy/curator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mlip",
+        "data-curation",
+        "atomistic-simulation"
+      ],
+      "id": 66
+    },
+    {
+      "name": "phi-module",
+      "one_line_profile": "Electrostatics from Laplacian Eigenbasis for NNIPs",
+      "detailed_description": "A module implementing electrostatics from Laplacian Eigenbasis for Neural Network Interatomic Potentials (NNIPs).",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_component",
+        "electrostatics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dunnolab/phi-module",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "electrostatics",
+        "nnip",
+        "laplacian-eigenbasis"
+      ],
+      "id": 67
+    },
+    {
+      "name": "qcnn-hep",
+      "one_line_profile": "Quantum CNN for HEP event classification",
+      "detailed_description": "A package demonstrating and implementing Quantum Convolutional Neural Networks (QCNN) for classifying High Energy Physics (HEP) events from particle image data.",
+      "domains": [
+        "Physics",
+        "HEP"
+      ],
+      "subtask_category": [
+        "classification",
+        "quantum_machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ericardomuten/qcnn-hep",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "hep",
+        "qcnn",
+        "quantum-machine-learning"
+      ],
+      "id": 68
+    },
+    {
+      "name": "neural-optimiser",
+      "one_line_profile": "Batched optimisation algorithms for NNP driven MD",
+      "detailed_description": "A library providing batched optimization algorithms specifically tailored for molecular dynamics simulations driven by neural network potentials.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "optimization",
+        "molecular_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/erwallace/neural-optimiser",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "optimization",
+        "nnp",
+        "molecular-dynamics"
+      ],
+      "id": 69
+    },
+    {
+      "name": "vaspMD",
+      "one_line_profile": "Tools and scripts for AIMD and MLFF-MD with VASP",
+      "detailed_description": "A collection of scripts and tools to facilitate ab initio Molecular Dynamics (AIMD) and Machine Learning Force Field MD (MLFF-MD) workflows using VASP.",
+      "domains": [
+        "M2",
+        "M2-01"
+      ],
+      "subtask_category": [
+        "workflow_tools",
+        "post_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/gabkrenzer/vaspMD",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vasp",
+        "aimd",
+        "mlff",
+        "molecular-dynamics"
+      ],
+      "id": 70
+    },
+    {
+      "name": "PnP-MACE",
+      "one_line_profile": "PnP algorithm and MACE framework for image reconstruction",
+      "detailed_description": "Utilities and methods to use the Plug-and-Play (PnP) algorithm and Multi-Agent Consensus Equilibrium (MACE) framework for image reconstruction problems like CT.",
+      "domains": [
+        "Medical Physics",
+        "Imaging"
+      ],
+      "subtask_category": [
+        "image_reconstruction",
+        "inverse_problems"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gbuzzard/PnP-MACE",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "image-reconstruction",
+        "ct",
+        "pnp-algorithm"
+      ],
+      "id": 71
+    },
+    {
+      "name": "ABFML",
+      "one_line_profile": "Rapid building and fitting of machine learning force fields",
+      "detailed_description": "A Python package for the rapid building, fitting, and application of machine learning force fields.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_fitting",
+        "force_field_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gengxingze/ABFML",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "force-field",
+        "machine-learning",
+        "fitting"
+      ],
+      "id": 72
+    },
+    {
+      "name": "painn-jax",
+      "one_line_profile": "JAX implementation of PaiNN model",
+      "detailed_description": "An implementation of the PaiNN (Polarizable Atom Interaction Neural Network) model using the JAX framework.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "potential_implementation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gerkone/painn-jax",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "painn",
+        "jax",
+        "neural-network-potential"
+      ],
+      "id": 73
+    },
+    {
+      "name": "grappa",
+      "one_line_profile": "Machine learned Molecular Mechanics force field",
+      "detailed_description": "A machine learned Molecular Mechanics force field integrated into GROMACS and OpenMM for molecular simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "force_field",
+        "molecular_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/graeter-group/grappa",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "force-field",
+        "gromacs",
+        "openmm",
+        "molecular-mechanics"
+      ],
+      "id": 74
+    },
+    {
+      "name": "OpenMACE",
+      "one_line_profile": "Open-source C++ implementation of the MACE machine learning force field architecture",
+      "detailed_description": "OpenMACE is an open-source C++ implementation of the MACE (Multi-Atomic Cluster Expansion) architecture, designed for efficient and accurate molecular dynamics simulations using equivariant message passing neural networks.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "training"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/heronsystems/OpenMACE",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "mace",
+        "force-field",
+        "molecular-dynamics",
+        "cpp"
+      ],
+      "id": 75
+    },
+    {
+      "name": "pantea",
+      "one_line_profile": "JAX-based Python library for developing machine learning interatomic potentials",
+      "detailed_description": "Pantea is a library built on JAX for creating and training machine learning interatomic potentials, leveraging JAX's automatic differentiation and compilation features for efficient potential development.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "training",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hghcomphys/pantea",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "jax",
+        "interatomic-potential",
+        "machine-learning"
+      ],
+      "id": 76
+    },
+    {
+      "name": "DAS",
+      "one_line_profile": "Dual Adaptive Sampling method for training machine learning interatomic potentials",
+      "detailed_description": "DAS (Dual Adaptive Sampling) provides a strategy for active learning in the construction of machine learning interatomic potentials, helping to select the most informative configurations for training.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "active_learning",
+        "training"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hlyang1992/das",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "active-learning",
+        "sampling",
+        "interatomic-potential"
+      ],
+      "id": 77
+    },
+    {
+      "name": "DAC-SIM",
+      "one_line_profile": "Molecular simulation package integrating MLFFs for Direct Air Capture in MOFs",
+      "detailed_description": "DAC-SIM is a molecular simulation package designed to integrate machine learning force fields (MLFFs) specifically for studying Metal-Organic Frameworks (MOFs) in the context of Direct Air Capture (DAC) applications.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hspark1212/DAC-SIM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mof",
+        "direct-air-capture",
+        "mlff",
+        "molecular-simulation"
+      ],
+      "id": 78
+    },
+    {
+      "name": "mlip",
+      "one_line_profile": "Library for efficient training and application of Machine Learning Interatomic Potentials",
+      "detailed_description": "A Python library developed by InstaDeep for the efficient training, deployment, and application of Machine Learning Interatomic Potentials (MLIP) in atomistic simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "training",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/instadeepai/mlip",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mlip",
+        "interatomic-potential",
+        "instadeep"
+      ],
+      "id": 79
+    },
+    {
+      "name": "mlipaudit",
+      "one_line_profile": "Benchmarking and validation toolkit for Machine Learning Interatomic Potentials",
+      "detailed_description": "mlipaudit provides tools for benchmarking, validating, and auditing the performance and accuracy of Machine Learning Interatomic Potentials (MLIPs).",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "validation",
+        "quality_control"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/instadeepai/mlipaudit",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "benchmarking",
+        "validation",
+        "mlip"
+      ],
+      "id": 80
+    },
+    {
+      "name": "ASE_ANI",
+      "one_line_profile": "ASE interface for the ANI-1 neural network potential",
+      "detailed_description": "ASE_ANI provides a Python interface integrating the ANI-1 neural network potential with the Atomic Simulation Environment (ASE), enabling molecular dynamics and optimization using ANI potentials.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/isayev/ASE_ANI",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ani",
+        "ase",
+        "neural-network-potential"
+      ],
+      "id": 81
+    },
+    {
+      "name": "amaceing_toolkit",
+      "one_line_profile": "Toolkit for input generation and post-processing of ML potential simulations",
+      "detailed_description": "A Python package designed to facilitate the creation of input files for various simulation codes (CP2K, MACE-torch, MatterSim, etc.) and to handle the post-processing and evaluation of simulation results.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jhaens/amaceing_toolkit",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "pre-processing",
+        "post-processing",
+        "mace",
+        "cp2k"
+      ],
+      "id": 82
+    },
+    {
+      "name": "augment-atoms",
+      "one_line_profile": "Dataset augmentation library for atomistic machine learning",
+      "detailed_description": "A Python library specifically designed for performing data augmentation on atomistic datasets, enhancing the training of machine learning interatomic potentials.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "augmentation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jla-gardner/augment-atoms",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-augmentation",
+        "atomistic-data",
+        "machine-learning"
+      ],
+      "id": 83
+    },
+    {
+      "name": "mff",
+      "one_line_profile": "Package for building nonparametric machine learning force fields",
+      "detailed_description": "A Python package for constructing nonparametric force fields using machine learning techniques, developed by the KCL-TSCM group.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "training",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kcl-tscm/mff",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "force-field",
+        "nonparametric",
+        "machine-learning"
+      ],
+      "id": 84
+    },
+    {
+      "name": "MDsim",
+      "one_line_profile": "Simulator for training and running MD with ML force fields",
+      "detailed_description": "A package for training machine learning force fields and performing molecular dynamics simulations, associated with a TMLR 2023 publication.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "training"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kyonofx/MDsim",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-dynamics",
+        "mlff",
+        "simulator"
+      ],
+      "id": 85
+    },
+    {
+      "name": "catalyticLAM",
+      "one_line_profile": "Universal Catalytic Large Atomic Model for catalysis simulations",
+      "detailed_description": "A machine-learning-based interatomic potential tool specifically designed for catalysis applications, aiming to provide a universal large atomic model.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lalaheihaihei/catalyticLAM",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "catalysis",
+        "large-atomic-model",
+        "interatomic-potential"
+      ],
+      "id": 86
+    },
+    {
+      "name": "ALF",
+      "one_line_profile": "Active Learning Framework for machine-learned interatomic potentials",
+      "detailed_description": "ALF is a framework developed at LANL for performing active learning to efficiently train machine-learned interatomic potentials by automatically selecting training configurations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "active_learning",
+        "training"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lanl/ALF",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "active-learning",
+        "lanl",
+        "interatomic-potential"
+      ],
+      "id": 87
+    },
+    {
+      "name": "hippynn",
+      "one_line_profile": "Python library for atomistic machine learning and neural networks",
+      "detailed_description": "Hippynn is a modular library for building and training atomistic machine learning models, particularly neural network potentials, developed at LANL.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "training",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lanl/hippynn",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "atomistic-ml",
+        "neural-networks",
+        "lanl"
+      ],
+      "id": 88
+    },
+    {
+      "name": "alchemical-mlip",
+      "one_line_profile": "Alchemical machine learning interatomic potentials",
+      "detailed_description": "A tool for developing and using alchemical machine learning interatomic potentials, enabling exploration of chemical space through alchemical changes.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/learningmatter-mit/alchemical-mlip",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "alchemy",
+        "mlip",
+        "chemical-space"
+      ],
+      "id": 89
+    },
+    {
+      "name": "TSFF",
+      "one_line_profile": "Machine learning force field method for transition state searching",
+      "detailed_description": "TSFF implements a machine learning force field method specifically tailored for transition state searching in catalytic reactions.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/littlepeachs/TSFF",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "transition-state",
+        "catalysis",
+        "force-field"
+      ],
+      "id": 90
+    },
+    {
+      "name": "phonon_uMLIP",
+      "one_line_profile": "Phonon property calculation using universal MLIPs",
+      "detailed_description": "A tool to calculate phonon properties of materials by leveraging multiple universal machine learning interatomic potentials.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/maplewen4/phonon_uMLIP",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "phonon",
+        "mlip",
+        "material-properties"
+      ],
+      "id": 91
+    },
+    {
+      "name": "deeptime",
+      "one_line_profile": "Python library for analysis of time-series data and molecular dynamics",
+      "detailed_description": "Deeptime is a Python library for the analysis of time-series data, specifically focused on molecular dynamics, offering tools for dimensionality reduction, clustering, and Markov state modeling.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "analysis",
+        "dimensionality_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/markovmodel/deeptime",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "molecular-dynamics",
+        "time-series",
+        "markov-models"
+      ],
+      "id": 92
+    },
+    {
+      "name": "HDNNP",
+      "one_line_profile": "Implementation of High Dimensional Neural Network Potentials",
+      "detailed_description": "A Python implementation of High Dimensional Neural Network Potentials (HDNNP) for atomistic simulations.",
+      "domains": [
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "training"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/masayoshi-ogura/HDNNP",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "hdnnp",
+        "neural-network-potential",
+        "atomistic-simulation"
+      ],
+      "id": 93
+    },
+    {
+      "name": "maml",
+      "one_line_profile": "Python library for materials machine learning and descriptors",
+      "detailed_description": "A Python library designed for materials machine learning, offering functionality for materials descriptors, machine learning force fields, and deep learning models tailored for materials science applications.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "feature_extraction",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/materialyzeai/maml",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "materials-informatics",
+        "descriptors",
+        "machine-learning-force-fields"
+      ],
+      "id": 94
+    },
+    {
+      "name": "mlearn",
+      "one_line_profile": "Benchmark suite for machine learning interatomic potentials",
+      "detailed_description": "A benchmarking suite designed to evaluate and compare machine learning interatomic potentials for materials, facilitating the assessment of model performance and accuracy.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "validation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialyzeai/mlearn",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "benchmark",
+        "interatomic-potentials",
+        "machine-learning"
+      ],
+      "id": 95
+    },
+    {
+      "name": "MACE-H",
+      "one_line_profile": "GNN for predicting electronic Hamiltonians in atomic orbital representation",
+      "detailed_description": "A Graph Neural Network (GNN) based model for predicting electronic Hamiltonians in atomic orbital representation, incorporating many-body messages for accurate electronic structure prediction.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "electronic_structure_prediction",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/maurergroup/MACE-H",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "hamiltonian",
+        "gnn",
+        "electronic-structure"
+      ],
+      "id": 96
+    },
+    {
+      "name": "featomic",
+      "one_line_profile": "Library for computing representations for atomistic machine learning",
+      "detailed_description": "A library dedicated to computing atomic representations (descriptors) for atomistic machine learning, serving as a core component in ML potential workflows.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "feature_extraction",
+        "representation_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/metatensor/featomic",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "atomistic-representations",
+        "descriptors",
+        "rust"
+      ],
+      "id": 97
+    },
+    {
+      "name": "metatensor",
+      "one_line_profile": "Sparse tensor data format for atomistic machine learning",
+      "detailed_description": "A self-describing sparse tensor data format and library designed to handle data for atomistic machine learning and other scientific computing tasks, ensuring interoperability and efficiency.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "infrastructure"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/metatensor/metatensor",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "tensor-format",
+        "atomistic-ml",
+        "data-structure"
+      ],
+      "id": 98
+    },
+    {
+      "name": "metatomic",
+      "one_line_profile": "Portable atomistic machine learning models library",
+      "detailed_description": "A library enabling the use of atomistic machine learning models across different environments and applications, focusing on portability and deployment of trained potentials.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "inference",
+        "deployment"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/metatensor/metatomic",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "inference",
+        "portability",
+        "atomistic-models"
+      ],
+      "id": 99
+    },
+    {
+      "name": "metatrain",
+      "one_line_profile": "Training and fine-tuning toolkit for atomistic ML models",
+      "detailed_description": "A toolkit to train, fine-tune, and manipulate machine learning models for atomistic systems, streamlining the model development workflow in materials science.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "training",
+        "model_optimization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/metatensor/metatrain",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "training-pipeline",
+        "fine-tuning",
+        "atomistic-ml"
+      ],
+      "id": 100
+    },
+    {
+      "name": "MatterSim",
+      "one_line_profile": "Deep learning atomistic model across elements, temperatures and pressures",
+      "detailed_description": "A deep learning-based atomistic model capable of simulating materials across a wide range of elements, temperatures, and pressures, designed for broad applicability in materials simulation.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/microsoft/mattersim",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "molecular-dynamics",
+        "universal-potential"
+      ],
+      "id": 101
+    },
+    {
+      "name": "Timewarp",
+      "one_line_profile": "Deep learning accelerator for molecular dynamics simulation",
+      "detailed_description": "A research project and tool using deep learning techniques to accelerate molecular dynamics simulations, enabling the exploration of longer timescales.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "acceleration"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microsoft/timewarp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-dynamics",
+        "acceleration",
+        "deep-learning"
+      ],
+      "id": 102
+    },
+    {
+      "name": "Allegro",
+      "one_line_profile": "Scalable equivariant deep learning interatomic potentials",
+      "detailed_description": "An open-source code for building highly scalable and accurate E(3)-equivariant deep learning interatomic potentials, designed for efficient molecular dynamics simulations.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "potential_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mir-group/allegro",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "equivariant-gnn",
+        "interatomic-potential",
+        "molecular-dynamics"
+      ],
+      "id": 103
+    },
+    {
+      "name": "NequIP",
+      "one_line_profile": "E(3)-equivariant graph neural networks for interatomic potentials",
+      "detailed_description": "A code for building E(3)-equivariant interatomic potentials using graph neural networks, providing high data efficiency and accuracy for atomistic simulations.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "potential_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mir-group/nequip",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "equivariant-gnn",
+        "interatomic-potential",
+        "data-efficient"
+      ],
+      "id": 104
+    },
+    {
+      "name": "pair_nequip_allegro",
+      "one_line_profile": "LAMMPS pair styles for NequIP and Allegro potentials",
+      "detailed_description": "Provides LAMMPS pair styles to enable the use of NequIP and Allegro deep learning interatomic potentials within the LAMMPS molecular dynamics simulation package.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "integration"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mir-group/pair_nequip_allegro",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "lammps-plugin",
+        "molecular-dynamics",
+        "interface"
+      ],
+      "id": 105
+    },
+    {
+      "name": "lineshape_tools",
+      "one_line_profile": "Tools for evaluating electron-phonon coupling effects on optical properties",
+      "detailed_description": "Python software implementing the formulation for evaluating the effects of electron-phonon coupling on the optical properties of defects, designed to interface with the MACE machine learning interatomic potential.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "analysis",
+        "property_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mturiansky/lineshape_tools",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "electron-phonon",
+        "optical-properties",
+        "mace-interface"
+      ],
+      "id": 106
+    },
+    {
+      "name": "pesnet",
+      "one_line_profile": "Ab-Initio Potential Energy Surfaces by Pairing GNNs with Neural Wave Functions",
+      "detailed_description": "Implementation of PESNet for generating ab-initio potential energy surfaces by combining Graph Neural Networks with Neural Wave Functions, enabling sampling-free inference.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "potential_energy_surface"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/n-gao/pesnet",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "potential-energy-surface",
+        "neural-wave-functions",
+        "gnn"
+      ],
+      "id": 107
+    },
+    {
+      "name": "alebrew",
+      "one_line_profile": "Uncertainty-biased molecular dynamics for learning interatomic potentials",
+      "detailed_description": "A tool implementing uncertainty-biased molecular dynamics to facilitate the learning of uniformly accurate interatomic potentials, improving the robustness of ML potentials.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "training",
+        "active_learning"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nec-research/alebrew",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "uncertainty-quantification",
+        "active-learning",
+        "molecular-dynamics"
+      ],
+      "id": 108
+    },
+    {
+      "name": "PaiNN-model",
+      "one_line_profile": "Implementation of PaiNN model for ML interatomic potentials",
+      "detailed_description": "An efficient implementation of the PaiNN (Polarizable Atom Interaction Neural Network) model for constructing machine learning interatomic potentials.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "potential_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nityasagarjena/PaiNN-model",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "painn",
+        "interatomic-potential",
+        "representation-learning"
+      ],
+      "id": 109
+    },
+    {
+      "name": "MLFF_QD",
+      "one_line_profile": "Machine Learning Force Fields for Quantum Dots",
+      "detailed_description": "A tool for generating and using machine learning force fields specifically tailored for quantum dot systems.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nlesc-nano/MLFF_QD",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "quantum-dots",
+        "force-fields",
+        "nanostructures"
+      ],
+      "id": 110
+    },
+    {
+      "name": "NNPOps",
+      "one_line_profile": "High-performance operations for neural network potentials",
+      "detailed_description": "A library providing high-performance implementations of operations commonly used in neural network potentials, optimized for efficiency in atomistic simulations.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "simulation",
+        "acceleration"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/openmm/NNPOps",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "optimization",
+        "neural-network-potentials",
+        "cuda"
+      ],
+      "id": 111
+    },
+    {
+      "name": "GAML",
+      "one_line_profile": "Genetic Algorithm Machine Learning package for automated force field parameterization",
+      "detailed_description": "GAML (Genetic Algorithm Machine Learning) is a software package designed to automate the parameterization of force fields using genetic algorithms. It facilitates the optimization of force field parameters to match reference data, streamlining the development of computational chemistry models.",
+      "domains": [
+        "Materials",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "force_field_parameterization",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/orlandoacevedo/GAML",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "force-field",
+        "genetic-algorithm",
+        "parameterization",
+        "computational-chemistry"
+      ],
+      "id": 112
+    },
+    {
+      "name": "charge_transfer_nnp",
+      "one_line_profile": "Graph neural network potential incorporating charge transfer effects",
+      "detailed_description": "A graph neural network-based interatomic potential that explicitly models charge transfer phenomena. This tool is designed to improve the accuracy of atomistic simulations where charge redistribution plays a critical role.",
+      "domains": [
+        "Materials",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "potential_learning",
+        "molecular_dynamics"
+      ],
+      "application_level": "model",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pfnet-research/charge_transfer_nnp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "charge-transfer",
+        "neural-network-potential",
+        "atomistic-simulation"
+      ],
+      "id": 113
+    },
+    {
+      "name": "BOMLIP-CSP",
+      "one_line_profile": "Framework integrating MLIPs with batched optimization for crystal structure prediction",
+      "detailed_description": "An open-source framework that combines machine learning interatomic potentials (MLIPs) with a tailored batched optimization strategy. It enables rapid and unbiased crystal structure prediction (CSP) across a full density range.",
+      "domains": [
+        "Materials"
+      ],
+      "subtask_category": [
+        "crystal_structure_prediction",
+        "optimization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pic-ai-robotic-chemistry/BOMLIP-CSP",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "crystal-structure-prediction",
+        "mlip",
+        "optimization",
+        "materials-discovery"
+      ],
+      "id": 114
+    },
+    {
+      "name": "lpNNPS4SPH",
+      "one_line_profile": "Low-precision nearest neighbor particle searching for SPH simulations",
+      "detailed_description": "A CUDA-based implementation of a nearest neighboring particle searching algorithm optimized for Smoothed Particle Hydrodynamics (SPH) simulations, utilizing low-precision arithmetic for performance acceleration.",
+      "domains": [
+        "Physics"
+      ],
+      "subtask_category": [
+        "particle_search",
+        "sph_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Cuda",
+      "repo_url": "https://github.com/pnnl/lpNNPS4SPH",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "sph",
+        "cuda",
+        "particle-search",
+        "simulation"
+      ],
+      "id": 115
+    },
+    {
+      "name": "ichor",
+      "one_line_profile": "Data management library for machine learning force field development",
+      "detailed_description": "A computational chemistry data management library designed to assist in the development of machine learning force fields. It handles data processing, storage, and retrieval tasks associated with training datasets for atomic potentials.",
+      "domains": [
+        "Chemistry",
+        "Materials"
+      ],
+      "subtask_category": [
+        "data_management",
+        "force_field_development"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/popelier-group/ichor",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-management",
+        "machine-learning",
+        "force-field",
+        "computational-chemistry"
+      ],
+      "id": 116
+    },
+    {
+      "name": "pyiron_potentialfit",
+      "one_line_profile": "Module for fitting machine learning interatomic potentials within pyiron",
+      "detailed_description": "A component of the pyiron integrated development environment (IDE) dedicated to fitting machine learning interatomic potentials. It provides workflows and tools to train and validate potentials using the pyiron framework.",
+      "domains": [
+        "Materials"
+      ],
+      "subtask_category": [
+        "potential_fitting",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/pyiron/pyiron_potentialfit",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "pyiron",
+        "potential-fitting",
+        "machine-learning",
+        "materials-science"
+      ],
+      "id": 117
+    },
+    {
+      "name": "VERTEX",
+      "one_line_profile": "Virtual Electrode Recording Tool for EXtracellular potentials",
+      "detailed_description": "A MATLAB simulator for spatially realistic Local Field Potential (LFP) simulation in spiking neural networks. It allows researchers to model extracellular potentials generated by large populations of neurons.",
+      "domains": [
+        "Neuroscience"
+      ],
+      "subtask_category": [
+        "electrophysiology_simulation",
+        "neural_network_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/richardtomsett/vertexsimulator",
+      "help_website": [
+        "http://vertexsimulator.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "neuroscience",
+        "simulation",
+        "lfp",
+        "spiking-neural-networks"
+      ],
+      "id": 118
+    },
+    {
+      "name": "EquivariantMultipoleGNN",
+      "one_line_profile": "Equivariant GNN for atomic multipole prediction",
+      "detailed_description": "An implementation of an equivariant Graph Neural Network designed to predict atomic multipoles up to quadrupoles. This tool is useful for modeling electrostatic interactions in molecular systems.",
+      "domains": [
+        "Chemistry",
+        "Materials"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "electrostatics"
+      ],
+      "application_level": "model",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/rinikerlab/EquivariantMultipoleGNN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "multipoles",
+        "equivariance",
+        "molecular-modeling"
+      ],
+      "id": 119
+    },
+    {
+      "name": "GNNParametrizedFF",
+      "one_line_profile": "Graph Neural Network Parametrized Potentials",
+      "detailed_description": "Models and tools for 'Regularized by Physics: Graph Neural Network Parametrized Potentials for the Description of Intermolecular Interactions'. It provides a method to parametrize force fields using GNNs.",
+      "domains": [
+        "Chemistry",
+        "Materials"
+      ],
+      "subtask_category": [
+        "force_field_parametrization",
+        "interaction_modeling"
+      ],
+      "application_level": "model",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rinikerlab/GNNParametrizedFF",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gnn",
+        "force-field",
+        "intermolecular-interactions",
+        "physics-informed"
+      ],
+      "id": 120
+    },
+    {
+      "name": "torchani-amber",
+      "one_line_profile": "Interface for using ANI-style NN potentials in Amber MD",
+      "detailed_description": "An interface that enables the use of ANI-style and other neural network interatomic potentials (NN-IPs) within the Amber molecular dynamics software suite. It supports both sander and pmemd engines.",
+      "domains": [
+        "Chemistry",
+        "Materials"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/roitberg-group/torchani-amber",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "amber",
+        "torchani",
+        "molecular-dynamics",
+        "interface"
+      ],
+      "id": 121
+    },
+    {
+      "name": "atomate2_ffforge",
+      "one_line_profile": "Active-learning workflow for building MLIPs using atomate2",
+      "detailed_description": "A DIRECT-driven, active-learning workflow integrated with the atomate2/jobflow ecosystem. It autonomously builds machine-learning interatomic potentials (MLIPs) for various materials such as batteries and catalysts.",
+      "domains": [
+        "Materials"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "potential_training"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rsilvabuarque/atomate2_ffforge",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "atomate2",
+        "active-learning",
+        "mlip",
+        "workflow"
+      ],
+      "id": 122
+    },
+    {
+      "name": "cuda-mace",
+      "one_line_profile": "CUDA implementations of MACE models",
+      "detailed_description": "Provides CUDA-accelerated implementations of MACE (Machine Learning Atomic Cluster Expansion) models, enabling faster inference and simulation for atomistic systems on GPU hardware.",
+      "domains": [
+        "Materials",
+        "Physics"
+      ],
+      "subtask_category": [
+        "inference_acceleration",
+        "molecular_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rubber-duck-debug/cuda-mace",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cuda",
+        "mace",
+        "acceleration",
+        "atomistic-simulation"
+      ],
+      "id": 123
+    },
+    {
+      "name": "ParetoCSP",
+      "one_line_profile": "Crystal structure prediction using NN potential and Pareto genetic algorithm",
+      "detailed_description": "A tool for crystal structure prediction that utilizes a neural network potential combined with an age-fitness Pareto genetic algorithm to explore and optimize crystal structures.",
+      "domains": [
+        "Materials"
+      ],
+      "subtask_category": [
+        "crystal_structure_prediction",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sadmanomee/ParetoCSP",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "crystal-structure-prediction",
+        "genetic-algorithm",
+        "neural-network-potential"
+      ],
+      "id": 124
+    },
+    {
+      "name": "GAIA",
+      "one_line_profile": "Automated generation of reactive MLIP datasets",
+      "detailed_description": "GAIA automates the process of generating datasets for reactive machine learning interatomic potentials (MLIPs), facilitating the training of robust potentials for atomistic simulations.",
+      "domains": [
+        "Materials",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "dataset_generation",
+        "potential_training"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/samsungDS-PoCs/GAIA",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dataset-generation",
+        "mlip",
+        "reactive-potentials",
+        "automation"
+      ],
+      "id": 125
+    },
+    {
+      "name": "openmm_constV",
+      "one_line_profile": "OpenMM plugin for constant potential molecular dynamics",
+      "detailed_description": "A plugin for the OpenMM simulation toolkit that enables running molecular dynamics simulations under constant electrical potential conditions using the Image Charge method.",
+      "domains": [
+        "Chemistry",
+        "Materials"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "electrochemistry"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/scychon/openmm_constV",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "openmm",
+        "constant-potential",
+        "molecular-dynamics",
+        "plugin"
+      ],
+      "id": 126
+    },
+    {
+      "name": "eqnn-jax",
+      "one_line_profile": "JAX implementations of equivariant graph neural networks (EGNN, SEGNN, NequIP)",
+      "detailed_description": "A collection of annotated implementations of equivariant graph neural networks, including EGNN, SEGNN, and NequIP, written in JAX. These models are fundamental for developing machine learning potentials and analyzing geometric data.",
+      "domains": [
+        "Materials",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "model_implementation",
+        "geometric_deep_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/smsharma/eqnn-jax",
+      "help_website": [],
+      "license": "CC-BY-4.0",
+      "tags": [
+        "jax",
+        "equivariant-gnn",
+        "nequip",
+        "geometric-deep-learning"
+      ],
+      "id": 127
+    },
+    {
+      "name": "sGDML",
+      "one_line_profile": "Reference implementation of the Symmetric Gradient Domain Machine Learning model",
+      "detailed_description": "The reference implementation for the Symmetric Gradient Domain Machine Learning (sGDML) model, a machine learning method for constructing accurate and data-efficient force fields for molecules and materials.",
+      "domains": [
+        "Chemistry",
+        "Materials"
+      ],
+      "subtask_category": [
+        "force_field_learning",
+        "molecular_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stefanch/sGDML",
+      "help_website": [
+        "http://www.sgdml.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "sgdml",
+        "force-field",
+        "machine-learning",
+        "molecular-dynamics"
+      ],
+      "id": 128
+    },
+    {
+      "name": "aiida-mlip",
+      "one_line_profile": "AiiDA plugin for machine learning interatomic potentials",
+      "detailed_description": "A plugin for the AiiDA workflow manager that supports machine learning interatomic potentials (MLIPs). It facilitates the integration of MLIP training and inference into automated high-throughput computational workflows.",
+      "domains": [
+        "Materials"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "high_throughput_computing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stfc/aiida-mlip",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "aiida",
+        "mlip",
+        "workflow",
+        "high-throughput"
+      ],
+      "id": 129
+    },
+    {
+      "name": "mlff",
+      "one_line_profile": "JAX-based framework for building and training machine learning force fields",
+      "detailed_description": "A Python package for building neural networks for machine learning force fields using JAX, facilitating the creation of interatomic potentials.",
+      "domains": [
+        "Materials",
+        "Chemistry",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "training",
+        "potential_construction",
+        "force_field_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/thorben-frank/mlff",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "jax",
+        "force-field",
+        "neural-network-potential",
+        "molecular-dynamics"
+      ],
+      "id": 130
+    },
+    {
+      "name": "mddatasetbuilder",
+      "one_line_profile": "Tool for constructing reference datasets for neural network potential training",
+      "detailed_description": "A script designed to build reference datasets for training neural network potentials by processing given LAMMPS trajectories.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "dataset_construction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tongzhugroup/mddatasetbuilder",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "lammps",
+        "dataset",
+        "neural-network-potential",
+        "trajectory-processing"
+      ],
+      "id": 131
+    },
+    {
+      "name": "TorchMD-NET",
+      "one_line_profile": "Equivariant Transformer for molecular dynamics and neural network potentials",
+      "detailed_description": "A library for training neural network potentials, featuring state-of-the-art equivariant transformer architectures for molecular simulations.",
+      "domains": [
+        "Materials",
+        "Biochemistry",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "training",
+        "potential_learning",
+        "molecular_representation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/torchmd/torchmd-net",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "equivariant-neural-networks",
+        "force-field",
+        "molecular-dynamics"
+      ],
+      "id": 132
+    },
+    {
+      "name": "chemtrain",
+      "one_line_profile": "Flexible training routines for neural network potentials in JAX",
+      "detailed_description": "A library for training neural network potentials through customizable routines in JAX, supporting various loss functions and optimization strategies.",
+      "domains": [
+        "Materials",
+        "Chemistry",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "training",
+        "optimization",
+        "potential_fitting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tummfm/chemtrain",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "jax",
+        "training-framework",
+        "neural-network-potential"
+      ],
+      "id": 133
+    },
+    {
+      "name": "difftre",
+      "one_line_profile": "Differentiable Trajectory Reweighting for learning potentials from experimental data",
+      "detailed_description": "A tool for learning neural network potentials by matching experimental data via Differentiable Trajectory Reweighting.",
+      "domains": [
+        "Materials",
+        "Chemistry",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "training",
+        "inverse_design",
+        "experimental_matching"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tummfm/difftre",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "differentiable-simulation",
+        "jax",
+        "experimental-data",
+        "force-field"
+      ],
+      "id": 134
+    },
+    {
+      "name": "AMPtorch",
+      "one_line_profile": "PyTorch implementation of the Atomistic Machine Learning Package (AMP)",
+      "detailed_description": "A PyTorch-based package for atomistic machine learning, enabling the training and usage of machine learning potentials.",
+      "domains": [
+        "Materials",
+        "Chemistry",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "training",
+        "potential_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ulissigroup/amptorch",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "pytorch",
+        "atomistic-machine-learning",
+        "force-field"
+      ],
+      "id": 135
+    },
+    {
+      "name": "finetuna",
+      "one_line_profile": "Active learning framework for machine learning potentials",
+      "detailed_description": "A Python library designed to facilitate active learning workflows for training and refining machine learning interatomic potentials.",
+      "domains": [
+        "Materials",
+        "Chemistry",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "active_learning",
+        "sampling",
+        "potential_refinement"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ulissigroup/finetuna",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "active-learning",
+        "ase",
+        "force-field",
+        "optimization"
+      ],
+      "id": 136
+    },
+    {
+      "name": "chipsff",
+      "one_line_profile": "Benchmark suite for evaluating universal machine learning force-fields",
+      "detailed_description": "A tool from NIST for evaluating the performance and accuracy of universal machine learning force-fields.",
+      "domains": [
+        "Materials",
+        "Chemistry",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "benchmarking",
+        "validation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/usnistgov/chipsff",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "benchmark",
+        "force-field",
+        "evaluation",
+        "nist"
+      ],
+      "id": 137
+    },
+    {
+      "name": "AIMNet2",
+      "one_line_profile": "Fast and transferable neural network interatomic potential",
+      "detailed_description": "The official implementation of AIMNet2, a general-purpose neural network interatomic potential designed for fast and accurate molecular simulations.",
+      "domains": [
+        "Chemistry",
+        "Materials",
+        "M2",
+        "M2-03"
+      ],
+      "subtask_category": [
+        "inference",
+        "simulation",
+        "potential_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zubatyuk/aimnet2",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "neural-network-potential",
+        "molecular-dynamics",
+        "aimnet",
+        "chemistry"
+      ],
+      "id": 138
+    }
+  ]
+}

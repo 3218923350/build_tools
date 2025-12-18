@@ -1,0 +1,4103 @@
+{
+  "generated_at": "2025-12-16T08:23:17.917599+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "H1",
+      "leaf_cluster_name": "医学影像-分割/检测/诊断生态",
+      "domain": "Med Imaging",
+      "typical_objects": "DICOM/images",
+      "task_chain": "预处理→训练/推理→评测→部署",
+      "tool_form": "框架 + 标注/数据 + 部署"
+    },
+    "unit": {
+      "unit_id": "H1-06",
+      "unit_name": "数据集与benchmark",
+      "target_scale": "150–300",
+      "coverage_tools": "datasets、metrics"
+    },
+    "search": {
+      "target_candidates": 300,
+      "queries": [
+        "[GH] Surface-Distance-Based-Measures",
+        "[GH] TotalSegmentator",
+        "[GH] MONAI",
+        "[GH] MedPy",
+        "[GH] CheXpert",
+        "[GH] DeepLesion",
+        "[GH] MIMIC-CXR",
+        "[GH] LIDC-IDRI",
+        "[GH] BraTS",
+        "[GH] Medical Segmentation Decathlon",
+        "[GH] medical imaging dataset",
+        "[GH] medical image segmentation benchmark",
+        "[GH] medical datasets",
+        "[GH] DICOM dataset",
+        "[GH] MRI segmentation dataset",
+        "[GH] CT scan dataset",
+        "[GH] histopathology dataset",
+        "[GH] medical image evaluation metrics",
+        "[GH] medical benchmark",
+        "[GH] lesion detection dataset",
+        "[GH] organ segmentation dataset",
+        "[GH] medical visual question answering dataset",
+        "[GH] MICCAI challenge code",
+        "[GH] medical image analysis metrics",
+        "[WEB] awesome medical imaging datasets github",
+        "[WEB] medical image segmentation metrics library github",
+        "[WEB] MICCAI challenge datasets benchmark github",
+        "[WEB] medical segmentation decathlon github",
+        "[WEB] medical detection toolkit github",
+        "[WEB] public medical imaging datasets list github"
+      ],
+      "total_candidates": 1090,
+      "tool_candidates": 440,
+      "final_tools": 164
+    }
+  },
+  "tools": [
+    {
+      "name": "DINOv2-3D-Med",
+      "one_line_profile": "3D implementation of DINOv2 for self-supervised pretraining on volumetric medical images",
+      "detailed_description": "A PyTorch implementation of the DINOv2 self-supervised learning method adapted for 3D volumetric medical imaging data, supporting frameworks like MONAI and Lightly.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "self_supervised_learning",
+        "pretraining",
+        "3d_imaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AIM-Harvard/DINOv2-3D-Med",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dino",
+        "self-supervised",
+        "medical-imaging",
+        "3d"
+      ],
+      "id": 1
+    },
+    {
+      "name": "TotalSegmentator-to-nnUNet-format-convert",
+      "one_line_profile": "Utility to convert TotalSegmentator dataset to nnUNet format",
+      "detailed_description": "A data processing tool designed to convert the TotalSegmentator dataset structure into the format required by the nnUNet framework for training segmentation models.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AIM-Harvard/TotalSegmentator-to-nnUNet-format-convert",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-conversion",
+        "nnunet",
+        "totalsegmentator"
+      ],
+      "id": 2
+    },
+    {
+      "name": "GEMeX",
+      "one_line_profile": "Large-scale medical VQA benchmark for chest X-ray diagnosis",
+      "detailed_description": "A comprehensive benchmark dataset and evaluation framework for Medical Visual Question Answering (VQA) focused on chest X-ray diagnosis, offering groundable and explainable metrics.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "vqa",
+        "benchmark",
+        "chest_xray"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Awenbocc/GEMeX-Project",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vqa",
+        "benchmark",
+        "medical-imaging"
+      ],
+      "id": 3
+    },
+    {
+      "name": "AbdomenAtlas2.0",
+      "one_line_profile": "Large-scale annotated dataset of CT scans for abdominal organ and tumor segmentation",
+      "detailed_description": "A massive dataset containing over 10,000 CT scans with annotations for 15,130 tumors across six organs, designed to benchmark and train segmentation models for abdominal analysis.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "dataset",
+        "ct_scan"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/BodyMaps/AbdomenAtlas2.0",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dataset",
+        "segmentation",
+        "abdomen",
+        "ct"
+      ],
+      "id": 4
+    },
+    {
+      "name": "BraTS-Algorithms",
+      "one_line_profile": "Collection of top-performing algorithms from BraTS challenges",
+      "detailed_description": "A repository hosting implementations of state-of-the-art algorithms for brain tumor segmentation as evaluated in the Brain Tumor Segmentation (BraTS) challenges.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "brain_tumor",
+        "benchmark"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BrainLesion/BraTS",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "brats",
+        "segmentation",
+        "brain-tumor"
+      ],
+      "id": 5
+    },
+    {
+      "name": "adell-mri",
+      "one_line_profile": "Deep learning library for radiology data segmentation and classification",
+      "detailed_description": "A PyTorch-based library designed for segmentation, classification, object detection, and self-supervised learning specifically on radiology data, developed by the Champalimaud Centre for the Unknown.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "classification",
+        "radiology"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CCIG-Champalimaud/adell-mri",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "radiology",
+        "deep-learning",
+        "mri"
+      ],
+      "id": 6
+    },
+    {
+      "name": "SurgT_benchmarking",
+      "one_line_profile": "Benchmark dataset for 2D trackers in minimally invasive surgery",
+      "detailed_description": "A dataset and benchmarking suite for evaluating 2D tracking algorithms in the context of Minimally Invasive Surgery (MIS) video data.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "tracking",
+        "surgery",
+        "benchmark"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Cartucho/SurgT_benchmarking",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "surgery",
+        "tracking",
+        "benchmark"
+      ],
+      "id": 7
+    },
+    {
+      "name": "OSS-Net",
+      "one_line_profile": "Memory efficient high resolution semantic segmentation for 3D medical data",
+      "detailed_description": "Implementation of OSS-Net, a network designed for memory-efficient semantic segmentation of high-resolution 3D medical images.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "3d_imaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ChristophReich1996/OSS-Net",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "segmentation",
+        "3d",
+        "efficient"
+      ],
+      "id": 8
+    },
+    {
+      "name": "bidsme",
+      "one_line_profile": "Flexible BIDS converter for multimodal datasets",
+      "detailed_description": "A utility tool to convert and organize multimodal medical imaging datasets into the Brain Imaging Data Structure (BIDS) standard.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_management",
+        "bids_conversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/CyclotronResearchCentre/bidsme",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "bids",
+        "neuroimaging",
+        "data-conversion"
+      ],
+      "id": 9
+    },
+    {
+      "name": "AMEGA-benchmark",
+      "one_line_profile": "Benchmark for autonomous medical evaluation of guideline adherence in LLMs",
+      "detailed_description": "A benchmarking framework (AMEGA-LLM) designed to evaluate Large Language Models on their adherence to medical guidelines.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "llm_evaluation",
+        "guideline_adherence"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DATEXIS/AMEGA-benchmark",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "llm",
+        "medical-guidelines"
+      ],
+      "id": 10
+    },
+    {
+      "name": "SlicerAutomatedDentalTools",
+      "one_line_profile": "3D Slicer extension for automated dental image analysis",
+      "detailed_description": "A 3D Slicer extension that integrates tools like AMASSS, ALI-CBCT, and ALI-IOS for automated segmentation and landmarking in dental CBCT and IOS scans.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dental_imaging",
+        "segmentation",
+        "landmarking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DCBIA-OrthoLab/SlicerAutomatedDentalTools",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "3d-slicer",
+        "dental",
+        "segmentation"
+      ],
+      "id": 11
+    },
+    {
+      "name": "M3DA",
+      "one_line_profile": "Benchmark for Unsupervised Domain Adaptation in 3D Medical Image Segmentation",
+      "detailed_description": "A benchmark dataset and framework for the M3DA challenge, focusing on unsupervised domain adaptation techniques for 3D medical image segmentation.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "domain_adaptation",
+        "segmentation",
+        "benchmark"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DGM4MICCAI-2025-M3DA/M3DA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "domain-adaptation",
+        "benchmark",
+        "segmentation"
+      ],
+      "id": 12
+    },
+    {
+      "name": "PIPO-FAN",
+      "one_line_profile": "Multi-organ segmentation model for partially labeled datasets",
+      "detailed_description": "Implementation of PIPO-FAN, a deep learning method for segmenting multiple organs from datasets with partial labels.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "multi_organ"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/DIAL-RPI/PIPO-FAN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "segmentation",
+        "partial-labels",
+        "multi-organ"
+      ],
+      "id": 13
+    },
+    {
+      "name": "UNITOPATHO",
+      "one_line_profile": "Dataset of H&E-stained patches for colorectal polyps classification",
+      "detailed_description": "A dataset containing 9536 H&E-stained histopathology patches annotated for colorectal polyps classification and adenomas grading.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "histopathology",
+        "classification",
+        "dataset"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/EIDOSLAB/UNITOPATHO",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "histopathology",
+        "dataset",
+        "colorectal-polyps"
+      ],
+      "id": 14
+    },
+    {
+      "name": "Medical-Image-Segmentation-Benchmarks",
+      "one_line_profile": "PyTorch implementation of U-shape architecture benchmarks for medical segmentation",
+      "detailed_description": "A library providing implementations of various U-Net based architectures to serve as benchmarks for medical image segmentation tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "benchmark",
+        "model_library"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FengheTan9/Medical-Image-Segmentation-Benchmarks",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "segmentation",
+        "unet",
+        "benchmark"
+      ],
+      "id": 15
+    },
+    {
+      "name": "pubmed-rct",
+      "one_line_profile": "Dataset for sequential sentence classification in medical abstracts",
+      "detailed_description": "The PubMed 200k RCT dataset, designed for training and evaluating models on sequential sentence classification tasks within medical research abstracts.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "nlp",
+        "classification",
+        "dataset"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/Franck-Dernoncourt/pubmed-rct",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nlp",
+        "pubmed",
+        "dataset"
+      ],
+      "id": 16
+    },
+    {
+      "name": "Apollo",
+      "one_line_profile": "Multilingual medical LLM with datasets and benchmarks",
+      "detailed_description": "A comprehensive project providing multilingual medical Large Language Models (LLMs), along with associated datasets and benchmarks for evaluating medical AI performance.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "llm",
+        "benchmark",
+        "medical_nlp"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FreedomIntelligence/Apollo",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "medical-nlp",
+        "benchmark"
+      ],
+      "id": 17
+    },
+    {
+      "name": "CMB",
+      "one_line_profile": "Comprehensive Medical Benchmark in Chinese",
+      "detailed_description": "A large-scale benchmark designed to evaluate the medical knowledge and reasoning capabilities of Large Language Models in Chinese.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "llm_evaluation",
+        "medical_nlp"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FreedomIntelligence/CMB",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "chinese",
+        "medical-nlp"
+      ],
+      "id": 18
+    },
+    {
+      "name": "Huatuo-26M",
+      "one_line_profile": "Large-scale Chinese Medical QA Dataset",
+      "detailed_description": "A massive dataset containing over 26 million Chinese medical question-answer pairs, used for training and fine-tuning medical language models.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "qa",
+        "dataset",
+        "medical_nlp"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/FreedomIntelligence/Huatuo-26M",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dataset",
+        "qa",
+        "medical-nlp"
+      ],
+      "id": 19
+    },
+    {
+      "name": "TotalSegmentator-AIDE",
+      "one_line_profile": "TotalSegmentator packaged as a MONAI Application Package",
+      "detailed_description": "A deployment-ready package of the TotalSegmentator tool, wrapped as an AIDE Application using the MONAI Application Package (MAP) standard for easier clinical integration.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "deployment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GSTT-CSC/TotalSegmentator-AIDE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "monai",
+        "totalsegmentator",
+        "deployment"
+      ],
+      "id": 20
+    },
+    {
+      "name": "ISIC-Archive-Downloader",
+      "one_line_profile": "Tool to download images from the ISIC Archive",
+      "detailed_description": "A command-line utility to facilitate the bulk downloading of skin lesion images and metadata from the ISIC (International Skin Imaging Collaboration) Archive.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "dermatology"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GalAvineri/ISIC-Archive-Downloader",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "isic",
+        "download",
+        "dataset-tool"
+      ],
+      "id": 21
+    },
+    {
+      "name": "RibSeg",
+      "one_line_profile": "Dataset and point cloud baselines for rib segmentation from CT scans",
+      "detailed_description": "A benchmark dataset and baseline methods for rib segmentation in CT scans, facilitating research in skeletal structure analysis.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "dataset_access"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HINTLab/RibSeg",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "rib-segmentation",
+        "ct-scan",
+        "point-cloud",
+        "medical-dataset"
+      ],
+      "id": 22
+    },
+    {
+      "name": "ChallengeClinicalQA",
+      "one_line_profile": "Benchmark for Large Language Models on clinical questioning and answering",
+      "detailed_description": "A benchmarking repository for evaluating the performance of Large Language Models in answering and explaining challenging medical questions.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "question_answering"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HanjieChen/ChallengeClinicalQA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "llm",
+        "clinical-qa",
+        "benchmark",
+        "medical-nlp"
+      ],
+      "id": 23
+    },
+    {
+      "name": "FairFedMed",
+      "one_line_profile": "Benchmark for group fairness in federated medical imaging",
+      "detailed_description": "A benchmarking framework for evaluating group fairness in federated learning settings for medical imaging, specifically using FairLoRA.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "federated_learning",
+        "fairness_evaluation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Harvard-AI-and-Robotics-Lab/FairFedMed",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "federated-learning",
+        "fairness",
+        "medical-imaging",
+        "benchmark"
+      ],
+      "id": 24
+    },
+    {
+      "name": "FairSeg",
+      "one_line_profile": "Large-scale medical image segmentation dataset for fairness learning",
+      "detailed_description": "A dataset designed for fairness learning in medical image segmentation, utilizing the Segment Anything Model with fair error-bound scaling.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "fairness_learning",
+        "dataset_access"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Harvard-Ophthalmology-AI-Lab/FairSeg",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "segmentation",
+        "fairness",
+        "medical-dataset",
+        "ophthalmology"
+      ],
+      "id": 25
+    },
+    {
+      "name": "Harvard-GF",
+      "one_line_profile": "Retinal nerve disease dataset for fairness learning",
+      "detailed_description": "The Harvard Glaucoma Fairness dataset, designed for fairness learning and fair identity normalization in retinal nerve disease analysis.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "diagnosis",
+        "fairness_learning",
+        "dataset_access"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Harvard-Ophthalmology-AI-Lab/Harvard-GF",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "glaucoma",
+        "fairness",
+        "retinal-imaging",
+        "dataset"
+      ],
+      "id": 26
+    },
+    {
+      "name": "ActiveSegmentation",
+      "one_line_profile": "Simulation framework for benchmarking active learning in 3D segmentation",
+      "detailed_description": "A framework for simulating and benchmarking various active learning strategies specifically for 3D medical image segmentation tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "active_learning",
+        "benchmarking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HealthML/active-segmentation",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "active-learning",
+        "segmentation",
+        "3d-imaging",
+        "benchmark"
+      ],
+      "id": 27
+    },
+    {
+      "name": "WORD",
+      "one_line_profile": "Large scale dataset and benchmark for abdominal organ segmentation",
+      "detailed_description": "A comprehensive dataset and benchmark for abdominal organ segmentation from CT images, supporting clinical applicability studies.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "dataset_access",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HiLab-git/WORD",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "abdominal-segmentation",
+        "ct-scan",
+        "benchmark",
+        "dataset"
+      ],
+      "id": 28
+    },
+    {
+      "name": "MedImgReg_Survey",
+      "one_line_profile": "Library of loss functions and metrics for medical image registration",
+      "detailed_description": "Provides Python implementations of various loss functions and evaluation metrics specifically for learning-based medical image registration, alongside a literature survey.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "registration",
+        "metrics_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JHU-MedImage-Reg/MedImgReg_Survey",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "image-registration",
+        "loss-functions",
+        "metrics",
+        "deep-learning"
+      ],
+      "id": 29
+    },
+    {
+      "name": "AMOS",
+      "one_line_profile": "Large-scale abdominal multi-organ segmentation benchmark",
+      "detailed_description": "A large-scale benchmark dataset for versatile medical image segmentation, focusing on abdominal multi-organ structures.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "dataset_access",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/JiYuanFeng/AMOS",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "abdominal-segmentation",
+        "benchmark",
+        "multi-organ",
+        "dataset"
+      ],
+      "id": 30
+    },
+    {
+      "name": "MedShapeNet",
+      "one_line_profile": "Large-scale dataset of 3D medical shapes",
+      "detailed_description": "A large-scale dataset collection of 3D medical shapes designed for computer vision and medical image analysis research.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "shape_analysis",
+        "dataset_access"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Jianningli/medshapenet-feedback",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "3d-shapes",
+        "medical-vision",
+        "dataset",
+        "anatomy"
+      ],
+      "id": 31
+    },
+    {
+      "name": "segmentation_metrics",
+      "one_line_profile": "Library to compute medical image segmentation metrics",
+      "detailed_description": "A Python package dedicated to computing various evaluation metrics for medical image segmentation tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "metrics_calculation",
+        "evaluation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Jingnan-Jia/segmentation_metrics",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "segmentation",
+        "metrics",
+        "evaluation",
+        "medical-imaging"
+      ],
+      "id": 32
+    },
+    {
+      "name": "MedCLIP",
+      "one_line_profile": "Multi-modal CLIP model trained on medical dataset ROCO",
+      "detailed_description": "A pre-trained multi-modal CLIP model specifically adapted for the medical domain using the ROCO dataset, enabling vision-language tasks in healthcare.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "representation_learning",
+        "image_text_matching"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Kaushalya/medclip",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "clip",
+        "multimodal",
+        "medical-vqa",
+        "pretrained-model"
+      ],
+      "id": 33
+    },
+    {
+      "name": "ITKPOCUS",
+      "one_line_profile": "Library for streaming and preprocessing point-of-care ultrasound video",
+      "detailed_description": "An open-source library designed for the streaming, handling, and preprocessing of point-of-care ultrasound (POCUS) video data.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "data_streaming"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/KitwareMedical/ITKPOCUS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "ultrasound",
+        "pocus",
+        "video-processing",
+        "itk"
+      ],
+      "id": 34
+    },
+    {
+      "name": "LLD-MMRI-Dataset",
+      "one_line_profile": "Dataset for liver lesion diagnosis on multi-phase MRI",
+      "detailed_description": "An open-access dataset specifically collected for the diagnosis of liver lesions using multi-phase Magnetic Resonance Imaging (MRI).",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "diagnosis",
+        "dataset_access"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/LMMMEng/LLD-MMRI-Dataset",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "liver-lesion",
+        "mri",
+        "diagnosis",
+        "dataset"
+      ],
+      "id": 35
+    },
+    {
+      "name": "Medical Question Answer Data",
+      "one_line_profile": "Medical question and answer dataset",
+      "detailed_description": "A dataset of medical questions and answers gathered from the web, suitable for training and evaluating medical QA systems.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "question_answering",
+        "dataset_access"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/LasseRegin/medical-question-answer-data",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "medical-qa",
+        "nlp",
+        "dataset",
+        "text-mining"
+      ],
+      "id": 36
+    },
+    {
+      "name": "MAMA-MIA",
+      "one_line_profile": "Multi-center breast cancer DCE-MRI dataset with expert segmentations",
+      "detailed_description": "A public dataset containing multi-center breast cancer DCE-MRI scans accompanied by expert segmentations for research.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "dataset_access"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/LidiaGarrucho/MAMA-MIA",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "breast-cancer",
+        "mri",
+        "segmentation",
+        "dataset"
+      ],
+      "id": 37
+    },
+    {
+      "name": "LIDC-IDRI-processing",
+      "one_line_profile": "Preprocessing scripts for the LIDC-IDRI dataset",
+      "detailed_description": "A collection of scripts for preprocessing the LIDC-IDRI dataset, facilitating its use in medical image analysis pipelines.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "data_preparation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MIC-DKFZ/LIDC-IDRI-processing",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "lidc-idri",
+        "preprocessing",
+        "ct-scan",
+        "lung-nodule"
+      ],
+      "id": 38
+    },
+    {
+      "name": "Medical Detection Toolkit",
+      "one_line_profile": "2D and 3D object detection framework for medical images",
+      "detailed_description": "A comprehensive toolkit containing implementations of prevalent object detectors (Mask R-CNN, Retina Net, etc.) optimized for 2D and 3D medical images.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "detection",
+        "segmentation"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MIC-DKFZ/medicaldetectiontoolkit",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "object-detection",
+        "medical-imaging",
+        "3d-detection",
+        "retinanet"
+      ],
+      "id": 39
+    },
+    {
+      "name": "MIMIC-CXR Tools",
+      "one_line_profile": "Code and documentation for the MIMIC-CXR database",
+      "detailed_description": "Official code repository providing tools, documentation, and examples for working with the MIMIC-CXR chest X-ray database.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_loading",
+        "dataset_access"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/MIT-LCP/mimic-cxr",
+      "help_website": [
+        "https://mimic-cxr.mit.edu/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "mimic-cxr",
+        "chest-xray",
+        "dataset-tools",
+        "medical-imaging"
+      ],
+      "id": 40
+    },
+    {
+      "name": "fastMONAI",
+      "one_line_profile": "Wrapper to simplify deep learning for medical imaging with MONAI",
+      "detailed_description": "A library that simplifies the use of MONAI for deep learning in medical imaging, providing a higher-level interface similar to fastai.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "model_training",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/MMIV-ML/fastMONAI",
+      "help_website": [
+        "https://fastmonai.no"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "monai",
+        "fastai",
+        "deep-learning",
+        "medical-imaging"
+      ],
+      "id": 41
+    },
+    {
+      "name": "BenchmarkTransferLearning",
+      "one_line_profile": "Benchmarking suite for transfer learning in medical image analysis",
+      "detailed_description": "Official PyTorch implementation and pre-trained models designed to benchmark transfer learning performance across various medical image analysis tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "transfer_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MR-HosseinzadehTaher/BenchmarkTransferLearning",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "benchmark",
+        "transfer-learning",
+        "medical-imaging"
+      ],
+      "id": 42
+    },
+    {
+      "name": "medal",
+      "one_line_profile": "Large medical text dataset for abbreviation disambiguation",
+      "detailed_description": "A curated large-scale medical text dataset specifically designed for abbreviation disambiguation tasks to support natural language understanding pre-training in the medical domain.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset_access",
+        "text_processing"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/McGill-NLP/medal",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nlp",
+        "medical-text",
+        "abbreviation-disambiguation"
+      ],
+      "id": 43
+    },
+    {
+      "name": "MedMNIST",
+      "one_line_profile": "Standardized datasets for 2D and 3D biomedical image classification",
+      "detailed_description": "A large-scale MNIST-like collection of standardized biomedical images, including 12 datasets for 2D and 6 datasets for 3D classification, accessible via a Python library.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset_access",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MedMNIST/MedMNIST",
+      "help_website": [
+        "https://medmnist.com/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "dataset",
+        "classification",
+        "benchmark",
+        "biomedical-imaging"
+      ],
+      "id": 44
+    },
+    {
+      "name": "SuPreM",
+      "one_line_profile": "Supervised pre-trained 3D models for medical image analysis",
+      "detailed_description": "Provides supervised pre-trained 3D models trained on a large-scale dataset (9,262 CT volumes) to serve as a foundation for various medical image analysis tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "model_training",
+        "transfer_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MrGiovanni/SuPreM",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "pre-trained-models",
+        "3d-imaging",
+        "ct",
+        "foundation-model"
+      ],
+      "id": 45
+    },
+    {
+      "name": "MedicalSeg",
+      "one_line_profile": "3D medical image segmentation toolkit based on PaddlePaddle",
+      "detailed_description": "An easy-to-use 3D medical image segmentation toolkit that supports the whole segmentation process, including data preprocessing acceleration and high-precision models.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "data_preprocessing",
+        "visualization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PaddleCV-SIG/MedicalSeg",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "segmentation",
+        "paddlepaddle",
+        "3d-imaging",
+        "toolkit"
+      ],
+      "id": 46
+    },
+    {
+      "name": "MONAI Generative Models",
+      "one_line_profile": "Generative models library for medical imaging",
+      "detailed_description": "A MONAI extension that facilitates the training, evaluation, and deployment of generative models (GANs, Diffusion Models) for medical imaging applications.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "image_synthesis",
+        "generative_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Project-MONAI/GenerativeModels",
+      "help_website": [
+        "https://monai.io/generative-models"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "generative-models",
+        "gan",
+        "diffusion-models",
+        "medical-imaging"
+      ],
+      "id": 47
+    },
+    {
+      "name": "MONAI",
+      "one_line_profile": "AI Toolkit for Healthcare Imaging",
+      "detailed_description": "A PyTorch-based, open-source framework for deep learning in healthcare imaging, providing domain-optimized foundational capabilities for data loading, processing, and model training.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "classification",
+        "registration",
+        "reconstruction"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/MONAI",
+      "help_website": [
+        "https://monai.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "deep-learning",
+        "medical-imaging",
+        "pytorch",
+        "framework"
+      ],
+      "id": 48
+    },
+    {
+      "name": "MONAILabel",
+      "one_line_profile": "Intelligent image labeling and learning tool",
+      "detailed_description": "An intelligent open-source image labeling and learning tool that enables users to create annotated datasets and build AI models in an interactive manner.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "annotation",
+        "active_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/MONAILabel",
+      "help_website": [
+        "https://monai.io/label.html"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "annotation",
+        "segmentation",
+        "active-learning",
+        "interactive"
+      ],
+      "id": 49
+    },
+    {
+      "name": "SlicerMONAIViz",
+      "one_line_profile": "MONAI visualization extension for 3D Slicer",
+      "detailed_description": "A 3D Slicer extension that enables visualization and interaction with MONAI models and results within the Slicer environment.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/SlicerMONAIViz",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "3d-slicer",
+        "visualization",
+        "plugin"
+      ],
+      "id": 50
+    },
+    {
+      "name": "VISTA",
+      "one_line_profile": "Versatile Imaging Segmentation and Annotation foundation model",
+      "detailed_description": "MONAI VISTA (Versatile Imaging Segmentation and Annotation) provides a foundation model approach for robust and versatile medical image segmentation.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/VISTA",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "segmentation",
+        "foundation-model",
+        "annotation"
+      ],
+      "id": 51
+    },
+    {
+      "name": "MONAI Model Zoo",
+      "one_line_profile": "Repository of pre-trained medical imaging models",
+      "detailed_description": "A collection of pre-trained models in the MONAI Bundle format, facilitating easy access and reuse of state-of-the-art models for medical imaging tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "model_access"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/model-zoo",
+      "help_website": [
+        "https://monai.io/model-zoo.html"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "model-zoo",
+        "pre-trained-models",
+        "monai-bundle"
+      ],
+      "id": 52
+    },
+    {
+      "name": "MONAI Deploy",
+      "one_line_profile": "Standard for developing and deploying medical AI applications",
+      "detailed_description": "A framework and set of tools to develop, package, test, deploy, and run medical AI applications in clinical production environments.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "deployment",
+        "workflow_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/Project-MONAI/monai-deploy",
+      "help_website": [
+        "https://monai.io/deploy.html"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "deployment",
+        "clinical-integration",
+        "workflow"
+      ],
+      "id": 53
+    },
+    {
+      "name": "MONAI Deploy App SDK",
+      "one_line_profile": "SDK for building medical AI applications",
+      "detailed_description": "Offers a framework and associated tools to design, develop, and verify AI-driven applications in the healthcare imaging domain for deployment.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "application_development",
+        "deployment"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Project-MONAI/monai-deploy-app-sdk",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "sdk",
+        "deployment",
+        "medical-ai"
+      ],
+      "id": 54
+    },
+    {
+      "name": "MONAI Deploy Informatics Gateway",
+      "one_line_profile": "DICOM integration gateway for medical AI workflows",
+      "detailed_description": "Facilitates integration with DICOM compliant systems, enabling imaging data ingestion and workflow triggering for MONAI Deploy applications.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_ingestion",
+        "dicom_integration"
+      ],
+      "application_level": "service",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/Project-MONAI/monai-deploy-informatics-gateway",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dicom",
+        "pacs",
+        "integration",
+        "gateway"
+      ],
+      "id": 55
+    },
+    {
+      "name": "lidc2dicom",
+      "one_line_profile": "Converter for LIDC-IDRI data to DICOM",
+      "detailed_description": "Scripts for converting the TCIA LIDC-IDRI collection derived data (XML annotations) into standard DICOM representation.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_conversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/QIICR/lidc2dicom",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dicom",
+        "lidc-idri",
+        "conversion",
+        "data-processing"
+      ],
+      "id": 56
+    },
+    {
+      "name": "medigan",
+      "one_line_profile": "Library of pretrained generative models for medical image synthesis",
+      "detailed_description": "A Python library providing access to a collection of pretrained generative models (GANs, etc.) for synthetic medical image generation.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "image_synthesis",
+        "data_augmentation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/RichardObi/medigan",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "generative-models",
+        "gan",
+        "synthesis",
+        "data-augmentation"
+      ],
+      "id": 57
+    },
+    {
+      "name": "AgentClinic",
+      "one_line_profile": "Benchmark environment for medical diagnosis agents",
+      "detailed_description": "A benchmark suite designed to evaluate the performance of AI agents in medical diagnosis tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "diagnosis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SamuelSchmidgall/AgentClinic",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "agents",
+        "diagnosis",
+        "medical-ai"
+      ],
+      "id": 58
+    },
+    {
+      "name": "COVID-CT-MD",
+      "one_line_profile": "COVID-19 CT scan dataset for machine learning applications",
+      "detailed_description": "A comprehensive dataset containing COVID-19 CT scans designed for machine learning and deep learning research, facilitating the development of diagnostic models.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "medical_imaging"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ShahinSHH/COVID-CT-MD",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "covid-19",
+        "ct-scan",
+        "dataset"
+      ],
+      "id": 59
+    },
+    {
+      "name": "medimeta-pytorch",
+      "one_line_profile": "Meta-learning toolbox for medical imaging tasks",
+      "detailed_description": "A PyTorch-based toolbox designed for meta-learning in medical imaging, providing code for working with the MIMeta Dataset and implementing baseline models for diverse tasks.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "meta_learning",
+        "medical_imaging"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/StefanoWoerner/medimeta-pytorch",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "meta-learning",
+        "pytorch",
+        "medical-imaging"
+      ],
+      "id": 60
+    },
+    {
+      "name": "Zhongjing",
+      "one_line_profile": "Chinese medical LLM based on LLaMa for medical dialogue",
+      "detailed_description": "A Chinese medical large language model (LLM) fine-tuned on large-scale medical corpora and multi-turn dialogue datasets, designed for medical question answering and dialogue tasks.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "medical_qa",
+        "dialogue_system"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SupritYoung/Zhongjing",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm",
+        "medical-nlp",
+        "chatgpt"
+      ],
+      "id": 61
+    },
+    {
+      "name": "Data-Science-for-COVID-19",
+      "one_line_profile": "Comprehensive COVID-19 dataset and visualization tools for Korea",
+      "detailed_description": "A repository providing a structured dataset of COVID-19 cases in South Korea along with visualization tools to analyze the spread and patient demographics.",
+      "domains": [
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "visualization"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/ThisIsIsaac/Data-Science-for-COVID-19",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "covid-19",
+        "visualization",
+        "korea"
+      ],
+      "id": 62
+    },
+    {
+      "name": "MedXpertQA",
+      "one_line_profile": "Benchmark for expert-level medical reasoning and understanding",
+      "detailed_description": "A benchmark dataset designed to evaluate expert-level medical reasoning and understanding capabilities of AI models, presented at ICML 2025.",
+      "domains": [
+        "H1-06"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "medical_reasoning"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TsinghuaC3I/MedXpertQA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "qa",
+        "benchmark",
+        "medical-reasoning"
+      ],
+      "id": 63
+    },
+    {
+      "name": "Body-and-Organ-Analysis (BOA)",
+      "one_line_profile": "CT scan segmentation tool for body composition analysis",
+      "detailed_description": "A segmentation tool for CT scans that combines TotalSegmentator and Body Composition Analysis to identify structures like bones, muscles, organs, and blood vessels.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "body_composition"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UMEssen/Body-and-Organ-Analysis",
+      "help_website": [
+        "https://ship-ai.ikim.nrw/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "ct-segmentation",
+        "organ-analysis",
+        "medical-imaging"
+      ],
+      "id": 64
+    },
+    {
+      "name": "SAROS Dataset",
+      "one_line_profile": "Sparsely Annotated Region and Organ Segmentation dataset",
+      "detailed_description": "A large, heterogeneous, and sparsely annotated segmentation dataset on CT imaging data, designed to support research in medical image segmentation with sparse labels.",
+      "domains": [
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "segmentation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UMEssen/saros-dataset",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ct",
+        "segmentation",
+        "sparse-annotation"
+      ],
+      "id": 65
+    },
+    {
+      "name": "coronavirus-mask-image-dataset",
+      "one_line_profile": "Image dataset of people wearing medical and non-medical masks",
+      "detailed_description": "A dataset containing images sourced from Instagram depicting people wearing medical masks, non-medical masks, or no masks, useful for training mask detection models.",
+      "domains": [
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "object_detection"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/UniversalDataTool/coronavirus-mask-image-dataset",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mask-detection",
+        "covid-19",
+        "image-dataset"
+      ],
+      "id": 66
+    },
+    {
+      "name": "EvaluateSegmentation",
+      "one_line_profile": "Tool for evaluating the quality of image segmentations",
+      "detailed_description": "A command-line program and library to calculate various metrics for evaluating the quality of medical image segmentations against ground truth.",
+      "domains": [
+        "H1-06"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "metrics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Visceral-Project/EvaluateSegmentation",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "segmentation",
+        "evaluation-metrics",
+        "medical-imaging"
+      ],
+      "id": 67
+    },
+    {
+      "name": "medkit-learn",
+      "one_line_profile": "Environment for medical decision modelling through simulation",
+      "detailed_description": "A simulation environment for medical decision modeling, allowing for the development and benchmarking of decision-making algorithms in healthcare scenarios.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "decision_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/XanderJC/medkit-learn",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "simulation",
+        "medical-decision",
+        "reinforcement-learning"
+      ],
+      "id": 68
+    },
+    {
+      "name": "ECG-Expert-QA",
+      "one_line_profile": "Benchmark for evaluating medical LLMs in heart disease diagnosis",
+      "detailed_description": "A benchmark dataset specifically designed to evaluate the performance of Large Language Models (LLMs) in the context of heart disease diagnosis using ECG data.",
+      "domains": [
+        "H1-06"
+      ],
+      "subtask_category": [
+        "benchmark",
+        "medical_qa"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Zaozzz/ECG-Expert-QA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ecg",
+        "llm",
+        "benchmark"
+      ],
+      "id": 69
+    },
+    {
+      "name": "MedQuAD",
+      "one_line_profile": "Large-scale medical question answering dataset",
+      "detailed_description": "A comprehensive medical question answering dataset consisting of 47,457 QA pairs constructed from 12 NIH websites, covering a wide range of medical topics.",
+      "domains": [
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "medical_qa"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/abachaa/MedQuAD",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "qa",
+        "dataset",
+        "nih"
+      ],
+      "id": 70
+    },
+    {
+      "name": "ReasonMed",
+      "one_line_profile": "Multi-agent generated dataset for medical reasoning",
+      "detailed_description": "A large-scale (370K) dataset generated by multi-agent systems, designed to advance research in medical reasoning and question answering.",
+      "domains": [
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "medical_reasoning"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/alibaba-damo-academy/ReasonMed",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "medical-reasoning",
+        "dataset",
+        "multi-agent"
+      ],
+      "id": 71
+    },
+    {
+      "name": "medicat",
+      "one_line_profile": "Dataset of medical images, captions, and textual references",
+      "detailed_description": "A multimodal dataset containing medical images, captions, subfigure-subcaption annotations, and inline textual references, facilitating research in medical vision-language tasks.",
+      "domains": [
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "multimodal"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/allenai/medicat",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-imaging",
+        "captions",
+        "multimodal"
+      ],
+      "id": 72
+    },
+    {
+      "name": "MIMIC-CXR-VQA",
+      "one_line_profile": "Medical Visual Question Answering dataset based on MIMIC-CXR",
+      "detailed_description": "A collection of medical VQA dataset derived from MIMIC-CXR, designed for multi-modal question answering tasks in electronic health records.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset_generation",
+        "question_answering"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/baeseongsu/mimic-cxr-vqa",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vqa",
+        "mimic-cxr",
+        "medical-dataset"
+      ],
+      "id": 73
+    },
+    {
+      "name": "MedIAnomaly",
+      "one_line_profile": "Benchmark suite for anomaly detection in medical images",
+      "detailed_description": "A comparative study and benchmarking framework for anomaly detection methods in medical imaging, providing implementations and evaluation protocols.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "anomaly_detection",
+        "benchmarking"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/caiyu6666/MedIAnomaly",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "anomaly-detection",
+        "benchmark",
+        "medical-imaging"
+      ],
+      "id": 74
+    },
+    {
+      "name": "brat-docker",
+      "one_line_profile": "Containerized deployment for the Brat annotation tool",
+      "detailed_description": "A Docker container implementation for the Brat Rapid Annotation Tool, facilitating the deployment of text annotation environments for medical NLP.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_annotation",
+        "deployment"
+      ],
+      "application_level": "service",
+      "primary_language": "Dockerfile",
+      "repo_url": "https://github.com/cassj/brat-docker",
+      "help_website": [
+        "http://brat.nlplab.org/"
+      ],
+      "license": null,
+      "tags": [
+        "docker",
+        "annotation",
+        "nlp"
+      ],
+      "id": 75
+    },
+    {
+      "name": "bratreader",
+      "one_line_profile": "Library for parsing Brat annotation files",
+      "detailed_description": "A Python library designed to read and process annotations created with the Brat Rapid Annotation Tool, supporting XML conversion and data access.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/clips/bratreader",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "brat",
+        "annotation",
+        "parser"
+      ],
+      "id": 76
+    },
+    {
+      "name": "ARCADE",
+      "one_line_profile": "Benchmark and dataset for the ARCADE MICCAI challenge",
+      "detailed_description": "Official repository for the ARCADE challenge, providing datasets and evaluation resources for medical image analysis tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "dataset_access"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cmctec/ARCADE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "miccai",
+        "challenge",
+        "benchmark"
+      ],
+      "id": 77
+    },
+    {
+      "name": "MultiMedEval",
+      "one_line_profile": "Evaluation toolkit for Medical Vision-Language Models",
+      "detailed_description": "A Python tool designed to evaluate the performance of Vision-Language Models (VLM) specifically on medical domain tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/corentin-ryr/MultiMedEval",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vlm",
+        "evaluation",
+        "medical-ai"
+      ],
+      "id": 78
+    },
+    {
+      "name": "ASCENT",
+      "one_line_profile": "Cardiac ultrasound segmentation and dealiasing toolbox",
+      "detailed_description": "A toolbox for cardiac ultrasound image analysis, focusing on segmentation and color-doppler dealiasing tasks.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "image_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/creatis-myriad/ASCENT",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ultrasound",
+        "cardiac",
+        "segmentation"
+      ],
+      "id": 79
+    },
+    {
+      "name": "SALMON",
+      "one_line_profile": "MONAI-based 3D medical image segmentation software",
+      "detailed_description": "A deep learning segmentation algorithm and software based on the MONAI toolbox, developed for single and multi-label segmentation of 3D medical images.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/davidiommi/Pytorch--3D-Medical-Images-Segmentation--SALMON",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "monai",
+        "segmentation",
+        "3d-imaging"
+      ],
+      "id": 80
+    },
+    {
+      "name": "DICOMator",
+      "one_line_profile": "Blender Add-On for synthetic CT dataset generation",
+      "detailed_description": "A Blender extension that enables the creation of synthetic CT datasets from 3D meshes, facilitating data augmentation and simulation.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_generation",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/drmichaeldouglass/DICOMator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "blender",
+        "synthetic-data",
+        "ct"
+      ],
+      "id": 81
+    },
+    {
+      "name": "ldct-benchmark",
+      "one_line_profile": "Benchmark for low dose CT image denoising",
+      "detailed_description": "A benchmarking suite for evaluating deep learning-based methods for low dose CT image denoising.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "denoising",
+        "benchmarking"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eeulig/ldct-benchmark",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ct",
+        "denoising",
+        "benchmark"
+      ],
+      "id": 82
+    },
+    {
+      "name": "SMMILE",
+      "one_line_profile": "Benchmark for Multimodal Medical In-Context Learning",
+      "detailed_description": "An expert-driven benchmark designed to evaluate multimodal medical in-context learning capabilities of AI models.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "in_context_learning"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eth-medical-ai-lab/smmile",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "benchmark",
+        "multimodal",
+        "in-context-learning"
+      ],
+      "id": 83
+    },
+    {
+      "name": "miseval",
+      "one_line_profile": "Metric library for Medical Image Segmentation Evaluation",
+      "detailed_description": "A Python library providing a collection of metrics for evaluating medical image segmentation performance.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "metrics"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/frankkramer-lab/miseval",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "segmentation",
+        "metrics",
+        "evaluation"
+      ],
+      "id": 84
+    },
+    {
+      "name": "MedAgentsBench",
+      "one_line_profile": "Benchmark for medical reasoning agents",
+      "detailed_description": "A benchmark suite for evaluating thinking models and agent frameworks on complex medical reasoning tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "reasoning"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/gersteinlab/medagents-benchmark",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "agents",
+        "benchmark",
+        "medical-reasoning"
+      ],
+      "id": 85
+    },
+    {
+      "name": "TCIA CT Scan Dataset",
+      "one_line_profile": "Head and neck CT scans and segmentations dataset",
+      "detailed_description": "A dataset provided by Google DeepMind containing head and neck CT scans with segmentations in NRRD format, useful for medical imaging research.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset_access",
+        "segmentation"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/google-deepmind/tcia-ct-scan-dataset",
+      "help_website": [],
+      "license": "CC-BY-4.0",
+      "tags": [
+        "ct",
+        "dataset",
+        "deepmind"
+      ],
+      "id": 86
+    },
+    {
+      "name": "brain-tumor-mri-dataset",
+      "one_line_profile": "Utilities for MRI brain tumor dataset management",
+      "detailed_description": "A set of utilities to download, load, and process MRI brain tumor datasets, providing access to 2D slices and masks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_loading",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/guillaumefrd/brain-tumor-mri-dataset",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mri",
+        "brain-tumor",
+        "data-loader"
+      ],
+      "id": 87
+    },
+    {
+      "name": "E3C-Corpus",
+      "one_line_profile": "Multilingual corpus of semantically annotated clinical narratives",
+      "detailed_description": "A multilingual corpus (Italian, English, French, Spanish, Basque) of clinical narratives with annotations for clinical entities, temporal information, and factuality, designed for benchmarking information extraction systems.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "natural_language_processing"
+      ],
+      "application_level": "dataset",
+      "primary_language": "None",
+      "repo_url": "https://github.com/hltfbk/E3C-Corpus",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "clinical-narratives",
+        "multilingual",
+        "corpus",
+        "nlp"
+      ],
+      "id": 88
+    },
+    {
+      "name": "SynDeepLesion",
+      "one_line_profile": "Synthesized DeepLesion dataset for CT metal artifact reduction",
+      "detailed_description": "A benchmark dataset containing synthesized DeepLesion data specifically designed for developing and evaluating CT metal artifact reduction algorithms.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "artifact_reduction"
+      ],
+      "application_level": "dataset",
+      "primary_language": "None",
+      "repo_url": "https://github.com/hongwang01/SynDeepLesion",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ct",
+        "metal-artifact-reduction",
+        "synthetic-data"
+      ],
+      "id": 89
+    },
+    {
+      "name": "finetuned-qlora-falcon7b-medical",
+      "one_line_profile": "Falcon-7B LLM finetuned on mental health datasets",
+      "detailed_description": "A Falcon-7B Large Language Model finetuned using QLoRA on a mental health conversational dataset, serving as a specialized solver for medical dialogue tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "medical_dialogue",
+        "large_language_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/iamarunbrahma/finetuned-qlora-falcon7b-medical",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "mental-health",
+        "qlora",
+        "falcon-7b"
+      ],
+      "id": 90
+    },
+    {
+      "name": "brats-unet",
+      "one_line_profile": "UNet implementation for brain tumor segmentation",
+      "detailed_description": "A reusable implementation of the UNet architecture specifically configured for brain tumor segmentation tasks on the BraTS dataset.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "tumor_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/icerain-alt/brats-unet",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "unet",
+        "brain-tumor",
+        "segmentation",
+        "brats"
+      ],
+      "id": 91
+    },
+    {
+      "name": "BraTS2018-tumor-segmentation",
+      "one_line_profile": "DeepMedic and 3D UNet integration for brain tumor segmentation",
+      "detailed_description": "Provides implementations of DeepMedic and 3D UNet for brain tumor segmentation, featuring integration of location information via brain parcellation.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "tumor_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ieee820/BraTS2018-tumor-segmentation",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "deepmedic",
+        "3d-unet",
+        "brain-tumor",
+        "segmentation"
+      ],
+      "id": 92
+    },
+    {
+      "name": "LIDC-IDRI-Preprocessing",
+      "one_line_profile": "Preprocessing pipeline for the LIDC-IDRI dataset",
+      "detailed_description": "A dedicated tool for preprocessing the LIDC-IDRI lung nodule dataset, facilitating data preparation for segmentation and detection tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "data_preparation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/jaeho3690/LIDC-IDRI-Preprocessing",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "lidc-idri",
+        "preprocessing",
+        "lung-nodule"
+      ],
+      "id": 93
+    },
+    {
+      "name": "LIDC-IDRI-Segmentation",
+      "one_line_profile": "Segmentation solver for LIDC-IDRI dataset",
+      "detailed_description": "A segmentation implementation for the LIDC-IDRI dataset, designed to work in conjunction with the associated preprocessing pipeline.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "nodule_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/jaeho3690/LIDC-IDRI-Segmentation",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "lidc-idri",
+        "segmentation",
+        "lung-nodule"
+      ],
+      "id": 94
+    },
+    {
+      "name": "KiU-Net-pytorch",
+      "one_line_profile": "KiU-Net implementation for 3D medical image segmentation",
+      "detailed_description": "Official PyTorch implementation of KiU-Net, a network architecture designed for accurate segmentation of small anatomical structures in 3D medical images.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "3d_imaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jeya-maria-jose/KiU-Net-pytorch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "kiu-net",
+        "segmentation",
+        "pytorch",
+        "miccai"
+      ],
+      "id": 95
+    },
+    {
+      "name": "Chexpert-Solution",
+      "one_line_profile": "Top-performing solution for CheXpert challenge",
+      "detailed_description": "A high-performance baseline solver for the CheXpert chest X-ray classification task, representing a state-of-the-art approach for this benchmark.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "classification",
+        "chest_xray"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jfhealthcare/Chexpert",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "chexpert",
+        "chest-xray",
+        "classification",
+        "sota"
+      ],
+      "id": 96
+    },
+    {
+      "name": "Preprocessed_IXI_Dataset",
+      "one_line_profile": "Preprocessed IXI brain MRI dataset with subcortical segmentation",
+      "detailed_description": "A processed version of the IXI brain MRI dataset, including subcortical segmentation labels, ready for use in segmentation tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "segmentation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "None",
+      "repo_url": "https://github.com/junyuchen245/Preprocessed_IXI_Dataset",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "ixi",
+        "mri",
+        "brain",
+        "segmentation"
+      ],
+      "id": 97
+    },
+    {
+      "name": "DeepBrainSeg",
+      "one_line_profile": "Automatic brain tumor segmentation tool",
+      "detailed_description": "A fully automatic tool for brain tumor segmentation using deep 3D convolutional neural networks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "tumor_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/koriavinash1/DeepBrainSeg",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "brain-tumor",
+        "segmentation",
+        "3d-cnn"
+      ],
+      "id": 98
+    },
+    {
+      "name": "medical_mae",
+      "one_line_profile": "Masked Autoencoders for Multi-Label Thorax Disease Classification",
+      "detailed_description": "Official implementation of Medical MAE, a solver for multi-label thorax disease classification using masked autoencoders.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "classification",
+        "thorax_disease"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/lambert-x/medical_mae",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mae",
+        "thorax",
+        "classification",
+        "masked-autoencoder"
+      ],
+      "id": 99
+    },
+    {
+      "name": "SlicerMONAIAuto3DSeg",
+      "one_line_profile": "3D Slicer extension for MONAI Auto3DSeg",
+      "detailed_description": "An extension for the 3D Slicer platform that integrates MONAI's Auto3DSeg models, enabling automated 3D segmentation workflows within the Slicer GUI.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "platform_integration"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lassoan/SlicerMONAIAuto3DSeg",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "3d-slicer",
+        "monai",
+        "segmentation",
+        "plugin"
+      ],
+      "id": 100
+    },
+    {
+      "name": "SlicerTotalSegmentator",
+      "one_line_profile": "3D Slicer extension for TotalSegmentator",
+      "detailed_description": "A 3D Slicer extension that provides fully automatic total body segmentation capabilities by integrating the TotalSegmentator AI model.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "whole_body_segmentation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lassoan/SlicerTotalSegmentator",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "3d-slicer",
+        "totalsegmentator",
+        "segmentation",
+        "plugin"
+      ],
+      "id": 101
+    },
+    {
+      "name": "MRI-tumor-segmentation-Brats",
+      "one_line_profile": "MRI brain tumor segmentation implementation",
+      "detailed_description": "A comprehensive implementation for MRI brain tumor segmentation, widely referenced as a baseline or tool for BraTS tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "tumor_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lelechen63/MRI-tumor-segmentation-Brats",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mri",
+        "brain-tumor",
+        "segmentation",
+        "brats"
+      ],
+      "id": 102
+    },
+    {
+      "name": "imcs21",
+      "one_line_profile": "Benchmark dataset for Automatic Medical Consultation Systems",
+      "detailed_description": "A benchmark dataset and framework for automatic medical consultation systems, supporting tasks like medical dialogue generation and understanding.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "medical_dialogue"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lemuria-wchen/imcs21",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "medical-dialogue",
+        "benchmark",
+        "nlp"
+      ],
+      "id": 103
+    },
+    {
+      "name": "imcs21-cblue",
+      "one_line_profile": "IMCS21 medical dialogue dataset for CBLUE",
+      "detailed_description": "The IMCS21 medical dialogue dataset formatted for the CBLUE benchmark, facilitating research in Chinese biomedical language understanding.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "medical_dialogue"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lemuria-wchen/imcs21-cblue",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cblue",
+        "medical-dialogue",
+        "dataset",
+        "nlp"
+      ],
+      "id": 104
+    },
+    {
+      "name": "open_brats2020",
+      "one_line_profile": "Top-performing solution for BraTS 2020",
+      "detailed_description": "A high-quality solver for brain tumor segmentation, representing a top solution from the BraTS 2020 challenge, useful as a baseline or reference tool.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "tumor_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lescientifik/open_brats2020",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "brats2020",
+        "segmentation",
+        "brain-tumor"
+      ],
+      "id": 105
+    },
+    {
+      "name": "SAML",
+      "one_line_profile": "Shape-aware Meta-learning for Prostate MRI Segmentation & Dataset",
+      "detailed_description": "Provides a shape-aware meta-learning method for domain-generalized prostate MRI segmentation, along with a well-organized multi-site dataset.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "domain_generalization",
+        "dataset"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/liuquande/SAML",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "prostate-segmentation",
+        "meta-learning",
+        "dataset",
+        "mri"
+      ],
+      "id": 106
+    },
+    {
+      "name": "medpy",
+      "one_line_profile": "Medical image processing library in Python",
+      "detailed_description": "A library for medical image processing in Python, providing basic functionalities for reading, writing, and manipulating high-dimensional medical image data.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "io"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/loli/medpy",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "medical-imaging",
+        "image-processing",
+        "python-library"
+      ],
+      "id": 107
+    },
+    {
+      "name": "MedDG",
+      "one_line_profile": "Large-scale medical dialogue dataset",
+      "detailed_description": "A large-scale, high-quality medical dialogue dataset designed for training and evaluating medical consultation systems.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "medical_dialogue"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lwgkzl/MedDG",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "medical-dialogue",
+        "dataset",
+        "nlp"
+      ],
+      "id": 108
+    },
+    {
+      "name": "MedMCQA",
+      "one_line_profile": "Large-scale multiple-choice question answering dataset for medical entrance exams",
+      "detailed_description": "A large-scale dataset (194k) designed to address real-world medical entrance exam questions, serving as a benchmark for medical question answering systems.",
+      "domains": [
+        "H1-06",
+        "Medical NLP"
+      ],
+      "subtask_category": [
+        "question_answering",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/medmcqa/medmcqa",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "medical-qa",
+        "dataset",
+        "benchmark"
+      ],
+      "id": 109
+    },
+    {
+      "name": "MedTagger",
+      "one_line_profile": "Collaborative framework for annotating medical datasets",
+      "detailed_description": "A collaborative framework designed for annotating medical datasets using crowdsourcing, facilitating the creation of labeled data for medical AI models.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_annotation",
+        "crowdsourcing"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/medtagger/MedTagger",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "annotation",
+        "medical-imaging",
+        "crowdsourcing"
+      ],
+      "id": 110
+    },
+    {
+      "name": "PromptCBLUE",
+      "one_line_profile": "Instruction-tuning dataset for Chinese medical multi-task learning",
+      "detailed_description": "A large-scale instruction-tuning dataset designed for multi-task and few-shot learning in the medical domain, specifically for Chinese language models.",
+      "domains": [
+        "H1-06",
+        "Medical NLP"
+      ],
+      "subtask_category": [
+        "instruction_tuning",
+        "dataset_creation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/michael-wzhu/PromptCBLUE",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "medical-nlp",
+        "instruction-tuning",
+        "dataset"
+      ],
+      "id": 111
+    },
+    {
+      "name": "InnerEye-CreateDataset",
+      "one_line_profile": "Tool to transform DICOM data into masks for Deep Learning training",
+      "detailed_description": "A dataset creation tool associated with the InnerEye-DeepLearning library that converts DICOM data into segmentation masks suitable for training deep learning models.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_preprocessing",
+        "dicom_conversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/microsoft/InnerEye-CreateDataset",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "mask-generation",
+        "innereye"
+      ],
+      "id": 112
+    },
+    {
+      "name": "MLCommons Medical",
+      "one_line_profile": "Benchmark suite for medical machine learning tasks",
+      "detailed_description": "The official medical machine learning benchmark suite from MLCommons, providing standardized tasks and metrics for evaluating medical AI models.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "model_evaluation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mlcommons/medical",
+      "help_website": [
+        "https://mlcommons.org"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "mlcommons",
+        "standardization"
+      ],
+      "id": 113
+    },
+    {
+      "name": "MedPerf",
+      "one_line_profile": "Open benchmarking platform for medical AI using Federated Evaluation",
+      "detailed_description": "An open benchmarking platform that enables the evaluation of medical artificial intelligence models using federated evaluation techniques to preserve data privacy.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "federated_evaluation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mlcommons/medperf",
+      "help_website": [
+        "https://medperf.org"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "federated-learning",
+        "benchmarking",
+        "platform"
+      ],
+      "id": 114
+    },
+    {
+      "name": "TorchXRayVision",
+      "one_line_profile": "Library of chest X-ray datasets and pre-trained models",
+      "detailed_description": "A comprehensive library providing unified access to various chest X-ray datasets and pre-trained models for classification, segmentation, and autoencoding tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "image_classification",
+        "segmentation",
+        "data_loading"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/mlmed/torchxrayvision",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "chest-xray",
+        "pytorch",
+        "medical-imaging"
+      ],
+      "id": 115
+    },
+    {
+      "name": "COVID-CTset",
+      "one_line_profile": "Large dataset of COVID-19 CT scans",
+      "detailed_description": "A comprehensive dataset containing 1252 COVID-19 positive and 1230 negative CT scans, widely used for developing and benchmarking COVID-19 detection models.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset_access",
+        "image_classification"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mr7495/COVID-CTset",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "covid-19",
+        "ct-scan",
+        "dataset"
+      ],
+      "id": 116
+    },
+    {
+      "name": "UltrasoundSnake",
+      "one_line_profile": "Active contour model tool for ultrasound image segmentation",
+      "detailed_description": "A MATLAB-based tool implementing snake (active contour) algorithms specifically for contouring and identifying organ shapes in ultrasound medical images.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "contouring"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/murraymeehan/UltrasoundSnake",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ultrasound",
+        "active-contour",
+        "segmentation"
+      ],
+      "id": 117
+    },
+    {
+      "name": "MedCalc-Bench",
+      "one_line_profile": "Benchmark for evaluating LLMs on medical calculations",
+      "detailed_description": "A benchmark dataset and evaluation framework designed to assess the performance of Large Language Models on medical calculation tasks.",
+      "domains": [
+        "H1-06",
+        "Medical NLP"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "medical_calculation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ncbi-nlp/MedCalc-Bench",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "llm",
+        "benchmark",
+        "medical-calculation"
+      ],
+      "id": 118
+    },
+    {
+      "name": "AMID",
+      "one_line_profile": "Library for loading and handling medical imaging datasets",
+      "detailed_description": "A Python library (Awesome Medical Imaging Datasets) that provides a unified interface to download, load, and preprocess various public medical imaging datasets.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_loading",
+        "dataset_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neuro-ml/amid",
+      "help_website": [
+        "https://amid.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "dataset-loader",
+        "medical-imaging",
+        "python"
+      ],
+      "id": 119
+    },
+    {
+      "name": "BraTS-Toolkit",
+      "one_line_profile": "Toolkit for preprocessing and segmenting glioma MRI scans",
+      "detailed_description": "A comprehensive toolkit for the preprocessing, segmentation, and fusion of glioma MRI scans, specifically designed for the BraTS challenge datasets.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "image_preprocessing",
+        "segmentation",
+        "image_fusion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neuronflow/BraTS-Toolkit",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "brats",
+        "mri",
+        "glioma"
+      ],
+      "id": 120
+    },
+    {
+      "name": "DDR-dataset",
+      "one_line_profile": "Dataset for Diabetic Retinopathy classification and segmentation",
+      "detailed_description": "A general-purpose, high-quality dataset designed for diabetic retinopathy classification, lesion segmentation, and lesion detection tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset_access",
+        "lesion_detection"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/nkicsl/DDR-dataset",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diabetic-retinopathy",
+        "dataset",
+        "segmentation"
+      ],
+      "id": 121
+    },
+    {
+      "name": "brat",
+      "one_line_profile": "Web-based tool for text annotation",
+      "detailed_description": "The brat rapid annotation tool is a web-based environment for collaborative text annotation, widely used for creating labeled datasets in medical NLP.",
+      "domains": [
+        "H1-06",
+        "Medical NLP"
+      ],
+      "subtask_category": [
+        "data_annotation",
+        "text_mining"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nlplab/brat",
+      "help_website": [
+        "http://brat.nlplab.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "annotation",
+        "nlp",
+        "visualization"
+      ],
+      "id": 122
+    },
+    {
+      "name": "pylidc",
+      "one_line_profile": "ORM and utility library for the LIDC-IDRI dataset",
+      "detailed_description": "A Python library providing an Object Relational Mapping (ORM) and utility functions to easily query and analyze the LIDC-IDRI lung nodule dataset.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_access",
+        "dataset_querying"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/notmatthancock/pylidc",
+      "help_website": [
+        "https://pylidc.github.io/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "lidc",
+        "lung-nodule",
+        "orm"
+      ],
+      "id": 123
+    },
+    {
+      "name": "STU-Net",
+      "one_line_profile": "Large-scale pre-trained medical image segmentation model",
+      "detailed_description": "A large-scale pre-trained medical image segmentation model (1.4B parameters) trained on a massive dataset, serving as a foundation model for segmentation tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "model_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": null,
+      "repo_url": "https://github.com/openmedlab/STU-Net",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "foundation-model",
+        "segmentation",
+        "pre-trained"
+      ],
+      "id": 124
+    },
+    {
+      "name": "dicom-database",
+      "one_line_profile": "Dockerized DICOM storage and transfer service",
+      "detailed_description": "A Dockerized storage and send/receiver for DICOM images, intended to easily work with pydicom datasets for medical imaging data management.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_management",
+        "image_storage"
+      ],
+      "application_level": "service",
+      "primary_language": "CSS",
+      "repo_url": "https://github.com/pydicom/dicom-database",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "pydicom",
+        "medical-imaging",
+        "database"
+      ],
+      "id": 125
+    },
+    {
+      "name": "Medical-Detection3d-Toolkit",
+      "one_line_profile": "Landmark detection engine for 3D medical images",
+      "detailed_description": "A toolkit for 3D medical image landmark detection, serving as an engine for processing medical imaging data.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "landmark_detection",
+        "image_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/qinliuliuqin/Medical-Detection3d-Toolkit",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "medical-imaging",
+        "landmark-detection",
+        "3d-imaging"
+      ],
+      "id": 126
+    },
+    {
+      "name": "LIDC-IDRI-Toolbox-python",
+      "one_line_profile": "Toolbox for processing the LIDC-IDRI lung cancer dataset",
+      "detailed_description": "A Python toolbox designed to facilitate the handling and processing of the LIDC-IDRI dataset for lung cancer and nodule analysis.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "dataset_handling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/qiuliwang/LIDC-IDRI-Toolbox-python",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "lidc-idri",
+        "lung-cancer",
+        "medical-imaging",
+        "ct-scan"
+      ],
+      "id": 127
+    },
+    {
+      "name": "ROCO Dataset",
+      "one_line_profile": "Radiology Objects in COntext (ROCO) multimodal image dataset",
+      "detailed_description": "A large-scale multimodal image dataset focusing on radiology objects in context, designed for training and evaluating medical imaging models.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "multimodal_learning"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/razorx89/roco-dataset",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "radiology",
+        "multimodal",
+        "medical-dataset",
+        "roco"
+      ],
+      "id": 128
+    },
+    {
+      "name": "CARES",
+      "one_line_profile": "Benchmark of trustworthiness in medical vision language models",
+      "detailed_description": "A comprehensive benchmark suite for evaluating the trustworthiness of medical vision language models (Med-VLMs).",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "model_evaluation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/richard-peng-xia/CARES",
+      "help_website": [],
+      "license": "CC-BY-4.0",
+      "tags": [
+        "benchmark",
+        "medical-vlm",
+        "trustworthiness",
+        "evaluation"
+      ],
+      "id": 129
+    },
+    {
+      "name": "Med-Banana-50K",
+      "one_line_profile": "Dataset for text-guided medical image editing",
+      "detailed_description": "A diversified large-scale dataset specifically designed for the task of text-guided medical image editing.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "image_editing"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/richardChenzhihui/med-banana-50k",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "medical-image-editing",
+        "dataset",
+        "text-guided-generation"
+      ],
+      "id": 130
+    },
+    {
+      "name": "pymia",
+      "one_line_profile": "Data handling and evaluation package for medical image analysis",
+      "detailed_description": "A Python package providing flexible data handling and evaluation tools for deep learning-based medical image analysis.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "data_handling",
+        "evaluation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rundherum/pymia",
+      "help_website": [
+        "https://pymia.readthedocs.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-image-analysis",
+        "deep-learning",
+        "evaluation-metrics",
+        "data-handling"
+      ],
+      "id": 131
+    },
+    {
+      "name": "medical-nlp",
+      "one_line_profile": "Dataset for medical NLP with clinical vocabulary",
+      "detailed_description": "A dataset for Natural Language Processing using a corpus of medical transcriptions and custom-generated clinical stop words and vocabulary.",
+      "domains": [
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "nlp"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/salgadev/medical-nlp",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "medical-nlp",
+        "clinical-text",
+        "dataset",
+        "transcriptions"
+      ],
+      "id": 132
+    },
+    {
+      "name": "bratutils",
+      "one_line_profile": "Utilities for manipulating BRAT annotation files",
+      "detailed_description": "A collection of utilities for manipulating data and calculating inter-annotator agreement in brat annotation files, commonly used in biomedical NLP.",
+      "domains": [
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "annotation_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/savkov/bratutils",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "brat",
+        "annotation",
+        "nlp",
+        "inter-annotator-agreement"
+      ],
+      "id": 133
+    },
+    {
+      "name": "MedAlign",
+      "one_line_profile": "Clinician-generated dataset for instruction following with EMRs",
+      "detailed_description": "A dataset designed for instruction following tasks involving electronic medical records (EMR), generated by clinicians.",
+      "domains": [
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dataset",
+        "instruction_following"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/som-shahlab/medalign",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "emr",
+        "instruction-following",
+        "clinical-dataset",
+        "nlp"
+      ],
+      "id": 134
+    },
+    {
+      "name": "standoff2conll",
+      "one_line_profile": "Converter from BRAT standoff to CoNLL format",
+      "detailed_description": "A tool for converting biomedical text annotations from the brat-flavored standoff format to the CoNLL format used in NLP tasks.",
+      "domains": [
+        "H1-06"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spyysalo/standoff2conll",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "brat",
+        "conll",
+        "nlp",
+        "converter"
+      ],
+      "id": 135
+    },
+    {
+      "name": "MedAgentBench",
+      "one_line_profile": "Virtual EHR environment to benchmark medical LLM agents",
+      "detailed_description": "A realistic virtual Electronic Health Record (EHR) environment designed to benchmark the performance of medical Large Language Model (LLM) agents.",
+      "domains": [
+        "H1-06"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "simulation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stanfordmlgroup/MedAgentBench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "llm-agents",
+        "ehr",
+        "medical-ai"
+      ],
+      "id": 136
+    },
+    {
+      "name": "CheXpert Labeler",
+      "one_line_profile": "NLP tool to extract observations from radiology reports",
+      "detailed_description": "An NLP tool developed to extract clinical observations from radiology reports, used to generate labels for the CheXpert dataset.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "information_extraction",
+        "nlp"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stanfordmlgroup/chexpert-labeler",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nlp",
+        "radiology",
+        "chexpert",
+        "label-extraction"
+      ],
+      "id": 137
+    },
+    {
+      "name": "dicom-viewer",
+      "one_line_profile": "3D DICOM medical dataset viewer",
+      "detailed_description": "A software tool for viewing medical datasets in 3D, specifically designed for DICOM files.",
+      "domains": [
+        "H1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "image_viewing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/termijn/dicom-viewer",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dicom",
+        "visualization",
+        "3d-viewer",
+        "medical-imaging"
+      ],
+      "id": 138
+    },
+    {
+      "name": "A-Eval",
+      "one_line_profile": "Benchmark for cross-dataset and cross-modality evaluation of abdominal multi-organ segmentation",
+      "detailed_description": "A comprehensive benchmark framework designed to evaluate abdominal multi-organ segmentation models across different datasets and modalities, facilitating robust performance assessment.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "segmentation_benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uni-medical/A-Eval",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "medical-segmentation",
+        "abdominal-organs",
+        "cross-modality"
+      ],
+      "id": 139
+    },
+    {
+      "name": "GMAI-MMBench",
+      "one_line_profile": "Comprehensive multimodal evaluation benchmark for general medical AI",
+      "detailed_description": "A benchmark suite designed to evaluate General Medical AI models across various multimodal tasks, ensuring comprehensive assessment of model capabilities in medical contexts.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "multimodal_benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uni-medical/GMAI-MMBench",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "benchmark",
+        "multimodal",
+        "general-medical-ai",
+        "evaluation"
+      ],
+      "id": 140
+    },
+    {
+      "name": "GMAI-VL",
+      "one_line_profile": "Large vision-language model and multimodal dataset for general medical AI",
+      "detailed_description": "Provides a large-scale vision-language model and a comprehensive multimodal dataset aimed at advancing General Medical AI research and development.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "multimodal_learning",
+        "vision_language_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uni-medical/GMAI-VL",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "vision-language-model",
+        "multimodal-dataset",
+        "medical-ai"
+      ],
+      "id": 141
+    },
+    {
+      "name": "IMIS-Bench",
+      "one_line_profile": "Benchmark dataset and baseline for interactive medical image segmentation",
+      "detailed_description": "A benchmark dataset and baseline framework specifically designed for evaluating interactive medical image segmentation models.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "interactive_segmentation",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/uni-medical/IMIS-Bench",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "interactive-segmentation",
+        "benchmark",
+        "medical-imaging"
+      ],
+      "id": 142
+    },
+    {
+      "name": "STU-Net",
+      "one_line_profile": "Large-scale pre-trained medical image segmentation model",
+      "detailed_description": "A scalable U-Net based model (STU-Net) pre-trained on a massive collection of medical images, offering high-performance segmentation capabilities.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "model_training"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uni-medical/STU-Net",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "segmentation",
+        "pre-trained-model",
+        "large-scale",
+        "u-net"
+      ],
+      "id": 143
+    },
+    {
+      "name": "UNet-Benchmark",
+      "one_line_profile": "Benchmark for revisiting model scaling in 3D medical image segmentation",
+      "detailed_description": "A benchmarking framework that investigates the effects of model scaling on U-Net architectures for 3D medical image segmentation tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "model_evaluation",
+        "segmentation_benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uni-medical/UNet-Benchmark",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "u-net",
+        "scaling",
+        "3d-segmentation",
+        "benchmark"
+      ],
+      "id": 144
+    },
+    {
+      "name": "3MDBench",
+      "one_line_profile": "Medical multimodal multi-agent dialogue benchmark",
+      "detailed_description": "A benchmark designed to evaluate multi-agent dialogue systems in medical contexts, involving multimodal data interactions.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "dialogue_system",
+        "multimodal_benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/univanxx/3mdbench",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "multi-agent",
+        "dialogue",
+        "medical-benchmark",
+        "multimodal"
+      ],
+      "id": 145
+    },
+    {
+      "name": "DeepLesion_manual_test_set",
+      "one_line_profile": "Manually annotated test set for DeepLesion dataset",
+      "detailed_description": "Provides a manually annotated test set with 3D lesion boxes for the DeepLesion dataset, serving as a ground truth resource for evaluation.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_annotation",
+        "lesion_detection"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/viggin/DeepLesion_manual_test_set",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deeplesion",
+        "annotation",
+        "test-set",
+        "3d-bounding-box"
+      ],
+      "id": 146
+    },
+    {
+      "name": "VinDr Lab",
+      "one_line_profile": "Data platform for medical AI dataset management and annotation",
+      "detailed_description": "A comprehensive platform enabling the building of high-quality medical datasets with advanced annotation features and lean processes for AI development.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_management",
+        "image_annotation"
+      ],
+      "application_level": "platform",
+      "primary_language": null,
+      "repo_url": "https://github.com/vinbigdata-medical/vindr-lab",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "data-platform",
+        "annotation-tool",
+        "medical-ai",
+        "dataset-management"
+      ],
+      "id": 147
+    },
+    {
+      "name": "cardiac_dataset_transformer",
+      "one_line_profile": "Tool to reorganize DICOM cardiac datasets into standard image formats",
+      "detailed_description": "A utility that transforms DICOM-based cardiac datasets into traditional image dataset structures to facilitate easier usage with deep learning dataloaders.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_preprocessing",
+        "dicom_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/vios-s/cardiac_dataset_trasformer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dicom",
+        "cardiac-mri",
+        "data-conversion",
+        "preprocessing"
+      ],
+      "id": 148
+    },
+    {
+      "name": "TotalSegmentator",
+      "one_line_profile": "Robust segmentation tool for over 100 anatomical structures in CT/MR",
+      "detailed_description": "A powerful tool for automatic and robust segmentation of more than 100 important anatomical structures in CT and MRI images.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "anatomical_segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wasserth/TotalSegmentator",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "segmentation",
+        "ct",
+        "mri",
+        "anatomy",
+        "automatic-segmentation"
+      ],
+      "id": 149
+    },
+    {
+      "name": "cxr-baselines",
+      "one_line_profile": "Baselines for radiology report generation on MIMIC-CXR",
+      "detailed_description": "Provides baseline models and code for generating radiology reports using the MIMIC-CXR chest x-ray dataset.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "report_generation",
+        "baseline_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/wboag/cxr-baselines",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "mimic-cxr",
+        "radiology-report",
+        "chest-xray",
+        "nlp"
+      ],
+      "id": 150
+    },
+    {
+      "name": "SFADA-GTV-Seg",
+      "one_line_profile": "Source-Free Active Domain Adaptation for GTV Segmentation",
+      "detailed_description": "Implementation of a Source-Free Active Domain Adaptation (SFADA) method for Gross Tumor Volume (GTV) segmentation across multiple hospitals.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "domain_adaptation",
+        "image_segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/whq-xxh/SFADA-GTV-Seg",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "domain-adaptation",
+        "gtv-segmentation",
+        "active-learning",
+        "medical-imaging"
+      ],
+      "id": 151
+    },
+    {
+      "name": "CMExam",
+      "one_line_profile": "Chinese National Medical Licensing Examination dataset and LLM benchmarks",
+      "detailed_description": "A dataset derived from the Chinese National Medical Licensing Examination, accompanied by benchmarks for evaluating large language models in medical contexts.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "medical_qa",
+        "llm_benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/williamliujl/CMExam",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-exam",
+        "qa-dataset",
+        "llm",
+        "chinese-medical"
+      ],
+      "id": 152
+    },
+    {
+      "name": "Havard-Medical-Image-Fusion-Datasets",
+      "one_line_profile": "Collection of medical image fusion datasets (CT-MRI, PET-MRI, SPECT-MRI)",
+      "detailed_description": "A repository hosting Harvard Medical Image Fusion Datasets, including pairs for CT-MRI, PET-MRI, and SPECT-MRI fusion tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "image_fusion",
+        "dataset_access"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/xianming-gu/Havard-Medical-Image-Fusion-Datasets",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "image-fusion",
+        "ct-mri",
+        "pet-mri",
+        "spect-mri"
+      ],
+      "id": 153
+    },
+    {
+      "name": "PMC-VQA",
+      "one_line_profile": "Large-scale medical visual question-answering dataset",
+      "detailed_description": "A large-scale dataset for medical visual question-answering containing 227k VQA pairs covering various modalities and diseases.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "visual_question_answering",
+        "dataset_access"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xiaoman-zhang/PMC-VQA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vqa",
+        "medical-vqa",
+        "multimodal",
+        "dataset"
+      ],
+      "id": 154
+    },
+    {
+      "name": "EMLDDMM",
+      "one_line_profile": "Robust medical image registration using EM-LDDMM",
+      "detailed_description": "A tool for robust medical image registration using Expectation-Maximization Large Deformation Diffeomorphic Metric Mapping (EM-LDDMM), handling differing contrasts and missing data.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "image_registration",
+        "deformable_registration"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/xl1393/EMLDDMM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "registration",
+        "lddmm",
+        "medical-imaging",
+        "missing-data"
+      ],
+      "id": 155
+    },
+    {
+      "name": "TriALS",
+      "one_line_profile": "Benchmark for segmentation challenges incorporating nnUNet and other baselines",
+      "detailed_description": "A benchmarking framework that incorporates nnUNet, SAMed, Mamba variants, and MedNeXT to establish standardized baselines for medical segmentation challenges.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "segmentation_benchmarking",
+        "model_comparison"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xmed-lab/TriALS",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "nnunet",
+        "segmentation",
+        "benchmark",
+        "mamba"
+      ],
+      "id": 156
+    },
+    {
+      "name": "LHU-Net",
+      "one_line_profile": "Lean Hybrid U-Net for volumetric medical image segmentation",
+      "detailed_description": "Implementation of LHU-Net, a cost-efficient and high-performance hybrid U-Net architecture for volumetric medical image segmentation.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "volumetric_segmentation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/xmindflow/LHUNet",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "u-net",
+        "volumetric-segmentation",
+        "efficient-model",
+        "medical-imaging"
+      ],
+      "id": 157
+    },
+    {
+      "name": "BenchX",
+      "one_line_profile": "Unified benchmark framework for medical vision-language pretraining on Chest X-Rays",
+      "detailed_description": "A benchmark framework designed to evaluate medical vision-language pretraining models specifically on Chest X-Ray datasets.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "vision_language_pretraining",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yangzhou12/BenchX",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "chest-xray",
+        "vision-language",
+        "pretraining",
+        "benchmark"
+      ],
+      "id": 158
+    },
+    {
+      "name": "MedAgentBoard",
+      "one_line_profile": "Benchmark for multi-agent collaboration in medical tasks",
+      "detailed_description": "A benchmark designed to evaluate the performance of multi-agent collaboration systems against conventional methods across diverse medical tasks.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "multi_agent_system",
+        "benchmarking"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yhzhu99/MedAgentBoard",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "multi-agent",
+        "medical-tasks",
+        "benchmark",
+        "collaboration"
+      ],
+      "id": 159
+    },
+    {
+      "name": "MEDFAIR",
+      "one_line_profile": "Benchmarking fairness for medical imaging",
+      "detailed_description": "A framework and benchmark for evaluating fairness in medical imaging algorithms, addressing bias and generalization issues.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "fairness_evaluation",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ys-zong/MEDFAIR",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "fairness",
+        "medical-imaging",
+        "benchmark",
+        "bias"
+      ],
+      "id": 160
+    },
+    {
+      "name": "MedSegBench",
+      "one_line_profile": "Library providing 35 standardized medical segmentation datasets",
+      "detailed_description": "A Python library that standardizes and provides easy access to 35 different medical segmentation datasets across various modalities.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_access",
+        "segmentation_benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zekikus/MedSegBench",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dataset-loader",
+        "medical-segmentation",
+        "standardized-data"
+      ],
+      "id": 161
+    },
+    {
+      "name": "cMedQA",
+      "one_line_profile": "Dataset for Chinese community medical question answering",
+      "detailed_description": "A dataset specifically collected for research in Chinese community medical question answering systems.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "medical_qa",
+        "dataset_access"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/zhangsheng93/cMedQA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "medical-qa",
+        "chinese-nlp",
+        "dataset"
+      ],
+      "id": 162
+    },
+    {
+      "name": "cMedQA2",
+      "one_line_profile": "Updated dataset for Chinese community medical question answering",
+      "detailed_description": "The second version of the cMedQA dataset, providing an updated and expanded collection for Chinese medical question answering research.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "medical_qa",
+        "dataset_access"
+      ],
+      "application_level": "dataset",
+      "primary_language": null,
+      "repo_url": "https://github.com/zhangsheng93/cMedQA2",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "medical-qa",
+        "chinese-nlp",
+        "dataset"
+      ],
+      "id": 163
+    },
+    {
+      "name": "SAT-DS",
+      "one_line_profile": "Tool and repository to build a large-scale medical segmentation dataset collection",
+      "detailed_description": "A repository providing tools to build SAT-DS, a massive collection of over 72 public segmentation datasets, standardizing them for large-scale training.",
+      "domains": [
+        "H1",
+        "H1-06"
+      ],
+      "subtask_category": [
+        "data_curation",
+        "dataset_construction"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhaoziheng/SAT-DS",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dataset-collection",
+        "segmentation",
+        "large-scale",
+        "data-curation"
+      ],
+      "id": 164
+    }
+  ]
+}

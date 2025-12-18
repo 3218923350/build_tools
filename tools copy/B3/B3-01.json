@@ -1,0 +1,3852 @@
+{
+  "generated_at": "2025-12-16T15:36:24.595723+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "B3",
+      "leaf_cluster_name": "生信-单细胞与空间组学生态",
+      "domain": "Bioinfo",
+      "typical_objects": "count matrix, AnnData/Seurat, spatial",
+      "task_chain": "预处理→整合→聚类/轨迹→注释→可视化→复现",
+      "tool_form": "R/Python生态 + 交互可视化 + pipelines"
+    },
+    "unit": {
+      "unit_id": "B3-01",
+      "unit_name": "数据格式/读取/预处理与质控",
+      "target_scale": "250–500",
+      "coverage_tools": "读写/转换、QC、双细胞、ambient、去噪"
+    },
+    "search": {
+      "target_candidates": 500,
+      "queries": [
+        "[GH] scDblFinder",
+        "[GH] anndata",
+        "[GH] DropletUtils",
+        "[GH] scVI",
+        "[GH] CellBender",
+        "[GH] SoupX",
+        "[GH] Scrublet",
+        "[GH] DoubletFinder",
+        "[GH] Seurat",
+        "[GH] Scanpy",
+        "[GH] single-cell preprocessing",
+        "[GH] scRNA-seq quality control",
+        "[GH] doublet detection",
+        "[GH] ambient RNA removal",
+        "[GH] scRNA-seq denoising",
+        "[GH] scRNA-seq imputation",
+        "[GH] anndata io",
+        "[GH] seurat conversion",
+        "[GH] droplet processing",
+        "[GH] spatial transcriptomics qc",
+        "[GH] single-cell normalization",
+        "[GH] read count matrix",
+        "[GH] empty drops",
+        "[GH] scRNA-seq filtering",
+        "[WEB] scRNA-seq quality control pipeline github",
+        "[WEB] single-cell doublet detection tools github",
+        "[WEB] ambient RNA removal methods github",
+        "[WEB] scRNA-seq denoising imputation github",
+        "[WEB] anndata seurat conversion tools github",
+        "[WEB] spatial transcriptomics preprocessing github"
+      ],
+      "total_candidates": 689,
+      "tool_candidates": 232,
+      "final_tools": 151
+    }
+  },
+  "tools": [
+    {
+      "name": "loupeR",
+      "one_line_profile": "Converter for Seurat objects to 10x Genomics Loupe Browser files",
+      "detailed_description": "A lightweight R package designed to convert Seurat objects into .cloupe files, enabling visualization and analysis of single-cell data within the 10x Genomics Loupe Browser.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "visualization_prep"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/10XGenomics/loupeR",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "seurat",
+        "loupe-browser",
+        "file-conversion",
+        "single-cell"
+      ],
+      "id": 1
+    },
+    {
+      "name": "AnnSQL",
+      "one_line_profile": "SQL-based query interface for AnnData objects",
+      "detailed_description": "A Python package that enables SQL-based querying directly on AnnData objects, facilitating complex data filtering and retrieval operations for single-cell datasets.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_querying",
+        "data_filtering"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ArpiarSaundersLab/annsql",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "anndata",
+        "sql",
+        "query",
+        "single-cell"
+      ],
+      "id": 2
+    },
+    {
+      "name": "PiGx scRNAseq",
+      "one_line_profile": "Pipeline for analysis of Drop-seq single cell RNA-seq data",
+      "detailed_description": "A comprehensive pipeline for processing Drop-seq single-cell RNA-seq data, handling steps from raw reads to expression matrices and quality control reports.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "preprocessing",
+        "quality_control"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BIMSBbioinfo/pigx_scrnaseq",
+      "help_website": [
+        "http://bioinformatics.mdc-berlin.de/pigx/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "drop-seq",
+        "pipeline",
+        "scrnaseq",
+        "preprocessing"
+      ],
+      "id": 3
+    },
+    {
+      "name": "scVIDR",
+      "one_line_profile": "Variational inference model for predicting dose responses in single cells",
+      "detailed_description": "A Variational Autoencoder (VAE) tool designed to predict gene expression changes in response to chemical perturbations across different cell types in single-cell data.",
+      "domains": [
+        "B3"
+      ],
+      "subtask_category": [
+        "modeling",
+        "perturbation_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/BhattacharyaLab/scVIDR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "vae",
+        "perturbation",
+        "dose-response",
+        "single-cell"
+      ],
+      "id": 4
+    },
+    {
+      "name": "MiCV",
+      "one_line_profile": "Web-application for scRNA-seq filtering, analysis, and annotation",
+      "detailed_description": "A Python Dash-based web application that allows researchers to upload raw scRNA-seq data for interactive filtering, analysis, and manual annotation without requiring extensive coding skills.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "analysis_platform",
+        "annotation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Cai-Lab-at-University-of-Michigan/MiCV",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dash",
+        "web-app",
+        "scrnaseq",
+        "interactive"
+      ],
+      "id": 5
+    },
+    {
+      "name": "ceLLama",
+      "one_line_profile": "Local LLM-based cell type annotation tool",
+      "detailed_description": "A tool leveraging local Large Language Models (LLMs) for automated cell type annotation in single-cell RNA-seq data, emphasizing privacy and speed.",
+      "domains": [
+        "B3"
+      ],
+      "subtask_category": [
+        "cell_type_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/CelVoxes/ceLLama",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "llm",
+        "annotation",
+        "single-cell",
+        "nlp"
+      ],
+      "id": 6
+    },
+    {
+      "name": "scrna_seurat_pipeline",
+      "one_line_profile": "Comprehensive Seurat-based analysis pipeline for scRNA-seq",
+      "detailed_description": "A structured pipeline utilizing the Seurat framework for the comprehensive analysis of single-cell transcriptomics data, covering preprocessing to downstream analysis.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/CostaLab/scrna_seurat_pipeline",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "seurat",
+        "pipeline",
+        "scrnaseq"
+      ],
+      "id": 7
+    },
+    {
+      "name": "ASAP",
+      "one_line_profile": "Automated Single-cell Analysis Pipeline",
+      "detailed_description": "A web-based platform and pipeline for the automated analysis of single-cell RNA-seq data, providing a user-friendly interface for processing and visualization.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "analysis_platform"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/DeplanckeLab/ASAP",
+      "help_website": [
+        "https://asap.epfl.ch/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "pipeline",
+        "web-server",
+        "scrnaseq",
+        "automation"
+      ],
+      "id": 8
+    },
+    {
+      "name": "Interactive-3D-Plotting-in-Seurat",
+      "one_line_profile": "3D visualization tool for Seurat objects",
+      "detailed_description": "R code and utilities to generate interactive 3D UMAP and tSNE plots from Seurat-analyzed single-cell RNA-seq data.",
+      "domains": [
+        "B3"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/Dragonmasterx87/Interactive-3D-Plotting-in-Seurat-3.0.0",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "visualization",
+        "3d",
+        "seurat",
+        "umap"
+      ],
+      "id": 9
+    },
+    {
+      "name": "gssnng",
+      "one_line_profile": "Gene Set Scoring on the Nearest Neighbor Graph",
+      "detailed_description": "A tool for performing gene set scoring on single-cell RNA-seq data using the nearest neighbor graph structure within AnnData objects.",
+      "domains": [
+        "B3"
+      ],
+      "subtask_category": [
+        "scoring",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/IlyaLab/gssnng",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gene-set-scoring",
+        "anndata",
+        "single-cell",
+        "graph"
+      ],
+      "id": 10
+    },
+    {
+      "name": "sc-atacseq-explorer",
+      "one_line_profile": "Preprocessing tool for single cell ATAC-Seq data",
+      "detailed_description": "A preprocessing utility for single-cell ATAC-Seq data, designed to prepare data for visualization and analysis in single cell explorer tools.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "atac-seq"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/JetBrains-Research/sc-atacseq-explorer",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "atac-seq",
+        "preprocessing",
+        "single-cell"
+      ],
+      "id": 11
+    },
+    {
+      "name": "DoubletDetection",
+      "one_line_profile": "Doublet detection in single-cell RNA-seq data",
+      "detailed_description": "A Python package for detecting doublets (technical artifacts where two cells are sequenced as one) in single-cell RNA-seq data.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "doublet_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JonathanShor/DoubletDetection",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "doublet-detection",
+        "qc",
+        "scrnaseq"
+      ],
+      "id": 12
+    },
+    {
+      "name": "ALRA",
+      "one_line_profile": "Adaptively-thresholded Low-Rank Approximation for scRNA-seq",
+      "detailed_description": "A method for imputation of missing values in single-cell RNA-seq data using low-rank approximation, helping to recover true biological signals from sparse data.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "imputation",
+        "denoising"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/KlugerLab/ALRA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "imputation",
+        "scrnaseq",
+        "low-rank-approximation"
+      ],
+      "id": 13
+    },
+    {
+      "name": "MAGIC",
+      "one_line_profile": "Markov Affinity-based Graph Imputation of Cells",
+      "detailed_description": "An algorithm for imputing missing values in high-dimensional data, particularly single-cell RNA-seq, by sharing information across similar cells to restore data structure.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "imputation",
+        "denoising"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KrishnaswamyLab/MAGIC",
+      "help_website": [
+        "https://magic.readthedocs.io/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "imputation",
+        "scrnaseq",
+        "graph-diffusion"
+      ],
+      "id": 14
+    },
+    {
+      "name": "FastCAR",
+      "one_line_profile": "Fast Correction of Ambient RNA",
+      "detailed_description": "An R package designed to remove ambient RNA contamination from droplet-based single-cell sequencing data, improving the accuracy of downstream analysis.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "ambient_rna_removal"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/LungCellAtlas/FastCAR",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ambient-rna",
+        "decontamination",
+        "scrnaseq"
+      ],
+      "id": 15
+    },
+    {
+      "name": "Scasat",
+      "one_line_profile": "Single cell ATAC-seq preprocessing and analysis pipeline",
+      "detailed_description": "A complete pipeline for the preprocessing and analysis of single-cell ATAC-seq data, facilitating the study of chromatin accessibility at the single-cell level.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "preprocessing",
+        "atac-seq"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ManchesterBioinference/Scasat",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "atac-seq",
+        "pipeline",
+        "single-cell"
+      ],
+      "id": 16
+    },
+    {
+      "name": "alphapepttools",
+      "one_line_profile": "Biological interpretation tools for proteomics data",
+      "detailed_description": "A library for the biological interpretation of proteomics data, designed to be agnostic to the search and quantification engine used.",
+      "domains": [
+        "B3"
+      ],
+      "subtask_category": [
+        "analysis",
+        "proteomics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MannLabs/alphapepttools",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "proteomics",
+        "data-interpretation",
+        "mass-spectrometry"
+      ],
+      "id": 17
+    },
+    {
+      "name": "DropletUtils",
+      "one_line_profile": "Utilities for handling droplet-based single-cell data",
+      "detailed_description": "A comprehensive R package providing utilities for handling, processing, and analyzing droplet-based single-cell data, including empty droplet detection and barcode swapping correction.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "quality_control",
+        "io"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/MarioniLab/DropletUtils",
+      "help_website": [
+        "https://bioconductor.org/packages/DropletUtils"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "droplet-sequencing",
+        "qc",
+        "bioconductor"
+      ],
+      "id": 18
+    },
+    {
+      "name": "EmptyDropsMultiome",
+      "one_line_profile": "Empty droplet detection for multiome datasets",
+      "detailed_description": "An extension of the EmptyDrops method specifically tailored for detecting and removing empty droplets in multi-omics (RNA + ATAC) single-cell datasets.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "cell_calling"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/MarioniLab/EmptyDropsMultiome",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "multiome",
+        "qc",
+        "empty-droplets"
+      ],
+      "id": 19
+    },
+    {
+      "name": "sobolev_alignment",
+      "one_line_profile": "Sobolev alignment of deep probabilistic models for single cell profiles",
+      "detailed_description": "A method for aligning single-cell profiles using Sobolev alignment of deep probabilistic models, facilitating the comparison and integration of datasets.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "integration",
+        "alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NKI-CCB/sobolev_alignment",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "alignment",
+        "integration",
+        "deep-learning",
+        "single-cell"
+      ],
+      "id": 20
+    },
+    {
+      "name": "scMiko",
+      "one_line_profile": "R package for scRNA-seq analysis workflows",
+      "detailed_description": "An R package built on the Seurat framework offering a collection of analytic workflows and visualization tools for single-cell RNA-seq data.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "analysis",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/NMikolajewicz/scMiko",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "seurat",
+        "workflow",
+        "scrnaseq"
+      ],
+      "id": 21
+    },
+    {
+      "name": "scAR",
+      "one_line_profile": "Deep learning model for ambient signal removal",
+      "detailed_description": "scAR (single-cell Ambient Remover) uses deep learning to model and remove ambient RNA signals in droplet-based single-cell omics data, distinguishing real signals from background noise.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "ambient_rna_removal",
+        "denoising"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Novartis/scar",
+      "help_website": [
+        "https://scar-tutorials.readthedocs.io/"
+      ],
+      "license": null,
+      "tags": [
+        "ambient-rna",
+        "deep-learning",
+        "denoising",
+        "scrnaseq"
+      ],
+      "id": 22
+    },
+    {
+      "name": "CyteType",
+      "one_line_profile": "Multi-agent LLM driven cell type annotation",
+      "detailed_description": "A Python tool utilizing multi-agent Large Language Models (LLMs) to perform automated cell type annotation on single-cell RNA-seq data.",
+      "domains": [
+        "B3"
+      ],
+      "subtask_category": [
+        "cell_type_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NygenAnalytics/CyteType",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "llm",
+        "annotation",
+        "single-cell"
+      ],
+      "id": 23
+    },
+    {
+      "name": "CyteTypeR",
+      "one_line_profile": "R interface for CyteType cell annotation",
+      "detailed_description": "The R implementation/interface for the CyteType tool, enabling multi-agent LLM-driven cell type annotation within R workflows.",
+      "domains": [
+        "B3"
+      ],
+      "subtask_category": [
+        "cell_type_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/NygenAnalytics/CyteTypeR",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "llm",
+        "annotation",
+        "single-cell",
+        "r"
+      ],
+      "id": 24
+    },
+    {
+      "name": "MuDataSeurat",
+      "one_line_profile": "Interface for .h5mu files in Seurat",
+      "detailed_description": "An R package providing an interface to read and write .h5mu (MuData) files directly into Seurat objects, facilitating multi-omics data interoperability.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_io",
+        "format_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/PMBio/MuDataSeurat",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "mudata",
+        "seurat",
+        "h5mu",
+        "multi-omics"
+      ],
+      "id": 25
+    },
+    {
+      "name": "APackOfTheClones",
+      "one_line_profile": "Visualization of clonal expansion via circle-packing",
+      "detailed_description": "An R package extending scRepertoire to visualize clonal expansion in single-cell data using circle-packing layouts, providing an intuitive view of clone sizes.",
+      "domains": [
+        "B3"
+      ],
+      "subtask_category": [
+        "visualization",
+        "clonal_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/Qile0317/APackOfTheClones",
+      "help_website": [
+        "https://qile0317.github.io/APackOfTheClones/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "visualization",
+        "clonal-expansion",
+        "tcr-seq",
+        "circle-packing"
+      ],
+      "id": 26
+    },
+    {
+      "name": "DoubleThreshold",
+      "one_line_profile": "Double Threshold algorithm for brain connectivity",
+      "detailed_description": "A MATLAB implementation of the Double Threshold (DDT) algorithm for identifying significant functional connections in neuronal networks, filtering out noise in connectivity matrices.",
+      "domains": [
+        "B3"
+      ],
+      "subtask_category": [
+        "network_analysis",
+        "filtering"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/ScreenNeuroPharm/DoubleThreshold",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neuroscience",
+        "connectivity",
+        "network-analysis"
+      ],
+      "id": 27
+    },
+    {
+      "name": "ACTINN-PyTorch",
+      "one_line_profile": "PyTorch implementation of ACTINN for cell type identification",
+      "detailed_description": "A PyTorch implementation of the ACTINN (Automatic Cell-Types Identification using Neural Networks) method for classifying cell types in single-cell RNA-seq data.",
+      "domains": [
+        "B3"
+      ],
+      "subtask_category": [
+        "cell_type_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SindiLab/ACTINN-PyTorch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "annotation",
+        "scrnaseq",
+        "pytorch"
+      ],
+      "id": 28
+    },
+    {
+      "name": "drug2cell",
+      "one_line_profile": "Gene group activity utility functions for Scanpy",
+      "detailed_description": "A Python utility for Scanpy that facilitates the analysis of drug targets or other gene groups within single-cell data, mapping drug interactions to cell types.",
+      "domains": [
+        "B3"
+      ],
+      "subtask_category": [
+        "analysis",
+        "drug_discovery"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Teichlab/drug2cell",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "scanpy",
+        "drug-targets",
+        "single-cell"
+      ],
+      "id": 29
+    },
+    {
+      "name": "scanpy_recipes",
+      "one_line_profile": "Aggregated analysis functions for Scanpy",
+      "detailed_description": "A collection of generalized and aggregated analysis recipes and functions for working with AnnData and Scanpy, standardizing common workflows.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "workflow",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TheJacksonLaboratory/scanpy_recipes",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "scanpy",
+        "recipes",
+        "workflow",
+        "anndata"
+      ],
+      "id": 30
+    },
+    {
+      "name": "scImpute",
+      "one_line_profile": "Accurate and robust imputation method for scRNA-seq data",
+      "detailed_description": "A statistical method to accurately and robustly impute the dropout values in scRNA-seq data.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "imputation",
+        "denoising"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/Vivianstats/scImpute",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "scRNA-seq",
+        "imputation",
+        "dropout"
+      ],
+      "id": 31
+    },
+    {
+      "name": "bayNorm",
+      "one_line_profile": "Bayesian normalization for single-cell RNA-seq data",
+      "detailed_description": "bayNorm is an R package for normalizing single-cell RNA-seq data using a Bayesian approach to infer true counts.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "normalization",
+        "preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/WT215/bayNorm",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "normalization",
+        "bayesian",
+        "scRNA-seq"
+      ],
+      "id": 32
+    },
+    {
+      "name": "scIBD",
+      "one_line_profile": "Doublet detection tool for scCAS data",
+      "detailed_description": "A tool designed for detecting doublets in single-cell chromatin accessibility sequencing (scCAS) data.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "doublet_detection",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Ying-Lab/scIBD",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scCAS",
+        "doublet-detection",
+        "atac-seq"
+      ],
+      "id": 33
+    },
+    {
+      "name": "treedata",
+      "one_line_profile": "AnnData extension for tree-structured data",
+      "detailed_description": "A Python package that extends the AnnData format to support tree-structured data, facilitating hierarchical analysis in single-cell genomics.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_structure",
+        "data_handling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/YosefLab/treedata",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "anndata",
+        "hierarchy",
+        "tree"
+      ],
+      "id": 34
+    },
+    {
+      "name": "scCATCH",
+      "one_line_profile": "Automatic annotation of cell types for scRNA-seq clusters",
+      "detailed_description": "An R package for automatic annotation of cell types of clusters from single-cell RNA sequencing data based on evidence-based score.",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "cell_annotation",
+        "clustering"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ZJUFanLab/scCATCH",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cell-annotation",
+        "scRNA-seq",
+        "clustering"
+      ],
+      "id": 35
+    },
+    {
+      "name": "SCopeLoomR",
+      "one_line_profile": "R interface for Loom files compatible with SCope",
+      "detailed_description": "R package to create generic .loom files and extend them with other data such as SCENIC regulons, Seurat clusters and markers, compatible with the SCope viewer.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "file_io"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/aertslab/SCopeLoomR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "loom",
+        "file-format",
+        "visualization"
+      ],
+      "id": 36
+    },
+    {
+      "name": "SpatialNF",
+      "one_line_profile": "Nextflow pipelines for spatial transcriptomics",
+      "detailed_description": "A collection of Nextflow pipelines for processing spatial transcriptomics data.",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "workflow",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aertslab/SpatialNF",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "spatial-transcriptomics",
+        "nextflow",
+        "pipeline"
+      ],
+      "id": 37
+    },
+    {
+      "name": "dropseqRunner",
+      "one_line_profile": "Pipeline for processing droplet-based scRNA-seq data",
+      "detailed_description": "A lightweight pipeline for processing droplet-based single-cell RNA-seq data, handling alignment and quantification.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "preprocessing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aselewa/dropseqRunner",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "drop-seq",
+        "pipeline",
+        "scRNA-seq"
+      ],
+      "id": 38
+    },
+    {
+      "name": "ddqc",
+      "one_line_profile": "Data-driven quality control for scRNA-seq",
+      "detailed_description": "An unsupervised, data-driven quality control method for single-cell RNA-seq that retains cell types that might be lost by standard fixed-threshold filtering.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "filtering"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ayshwaryas/ddqc",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "quality-control",
+        "scRNA-seq",
+        "filtering"
+      ],
+      "id": 39
+    },
+    {
+      "name": "CpG_Me",
+      "one_line_profile": "WGBS pipeline for alignment and QC of DNA methylation",
+      "detailed_description": "A whole genome bisulfite sequencing (WGBS) pipeline that processes raw reads (FastQ) to CpG count matrices, including alignment and QC.",
+      "domains": [
+        "Bioinfo"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "alignment",
+        "methylation_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/ben-laufer/CpG_Me",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "wgbs",
+        "methylation",
+        "pipeline"
+      ],
+      "id": 40
+    },
+    {
+      "name": "SCeptre",
+      "one_line_profile": "Scanpy extension for multiplexed single-cell proteomics",
+      "detailed_description": "A Python package extending Scanpy to analyze multiplexed single-cell proteomics data, handling specific normalization and QC needs.",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "proteomics",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/bfurtwa/SCeptre",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "proteomics",
+        "scanpy",
+        "single-cell"
+      ],
+      "id": 41
+    },
+    {
+      "name": "SgsAnnDataV2",
+      "one_line_profile": "Converter for Seurat/Giotto/Signac/ArchR to AnnData",
+      "detailed_description": "An R package designed to convert analysis objects from Seurat, Giotto, Signac, and ArchR into the AnnData format for interoperability.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/bio-xtt/SgsAnnDataV2",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "anndata",
+        "seurat",
+        "conversion"
+      ],
+      "id": 42
+    },
+    {
+      "name": "anndata-mcp",
+      "one_line_profile": "MCP interface for AnnData objects",
+      "detailed_description": "A tool allowing retrieval of information about AnnData objects via the Model Context Protocol (MCP), facilitating integration with LLMs or other MCP-compliant systems.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_access",
+        "interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/biocontext-ai/anndata-mcp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "anndata",
+        "mcp",
+        "llm"
+      ],
+      "id": 43
+    },
+    {
+      "name": "CellBender",
+      "one_line_profile": "Deep learning tool for removing technical artifacts from scRNA-seq",
+      "detailed_description": "A software package for eliminating technical artifacts (like ambient RNA/background noise) from high-throughput single-cell RNA sequencing data using deep generative models.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "denoising",
+        "quality_control",
+        "ambient_rna_removal"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/broadinstitute/CellBender",
+      "help_website": [
+        "https://cellbender.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "denoising",
+        "deep-learning",
+        "scRNA-seq"
+      ],
+      "id": 44
+    },
+    {
+      "name": "pytometry_legacy",
+      "one_line_profile": "Scanpy extension for flow and mass cytometry",
+      "detailed_description": "Extends the Scanpy framework to handle preprocessing and analysis of flow and mass cytometry data.",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "cytometry",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/buettnerlab/pytometry_legacy",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cytometry",
+        "scanpy",
+        "flow-cytometry"
+      ],
+      "id": 45
+    },
+    {
+      "name": "mLLMCelltype",
+      "one_line_profile": "Multi-LLM consensus framework for cell annotation",
+      "detailed_description": "A framework leveraging multiple Large Language Models (LLMs) to perform accurate consensus-based cell type annotation for single-cell data.",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "cell_annotation",
+        "llm"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cafferychen777/mLLMCelltype",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "cell-annotation",
+        "consensus"
+      ],
+      "id": 46
+    },
+    {
+      "name": "proatac",
+      "one_line_profile": "Preprocessing pipeline for scATAC-seq data",
+      "detailed_description": "A preprocessing pipeline designed for processing single-cell ATAC-seq data.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "preprocessing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/caleblareau/proatac",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scATAC-seq",
+        "pipeline",
+        "preprocessing"
+      ],
+      "id": 47
+    },
+    {
+      "name": "solo",
+      "one_line_profile": "Doublet detection for scRNA-seq using neural networks",
+      "detailed_description": "A tool for detecting doublets in single-cell RNA-seq data, often used in conjunction with scVI.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "doublet_detection",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/calico/solo",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "doublet-detection",
+        "scvi",
+        "neural-network"
+      ],
+      "id": 48
+    },
+    {
+      "name": "scruff",
+      "one_line_profile": "Single Cell RNA-seq UMI Filtering Facilitator",
+      "detailed_description": "An R package for processing single-cell RNA-seq FASTQ files, performing alignment, UMI filtering, and generating count matrices.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "preprocessing",
+        "filtering"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/campbio/scruff",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "scRNA-seq",
+        "umi",
+        "pipeline"
+      ],
+      "id": 49
+    },
+    {
+      "name": "Circe",
+      "one_line_profile": "Co-accessibility network inference from scATAC-seq",
+      "detailed_description": "A Python tool for inferring co-accessibility networks from single-cell ATAC-seq data, based on the Cicero algorithm but implemented for AnnData.",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "network_inference",
+        "scATAC-seq"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cantinilab/Circe",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "scATAC-seq",
+        "network",
+        "cicero"
+      ],
+      "id": 50
+    },
+    {
+      "name": "GRnnData",
+      "one_line_profile": "Gene Regulatory Network enhanced AnnData toolkit",
+      "detailed_description": "A toolkit for handling and analyzing Gene Regulatory Networks (GRNs) within the AnnData framework.",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "grn",
+        "network_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/cantinilab/GRnnData",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "grn",
+        "anndata",
+        "regulatory-network"
+      ],
+      "id": 51
+    },
+    {
+      "name": "Seurat-Integrate",
+      "one_line_profile": "Wrapper for Seurat integration methods",
+      "detailed_description": "An R package expanding integrative analysis capabilities of Seurat by providing seamless access to popular integration methods and benchmarking tools.",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "integration",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/cbib/Seurat-Integrate",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "seurat",
+        "integration",
+        "benchmarking"
+      ],
+      "id": 52
+    },
+    {
+      "name": "sceasy",
+      "one_line_profile": "Converter for single-cell data formats",
+      "detailed_description": "A package to facilitate conversion between different single-cell data formats (e.g., Seurat, AnnData, Loom, SingleCellExperiment).",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/cellgeni/sceasy",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "conversion",
+        "seurat",
+        "anndata",
+        "loom"
+      ],
+      "id": 53
+    },
+    {
+      "name": "DoubletFinder",
+      "one_line_profile": "Doublet detection in scRNA-seq data",
+      "detailed_description": "An R package for predicting doublets in single-cell RNA sequencing data using artificial nearest neighbors.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "doublet_detection",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/chris-mcginnis-ucsf/DoubletFinder",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "doublet-detection",
+        "scRNA-seq",
+        "qc"
+      ],
+      "id": 54
+    },
+    {
+      "name": "bollito",
+      "one_line_profile": "Single-cell RNA-seq analysis pipeline",
+      "detailed_description": "A comprehensive pipeline for single-cell RNA-seq data analysis.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "pipeline",
+        "analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/cnio-bu/bollito",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pipeline",
+        "scRNA-seq",
+        "analysis"
+      ],
+      "id": 55
+    },
+    {
+      "name": "epiScanpy",
+      "one_line_profile": "Epigenomics Single Cell Analysis in Python",
+      "detailed_description": "A Python toolkit for the analysis of single-cell epigenomics data (scATAC-seq, scDNA methylation), built on top of Scanpy.",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "epigenomics",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/colomemaria/epiScanpy",
+      "help_website": [
+        "https://episcanpy.readthedocs.io"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "epigenomics",
+        "scATAC-seq",
+        "scanpy"
+      ],
+      "id": 56
+    },
+    {
+      "name": "pytximport",
+      "one_line_profile": "Python implementation of tximport for gene count estimation",
+      "detailed_description": "A Python implementation of the R tximport package, used for summarizing transcript-level estimates for gene-level analysis.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "quantification",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/complextissue/pytximport",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "tximport",
+        "quantification",
+        "rna-seq"
+      ],
+      "id": 57
+    },
+    {
+      "name": "SoupX",
+      "one_line_profile": "Removal of cell-free mRNA from droplet scRNA-seq",
+      "detailed_description": "An R package to quantify and remove ambient RNA (soup) contamination from droplet-based single-cell RNA-seq data.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "ambient_rna_removal",
+        "quality_control",
+        "denoising"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/constantAmateur/SoupX",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "ambient-rna",
+        "contamination",
+        "scRNA-seq"
+      ],
+      "id": 58
+    },
+    {
+      "name": "Seurat (CV)",
+      "one_line_profile": "3D reconstruction from moving points to depth",
+      "detailed_description": "Official implementation of 'Seurat: From Moving Points to Depth', a computer vision tool for depth estimation. (Note: Name collision with bioinformatics tool Seurat).",
+      "domains": [
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "depth_estimation",
+        "3d_reconstruction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cvlab-kaist/Seurat",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "computer-vision",
+        "depth-estimation",
+        "cvpr"
+      ],
+      "id": 59
+    },
+    {
+      "name": "grassp",
+      "one_line_profile": "Graph-based Analysis of Subcellular/Spatial Proteomics",
+      "detailed_description": "A Python package for graph-based analysis of subcellular and spatial proteomics data.",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "spatial_proteomics",
+        "graph_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/czbiohub-sf/grassp",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "spatial-proteomics",
+        "graph",
+        "analysis"
+      ],
+      "id": 60
+    },
+    {
+      "name": "protdata",
+      "one_line_profile": "Proteomics data loader for AnnData",
+      "detailed_description": "A dataloader tool to convert common proteomics search engine outputs into the AnnData format for downstream analysis.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_loading",
+        "file_io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/czbiohub-sf/protdata",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "proteomics",
+        "anndata",
+        "dataloader"
+      ],
+      "id": 61
+    },
+    {
+      "name": "gficf",
+      "one_line_profile": "Gene Frequency - Inverse Cell Frequency normalization",
+      "detailed_description": "An R implementation of the GF-ICF method for normalizing single-cell data, analogous to TF-IDF in text processing.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "normalization",
+        "preprocessing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/dibbelab/gficf",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "normalization",
+        "scRNA-seq",
+        "tfidf"
+      ],
+      "id": 62
+    },
+    {
+      "name": "rPanglaoDB",
+      "one_line_profile": "R interface for PanglaoDB single-cell data",
+      "detailed_description": "An R package to download and merge labeled single-cell RNA-seq data from the PanglaoDB database directly into Seurat objects.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_access",
+        "database_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/dosorio/rPanglaoDB",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "panglaodb",
+        "seurat",
+        "data-access"
+      ],
+      "id": 63
+    },
+    {
+      "name": "anndata (R)",
+      "one_line_profile": "R wrapper for the AnnData format",
+      "detailed_description": "An R package providing an interface to the Python AnnData package, allowing manipulation of annotated multivariate observation data in R.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_structure",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/dynverse/anndata",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "anndata",
+        "r",
+        "interoperability"
+      ],
+      "id": 64
+    },
+    {
+      "name": "r-seurat-scripts",
+      "one_line_profile": "CLI scripts for Seurat workflows",
+      "detailed_description": "A collection of scripts wrapping Seurat functionality for use in command-line workflows (e.g., Bioconda, Galaxy).",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "workflow_utils",
+        "cli"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ebi-gene-expression-group/r-seurat-scripts",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "seurat",
+        "cli",
+        "bioconda"
+      ],
+      "id": 65
+    },
+    {
+      "name": "scanpy-scripts",
+      "one_line_profile": "CLI scripts for Scanpy workflows",
+      "detailed_description": "Scripts for using Scanpy via command line, facilitating integration into workflow managers like Nextflow or Galaxy.",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "workflow_utils",
+        "cli"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ebi-gene-expression-group/scanpy-scripts",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "scanpy",
+        "cli",
+        "workflow"
+      ],
+      "id": 66
+    },
+    {
+      "name": "scanpy-workflow",
+      "one_line_profile": "Nextflow workflow for Scanpy",
+      "detailed_description": "A Nextflow workflow leveraging scanpy-scripts to run scalable single-cell analysis pipelines.",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "workflow",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/ebi-gene-expression-group/scanpy-workflow",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nextflow",
+        "scanpy",
+        "pipeline"
+      ],
+      "id": 67
+    },
+    {
+      "name": "SCpubr",
+      "one_line_profile": "Publication-ready visualizations for scRNA-seq",
+      "detailed_description": "An R package to generate high-quality, publication-ready visualizations for single-cell transcriptomics data, streamlining plotting workflows.",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "visualization",
+        "plotting"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/enblacar/SCpubr",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "visualization",
+        "scRNA-seq",
+        "plotting"
+      ],
+      "id": 68
+    },
+    {
+      "name": "dea_seurat",
+      "one_line_profile": "Snakemake workflow for differential expression with Seurat",
+      "detailed_description": "A Snakemake workflow and MrBiomics module for performing differential expression analyses (DEA) on single-cell data using Seurat.",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "workflow",
+        "differential_expression"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/epigen/dea_seurat",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "snakemake",
+        "seurat",
+        "differential-expression"
+      ],
+      "id": 69
+    },
+    {
+      "name": "mixscape_seurat",
+      "one_line_profile": "Snakemake workflow for CRISPR screen analysis with Seurat",
+      "detailed_description": "A Snakemake workflow for performing perturbation analyses of pooled CRISPR screens with scRNA-seq readout using Seurat's Mixscape.",
+      "domains": [
+        "Bioinfo",
+        "B3"
+      ],
+      "subtask_category": [
+        "workflow",
+        "crispr_screen"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/epigen/mixscape_seurat",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "snakemake",
+        "seurat",
+        "mixscape"
+      ],
+      "id": 70
+    },
+    {
+      "name": "scrnaseq_processing_seurat",
+      "one_line_profile": "Snakemake workflow for scRNA-seq processing with Seurat",
+      "detailed_description": "A Snakemake workflow for processing and visualizing single-cell RNA-seq data (10X or MTX) using Seurat.",
+      "domains": [
+        "Bioinfo",
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "workflow",
+        "preprocessing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/epigen/scrnaseq_processing_seurat",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "snakemake",
+        "seurat",
+        "preprocessing"
+      ],
+      "id": 71
+    },
+    {
+      "name": "SGS",
+      "one_line_profile": "User-friendly browser for visualizing single-cell and spatial multiomics data",
+      "detailed_description": "SGS is a collaborative and versatile browser designed for the visualization of single-cell and spatial multiomics data, facilitating interactive exploration of complex biological datasets.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "spatial_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/fanglu0411/sgs",
+      "help_website": [
+        "https://github.com/fanglu0411/sgs"
+      ],
+      "license": null,
+      "tags": [
+        "visualization",
+        "single-cell",
+        "spatial-omics",
+        "browser"
+      ],
+      "id": 72
+    },
+    {
+      "name": "anndictionary",
+      "one_line_profile": "Python package to conveniently process a dictionary of AnnData objects",
+      "detailed_description": "Anndictionary provides utilities to handle collections of AnnData objects, simplifying batch processing and management of multiple single-cell datasets in Python.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "data_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ggit12/anndictionary",
+      "help_website": [
+        "https://github.com/ggit12/anndictionary"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "anndata",
+        "python",
+        "single-cell",
+        "data-structure"
+      ],
+      "id": 73
+    },
+    {
+      "name": "miQC",
+      "one_line_profile": "Flexible, probabilistic metrics for quality control of scRNA-seq data",
+      "detailed_description": "miQC provides a data-driven approach to quality control for single-cell RNA-seq data, using probabilistic models to jointly model the proportion of mitochondrial reads and the number of detected genes.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "quality_control"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/greenelab/miQC",
+      "help_website": [
+        "https://greenelab.github.io/miQC/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "qc",
+        "scRNA-seq",
+        "probabilistic-modeling",
+        "bioconductor"
+      ],
+      "id": 74
+    },
+    {
+      "name": "PieParty",
+      "one_line_profile": "Tool to represent each cell in UMAP plots as a pie chart",
+      "detailed_description": "PieParty allows for the visualization of single-cell data by representing individual cells or clusters as pie charts within UMAP embeddings, useful for displaying multi-modal or compositional data per cell.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/harbourlab/PieParty",
+      "help_website": [
+        "https://github.com/harbourlab/PieParty"
+      ],
+      "license": null,
+      "tags": [
+        "visualization",
+        "umap",
+        "single-cell",
+        "plotting"
+      ],
+      "id": 75
+    },
+    {
+      "name": "hv-anndata",
+      "one_line_profile": "Holoviz interface for AnnData objects",
+      "detailed_description": "hv-anndata provides an interface between AnnData objects and the HoloViz ecosystem, enabling interactive and high-performance visualization of large-scale single-cell data.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/holoviz-topics/hv-anndata",
+      "help_website": [
+        "https://github.com/holoviz-topics/hv-anndata"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "visualization",
+        "holoviz",
+        "anndata",
+        "interactive"
+      ],
+      "id": 76
+    },
+    {
+      "name": "infercnvpy",
+      "one_line_profile": "Infer copy number variation (CNV) from scRNA-seq data in Python",
+      "detailed_description": "Infercnvpy is a Python package designed to infer copy number variations (CNV) from single-cell RNA-seq data, fully integrated with the Scanpy ecosystem for seamless analysis.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "cnv_inference",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/icbi-lab/infercnvpy",
+      "help_website": [
+        "https://infercnvpy.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cnv",
+        "scRNA-seq",
+        "scanpy",
+        "genomics"
+      ],
+      "id": 77
+    },
+    {
+      "name": "anndata.js",
+      "one_line_profile": "AnnData implementation for the browser (JavaScript/TypeScript)",
+      "detailed_description": "anndata.js is a TypeScript library that brings the AnnData data structure to the browser, enabling web-based tools to read, write, and manipulate single-cell data formats directly on the client side.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_io",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/ilan-gold/anndata.js",
+      "help_website": [
+        "https://github.com/ilan-gold/anndata.js"
+      ],
+      "license": "MIT",
+      "tags": [
+        "javascript",
+        "anndata",
+        "web-assembly",
+        "data-format"
+      ],
+      "id": 78
+    },
+    {
+      "name": "MuData",
+      "one_line_profile": "MuData-compatible storage for Bioconductor's MultiAssayExperiment",
+      "detailed_description": "This R package provides functionality to interact with MuData (Multimodal Data) formats, bridging the gap between Python's MuData and R's MultiAssayExperiment ecosystems for multimodal analysis.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_io",
+        "multimodal_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ilia-kats/MuData",
+      "help_website": [
+        "https://github.com/ilia-kats/MuData"
+      ],
+      "license": null,
+      "tags": [
+        "multimodal",
+        "data-format",
+        "interoperability",
+        "bioconductor"
+      ],
+      "id": 79
+    },
+    {
+      "name": "cellxgene_VIP",
+      "one_line_profile": "Visualization in Plugin (VIP) for cellxgene",
+      "detailed_description": "cellxgene_VIP is a plugin for the cellxgene viewer that extends its capabilities to generate high-resolution publication-ready plots (violin, heatmap, volcano, etc.) and perform differential expression analysis directly within the interface.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/interactivereport/cellxgene_VIP",
+      "help_website": [
+        "https://github.com/interactivereport/cellxgene_VIP"
+      ],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "plugin",
+        "cellxgene",
+        "interactive"
+      ],
+      "id": 80
+    },
+    {
+      "name": "SCISSORS",
+      "one_line_profile": "Parameter optimization for reclustering cell groups in Seurat",
+      "detailed_description": "SCISSORS optimizes parameter selection for Louvain graph-based clustering within the Seurat framework, specifically designed to help identify rare cell types by refining reclustering strategies.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "clustering",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/jr-leary7/SCISSORS",
+      "help_website": [
+        "https://github.com/jr-leary7/SCISSORS"
+      ],
+      "license": "MIT",
+      "tags": [
+        "clustering",
+        "seurat",
+        "rare-cells",
+        "optimization"
+      ],
+      "id": 81
+    },
+    {
+      "name": "ggSCvis",
+      "one_line_profile": "Visualizing SingleCell data using ggplot2",
+      "detailed_description": "ggSCvis is an R package that provides a set of functions based on ggplot2 to simplify and enhance the visualization of single-cell RNA-seq data.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/junjunlab/ggSCvis",
+      "help_website": [
+        "https://github.com/junjunlab/ggSCvis"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "visualization",
+        "ggplot2",
+        "single-cell",
+        "R"
+      ],
+      "id": 82
+    },
+    {
+      "name": "dropEst",
+      "one_line_profile": "Pipeline for initial analysis of droplet-based single-cell RNA-seq data",
+      "detailed_description": "dropEst is a high-performance pipeline for processing droplet-based single-cell RNA-seq data (e.g., 10x Genomics, inDrop), handling alignment, UMI counting, and quality control to generate count matrices.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "quantification",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/kharchenkolab/dropEst",
+      "help_website": [
+        "https://github.com/kharchenkolab/dropEst"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "droplet-seq",
+        "umi-counting",
+        "preprocessing",
+        "alignment"
+      ],
+      "id": 83
+    },
+    {
+      "name": "orthomap",
+      "one_line_profile": "Python package to extract orthologous maps and calculate evolutionary indices",
+      "detailed_description": "orthomap extracts orthologous maps from OrthoFinder/eggNOG results and calculates weighted expression data (transcriptome evolutionary index) for single-cell RNA sequencing objects.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "analysis",
+        "evolutionary_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kullrich/orthomap",
+      "help_website": [
+        "https://github.com/kullrich/orthomap"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "evolution",
+        "orthology",
+        "scRNA-seq",
+        "transcriptomics"
+      ],
+      "id": 84
+    },
+    {
+      "name": "Juscan.jl",
+      "one_line_profile": "Single-cell data analysis toolkit built with Julia",
+      "detailed_description": "Juscan.jl is a single-cell data analysis toolkit developed in Julia, inspired by Scanpy, offering high-performance processing and analysis capabilities for scRNA-seq data.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "analysis",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/lihuax-lab/Juscan.jl",
+      "help_website": [
+        "https://github.com/lihuax-lab/Juscan.jl"
+      ],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "single-cell",
+        "scanpy-alternative",
+        "high-performance"
+      ],
+      "id": 85
+    },
+    {
+      "name": "cirrocumulus",
+      "one_line_profile": "Interactive visualization tool for single-cell data",
+      "detailed_description": "Cirrocumulus is a visualization tool designed to bring single-cell data to life, supporting large-scale datasets and providing interactive exploration capabilities in the browser.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/lilab-bcb/cirrocumulus",
+      "help_website": [
+        "https://cirrocumulus.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "visualization",
+        "interactive",
+        "single-cell",
+        "web-based"
+      ],
+      "id": 86
+    },
+    {
+      "name": "addImg2annData",
+      "one_line_profile": "Add images to StereoSeq/Stomics spatial data and convert formats",
+      "detailed_description": "This tool facilitates the addition of image data to StereoSeq/Stomics spatial transcriptomics datasets and supports generating Seurat RDS and Scanpy h5ad files.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "data_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/limin321/addImg2annData",
+      "help_website": [
+        "https://github.com/limin321/addImg2annData"
+      ],
+      "license": "MIT",
+      "tags": [
+        "spatial-omics",
+        "stereoseq",
+        "image-processing",
+        "format-conversion"
+      ],
+      "id": 87
+    },
+    {
+      "name": "normalisr",
+      "one_line_profile": "Causal inference, differential expression, and co-expression for scRNA-seq",
+      "detailed_description": "Normalisr is a Python package for normalization and analysis of scRNA-seq data, focusing on causal inference, differential expression, and co-expression network analysis.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "normalization",
+        "analysis",
+        "causal_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lingfeiwang/normalisr",
+      "help_website": [
+        "https://github.com/lingfeiwang/normalisr"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "normalization",
+        "causal-inference",
+        "scRNA-seq",
+        "differential-expression"
+      ],
+      "id": 88
+    },
+    {
+      "name": "mapscvi",
+      "one_line_profile": "Map single cell expression data into a reference scvi latent space",
+      "detailed_description": "mapscvi allows mapping of new single-cell expression data into an existing reference scVI latent space and UMAP using R and Seurat, facilitating data integration and projection.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_integration",
+        "mapping"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/lsteuernagel/mapscvi",
+      "help_website": [
+        "https://github.com/lsteuernagel/mapscvi"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "scvi",
+        "mapping",
+        "integration",
+        "seurat"
+      ],
+      "id": 89
+    },
+    {
+      "name": "scVI.jl",
+      "one_line_profile": "Julia package for fitting VAEs to single-cell data",
+      "detailed_description": "scVI.jl is a Julia implementation of the scVI (single-cell Variational Inference) model, using count distributions to fit Variational Autoencoders to single-cell data.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "modeling",
+        "dimensionality_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/maren-ha/scVI.jl",
+      "help_website": [
+        "https://github.com/maren-ha/scVI.jl"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "julia",
+        "vae",
+        "scvi",
+        "deep-learning"
+      ],
+      "id": 90
+    },
+    {
+      "name": "SignacX",
+      "one_line_profile": "Cell Type Identification and Discovery for scRNA-seq",
+      "detailed_description": "SignacX is an R package designed for the identification and discovery of cell types in single-cell RNA-seq data, leveraging neural networks for classification.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "cell_type_annotation",
+        "classification"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/mathewchamberlain/SignacX",
+      "help_website": [
+        "https://github.com/mathewchamberlain/SignacX"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "cell-typing",
+        "classification",
+        "scRNA-seq",
+        "neural-networks"
+      ],
+      "id": 91
+    },
+    {
+      "name": "slide_snake",
+      "one_line_profile": "Snakemake pipeline for spatial transcriptomics preprocessing and QC",
+      "detailed_description": "slide_snake is a Snakemake pipeline for the preprocessing, alignment, quality control, and quantification of spatial transcriptomics data, supporting both short-read and long-read technologies.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "preprocessing",
+        "quality_control"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mckellardw/slide_snake",
+      "help_website": [
+        "https://github.com/mckellardw/slide_snake"
+      ],
+      "license": "MIT",
+      "tags": [
+        "snakemake",
+        "spatial-transcriptomics",
+        "pipeline",
+        "preprocessing"
+      ],
+      "id": 92
+    },
+    {
+      "name": "metaspace-converter",
+      "one_line_profile": "Convert METASPACE datasets to AnnData or SpatialData formats",
+      "detailed_description": "A utility to download and convert datasets from METASPACE (spatial metabolomics) into common single-cell and spatial formats like AnnData or SpatialData for downstream analysis.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "data_io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/metaspace2020/metaspace-converter",
+      "help_website": [
+        "https://github.com/metaspace2020/metaspace-converter"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "metabolomics",
+        "spatial-omics",
+        "anndata",
+        "conversion"
+      ],
+      "id": 93
+    },
+    {
+      "name": "cafe",
+      "one_line_profile": "Cell Analyzer for Flow Experiment",
+      "detailed_description": "CAFE (Cell Analyzer for Flow Experiment) is a Python tool for analyzing flow cytometry data, which is closely related to single-cell analysis workflows.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "analysis",
+        "flow_cytometry"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mhbsiam/cafe",
+      "help_website": [
+        "https://github.com/mhbsiam/cafe"
+      ],
+      "license": "MIT",
+      "tags": [
+        "flow-cytometry",
+        "single-cell",
+        "analysis",
+        "python"
+      ],
+      "id": 94
+    },
+    {
+      "name": "ReductionWrappers",
+      "one_line_profile": "R wrappers for Python dimensional reduction tools",
+      "detailed_description": "ReductionWrappers provides R wrappers to interface with Python-based dimensional reduction tools, allowing them to be used seamlessly with R single-cell objects like Seurat and SingleCellExperiment.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "dimensionality_reduction",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/milescsmith/ReductionWrappers",
+      "help_website": [
+        "https://github.com/milescsmith/ReductionWrappers"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "dimensionality-reduction",
+        "r",
+        "python",
+        "interoperability"
+      ],
+      "id": 95
+    },
+    {
+      "name": "scRNAimputeR",
+      "one_line_profile": "Collection of scRNA imputation methods for R",
+      "detailed_description": "scRNAimputeR aims to collect various scRNA-seq imputation methods and provide interfaces to common R single-cell libraries like Seurat and SingleCellAssay.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "imputation",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/milescsmith/scRNAimputeR",
+      "help_website": [
+        "https://github.com/milescsmith/scRNAimputeR"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "imputation",
+        "scRNA-seq",
+        "r",
+        "missing-data"
+      ],
+      "id": 96
+    },
+    {
+      "name": "seurat-disk",
+      "one_line_profile": "Interfaces for HDF5-based Single Cell File Formats in Seurat",
+      "detailed_description": "SeuratDisk provides support for on-disk storage of single-cell datasets using HDF5-based formats (like h5Seurat and AnnData), enabling analysis of datasets larger than memory within the Seurat ecosystem.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_io",
+        "data_management"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/mojaveazure/seurat-disk",
+      "help_website": [
+        "https://mojaveazure.github.io/seurat-disk/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "hdf5",
+        "seurat",
+        "large-scale-data",
+        "io"
+      ],
+      "id": 97
+    },
+    {
+      "name": "ArchR-h5ad",
+      "one_line_profile": "Parse ArchR arrow files to AnnData h5ad format",
+      "detailed_description": "A utility to convert ArchR Arrow files (used for single-cell ATAC-seq analysis) into AnnData h5ad format, facilitating interoperability between ArchR and Python-based tools like Scanpy.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mvinyard/ArchR-h5ad",
+      "help_website": [
+        "https://github.com/mvinyard/ArchR-h5ad"
+      ],
+      "license": "MIT",
+      "tags": [
+        "archr",
+        "anndata",
+        "atac-seq",
+        "conversion"
+      ],
+      "id": 98
+    },
+    {
+      "name": "torch-adata",
+      "one_line_profile": "Create PyTorch Datasets from AnnData objects",
+      "detailed_description": "torch-adata simplifies the process of creating PyTorch Dataset objects directly from AnnData files, streamlining the pipeline for deep learning applications on single-cell data.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_io",
+        "machine_learning_support"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/mvinyard/torch-adata",
+      "help_website": [
+        "https://github.com/mvinyard/torch-adata"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "pytorch",
+        "anndata",
+        "deep-learning",
+        "data-loader"
+      ],
+      "id": 99
+    },
+    {
+      "name": "NASQAR",
+      "one_line_profile": "Web-based platform for high-throughput sequencing data analysis",
+      "detailed_description": "NASQAR is a comprehensive web-based platform that offers a suite of tools for the analysis and visualization of high-throughput sequencing data, including bulk and single-cell RNA-seq.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "analysis",
+        "visualization",
+        "platform"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/nasqar/NASQAR",
+      "help_website": [
+        "http://nasqar.abudhabi.nyu.edu/"
+      ],
+      "license": null,
+      "tags": [
+        "web-platform",
+        "rna-seq",
+        "single-cell",
+        "gui"
+      ],
+      "id": 100
+    },
+    {
+      "name": "SeuratWizard",
+      "one_line_profile": "Web-based wizard for guided Seurat analysis",
+      "detailed_description": "SeuratWizard is an interactive web application that guides users through the single-cell RNA-seq analysis workflow using Seurat, making the analysis accessible to users without extensive coding experience.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "analysis",
+        "workflow_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "R",
+      "repo_url": "https://github.com/nasqar/SeuratWizard",
+      "help_website": [
+        "https://github.com/nasqar/SeuratWizard"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "seurat",
+        "gui",
+        "interactive",
+        "wizard"
+      ],
+      "id": 101
+    },
+    {
+      "name": "Seurat v3 Wizard",
+      "one_line_profile": "Web-based interactive wizard for guided single-cell RNA-seq analysis using Seurat v3",
+      "detailed_description": "A web-based interactive application designed to perform guided single-cell RNA-seq data analysis and clustering based on the Seurat v3 workflow. It provides a wizard-style interface to facilitate the analysis process without requiring extensive coding.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "analysis_pipeline",
+        "clustering",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "R",
+      "repo_url": "https://github.com/nasqar/seuratv3wizard",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "single-cell",
+        "seurat",
+        "gui",
+        "rna-seq"
+      ],
+      "id": 102
+    },
+    {
+      "name": "BurgerTools",
+      "one_line_profile": "Collection of scRNA-seq gating and analysis tools extending Seurat",
+      "detailed_description": "A bundle of useful single-cell RNA-seq gating tools that extend the functionality of Seurat. It includes utilities for cell selection and filtering based on expression thresholds.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "gating",
+        "filtering",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/nbroguiere/burgertools",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "scRNA-seq",
+        "seurat-extension",
+        "gating"
+      ],
+      "id": 103
+    },
+    {
+      "name": "adpbulk",
+      "one_line_profile": "Tool for performing pseudobulking on AnnData objects",
+      "detailed_description": "A Python package designed to perform pseudobulking on single-cell data stored in AnnData objects, aggregating cell-level data into group-level profiles.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_transformation",
+        "pseudobulk"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/noamteyssier/adpbulk",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "anndata",
+        "pseudobulk",
+        "single-cell"
+      ],
+      "id": 104
+    },
+    {
+      "name": "anntools",
+      "one_line_profile": "CLI-driven toolkit for manipulating AnnData files",
+      "detailed_description": "A command-line interface toolkit for interacting with and manipulating AnnData objects, facilitating file handling and basic operations without writing Python scripts.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_manipulation",
+        "file_io"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/noamteyssier/anntools",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "anndata",
+        "scRNA-seq"
+      ],
+      "id": 105
+    },
+    {
+      "name": "scRNA-Seq-TCC-prep",
+      "one_line_profile": "Preprocessing scripts for single-cell RNA-Seq data (TCC matrices)",
+      "detailed_description": "A collection of notebooks and scripts for preprocessing single-cell RNA-Seq data, specifically focusing on Transcript Compatibility Counts (TCC). Note: Marked as deprecated but historically a tool.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "quantification"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/pachterlab/scRNA-Seq-TCC-prep",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "preprocessing",
+        "scRNA-seq",
+        "kallisto"
+      ],
+      "id": 106
+    },
+    {
+      "name": "ALRA",
+      "one_line_profile": "Imputation method for scRNA-seq using low-rank approximation",
+      "detailed_description": "Adaptively-thresholded Low Rank Approximation (ALRA) is a method for imputation of missing values in single-cell RNA-seq data, recovering true biological signals from technical noise.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "imputation",
+        "denoising"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pavlin-policar/ALRA",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "imputation",
+        "scRNA-seq",
+        "denoising"
+      ],
+      "id": 107
+    },
+    {
+      "name": "scDblFinder",
+      "one_line_profile": "Doublet detection methods for single-cell sequencing data",
+      "detailed_description": "An R package providing methods for detecting doublets (two cells captured as one) in single-cell sequencing data, improving downstream analysis quality.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "doublet_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/plger/scDblFinder",
+      "help_website": [
+        "https://bioconductor.org/packages/scDblFinder"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "doublet-detection",
+        "qc",
+        "scRNA-seq"
+      ],
+      "id": 108
+    },
+    {
+      "name": "RADO",
+      "one_line_profile": "Robust and accurate doublet detection via maximizing AUPRC",
+      "detailed_description": "A tool for robust and accurate single-cell sequencing doublet detection that works by maximizing the Area Under the Precision-Recall Curve (AUPRC).",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "doublet_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/poseidonchan/RADO",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "doublet-detection",
+        "scRNA-seq",
+        "qc"
+      ],
+      "id": 109
+    },
+    {
+      "name": "ascend",
+      "one_line_profile": "Analysis of Single Cell Expression, Normalization and Differential expression",
+      "detailed_description": "An R package for the analysis of single-cell expression data, including functions for normalization, quality control, and differential expression analysis.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "analysis_pipeline",
+        "normalization",
+        "differential_expression"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/powellgenomicslab/ascend",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "scRNA-seq",
+        "normalization",
+        "differential-expression"
+      ],
+      "id": 110
+    },
+    {
+      "name": "BANKSY",
+      "one_line_profile": "Spatial clustering algorithm unifying cell-typing and tissue domain segmentation",
+      "detailed_description": "A Python package for spatial transcriptomics analysis that provides a spatial clustering algorithm unifying cell-typing and tissue domain segmentation.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "spatial_analysis",
+        "clustering",
+        "segmentation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/prabhakarlab/Banksy_py",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "spatial-transcriptomics",
+        "clustering",
+        "cell-typing"
+      ],
+      "id": 111
+    },
+    {
+      "name": "scplotter",
+      "one_line_profile": "R package for easy visualization of single-cell sequencing data",
+      "detailed_description": "An R package built upon plotthis that provides a set of functions to visualize single-cell sequencing data efficiently.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/pwwang/scplotter",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "visualization",
+        "scRNA-seq",
+        "plotting"
+      ],
+      "id": 112
+    },
+    {
+      "name": "DeepSpot",
+      "one_line_profile": "Spatial transcriptomics prediction from H&E images",
+      "detailed_description": "A tool leveraging spatial context for enhanced spatial transcriptomics prediction directly from H&E stained histology images.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "spatial_prediction",
+        "image_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ratschlab/DeepSpot",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "spatial-transcriptomics",
+        "deep-learning",
+        "histology"
+      ],
+      "id": 113
+    },
+    {
+      "name": "precellar",
+      "one_line_profile": "Universal Single-Cell Genomics Preprocessing package",
+      "detailed_description": "A Rust-based package designed for high-performance preprocessing of single-cell genomics data.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/regulatory-genomics/precellar",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "preprocessing",
+        "rust",
+        "single-cell"
+      ],
+      "id": 114
+    },
+    {
+      "name": "iCellR",
+      "one_line_profile": "Interactive R package for analysis of high-throughput single-cell data",
+      "detailed_description": "An interactive R package designed to facilitate the analysis and visualization of high-throughput single-cell sequencing data, supporting scRNA-seq, scVDJ-seq, scATAC-seq, CITE-Seq, and Spatial Transcriptomics.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "analysis_pipeline",
+        "visualization",
+        "multimodal_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/rezakj/iCellR",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "scRNA-seq",
+        "scATAC-seq",
+        "spatial-transcriptomics"
+      ],
+      "id": 115
+    },
+    {
+      "name": "SCnorm",
+      "one_line_profile": "Normalization method for single-cell RNA-seq data",
+      "detailed_description": "An R package for the normalization of single-cell RNA-seq data, accounting for the dependence of count data on sequencing depth.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "normalization",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/rhondabacher/SCnorm",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "normalization",
+        "scRNA-seq"
+      ],
+      "id": 116
+    },
+    {
+      "name": "pySCTransform",
+      "one_line_profile": "Python implementation of SCTransform normalization",
+      "detailed_description": "A Python package to perform normalization and variance-stabilization of single-cell data, porting the functionality of Seurat's SCTransform to Python.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "normalization",
+        "variance_stabilization"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/saketkc/pySCTransform",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "normalization",
+        "sctransform",
+        "python"
+      ],
+      "id": 117
+    },
+    {
+      "name": "scCustomize",
+      "one_line_profile": "Helpers for visualization and analysis of single-cell data in R",
+      "detailed_description": "An R package containing a collection of functions created and curated to aid in the visualization and analysis of single-cell data, complementing standard workflows.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "analysis_helpers"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/samuel-marsh/scCustomize",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "visualization",
+        "seurat-extension",
+        "plotting"
+      ],
+      "id": 118
+    },
+    {
+      "name": "Azimuth",
+      "one_line_profile": "Web app for reference-based mapping of single-cell datasets",
+      "detailed_description": "A Shiny web application and R package for mapping single-cell datasets to reference atlases using Seurat v4 technology, enabling automated cell type annotation.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "reference_mapping",
+        "annotation"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/satijalab/azimuth",
+      "help_website": [
+        "https://azimuth.hubmapconsortium.org/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "reference-mapping",
+        "annotation",
+        "shiny-app"
+      ],
+      "id": 119
+    },
+    {
+      "name": "Seurat",
+      "one_line_profile": "Comprehensive R toolkit for single cell genomics",
+      "detailed_description": "A comprehensive R toolkit for single cell genomics, designed for QC, analysis, and exploration of single cell RNA-seq data. It enables users to identify and interpret sources of heterogeneity from single cell transcriptomic measurements, and to integrate diverse types of single cell data.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "analysis_pipeline",
+        "quality_control",
+        "integration",
+        "clustering"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/satijalab/seurat",
+      "help_website": [
+        "https://satijalab.org/seurat/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "scRNA-seq",
+        "analysis-pipeline",
+        "integration"
+      ],
+      "id": 120
+    },
+    {
+      "name": "SeuratData",
+      "one_line_profile": "Mechanism for distributing datasets for Seurat",
+      "detailed_description": "An R package designed to facilitate the distribution and loading of datasets for use with the Seurat package, streamlining access to benchmark and tutorial datasets.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_access",
+        "dataset_management"
+      ],
+      "application_level": "dataset",
+      "primary_language": "R",
+      "repo_url": "https://github.com/satijalab/seurat-data",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "datasets",
+        "seurat",
+        "data-loading"
+      ],
+      "id": 121
+    },
+    {
+      "name": "SeuratWrappers",
+      "one_line_profile": "Community-provided extensions and wrappers for Seurat",
+      "detailed_description": "A collection of community-provided extensions and wrappers that integrate other single-cell analysis tools directly into the Seurat workflow.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "integration",
+        "analysis_extension"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/satijalab/seurat-wrappers",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "seurat",
+        "wrappers",
+        "integration"
+      ],
+      "id": 122
+    },
+    {
+      "name": "sc-toolbox",
+      "one_line_profile": "Helper functions and templates for Scanpy analysis",
+      "detailed_description": "A collection of project templates and useful functions for single-cell data analysis with Scanpy, aiming to streamline common analysis tasks.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "analysis_helpers",
+        "workflow_utility"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/schillerlab/sc-toolbox",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scanpy",
+        "python",
+        "single-cell"
+      ],
+      "id": 123
+    },
+    {
+      "name": "Muon.jl",
+      "one_line_profile": "Multimodal omics analysis framework for Julia",
+      "detailed_description": "The Julia implementation of the Muon framework, designed for the analysis of multimodal single-cell omics data.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "multimodal_analysis",
+        "integration"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/scverse/Muon.jl",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "julia",
+        "multimodal",
+        "single-cell"
+      ],
+      "id": 124
+    },
+    {
+      "name": "annbatch",
+      "one_line_profile": "Minibatch loading for on-disk AnnData files",
+      "detailed_description": "A Python package for efficient minibatch loading of on-disk AnnData files, facilitating the training of machine learning models on large single-cell datasets.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_loading",
+        "io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scverse/annbatch",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "anndata",
+        "io",
+        "machine-learning"
+      ],
+      "id": 125
+    },
+    {
+      "name": "AnnData",
+      "one_line_profile": "Annotated data structure for single-cell analysis",
+      "detailed_description": "A Python package that provides a scalable way to handle annotated data matrices, serving as the core data structure for the scverse ecosystem and Scanpy.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_structure",
+        "io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scverse/anndata",
+      "help_website": [
+        "https://anndata.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "data-structure",
+        "python",
+        "single-cell"
+      ],
+      "id": 126
+    },
+    {
+      "name": "anndataR",
+      "one_line_profile": "R interface for AnnData objects",
+      "detailed_description": "An R package that provides interoperability with Python's AnnData objects, allowing R users to read, write, and manipulate AnnData files.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_io",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/scverse/anndataR",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "r",
+        "anndata",
+        "interoperability"
+      ],
+      "id": 127
+    },
+    {
+      "name": "MuData",
+      "one_line_profile": "Multimodal Data (.h5mu) implementation for Python",
+      "detailed_description": "A Python package implementing the MuData format for multimodal omics data, allowing storage and manipulation of multiple modalities in a single object.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_structure",
+        "multimodal_io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scverse/mudata",
+      "help_website": [
+        "https://mudata.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "multimodal",
+        "data-structure",
+        "python"
+      ],
+      "id": 128
+    },
+    {
+      "name": "Muon",
+      "one_line_profile": "Multimodal omics analysis framework for Python",
+      "detailed_description": "A Python framework for the analysis of multimodal single-cell omics data, built on top of MuData and integrating with the scverse ecosystem.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "multimodal_analysis",
+        "integration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scverse/muon",
+      "help_website": [
+        "https://muon.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "multimodal",
+        "python",
+        "single-cell"
+      ],
+      "id": 129
+    },
+    {
+      "name": "rapids_singlecell",
+      "one_line_profile": "GPU-accelerated framework for scRNA analysis",
+      "detailed_description": "A Python package that provides GPU-accelerated functions for single-cell RNA-seq analysis, leveraging NVIDIA RAPIDS to speed up processing of large datasets.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "analysis_pipeline",
+        "gpu_acceleration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scverse/rapids_singlecell",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gpu",
+        "rapids",
+        "single-cell"
+      ],
+      "id": 130
+    },
+    {
+      "name": "Scanpy",
+      "one_line_profile": "Scalable single-cell analysis toolkit in Python",
+      "detailed_description": "A scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, pseudotime and trajectory inference, and differential expression testing.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "analysis_pipeline",
+        "clustering",
+        "visualization",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scverse/scanpy",
+      "help_website": [
+        "https://scanpy.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "scRNA-seq",
+        "python",
+        "analysis-pipeline"
+      ],
+      "id": 131
+    },
+    {
+      "name": "scirpy",
+      "one_line_profile": "Scanpy extension for single-cell TCR and BCR analysis",
+      "detailed_description": "A Python package that extends Scanpy to analyze single-cell T-cell receptor (TCR) and B-cell receptor (BCR) repertoires.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "immunology_analysis",
+        "repertoire_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scverse/scirpy",
+      "help_website": [
+        "https://scirpy.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "tcr",
+        "bcr",
+        "immunology"
+      ],
+      "id": 132
+    },
+    {
+      "name": "scvi-tools",
+      "one_line_profile": "Deep probabilistic analysis of single-cell and spatial omics data",
+      "detailed_description": "A comprehensive library for deep probabilistic modeling of single-cell and spatial omics data, providing implementations of various scVI models for integration, annotation, and differential expression.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "probabilistic_modeling",
+        "integration",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scverse/scvi-tools",
+      "help_website": [
+        "https://scvi-tools.org/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "deep-learning",
+        "probabilistic-modeling",
+        "single-cell"
+      ],
+      "id": 133
+    },
+    {
+      "name": "shadows",
+      "one_line_profile": "Shadow objects for AnnData and MuData",
+      "detailed_description": "A Python package providing 'shadow' objects for AnnData and MuData, enabling efficient handling of data that doesn't fit in memory or requires lazy loading.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_handling",
+        "memory_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scverse/shadows",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "anndata",
+        "mudata",
+        "optimization"
+      ],
+      "id": 134
+    },
+    {
+      "name": "simple-scvi",
+      "one_line_profile": "Simplified implementation of scVI",
+      "detailed_description": "A lightweight and simplified implementation of the scVI model for single-cell data analysis, intended for educational purposes or lightweight integration.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "modeling",
+        "dimensionality_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scverse/simple-scvi",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "scvi",
+        "modeling",
+        "python"
+      ],
+      "id": 135
+    },
+    {
+      "name": "convert2anndata",
+      "one_line_profile": "R package to convert SingleCellExperiment and Seurat objects to AnnData",
+      "detailed_description": "An R package designed to convert SingleCellExperiment and Seurat objects into Python's AnnData format as comprehensively as possible, facilitating interoperability.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/settylab/convert2anndata",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "conversion",
+        "seurat",
+        "anndata"
+      ],
+      "id": 136
+    },
+    {
+      "name": "scranPY",
+      "one_line_profile": "Python implementation of scran normalization",
+      "detailed_description": "A Python implementation of the scran computeSumFactors method (normalization by deconvolution) for single-cell RNA-sequencing data.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "normalization",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sfortma2/scranPY",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "normalization",
+        "scran",
+        "python"
+      ],
+      "id": 137
+    },
+    {
+      "name": "scvis",
+      "one_line_profile": "Dimension reduction method for high-dimensional biological data",
+      "detailed_description": "A Python package for dimension reduction of high-dimensional biological data, specifically designed to preserve local and global structure in single-cell data visualization.",
+      "domains": [
+        "B3",
+        "B3-03"
+      ],
+      "subtask_category": [
+        "dimensionality_reduction",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shahcompbio/scvis",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dimension-reduction",
+        "single-cell",
+        "visualization"
+      ],
+      "id": 138
+    },
+    {
+      "name": "mousipy",
+      "one_line_profile": "Ortholog mapping tool for converting mouse to human gene symbols",
+      "detailed_description": "Translates an AnnData object with mouse gene symbols into one with human gene symbols by mapping orthologs from biomart, facilitating cross-species integration.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_transformation",
+        "ortholog_mapping"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/stefanpeidli/mousipy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "anndata",
+        "orthologs",
+        "cross-species"
+      ],
+      "id": 139
+    },
+    {
+      "name": "tidygate",
+      "one_line_profile": "Interactive gating and labeling tool for single-cell data",
+      "detailed_description": "Allows users to label elements within drawn gates interactively, bridging the gap between programmatic analysis and manual gating in cytometry and single-cell data.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "gating",
+        "data_annotation"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/stemangiola/tidygate",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gating",
+        "cytometry",
+        "interactive"
+      ],
+      "id": 140
+    },
+    {
+      "name": "tidyseurat",
+      "one_line_profile": "Tidyverse-style interface for Seurat objects",
+      "detailed_description": "Provides a tidyverse-compatible interface for Seurat objects, allowing users to manipulate single-cell data using familiar dplyr verbs and pipes.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_manipulation",
+        "interface"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/stemangiola/tidyseurat",
+      "help_website": [
+        "https://stemangiola.github.io/tidyseurat/"
+      ],
+      "license": null,
+      "tags": [
+        "seurat",
+        "tidyverse",
+        "data-wrangling"
+      ],
+      "id": 141
+    },
+    {
+      "name": "Scrublet",
+      "one_line_profile": "Doublet detection method for single-cell RNA-seq data",
+      "detailed_description": "A Python tool for detecting doublets in single-cell RNA-seq data by simulating doublets from the observed data and training a classifier.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "quality_control",
+        "doublet_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/swolock/scrublet",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scRNA-seq",
+        "doublet-detection",
+        "quality-control"
+      ],
+      "id": 142
+    },
+    {
+      "name": "DRVI",
+      "one_line_profile": "Deep disentangled representation learning for single-cell omics",
+      "detailed_description": "A framework for unsupervised deep disentangled representation learning of single-cell omics data, aiming to separate biological variation from technical noise.",
+      "domains": [
+        "B3",
+        "B3-02"
+      ],
+      "subtask_category": [
+        "representation_learning",
+        "dimensionality_reduction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/theislab/DRVI",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "deep-learning",
+        "representation-learning",
+        "single-cell"
+      ],
+      "id": 143
+    },
+    {
+      "name": "anndata2ri",
+      "one_line_profile": "Converter between AnnData and SingleCellExperiment",
+      "detailed_description": "Facilitates interoperability between Python (AnnData) and R (SingleCellExperiment) ecosystems for single-cell analysis.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/theislab/anndata2ri",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "anndata",
+        "rpy2",
+        "conversion"
+      ],
+      "id": 144
+    },
+    {
+      "name": "DCA",
+      "one_line_profile": "Deep Count Autoencoder for denoising scRNA-seq data",
+      "detailed_description": "A deep learning-based autoencoder approach to denoise and impute single-cell RNA-seq data, accounting for zero-inflation and overdispersion.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "denoising",
+        "imputation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/theislab/dca",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "autoencoder",
+        "denoising",
+        "scRNA-seq"
+      ],
+      "id": 145
+    },
+    {
+      "name": "NCEM",
+      "one_line_profile": "Neural Cell Embeddings for learning cell communication",
+      "detailed_description": "A graph neural network framework for learning cell communication and spatial dependencies from spatial omics data.",
+      "domains": [
+        "B3",
+        "B3-02"
+      ],
+      "subtask_category": [
+        "spatial_analysis",
+        "cell_communication"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/theislab/ncem",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "spatial-omics",
+        "graph-neural-networks",
+        "cell-communication"
+      ],
+      "id": 146
+    },
+    {
+      "name": "kmtricks",
+      "one_line_profile": "Modular k-mer counting and Bloom filter construction",
+      "detailed_description": "A tool for efficient k-mer counting and Bloom filter construction from large read collections, useful for alignment-free sequence analysis.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "kmer_counting",
+        "sequence_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/tlemane/kmtricks",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "k-mer",
+        "bloom-filter",
+        "ngs"
+      ],
+      "id": 147
+    },
+    {
+      "name": "Seurat.utils",
+      "one_line_profile": "Utility functions for Seurat v5 analysis",
+      "detailed_description": "A collection of helper functions and utilities to enhance and streamline single-cell analysis workflows using Seurat.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "data_manipulation",
+        "workflow_utility"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/vertesy/Seurat.utils",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "seurat",
+        "utilities",
+        "R"
+      ],
+      "id": 148
+    },
+    {
+      "name": "DALI",
+      "one_line_profile": "TCR/BCR analysis in the Seurat ecosystem",
+      "detailed_description": "An R package for integrating and analyzing single-cell T-cell and B-cell receptor (TCR/BCR) profiling data within the Seurat ecosystem.",
+      "domains": [
+        "B3",
+        "B3-02"
+      ],
+      "subtask_category": [
+        "immune_profiling",
+        "vdj_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/vibscc/DALI",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "TCR",
+        "BCR",
+        "immunology"
+      ],
+      "id": 149
+    },
+    {
+      "name": "ADTnorm",
+      "one_line_profile": "Normalization method for CITE-seq ADT data",
+      "detailed_description": "A tool for normalizing cell surface protein measurements (ADT) in CITE-seq data to facilitate data integration across batches and studies.",
+      "domains": [
+        "B3",
+        "B3-01"
+      ],
+      "subtask_category": [
+        "normalization",
+        "cite-seq_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/yezhengSTAT/ADTnorm",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "normalization",
+        "cite-seq",
+        "protein"
+      ],
+      "id": 150
+    },
+    {
+      "name": "SCP",
+      "one_line_profile": "Comprehensive single-cell analysis pipeline",
+      "detailed_description": "An end-to-end pipeline designed to facilitate comprehensive analysis, visualization, and exploration of single-cell data, integrating various standard steps.",
+      "domains": [
+        "B3",
+        "B3-01",
+        "B3-02"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "data_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/zhanghao-njmu/SCP",
+      "help_website": [
+        "https://zhanghao-njmu.github.io/SCP/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "pipeline",
+        "single-cell",
+        "workflow"
+      ],
+      "id": 151
+    }
+  ]
+}

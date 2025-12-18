@@ -1,0 +1,1207 @@
+{
+  "generated_at": "2025-12-17T12:57:56.105645+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "FUS1",
+      "leaf_cluster_name": "核科学与核聚变计算生态",
+      "domain": "Nuclear / Fusion / Plasma",
+      "typical_objects": "等离子体场, 粒子分布, 磁约束几何, 诊断信号, 输运方程",
+      "task_chain": "建模→仿真→诊断/反演→控制/优化→验证→工作流",
+      "tool_form": "大型仿真器 + 诊断/反演工具 + 控制/优化 + HPC"
+    },
+    "unit": {
+      "unit_id": "FUS1-08",
+      "unit_name": "工作流/HPC/可复现执行与数据管理",
+      "target_scale": "150–350",
+      "coverage_tools": "workflow、容器、作业调度、数据格式与归档"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] ALMA",
+        "[GH] IDS",
+        "[GH] DuQtools",
+        "[GH] UDA",
+        "[GH] IMAS",
+        "[GH] MDSplus",
+        "[GH] OMAS",
+        "[GH] OMFIT",
+        "[GH] fusion workflow",
+        "[GH] plasma simulation manager",
+        "[GH] IMAS fusion",
+        "[GH] OMAS plasma",
+        "[GH] tokamak data management",
+        "[GH] integrated modeling framework",
+        "[GH] fusion HPC workflow",
+        "[GH] ITER data model",
+        "[GH] plasma physics reproducible",
+        "[GH] UDA client fusion",
+        "[GH] fusion data archiving",
+        "[GH] plasma simulation pipeline",
+        "[WEB] nuclear fusion workflow manager github",
+        "[WEB] IMAS OMAS fusion data github",
+        "[WEB] MDSplus data acquisition github",
+        "[WEB] plasma simulation HPC framework github",
+        "[WEB] ITER integrated modeling tools github",
+        "[WEB] fusion energy reproducible research github"
+      ],
+      "total_candidates": 591,
+      "tool_candidates": 371,
+      "final_tools": 45
+    }
+  },
+  "tools": [
+    {
+      "name": "IPS-framework",
+      "one_line_profile": "Framework for coupled HPC simulations in plasma physics",
+      "detailed_description": "The Integrated Plasma Simulator (IPS) framework provides a Python-based environment for loosely coupled component-based HPC simulations, designed for magnetic fusion energy research. It facilitates the orchestration of complex multiphysics workflows on supercomputing resources.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "coupled_simulation",
+        "hpc_orchestration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HPC-SimTools/IPS-framework",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "fusion",
+        "plasma-physics",
+        "hpc",
+        "workflow",
+        "coupling"
+      ],
+      "id": 1
+    },
+    {
+      "name": "METIS",
+      "one_line_profile": "Fast plasma scenario simulator for magnetic fusion devices",
+      "detailed_description": "METIS is a fast integrated modeling code developed by IRFM for simulating the time evolution of plasma scenarios in tokamaks. It models heat and current transport, equilibrium evolution, and sources, enabling rapid scenario design and analysis.",
+      "domains": [
+        "FUS1"
+      ],
+      "subtask_category": [
+        "plasma_simulation",
+        "scenario_modeling",
+        "transport_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/IRFM/METIS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "tokamak",
+        "plasma-scenario",
+        "fusion",
+        "simulation"
+      ],
+      "id": 2
+    },
+    {
+      "name": "MDSplus Docker",
+      "one_line_profile": "Containerized deployment for the MDSplus data acquisition system",
+      "detailed_description": "Docker build files and configurations for deploying MDSplus, the standard data acquisition and management system used in magnetic fusion energy research.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "data_management",
+        "deployment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Dockerfile",
+      "repo_url": "https://github.com/MDSplus/Docker",
+      "help_website": [
+        "https://mdsplus.org/"
+      ],
+      "license": "Unknown",
+      "tags": [
+        "mdsplus",
+        "fusion-energy",
+        "docker",
+        "data-acquisition"
+      ],
+      "id": 3
+    },
+    {
+      "name": "MDSplus",
+      "one_line_profile": "Standard data management system for magnetic fusion energy research",
+      "detailed_description": "A set of software tools for data acquisition, storage, and management of complex scientific data, serving as the de facto standard in the fusion research community (e.g., for Tokamaks).",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "data_acquisition",
+        "data_storage",
+        "data_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/MDSplus/mdsplus",
+      "help_website": [
+        "https://mdsplus.org/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "fusion",
+        "data-acquisition",
+        "hpc",
+        "plasma-physics"
+      ],
+      "id": 4
+    },
+    {
+      "name": "mdsthin",
+      "one_line_profile": "Lightweight Python client for MDSplus data access",
+      "detailed_description": "A Python implementation of the MDSplus thin client protocol, enabling remote data access to MDSplus servers without requiring a full local MDSplus installation.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "data_access",
+        "data_retrieval"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MDSplus/mdsthin",
+      "help_website": [
+        "https://mdsplus.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "mdsplus",
+        "python",
+        "client",
+        "fusion-data"
+      ],
+      "id": 5
+    },
+    {
+      "name": "PlasmaControl Data Fetching",
+      "one_line_profile": "Scripts for fetching and plotting fusion control experiment data",
+      "detailed_description": "A collection of scripts utilizing toksearch and OMFIT frameworks to retrieve, process, and visualize data from plasma control experiments in fusion devices.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "data_retrieval",
+        "visualization",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PlasmaControl/data-fetching",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "plasma-control",
+        "omfit",
+        "toksearch",
+        "fusion-data"
+      ],
+      "id": 6
+    },
+    {
+      "name": "ATMI",
+      "one_line_profile": "Asynchronous Task and Memory Interface for HPC",
+      "detailed_description": "A runtime framework and programming model for heterogeneous CPU-GPU systems, facilitating high-performance computing tasks often used in scientific simulations.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "hpc_execution",
+        "task_scheduling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ROCm/atmi",
+      "help_website": [
+        "https://rocm.docs.amd.com/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "hpc",
+        "gpu-computing",
+        "rocm",
+        "heterogeneous-computing"
+      ],
+      "id": 7
+    },
+    {
+      "name": "ModelingToolkit.jl",
+      "one_line_profile": "Symbolic-numeric modeling framework for scientific machine learning",
+      "detailed_description": "An acausal modeling framework in Julia for automatically parallelized scientific machine learning (SciML), providing a computer algebra system for integrated symbolics and differential equation transformations.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation",
+        "equation_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/ModelingToolkit.jl",
+      "help_website": [
+        "https://docs.sciml.ai/ModelingToolkit/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "sciml",
+        "differential-equations",
+        "julia",
+        "modeling"
+      ],
+      "id": 8
+    },
+    {
+      "name": "ToFu",
+      "one_line_profile": "Tomography for Fusion library",
+      "detailed_description": "An open-source Python library for synthetic diagnostics, tomography, and geometry modeling specifically for Fusion devices (Tokamaks).",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "tomography",
+        "diagnostics",
+        "geometric_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ToFuProject/tofu",
+      "help_website": [
+        "https://tofuproject.github.io/tofu/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fusion",
+        "tomography",
+        "tokamak",
+        "diagnostics"
+      ],
+      "id": 9
+    },
+    {
+      "name": "PIC-skeleton-codes",
+      "one_line_profile": "Particle-In-Cell Plasma Simulation codebase",
+      "detailed_description": "A fully-functional Particle-In-Cell (PIC) plasma simulation codebase implementing core algorithms with parallel implementations (MPI, OpenMP, CUDA) for educational and research extensibility.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "plasma_simulation",
+        "particle_in_cell"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/UCLA-Plasma-Simulation-Group/PIC-skeleton-codes",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "plasma-physics",
+        "pic",
+        "simulation",
+        "hpc"
+      ],
+      "id": 10
+    },
+    {
+      "name": "phangs_imaging_scripts",
+      "one_line_profile": "Imaging and data product creation workflow for the PHANGS-ALMA survey",
+      "detailed_description": "A collection of CASA and Python scripts designed for the calibration, imaging, and post-processing of ALMA interferometric data as part of the PHANGS survey pipeline.",
+      "domains": [
+        "Astronomy",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "imaging",
+        "data_reduction",
+        "workflow_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/akleroy/phangs_imaging_scripts",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "alma",
+        "radio-astronomy",
+        "casa",
+        "imaging-pipeline"
+      ],
+      "id": 11
+    },
+    {
+      "name": "PhaseForge",
+      "one_line_profile": "High-throughput alloy phase diagram prediction framework",
+      "detailed_description": "A framework for high-throughput alloy phase diagram prediction that integrates machine learning interatomic potentials (MLIPs) with ATAT and CALPHAD modeling, supporting structure relaxation and molecular dynamics.",
+      "domains": [
+        "Materials Science",
+        "Physics"
+      ],
+      "subtask_category": [
+        "phase_diagram_prediction",
+        "molecular_dynamics",
+        "structure_relaxation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/dogusariturk/PhaseForge",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "calphad",
+        "mlip",
+        "materials-science",
+        "phase-diagrams"
+      ],
+      "id": 12
+    },
+    {
+      "name": "duqtools",
+      "one_line_profile": "Dynamic uncertainty quantification for Tokamak reactor simulations",
+      "detailed_description": "A tool for dynamic uncertainty quantification in Tokamak reactor simulations, facilitating the management of simulation runs, data formatting, and uncertainty analysis within fusion research workflows.",
+      "domains": [
+        "FUS1",
+        "FUS1-08",
+        "Nuclear Fusion"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "simulation_management",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/duqtools/duqtools",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "fusion",
+        "tokamak",
+        "uncertainty-quantification",
+        "simulation"
+      ],
+      "id": 13
+    },
+    {
+      "name": "ALminer",
+      "one_line_profile": "ALMA archive mining and visualization toolkit",
+      "detailed_description": "A toolkit designed for mining and visualizing data from the ALMA (Atacama Large Millimeter/submillimeter Array) archive, facilitating astronomical data analysis.",
+      "domains": [
+        "Astronomy",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "data_mining",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/emerge-erc/ALminer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "alma",
+        "astronomy",
+        "data-mining"
+      ],
+      "id": 14
+    },
+    {
+      "name": "StorageVET",
+      "one_line_profile": "Valuation model for energy storage technologies",
+      "detailed_description": "A valuation model for analysis of energy storage technologies and other energy resources paired with storage, enabling technical and economic viability analysis.",
+      "domains": [
+        "Energy",
+        "Power Systems"
+      ],
+      "subtask_category": [
+        "modeling",
+        "economic_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/epri-dev/StorageVET-deprecated",
+      "help_website": [
+        "http://www.storagevet.com"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "energy-storage",
+        "valuation",
+        "power-systems"
+      ],
+      "id": 15
+    },
+    {
+      "name": "eqasim-java",
+      "one_line_profile": "Integrated transport simulation environment based on MATSim",
+      "detailed_description": "An integrated transport simulation environment based on the agent-based transport simulation framework MATSim, with added components for discrete choice models.",
+      "domains": [
+        "Transportation Science",
+        "Urban Planning"
+      ],
+      "subtask_category": [
+        "simulation",
+        "agent_based_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/eqasim-org/eqasim-java",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "matsim",
+        "transport-simulation",
+        "agent-based"
+      ],
+      "id": 16
+    },
+    {
+      "name": "fusion_neutronics_workflow",
+      "one_line_profile": "Automated fusion specific neutronics workflow",
+      "detailed_description": "A Python-based tool that combines open source packages to produce an automated, reproducible workflow specifically for fusion neutronics analysis.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "neutronics_simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fusion-energy/fusion_neutronics_workflow",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fusion",
+        "neutronics",
+        "workflow"
+      ],
+      "id": 17
+    },
+    {
+      "name": "neutronics_material_maker",
+      "one_line_profile": "Tool for making reproducible materials for neutronics codes",
+      "detailed_description": "A software tool designed to create reproducible material definitions and standardize their usage across various neutronics simulation codes.",
+      "domains": [
+        "FUS1",
+        "Nuclear Engineering"
+      ],
+      "subtask_category": [
+        "data_generation",
+        "material_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fusion-energy/neutronics_material_maker",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neutronics",
+        "materials",
+        "nuclear-fusion"
+      ],
+      "id": 18
+    },
+    {
+      "name": "ReproduceMeGit",
+      "one_line_profile": "Visualization tool for analyzing reproducibility of Jupyter Notebooks",
+      "detailed_description": "A visualization tool designed to analyze and enhance the reproducibility of scientific experiments conducted in Jupyter Notebooks, tracking provenance and execution.",
+      "domains": [
+        "FUS1-08",
+        "Open Science"
+      ],
+      "subtask_category": [
+        "reproducibility_analysis",
+        "provenance_tracking"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fusion-jena/ReproduceMeGit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reproducibility",
+        "jupyter",
+        "provenance"
+      ],
+      "id": 19
+    },
+    {
+      "name": "OMAS",
+      "one_line_profile": "Ordered Multidimensional Array Structure for Fusion data",
+      "detailed_description": "A Python library designed to interface with the ITER Integrated Modeling and Analysis Suite (IMAS) data structure, facilitating data storage, transfer, and compatibility between fusion codes.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "data_management",
+        "interface_library"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gafusion/omas",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fusion",
+        "imas",
+        "data-structure"
+      ],
+      "id": 20
+    },
+    {
+      "name": "ANEMOS",
+      "one_line_profile": "Framework modeling Compute-near-Memory cores integrated in DRAM",
+      "detailed_description": "A simulation framework for modeling Compute-near-Memory (CnM) architectures, specifically cores integrated within DRAM, for computer architecture research.",
+      "domains": [
+        "Computer Engineering",
+        "HPC"
+      ],
+      "subtask_category": [
+        "simulation",
+        "hardware_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/gem5-X/ANEMOS",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "gem5",
+        "simulation",
+        "compute-near-memory"
+      ],
+      "id": 21
+    },
+    {
+      "name": "runko",
+      "one_line_profile": "Modern C++/python CPU/GPU plasma toolbox",
+      "detailed_description": "A modern, high-performance toolbox for plasma physics simulations, supporting both CPU and GPU execution, designed for astrophysical and laboratory plasma modeling.",
+      "domains": [
+        "FUS1",
+        "Plasma Physics",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "plasma_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/hel-astro-lab/runko",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "plasma",
+        "simulation",
+        "gpu"
+      ],
+      "id": 22
+    },
+    {
+      "name": "Almanac",
+      "one_line_profile": "Retrieval-Augmented Language Models for Clinical Medicine",
+      "detailed_description": "A framework utilizing retrieval-augmented language models specifically tailored for clinical medicine contexts to improve information retrieval and decision support.",
+      "domains": [
+        "Medicine",
+        "Clinical Informatics"
+      ],
+      "subtask_category": [
+        "information_retrieval",
+        "inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hiesingerlab/almanac-retrieval",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "clinical-medicine",
+        "rag",
+        "llm"
+      ],
+      "id": 23
+    },
+    {
+      "name": "IntegratedGradients",
+      "one_line_profile": "Implementation of Integrated Gradients for Keras models",
+      "detailed_description": "A Python/Keras implementation of the Integrated Gradients technique for axiomatic attribution, used to explain predictions of deep learning models in scientific research.",
+      "domains": [
+        "AI4S",
+        "Explainable AI"
+      ],
+      "subtask_category": [
+        "model_interpretation",
+        "analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/hiranumn/IntegratedGradients",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "xai",
+        "keras",
+        "integrated-gradients"
+      ],
+      "id": 24
+    },
+    {
+      "name": "FORCE",
+      "one_line_profile": "Framework for Optimization of Resources, Controls, and Economics",
+      "detailed_description": "A collection of software tools and models for analyzing the technical and economic viability of Integrated Energy Systems (IES), including optimization and control.",
+      "domains": [
+        "Energy",
+        "Systems Engineering"
+      ],
+      "subtask_category": [
+        "optimization",
+        "economic_analysis",
+        "modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/idaholab/FORCE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "energy-systems",
+        "optimization",
+        "economics"
+      ],
+      "id": 25
+    },
+    {
+      "name": "ibis.iSDM",
+      "one_line_profile": "Modelling framework for creating Integrated SDMs",
+      "detailed_description": "An R-based modelling framework for creating Integrated Species Distribution Models (iSDM), facilitating ecological research and biodiversity analysis.",
+      "domains": [
+        "Ecology",
+        "Biodiversity"
+      ],
+      "subtask_category": [
+        "modeling",
+        "statistical_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/iiasa/ibis.iSDM",
+      "help_website": [],
+      "license": "CC-BY-4.0",
+      "tags": [
+        "ecology",
+        "sdm",
+        "biodiversity"
+      ],
+      "id": 26
+    },
+    {
+      "name": "IMAS-Core",
+      "one_line_profile": "Core access layer library for the Integrated Modelling and Analysis Suite (IMAS) in nuclear fusion",
+      "detailed_description": "The IMAS Access Layer core library provides the fundamental C++ interfaces and mechanisms for accessing and manipulating fusion data within the ITER Integrated Modelling and Analysis Suite. It serves as the backbone for data exchange between different physics modules and the data dictionary.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "data_access",
+        "data_management"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/iterorganization/IMAS-Core",
+      "help_website": [
+        "https://confluence.iter.org/display/IMAS"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "nuclear-fusion",
+        "imas",
+        "data-access",
+        "iter"
+      ],
+      "id": 27
+    },
+    {
+      "name": "IMAS-Data-Dictionary",
+      "one_line_profile": "Data model definitions and generation tools for ITER fusion experiments",
+      "detailed_description": "Contains the Generic Data Model (GDM) definitions for experimental and simulation fusion data used in the IMAS ecosystem. It includes XSLT scripts and schemas to generate language-specific bindings and data structures, ensuring consistency across the fusion simulation workflow.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "data_modeling",
+        "schema_definition"
+      ],
+      "application_level": "library",
+      "primary_language": "XSLT",
+      "repo_url": "https://github.com/iterorganization/IMAS-Data-Dictionary",
+      "help_website": [
+        "https://git.iter.org/projects/IMAS"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "data-model",
+        "fusion-energy",
+        "schema",
+        "iter"
+      ],
+      "id": 28
+    },
+    {
+      "name": "IMAS-ParaView",
+      "one_line_profile": "ParaView plugins for visualizing IMAS fusion data structures",
+      "detailed_description": "A set of plugins for ParaView designed to visualize General Grid Descriptions (GGDs) and other data structures defined in the IMAS data model. It enables researchers to perform 3D visualization of plasma profiles, magnetic configurations, and device geometry directly from IMAS databases.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "scientific_visualization",
+        "plasma_visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/iterorganization/IMAS-ParaView",
+      "help_website": [
+        "https://www.paraview.org/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "paraview",
+        "visualization",
+        "nuclear-fusion",
+        "plasma-physics"
+      ],
+      "id": 29
+    },
+    {
+      "name": "IMAS-Python",
+      "one_line_profile": "Python interface for the ITER Integrated Modelling and Analysis Suite",
+      "detailed_description": "Provides Python bindings and high-level APIs for accessing the IMAS Data Model. It allows physicists and engineers to write data analysis scripts, simulation workflows, and pre/post-processing routines in Python while interacting with the standardized fusion data storage.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "workflow_automation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/iterorganization/IMAS-Python",
+      "help_website": [
+        "https://pypi.org/project/imas/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "python",
+        "fusion-energy",
+        "data-analysis",
+        "iter"
+      ],
+      "id": 30
+    },
+    {
+      "name": "Waveform-Editor",
+      "one_line_profile": "GUI tool for designing and managing fusion experiment pulse waveforms",
+      "detailed_description": "A graphical tool used to create, edit, and manage time-dependent waveforms for preparing fusion pulses. It helps operators and physicists define control parameters and reference signals for plasma discharges within the ITER operational workflow.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "experiment_control",
+        "pulse_design"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/iterorganization/Waveform-Editor",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "waveform",
+        "experiment-control",
+        "fusion-pulse",
+        "gui"
+      ],
+      "id": 31
+    },
+    {
+      "name": "gpuvmem",
+      "one_line_profile": "GPU-accelerated framework for radio astronomical image synthesis",
+      "detailed_description": "A CUDA-based framework designed for radio astronomical image synthesis, leveraging GPU acceleration to handle the computational demands of processing radio telescope data.",
+      "domains": [
+        "Astronomy",
+        "Radio Astronomy"
+      ],
+      "subtask_category": [
+        "image_synthesis",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Cuda",
+      "repo_url": "https://github.com/miguelcarcamov/gpuvmem",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "radio-astronomy",
+        "gpu",
+        "cuda",
+        "image-synthesis"
+      ],
+      "id": 32
+    },
+    {
+      "name": "Mimi.jl",
+      "one_line_profile": "Integrated Assessment Modeling (IAM) framework",
+      "detailed_description": "A Julia package that provides a component-based framework for constructing and running Integrated Assessment Models (IAMs), commonly used in climate change economics and policy analysis.",
+      "domains": [
+        "Climate Science",
+        "Economics"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/mimiframework/Mimi.jl",
+      "help_website": [
+        "https://www.mimiframework.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "integrated-assessment-modeling",
+        "climate-change",
+        "economics"
+      ],
+      "id": 33
+    },
+    {
+      "name": "muphy2",
+      "one_line_profile": "Parallel multi-physics simulation code",
+      "detailed_description": "A multi-physics simulation framework, likely combining Molecular Dynamics (MD) and Lattice Boltzmann (LB) methods for complex fluid and particle systems.",
+      "domains": [
+        "Physics",
+        "Fluid Dynamics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "multi_physics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/muphy2-framework/muphy2",
+      "help_website": [],
+      "license": "MPL-2.0",
+      "tags": [
+        "multi-physics",
+        "simulation",
+        "hpc"
+      ],
+      "id": 34
+    },
+    {
+      "name": "openreactor",
+      "one_line_profile": "Control and data logging system for IEC nuclear fusion reactors",
+      "detailed_description": "An open-source system for control, monitoring, and data logging specifically designed for Inertial Electrostatic Confinement (IEC) nuclear fusion reactors.",
+      "domains": [
+        "FUS1",
+        "Nuclear Engineering"
+      ],
+      "subtask_category": [
+        "experiment_control",
+        "data_acquisition"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/natesales/openreactor",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "fusion",
+        "nuclear",
+        "control-system",
+        "iec"
+      ],
+      "id": 35
+    },
+    {
+      "name": "nf-core/rnafusion",
+      "one_line_profile": "RNA-seq analysis pipeline for gene fusion detection",
+      "detailed_description": "A bioinformatics pipeline built using Nextflow for the detection of gene fusions from RNA-seq data, part of the nf-core community.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "workflow",
+        "variant_calling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/rnafusion",
+      "help_website": [
+        "https://nf-co.re/rnafusion"
+      ],
+      "license": "MIT",
+      "tags": [
+        "rna-seq",
+        "gene-fusion",
+        "nextflow",
+        "bioinformatics"
+      ],
+      "id": 36
+    },
+    {
+      "name": "GLOFRIM",
+      "one_line_profile": "Framework for integrated hydrological-hydrodynamic modelling",
+      "detailed_description": "A globally applicable framework designed to couple hydrological and hydrodynamic models for integrated water systems analysis.",
+      "domains": [
+        "Hydrology",
+        "Earth Science"
+      ],
+      "subtask_category": [
+        "modeling",
+        "coupling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openearth/glofrim",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "hydrology",
+        "hydrodynamics",
+        "model-coupling"
+      ],
+      "id": 37
+    },
+    {
+      "name": "inseeds",
+      "one_line_profile": "Model of integrated social-ecological resilient land systems",
+      "detailed_description": "A scientific model based on the copan:CORE framework and LPJmL for simulating integrated social-ecological land systems.",
+      "domains": [
+        "Ecology",
+        "Earth Science"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pik-copan/inseeds",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "social-ecological-systems",
+        "land-use",
+        "modeling"
+      ],
+      "id": 38
+    },
+    {
+      "name": "fast_imas_IPOL",
+      "one_line_profile": "Fast Image Matching by Affine Simulation (IMAS) implementation",
+      "detailed_description": "Source code for the IPOL (Image Processing On Line) demo of the Fast Image Matching by Affine Simulation algorithm, used in computer vision and image analysis.",
+      "domains": [
+        "Computer Vision",
+        "Image Analysis"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "alignment"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/rdguez-mariano/fast_imas_IPOL",
+      "help_website": [
+        "http://www.ipol.im/"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "image-matching",
+        "computer-vision",
+        "affine-simulation"
+      ],
+      "id": 39
+    },
+    {
+      "name": "OWEFE",
+      "one_line_profile": "Open modeling framework for Water-Energy-Food-Environment systems",
+      "detailed_description": "An open modeling framework designed for the integrated analysis of water, energy, food, and environment systems, facilitating nexus research.",
+      "domains": [
+        "Environmental Science",
+        "Sustainability"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rl-institut/OWEFE",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "water-energy-food-nexus",
+        "modeling",
+        "environmental-science"
+      ],
+      "id": 40
+    },
+    {
+      "name": "StellarMesh",
+      "one_line_profile": "Meshing library for nuclear fusion workflows",
+      "detailed_description": "A Python library designed to generate and manage meshes for nuclear fusion simulations, supporting geometry processing and integration with transport solvers.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "meshing",
+        "geometry_processing",
+        "simulation_prep"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stellarmesh/stellarmesh",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nuclear-fusion",
+        "meshing",
+        "geometry",
+        "simulation"
+      ],
+      "id": 41
+    },
+    {
+      "name": "PROCESS",
+      "one_line_profile": "Fusion power plant systems code for parameter optimization",
+      "detailed_description": "A systems code that calculates self-consistent parameters for a fusion power plant, ensuring operating limits are met and optimizing for specified performance metrics.",
+      "domains": [
+        "FUS1"
+      ],
+      "subtask_category": [
+        "systems_modeling",
+        "optimization",
+        "plant_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ukaea/PROCESS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fusion-energy",
+        "systems-code",
+        "optimization",
+        "tokamak"
+      ],
+      "id": 42
+    },
+    {
+      "name": "FAIR-MAST",
+      "one_line_profile": "Data management system for MAST Tokamak data",
+      "detailed_description": "A data management solution designed for the MAST (Mega Ampere Spherical Tokamak) experiment, facilitating data access, archiving, and compliance with FAIR principles.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "data_management",
+        "archiving",
+        "fair_data"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ukaea/fair-mast",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fusion",
+        "data-management",
+        "mast",
+        "tokamak"
+      ],
+      "id": 43
+    },
+    {
+      "name": "MFW",
+      "one_line_profile": "Multiscale Fusion Workflow for HPC environments",
+      "detailed_description": "A workflow implementation for multiscale fusion simulations, leveraging VECMA toolkit components to manage complex execution patterns on HPC resources.",
+      "domains": [
+        "FUS1",
+        "FUS1-08"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "hpc_execution",
+        "multiscale_simulation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/vecma-ipp/MFW",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "fusion",
+        "workflow",
+        "hpc",
+        "multiscale"
+      ],
+      "id": 44
+    },
+    {
+      "name": "WorldDynamics.jl",
+      "one_line_profile": "Julia framework for global integrated assessment models (IAMs) and system dynamics",
+      "detailed_description": "An open-source framework written in Julia for developing, simulating, and analyzing Integrated Assessment Models (IAMs) such as World3. It facilitates the study of complex interactions between global socio-economic and environmental systems using differential equations.",
+      "domains": [
+        "Environmental_Science",
+        "System_Dynamics"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/worlddynamics/WorldDynamics.jl",
+      "help_website": [
+        "https://github.com/worlddynamics/WorldDynamics.jl"
+      ],
+      "license": "MIT",
+      "tags": [
+        "system-dynamics",
+        "integrated-assessment-models",
+        "world3",
+        "simulation",
+        "julia"
+      ],
+      "id": 45
+    }
+  ]
+}

@@ -1,0 +1,2859 @@
+{
+  "generated_at": "2025-12-16T04:04:40.080466+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "M2",
+      "leaf_cluster_name": "材料-分子动力学与力场生态",
+      "domain": "Materials",
+      "typical_objects": "trajectories/force fields",
+      "task_chain": "力场→模拟→分析→可视化→闭环",
+      "tool_form": "MD引擎 + 势模型 + 分析"
+    },
+    "unit": {
+      "unit_id": "M2-02",
+      "unit_name": "力场参数化与拟合",
+      "target_scale": "200–450",
+      "coverage_tools": "fitting、parameter tools"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] FitSNAP",
+        "[GH] NequIP",
+        "[GH] ATB",
+        "[GH] LigParGen",
+        "[GH] ParmEd",
+        "[GH] DeepMD-kit",
+        "[GH] ACPYPE",
+        "[GH] Antechamber",
+        "[GH] OpenFF Toolkit",
+        "[GH] ForceBalance",
+        "[GH] force field parameterization",
+        "[GH] force field fitting",
+        "[GH] force field optimization",
+        "[GH] topology generator",
+        "[GH] molecular mechanics parameters",
+        "[GH] interatomic potential fitting",
+        "[GH] RESP charge calculation",
+        "[GH] neural network potential training",
+        "[GH] machine learning force field",
+        "[GH] automated topology builder",
+        "[GH] molecular dynamics parameters",
+        "[GH] potential energy surface fitting",
+        "[GH] force field toolkit",
+        "[WEB] force field parameterization tools github",
+        "[WEB] molecular dynamics force field fitting software github",
+        "[WEB] automated topology generator molecular dynamics github",
+        "[WEB] machine learning interatomic potential training github",
+        "[WEB] force field optimization framework github"
+      ],
+      "total_candidates": 728,
+      "tool_candidates": 204,
+      "final_tools": 111
+    }
+  },
+  "tools": [
+    {
+      "name": "MACE",
+      "one_line_profile": "Fast and accurate machine learning interatomic potentials with higher order equivariant message passing",
+      "detailed_description": "MACE provides a unified framework for fast and accurate machine learning interatomic potentials. It utilizes higher order equivariant message passing to capture complex atomic interactions, suitable for molecular dynamics simulations and materials modeling.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_training",
+        "molecular_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ACEsuit/mace",
+      "help_website": [
+        "https://mace-docs.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "machine-learning",
+        "interatomic-potential",
+        "molecular-dynamics",
+        "equivariant-neural-networks"
+      ],
+      "id": 1
+    },
+    {
+      "name": "StABlE-Training",
+      "one_line_profile": "Stability-Aware Training of Machine Learning Force Fields",
+      "detailed_description": "Implementation of a stability-aware training method for machine learning force fields using differentiable Boltzmann estimators. It addresses the issue of simulation stability in ML-driven molecular dynamics.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_training",
+        "stability_optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ASK-Berkeley/StABlE-Training",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "machine-learning",
+        "force-field",
+        "molecular-dynamics",
+        "training-stability"
+      ],
+      "id": 2
+    },
+    {
+      "name": "GA4AMOEBA",
+      "one_line_profile": "Genetic Algorithm for optimizing AMOEBA force field parameters",
+      "detailed_description": "A Fortran-based Genetic Algorithm program designed to optimize the parameters of the polarizable AMOEBA force field, facilitating accurate molecular modeling.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/AmYingLi/GA4AMOEBA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "genetic-algorithm",
+        "force-field",
+        "parameter-optimization",
+        "amoeba"
+      ],
+      "id": 3
+    },
+    {
+      "name": "Enerzyme",
+      "one_line_profile": "Machine learning force field for enzymatic catalysis",
+      "detailed_description": "A next-generation machine learning force field specifically designed for modeling enzymatic catalysis, enabling accurate simulations of biochemical reactions.",
+      "domains": [
+        "M2",
+        "Biochemistry"
+      ],
+      "subtask_category": [
+        "force_field_modeling",
+        "catalysis_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Benzoin96485/Enerzyme",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "machine-learning",
+        "force-field",
+        "enzymes",
+        "catalysis"
+      ],
+      "id": 4
+    },
+    {
+      "name": "TiO2-Water-Dataset",
+      "one_line_profile": "Training data for TiO2-Water interface Deep Neural Network Potential",
+      "detailed_description": "A dataset repository containing training data used to develop a Deep Neural Network Potential for the Titanium Dioxide-Water interface, essential for training ML potentials in materials science.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "dataset",
+        "force_field_training"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/CSIprinceton/TiO2-Water",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dataset",
+        "deep-neural-network",
+        "potential",
+        "materials-science"
+      ],
+      "id": 5
+    },
+    {
+      "name": "NN-Inverse-Kinematics",
+      "one_line_profile": "Neural networks for forward and inverse kinematics computation",
+      "detailed_description": "A tool for training neural networks to compute forward and inverse kinematics, addressing nonlinear function estimation with potential singularities in robotics and physics modeling.",
+      "domains": [
+        "Robotics",
+        "Physics"
+      ],
+      "subtask_category": [
+        "kinematics_modeling",
+        "function_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/CedarStreetGarage/python-keras-neural-network-inverse-kinematics",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "inverse-kinematics",
+        "neural-networks",
+        "robotics",
+        "physics"
+      ],
+      "id": 6
+    },
+    {
+      "name": "NequIP-LES",
+      "one_line_profile": "LES extension package for NequIP force fields",
+      "detailed_description": "An extension package for NequIP (E(3)-equivariant neural network interatomic potentials) that implements Local Energy Decomposition (LES) or related enhancements for materials modeling.",
+      "domains": [
+        "M2"
+      ],
+      "subtask_category": [
+        "force_field_modeling",
+        "energy_decomposition"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ChengUCB/NequIP-LES",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "nequip",
+        "force-field",
+        "molecular-dynamics",
+        "equivariant-nn"
+      ],
+      "id": 7
+    },
+    {
+      "name": "SOG-Net",
+      "one_line_profile": "Sum-of-Gaussians Neural Network for machine learning force fields",
+      "detailed_description": "A lightweight and versatile framework for integrating long-range interactions into machine learning force fields using a Sum-of-Gaussians approach.",
+      "domains": [
+        "M2"
+      ],
+      "subtask_category": [
+        "force_field_modeling",
+        "long_range_interaction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/DuktigYajie/SOG-Net",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "machine-learning",
+        "force-field",
+        "molecular-dynamics",
+        "long-range-interactions"
+      ],
+      "id": 8
+    },
+    {
+      "name": "FeNNol",
+      "one_line_profile": "Force-field-enhanced Neural Networks optimized library",
+      "detailed_description": "A library for creating Force-field-enhanced Neural Networks (FeNNol), designed to improve the accuracy and efficiency of molecular simulations by combining physical force fields with neural networks.",
+      "domains": [
+        "M2"
+      ],
+      "subtask_category": [
+        "force_field_modeling",
+        "molecular_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FeNNol-tools/FeNNol",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "neural-networks",
+        "force-field",
+        "molecular-dynamics",
+        "hybrid-model"
+      ],
+      "id": 9
+    },
+    {
+      "name": "FitSNAP",
+      "one_line_profile": "Software for generating machine-learning interatomic potentials for LAMMPS",
+      "detailed_description": "A comprehensive tool for fitting Spectral Neighbor Analysis Potential (SNAP) and other machine learning interatomic potentials, designed to work with the LAMMPS simulation engine.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "fitting",
+        "potential_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FitSNAP/FitSNAP",
+      "help_website": [
+        "https://fitsnap.github.io/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "lammps",
+        "snap",
+        "machine-learning",
+        "interatomic-potential",
+        "fitting"
+      ],
+      "id": 10
+    },
+    {
+      "name": "PKU_MDAgent",
+      "one_line_profile": "LLM-Based Molecular Dynamics Agent for Code Generation",
+      "detailed_description": "A fine-tuned Large Language Model-based agent designed to generate code for obtaining material thermodynamic parameters via molecular dynamics simulations.",
+      "domains": [
+        "M2"
+      ],
+      "subtask_category": [
+        "code_generation",
+        "simulation_workflow"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/FredericVAN/PKU_MDAgent",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "llm",
+        "molecular-dynamics",
+        "agent",
+        "materials-science"
+      ],
+      "id": 11
+    },
+    {
+      "name": "SwarmCGM",
+      "one_line_profile": "Optimization tool for calibrating coarse-grained force fields",
+      "detailed_description": "A tool for optimizing coarse-grained force field parameters for lipids, utilizing swarm intelligence to match reference all-atom trajectories and experimental data.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "coarse_graining",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GMPavanLab/SwarmCGM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "coarse-grained",
+        "force-field",
+        "optimization",
+        "molecular-dynamics"
+      ],
+      "id": 12
+    },
+    {
+      "name": "Coastal-Erosion-RNN",
+      "one_line_profile": "Modeling Coastal Erosion using RNNs and satellite data",
+      "detailed_description": "A deep learning framework using Recurrent Neural Networks to model and predict coastal shoreline changes based on historical satellite data, aiding in environmental monitoring.",
+      "domains": [
+        "Earth Science"
+      ],
+      "subtask_category": [
+        "environmental_modeling",
+        "prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Geraldine-Winston/Modeling-Coastal-Erosion-using-RNNs-and-shoreline-satellite-data.",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rnn",
+        "earth-science",
+        "satellite-data",
+        "erosion-modeling"
+      ],
+      "id": 13
+    },
+    {
+      "name": "GB-FFs-Model",
+      "one_line_profile": "Graph-Based Force Fields Model parameterization",
+      "detailed_description": "A tool utilizing Graph Attention Networks to parameterize force fields, providing a graph-based approach to molecular mechanics parameter generation.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "graph_neural_networks"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GongCHEN-1995/GB-FFs-Model",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "graph-neural-networks",
+        "force-field",
+        "parameterization",
+        "molecular-modeling"
+      ],
+      "id": 14
+    },
+    {
+      "name": "pocketoptimizer",
+      "one_line_profile": "Binding pocket optimization based on force fields",
+      "detailed_description": "A tool for optimizing binding pockets in proteins using force fields and docking scoring functions, aiding in structure-based drug design.",
+      "domains": [
+        "M2",
+        "Drug Discovery"
+      ],
+      "subtask_category": [
+        "structure_optimization",
+        "docking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rich Text Format",
+      "repo_url": "https://github.com/Hoecker-Lab/pocketoptimizer",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "binding-pocket",
+        "optimization",
+        "force-field",
+        "drug-design"
+      ],
+      "id": 15
+    },
+    {
+      "name": "ComplexNetworkTopologyGenerator",
+      "one_line_profile": "Generator for complex network topologies",
+      "detailed_description": "Python scripts for generating various complex network topologies (e.g., for graph theory or network science research), supporting the study of network structures.",
+      "domains": [
+        "Network Science",
+        "Physics"
+      ],
+      "subtask_category": [
+        "topology_generation",
+        "network_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/IncidentNormal/ComplexNetworkTopologyGenerator",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "complex-networks",
+        "topology",
+        "graph-theory",
+        "generator"
+      ],
+      "id": 16
+    },
+    {
+      "name": "ParaMol",
+      "one_line_profile": "Package for Parametrization of Molecular Mechanics Force Fields",
+      "detailed_description": "A comprehensive Python package designed for the parametrization of molecular mechanics force fields, offering tools for fitting and optimizing force field parameters against QM data.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "fitting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JMorado/ParaMol",
+      "help_website": [
+        "https://paramol.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "force-field",
+        "parameterization",
+        "molecular-mechanics",
+        "fitting"
+      ],
+      "id": 17
+    },
+    {
+      "name": "DPmoire",
+      "one_line_profile": "Machine learning force fields for moire systems",
+      "detailed_description": "A tool for constructing accurate machine learning force fields specifically for moiré systems, enabling efficient simulation of these complex 2D material structures.",
+      "domains": [
+        "M2"
+      ],
+      "subtask_category": [
+        "force_field_construction",
+        "materials_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/JiaxuanLiu-Arsko/DPmoire",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "moire-systems",
+        "machine-learning",
+        "force-field",
+        "2d-materials"
+      ],
+      "id": 18
+    },
+    {
+      "name": "cp2k_2_deepmdkit",
+      "one_line_profile": "Converter from CP2K output to DeepMD-kit input",
+      "detailed_description": "A utility tool for converting output data from CP2K quantum chemistry software into the input format required by DeepMD-kit, facilitating the training of machine learning potentials.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "format_conversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KMNitesh05/cp2k_2_deepmdkit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cp2k",
+        "deepmd-kit",
+        "data-conversion",
+        "machine-learning-potential"
+      ],
+      "id": 19
+    },
+    {
+      "name": "MatPL",
+      "one_line_profile": "Material Potential Library for generating ML force fields",
+      "detailed_description": "MatPL (formerly PWMLFF) is a package for rapidly generating machine learning force fields with accuracy comparable to Ab Initio Molecular Dynamics, supporting materials research.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_generation",
+        "molecular_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/LonxunQuantum/MatPL",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "machine-learning",
+        "force-field",
+        "materials-science",
+        "aimd"
+      ],
+      "id": 20
+    },
+    {
+      "name": "FittingWizardWeb",
+      "one_line_profile": "WebApp for forcefield parameters optimisation",
+      "detailed_description": "A Java-based WebApp that assists users in performing force field parameter optimization by integrating Quantum Chemistry and Molecular Dynamics software workflows.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "optimization",
+        "workflow_management"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/MMunibas/FittingWizardWeb",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "force-field",
+        "optimization",
+        "web-app",
+        "parameterization"
+      ],
+      "id": 21
+    },
+    {
+      "name": "benchmarkff",
+      "one_line_profile": "Benchmark tool for force field geometries and energies",
+      "detailed_description": "A tool to compare optimized geometries and energies from various force fields against Quantum Mechanics (QM) references, used for validating and benchmarking force field accuracy.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "validation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MobleyLab/benchmarkff",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "force-field",
+        "benchmark",
+        "validation",
+        "quantum-mechanics"
+      ],
+      "id": 22
+    },
+    {
+      "name": "ATB-calc",
+      "one_line_profile": "Processing tool for Annual Technology Baseline (ATB) electricity data",
+      "detailed_description": "Python scripts and notebooks for processing NREL's Annual Technology Baseline electricity data, calculating Levelized Cost of Energy (LCOE) and other techno-economic metrics.",
+      "domains": [
+        "Energy"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "techno_economic_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NREL/ATB-calc",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "energy-analysis",
+        "lcoe",
+        "nrel",
+        "data-processing"
+      ],
+      "id": 23
+    },
+    {
+      "name": "cuEquivariance",
+      "one_line_profile": "Math library for accelerating equivariant neural networks",
+      "detailed_description": "A library providing low-level primitives and tensor operations to accelerate equivariant neural network models (like MACE, Allegro, NequIP) used in scientific simulations and structure prediction.",
+      "domains": [
+        "M2"
+      ],
+      "subtask_category": [
+        "acceleration",
+        "model_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NVIDIA/cuEquivariance",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "equivariant-neural-networks",
+        "acceleration",
+        "cuda",
+        "molecular-dynamics"
+      ],
+      "id": 24
+    },
+    {
+      "name": "ParmEd",
+      "one_line_profile": "Parameter/topology editor and molecular simulator",
+      "detailed_description": "A general tool for editing molecular topologies and parameters, and performing format conversions between different simulation packages (AMBER, CHARMM, etc.), essential for MD workflows.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "topology_editing",
+        "format_conversion",
+        "parameter_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ParmEd/ParmEd",
+      "help_website": [
+        "https://parmed.github.io/ParmEd/"
+      ],
+      "license": null,
+      "tags": [
+        "molecular-dynamics",
+        "topology",
+        "parameter-editing",
+        "amber"
+      ],
+      "id": 25
+    },
+    {
+      "name": "MLFF-Framework",
+      "one_line_profile": "Machine Learning Force Field (MLFF) framework by SAIT",
+      "detailed_description": "A Python package providing a framework for developing and using Samsung Advanced Institute of Technology (SAIT) Machine Learning Force Fields.",
+      "domains": [
+        "Materials",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_development",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SAITPublic/MLFF-Framework",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "machine-learning",
+        "force-field",
+        "molecular-dynamics"
+      ],
+      "id": 26
+    },
+    {
+      "name": "XFEM_Fracture2D",
+      "one_line_profile": "2D fracture mechanics solver using Extended Finite Element Method",
+      "detailed_description": "A Matlab program for solving fracture problems involving arbitrary multiple crack propagations in 2D linear-elastic solids using XFEM and the principle of minimum potential energy.",
+      "domains": [
+        "Materials",
+        "Mechanics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "fracture_mechanics"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/ShelvanLee/XFEM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "xfem",
+        "fracture-mechanics",
+        "finite-element"
+      ],
+      "id": 27
+    },
+    {
+      "name": "descent",
+      "one_line_profile": "Classical force field parameter optimization library",
+      "detailed_description": "A Python library designed to optimize classical force field parameters against reference data using gradient descent methods.",
+      "domains": [
+        "Materials",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "fitting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SimonBoothroyd/descent",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "force-field",
+        "optimization",
+        "parameter-fitting"
+      ],
+      "id": 28
+    },
+    {
+      "name": "Tinker",
+      "one_line_profile": "Software tools for molecular design and simulation",
+      "detailed_description": "A complete and general package for molecular mechanics and dynamics, with some special features for biopolymers and polyelectrolytes.",
+      "domains": [
+        "Materials",
+        "Chemistry",
+        "M2"
+      ],
+      "subtask_category": [
+        "simulation",
+        "molecular_dynamics",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/TinkerTools/tinker",
+      "help_website": [
+        "https://dasher.wustl.edu/tinker/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "molecular-dynamics",
+        "molecular-mechanics",
+        "simulation"
+      ],
+      "id": 29
+    },
+    {
+      "name": "TorchANI",
+      "one_line_profile": "PyTorch implementation of ANI neural network potentials",
+      "detailed_description": "An open-source library that supports training, development, and research of ANI-style neural network interatomic potentials for molecular dynamics.",
+      "domains": [
+        "Materials",
+        "Chemistry",
+        "M2"
+      ],
+      "subtask_category": [
+        "simulation",
+        "force_field_development",
+        "machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aiqm/torchani",
+      "help_website": [
+        "https://aiqm.github.io/torchani/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "neural-network",
+        "potential",
+        "molecular-dynamics",
+        "pytorch"
+      ],
+      "id": 30
+    },
+    {
+      "name": "kappa",
+      "one_line_profile": "Thermal conductivity calculation for molecular interfaces",
+      "detailed_description": "A Python package to calculate thermal conductivity across molecular interfaces, useful for analyzing heat transport in molecular dynamics simulations.",
+      "domains": [
+        "Materials",
+        "Physics"
+      ],
+      "subtask_category": [
+        "analysis",
+        "transport_property_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ajkerr0/kappa",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "thermal-conductivity",
+        "molecular-dynamics",
+        "heat-transport"
+      ],
+      "id": 31
+    },
+    {
+      "name": "acpype",
+      "one_line_profile": "Python interface for Antechamber topology generation",
+      "detailed_description": "A tool based on Python to use Antechamber to generate topologies for chemical compounds, supporting GROMACS, CHARMM, and CNS formats.",
+      "domains": [
+        "Chemistry",
+        "Materials",
+        "M2"
+      ],
+      "subtask_category": [
+        "topology_generation",
+        "parameterization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/alanwilter/acpype",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "topology",
+        "antechamber",
+        "gromacs",
+        "molecular-dynamics"
+      ],
+      "id": 32
+    },
+    {
+      "name": "EZFF",
+      "one_line_profile": "Easy Force-Field fitting library",
+      "detailed_description": "A Python-based library designed to facilitate the fitting of force-field parameters for molecular dynamics simulations.",
+      "domains": [
+        "Materials",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "fitting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/arvk/EZFF",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "force-field",
+        "fitting",
+        "optimization"
+      ],
+      "id": 33
+    },
+    {
+      "name": "FastTrack",
+      "one_line_profile": "Mass transport estimation using ML force fields",
+      "detailed_description": "A tool for estimating mass transport properties in materials based on machine learning force fields.",
+      "domains": [
+        "Materials",
+        "M2"
+      ],
+      "subtask_category": [
+        "analysis",
+        "transport_property_calculation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/atomly-materials-research-lab/FastTrack",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mass-transport",
+        "machine-learning",
+        "force-field"
+      ],
+      "id": 34
+    },
+    {
+      "name": "autoplex",
+      "one_line_profile": "Automated fitting of machine learned interatomic potentials",
+      "detailed_description": "Code designed for the automated fitting and generation of machine-learned interatomic potentials for material simulations.",
+      "domains": [
+        "Materials",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "fitting",
+        "machine_learning"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/autoatml/autoplex",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "interatomic-potential",
+        "fitting",
+        "automation"
+      ],
+      "id": 35
+    },
+    {
+      "name": "AUTOSURF",
+      "one_line_profile": "Automated potential energy surface fitting software",
+      "detailed_description": "Software designed to robustly compute electronic energies and incorporate them into a global potential energy surface (PES), automating the fitting steps for various classes of PESs.",
+      "domains": [
+        "Chemistry",
+        "Materials",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "fitting",
+        "modeling",
+        "pes_construction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/autosurf/AUTOSURF-v1.3",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "potential-energy-surface",
+        "fitting",
+        "electronic-structure"
+      ],
+      "id": 36
+    },
+    {
+      "name": "ASGARD",
+      "one_line_profile": "Automated MD analysis and reporting tool",
+      "detailed_description": "A tool that allows via an automated MD workflow to perform MD protein or protein-ligand complex analysis and to generate corresponding reports.",
+      "domains": [
+        "Biology",
+        "Chemistry",
+        "M2"
+      ],
+      "subtask_category": [
+        "analysis",
+        "workflow",
+        "quality_control"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bio-hpc/ASGARD",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "molecular-dynamics",
+        "analysis",
+        "protein-ligand"
+      ],
+      "id": 37
+    },
+    {
+      "name": "Force-fields-for-metal-cations",
+      "one_line_profile": "Optimized force field parameters for metal cations",
+      "detailed_description": "A dataset and parameter collection providing optimized force field parameters for metal cations (Li+, Na+, K+, etc.) in combination with the TIP3P water model for all-atom MD simulations.",
+      "domains": [
+        "Chemistry",
+        "Biology",
+        "M2"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "simulation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Makefile",
+      "repo_url": "https://github.com/bio-phys/Force-fields-for-metal-cations",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "force-field",
+        "parameters",
+        "metal-cations"
+      ],
+      "id": 38
+    },
+    {
+      "name": "TAFFI",
+      "one_line_profile": "Automated force-field parameterization software",
+      "detailed_description": "Software for the automated parameterization of force fields, designed to generate parameters for molecular dynamics simulations.",
+      "domains": [
+        "Chemistry",
+        "Materials",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "fitting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bsavoie/TAFFI",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "force-field",
+        "parameterization",
+        "automation"
+      ],
+      "id": 39
+    },
+    {
+      "name": "BAMBOO",
+      "one_line_profile": "AI-driven machine learning force field for electrolytes",
+      "detailed_description": "Bytedance AI Molecular BOOster (BAMBOO) is an AI-driven machine learning force field designed for precise and efficient electrolyte simulations.",
+      "domains": [
+        "Materials",
+        "Chemistry",
+        "M2"
+      ],
+      "subtask_category": [
+        "simulation",
+        "force_field_development",
+        "machine_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bytedance/bamboo",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "machine-learning",
+        "force-field",
+        "electrolytes"
+      ],
+      "id": 40
+    },
+    {
+      "name": "JAX-ReaxFF",
+      "one_line_profile": "Gradient-based optimization framework for ReaxFF",
+      "detailed_description": "A framework using JAX for the extremely fast optimization of Reactive Force Fields (ReaxFF) through gradient-based methods.",
+      "domains": [
+        "Materials",
+        "Chemistry",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "optimization",
+        "fitting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cagrikymk/JAX-ReaxFF",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "reaxff",
+        "jax",
+        "optimization",
+        "force-field"
+      ],
+      "id": 41
+    },
+    {
+      "name": "PotentialLearning.jl",
+      "one_line_profile": "Julia package for learning interatomic potentials",
+      "detailed_description": "A Julia package to optimize atomistic data and interatomic potential models for molecular dynamics workflows.",
+      "domains": [
+        "Materials",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "machine_learning",
+        "fitting"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/cesmix-mit/PotentialLearning.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "interatomic-potential",
+        "machine-learning"
+      ],
+      "id": 42
+    },
+    {
+      "name": "ParamGULP",
+      "one_line_profile": "Interatomic potential fitting tool using GULP",
+      "detailed_description": "A Python tool for fitting interatomic potentials for molecular dynamics, likely interfacing with the GULP simulation code.",
+      "domains": [
+        "Materials",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "fitting"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chejunwei2/ParamGULP",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "gulp",
+        "fitting",
+        "interatomic-potential"
+      ],
+      "id": 43
+    },
+    {
+      "name": "ambermini",
+      "one_line_profile": "Minimal distribution of AmberTools",
+      "detailed_description": "A stripped-down set of essential AmberTools components (antechamber, sqm, and tleap) for molecular topology and parameter generation.",
+      "domains": [
+        "Chemistry",
+        "Biology",
+        "M2"
+      ],
+      "subtask_category": [
+        "topology_generation",
+        "parameterization"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/choderalab/ambermini",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "amber",
+        "antechamber",
+        "topology"
+      ],
+      "id": 44
+    },
+    {
+      "name": "torsionfit",
+      "one_line_profile": "Bayesian fitting of molecular torsion parameters",
+      "detailed_description": "Bayesian tools for fitting molecular mechanics torsion parameters to quantum chemical data.",
+      "domains": [
+        "Chemistry",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "fitting"
+      ],
+      "application_level": "library",
+      "primary_language": "Rich Text Format",
+      "repo_url": "https://github.com/choderalab/torsionfit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bayesian",
+        "torsion",
+        "parameter-fitting"
+      ],
+      "id": 45
+    },
+    {
+      "name": "streamd",
+      "one_line_profile": "Automated high-throughput MD pipeline",
+      "detailed_description": "A fully automated high-throughput molecular dynamics pipeline for setting up, running, and analyzing simulations.",
+      "domains": [
+        "Chemistry",
+        "Biology",
+        "M2"
+      ],
+      "subtask_category": [
+        "workflow",
+        "simulation",
+        "automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ci-lab-cz/streamd",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-dynamics",
+        "high-throughput",
+        "pipeline"
+      ],
+      "id": 46
+    },
+    {
+      "name": "colabfit-tools",
+      "one_line_profile": "Tools for interatomic potential datasets",
+      "detailed_description": "A collection of tools for constructing and manipulating datasets used for fitting interatomic potentials, part of the ColabFit project.",
+      "domains": [
+        "Materials",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "parameterization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/colabfit/colabfit-tools",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dataset",
+        "interatomic-potential",
+        "fitting"
+      ],
+      "id": 47
+    },
+    {
+      "name": "CombiFF",
+      "one_line_profile": "Automated force-field optimization tool",
+      "detailed_description": "A tool for automated force-field optimization developed by the CSMS group at ETH Zürich.",
+      "domains": [
+        "Chemistry",
+        "Materials",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/csms-ethz/CombiFF",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "force-field",
+        "optimization",
+        "automation"
+      ],
+      "id": 48
+    },
+    {
+      "name": "RMD_Digging",
+      "one_line_profile": "Pre/Post-processing tools for ReaxFF MD",
+      "detailed_description": "A MATLAB-based toolkit for pre-processing and post-processing reactive molecular dynamics (ReaxFF) simulations, including parameter formatting and structural analysis.",
+      "domains": [
+        "Materials",
+        "Chemistry",
+        "M2"
+      ],
+      "subtask_category": [
+        "analysis",
+        "visualization",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/dadaoqiuzhi/RMD_Digging",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "reaxff",
+        "molecular-dynamics",
+        "post-processing"
+      ],
+      "id": 49
+    },
+    {
+      "name": "DMFF",
+      "one_line_profile": "Differentiable Molecular Force Field implementation based on Jax",
+      "detailed_description": "A Jax-based Python package providing a fully differentiable implementation of molecular force field models, enabling efficient parameterization and optimization.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_modeling",
+        "differentiable_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepmodeling/DMFF",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "jax",
+        "force-field",
+        "differentiable-programming"
+      ],
+      "id": 50
+    },
+    {
+      "name": "deepmd-gnn",
+      "one_line_profile": "Graph Neural Network plugin for DeePMD-kit",
+      "detailed_description": "A plugin for DeePMD-kit that integrates various graph neural network models for potential energy representation.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "model_extension",
+        "potential_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepmodeling/deepmd-gnn",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "gnn",
+        "deepmd-kit",
+        "plugin"
+      ],
+      "id": 51
+    },
+    {
+      "name": "DeePMD-kit",
+      "one_line_profile": "Deep learning package for many-body potential energy representation and MD",
+      "detailed_description": "A comprehensive package for generating many-body potential energy surfaces using deep learning and performing molecular dynamics simulations.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "potential_learning",
+        "md_simulation",
+        "force_field_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepmodeling/deepmd-kit",
+      "help_website": [
+        "http://www.deepmd.org"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "deep-learning",
+        "molecular-dynamics",
+        "potential-energy-surface"
+      ],
+      "id": 52
+    },
+    {
+      "name": "polanyi",
+      "one_line_profile": "Transition state optimization with force fields",
+      "detailed_description": "A Python library for performing transition state optimization using force field methods.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "transition_state_optimization",
+        "structure_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/digital-chemistry-laboratory/polanyi",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "transition-state",
+        "optimization",
+        "force-field"
+      ],
+      "id": 53
+    },
+    {
+      "name": "Uni-GBSA",
+      "one_line_profile": "Workflow for MM/GB(PB)SA calculations and force field building",
+      "detailed_description": "An automatic workflow to perform MM/GB(PB)SA calculations, including force field building, structure optimization, and free energy calculation.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "free_energy_calculation",
+        "force_field_building",
+        "structure_optimization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dptech-corp/Uni-GBSA",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mmpa",
+        "gbsa",
+        "free-energy"
+      ],
+      "id": 54
+    },
+    {
+      "name": "GRADE",
+      "one_line_profile": "Clathrate hydrate structure determination and analysis code",
+      "detailed_description": "A tool to analyze atomic positions of water molecules to determine clathrate hydrate structures (cages) and calculate order parameters from trajectories.",
+      "domains": [
+        "M2"
+      ],
+      "subtask_category": [
+        "structure_analysis",
+        "trajectory_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/farbod-nobar/GRADE",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "clathrate-hydrate",
+        "structure-analysis",
+        "vmd"
+      ],
+      "id": 55
+    },
+    {
+      "name": "ParFit",
+      "one_line_profile": "Automated fitting of molecular mechanics parameters",
+      "detailed_description": "Automates the process of fitting molecular-mechanics parameters to data obtained by ab-initio calculations.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameter_fitting",
+        "force_field_optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/fzahari/ParFit",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "parameterization",
+        "ab-initio",
+        "fitting"
+      ],
+      "id": 56
+    },
+    {
+      "name": "vaspMD",
+      "one_line_profile": "Workflow tools and scripts for AIMD and MLFF-MD with VASP",
+      "detailed_description": "A collection of scripts and tools to facilitate ab initio Molecular Dynamics (AIMD) and Machine Learning Force Field MD calculations using VASP.",
+      "domains": [
+        "M2"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "md_simulation",
+        "post_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/gabkrenzer/vaspMD",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vasp",
+        "aimd",
+        "mlff"
+      ],
+      "id": 57
+    },
+    {
+      "name": "ABFML",
+      "one_line_profile": "Rapid building and fitting of machine learning force fields",
+      "detailed_description": "A tool for the rapid building, fitting, and application of machine learning force fields.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_fitting",
+        "potential_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gengxingze/ABFML",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "machine-learning",
+        "force-field",
+        "fitting"
+      ],
+      "id": 58
+    },
+    {
+      "name": "OBGMX",
+      "one_line_profile": "GROMACS topology generator using OpenBabel UFF",
+      "detailed_description": "A tool to generate GROMACS topologies using the UFF force field implementation from OpenBabel.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "topology_generation",
+        "force_field_assignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/gioGarbe/OBGMX",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "gromacs",
+        "topology",
+        "openbabel"
+      ],
+      "id": 59
+    },
+    {
+      "name": "mlip",
+      "one_line_profile": "Library for Machine Learning Interatomic Potentials",
+      "detailed_description": "A library designed for efficient training and application of Machine Learning Interatomic Potentials (MLIP).",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "potential_learning",
+        "force_field_training"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/instadeepai/mlip",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "mlip",
+        "interatomic-potentials",
+        "machine-learning"
+      ],
+      "id": 60
+    },
+    {
+      "name": "PYFIT-FF",
+      "one_line_profile": "Neural network interatomic potential training tool",
+      "detailed_description": "A tool for training feed-forward artificial neural network (NN) interatomic potentials to interpolate between density functional theory energy predictions.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "potential_training",
+        "force_field_fitting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jfh3/PYFIT-FF",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "neural-network",
+        "interatomic-potential",
+        "dft"
+      ],
+      "id": 61
+    },
+    {
+      "name": "mff",
+      "one_line_profile": "Nonparametric force fields from machine learning",
+      "detailed_description": "A Python package for building nonparametric force fields using machine learning techniques.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_building",
+        "potential_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kcl-tscm/mff",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "nonparametric",
+        "force-field",
+        "gaussian-process"
+      ],
+      "id": 62
+    },
+    {
+      "name": "lsfitpar",
+      "one_line_profile": "Robust fitting of bonded Molecular Mechanics parameters",
+      "detailed_description": "A program for the robust fitting of bonded Molecular Mechanics parameters.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameter_fitting",
+        "force_field_optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/kennovo/lsfitpar",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "molecular-mechanics",
+        "fitting",
+        "parameters"
+      ],
+      "id": 63
+    },
+    {
+      "name": "addNewResidue.py",
+      "one_line_profile": "Script to add custom residues to GROMACS forcefields",
+      "detailed_description": "A utility script that automates the addition of custom-made amino acids to the GROMACS forcefield directory.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "topology_modification",
+        "force_field_customization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kimjc95/addNewResidue.py",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "gromacs",
+        "residue",
+        "force-field"
+      ],
+      "id": 64
+    },
+    {
+      "name": "LigParGen_2.3",
+      "one_line_profile": "LigParGen Python package (v2.3)",
+      "detailed_description": "Python package implementation of LigParGen for generating OPLS-AA/CM1A parameters for organic molecules.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameter_generation",
+        "topology_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/leelasd/LigParGen_2.3",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "opls-aa",
+        "ligand",
+        "parameterization"
+      ],
+      "id": 65
+    },
+    {
+      "name": "ForceBalance",
+      "one_line_profile": "Systematic force field optimization tool",
+      "detailed_description": "A tool for systematic force field optimization and parameterization using experimental and theoretical data.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_optimization",
+        "parameter_fitting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/leeping/forcebalance",
+      "help_website": [
+        "http://forcebalance.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "optimization",
+        "force-field",
+        "parameterization"
+      ],
+      "id": 66
+    },
+    {
+      "name": "TSFF",
+      "one_line_profile": "ML force field method for transition state searching",
+      "detailed_description": "A machine learning force field method designed for transition state searching in catalysis.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "transition_state_search",
+        "potential_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/littlepeachs/TSFF",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "transition-state",
+        "catalysis",
+        "machine-learning"
+      ],
+      "id": 67
+    },
+    {
+      "name": "GenTopo",
+      "one_line_profile": "GROMACS topology template generator",
+      "detailed_description": "A tool to generate GROMACS topology templates.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "topology_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/masrul/GenTopo",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gromacs",
+        "topology",
+        "template"
+      ],
+      "id": 68
+    },
+    {
+      "name": "maml",
+      "one_line_profile": "Python library for Materials Machine Learning",
+      "detailed_description": "A Python package for materials machine learning, including materials descriptors and machine learning force fields.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "potential_learning",
+        "descriptor_calculation",
+        "materials_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/materialyzeai/maml",
+      "help_website": [
+        "https://github.com/materialsvirtuallab/maml"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "materials-science",
+        "machine-learning",
+        "descriptors"
+      ],
+      "id": 69
+    },
+    {
+      "name": "LigParGen",
+      "one_line_profile": "Command line tool for OPLS-AA/CM1A parameters",
+      "detailed_description": "A command line tool providing BOSS generated OPLS-AA/CM1A(-LBCC) parameters for organic molecules and ligands.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameter_generation",
+        "topology_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mc-robinson/LigParGen",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "opls-aa",
+        "ligand",
+        "parameterization"
+      ],
+      "id": 70
+    },
+    {
+      "name": "Conformer-Search",
+      "one_line_profile": "Workflow for minimum energy conformer search",
+      "detailed_description": "A simple workflow for minimum energy conformer search based on force field optimization methods (UFF and MMFF94) available from RDKit.",
+      "domains": [
+        "M2"
+      ],
+      "subtask_category": [
+        "conformer_search",
+        "structure_optimization"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mcsorkun/Conformer-Search",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rdkit",
+        "conformer",
+        "force-field"
+      ],
+      "id": 71
+    },
+    {
+      "name": "NequIP",
+      "one_line_profile": "E(3)-equivariant graph neural networks for interatomic potentials",
+      "detailed_description": "A code for building E(3)-equivariant interatomic potentials using graph neural networks, enabling data-efficient and accurate simulations.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "potential_learning",
+        "md_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mir-group/nequip",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "equivariant-gnn",
+        "interatomic-potential",
+        "deep-learning"
+      ],
+      "id": 72
+    },
+    {
+      "name": "pair_nequip_allegro",
+      "one_line_profile": "LAMMPS pair styles for NequIP and Allegro deep learning interatomic potentials",
+      "detailed_description": "This package provides the interface to use NequIP and Allegro deep learning interatomic potentials within the LAMMPS molecular dynamics engine. It allows researchers to run MD simulations using these state-of-the-art machine learning potentials.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "force_field_deployment"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/mir-group/pair_nequip_allegro",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "lammps",
+        "nequip",
+        "allegro",
+        "machine-learning-potential",
+        "molecular-dynamics"
+      ],
+      "id": 73
+    },
+    {
+      "name": "QuickFF",
+      "one_line_profile": "Python code to quickly derive ab initio parameterized force fields",
+      "detailed_description": "QuickFF is a Python package designed to derive force fields from ab initio data efficiently. It focuses on fitting force field parameters to reproduce quantum mechanical data for molecular systems.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_fitting",
+        "parameterization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/molmod/QuickFF",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "force-field",
+        "parameterization",
+        "ab-initio",
+        "molecular-mechanics"
+      ],
+      "id": 74
+    },
+    {
+      "name": "MLFF_QD",
+      "one_line_profile": "Machine Learning Force Fields for Quantum Dots",
+      "detailed_description": "A repository containing tools and scripts for generating and using machine learning force fields specifically tailored for quantum dot systems.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_generation",
+        "molecular_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nlesc-nano/MLFF_QD",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "quantum-dots",
+        "machine-learning",
+        "force-field",
+        "nanotechnology"
+      ],
+      "id": 75
+    },
+    {
+      "name": "open-forcefield-tools",
+      "one_line_profile": "Tools for open forcefield development",
+      "detailed_description": "A collection of utility scripts and tools to support the development and maintenance of force fields within the Open Force Field Initiative.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_development",
+        "utility"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openforcefield/open-forcefield-tools",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "openff",
+        "force-field",
+        "molecular-modeling"
+      ],
+      "id": 76
+    },
+    {
+      "name": "openff-evaluator",
+      "one_line_profile": "Physical property evaluation toolkit from the Open Forcefield Consortium",
+      "detailed_description": "A scalable framework for estimating physical properties of molecular systems to validate and optimize force field parameters. It automates the setup and execution of simulations required for property calculation.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "property_prediction",
+        "force_field_validation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openforcefield/openff-evaluator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "physical-properties",
+        "thermodynamics",
+        "openff",
+        "simulation"
+      ],
+      "id": 77
+    },
+    {
+      "name": "openff-forcefields",
+      "one_line_profile": "Force fields produced by the Open Force Field Initiative",
+      "detailed_description": "A Python library that distributes the force field files (SMIRNOFF format) produced by the Open Force Field Initiative, providing versioned access to these parameters for molecular modeling.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_access"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openforcefield/openff-forcefields",
+      "help_website": [],
+      "license": "CC-BY-4.0",
+      "tags": [
+        "force-field",
+        "smirnoff",
+        "openff",
+        "parameters"
+      ],
+      "id": 78
+    },
+    {
+      "name": "openff-toolkit",
+      "one_line_profile": "The Open Forcefield Toolkit for SMIRNOFF format and parameterization",
+      "detailed_description": "The core toolkit of the Open Force Field Initiative, providing tools for molecule labeling, parameterization using the SMIRNOFF format, and interoperability with other simulation engines.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "topology_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openforcefield/openff-toolkit",
+      "help_website": [
+        "http://open-forcefield-toolkit.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "smirnoff",
+        "parameterization",
+        "cheminformatics",
+        "openff"
+      ],
+      "id": 79
+    },
+    {
+      "name": "openforcefield-forcebalance",
+      "one_line_profile": "Optimization of OpenFF parameters using ForceBalance and QCArchive",
+      "detailed_description": "A specialized workflow and configuration set for optimizing Open Force Field parameters using the ForceBalance software and quantum chemical data from QCArchive.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_optimization",
+        "parameter_fitting"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openforcefield/openforcefield-forcebalance",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "forcebalance",
+        "optimization",
+        "openff",
+        "qcarchive"
+      ],
+      "id": 80
+    },
+    {
+      "name": "kliff",
+      "one_line_profile": "KIM-based Learning-Integrated Fitting Framework for interatomic potentials",
+      "detailed_description": "KLIFF is a framework designed to facilitate the fitting of interatomic potentials, particularly physics-based and machine learning potentials, compatible with the OpenKIM standard.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "potential_fitting",
+        "machine_learning_potential"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/openkim/kliff",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "openkim",
+        "interatomic-potentials",
+        "fitting",
+        "machine-learning"
+      ],
+      "id": 81
+    },
+    {
+      "name": "openmmforcefields",
+      "one_line_profile": "CHARMM and AMBER forcefields for OpenMM",
+      "detailed_description": "A library that provides convenient access to standard AMBER and CHARMM force fields (and small molecule support via GAFF/GAFF2) within the OpenMM simulation environment.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_loading",
+        "simulation_setup"
+      ],
+      "application_level": "library",
+      "primary_language": "Rich Text Format",
+      "repo_url": "https://github.com/openmm/openmmforcefields",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "openmm",
+        "amber",
+        "charmm",
+        "force-field",
+        "molecular-dynamics"
+      ],
+      "id": 82
+    },
+    {
+      "name": "GAML",
+      "one_line_profile": "Genetic Algorithm Machine Learning for automated force field parameterization",
+      "detailed_description": "GAML is a software package that utilizes genetic algorithms to automate the parameterization of force fields, optimizing parameters to match reference data.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/orlandoacevedo/GAML",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "genetic-algorithm",
+        "force-field",
+        "parameterization",
+        "optimization"
+      ],
+      "id": 83
+    },
+    {
+      "name": "fftool",
+      "one_line_profile": "Tool to build force field input files for molecular simulation",
+      "detailed_description": "fftool is a utility to generate input files (topology and coordinates) for molecular dynamics simulations (LAMMPS, etc.) based on specified force field parameters.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "simulation_setup",
+        "topology_generation"
+      ],
+      "application_level": "utility",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/paduagroup/fftool",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "lammps",
+        "topology",
+        "force-field",
+        "molecular-simulation"
+      ],
+      "id": 84
+    },
+    {
+      "name": "Python-force-field-parameterization-workflow",
+      "one_line_profile": "Systematic and reproducible way of parameterizing a molecular force field",
+      "detailed_description": "A Python-based workflow designed to standardize and automate the process of developing and parameterizing molecular force fields to ensure reproducibility.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "parameterization",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/palmergroupUH/Python-force-field-parameterization-workflow",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "force-field",
+        "parameterization",
+        "reproducibility",
+        "python"
+      ],
+      "id": 85
+    },
+    {
+      "name": "buildH",
+      "one_line_profile": "Reconstruct hydrogen atoms from united-atom MD trajectories",
+      "detailed_description": "A tool to reconstruct all-atom representations from united-atom molecular dynamics simulations of lipids and calculate order parameters.",
+      "domains": [
+        "Materials",
+        "M2"
+      ],
+      "subtask_category": [
+        "trajectory_analysis",
+        "structure_reconstruction"
+      ],
+      "application_level": "utility",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/patrickfuchs/buildH",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "molecular-dynamics",
+        "lipids",
+        "united-atom",
+        "analysis"
+      ],
+      "id": 86
+    },
+    {
+      "name": "SGEXT",
+      "one_line_profile": "Spatial Graph Extractor for analyzing graphs from images or simulations",
+      "detailed_description": "A library and set of scripts to extract and analyze spatial graphs, used in scientific contexts such as biopolymer simulations and vascular network analysis.",
+      "domains": [
+        "Materials",
+        "M2"
+      ],
+      "subtask_category": [
+        "graph_analysis",
+        "structure_characterization"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/phcerdan/SGEXT",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "graph-theory",
+        "spatial-analysis",
+        "biopolymers",
+        "simulation-analysis"
+      ],
+      "id": 87
+    },
+    {
+      "name": "ichor",
+      "one_line_profile": "Computational Chemistry Data Management Library for Machine Learning Force Field Development",
+      "detailed_description": "A library designed to manage computational chemistry data specifically for the purpose of developing and training machine learning force fields.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "data_management",
+        "force_field_development"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/popelier-group/ichor",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "machine-learning",
+        "force-field",
+        "data-management",
+        "computational-chemistry"
+      ],
+      "id": 88
+    },
+    {
+      "name": "pyiron_potentialfit",
+      "one_line_profile": "Fitting machine learning interatomic potentials with pyiron",
+      "detailed_description": "A module within the pyiron ecosystem dedicated to fitting machine learning interatomic potentials, providing a workflow for potential development.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "potential_fitting",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/pyiron/pyiron_potentialfit",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "pyiron",
+        "machine-learning-potential",
+        "fitting",
+        "workflow"
+      ],
+      "id": 89
+    },
+    {
+      "name": "NAMD-MD",
+      "one_line_profile": "Scripts to prepare NAMD molecular dynamic simulations using LigParGen",
+      "detailed_description": "A collection of tools and notebooks to set up molecular dynamics simulations in NAMD from scratch, utilizing LigParGen for topology generation, aiming to bypass the need for local VMD installation.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "simulation_setup",
+        "topology_generation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/quantaosun/NAMD-MD",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "namd",
+        "molecular-dynamics",
+        "ligpargen",
+        "simulation-setup"
+      ],
+      "id": 90
+    },
+    {
+      "name": "QUBEKit",
+      "one_line_profile": "Quantum Mechanical Bespoke Force Field Derivation Toolkit",
+      "detailed_description": "QUBEKit is a toolkit for deriving bespoke force field parameters directly from quantum mechanical data, automating the parameterization process for small molecules.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_derivation",
+        "parameterization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/qubekit/QUBEKit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "force-field",
+        "quantum-mechanics",
+        "parameterization",
+        "molecular-modeling"
+      ],
+      "id": 91
+    },
+    {
+      "name": "antefoyer",
+      "one_line_profile": "Antechamber plugin to foyer and support for the GAFF forcefield",
+      "detailed_description": "A plugin that integrates Antechamber functionality into the Foyer package, facilitating the use of the General Amber Force Field (GAFF) for molecular systems.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_conversion",
+        "atom_typing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rsdefever/antefoyer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "foyer",
+        "antechamber",
+        "gaff",
+        "force-field"
+      ],
+      "id": 92
+    },
+    {
+      "name": "LAMMPS-LMFF",
+      "one_line_profile": "Layered Materials Force Field (LMFF) expansion for LAMMPS",
+      "detailed_description": "An implementation of the Layered Materials Force Field (LMFF) for LAMMPS, designed to accurately simulate layered materials like graphene and boron nitride using Tersoff and inter-layer potentials.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "force_field_implementation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/run-towards-the-future/LAMMPS-LMFF",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "lammps",
+        "layered-materials",
+        "graphene",
+        "force-field"
+      ],
+      "id": 93
+    },
+    {
+      "name": "deepmd_on_pytorch",
+      "one_line_profile": "Reproduce partial features of DeePMD-kit using PyTorch",
+      "detailed_description": "A PyTorch implementation aiming to reproduce features of the DeePMD-kit, allowing for the training and usage of Deep Potential molecular dynamics models within the PyTorch ecosystem.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "machine_learning_potential",
+        "model_training"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/shishaochen/deepmd_on_pytorch",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "deepmd",
+        "pytorch",
+        "molecular-dynamics",
+        "machine-learning"
+      ],
+      "id": 94
+    },
+    {
+      "name": "atb2lammps",
+      "one_line_profile": "Convert files from the ATB repository to LAMMPS format",
+      "detailed_description": "A Python tool to convert molecular topology and parameter files from the Automated Topology Builder (ATB) repository into a format compatible with the LAMMPS simulation engine.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "file_conversion",
+        "simulation_setup"
+      ],
+      "application_level": "utility",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/simongravelle/atb2lammps",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "lammps",
+        "atb",
+        "topology-conversion",
+        "molecular-dynamics"
+      ],
+      "id": 95
+    },
+    {
+      "name": "eqnn-jax",
+      "one_line_profile": "Implementations of equivariant graph neural networks in Jax (EGNN, SEGNN, NequIP)",
+      "detailed_description": "A collection of annotated implementations of equivariant graph neural networks (EGNN, SEGNN, NequIP) using JAX, useful for developing machine learning potentials and analyzing molecular structures.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "machine_learning_potential",
+        "model_development"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/smsharma/eqnn-jax",
+      "help_website": [],
+      "license": "CC-BY-4.0",
+      "tags": [
+        "jax",
+        "equivariant-neural-networks",
+        "nequip",
+        "graph-neural-networks"
+      ],
+      "id": 96
+    },
+    {
+      "name": "MSA-2.0",
+      "one_line_profile": "Fitting potential energy surface using monomial symmetrization approach",
+      "detailed_description": "Software for fitting potential energy surfaces (PES) using the monomial symmetrization approach, aiding in the creation of accurate potentials for molecular dynamics.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "potential_fitting",
+        "pes_construction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/szquchen/MSA-2.0",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "potential-energy-surface",
+        "fitting",
+        "molecular-dynamics"
+      ],
+      "id": 97
+    },
+    {
+      "name": "acpype",
+      "one_line_profile": "Tool to generate topologies for GROMACS/AMBER",
+      "detailed_description": "A tool based on Antechamber to generate topologies for chemical compounds for use in GROMACS and AMBER molecular dynamics simulations.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "topology_generation",
+        "simulation_setup"
+      ],
+      "application_level": "utility",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/t-/acpype",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "gromacs",
+        "amber",
+        "topology",
+        "antechamber"
+      ],
+      "id": 98
+    },
+    {
+      "name": "nequip-eqx",
+      "one_line_profile": "JAX implementation of the NequIP neural network interatomic potential",
+      "detailed_description": "An implementation of the NequIP equivariant neural network interatomic potential using JAX and Equinox, enabling efficient training and inference of ML potentials.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "machine_learning_potential",
+        "model_implementation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/teddykoker/nequip-eqx",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "jax",
+        "nequip",
+        "machine-learning-potential",
+        "equinox"
+      ],
+      "id": 99
+    },
+    {
+      "name": "mlff",
+      "one_line_profile": "Build neural networks for machine learning force fields with JAX",
+      "detailed_description": "A framework for building and training neural network-based machine learning force fields using JAX, facilitating the development of custom potentials.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_training",
+        "machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/thorben-frank/mlff",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "jax",
+        "machine-learning-force-field",
+        "neural-networks"
+      ],
+      "id": 100
+    },
+    {
+      "name": "mddatasetbuilder",
+      "one_line_profile": "Script to build reference datasets for training neural network potentials from LAMMPS trajectories",
+      "detailed_description": "A utility script designed to process LAMMPS trajectory files and convert them into reference datasets suitable for training neural network interatomic potentials.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "data_preparation",
+        "machine_learning_potential"
+      ],
+      "application_level": "utility",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tongzhugroup/mddatasetbuilder",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "lammps",
+        "dataset-generation",
+        "neural-network-potential"
+      ],
+      "id": 101
+    },
+    {
+      "name": "torchmd-net",
+      "one_line_profile": "Training neural network potentials with PyTorch",
+      "detailed_description": "A library for training equivariant neural network potentials (like ET-Early, Transformer-based models) for molecular simulations, integrated with the TorchMD ecosystem.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "machine_learning_potential",
+        "model_training"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/torchmd/torchmd-net",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pytorch",
+        "neural-network-potential",
+        "molecular-dynamics",
+        "equivariant-networks"
+      ],
+      "id": 102
+    },
+    {
+      "name": "besmarts",
+      "one_line_profile": "Toolkit for data-driven force field design based on binary-encoded SMARTS",
+      "detailed_description": "A toolkit that uses binary-encoded SMARTS patterns to facilitate data-driven design and optimization of chemical force fields.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_design",
+        "cheminformatics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/trevorgokey/besmarts",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "smarts",
+        "force-field",
+        "cheminformatics",
+        "design"
+      ],
+      "id": 103
+    },
+    {
+      "name": "chemtrain",
+      "one_line_profile": "Training Neural Network potentials through customizable routines in JAX",
+      "detailed_description": "A flexible library for training neural network potentials and other differentiable models in chemistry using JAX, allowing for customizable training routines.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "model_training",
+        "machine_learning_potential"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tummfm/chemtrain",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "jax",
+        "neural-network-potential",
+        "training",
+        "differentiable-programming"
+      ],
+      "id": 104
+    },
+    {
+      "name": "chipsff",
+      "one_line_profile": "Evaluation of universal machine learning force-fields",
+      "detailed_description": "A tool developed by NIST for evaluating and benchmarking universal machine learning force fields against reference data.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_evaluation",
+        "benchmarking"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/usnistgov/chipsff",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "machine-learning",
+        "force-field",
+        "evaluation",
+        "nist"
+      ],
+      "id": 105
+    },
+    {
+      "name": "nfflr",
+      "one_line_profile": "Neural force field learning toolkit",
+      "detailed_description": "A toolkit from NIST for learning and developing neural network force fields, providing methods for training and validation.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_learning",
+        "model_training"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/usnistgov/nfflr",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "neural-networks",
+        "force-field",
+        "machine-learning",
+        "nist"
+      ],
+      "id": 106
+    },
+    {
+      "name": "LigParGen2LAMMPS.jl",
+      "one_line_profile": "Tool to convert LigParGen data file to a LAMMPS molecule file",
+      "detailed_description": "A Julia tool designed to convert force field data files generated by LigParGen into LAMMPS-compatible molecule files for molecular dynamics simulations.",
+      "domains": [
+        "Materials",
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "file_conversion",
+        "simulation_setup"
+      ],
+      "application_level": "utility",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/vvpisarev/LigParGen2LAMMPS.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ligpargen",
+        "lammps",
+        "conversion",
+        "julia"
+      ],
+      "id": 107
+    },
+    {
+      "name": "pogo",
+      "one_line_profile": "Optimization tool for GōMartini force fields using perturbation-based approaches",
+      "detailed_description": "Pogo is a Python-based tool designed to optimize the GōMartini coarse-grained force field. It employs a perturbation-based approach to adjust force field parameters, aiming to reproduce atomistic ensemble properties and improve the accuracy of coarse-grained simulations.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_optimization",
+        "parameterization",
+        "coarse_graining"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wilsonjcarter/pogo",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-dynamics",
+        "force-field",
+        "martini",
+        "optimization"
+      ],
+      "id": 108
+    },
+    {
+      "name": "ReaxFF-Optimization",
+      "one_line_profile": "Training scripts for optimizing ReaxFF force field parameters via LAMMPS",
+      "detailed_description": "A collection of Python training codes designed to optimize ReaxFF (Reactive Force Field) parameters. It interfaces with LAMMPS to run simulations and iteratively adjust parameters to minimize errors against training data.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_optimization",
+        "parameter_fitting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/winterPack/ReaxFF-Optimization",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "reaxff",
+        "lammps",
+        "optimization",
+        "force-field"
+      ],
+      "id": 109
+    },
+    {
+      "name": "ybs-RPOF",
+      "one_line_profile": "Evolutionary algorithm framework for ReaxFF parameter optimization",
+      "detailed_description": "ybs-RPOF (ReaxFF Parameter Optimization Framework) is a tool for fitting ReaxFF force field parameters. It implements multiple global optimization algorithms, including Genetic Algorithms (GA), Simulated Annealing (SA), and Particle Swarm Optimization (PSO), to navigate the complex parameter space of reactive force fields.",
+      "domains": [
+        "M2",
+        "M2-02"
+      ],
+      "subtask_category": [
+        "force_field_optimization",
+        "parameter_fitting"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yubinshuo/ybs-RPOF",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "reaxff",
+        "genetic-algorithm",
+        "pso",
+        "parameter-optimization"
+      ],
+      "id": 110
+    },
+    {
+      "name": "SpinRelax",
+      "one_line_profile": "Workflow for computing NMR spin-relaxation parameters from MD trajectories",
+      "detailed_description": "SpinRelax is a computational workflow designed to analyze molecular dynamics trajectories and calculate Nuclear Magnetic Resonance (NMR) spin-relaxation parameters. It facilitates the comparison of simulation data with experimental NMR observables for structural and dynamic validation.",
+      "domains": [
+        "M2"
+      ],
+      "subtask_category": [
+        "spectroscopy_analysis",
+        "property_calculation",
+        "validation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zharmad/SpinRelax",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nmr",
+        "molecular-dynamics",
+        "spin-relaxation",
+        "spectroscopy"
+      ],
+      "id": 111
+    }
+  ]
+}

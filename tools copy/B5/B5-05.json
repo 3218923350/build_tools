@@ -1,0 +1,2450 @@
+{
+  "generated_at": "2025-12-16T17:20:42.254118+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "B5",
+      "leaf_cluster_name": "生信-系统发育与进化生态",
+      "domain": "Bioinfo/Evo",
+      "typical_objects": "alignments, trees",
+      "task_chain": "比对→建树→模型选择→比较分析→可视化",
+      "tool_form": "CLI + HPC加速 + 可视化"
+    },
+    "unit": {
+      "unit_id": "B5-05",
+      "unit_name": "大规模/加速/HPC phylo",
+      "target_scale": "150–300",
+      "coverage_tools": "parallel tools、approximate inference"
+    },
+    "search": {
+      "target_candidates": 300,
+      "queries": [
+        "[GH] OpenPhylo",
+        "[GH] ASTRAL",
+        "[GH] PhyML",
+        "[GH] BEAST 2",
+        "[GH] MrBayes",
+        "[GH] ExaBayes",
+        "[GH] FastTree",
+        "[GH] IQ-TREE 2",
+        "[GH] RAxML-NG",
+        "[GH] phylogenetics hpc",
+        "[GH] maximum likelihood tree inference",
+        "[GH] bayesian phylogenetics mcmc",
+        "[GH] phylogenomics pipeline",
+        "[GH] large-scale tree building",
+        "[GH] parallel phylogenetics",
+        "[GH] gpu accelerated phylogenetics",
+        "[GH] approximate likelihood tree",
+        "[GH] fast tree inference",
+        "[GH] mpi phylogenetics",
+        "[GH] quartet-based phylogenetics",
+        "[GH] scalable phylogenetics",
+        "[GH] phylogenetic inference tool",
+        "[WEB] hpc phylogenetic inference tools github",
+        "[WEB] fast maximum likelihood tree builder github",
+        "[WEB] large-scale phylogenomics software github",
+        "[WEB] gpu accelerated phylogenetics github",
+        "[WEB] scalable phylogenetic inference algorithms github"
+      ],
+      "total_candidates": 550,
+      "tool_candidates": 189,
+      "final_tools": 97
+    }
+  },
+  "tools": [
+    {
+      "name": "NestedBD",
+      "one_line_profile": "BEAST 2 package for Nested Birth-Death models in phylodynamics",
+      "detailed_description": "A package for the BEAST 2 platform that implements Nested Birth-Death models, allowing for the inference of hierarchical population dynamics from phylogenetic trees.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylodynamic_inference",
+        "model_selection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Androstane/NestedBD",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "beast2-package",
+        "phylodynamics",
+        "birth-death-model"
+      ],
+      "id": 1
+    },
+    {
+      "name": "GToTree",
+      "one_line_profile": "User-friendly workflow for phylogenomics from genomes to trees",
+      "detailed_description": "A workflow that automates the process of generating phylogenomic trees from a set of genomes. It handles gene search, alignment, concatenation, and tree inference.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenomics",
+        "workflow_automation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/AstrobioMike/GToTree",
+      "help_website": [
+        "https://github.com/AstrobioMike/GToTree/wiki"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "phylogenomics",
+        "pipeline",
+        "genome-analysis"
+      ],
+      "id": 2
+    },
+    {
+      "name": "pipesnake",
+      "one_line_profile": "Best-practice analysis pipeline for phylogenomic reconstruction",
+      "detailed_description": "A Nextflow-based bioinformatics pipeline for phylogenomic reconstruction starting from short-read sequencing data, ensuring reproducibility and scalability.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenomics",
+        "pipeline_orchestration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/AusARG/pipesnake",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nextflow",
+        "phylogenomics",
+        "reproducibility"
+      ],
+      "id": 3
+    },
+    {
+      "name": "BEASTLabs",
+      "one_line_profile": "Collection of experimental and useful tools for BEAST 2",
+      "detailed_description": "A package for BEAST 2 that implements various experimental features, utilities, and models that are not yet part of the core distribution.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "utility"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/BEAST2-Dev/BEASTLabs",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "beast2-package",
+        "experimental",
+        "phylogenetics"
+      ],
+      "id": 4
+    },
+    {
+      "name": "bModelTest",
+      "one_line_profile": "Bayesian model test package for BEAST 2",
+      "detailed_description": "A BEAST 2 package that performs Bayesian model averaging over site models, allowing for simultaneous inference of the substitution model and the phylogeny.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "model_selection",
+        "phylogenetic_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/BEAST2-Dev/bModelTest",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "beast2-package",
+        "bayesian-inference",
+        "substitution-models"
+      ],
+      "id": 5
+    },
+    {
+      "name": "substmodels",
+      "one_line_profile": "Standard substitution models for BEAST 2",
+      "detailed_description": "A package containing standard nucleotide and amino acid substitution models for use with the BEAST 2 phylogenetic software.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenetic_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/BEAST2-Dev/substmodels",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "beast2-package",
+        "substitution-models",
+        "evolutionary-models"
+      ],
+      "id": 6
+    },
+    {
+      "name": "BEAST 2",
+      "one_line_profile": "Bayesian Evolutionary Analysis by Sampling Trees",
+      "detailed_description": "A cross-platform program for Bayesian analysis of molecular sequences using MCMC. It estimates rooted, time-measured phylogenies using a wide range of models.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "bayesian_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/CompEvol/beast2",
+      "help_website": [
+        "http://www.beast2.org/"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "phylogenetics",
+        "bayesian-inference",
+        "mcmc",
+        "evolutionary-biology"
+      ],
+      "id": 7
+    },
+    {
+      "name": "PHACT",
+      "one_line_profile": "Phylogeny workflow for batch submission to HPC clusters",
+      "detailed_description": "A workflow designed for submitting batch phylogeny tasks to HPC clusters using the Slurm queue manager, facilitating large-scale phylogenetic analyses.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "hpc_workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/CompGenomeLab/PHACT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "hpc",
+        "slurm",
+        "phylogeny",
+        "workflow"
+      ],
+      "id": 8
+    },
+    {
+      "name": "EvoX",
+      "one_line_profile": "Distributed GPU-Accelerated Framework for Evolutionary Computation",
+      "detailed_description": "A comprehensive library and framework for evolutionary algorithms and benchmark problems, leveraging JAX for GPU acceleration and distributed computing. Useful for scientific optimization problems.",
+      "domains": [
+        "B5-05"
+      ],
+      "subtask_category": [
+        "evolutionary_computation",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EMI-Group/evox",
+      "help_website": [
+        "https://evox.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "evolutionary-algorithms",
+        "jax",
+        "gpu-acceleration",
+        "optimization"
+      ],
+      "id": 9
+    },
+    {
+      "name": "phyx",
+      "one_line_profile": "Command-line tools for phylogenetic data analysis",
+      "detailed_description": "A collection of command-line tools for performing various operations on phylogenetic trees and sequence alignments, such as conversion, filtering, and analysis.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "phylogenetic_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/FePhyFoFum/phyx",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "phylogenetics",
+        "bioinformatics",
+        "command-line-tool"
+      ],
+      "id": 10
+    },
+    {
+      "name": "WhereDoGGo",
+      "one_line_profile": "Pipeline for prokaryotic phylogenomics and tree placement",
+      "detailed_description": "A bioinformatics pipeline designed for prokaryotic phylogenomics, allowing users to place new genomes onto the tree of life.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenomics",
+        "phylogenetic_placement"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MEDEAlab/WhereDoGGo",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "phylogenomics",
+        "prokaryotes",
+        "pipeline"
+      ],
+      "id": 11
+    },
+    {
+      "name": "MrBayes",
+      "one_line_profile": "Bayesian inference of phylogeny",
+      "detailed_description": "A program for Bayesian inference and model choice across a wide range of phylogenetic and evolutionary models. It uses Markov chain Monte Carlo (MCMC) methods.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "bayesian_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/NBISweden/MrBayes",
+      "help_website": [
+        "http://mrbayes.net"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "phylogenetics",
+        "bayesian-inference",
+        "mcmc"
+      ],
+      "id": 12
+    },
+    {
+      "name": "contacTrees",
+      "one_line_profile": "BEAST 2 package for inferring ancestral conversion graphs",
+      "detailed_description": "A BEAST 2 package designed for language phylogenetics, specifically for inferring ancestral conversion graphs to model contact and borrowing between languages.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "linguistic_phylogenetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/NicoNeureiter/contacTrees",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "beast2-package",
+        "linguistics",
+        "ancestral-graph"
+      ],
+      "id": 13
+    },
+    {
+      "name": "MAPLE",
+      "one_line_profile": "Approximate maximum likelihood phylogenetics at short divergence",
+      "detailed_description": "A new approximate approach for maximum likelihood phylogenetics, optimized for analyzing sequences with short divergence times.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "maximum_likelihood"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NicolaDM/MAPLE",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "phylogenetics",
+        "maximum-likelihood",
+        "approximation"
+      ],
+      "id": 14
+    },
+    {
+      "name": "snpick",
+      "one_line_profile": "Fast and memory-efficient SNP extraction tool",
+      "detailed_description": "A Rust-based tool for extracting SNPs from large genomic alignments with minimal RAM usage and high performance, suitable for phylogenomic preprocessing.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "snp_calling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/PathoGenOmics-Lab/snpick",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "snp",
+        "genomics",
+        "rust",
+        "bioinformatics"
+      ],
+      "id": 15
+    },
+    {
+      "name": "FASconCAT",
+      "one_line_profile": "Sequence concatenation tool for phylogenetic analysis",
+      "detailed_description": "A software that concatenates different kinds of sequence data (FASTA, PHYLIP, CLUSTAL) into supermatrix files for phylogenetic programs like RAxML or MrBayes.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "sequence_concatenation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/PatrickKueck/FASconCAT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phylogenetics",
+        "sequence-alignment",
+        "concatenation"
+      ],
+      "id": 16
+    },
+    {
+      "name": "sondovac",
+      "one_line_profile": "Probe design script for target enrichment",
+      "detailed_description": "A script to create orthologous low-copy nuclear probes from transcriptome and genome skim data for target enrichment in phylogenomics.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "experimental_design",
+        "probe_design"
+      ],
+      "application_level": "workflow",
+      "primary_language": "TeX",
+      "repo_url": "https://github.com/V-Z/sondovac",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phylogenomics",
+        "target-enrichment",
+        "probe-design"
+      ],
+      "id": 17
+    },
+    {
+      "name": "ExaBayes",
+      "one_line_profile": "Large-scale Bayesian phylogenetic inference",
+      "detailed_description": "A software package for Bayesian phylogenetic inference, specifically designed for large-scale datasets and high-performance computing environments (HPC).",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "bayesian_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/aberer/exabayes",
+      "help_website": [
+        "http://exabayes-group.org/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "hpc",
+        "bayesian-inference",
+        "phylogenetics",
+        "mpi"
+      ],
+      "id": 18
+    },
+    {
+      "name": "beast2-xml",
+      "one_line_profile": "Python code to generate BEAST2 XML files",
+      "detailed_description": "A Python utility for programmatically generating XML configuration files for BEAST 2, facilitating the automation of phylogenetic analysis setups.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "configuration_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/acorg/beast2-xml",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "beast2",
+        "xml-generation",
+        "python"
+      ],
+      "id": 19
+    },
+    {
+      "name": "PhyloM",
+      "one_line_profile": "Tumor Phylogeny Topology Inference via Deep Learning",
+      "detailed_description": "A deep learning-based tool for inferring the topology of tumor phylogenies, applying phylogenetic methods to cancer evolution.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "cancer_evolution"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/algo-cancer/PhyloM",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "deep-learning",
+        "tumor-phylogeny",
+        "cancer-genomics"
+      ],
+      "id": 20
+    },
+    {
+      "name": "RAxML-NG",
+      "one_line_profile": "Next-generation phylogenetic tree inference tool using Maximum Likelihood",
+      "detailed_description": "RAxML-NG is a phylogenetic tree inference tool which uses the Maximum Likelihood (ML) criterion. It offers improved speed, flexibility, and scalability compared to the original RAxML, supporting a wide range of evolutionary models and data types.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "maximum_likelihood_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/amkozlov/raxml-ng",
+      "help_website": [
+        "https://github.com/amkozlov/raxml-ng/wiki"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "phylogenetics",
+        "maximum-likelihood",
+        "hpc",
+        "evolutionary-biology"
+      ],
+      "id": 21
+    },
+    {
+      "name": "beast2_constsites",
+      "one_line_profile": "Utility script to update BEAST2 XML configuration for constant sites",
+      "detailed_description": "A Python utility designed to modify BEAST2 XML input files to correctly account for constant sites (invariant sites) in phylogenetic analysis, which is crucial for accurate branch length and clock rate estimation.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "data_preparation",
+        "configuration_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/andersgs/beast2_constsites",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "beast2",
+        "phylogenetics",
+        "xml-processing"
+      ],
+      "id": 22
+    },
+    {
+      "name": "Whale.jl",
+      "one_line_profile": "Bayesian gene tree reconciliation and Whole Genome Duplication inference",
+      "detailed_description": "A Julia package for Bayesian inference of gene tree reconciliation and Whole Genome Duplication (WGD) events using Amalgamated Likelihood Estimation (ALE).",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "gene_tree_reconciliation",
+        "wgd_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/arzwa/Whale.jl",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "bayesian-inference",
+        "phylogenetics",
+        "wgd",
+        "julia"
+      ],
+      "id": 23
+    },
+    {
+      "name": "PhylogenomicsPipelines",
+      "one_line_profile": "Pipelines for performing phylogenomic analysis",
+      "detailed_description": "A collection of pipelines designed to automate steps in phylogenomic analysis, facilitating the processing of genomic data for evolutionary studies.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "phylogenomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Pep8",
+      "repo_url": "https://github.com/baileyp1/PhylogenomicsPipelines",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "phylogenomics",
+        "pipeline",
+        "bioinformatics"
+      ],
+      "id": 24
+    },
+    {
+      "name": "PhyloBayes",
+      "one_line_profile": "Bayesian phylogenetic reconstruction using infinite mixtures",
+      "detailed_description": "A Bayesian Monte Carlo Markov Chain (MCMC) sampler for phylogenetic reconstruction using protein or nucleic acid alignments. It implements non-parametric methods (CAT and CAT-GTR models) for modeling site-specific evolutionary processes.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenetic_reconstruction",
+        "bayesian_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/bayesiancook/phylobayes",
+      "help_website": [
+        "http://www.lirmm.fr/~martin/phylobayes/"
+      ],
+      "license": null,
+      "tags": [
+        "bayesian",
+        "phylogenetics",
+        "mcmc",
+        "evolutionary-models"
+      ],
+      "id": 25
+    },
+    {
+      "name": "BEAST",
+      "one_line_profile": "Bayesian Evolutionary Analysis Sampling Trees",
+      "detailed_description": "A cross-platform program for Bayesian analysis of molecular sequences using MCMC. It is oriented towards rooted, time-measured phylogenies inferred using strict or relaxed molecular clock models.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "molecular_clock_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/beast-dev/beast-mcmc",
+      "help_website": [
+        "http://beast.community/"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "bayesian",
+        "phylogenetics",
+        "mcmc",
+        "molecular-clock"
+      ],
+      "id": 26
+    },
+    {
+      "name": "PhyloPhlAn",
+      "one_line_profile": "Precise phylogenetic analysis of microbial isolates and metagenomes",
+      "detailed_description": "An integrated pipeline for large-scale phylogenetic profiling of genomes and metagenomes. It uses identifying markers to reconstruct high-resolution phylogenies for microbial isolates.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "microbial_phylogenetics",
+        "metagenomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/biobakery/phylophlan",
+      "help_website": [
+        "https://github.com/biobakery/phylophlan/wiki"
+      ],
+      "license": "MIT",
+      "tags": [
+        "metagenomics",
+        "phylogenetics",
+        "microbiome"
+      ],
+      "id": 27
+    },
+    {
+      "name": "EMPress",
+      "one_line_profile": "Fast and scalable phylogenetic tree viewer",
+      "detailed_description": "A web-based phylogenetic tree viewer designed to handle large trees (hundreds of thousands of tips) and integrate with microbiome data analysis platforms like QIIME 2.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "visualization",
+        "tree_viewing"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/biocore/empress",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "visualization",
+        "phylogenetics",
+        "microbiome",
+        "qiime2"
+      ],
+      "id": 28
+    },
+    {
+      "name": "Delphy",
+      "one_line_profile": "Fast, scalable, accurate and accessible Bayesian phylogenetics",
+      "detailed_description": "A software package for Bayesian phylogenetic inference, designed to be fast and scalable, utilizing modern algorithmic approaches for estimating evolutionary trees.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "bayesian_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/broadinstitute/delphy",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "bayesian",
+        "phylogenetics",
+        "cpp"
+      ],
+      "id": 29
+    },
+    {
+      "name": "A-pro",
+      "one_line_profile": "ASTRAL for PaRalogs and Orthologs",
+      "detailed_description": "An extension of the ASTRAL method designed to handle both paralogs and orthologs for species tree estimation, improving accuracy in the presence of gene duplication and loss.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "species_tree_estimation",
+        "orthology_inference"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/chaoszhang/A-pro",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "astral",
+        "species-tree",
+        "paralogs",
+        "orthologs"
+      ],
+      "id": 30
+    },
+    {
+      "name": "ASTER",
+      "one_line_profile": "Accurate Species Tree EstimatoR family of algorithms",
+      "detailed_description": "A suite of optimization algorithms for species tree inference, including fast and scalable implementations like ASTRAL-Pro 3 and CASTER, designed for large-scale phylogenomics.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "species_tree_estimation",
+        "phylogenomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/chaoszhang/ASTER",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "astral",
+        "phylogenomics",
+        "species-tree",
+        "hpc"
+      ],
+      "id": 31
+    },
+    {
+      "name": "cogent3",
+      "one_line_profile": "Comparative Genomics Toolkit",
+      "detailed_description": "A comprehensive library for genomic sequence analysis and comparative genomics, providing tools for controlling process calculators, manipulating sequences, and performing phylogenetic analyses.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "comparative_genomics",
+        "sequence_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cogent3/cogent3",
+      "help_website": [
+        "https://cogent3.org/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "genomics",
+        "phylogenetics",
+        "python",
+        "bioinformatics"
+      ],
+      "id": 32
+    },
+    {
+      "name": "sprspace",
+      "one_line_profile": "Quantifying MCMC exploration of tree space",
+      "detailed_description": "A collection of scripts for analyzing the exploration of Subtree Prune-and-Regraft (SPR) tree space within MrBayes posterior distributions, useful for assessing MCMC convergence and mixing in phylogenetics.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "mcmc_diagnostics",
+        "tree_space_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/cwhidden/sprspace",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "mrbayes",
+        "mcmc",
+        "phylogenetics",
+        "tree-space"
+      ],
+      "id": 33
+    },
+    {
+      "name": "SNPPar",
+      "one_line_profile": "Parallel and Homoplasic SNP Finder",
+      "detailed_description": "A tool for finding homoplasic SNPs and performing parallel evolution analysis from phylogenetic trees and alignment data.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "snp_analysis",
+        "homoplasy_detection"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/d-j-e/SNPPar",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "snp",
+        "homoplasy",
+        "phylogenetics",
+        "evolution"
+      ],
+      "id": 34
+    },
+    {
+      "name": "MPBoot",
+      "one_line_profile": "Fast phylogenetic maximum parsimony tree inference and bootstrap",
+      "detailed_description": "A software for fast and accurate maximum parsimony tree inference and bootstrap approximation, suitable for large-scale phylogenetic datasets.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "maximum_parsimony"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/diepthihoang/mpboot",
+      "help_website": [
+        "http://www.iqtree.org/mpboot/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "maximum-parsimony",
+        "phylogenetics",
+        "bootstrap",
+        "hpc"
+      ],
+      "id": 35
+    },
+    {
+      "name": "PhyloSuite",
+      "one_line_profile": "Integrated platform for molecular sequence data management and phylogenetics",
+      "detailed_description": "A desktop platform that integrates various bioinformatics tools to streamline the workflow of molecular sequence data management, alignment, and evolutionary phylogenetic studies.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "phylogenetics_platform"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dongzhang0725/PhyloSuite",
+      "help_website": [
+        "https://dongzhang0725.github.io/PhyloSuite/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "phylogenetics",
+        "bioinformatics",
+        "gui",
+        "workflow"
+      ],
+      "id": 36
+    },
+    {
+      "name": "PhyloSD",
+      "one_line_profile": "Phylogenomic Subgenome Detection pipeline",
+      "detailed_description": "A pipeline for detecting subgenomes in allopolyploids using phylogenomic approaches, facilitating the study of polyploid evolution.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "subgenome_detection",
+        "polyploidy_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/eead-csic-compbio/allopolyploids",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "polyploidy",
+        "phylogenomics",
+        "subgenome"
+      ],
+      "id": 37
+    },
+    {
+      "name": "treedater",
+      "one_line_profile": "Scalable relaxed clock phylogenetic dating",
+      "detailed_description": "An R package for estimating molecular clock dates on phylogenetic trees, supporting relaxed clock models and scalable to large viral phylogenies.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenetic_dating",
+        "molecular_clock"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/emvolz/treedater",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "molecular-clock",
+        "phylogenetics",
+        "r-package",
+        "dating"
+      ],
+      "id": 38
+    },
+    {
+      "name": "modeltest_phylo",
+      "one_line_profile": "Pipeline for phylogenetic model selection and reconstruction",
+      "detailed_description": "A shell-based pipeline that combines tools for evolutionary model selection (jModelTest, ProtTest), phylogenetic reconstruction (PhyML, RAxML), and topology comparison.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "model_selection",
+        "phylogenetic_pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/evolbeginner/modeltest_phylo",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "model-selection",
+        "phylogenetics",
+        "pipeline"
+      ],
+      "id": 39
+    },
+    {
+      "name": "trisicell",
+      "one_line_profile": "Scalable tumor phylogeny inference from single-cell data",
+      "detailed_description": "A computational toolkit for scalable inference and validation of tumor phylogenies using single-cell RNA or DNA sequencing data.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "tumor_phylogeny",
+        "single_cell_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/faridrashidi/trisicell",
+      "help_website": [
+        "https://trisicell.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "tumor-evolution",
+        "single-cell",
+        "phylogenetics",
+        "cancer-genomics"
+      ],
+      "id": 40
+    },
+    {
+      "name": "HomBlocks",
+      "one_line_profile": "Multiple-alignment construction pipeline for organelle phylogenomics",
+      "detailed_description": "A pipeline designed to construct multiple alignments for organelle phylogenomics by searching for locally collinear blocks, facilitating evolutionary studies of chloroplasts and mitochondria.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "alignment_construction",
+        "organelle_phylogenomics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fenghen360/HomBlocks",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phylogenomics",
+        "organelle",
+        "alignment",
+        "bioinformatics"
+      ],
+      "id": 41
+    },
+    {
+      "name": "POTION",
+      "one_line_profile": "Pipeline for positive Darwinian selection detection",
+      "detailed_description": "An end-to-end pipeline for detecting positive Darwinian selection in genome-scale data by performing phylogenetic comparison of protein-coding genes.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "selection_detection",
+        "evolutionary_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/g1o/POTION",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "positive-selection",
+        "phylogenetics",
+        "genomics",
+        "pipeline"
+      ],
+      "id": 42
+    },
+    {
+      "name": "CAFE5",
+      "one_line_profile": "Computational Analysis of gene Family Evolution (version 5)",
+      "detailed_description": "Software for the statistical analysis of the evolution of the size of gene families. It uses a birth and death process to model gene gain and loss across a phylogenetic tree.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "gene_family_evolution",
+        "phylogenetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/hahnlab/CAFE5",
+      "help_website": [
+        "https://hahnlab.github.io/CAFE5/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "gene-family",
+        "evolution",
+        "phylogenetics",
+        "cpp"
+      ],
+      "id": 43
+    },
+    {
+      "name": "trimAl",
+      "one_line_profile": "Tool for automated alignment trimming in phylogenetic analyses",
+      "detailed_description": "A tool for the automated removal of spurious sequences or poorly aligned regions from a multiple sequence alignment, improving the quality of subsequent phylogenetic reconstruction.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "alignment_trimming",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/inab/trimal",
+      "help_website": [
+        "http://trimal.cgenomics.org/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "alignment",
+        "trimming",
+        "phylogenetics",
+        "bioinformatics"
+      ],
+      "id": 44
+    },
+    {
+      "name": "IQ-TREE 2",
+      "one_line_profile": "Efficient software for phylogenetics using maximum likelihood",
+      "detailed_description": "The second version of IQ-TREE, a fast and effective stochastic algorithm to infer phylogenetic trees by maximum likelihood. It supports complex models of sequence evolution and provides fast bootstrap approximation.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "maximum_likelihood"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/iqtree/iqtree2",
+      "help_website": [
+        "http://www.iqtree.org/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "phylogenetics",
+        "maximum-likelihood",
+        "hpc",
+        "evolution"
+      ],
+      "id": 45
+    },
+    {
+      "name": "IQ-TREE 3",
+      "one_line_profile": "Next version of IQ-TREE for phylogenetics",
+      "detailed_description": "The development version (v3) of the IQ-TREE software for phylogenetic inference, continuing to provide efficient maximum likelihood tree estimation.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "maximum_likelihood"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/iqtree/iqtree3",
+      "help_website": [
+        "http://www.iqtree.org/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "phylogenetics",
+        "maximum-likelihood",
+        "hpc"
+      ],
+      "id": 46
+    },
+    {
+      "name": "teiphy",
+      "one_line_profile": "Converter for TEI XML collations to phylogenetic formats",
+      "detailed_description": "A tool for converting textual collation data (in TEI XML format) into formats suitable for phylogenetic analysis (NEXUS, BEAST XML), enabling the application of phylogenetic methods to stemmatology and textual criticism.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "stemmatology"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jjmccollum/teiphy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "digital-humanities",
+        "phylogenetics",
+        "text-analysis",
+        "tei"
+      ],
+      "id": 47
+    },
+    {
+      "name": "Orthoscope",
+      "one_line_profile": "Automatic web tool for phylogenetic inference of orthogroups",
+      "detailed_description": "A web-based tool designed for the automatic phylogenetic inference of animal and plant orthogroups, facilitating targeted taxonomic sampling and evolutionary analysis.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "orthogroup_inference",
+        "phylogenetics"
+      ],
+      "application_level": "platform",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/jun-inoue/orthoscope",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "orthology",
+        "phylogenetics",
+        "web-tool"
+      ],
+      "id": 48
+    },
+    {
+      "name": "AMPHORA",
+      "one_line_profile": "Automated phylogenomic inference pipeline for bacterial sequences",
+      "detailed_description": "A pipeline for automated phylogenomic inference, designed to identify and align protein-coding genes from metagenomic or genomic datasets for phylogenetic analysis.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenomics",
+        "sequence_alignment",
+        "marker_gene_extraction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "C",
+      "repo_url": "https://github.com/koadman/AMPHORA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phylogenomics",
+        "metagenomics",
+        "pipeline"
+      ],
+      "id": 49
+    },
+    {
+      "name": "PhyloHerb",
+      "one_line_profile": "Phylogenomic analysis pipeline for herbarium specimens",
+      "detailed_description": "A pipeline designed to process high-throughput sequencing data from herbarium specimens for phylogenomic analysis, handling low-quality DNA typical of such samples.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenomics",
+        "data_processing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lmcai/PhyloHerb",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "herbarium",
+        "phylogenomics",
+        "pipeline"
+      ],
+      "id": 50
+    },
+    {
+      "name": "Evolutionary-Rates-Analysis-Pipeline",
+      "one_line_profile": "Pipeline for large scale phylogenetics comparisons using BOLD data",
+      "detailed_description": "R-based software pipelines to perform large scale phylogenetics comparisons of various taxa found on the Barcode of Life Database (BOLD) API.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenetics",
+        "comparative_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "R",
+      "repo_url": "https://github.com/m-orton/Evolutionary-Rates-Analysis-Pipeline",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bold-database",
+        "phylogenetics",
+        "evolutionary-rates"
+      ],
+      "id": 51
+    },
+    {
+      "name": "Phyla",
+      "one_line_profile": "Foundation model for phylogenetic inference",
+      "detailed_description": "A foundation model approach towards phylogenetic inference, leveraging deep learning to estimate phylogenetic relationships from sequence data.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "deep_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mims-harvard/Phyla",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "foundation-model",
+        "phylogenetics",
+        "ai4s"
+      ],
+      "id": 52
+    },
+    {
+      "name": "TREE-QMC",
+      "one_line_profile": "Quartet-based species tree estimation algorithm",
+      "detailed_description": "A scalable algorithm for estimating species trees and trees of blobs from gene trees using quartet-based methods, suitable for handling gene tree discordance.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "species_tree_estimation",
+        "phylogenetics"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/molloy-lab/TREE-QMC",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "quartet-methods",
+        "species-tree",
+        "phylogenetics"
+      ],
+      "id": 53
+    },
+    {
+      "name": "FastTree",
+      "one_line_profile": "Approximately-maximum-likelihood phylogenetic trees for large alignments",
+      "detailed_description": "FastTree infers approximately-maximum-likelihood phylogenetic trees from alignments of nucleotide or protein sequences. It handles very large alignments (up to a million sequences) efficiently.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "maximum_likelihood"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/morgannprice/fasttree",
+      "help_website": [
+        "http://www.microbesonline.org/fasttree/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "phylogenetics",
+        "maximum-likelihood",
+        "hpc"
+      ],
+      "id": 54
+    },
+    {
+      "name": "FastDTLmapper",
+      "one_line_profile": "Genome-wide gene gain/loss mapping tool",
+      "detailed_description": "A tool for mapping genome-wide gene gain and loss events using the Duplication-Transfer-Loss (DTL) reconciliation method, optimized for speed.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "gene_reconciliation",
+        "evolutionary_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/moshi4/FastDTLmapper",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dtl-reconciliation",
+        "gene-loss-gain",
+        "phylogenetics"
+      ],
+      "id": 55
+    },
+    {
+      "name": "beagle_optimiser",
+      "one_line_profile": "Optimizer for BEAGLE library settings in phylogenetic analysis",
+      "detailed_description": "A utility to find the optimal BEAGLE library configuration (CPU/GPU resources) for BEAST or MrBayes analyses to minimize execution time.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "performance_optimization",
+        "hpc_configuration"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mtop/beagle_optimiser",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "beast",
+        "mrbayes",
+        "beagle-lib",
+        "optimization"
+      ],
+      "id": 56
+    },
+    {
+      "name": "TreeTime",
+      "one_line_profile": "Maximum likelihood inference of time-stamped phylogenies",
+      "detailed_description": "TreeTime provides routines for ancestral sequence reconstruction and inference of molecular-clock phylogenies, widely used for viral evolution analysis.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylodynamics",
+        "ancestral_reconstruction",
+        "molecular_clock"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neherlab/treetime",
+      "help_website": [
+        "https://treetime.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "phylodynamics",
+        "viral-evolution",
+        "molecular-clock"
+      ],
+      "id": 57
+    },
+    {
+      "name": "SYNPHONI",
+      "one_line_profile": "Reconstruction of dynamic evolution of syntenic relationships",
+      "detailed_description": "A tool for reconstructing the dynamic evolution of syntenic relationships across phylogenetic distances, providing syntenic complements for ancestral nodes.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "synteny_analysis",
+        "genome_evolution"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nsmro/synphoni",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "synteny",
+        "genome-evolution",
+        "phylogenetics"
+      ],
+      "id": 58
+    },
+    {
+      "name": "Burntrees",
+      "one_line_profile": "Scripts for manipulating phylogenetic MCMC output",
+      "detailed_description": "A collection of Perl scripts for processing and manipulating output files from phylogenetic MCMC software like MrBayes, BEAST, and PhyloBayes.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "post_processing",
+        "mcmc_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/nylander/Burntrees",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcmc",
+        "phylogenetics",
+        "beast",
+        "mrbayes"
+      ],
+      "id": 59
+    },
+    {
+      "name": "catfasta2phyml",
+      "one_line_profile": "Concatenates FASTA files to PHYLIP format",
+      "detailed_description": "A script to concatenate multiple FASTA formatted sequence files into a single PHYLIP formatted file, commonly used for preparing phylogenomic datasets.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "data_preparation",
+        "format_conversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/nylander/catfasta2phyml",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fasta",
+        "phylip",
+        "alignment-concatenation"
+      ],
+      "id": 60
+    },
+    {
+      "name": "SNVPhyl Galaxy",
+      "one_line_profile": "Whole genome phylogenomics pipeline (Galaxy wrapper)",
+      "detailed_description": "The Galaxy wrapper and workflow for the SNVPhyl pipeline, which performs whole genome phylogenomics analysis from raw reads to phylogenetic trees.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenomics",
+        "variant_calling",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/phac-nml/snvphyl-galaxy",
+      "help_website": [
+        "https://snvphyl.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "galaxy",
+        "phylogenomics",
+        "snv"
+      ],
+      "id": 61
+    },
+    {
+      "name": "SNVPhyl Tools",
+      "one_line_profile": "Helper tools for SNVPhyl phylogenomics pipeline",
+      "detailed_description": "A collection of scripts and tools used within the SNVPhyl pipeline for tasks such as filtering, alignment processing, and file manipulation.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "phylogenomics"
+      ],
+      "application_level": "library",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/phac-nml/snvphyl-tools",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "phylogenomics",
+        "snv",
+        "bioinformatics-scripts"
+      ],
+      "id": 62
+    },
+    {
+      "name": "EPA-ng",
+      "one_line_profile": "Massively parallel phylogenetic placement",
+      "detailed_description": "EPA-ng is a tool for massively parallel phylogenetic placement of genetic sequences, optimized for high performance on modern hardware.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetic_placement",
+        "hpc"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pierrebarbera/epa-ng",
+      "help_website": [
+        "https://github.com/Pbdas/epa-ng"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "phylogenetic-placement",
+        "hpc",
+        "parallel-computing"
+      ],
+      "id": 63
+    },
+    {
+      "name": "THD",
+      "one_line_profile": "Time-scaled haplotypic density estimation",
+      "detailed_description": "An R implementation for Time-scaled Haplotypic Density (THD), used to estimate epidemic success and transmission dynamics from pathogen genetic data.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "epidemiology",
+        "phylodynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/rasigadelab/thd",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "epidemiology",
+        "haplotype",
+        "pathogen-evolution"
+      ],
+      "id": 64
+    },
+    {
+      "name": "speedemon",
+      "one_line_profile": "BEAST 2 package for species delimitation",
+      "detailed_description": "A BEAST 2 package designed for rapid species delimitation using genomic data.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "species_delimitation",
+        "phylogenetics"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/rbouckaert/speedemon",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "beast2",
+        "species-delimitation",
+        "phylogenetics"
+      ],
+      "id": 65
+    },
+    {
+      "name": "Orthoflow",
+      "one_line_profile": "Workflow for phylogenetic inference of genome-scale datasets",
+      "detailed_description": "A workflow for phylogenetic inference from genome-scale datasets of protein-coding genes, automating orthology inference and tree building.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenomics",
+        "orthology_inference",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/rbturnbull/orthoflow",
+      "help_website": [
+        "https://rbturnbull.github.io/orthoflow/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "phylogenomics",
+        "snakemake",
+        "orthology"
+      ],
+      "id": 66
+    },
+    {
+      "name": "splace",
+      "one_line_profile": "Tool to split, align and concatenate genes for phylogenetics",
+      "detailed_description": "A Python tool designed to automate the process of splitting, aligning, and concatenating gene sequences for phylogenetic inference.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "data_preparation",
+        "sequence_alignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/reinator/splace",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "phylogenetics",
+        "alignment",
+        "concatenation"
+      ],
+      "id": 67
+    },
+    {
+      "name": "phylociraptor",
+      "one_line_profile": "Rapid phylogenomic tree calculator pipeline",
+      "detailed_description": "A highly customizable and reproducible framework for phylogenomic inference, designed to streamline the calculation of phylogenetic trees from genomic data.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenomics",
+        "pipeline",
+        "reproducibility"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/reslp/phylociraptor",
+      "help_website": [
+        "https://phylociraptor.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "phylogenomics",
+        "snakemake",
+        "pipeline"
+      ],
+      "id": 68
+    },
+    {
+      "name": "beautier",
+      "one_line_profile": "R package to generate BEAST2 XML parameter files",
+      "detailed_description": "An R package that allows users to generate BEAST2 XML parameter files programmatically, replicating the functionality of the BEAUti GUI.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "configuration_generation",
+        "phylogenetics"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ropensci/beautier",
+      "help_website": [
+        "https://docs.ropensci.org/beautier/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "beast2",
+        "xml-generation",
+        "phylogenetics"
+      ],
+      "id": 69
+    },
+    {
+      "name": "astral (Python)",
+      "one_line_profile": "Calculations for the position of the sun and moon",
+      "detailed_description": "A Python library for calculating the position of the sun and moon, as well as sunrise, sunset, and other solar phases, widely used in astronomical and environmental research.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "astronomical_calculation",
+        "solar_position"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sffjunkie/astral",
+      "help_website": [
+        "https://astral.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "astronomy",
+        "solar-position",
+        "moon-phase"
+      ],
+      "id": 70
+    },
+    {
+      "name": "Extract_Consensus_Sequences_of_Genes_from_BAM_parallel",
+      "one_line_profile": "Scripts for consensus sequence extraction and tree construction",
+      "detailed_description": "A set of scripts for the rapid construction of target interval consensus sequences from BAM files and subsequent phylogenetic tree construction and visualization.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "sequence_extraction",
+        "phylogenetics"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/shengxinzhuan/Extract_Consensus_Sequences_of_Genes_from_BAM_parallel",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "bam-processing",
+        "consensus-sequence",
+        "phylogenetics"
+      ],
+      "id": 71
+    },
+    {
+      "name": "astral (Go)",
+      "one_line_profile": "Go calculations for the position of the sun and moon",
+      "detailed_description": "A Go port of the python astral library, providing calculations for the position of the sun and moon.",
+      "domains": [
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "astronomical_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/sj14/astral",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "astronomy",
+        "go",
+        "solar-position"
+      ],
+      "id": 72
+    },
+    {
+      "name": "phylotoast",
+      "one_line_profile": "Tools for phylogenetic data analysis and visualization",
+      "detailed_description": "A collection of tools for phylogenetic data analysis, including visualization utilities and support for cluster computing, often used with QIIME.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/smdabdoub/phylotoast",
+      "help_website": [
+        "http://phylotoast.readthedocs.org/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "phylogenetics",
+        "qiime"
+      ],
+      "id": 73
+    },
+    {
+      "name": "ASTRAL",
+      "one_line_profile": "Accurate Species Tree Algorithm for large datasets",
+      "detailed_description": "ASTRAL is a tool for estimating a species tree from a set of unrooted gene trees. It is statistically consistent under the multi-species coalescent model and efficient for large datasets.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "species_tree_estimation",
+        "coalescent_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/smirarab/ASTRAL",
+      "help_website": [
+        "https://github.com/smirarab/ASTRAL/blob/master/README.md"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "species-tree",
+        "coalescent",
+        "phylogenetics"
+      ],
+      "id": 74
+    },
+    {
+      "name": "CherryML",
+      "one_line_profile": "Scalable maximum likelihood estimation of phylogenetic models",
+      "detailed_description": "CherryML provides scalable maximum likelihood estimation for phylogenetic models, enabling efficient analysis of large-scale evolutionary data.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetic_inference",
+        "maximum_likelihood"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/songlab-cal/CherryML",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "maximum-likelihood",
+        "phylogenetics",
+        "hpc"
+      ],
+      "id": 75
+    },
+    {
+      "name": "ALE",
+      "one_line_profile": "Probabilistic reconciliation of gene trees and species trees using Amalgamated Likelihood Estimation",
+      "detailed_description": "ALE (Amalgamated Likelihood Estimation) is a probabilistic approach to exhaustively explore all reconciled gene trees that can be amalgamated as a combination of clades observed in a sample of gene trees. It implements a reconciliation model allowing for duplication, transfer, and loss (DTL) of genes to estimate joint likelihoods and infer reconciled gene trees.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetics",
+        "gene_tree_reconciliation",
+        "likelihood_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ssolo/ALE",
+      "help_website": [
+        "http://arxiv.org/abs/1211.4606"
+      ],
+      "license": null,
+      "tags": [
+        "phylogenetics",
+        "reconciliation",
+        "gene-tree",
+        "species-tree",
+        "likelihood"
+      ],
+      "id": 76
+    },
+    {
+      "name": "ExaML",
+      "one_line_profile": "Exascale Maximum Likelihood code for phylogenetic inference using MPI",
+      "detailed_description": "ExaML (Exascale Maximum Likelihood) is a code for phylogenetic inference using the Maximum Likelihood method, specifically designed for large-scale datasets and high-performance computing environments using MPI (Message Passing Interface). It serves as a dedicated tool for massive phylogenetic tree reconstruction.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetics",
+        "tree_inference",
+        "maximum_likelihood"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/stamatak/ExaML",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phylogenetics",
+        "hpc",
+        "mpi",
+        "maximum-likelihood",
+        "inference"
+      ],
+      "id": 77
+    },
+    {
+      "name": "unicore",
+      "one_line_profile": "Structure-based core gene phylogeny inference tool",
+      "detailed_description": "Unicore is a tool for generating universal and efficient structure-based core gene phylogenies. It leverages Foldseek and ProstT5 to utilize protein structure information for phylogenetic inference, offering an alternative to sequence-based methods for deep evolutionary relationships.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetics",
+        "structure_prediction",
+        "tree_inference"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/steineggerlab/unicore",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "phylogeny",
+        "protein-structure",
+        "foldseek",
+        "core-genes"
+      ],
+      "id": 78
+    },
+    {
+      "name": "PhyML",
+      "one_line_profile": "Phylogenetic estimation using Maximum Likelihood",
+      "detailed_description": "PhyML is a widely used software package for phylogenetic estimation using the Maximum Likelihood principle. It provides a range of evolutionary models and algorithms to estimate tree topologies and branch lengths from DNA or protein sequences.",
+      "domains": [
+        "B5",
+        "B5-05"
+      ],
+      "subtask_category": [
+        "phylogenetics",
+        "tree_inference",
+        "maximum_likelihood"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/stephaneguindon/phyml",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "phylogenetics",
+        "maximum-likelihood",
+        "evolutionary-models",
+        "bioinformatics"
+      ],
+      "id": 79
+    },
+    {
+      "name": "MBASR",
+      "one_line_profile": "Ancestral state reconstruction analysis using MrBayes output in R",
+      "detailed_description": "MBASR (MrBayes Ancestral States with R) is an R package designed to process, analyze, and visualize ancestral state reconstruction data generated by the phylogenetic software MrBayes.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenetics",
+        "ancestral_state_reconstruction",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/stevenheritage/MBASR",
+      "help_website": [],
+      "license": "CC0-1.0",
+      "tags": [
+        "r",
+        "mrbayes",
+        "ancestral-states",
+        "phylogenetics"
+      ],
+      "id": 80
+    },
+    {
+      "name": "aPhyloGeo-pipeline",
+      "one_line_profile": "Phylogeographic analysis workflow using sliding windows",
+      "detailed_description": "aPhyloGeo-pipeline is a phylogeographic workflow that utilizes sliding-window analysis combined with RAxML-NG and FastTree to infer phylogenetic relationships and geographic patterns across genomic regions.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogeography",
+        "workflow",
+        "tree_inference"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tahiri-lab/aPhyloGeo-pipeline",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "phylogeography",
+        "pipeline",
+        "raxml-ng",
+        "fasttree"
+      ],
+      "id": 81
+    },
+    {
+      "name": "BDMM-Prime",
+      "one_line_profile": "Multi-type birth-death-sampling modelling package for BEAST 2",
+      "detailed_description": "BDMM-Prime is a package for the BEAST 2 phylogenetic software platform that implements multi-type birth-death-sampling models, allowing for the inference of population dynamics and structure from phylogenetic trees.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylodynamics",
+        "modeling",
+        "bayesian_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/tgvaughan/BDMM-Prime",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "beast2",
+        "phylodynamics",
+        "birth-death-model",
+        "bayesian"
+      ],
+      "id": 82
+    },
+    {
+      "name": "MultiTypeTree",
+      "one_line_profile": "BEAST 2 package for structured population phylogenetics",
+      "detailed_description": "MultiTypeTree is a BEAST 2 package that provides support for inferring phylogenetic trees on structured populations (multi-type trees), enabling the analysis of migration and population structure alongside phylogeny.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogeography",
+        "population_genetics",
+        "bayesian_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/tgvaughan/MultiTypeTree",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "beast2",
+        "structured-populations",
+        "phylogeography",
+        "migration"
+      ],
+      "id": 83
+    },
+    {
+      "name": "bacter",
+      "one_line_profile": "Bacterial phylogenetics package for BEAST 2",
+      "detailed_description": "Bacter is a BEAST 2 package specifically designed for bacterial phylogenetics, addressing the specific evolutionary models and challenges associated with bacterial genomic data inference.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenetics",
+        "microbial_evolution",
+        "bayesian_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/tgvaughan/bacter",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "beast2",
+        "bacteria",
+        "phylogenetics",
+        "evolution"
+      ],
+      "id": 84
+    },
+    {
+      "name": "feast",
+      "one_line_profile": "Utility collection for BEAST 2 phylogenetic analysis",
+      "detailed_description": "Feast provides a collection of miscellaneous tools and model components for the BEAST 2 phylogenetic software, enhancing its capabilities for various evolutionary analyses.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenetics",
+        "utility",
+        "bayesian_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/tgvaughan/feast",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "beast2",
+        "utilities",
+        "phylogenetics"
+      ],
+      "id": 85
+    },
+    {
+      "name": "remaster",
+      "one_line_profile": "High-fidelity stochastic tree simulation for BEAST 2",
+      "detailed_description": "Remaster is a BEAST 2 package for performing high-fidelity stochastic simulations of phylogenetic trees, useful for validating models and generating synthetic data for evolutionary studies.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "simulation",
+        "phylogenetics",
+        "data_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/tgvaughan/remaster",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "beast2",
+        "simulation",
+        "phylogeny",
+        "stochastic"
+      ],
+      "id": 86
+    },
+    {
+      "name": "conifer",
+      "one_line_profile": "FPGA-accelerated Boosted Decision Tree inference for physics",
+      "detailed_description": "Conifer is a library for fast inference of Boosted Decision Trees (BDTs) on FPGAs, primarily used in High Energy Physics (HEP) for trigger systems and real-time data analysis.",
+      "domains": [
+        "Physics",
+        "AI4S"
+      ],
+      "subtask_category": [
+        "inference",
+        "acceleration",
+        "physics_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/thesps/conifer",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "fpga",
+        "bdt",
+        "high-energy-physics",
+        "inference"
+      ],
+      "id": 87
+    },
+    {
+      "name": "tskit",
+      "one_line_profile": "Population-scale Ancestral Recombination Graph (ARG) library",
+      "detailed_description": "tskit is a library for defining, storing, and processing large-scale genetic genealogies (tree sequences). It provides efficient methods for population genetics simulations and analysis of Ancestral Recombination Graphs (ARGs).",
+      "domains": [
+        "B5",
+        "PopGen"
+      ],
+      "subtask_category": [
+        "population_genetics",
+        "data_processing",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tskit-dev/tskit",
+      "help_website": [
+        "https://tskit.dev"
+      ],
+      "license": "MIT",
+      "tags": [
+        "population-genetics",
+        "tree-sequence",
+        "arg",
+        "ancestry"
+      ],
+      "id": 88
+    },
+    {
+      "name": "get_phylomarkers",
+      "one_line_profile": "Pipeline for optimal phylogenomic marker selection",
+      "detailed_description": "get_phylomarkers is a pipeline designed to select optimal markers for microbial phylogenomics and species tree estimation. It supports both multispecies coalescent and concatenation approaches for phylogenetic inference.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenomics",
+        "marker_selection",
+        "tree_estimation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/vinuesa/get_phylomarkers",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "phylogenomics",
+        "microbial",
+        "marker-selection",
+        "species-tree"
+      ],
+      "id": 89
+    },
+    {
+      "name": "macroTraits",
+      "one_line_profile": "R functions for macroecological and phylogenetic trait analysis",
+      "detailed_description": "macroTraits is a set of R functions to test trait correlations, phylogenetic constraints, and spatial variability at large scales, facilitating macroecological and evolutionary research.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "macroecology",
+        "trait_analysis",
+        "phylogenetics"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/wilkesma/macroTraits",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "macroecology",
+        "traits",
+        "phylogenetics",
+        "r-package"
+      ],
+      "id": 90
+    },
+    {
+      "name": "AMPHORA2",
+      "one_line_profile": "Automated phylogenomic inference pipeline for bacteria and archaea",
+      "detailed_description": "AMPHORA2 is an automated pipeline for phylogenomic inference from bacterial and archaeal protein sequences. It identifies phylogenetic markers and constructs trees for taxonomic analysis.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenomics",
+        "taxonomic_classification",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Pep8",
+      "repo_url": "https://github.com/wu-lab-uva/AMPHORA2",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phylogenomics",
+        "bacteria",
+        "archaea",
+        "pipeline"
+      ],
+      "id": 91
+    },
+    {
+      "name": "Phyla_AMPHORA",
+      "one_line_profile": "Phylum-specific automated phylogenomic inference pipeline",
+      "detailed_description": "Phyla_AMPHORA is a specialized version of the AMPHORA pipeline, designed for phylum-specific automated phylogenomic inference using bacterial sequences.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenomics",
+        "taxonomic_classification",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Pep8",
+      "repo_url": "https://github.com/wu-lab-uva/Phyla_AMPHORA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phylogenomics",
+        "bacteria",
+        "phylum-specific",
+        "pipeline"
+      ],
+      "id": 92
+    },
+    {
+      "name": "sitePath",
+      "one_line_profile": "Phylogenetic pathway-dependent mutation analysis",
+      "detailed_description": "sitePath is an R package for phylogenetic pathway-dependent recognition of fixed substitutions and parallel mutations. It helps in analyzing molecular evolution by tracing site-specific changes across phylogenetic trees.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "molecular_evolution",
+        "mutation_analysis",
+        "phylogenetics"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/wuaipinglab/sitePath",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "molecular-evolution",
+        "mutation",
+        "phylogenetics",
+        "r-package"
+      ],
+      "id": 93
+    },
+    {
+      "name": "VEHoP",
+      "one_line_profile": "Versatile Homology-based Phylogenomic pipeline",
+      "detailed_description": "VEHoP (Versatile and Easy-to-use Homology-based Phylogenomic pipeline) is a tool designed to accommodate diverse data types (DNA, RNA, and protein sequences) for homology-based phylogenomic analysis.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenomics",
+        "pipeline",
+        "homology_search"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ylify/VEHoP",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "phylogenomics",
+        "pipeline",
+        "homology",
+        "bioinformatics"
+      ],
+      "id": 94
+    },
+    {
+      "name": "buscophylo",
+      "one_line_profile": "Genome-scale phylogenetic analysis workflow",
+      "detailed_description": "buscophylo is a custom workflow designed for conducting genome-scale phylogenetic analysis, likely integrating BUSCO results for tree reconstruction.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "phylogenomics",
+        "workflow",
+        "tree_inference"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ypchan/buscophylo",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "phylogenomics",
+        "workflow",
+        "genome-scale"
+      ],
+      "id": 95
+    },
+    {
+      "name": "phytop",
+      "one_line_profile": "Visualization of ASTRAL species trees with gene tree discordance",
+      "detailed_description": "phytop is a Python tool for visualizing species trees generated by ASTRAL, specifically highlighting gene tree discordance to aid in interpreting phylogenetic conflicts.",
+      "domains": [
+        "B5"
+      ],
+      "subtask_category": [
+        "visualization",
+        "phylogenetics",
+        "discordance_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zhangrengang/phytop",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "visualization",
+        "astral",
+        "phylogenetics",
+        "discordance"
+      ],
+      "id": 96
+    },
+    {
+      "name": "SynNet-Pipeline",
+      "one_line_profile": "Workflow for building microsynteny networks",
+      "detailed_description": "SynNet-Pipeline is a workflow designed for building microsynteny networks, facilitating comparative genomics and evolutionary analysis of gene order conservation.",
+      "domains": [
+        "B5",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "comparative_genomics",
+        "synteny_analysis",
+        "network_construction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/zhaotao1987/SynNet-Pipeline",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "synteny",
+        "genomics",
+        "network",
+        "pipeline"
+      ],
+      "id": 97
+    }
+  ]
+}

@@ -1,0 +1,1147 @@
+{
+  "generated_at": "2025-12-17T10:35:25.296015+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "COSMO1",
+      "leaf_cluster_name": "数值相对论与宇宙尺度计算物理生态",
+      "domain": "Relativity / Cosmology",
+      "typical_objects": "时空度规/曲率, 引力波波形, N-body/LSS, 宇宙学网格场",
+      "task_chain": "建模→高精仿真→波形/统计→推断→benchmark",
+      "tool_form": "专用仿真器 + 波形/后处理 + 推断/采样 + HPC"
+    },
+    "unit": {
+      "unit_id": "COSMO1-01",
+      "unit_name": "数值相对论求解器与GR场方程工具链",
+      "target_scale": "200–450",
+      "coverage_tools": "GR PDE solvers、网格/AMR、边界/初值构造"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] FUKA",
+        "[GH] Cactus Framework",
+        "[GH] IllinoisGRMHD",
+        "[GH] Dendro-GR",
+        "[GH] Kadath",
+        "[GH] LORENE",
+        "[GH] NRPy+",
+        "[GH] SPECTRE",
+        "[GH] GRChombo",
+        "[GH] Einstein Toolkit",
+        "[GH] numerical relativity",
+        "[GH] general relativity solver",
+        "[GH] einstein field equations",
+        "[GH] GRMHD",
+        "[GH] relativistic hydrodynamics",
+        "[GH] gravitational wave simulation",
+        "[GH] BSSN formalism",
+        "[GH] CCZ4",
+        "[GH] adaptive mesh refinement relativity",
+        "[GH] initial data relativity",
+        "[GH] black hole simulation",
+        "[GH] neutron star merger",
+        "[GH] spacetime metric",
+        "[GH] spectral methods relativity",
+        "[WEB] numerical relativity software github",
+        "[WEB] Einstein Toolkit cactus github",
+        "[WEB] GRChombo AMR github",
+        "[WEB] general relativity pde solver github",
+        "[WEB] relativistic initial data solver github",
+        "[WEB] spectral methods general relativity github"
+      ],
+      "total_candidates": 778,
+      "tool_candidates": 165,
+      "final_tools": 43
+    }
+  },
+  "tools": [
+    {
+      "name": "SpectRes",
+      "one_line_profile": "Efficient spectral resampling tool for astronomical data",
+      "detailed_description": "SpectRes is a Python module designed to efficiently resample spectra and their associated uncertainties onto an arbitrary wavelength grid, primarily used in astronomical spectroscopy.",
+      "domains": [
+        "Astronomy",
+        "Spectroscopy"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "resampling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ACCarnall/SpectRes",
+      "help_website": [
+        "https://spectres.readthedocs.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "spectroscopy",
+        "astronomy",
+        "resampling",
+        "flux-conservation"
+      ],
+      "id": 1
+    },
+    {
+      "name": "iharm2d_v3",
+      "one_line_profile": "Pedagogical 2D GRMHD code",
+      "detailed_description": "A 2D general relativistic magnetohydrodynamics (GRMHD) code designed for pedagogical purposes and research, solving plasma dynamics in strong gravitational fields.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/AFD-Illinois/iharm2d_v3",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "grmhd",
+        "black-hole",
+        "accretion",
+        "fluid-dynamics"
+      ],
+      "id": 2
+    },
+    {
+      "name": "iharm2d_v4",
+      "one_line_profile": "Optimized 2D ideal GRMHD code",
+      "detailed_description": "A 2D ideal GRMHD code derived from iharm3d, featuring fewer dependencies and improved documentation compared to previous versions, suitable for accretion disk simulations.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/AFD-Illinois/iharm2d_v4",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "grmhd",
+        "black-hole",
+        "accretion",
+        "cfd"
+      ],
+      "id": 3
+    },
+    {
+      "name": "KHARMA",
+      "one_line_profile": "Kokkos-based High-Accuracy Relativistic Magnetohydrodynamics with AMR",
+      "detailed_description": "KHARMA is a GRMHD code built on the Kokkos performance portability library and the Parthenon AMR framework, designed for high-performance simulations of black hole accretion on various hardware architectures.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/AFD-Illinois/kharma",
+      "help_website": [
+        "https://github.com/AFD-Illinois/kharma/wiki"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "grmhd",
+        "amr",
+        "kokkos",
+        "gpu-accelerated"
+      ],
+      "id": 4
+    },
+    {
+      "name": "pyharm",
+      "one_line_profile": "Analysis tools for HARM GRMHD simulations",
+      "detailed_description": "A Python library providing tools for reading, processing, and analyzing output data from HARM (High Accuracy Relativistic Magnetohydrodynamics) simulations.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "post_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AFD-Illinois/pyharm",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "grmhd",
+        "analysis",
+        "visualization",
+        "harm"
+      ],
+      "id": 5
+    },
+    {
+      "name": "AsterX",
+      "one_line_profile": "GPU-accelerated GRMHD code for dynamical spacetimes",
+      "detailed_description": "AsterX is a general relativistic magnetohydrodynamics (GRMHD) code designed for dynamical spacetimes, leveraging GPU acceleration within the Einstein Toolkit ecosystem.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/EinsteinToolkit/AsterX",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "grmhd",
+        "gpu",
+        "einstein-toolkit",
+        "numerical-relativity"
+      ],
+      "id": 6
+    },
+    {
+      "name": "CarpetX",
+      "one_line_profile": "AMReX-based driver for the Einstein Toolkit",
+      "detailed_description": "CarpetX is a grid driver for the Cactus framework (Einstein Toolkit) built upon AMReX, enabling adaptive mesh refinement (AMR) and GPU support for numerical relativity simulations.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "infrastructure"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/EinsteinToolkit/CarpetX",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "amr",
+        "amrex",
+        "cactus",
+        "hpc"
+      ],
+      "id": 7
+    },
+    {
+      "name": "ExternalLibraries-LORENE",
+      "one_line_profile": "LORENE library distribution for Einstein Toolkit",
+      "detailed_description": "Provides the LORENE library (Langage Objet pour la RElativité NumériquE) integration for the Einstein Toolkit, used for generating initial data for numerical relativity simulations using spectral methods.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "initial_data_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/EinsteinToolkit/ExternalLibraries-LORENE",
+      "help_website": [
+        "http://www.lorene.obspm.fr/"
+      ],
+      "license": null,
+      "tags": [
+        "spectral-methods",
+        "numerical-relativity",
+        "initial-data"
+      ],
+      "id": 8
+    },
+    {
+      "name": "SpacetimeX",
+      "one_line_profile": "Spacetime driver for Einstein Toolkit based on CarpetX",
+      "detailed_description": "SpacetimeX serves as a spacetime evolution driver within the Einstein Toolkit, utilizing the CarpetX infrastructure to manage grid evolution for relativistic simulations.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "infrastructure"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/EinsteinToolkit/SpacetimeX",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "numerical-relativity",
+        "cactus",
+        "spacetime-evolution"
+      ],
+      "id": 9
+    },
+    {
+      "name": "GRHayL",
+      "one_line_profile": "Infrastructure-agnostic GRMHD library",
+      "detailed_description": "GRHayL is a library designed to provide general relativistic magnetohydrodynamics (GRMHD) reconstruction and conservative-to-primitive recovery schemes in a code-agnostic manner.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "numerical_methods"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/GRHayL/GRHayL",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "grmhd",
+        "reconstruction",
+        "con2prim",
+        "numerical-relativity"
+      ],
+      "id": 10
+    },
+    {
+      "name": "Chombo (GRTL Fork)",
+      "one_line_profile": "Adaptive Mesh Refinement library for GRChombo",
+      "detailed_description": "A modified version of the Chombo library, optimized and tweaked to serve as the AMR infrastructure for the GRChombo numerical relativity code.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "infrastructure"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/GRTLCollaboration/Chombo",
+      "help_website": [
+        "https://commons.lbl.gov/display/chombo"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "amr",
+        "pde-solver",
+        "hpc",
+        "grchombo"
+      ],
+      "id": 11
+    },
+    {
+      "name": "GRChombo",
+      "one_line_profile": "AMR-based numerical relativity code",
+      "detailed_description": "GRChombo is a versatile numerical relativity code built on the Chombo AMR library, designed to solve the Einstein field equations with adaptive mesh refinement for studying black holes, gravitational waves, and cosmology.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/GRTLCollaboration/GRChombo",
+      "help_website": [
+        "http://www.grchombo.org"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "numerical-relativity",
+        "amr",
+        "black-holes",
+        "gravitational-waves"
+      ],
+      "id": 12
+    },
+    {
+      "name": "GRFolres",
+      "one_line_profile": "Modified Gravity extension for GRChombo",
+      "detailed_description": "An extension to the GRChombo code enabling simulations of modified gravity theories, expanding the capabilities of the standard numerical relativity solver.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Mathematica",
+      "repo_url": "https://github.com/GRTLCollaboration/GRFolres",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "modified-gravity",
+        "numerical-relativity",
+        "grchombo"
+      ],
+      "id": 13
+    },
+    {
+      "name": "GRTeclyn",
+      "one_line_profile": "AMReX port of GRChombo",
+      "detailed_description": "A development version of GRChombo ported to use the AMReX framework for adaptive mesh refinement, aiming for improved performance and GPU compatibility.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/GRTLCollaboration/GRTeclyn",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "amrex",
+        "numerical-relativity",
+        "gpu",
+        "hpc"
+      ],
+      "id": 14
+    },
+    {
+      "name": "engrenage",
+      "one_line_profile": "Spherically symmetric BSSN code in Python",
+      "detailed_description": "A Python-based numerical relativity code implementing the BSSN formulation for spherically symmetric spacetimes, useful for prototyping and educational research within the GRChombo ecosystem.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/GRTLCollaboration/engrenage",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "bssn",
+        "python",
+        "numerical-relativity",
+        "spherical-symmetry"
+      ],
+      "id": 15
+    },
+    {
+      "name": "Spectre (Bio)",
+      "one_line_profile": "Toolkit for high-dimensional single-cell data analysis",
+      "detailed_description": "A computational toolkit in R for the integration, exploration, and analysis of high-dimensional single-cell cytometry and imaging data.",
+      "domains": [
+        "Bioinformatics",
+        "Cell Biology"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "clustering"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/ImmuneDynamics/Spectre",
+      "help_website": [
+        "https://immunedynamics.io/spectre"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "single-cell",
+        "cytometry",
+        "clustering",
+        "dimensionality-reduction"
+      ],
+      "id": 16
+    },
+    {
+      "name": "Cosmos",
+      "one_line_profile": "Numerical relativity code with unstructured AMR",
+      "detailed_description": "A numerical relativity code featuring unstructured adaptive mesh refinement (AMR), designed for simulating spacetime evolution.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/JonathanGorard/Cosmos",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "numerical-relativity",
+        "unstructured-mesh",
+        "amr"
+      ],
+      "id": 17
+    },
+    {
+      "name": "Gravitas",
+      "one_line_profile": "Analytical and numerical general relativity toolkit",
+      "detailed_description": "A Mathematica-based toolkit for performing both analytical and numerical calculations in general relativity, covering discrete and continuous spacetimes.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Mathematica",
+      "repo_url": "https://github.com/JonathanGorard/Gravitas",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "general-relativity",
+        "mathematica",
+        "symbolic-computation"
+      ],
+      "id": 18
+    },
+    {
+      "name": "psf_utils",
+      "one_line_profile": "Reader for Spectre PSF simulation files",
+      "detailed_description": "A Python library to read and process PSF (Parameter Storage Format) files generated by the Spectre circuit simulator, facilitating data analysis for electronic simulations.",
+      "domains": [
+        "Electronics",
+        "Engineering"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KenKundert/psf_utils",
+      "help_website": [
+        "https://psf-utils.readthedocs.io"
+      ],
+      "license": null,
+      "tags": [
+        "spectre",
+        "eda",
+        "simulation-data",
+        "psf"
+      ],
+      "id": 19
+    },
+    {
+      "name": "MUSIC",
+      "one_line_profile": "(3+1)D hydrodynamic code for relativistic heavy-ion collisions",
+      "detailed_description": "MUSIC is a (3+1)D relativistic hydrodynamic simulation code used to model the evolution of the quark-gluon plasma produced in heavy-ion collisions.",
+      "domains": [
+        "Nuclear Physics",
+        "High Energy Physics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/MUSIC-fluid/MUSIC",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "hydrodynamics",
+        "heavy-ion-collisions",
+        "qgp",
+        "relativistic-fluid"
+      ],
+      "id": 20
+    },
+    {
+      "name": "peregrine",
+      "one_line_profile": "Simulation-based Inference library for GW signals",
+      "detailed_description": "A library designed to perform simulation-based inference (SBI) on gravitational wave signals, enabling efficient parameter estimation and analysis.",
+      "domains": [
+        "COSMO1",
+        "Gravitational Waves"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PEREGRINE-GW/peregrine",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "sbi",
+        "inference",
+        "machine-learning"
+      ],
+      "id": 21
+    },
+    {
+      "name": "saqqara",
+      "one_line_profile": "SBI library for stochastic GW background analysis",
+      "detailed_description": "A simulation-based inference (SBI) library specifically designed for the analysis of stochastic gravitational wave background data.",
+      "domains": [
+        "COSMO1",
+        "Gravitational Waves"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/PEREGRINE-GW/saqqara",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "stochastic-background",
+        "sbi",
+        "inference"
+      ],
+      "id": 22
+    },
+    {
+      "name": "Athena++",
+      "one_line_profile": "Radiation GRMHD code and AMR framework",
+      "detailed_description": "Athena++ is a complete rewrite of the Athena astrophysical magnetohydrodynamics (MHD) code, featuring flexible coordinate systems, adaptive mesh refinement (AMR), and general relativistic MHD capabilities.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/PrincetonUniversity/athena",
+      "help_website": [
+        "https://github.com/PrincetonUniversity/athena/wiki"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "grmhd",
+        "amr",
+        "astrophysics",
+        "fluid-dynamics"
+      ],
+      "id": 23
+    },
+    {
+      "name": "kuibit",
+      "one_line_profile": "Post-processing library for Einstein Toolkit simulations",
+      "detailed_description": "A Python library designed to analyze and visualize numerical relativity simulations performed with the Einstein Toolkit. It handles grid structure, data reading, and provides high-level interfaces for processing gravitational wave and fluid data.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "post_processing",
+        "visualization",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Sbozzolo/kuibit",
+      "help_website": [
+        "https://kuibit.readthedocs.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "numerical-relativity",
+        "einstein-toolkit",
+        "post-processing"
+      ],
+      "id": 24
+    },
+    {
+      "name": "KORAL Lite",
+      "one_line_profile": "Radiative two-temperature GRMHD solver",
+      "detailed_description": "A lighter version of the KORAL code, designed for general relativistic magnetohydrodynamics (GRMHD) simulations with radiative transfer. It models accretion flows onto black holes.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/achael/koral_lite",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "grmhd",
+        "accretion",
+        "black-hole"
+      ],
+      "id": 25
+    },
+    {
+      "name": "OGRePy",
+      "one_line_profile": "Object-Oriented General Relativity Package for Python",
+      "detailed_description": "A Python package for tensor calculus in General Relativity. It allows for symbolic computation of tensors, curvature, and geodesics in arbitrary spacetimes.",
+      "domains": [
+        "COSMO1"
+      ],
+      "subtask_category": [
+        "modeling",
+        "symbolic_computation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bshoshany/OGRePy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "general-relativity",
+        "tensor-calculus",
+        "symbolic"
+      ],
+      "id": 26
+    },
+    {
+      "name": "Blacklight",
+      "one_line_profile": "General Relativistic ray tracing code",
+      "detailed_description": "A post-processing tool for General Relativistic Magnetohydrodynamics (GRMHD) simulations. It performs ray tracing to generate synthetic images and spectra from simulation data, supporting adaptive mesh refinement.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "post_processing",
+        "visualization",
+        "ray_tracing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/c-white/blacklight",
+      "help_website": [],
+      "license": "Unlicense",
+      "tags": [
+        "ray-tracing",
+        "grmhd",
+        "radiative-transfer"
+      ],
+      "id": 27
+    },
+    {
+      "name": "surrkick",
+      "one_line_profile": "Black-hole kicks from numerical-relativity surrogate models",
+      "detailed_description": "A Python tool to predict remnant black hole kicks (recoil velocities) using numerical relativity surrogate models. It enables fast evaluation of kick magnitudes and directions for binary black hole mergers.",
+      "domains": [
+        "COSMO1"
+      ],
+      "subtask_category": [
+        "modeling",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dgerosa/surrkick",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "surrogate-model",
+        "black-hole-kick"
+      ],
+      "id": 28
+    },
+    {
+      "name": "Spectre",
+      "one_line_profile": "Copy number caller for long read data",
+      "detailed_description": "A bioinformatics tool for estimating copy number variations (CNVs) using long-read sequencing data. It utilizes single nucleotide variants (SNVs) to improve precision in CNV calling.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "variant_calling",
+        "data_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/fritzsedlazeck/Spectre",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "genomics",
+        "cnv-calling",
+        "long-read"
+      ],
+      "id": 29
+    },
+    {
+      "name": "NRSur7dq2",
+      "one_line_profile": "Surrogate model for precessing binary black hole mergers",
+      "detailed_description": "A Python package providing a surrogate model for gravitational waves from generically precessing binary black hole mergers, based on numerical relativity simulations. It allows for fast generation of waveforms.",
+      "domains": [
+        "COSMO1"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jblackma/NRSur7dq2",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "surrogate-model",
+        "waveform-generation"
+      ],
+      "id": 30
+    },
+    {
+      "name": "spectre",
+      "one_line_profile": "Radio spectrogram visualization and recording tool",
+      "detailed_description": "A receiver-agnostic tool for recording and visualizing radio frequency spectrograms (waterfall displays). Useful for signal analysis in radio astronomy or RF engineering.",
+      "domains": [
+        "Radio Astronomy",
+        "Signal Processing"
+      ],
+      "subtask_category": [
+        "visualization",
+        "data_acquisition"
+      ],
+      "application_level": "tool",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jcfitzpatrick12/spectre",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "spectrogram",
+        "radio-frequency",
+        "visualization"
+      ],
+      "id": 31
+    },
+    {
+      "name": "NuBhLight",
+      "one_line_profile": "General Relativistic Neutrino Radiation Magnetohydrodynamics (GRMHD) code",
+      "detailed_description": "A code for simulating general relativistic neutrino radiation magnetohydrodynamics, specifically designed for modeling neutron star merger disks and related astrophysical phenomena.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "mhd_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/lanl/nubhlight",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "grmhd",
+        "neutron-star",
+        "neutrino-radiation",
+        "fluid-dynamics"
+      ],
+      "id": 32
+    },
+    {
+      "name": "Holodeck",
+      "one_line_profile": "Massive Black-Hole Binary Population Synthesis framework",
+      "detailed_description": "A Python framework for massive black-hole binary population synthesis, designed to generate synthetic populations for gravitational wave calculations and pulsar timing array analysis.",
+      "domains": [
+        "COSMO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "population_synthesis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nanograv/holodeck",
+      "help_website": [
+        "https://holodeck.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "black-holes",
+        "population-synthesis",
+        "nanograv"
+      ],
+      "id": 33
+    },
+    {
+      "name": "NRPy+",
+      "one_line_profile": "Python-based code generation for numerical relativity",
+      "detailed_description": "A Python package that generates highly optimized C code for solving partial differential equations in numerical relativity and other physical systems, supporting arbitrary coordinate systems.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "code_generation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nrpy/nrpy",
+      "help_website": [
+        "http://nrpyplus.net/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "numerical-relativity",
+        "code-generation",
+        "pde-solver",
+        "symbolic-math"
+      ],
+      "id": 34
+    },
+    {
+      "name": "NRPyPN",
+      "one_line_profile": "Validated Post-Newtonian expressions for Numerical Relativity",
+      "detailed_description": "A Python module within the NRPy+ ecosystem that provides validated Post-Newtonian (PN) expressions for use in numerical relativity initial data and analysis.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "modeling",
+        "analytical_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nrpy/nrpypn",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "post-newtonian",
+        "general-relativity",
+        "symbolic-math"
+      ],
+      "id": 35
+    },
+    {
+      "name": "Dendro-GR",
+      "one_line_profile": "Numerical relativity solver with wavelet-based adaptive mesh refinement",
+      "detailed_description": "A highly scalable numerical relativity code that uses octree-based wavelet adaptive mesh refinement (WAMR) to solve the Einstein equations.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/paralab/Dendro-GR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "numerical-relativity",
+        "amr",
+        "mpi",
+        "hpc"
+      ],
+      "id": 36
+    },
+    {
+      "name": "nmmn",
+      "one_line_profile": "Miscellaneous methods for Astronomy and Data Science",
+      "detailed_description": "A library containing various utility methods for astronomy and data science, including statistical distributions, goodness-of-fit calculations, and numerical simulation helpers.",
+      "domains": [
+        "COSMO1"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "statistics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rsnemmen/nmmn",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "astronomy",
+        "data-science",
+        "statistics"
+      ],
+      "id": 37
+    },
+    {
+      "name": "SpaceTimeEngine",
+      "one_line_profile": "Python utility for analyzing solutions to Einstein's field equations",
+      "detailed_description": "A SymPy-based Python utility for symbolically analyzing given solutions to Einstein's field equations, calculating curvature tensors and other geometric properties.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "analytical_calculation",
+        "symbolic_math"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spacetimeengineer/spacetimeengine",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "general-relativity",
+        "sympy",
+        "tensor-calculus"
+      ],
+      "id": 38
+    },
+    {
+      "name": "SpECTRE",
+      "one_line_profile": "Next-generation numerical relativity code for multi-scale problems",
+      "detailed_description": "A code for multi-scale, multi-physics problems in astrophysics and gravitational physics, designed to run on massive supercomputers using task-based parallelism.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/sxs-collaboration/spectre",
+      "help_website": [
+        "https://spectre-code.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "numerical-relativity",
+        "hpc",
+        "task-based-parallelism",
+        "discontinuous-galerkin"
+      ],
+      "id": 39
+    },
+    {
+      "name": "Peregrine",
+      "one_line_profile": "Simulation-based inference library for gravitational wave signal analysis",
+      "detailed_description": "A Python library designed to perform simulation-based inference (SBI) on gravitational wave signals, enabling efficient parameter estimation and analysis of compact binary coalescences.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "inference",
+        "parameter_estimation",
+        "gravitational_wave_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/undark-lab/peregrine-public",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gravitational-waves",
+        "sbi",
+        "inference",
+        "machine-learning"
+      ],
+      "id": 40
+    },
+    {
+      "name": "PyCactus",
+      "one_line_profile": "Post-processing utilities for Einstein Toolkit simulation data",
+      "detailed_description": "A Python package designed to facilitate the loading, processing, and analysis of numerical relativity simulation data generated by the Einstein Toolkit (Cactus framework).",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "post_processing",
+        "data_loading",
+        "simulation_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wokast/PyCactus",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "einstein-toolkit",
+        "numerical-relativity",
+        "post-processing",
+        "cactus"
+      ],
+      "id": 41
+    },
+    {
+      "name": "NRPyLaTeX",
+      "one_line_profile": "LaTeX-to-SymPy interface for General Relativity symbolic computation",
+      "detailed_description": "A tool that allows users to input General Relativity equations in LaTeX format and converts them into SymPy symbolic expressions, facilitating the generation of C/C++ code for numerical relativity simulations as part of the NRPy+ ecosystem.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "symbolic_computation",
+        "code_generation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zachetienne/nrpylatex",
+      "help_website": [
+        "https://nrpylatex.readthedocs.io"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "general-relativity",
+        "latex",
+        "sympy",
+        "code-generation"
+      ],
+      "id": 42
+    },
+    {
+      "name": "NRPy+",
+      "one_line_profile": "Python-based code generation framework for numerical relativity",
+      "detailed_description": "A Python-based code generation framework that converts high-level mathematical expressions (in Einstein notation) into highly optimized C code for solving partial differential equations in numerical relativity and related fields.",
+      "domains": [
+        "COSMO1",
+        "COSMO1-01"
+      ],
+      "subtask_category": [
+        "code_generation",
+        "simulation",
+        "pde_solver"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/zachetienne/nrpytutorial",
+      "help_website": [
+        "http://nrpyplus.net/"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "numerical-relativity",
+        "code-generation",
+        "pde-solver",
+        "black-holes"
+      ],
+      "id": 43
+    }
+  ]
+}

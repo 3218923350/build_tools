@@ -1,0 +1,1158 @@
+{
+  "generated_at": "2025-12-16T07:27:45.138457+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "H1",
+      "leaf_cluster_name": "医学影像-分割/检测/诊断生态",
+      "domain": "Med Imaging",
+      "typical_objects": "DICOM/images",
+      "task_chain": "预处理→训练/推理→评测→部署",
+      "tool_form": "框架 + 标注/数据 + 部署"
+    },
+    "unit": {
+      "unit_id": "H1-04",
+      "unit_name": "评测/校准/UQ/鲁棒性",
+      "target_scale": "150–350",
+      "coverage_tools": "calibration、shift detection"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] Surface-Distance-Based-Measures",
+        "[GH] UQ360",
+        "[GH] Uncertainty-Wizard",
+        "[GH] TorchMetrics",
+        "[GH] pymia",
+        "[GH] evalutils",
+        "[GH] SegMetrics",
+        "[GH] MedPy",
+        "[GH] MONAI",
+        "[GH] medical image evaluation metrics",
+        "[GH] uncertainty quantification medical imaging",
+        "[GH] model calibration deep learning",
+        "[GH] medical segmentation metrics",
+        "[GH] out-of-distribution detection medical",
+        "[GH] robustness medical imaging",
+        "[GH] domain shift detection",
+        "[GH] conformal prediction medical",
+        "[GH] monte carlo dropout medical",
+        "[GH] segmentation validation framework",
+        "[GH] dice score hausdorff distance",
+        "[GH] reliability diagrams",
+        "[GH] medical image quality assessment",
+        "[WEB] medical image segmentation evaluation metrics github",
+        "[WEB] uncertainty quantification tools for medical imaging github",
+        "[WEB] deep learning model calibration library github",
+        "[WEB] medical imaging robustness benchmark github",
+        "[WEB] out of distribution detection medical images github",
+        "[WEB] medical image analysis validation framework github"
+      ],
+      "total_candidates": 498,
+      "tool_candidates": 166,
+      "final_tools": 43
+    }
+  },
+  "tools": [
+    {
+      "name": "DINOv2-3D-Med",
+      "one_line_profile": "3D implementation of DINOv2 for self-supervised pretraining on medical volumetric images",
+      "detailed_description": "A library providing a 3D adaptation of the DINOv2 self-supervised learning method, specifically designed for pretraining on volumetric medical imaging data (CT/MRI). It integrates with MONAI and PyTorch Lightning to facilitate robust feature learning from unlabeled 3D medical datasets.",
+      "domains": [
+        "H1",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "pretraining",
+        "self_supervised_learning",
+        "feature_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AIM-Harvard/DINOv2-3D-Med",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "self-supervised-learning",
+        "3d-medical-imaging",
+        "foundation-model",
+        "monai"
+      ],
+      "id": 1
+    },
+    {
+      "name": "SlicerAutomatedDentalTools",
+      "one_line_profile": "3D Slicer extension for automated dental image analysis",
+      "detailed_description": "A 3D Slicer extension that integrates automated tools for dental CBCT and IOS analysis, including segmentation and landmarking, facilitating clinical workflows and research in orthodontics.",
+      "domains": [
+        "H1",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "landmarking",
+        "dental_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DCBIA-OrthoLab/SlicerAutomatedDentalTools",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "3d-slicer",
+        "dental-imaging",
+        "cbct",
+        "orthodontics"
+      ],
+      "id": 2
+    },
+    {
+      "name": "rse-grand-challenge-metrics",
+      "one_line_profile": "Helper library for creating evaluation metrics on Grand-Challenge.org",
+      "detailed_description": "A utility library designed to assist in the creation of evaluation containers and metrics for medical imaging challenges hosted on grand-challenge.org, ensuring standardized and robust performance assessment.",
+      "domains": [
+        "H1-04",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "metrics_calculation",
+        "challenge_deployment"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DIAGNijmegen/rse-grand-challenge-metrics",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "evaluation-metrics",
+        "grand-challenge",
+        "medical-imaging"
+      ],
+      "id": 3
+    },
+    {
+      "name": "Robust T-Loss",
+      "one_line_profile": "Robust loss function for medical image segmentation handling noisy labels",
+      "detailed_description": "Implementation of the T-Loss function designed to be robust against noisy annotations in medical image segmentation tasks. It provides a drop-in replacement for standard loss functions to improve model reliability in the presence of imperfect ground truth.",
+      "domains": [
+        "H1-04",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "loss_function",
+        "robustness",
+        "segmentation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Digital-Dermatology/t-loss",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "loss-function",
+        "robustness",
+        "noisy-labels",
+        "segmentation"
+      ],
+      "id": 4
+    },
+    {
+      "name": "net:cal",
+      "one_line_profile": "Framework for measuring and mitigating miscalibration in uncertainty estimation",
+      "detailed_description": "A comprehensive Python library for assessing confidence calibration in neural networks. It provides methods for measuring miscalibration (ECE, MCE) and post-hoc calibration techniques (Temperature Scaling, Histogram Binning, etc.) to ensure reliable uncertainty estimates in AI models.",
+      "domains": [
+        "H1-04",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "calibration",
+        "uncertainty_quantification",
+        "model_evaluation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EFS-OpenSource/calibration-framework",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "calibration",
+        "uncertainty",
+        "reliability",
+        "neural-networks"
+      ],
+      "id": 5
+    },
+    {
+      "name": "TotalSegmentator-AIDE",
+      "one_line_profile": "TotalSegmentator packaged as a MONAI Application Package (MAP)",
+      "detailed_description": "A deployment-ready packaging of the TotalSegmentator tool, adhering to the MONAI Application Package (MAP) standard, designed for seamless integration into the AIDE platform for clinical AI deployment.",
+      "domains": [
+        "H1",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "deployment",
+        "workflow_integration"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/GSTT-CSC/TotalSegmentator-AIDE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "monai-deploy",
+        "totalsegmentator",
+        "aide",
+        "clinical-deployment"
+      ],
+      "id": 6
+    },
+    {
+      "name": "UQ360",
+      "one_line_profile": "Uncertainty Quantification 360 toolkit",
+      "detailed_description": "An extensible open-source toolkit providing a comprehensive set of algorithms and metrics to estimate, communicate, and utilize uncertainty in machine learning models, enhancing transparency and trust in AI predictions.",
+      "domains": [
+        "H1-04",
+        "AI4S"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "model_evaluation",
+        "trustworthy_ai"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/IBM/UQ360",
+      "help_website": [
+        "https://ibm.github.io/UQ360/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "uncertainty-quantification",
+        "uq",
+        "trustworthy-ai",
+        "ibm"
+      ],
+      "id": 7
+    },
+    {
+      "name": "values",
+      "one_line_profile": "Framework for systematic validation of uncertainty estimation in semantic segmentation",
+      "detailed_description": "A framework developed by DKFZ for the systematic validation and comparison of uncertainty estimation methods specifically in the context of medical image semantic segmentation, enabling rigorous assessment of model reliability.",
+      "domains": [
+        "H1-04",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "uncertainty_validation",
+        "evaluation",
+        "segmentation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/IML-DKFZ/values",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "uncertainty-estimation",
+        "validation",
+        "semantic-segmentation",
+        "dkfz"
+      ],
+      "id": 8
+    },
+    {
+      "name": "segmentation_metrics",
+      "one_line_profile": "Library for computing medical image segmentation metrics",
+      "detailed_description": "A Python package dedicated to calculating a wide range of evaluation metrics for medical image segmentation tasks, including Dice, Hausdorff distance, and others, facilitating standardized performance reporting.",
+      "domains": [
+        "H1-04",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "metrics_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Jingnan-Jia/segmentation_metrics",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "metrics",
+        "segmentation",
+        "evaluation",
+        "medical-imaging"
+      ],
+      "id": 9
+    },
+    {
+      "name": "VS_Seg",
+      "one_line_profile": "Automatic segmentation solver for Vestibular Schwannoma",
+      "detailed_description": "A specialized deep learning pipeline based on MONAI for the automatic segmentation of Vestibular Schwannoma from MRI scans, providing a ready-to-use solver for this specific clinical task.",
+      "domains": [
+        "H1",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "clinical_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/KCL-BMEIS/VS_Seg",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "vestibular-schwannoma",
+        "mri-segmentation",
+        "monai",
+        "clinical-application"
+      ],
+      "id": 10
+    },
+    {
+      "name": "ITKPOCUS",
+      "one_line_profile": "Library for streaming and preprocessing point-of-care ultrasound video",
+      "detailed_description": "An open-source library developed by Kitware for handling point-of-care ultrasound (POCUS) video data, including streaming, preprocessing, and integration with ITK workflows.",
+      "domains": [
+        "H1",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "preprocessing",
+        "video_processing",
+        "ultrasound_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/KitwareMedical/ITKPOCUS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "ultrasound",
+        "pocus",
+        "itk",
+        "video-processing"
+      ],
+      "id": 11
+    },
+    {
+      "name": "MEDIAR",
+      "one_line_profile": "Robust multi-modality microscopy image segmentation solver",
+      "detailed_description": "The winning solution for the NeurIPS 2022 CellSeg Challenge, providing a robust, data-centric and model-centric framework for segmenting cells across diverse microscopy modalities.",
+      "domains": [
+        "H1",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "microscopy_analysis",
+        "robustness"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Lee-Gihun/MEDIAR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "microscopy",
+        "cell-segmentation",
+        "neurips-challenge",
+        "multi-modality"
+      ],
+      "id": 12
+    },
+    {
+      "name": "torchmetrics",
+      "one_line_profile": "Machine learning metrics for distributed PyTorch applications",
+      "detailed_description": "A comprehensive collection of machine learning metrics implemented in PyTorch, designed for distributed training and scalability. It includes a wide array of metrics relevant to medical imaging (Dice, IoU, etc.) and ensures consistent evaluation across devices.",
+      "domains": [
+        "H1-04",
+        "AI4S"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "metrics_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Lightning-AI/torchmetrics",
+      "help_website": [
+        "https://torchmetrics.readthedocs.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "metrics",
+        "pytorch",
+        "evaluation",
+        "distributed-training"
+      ],
+      "id": 13
+    },
+    {
+      "name": "fastMONAI",
+      "one_line_profile": "High-level wrapper for MONAI to simplify medical deep learning",
+      "detailed_description": "A low-code library that wraps MONAI functionalities to simplify the development of medical imaging deep learning pipelines, similar to how fastai wraps PyTorch, making advanced medical AI more accessible.",
+      "domains": [
+        "H1",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "training_pipeline",
+        "rapid_prototyping"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/MMIV-ML/fastMONAI",
+      "help_website": [
+        "https://fastmonai.no/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "monai",
+        "fastai",
+        "low-code",
+        "medical-deep-learning"
+      ],
+      "id": 14
+    },
+    {
+      "name": "mindGlide",
+      "one_line_profile": "Brain segmentation solver using MONAI and Dynamic Unet",
+      "detailed_description": "A specialized tool for brain segmentation leveraging MONAI and Dynamic Unet architectures, providing a streamlined approach for processing neuroimaging data.",
+      "domains": [
+        "H1",
+        "Med Imaging"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "neuroimaging"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MS-PINPOINT/mindGlide",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "brain-segmentation",
+        "monai",
+        "neuroimaging"
+      ],
+      "id": 15
+    },
+    {
+      "name": "MIALSRTK",
+      "one_line_profile": "Medical Image Analysis Laboratory Super-Resolution ToolKit",
+      "detailed_description": "A set of C++ and Python processing and workflow tools necessary to perform motion-robust super-resolution fetal MRI reconstruction in the BIDS Apps framework.",
+      "domains": [
+        "Med Imaging",
+        "H1"
+      ],
+      "subtask_category": [
+        "reconstruction",
+        "super_resolution",
+        "image_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Medical-Image-Analysis-Laboratory/mialsuperresolutiontoolkit",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "mri",
+        "super-resolution",
+        "fetal-mri",
+        "bids"
+      ],
+      "id": 16
+    },
+    {
+      "name": "MONAI Generative Models",
+      "one_line_profile": "Generative models framework for medical imaging",
+      "detailed_description": "A library that makes it easy to train, evaluate, and deploy generative models and related applications in the medical imaging domain.",
+      "domains": [
+        "Med Imaging",
+        "H1"
+      ],
+      "subtask_category": [
+        "generative_modeling",
+        "synthesis",
+        "anomaly_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/GenerativeModels",
+      "help_website": [
+        "https://monai.io/generative-models"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "generative-ai",
+        "diffusion-models",
+        "medical-imaging"
+      ],
+      "id": 17
+    },
+    {
+      "name": "MONAI",
+      "one_line_profile": "AI Toolkit for Healthcare Imaging",
+      "detailed_description": "A PyTorch-based, open-source framework for deep learning in healthcare imaging, providing domain-optimized foundational capabilities for training and deploying medical AI models.",
+      "domains": [
+        "Med Imaging",
+        "H1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "classification",
+        "registration",
+        "detection"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/MONAI",
+      "help_website": [
+        "https://monai.io/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "deep-learning",
+        "medical-imaging",
+        "pytorch"
+      ],
+      "id": 18
+    },
+    {
+      "name": "MONAI Label",
+      "one_line_profile": "Intelligent image labeling and learning tool",
+      "detailed_description": "An intelligent open source image labeling and learning tool that enables users to create annotated datasets and build AI models for clinical evaluation.",
+      "domains": [
+        "Med Imaging",
+        "H1"
+      ],
+      "subtask_category": [
+        "annotation",
+        "active_learning",
+        "segmentation"
+      ],
+      "application_level": "application",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/MONAILabel",
+      "help_website": [
+        "https://monai.io/label.html"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "annotation",
+        "labeling",
+        "active-learning"
+      ],
+      "id": 19
+    },
+    {
+      "name": "SlicerMONAIViz",
+      "one_line_profile": "MONAIViz extension for 3D Slicer",
+      "detailed_description": "A 3D Slicer extension that provides visualization capabilities for MONAI models and outputs, integrating AI analysis into the Slicer workflow.",
+      "domains": [
+        "Med Imaging",
+        "H1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "inference"
+      ],
+      "application_level": "plugin",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/SlicerMONAIViz",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "3d-slicer",
+        "visualization",
+        "monai"
+      ],
+      "id": 20
+    },
+    {
+      "name": "VISTA",
+      "one_line_profile": "Versatile Imaging Segmentation and Annotation",
+      "detailed_description": "MONAI VISTA (Versatile Imaging Segmentation and Annotation) is a framework designed to facilitate generalized segmentation and annotation tasks in medical imaging.",
+      "domains": [
+        "Med Imaging",
+        "H1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "annotation",
+        "foundation_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/VISTA",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "segmentation",
+        "foundation-model",
+        "annotation"
+      ],
+      "id": 21
+    },
+    {
+      "name": "MONAI Deploy",
+      "one_line_profile": "Framework for deploying medical AI applications",
+      "detailed_description": "A framework to develop, package, test, deploy, and run medical AI applications (MAPs) in clinical production environments.",
+      "domains": [
+        "Med Imaging",
+        "H1"
+      ],
+      "subtask_category": [
+        "deployment",
+        "workflow_execution"
+      ],
+      "application_level": "platform",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/Project-MONAI/monai-deploy",
+      "help_website": [
+        "https://monai.io/deploy.html"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "deployment",
+        "clinical-workflow",
+        "containers"
+      ],
+      "id": 22
+    },
+    {
+      "name": "MONAI Deploy App SDK",
+      "one_line_profile": "SDK for building medical AI applications",
+      "detailed_description": "A framework and set of tools to design, develop, and verify AI-driven applications in the healthcare imaging domain, enabling the creation of MONAI Application Packages (MAPs).",
+      "domains": [
+        "Med Imaging",
+        "H1"
+      ],
+      "subtask_category": [
+        "application_development",
+        "packaging"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Project-MONAI/monai-deploy-app-sdk",
+      "help_website": [
+        "https://docs.monai.io/projects/monai-deploy-app-sdk/en/latest/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "sdk",
+        "deployment",
+        "medical-ai"
+      ],
+      "id": 23
+    },
+    {
+      "name": "MONAI Deploy Informatics Gateway",
+      "one_line_profile": "DICOM integration and data ingestion gateway",
+      "detailed_description": "A service that facilitates integration with DICOM compliant systems, enables ingestion of imaging data, and triggers workflows in the MONAI Deploy ecosystem.",
+      "domains": [
+        "Med Imaging",
+        "H1"
+      ],
+      "subtask_category": [
+        "data_ingestion",
+        "dicom_integration"
+      ],
+      "application_level": "service",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/Project-MONAI/monai-deploy-informatics-gateway",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dicom",
+        "pacs",
+        "interoperability"
+      ],
+      "id": 24
+    },
+    {
+      "name": "EvaluateSegmentation",
+      "one_line_profile": "Tool for evaluating image segmentation quality",
+      "detailed_description": "A C++ program designed to evaluate the quality of image segmentations using various metrics, widely used for benchmarking in medical imaging challenges.",
+      "domains": [
+        "Med Imaging",
+        "H1",
+        "H1-04"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "metrics",
+        "benchmarking"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/Visceral-Project/EvaluateSegmentation",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "segmentation",
+        "evaluation",
+        "metrics"
+      ],
+      "id": 25
+    },
+    {
+      "name": "im2im-uq",
+      "one_line_profile": "Image-to-image regression with uncertainty quantification",
+      "detailed_description": "A PyTorch library for image-to-image regression with rigorous, distribution-free uncertainty quantification, applicable to various scientific imaging tasks.",
+      "domains": [
+        "Med Imaging",
+        "H1",
+        "H1-04"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "regression",
+        "calibration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aangelopoulos/im2im-uq",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "uncertainty-quantification",
+        "conformal-prediction",
+        "image-to-image"
+      ],
+      "id": 26
+    },
+    {
+      "name": "ml-calibration",
+      "one_line_profile": "Utilities for measuring and visualizing model calibration",
+      "detailed_description": "A library providing utilities for measuring calibration and plotting reliability diagrams, essential for evaluating the robustness and reliability of ML models in science.",
+      "domains": [
+        "Med Imaging",
+        "H1",
+        "H1-04"
+      ],
+      "subtask_category": [
+        "calibration",
+        "evaluation",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/apple/ml-calibration",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "calibration",
+        "reliability",
+        "uncertainty"
+      ],
+      "id": 27
+    },
+    {
+      "name": "ASCENT",
+      "one_line_profile": "Cardiac ultrasound Segmentation & Color-doppler dealiasing Toolbox",
+      "detailed_description": "A toolbox for cardiac ultrasound segmentation and color-doppler dealiasing, providing specific processing pipelines for echocardiography data.",
+      "domains": [
+        "Med Imaging",
+        "H1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "dealiasing",
+        "ultrasound_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/creatis-myriad/ASCENT",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ultrasound",
+        "cardiac",
+        "segmentation"
+      ],
+      "id": 28
+    },
+    {
+      "name": "SALMON",
+      "one_line_profile": "Segmentation ALgorithm based on MONai",
+      "detailed_description": "A deep learning segmentation software based on the MONAI toolbox, designed for single and multi-label segmentation of 3D medical images.",
+      "domains": [
+        "Med Imaging",
+        "H1"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "inference"
+      ],
+      "application_level": "application",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/davidiommi/Pytorch--3D-Medical-Images-Segmentation--SALMON",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "segmentation",
+        "monai",
+        "3d-imaging"
+      ],
+      "id": 29
+    },
+    {
+      "name": "Hagelslag",
+      "one_line_profile": "Object-based severe weather forecast verification and segmentation tool",
+      "detailed_description": "Hagelslag is a Python library for object-based verification and segmentation of weather fields, specifically designed for severe weather forecasting. It supports tracking, performance diagrams, and reliability diagrams for calibration.",
+      "domains": [
+        "Meteorology",
+        "Atmospheric Science"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "tracking",
+        "verification",
+        "calibration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/djgagne/hagelslag",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "weather",
+        "segmentation",
+        "verification",
+        "calibration"
+      ],
+      "id": 30
+    },
+    {
+      "name": "MedMNIST-C API",
+      "one_line_profile": "Library for evaluating model robustness on MedMNIST-C datasets",
+      "detailed_description": "A Python library designed to evaluate and enhance the robustness of medical image analysis models, specifically providing an API for the MedMNIST-C corrupted dataset benchmarks.",
+      "domains": [
+        "Medical Imaging"
+      ],
+      "subtask_category": [
+        "robustness_evaluation",
+        "benchmarking"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/francescodisalvo05/medmnistc-api",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "robustness",
+        "medical-imaging",
+        "benchmarking"
+      ],
+      "id": 31
+    },
+    {
+      "name": "MIScnn",
+      "one_line_profile": "Framework for Medical Image Segmentation with CNNs",
+      "detailed_description": "A comprehensive framework for setting up complete medical image segmentation pipelines using Convolutional Neural Networks, including data I/O, preprocessing, data augmentation, and model training.",
+      "domains": [
+        "Medical Imaging"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "pipeline_construction",
+        "preprocessing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/frankkramer-lab/MIScnn",
+      "help_website": [
+        "https://github.com/frankkramer-lab/MIScnn/wiki"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "segmentation",
+        "deep-learning",
+        "medical-imaging"
+      ],
+      "id": 32
+    },
+    {
+      "name": "miseval",
+      "one_line_profile": "Metric library for Medical Image Segmentation Evaluation",
+      "detailed_description": "A Python library dedicated to the evaluation of medical image segmentation models, providing a wide range of metrics to assess segmentation performance.",
+      "domains": [
+        "Medical Imaging"
+      ],
+      "subtask_category": [
+        "evaluation",
+        "metrics",
+        "segmentation_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/frankkramer-lab/miseval",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "metrics",
+        "evaluation",
+        "segmentation"
+      ],
+      "id": 33
+    },
+    {
+      "name": "temperature_scaling",
+      "one_line_profile": "Neural network calibration using Temperature Scaling",
+      "detailed_description": "A widely used implementation of Temperature Scaling, a simple and effective method to calibrate the probability outputs of neural networks.",
+      "domains": [
+        "Deep Learning",
+        "Computer Vision"
+      ],
+      "subtask_category": [
+        "calibration",
+        "uncertainty_quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gpleiss/temperature_scaling",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "calibration",
+        "neural-networks",
+        "probability"
+      ],
+      "id": 34
+    },
+    {
+      "name": "reliability-diagrams",
+      "one_line_profile": "Visualization tool for classifier calibration",
+      "detailed_description": "A utility for creating reliability diagrams to visualize and quantify the calibration of classification models, helping to determine if model probabilities match empirical accuracy.",
+      "domains": [
+        "Deep Learning",
+        "Data Visualization"
+      ],
+      "subtask_category": [
+        "calibration_visualization",
+        "model_evaluation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hollance/reliability-diagrams",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "calibration",
+        "visualization",
+        "reliability-diagram"
+      ],
+      "id": 35
+    },
+    {
+      "name": "SlicerMONAIAuto3DSeg",
+      "one_line_profile": "3D Slicer extension for MONAI Auto3DSeg models",
+      "detailed_description": "An extension for the 3D Slicer platform that enables users to run MONAI Auto3DSeg models directly within the Slicer environment for automated medical image segmentation.",
+      "domains": [
+        "Medical Imaging"
+      ],
+      "subtask_category": [
+        "segmentation",
+        "inference",
+        "workflow_integration"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lassoan/SlicerMONAIAuto3DSeg",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "3d-slicer",
+        "monai",
+        "segmentation",
+        "plugin"
+      ],
+      "id": 36
+    },
+    {
+      "name": "MedPy",
+      "one_line_profile": "Medical image processing library in Python",
+      "detailed_description": "A library for medical image processing in Python, providing basic functionalities for reading, writing, and manipulating high-dimensional medical image data, as well as evaluation metrics.",
+      "domains": [
+        "Medical Imaging"
+      ],
+      "subtask_category": [
+        "image_processing",
+        "io",
+        "metrics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/loli/medpy",
+      "help_website": [
+        "http://loli.github.io/medpy/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "image-processing",
+        "medical-imaging",
+        "metrics"
+      ],
+      "id": 37
+    },
+    {
+      "name": "Calibration Wizard",
+      "one_line_profile": "Guidance system for camera calibration",
+      "detailed_description": "A tool designed to guide users through the camera calibration process, optimizing for geometric and corner uncertainty to ensure high-quality calibration results.",
+      "domains": [
+        "Computer Vision",
+        "Robotics"
+      ],
+      "subtask_category": [
+        "camera_calibration",
+        "geometric_optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/pengsongyou/CalibrationWizard",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "calibration",
+        "computer-vision",
+        "guidance-system"
+      ],
+      "id": 38
+    },
+    {
+      "name": "WaveBlocks",
+      "one_line_profile": "Framework for joint optimization of optics and deep learning",
+      "detailed_description": "An optimization framework developed in PyTorch that allows for the calibration and joint optimization of optical systems and deep learning models, facilitating computational imaging research.",
+      "domains": [
+        "Optics",
+        "Computational Imaging"
+      ],
+      "subtask_category": [
+        "optical_simulation",
+        "joint_optimization",
+        "calibration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pvjosue/WaveBlocks",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "optics",
+        "deep-learning",
+        "computational-imaging"
+      ],
+      "id": 39
+    },
+    {
+      "name": "pymia",
+      "one_line_profile": "Data handling and evaluation library for medical image analysis",
+      "detailed_description": "A Python package designed to facilitate data handling and evaluation in deep learning-based medical image analysis, providing flexible data loading and comprehensive metric calculation.",
+      "domains": [
+        "H1",
+        "H1-04"
+      ],
+      "subtask_category": [
+        "data_handling",
+        "evaluation",
+        "metrics_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rundherum/pymia",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-imaging",
+        "evaluation",
+        "deep-learning",
+        "data-loading"
+      ],
+      "id": 40
+    },
+    {
+      "name": "uncertainty-wizard",
+      "one_line_profile": "Keras-based library for uncertainty-aware deep neural networks",
+      "detailed_description": "A plugin on top of tensorflow.keras that allows users to easily and efficiently create, train, and evaluate uncertainty-aware deep neural networks, supporting ensemble methods and stochastic sampling.",
+      "domains": [
+        "H1-04",
+        "H1"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "model_training",
+        "evaluation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/testingautomated-usi/uncertainty-wizard",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "uncertainty-quantification",
+        "keras",
+        "deep-learning",
+        "tensorflow"
+      ],
+      "id": 41
+    },
+    {
+      "name": "MedSegBench",
+      "one_line_profile": "Benchmarking library for medical image segmentation",
+      "detailed_description": "A comprehensive benchmarking tool that provides standardized access to 35+ medical segmentation datasets across different modalities, facilitating robust model evaluation and comparison.",
+      "domains": [
+        "H1",
+        "H1-04"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "dataset_standardization",
+        "segmentation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zekikus/MedSegBench",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-segmentation",
+        "benchmarking",
+        "datasets",
+        "evaluation"
+      ],
+      "id": 42
+    },
+    {
+      "name": "classifier-calibration",
+      "one_line_profile": "Library for classifier calibration techniques",
+      "detailed_description": "A Python library implementing post-hoc classifier calibration methods such as Platt's scaling and isotonic regression, along with visualization tools like reliability diagrams.",
+      "domains": [
+        "H1-04"
+      ],
+      "subtask_category": [
+        "calibration",
+        "visualization",
+        "evaluation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zygmuntz/classifier-calibration",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "calibration",
+        "reliability-diagrams",
+        "isotonic-regression",
+        "platt-scaling"
+      ],
+      "id": 43
+    }
+  ]
+}

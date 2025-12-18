@@ -1,0 +1,468 @@
+{
+  "generated_at": "2025-12-17T12:02:46.928825+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "FUS1",
+      "leaf_cluster_name": "核科学与核聚变计算生态",
+      "domain": "Nuclear / Fusion / Plasma",
+      "typical_objects": "等离子体场, 粒子分布, 磁约束几何, 诊断信号, 输运方程",
+      "task_chain": "建模→仿真→诊断/反演→控制/优化→验证→工作流",
+      "tool_form": "大型仿真器 + 诊断/反演工具 + 控制/优化 + HPC"
+    },
+    "unit": {
+      "unit_id": "FUS1-06",
+      "unit_name": "运行控制与优化（含实时控制/策略搜索）",
+      "target_scale": "150–350",
+      "coverage_tools": "control frameworks、MPC/RL、参数优化、约束处理"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] Flight Simulator for Tokamaks (FST)",
+        "[GH] SOLPS-ITER",
+        "[GH] EFIT",
+        "[GH] Tokamak-Gym",
+        "[GH] OMFIT",
+        "[GH] FreeGS",
+        "[GH] DESC",
+        "[GH] SIMSOPT",
+        "[GH] MARTe2",
+        "[GH] plasma control system",
+        "[GH] tokamak control",
+        "[GH] fusion reinforcement learning",
+        "[GH] model predictive control plasma",
+        "[GH] magnetic equilibrium control",
+        "[GH] stellarator optimization",
+        "[GH] plasma profile optimization",
+        "[GH] fusion reactor control",
+        "[GH] disruption prediction fusion",
+        "[GH] real-time plasma control",
+        "[GH] tokamak scenario optimization",
+        "[GH] fusion system identification",
+        "[GH] plasma vertical stability",
+        "[GH] tokamak simulator rl",
+        "[WEB] reinforcement learning tokamak control github",
+        "[WEB] plasma control system framework github",
+        "[WEB] stellarator coil optimization github",
+        "[WEB] model predictive control fusion plasma github",
+        "[WEB] fusion disruption prediction deep learning github",
+        "[WEB] tokamak magnetic equilibrium reconstruction github"
+      ],
+      "total_candidates": 431,
+      "tool_candidates": 112,
+      "final_tools": 16
+    }
+  },
+  "tools": [
+    {
+      "name": "FreeGS4E",
+      "one_line_profile": "Free boundary Grad-Shafranov solver for time evolution in tokamak plasmas",
+      "detailed_description": "A Python-based solver for the Grad-Shafranov equation, specifically designed for evolutive free-boundary tokamak plasma equilibrium simulations. It supports time-dependent modeling of plasma shapes and positions.",
+      "domains": [
+        "FUS1",
+        "FUS1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "equilibrium_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FusionComputingLab/freegs4e",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "grad-shafranov",
+        "plasma-equilibrium",
+        "tokamak",
+        "free-boundary"
+      ],
+      "id": 1
+    },
+    {
+      "name": "FreeGSNKE",
+      "one_line_profile": "Evolutive free-boundary tokamak plasma equilibrium simulation code",
+      "detailed_description": "A Python code for simulating the evolution of free-boundary tokamak plasma equilibria. It solves the Grad-Shafranov equation to model plasma magnetic configurations and their time evolution.",
+      "domains": [
+        "FUS1",
+        "FUS1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "equilibrium_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FusionComputingLab/freegsnke",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "plasma-equilibrium",
+        "tokamak",
+        "simulation",
+        "grad-shafranov"
+      ],
+      "id": 2
+    },
+    {
+      "name": "EFIT.jl",
+      "one_line_profile": "Julia routines for reading EFIT geqdsk files",
+      "detailed_description": "A Julia library designed to read and process EFIT geqdsk files, which are standard formats for storing magnetic equilibrium reconstructions in fusion devices.",
+      "domains": [
+        "FUS1"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "io"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/JuliaFusion/EFIT.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "efit",
+        "geqdsk",
+        "plasma-reconstruction",
+        "julia"
+      ],
+      "id": 3
+    },
+    {
+      "name": "disruption-py",
+      "one_line_profile": "Physics-based framework for disruption analysis of fusion plasmas",
+      "detailed_description": "An open-source scientific framework developed by MIT-PSFC for the analysis of disruptions in fusion plasmas, specifically tailored for AI/ML applications in disruption prediction and mitigation.",
+      "domains": [
+        "FUS1",
+        "FUS1-06"
+      ],
+      "subtask_category": [
+        "disruption_prediction",
+        "data_analysis"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MIT-PSFC/disruption-py",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "disruption-prediction",
+        "tokamak",
+        "machine-learning",
+        "plasma-physics"
+      ],
+      "id": 4
+    },
+    {
+      "name": "plasma-python",
+      "one_line_profile": "Deep learning disruption prediction package for fusion plasmas",
+      "detailed_description": "A deep learning package from PPPL for predicting disruptions in tokamak plasmas. It includes tools for data processing, model training, and evaluation specifically for fusion disruption datasets.",
+      "domains": [
+        "FUS1",
+        "FUS1-06"
+      ],
+      "subtask_category": [
+        "disruption_prediction",
+        "deep_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PPPLDeepLearning/plasma-python",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "disruption-prediction",
+        "deep-learning",
+        "fusion",
+        "pppl"
+      ],
+      "id": 5
+    },
+    {
+      "name": "eqtools",
+      "one_line_profile": "Tools for magnetic equilibria in tokamak plasmas",
+      "detailed_description": "A Python library for working with magnetic equilibrium data in tokamak plasmas. It provides functionality for coordinate mapping, flux surface analysis, and interfacing with equilibrium codes.",
+      "domains": [
+        "FUS1"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "equilibrium_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PSFCPlasmaTools/eqtools",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "magnetic-equilibrium",
+        "tokamak",
+        "coordinate-mapping",
+        "plasma-physics"
+      ],
+      "id": 6
+    },
+    {
+      "name": "DESC",
+      "one_line_profile": "Stellarator Equilibrium and Optimization Suite",
+      "detailed_description": "A suite for solving and optimizing 3D MHD equilibria in stellarators. It uses a pseudo-spectral method to compute high-accuracy equilibrium solutions and supports optimization of coil shapes and plasma properties.",
+      "domains": [
+        "FUS1",
+        "FUS1-06"
+      ],
+      "subtask_category": [
+        "optimization",
+        "equilibrium_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PlasmaControl/DESC",
+      "help_website": [
+        "https://desc-docs.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "stellarator",
+        "equilibrium",
+        "optimization",
+        "mhd"
+      ],
+      "id": 7
+    },
+    {
+      "name": "FOCUS",
+      "one_line_profile": "Flexible Optimized Coils Using Space curves",
+      "detailed_description": "A code for designing and optimizing modular coils for stellarators. It uses a space curve representation to optimize coil geometry for desired magnetic field properties.",
+      "domains": [
+        "FUS1",
+        "FUS1-06"
+      ],
+      "subtask_category": [
+        "optimization",
+        "coil_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/PrincetonUniversity/FOCUS",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "stellarator",
+        "coil-design",
+        "optimization",
+        "magnet-design"
+      ],
+      "id": 8
+    },
+    {
+      "name": "STELLOPT",
+      "one_line_profile": "Stellarator optimization code",
+      "detailed_description": "The state-of-the-art code for stellarator optimization. It integrates with equilibrium solvers like VMEC to optimize plasma confinement properties and coil configurations.",
+      "domains": [
+        "FUS1",
+        "FUS1-06"
+      ],
+      "subtask_category": [
+        "optimization",
+        "equilibrium_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/PrincetonUniversity/STELLOPT",
+      "help_website": [
+        "https://stellopt.pppl.gov"
+      ],
+      "license": "MIT",
+      "tags": [
+        "stellarator",
+        "optimization",
+        "vmec",
+        "plasma-physics"
+      ],
+      "id": 9
+    },
+    {
+      "name": "FreeGS",
+      "one_line_profile": "Free boundary Grad-Shafranov solver for plasma equilibrium in tokamaks",
+      "detailed_description": "A Python library that solves the free-boundary Grad-Shafranov equation to determine the plasma equilibrium configuration in tokamak fusion devices. It supports coil geometry definition and plasma profile specification.",
+      "domains": [
+        "FUS1",
+        "FUS1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "equilibrium_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/freegs-plasma/freegs",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "plasma-physics",
+        "grad-shafranov",
+        "tokamak",
+        "equilibrium"
+      ],
+      "id": 10
+    },
+    {
+      "name": "OMAS",
+      "one_line_profile": "Ordered Multidimensional Array Structure for ITER IMAS data interface",
+      "detailed_description": "A Python library designed to simplify the interface with the ITER Integrated Modeling and Analysis Suite (IMAS) data structure. It provides a convenient way to handle hierarchical scientific data in fusion research.",
+      "domains": [
+        "FUS1",
+        "FUS1-06"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "data_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gafusion/omas",
+      "help_website": [
+        "https://gafusion.github.io/omas/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fusion",
+        "imas",
+        "data-structure",
+        "iter"
+      ],
+      "id": 11
+    },
+    {
+      "name": "SIMSOPT",
+      "one_line_profile": "Simulation and Optimization code for stellarator design",
+      "detailed_description": "A framework for the optimization of stellarator fusion devices. It integrates physics simulation codes with optimization algorithms to design magnetic coils and plasma configurations.",
+      "domains": [
+        "FUS1",
+        "FUS1-06"
+      ],
+      "subtask_category": [
+        "optimization",
+        "design"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hiddenSymmetries/simsopt",
+      "help_website": [
+        "https://simsopt.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "stellarator",
+        "optimization",
+        "plasma-physics",
+        "magnetic-confinement"
+      ],
+      "id": 12
+    },
+    {
+      "name": "PCSSP",
+      "one_line_profile": "Plasma Control System Simulation Platform for ITER",
+      "detailed_description": "A simulation platform developed by the ITER Organization for designing and testing plasma control systems. It allows for the simulation of plasma evolution and control loop responses.",
+      "domains": [
+        "FUS1",
+        "FUS1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "control_system"
+      ],
+      "application_level": "platform",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/iterorganization/PCSSP",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "plasma-control",
+        "iter",
+        "simulation",
+        "tokamak"
+      ],
+      "id": 13
+    },
+    {
+      "name": "SOLPS-ITER",
+      "one_line_profile": "Scrape-Off Layer Plasma Simulation Code for ITER",
+      "detailed_description": "A code package for simulating the plasma scrape-off layer (SOL) and divertor physics in tokamak devices. It is a standard tool for edge plasma modeling in the fusion community.",
+      "domains": [
+        "FUS1",
+        "FUS1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "plasma_transport"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/iterorganization/SOLPS-ITER",
+      "help_website": [],
+      "license": "EUPL-1.1",
+      "tags": [
+        "plasma-edge",
+        "divertor",
+        "transport",
+        "iter"
+      ],
+      "id": 14
+    },
+    {
+      "name": "OpenReactor",
+      "one_line_profile": "Control and data logging system for IEC fusion reactors",
+      "detailed_description": "An open-source control, monitoring, and data logging platform designed for Inertial Electrostatic Confinement (IEC) nuclear fusion reactors. It provides interfaces for hardware control and experimental data acquisition.",
+      "domains": [
+        "FUS1",
+        "FUS1-06"
+      ],
+      "subtask_category": [
+        "control",
+        "data_acquisition"
+      ],
+      "application_level": "platform",
+      "primary_language": "Go",
+      "repo_url": "https://github.com/natesales/openreactor",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "iec-fusion",
+        "control-system",
+        "data-logging",
+        "nuclear"
+      ],
+      "id": 15
+    },
+    {
+      "name": "ESSOS",
+      "one_line_profile": "e-Stellarator Simulation and Optimization Suite for magnetic configuration design",
+      "detailed_description": "ESSOS (e-Stellarator Simulation and Optimization Suite) is a Python-based tool designed for the simulation and optimization of stellarator fusion devices. It focuses on magnetic field configuration, plasma surface optimization, and coil design to support nuclear fusion research.",
+      "domains": [
+        "FUS1",
+        "FUS1-06"
+      ],
+      "subtask_category": [
+        "simulation",
+        "optimization",
+        "magnetic_configuration"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uwplasma/ESSOS",
+      "help_website": [
+        "https://github.com/uwplasma/ESSOS"
+      ],
+      "license": "MIT",
+      "tags": [
+        "stellarator",
+        "plasma-physics",
+        "optimization",
+        "fusion-energy",
+        "magnetic-field"
+      ],
+      "id": 16
+    }
+  ]
+}

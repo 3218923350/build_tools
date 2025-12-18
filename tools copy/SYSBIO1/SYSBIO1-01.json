@@ -1,0 +1,1706 @@
+{
+  "generated_at": "2025-12-17T10:34:50.671210+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "SYSBIO1",
+      "leaf_cluster_name": "计算系统生物学与动力学生态",
+      "domain": "Systems Biology",
+      "typical_objects": "ODE/PDE 模型, 代谢网络, 信号通路, 参数与不确定性",
+      "task_chain": "建模→参数估计→仿真→敏感性/UQ→反演→验证",
+      "tool_form": "建模语言/仿真器 + 参数估计/UQ + 数据拟合工作流"
+    },
+    "unit": {
+      "unit_id": "SYSBIO1-01",
+      "unit_name": "系统生物学建模语言与模型表示（SBML等）",
+      "target_scale": "200–450",
+      "coverage_tools": "model formats、parsers、validators、conversion"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] libCOMBINE",
+        "[GH] libSEDML",
+        "[GH] Paxtools",
+        "[GH] SBMLValidator",
+        "[GH] python-libsbml",
+        "[GH] sbmlutils",
+        "[GH] Antimony",
+        "[GH] libCellML",
+        "[GH] JSBML",
+        "[GH] libSBML",
+        "[GH] SBML parser",
+        "[GH] systems biology markup language",
+        "[GH] CellML",
+        "[GH] BioPAX",
+        "[GH] SED-ML",
+        "[GH] SBGN",
+        "[GH] SBML converter",
+        "[GH] SBML validator",
+        "[GH] biological model exchange",
+        "[GH] COMBINE archive",
+        "[GH] Antimony model",
+        "[GH] systems biology format",
+        "[GH] metabolic network reconstruction",
+        "[GH] model interchange format",
+        "[WEB] SBML parser validator github",
+        "[WEB] systems biology model converter github",
+        "[WEB] libSBML python bindings github",
+        "[WEB] Antimony model description language github",
+        "[WEB] CellML tools and libraries github",
+        "[WEB] BioPAX parser github"
+      ],
+      "total_candidates": 616,
+      "tool_candidates": 118,
+      "final_tools": 66
+    }
+  },
+  "tools": [
+    {
+      "name": "sbml2cellml",
+      "one_line_profile": "Converter from Systems Biology Markup Language (SBML) to CellML format",
+      "detailed_description": "A Ruby-based utility program designed to convert biological models defined in SBML format into CellML format, facilitating interoperability between these two major systems biology standards.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "model_interoperability"
+      ],
+      "application_level": "solver",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/A1kmm/sbml2cellml",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "sbml",
+        "cellml",
+        "converter",
+        "systems-biology"
+      ],
+      "id": 1
+    },
+    {
+      "name": "AutoKEGGRec",
+      "one_line_profile": "Automated metabolic network reconstruction tool using KEGG data",
+      "detailed_description": "An automated tool implemented in MATLAB that creates draft metabolic network reconstructions for single organisms or communities based on KEGG database information, supporting the generation of consolidated reconstructions.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "network_reconstruction",
+        "metabolic_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/AlmaasLab/AutoKEGGRec",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "metabolic-network",
+        "kegg",
+        "reconstruction",
+        "matlab"
+      ],
+      "id": 2
+    },
+    {
+      "name": "PathSBML",
+      "one_line_profile": "PathVisio plugin for importing SBML models as SBGN diagrams",
+      "detailed_description": "A plugin for the pathway analysis tool PathVisio that allows users to import SBML models and visualize them as SBGN-PD (Systems Biology Graphical Notation - Process Description) diagrams.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "model_import"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/BiGCAT-UM/PathSBML",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "pathvisio",
+        "sbml",
+        "sbgn",
+        "visualization"
+      ],
+      "id": 3
+    },
+    {
+      "name": "Paxtools",
+      "one_line_profile": "Java library for the BioPAX biological pathway exchange standard",
+      "detailed_description": "A comprehensive Java library providing an object model, API, and utilities for manipulating, validating, and querying BioPAX data, a standard language for biological pathway exchange.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/BioPAX/Paxtools",
+      "help_website": [
+        "http://www.biopax.org/paxtools/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "biopax",
+        "pathway",
+        "java",
+        "api"
+      ],
+      "id": 4
+    },
+    {
+      "name": "paxtoolsr",
+      "one_line_profile": "R interface for BioPAX pathway analysis and Paxtools",
+      "detailed_description": "An R package that provides functions to interact with BioPAX OWL files using Paxtools and to query the Pathway Commons molecular interaction database.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "pathway_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/BioPAX/paxtoolsr",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "r",
+        "biopax",
+        "pathway-commons",
+        "bioinformatics"
+      ],
+      "id": 5
+    },
+    {
+      "name": "SBML.jl",
+      "one_line_profile": "Julia interface to the Systems Biology Markup Language (SBML)",
+      "detailed_description": "A Julia package providing an interface to the libSBML library, allowing users to read, write, and manipulate SBML models directly within the Julia programming environment.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "model_parsing",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/LCSB-BioCore/SBML.jl",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "julia",
+        "sbml",
+        "systems-biology",
+        "modeling"
+      ],
+      "id": 6
+    },
+    {
+      "name": "pyvipr",
+      "one_line_profile": "Visualization widget for systems biology models in Jupyter",
+      "detailed_description": "A Python tool providing static and dynamic visualizations for systems biology models (PySB, BNGL, SBML) within Jupyter notebooks, aiding in model debugging and communication.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "model_inspection"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/LoLab-MSM/pyvipr",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "systems-biology",
+        "jupyter",
+        "pysb",
+        "sbml"
+      ],
+      "id": 7
+    },
+    {
+      "name": "iBioSim",
+      "one_line_profile": "CAD tool for modeling and design of genetic circuits",
+      "detailed_description": "A computer-aided design (CAD) tool for the modeling, analysis, and design of genetic circuits, with support for importing/exporting SBML and SBOL standards.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation",
+        "circuit_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/MyersResearchGroup/iBioSim",
+      "help_website": [
+        "http://www.ibiosim.org"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "synthetic-biology",
+        "genetic-circuits",
+        "sbml",
+        "sbol",
+        "cad"
+      ],
+      "id": 8
+    },
+    {
+      "name": "PEtab",
+      "one_line_profile": "Data format and library for parameter estimation in systems biology",
+      "detailed_description": "A repository defining the PEtab standard for specifying parameter estimation problems in systems biology (based on SBML and TSV), including Python libraries and validators for the format.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "data_standard"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PEtab-dev/PEtab",
+      "help_website": [
+        "https://petab.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "parameter-estimation",
+        "sbml",
+        "systems-biology",
+        "standard"
+      ],
+      "id": 9
+    },
+    {
+      "name": "ChiBE",
+      "one_line_profile": "Visualization and analysis tool for BioPAX pathways",
+      "detailed_description": "A desktop application for visualizing, querying, and analyzing biological pathways and networks represented in the BioPAX format, often used with Pathway Commons data.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "network_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/PathwayCommons/chibe",
+      "help_website": [],
+      "license": "EPL-1.0",
+      "tags": [
+        "biopax",
+        "visualization",
+        "pathway-commons",
+        "network-analysis"
+      ],
+      "id": 10
+    },
+    {
+      "name": "cytoscape-sbgn-stylesheet",
+      "one_line_profile": "Cytoscape.js stylesheet for SBGN visualization",
+      "detailed_description": "A JavaScript library providing a Cytoscape.js stylesheet to render biological networks according to the Systems Biology Graphical Notation (SBGN) standard.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/PathwayCommons/cytoscape-sbgn-stylesheet",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sbgn",
+        "cytoscape",
+        "visualization",
+        "javascript"
+      ],
+      "id": 11
+    },
+    {
+      "name": "sbgnml-to-cytoscape",
+      "one_line_profile": "Converter from SBGN-ML to Cytoscape.js JSON",
+      "detailed_description": "An npm module and utility for converting Systems Biology Graphical Notation (SBGN) XML files into JSON format compatible with Cytoscape.js for web-based visualization.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/PathwayCommons/sbgnml-to-cytoscape",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sbgn",
+        "cytoscape",
+        "converter",
+        "javascript"
+      ],
+      "id": 12
+    },
+    {
+      "name": "CellMLToolkit.jl",
+      "one_line_profile": "Julia library for CellML model simulation and analysis",
+      "detailed_description": "A Julia library that connects CellML models to the Scientific Julia ecosystem (SciML), enabling high-performance simulation and analysis of physiological models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/CellMLToolkit.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cellml",
+        "julia",
+        "sciml",
+        "simulation"
+      ],
+      "id": 13
+    },
+    {
+      "name": "cobrar",
+      "one_line_profile": "Constraint-based reconstruction and analysis of metabolic networks in R",
+      "detailed_description": "An R package for the constraint-based reconstruction and analysis (COBRA) of metabolic networks, providing tools for flux balance analysis and network manipulation.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "metabolic_modeling",
+        "flux_balance_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/Waschina/cobrar",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cobra",
+        "metabolic-networks",
+        "r",
+        "flux-balance-analysis"
+      ],
+      "id": 14
+    },
+    {
+      "name": "Antimony",
+      "one_line_profile": "A modular human-readable model definition language for systems biology",
+      "detailed_description": "The reference implementation (library and parser) for Antimony, a text-based, human-readable language designed for defining and modularizing systems biology models.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "modeling_language",
+        "model_definition"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/antimony-lang/antimony",
+      "help_website": [
+        "http://antimony.sourceforge.net/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "systems-biology",
+        "modeling-language",
+        "antimony",
+        "rust"
+      ],
+      "id": 15
+    },
+    {
+      "name": "BioSimulations",
+      "one_line_profile": "Platform for sharing and reusing biomodeling studies",
+      "detailed_description": "A web platform and associated tools for sharing, visualizing, and simulating biological models, promoting reproducibility in systems biology research.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "visualization",
+        "reproducibility"
+      ],
+      "application_level": "platform",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/biosimulations/biosimulations",
+      "help_website": [
+        "https://biosimulations.org"
+      ],
+      "license": "MIT",
+      "tags": [
+        "systems-biology",
+        "simulation",
+        "platform",
+        "reproducibility"
+      ],
+      "id": 16
+    },
+    {
+      "name": "BioSimulators",
+      "one_line_profile": "Registry and standard interface for biosimulation tools",
+      "detailed_description": "A registry and set of utilities for containerized biosimulation tools that adhere to a standard command-line interface, facilitating the execution of diverse biological simulations.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "standardization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/biosimulators/Biosimulators",
+      "help_website": [
+        "https://biosimulators.org"
+      ],
+      "license": "MIT",
+      "tags": [
+        "simulation",
+        "docker",
+        "standardization",
+        "systems-biology"
+      ],
+      "id": 17
+    },
+    {
+      "name": "Biosimulators_test_suite",
+      "one_line_profile": "Validation suite for BioSimulators standards",
+      "detailed_description": "A utility tool for validating that biosimulation software tools correctly implement the BioSimulators standards and command-line interfaces.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "validation",
+        "quality_control"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/biosimulators/Biosimulators_test_suite",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "validation",
+        "testing",
+        "biosimulators",
+        "standards"
+      ],
+      "id": 18
+    },
+    {
+      "name": "rust_sbml",
+      "one_line_profile": "SBML parser and Python bindings in Rust",
+      "detailed_description": "A Rust-based parser for the Systems Biology Markup Language (SBML) that includes bindings for Python, offering a high-performance alternative for reading SBML files.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "model_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/carrascomj/rust_sbml",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "sbml",
+        "rust",
+        "parser",
+        "python-bindings"
+      ],
+      "id": 19
+    },
+    {
+      "name": "libCellML",
+      "one_line_profile": "Reference implementation of the CellML model description language",
+      "detailed_description": "The core C++ library for creating, manipulating, and validating CellML models, serving as the reference implementation for the CellML standard.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "model_parsing",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/cellml/libcellml",
+      "help_website": [
+        "https://libcellml.org/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "cellml",
+        "c++",
+        "modeling",
+        "standard"
+      ],
+      "id": 20
+    },
+    {
+      "name": "CellML API",
+      "one_line_profile": "Legacy API for working with CellML models",
+      "detailed_description": "An application programming interface and implementation for working with CellML models, providing tools for model manipulation and code generation (Note: largely superseded by libCellML but historically significant).",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "model_parsing",
+        "code_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/cellmlapi/cellml-api",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cellml",
+        "api",
+        "legacy",
+        "modeling"
+      ],
+      "id": 21
+    },
+    {
+      "name": "libSBGN.js",
+      "one_line_profile": "JavaScript library for parsing and writing SBGN format",
+      "detailed_description": "A JavaScript library designed to parse and write Systems Biology Graphical Notation (SBGN) files, enabling web-based tools to handle standard biological network representations.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "model_parsing",
+        "data_visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/chemhack/libSBGN.js",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "sbgn",
+        "systems-biology",
+        "network-visualization"
+      ],
+      "id": 22
+    },
+    {
+      "name": "EscherConverter",
+      "one_line_profile": "Converter for Escher metabolic maps to standard formats",
+      "detailed_description": "A standalone program that converts files created with the Escher graphical network editor into community standard formats like SBML, facilitating the integration of visualization data with simulation workflows.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "metabolic_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/draeger-lab/EscherConverter",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "escher",
+        "sbml",
+        "metabolic-maps",
+        "conversion"
+      ],
+      "id": 23
+    },
+    {
+      "name": "KEGGtranslator",
+      "one_line_profile": "Tool for translating KEGG pathways to BioPAX and SBML",
+      "detailed_description": "A Java-based software for visualizing and translating the KEGG PATHWAY database, converting KGML files into BioPAX, SBML, GraphML, and other formats for systems biology modeling.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "pathway_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/draeger-lab/KEGGtranslator",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "kegg",
+        "kgml",
+        "sbml",
+        "biopax",
+        "translation"
+      ],
+      "id": 24
+    },
+    {
+      "name": "SBML2LaTeX",
+      "one_line_profile": "Converter from SBML models to LaTeX reports",
+      "detailed_description": "A tool to convert Systems Biology Markup Language (SBML) files into LaTeX documents, allowing for the generation of human-readable PDF reports for model documentation, error detection, and proofreading.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "documentation",
+        "model_visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "TeX",
+      "repo_url": "https://github.com/draeger-lab/SBML2LaTeX",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "sbml",
+        "latex",
+        "documentation",
+        "reporting"
+      ],
+      "id": 25
+    },
+    {
+      "name": "SBSCL",
+      "one_line_profile": "Systems Biology Simulation Core Library",
+      "detailed_description": "A Java implementation of methods to interpret and numerically solve models encoded in the Systems Biology Markup Language (SBML), serving as a core library for simulation applications.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "numerical_solution"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/draeger-lab/SBSCL",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "sbml",
+        "simulation",
+        "ode-solver",
+        "java"
+      ],
+      "id": 26
+    },
+    {
+      "name": "SBTabEditor",
+      "one_line_profile": "Editor for SBML files using SBTab format",
+      "detailed_description": "A cross-platform JavaFX application for reading, writing, manipulating, and validating SBML files, utilizing the SBTab tabular format for easier model data management.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "model_editing",
+        "validation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/draeger-lab/SBTabEditor",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sbml",
+        "sbtab",
+        "model-editing",
+        "validation"
+      ],
+      "id": 27
+    },
+    {
+      "name": "pymCADRE",
+      "one_line_profile": "Reconstruction of tissue-specific metabolic models",
+      "detailed_description": "A Python implementation enabling the reconstruction of tissue-specific metabolic models using transcriptomic data and network topology information, based on the mCADRE algorithm.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "metabolic_reconstruction",
+        "model_building"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/draeger-lab/pymCADRE",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "metabolic-models",
+        "transcriptomics",
+        "reconstruction",
+        "python"
+      ],
+      "id": 28
+    },
+    {
+      "name": "CoReCo",
+      "one_line_profile": "Comparative reconstruction of metabolic networks",
+      "detailed_description": "A computational method for the Comparative ReConstruction of genome-scale metabolic networks, leveraging sequence data to infer metabolic capabilities across species.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "metabolic_reconstruction",
+        "comparative_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/esaskar/CoReCo",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "metabolic-networks",
+        "reconstruction",
+        "genome-scale"
+      ],
+      "id": 29
+    },
+    {
+      "name": "CombineArchive",
+      "one_line_profile": "Library for accessing COMBINE archives",
+      "detailed_description": "Libraries and tools for creating, reading, and manipulating COMBINE archives, a standard format for packaging systems biology models, simulation descriptions, and associated data.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "data_packaging",
+        "standardization"
+      ],
+      "application_level": "library",
+      "primary_language": "C#",
+      "repo_url": "https://github.com/fbergmann/CombineArchive",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "combine-archive",
+        "omex",
+        "systems-biology",
+        "interoperability"
+      ],
+      "id": 30
+    },
+    {
+      "name": "libSEDML",
+      "one_line_profile": "C++ library for SED-ML support",
+      "detailed_description": "A C++ library for reading, writing, and manipulating files in the Simulation Experiment Description Markup Language (SED-ML) format, based on the libSBML architecture.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "simulation_description",
+        "standardization"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/fbergmann/libSEDML",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "sed-ml",
+        "simulation",
+        "reproducibility",
+        "cpp"
+      ],
+      "id": 31
+    },
+    {
+      "name": "Flint",
+      "one_line_profile": "Simulator for biological and physiological models",
+      "detailed_description": "A simulator designed for biological and physiological models, supporting standards like PHML and SBML to execute complex physiological simulations.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "physiological_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/flintproject/Flint",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "simulation",
+        "phml",
+        "sbml",
+        "physiology"
+      ],
+      "id": 32
+    },
+    {
+      "name": "rBiopaxParser",
+      "one_line_profile": "R package for parsing BioPAX files",
+      "detailed_description": "An R package that parses BioPAX files (supporting versions 2 and 3) and represents them within the R environment, enabling statistical analysis and visualization of biological pathways.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "data_parsing",
+        "pathway_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/frankkramer-lab/rBiopaxParser",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "biopax",
+        "r",
+        "pathway",
+        "parsing"
+      ],
+      "id": 33
+    },
+    {
+      "name": "pathways2GO",
+      "one_line_profile": "Converter between BioPAX and GO-CAM",
+      "detailed_description": "Code for converting between BioPAX pathway data and Gene Ontology Causal Activity Models (GO-CAM), facilitating the integration of pathway information with GO annotations.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "data_conversion",
+        "ontology_mapping"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/geneontology/pathways2GO",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "biopax",
+        "go-cam",
+        "gene-ontology",
+        "conversion"
+      ],
+      "id": 34
+    },
+    {
+      "name": "g2f",
+      "one_line_profile": "R package for gap-filling metabolic networks",
+      "detailed_description": "An R package designed to identify and fill gaps in metabolic networks using stoichiometric reactions from a reference reconstruction and a weighting function.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "metabolic_reconstruction",
+        "gap_filling"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/gibbslab/g2f",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "metabolic-network",
+        "gap-filling",
+        "reconstruction",
+        "r"
+      ],
+      "id": 35
+    },
+    {
+      "name": "pybiopax",
+      "one_line_profile": "Python implementation of the BioPAX object model",
+      "detailed_description": "A Python library providing a full implementation of the BioPAX object model, allowing for the programmatic creation, manipulation, and analysis of BioPAX pathway data.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "data_modeling",
+        "pathway_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gyorilab/pybiopax",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "biopax",
+        "python",
+        "pathway",
+        "object-model"
+      ],
+      "id": 36
+    },
+    {
+      "name": "chise.js",
+      "one_line_profile": "Web application for SBGN pathway visualization and editing",
+      "detailed_description": "A web-based application to visualize and edit pathway models represented by the SBGN Process Description Notation, supporting interactive graph manipulation.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "model_editing"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/iVis-at-Bilkent/chise.js",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "sbgn",
+        "visualization",
+        "pathway-editor",
+        "web-app"
+      ],
+      "id": 37
+    },
+    {
+      "name": "cytoscape.js-layout-service",
+      "one_line_profile": "Layout service for Cytoscape.js graphs",
+      "detailed_description": "A web service designed to provide graph layout algorithms for Cytoscape.js, facilitating the automated arrangement of biological networks in web applications.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "graph_layout"
+      ],
+      "application_level": "service",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/iVis-at-Bilkent/cytoscape.js-layout-service",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cytoscape",
+        "graph-layout",
+        "visualization",
+        "service"
+      ],
+      "id": 38
+    },
+    {
+      "name": "newt",
+      "one_line_profile": "Web application for SBGN pathway modeling",
+      "detailed_description": "A comprehensive web application for visualizing and editing biological pathway models, specifically supporting the SBGN standard for process descriptions.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "model_editing"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/iVis-at-Bilkent/newt",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "sbgn",
+        "pathway-editor",
+        "visualization",
+        "web-tool"
+      ],
+      "id": 39
+    },
+    {
+      "name": "sbgnviz.js",
+      "one_line_profile": "Visualization library for SBGN maps",
+      "detailed_description": "A web-based visualization library for rendering Process Description maps in the Systems Biology Graphical Notation (SBGN), enabling integration of pathway views into web tools.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "rendering"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/iVis-at-Bilkent/sbgnviz.js",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "sbgn",
+        "visualization",
+        "javascript",
+        "library"
+      ],
+      "id": 40
+    },
+    {
+      "name": "PanGEM",
+      "one_line_profile": "Pangenome-scale metabolic network reconstruction toolbox",
+      "detailed_description": "A MATLAB toolbox for pangenome-scale metabolic network reconstruction, analysis, and the extraction of strain-specific models from a pangenome reference.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "metabolic_reconstruction",
+        "pangenomics"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/jrcasey/PanGEM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "metabolic-network",
+        "pangenome",
+        "reconstruction",
+        "matlab"
+      ],
+      "id": 41
+    },
+    {
+      "name": "momba",
+      "one_line_profile": "Toolbox for quantitative formal models (JANI)",
+      "detailed_description": "A Python toolbox for dealing with formal models, particularly those in the JANI interchange format, supporting construction, manipulation, and analysis of quantitative models often used in stochastic systems biology.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "formal_modeling",
+        "stochastic_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "PDDL",
+      "repo_url": "https://github.com/koehlma/momba",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "jani",
+        "formal-methods",
+        "stochastic-models",
+        "python"
+      ],
+      "id": 42
+    },
+    {
+      "name": "libsbmljs",
+      "one_line_profile": "WebAssembly/JavaScript SBML library",
+      "detailed_description": "A WebAssembly-based JavaScript library that provides SBML processing capabilities in the browser, enabling high-performance model parsing and manipulation in web applications.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "model_parsing",
+        "web_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/libsbmljs/libsbmljs",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "sbml",
+        "webassembly",
+        "javascript",
+        "parsing"
+      ],
+      "id": 43
+    },
+    {
+      "name": "libsbmlsim",
+      "one_line_profile": "Library for simulating SBML models",
+      "detailed_description": "A C library designed for simulating models encoded in SBML, providing a lightweight and efficient engine for numerical integration of biological systems.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "simulation",
+        "numerical_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/libsbmlsim/libsbmlsim",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "sbml",
+        "simulation",
+        "c-library",
+        "ode"
+      ],
+      "id": 44
+    },
+    {
+      "name": "Sedov-ML",
+      "one_line_profile": "ML for predicting physics variables in Sedov blast simulation",
+      "detailed_description": "A machine learning project for predicting physics variables in Sedov blast wave simulations, demonstrating the application of AI surrogates in fluid dynamics and physics simulations.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "physics_simulation",
+        "surrogate_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Roff",
+      "repo_url": "https://github.com/llnl/Sedov-ML",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "machine-learning",
+        "physics",
+        "simulation",
+        "sedov-blast"
+      ],
+      "id": 45
+    },
+    {
+      "name": "libsbgnpy",
+      "one_line_profile": "Python library for SBGN",
+      "detailed_description": "A Python library for reading, writing, and manipulating Systems Biology Graphical Notation (SBGN) files, facilitating the development of Python-based tools for pathway visualization.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "model_parsing",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/matthiaskoenig/libsbgnpy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sbgn",
+        "python",
+        "pathway",
+        "visualization"
+      ],
+      "id": 46
+    },
+    {
+      "name": "pymetadata",
+      "one_line_profile": "Python utilities for COMBINE archive metadata",
+      "detailed_description": "Python utilities for working with metadata and COMBINE archives, supporting the annotation and management of systems biology models to ensure reproducibility.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "metadata_management",
+        "data_packaging"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/matthiaskoenig/pymetadata",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "metadata",
+        "combine-archive",
+        "python",
+        "reproducibility"
+      ],
+      "id": 47
+    },
+    {
+      "name": "sbmlutils",
+      "one_line_profile": "Python utilities for SBML",
+      "detailed_description": "A collection of Python utilities for working with SBML models, providing helper functions for model creation, manipulation, and simulation setup.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "model_manipulation",
+        "utility"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/matthiaskoenig/sbmlutils",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sbml",
+        "python",
+        "utilities",
+        "modeling"
+      ],
+      "id": 48
+    },
+    {
+      "name": "swiftcore",
+      "one_line_profile": "Accelerated metabolic network reconstruction",
+      "detailed_description": "A tool that accelerates genome-scale metabolic network reconstruction by using convex optimization techniques such as factorization and regularization.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "metabolic_reconstruction",
+        "optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/mtefagh/swiftcore",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "metabolic-network",
+        "reconstruction",
+        "convex-optimization"
+      ],
+      "id": 49
+    },
+    {
+      "name": "Medusa",
+      "one_line_profile": "Analysis of ensembles of metabolic network reconstructions",
+      "detailed_description": "A Python package for the generation and analysis of ensembles of genome-scale metabolic network reconstructions, allowing researchers to account for uncertainty in network structure.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "metabolic_analysis",
+        "ensemble_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/opencobra/Medusa",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "metabolic-network",
+        "ensemble",
+        "cobra",
+        "python"
+      ],
+      "id": 50
+    },
+    {
+      "name": "OpenCOR",
+      "one_line_profile": "Modelling environment for CellML",
+      "detailed_description": "A cross-platform modelling environment designed to organise, edit, simulate, and analyse CellML files, providing a comprehensive workspace for physiological modeling.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "model_editing"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/opencor/opencor",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "cellml",
+        "simulation",
+        "modeling-environment",
+        "cpp"
+      ],
+      "id": 51
+    },
+    {
+      "name": "GPRuler",
+      "one_line_profile": "Reconstruction of Gene-Protein-Reaction rules",
+      "detailed_description": "An open-source computational framework to automate the reconstruction process of Gene-Protein-Reaction (GPR) rules within metabolic networks, linking genomic data to metabolic reactions.",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "metabolic_reconstruction",
+        "gpr_association"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/qLSLab/GPRuler",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "metabolic-network",
+        "gpr",
+        "reconstruction",
+        "python"
+      ],
+      "id": 52
+    },
+    {
+      "name": "sbml2hyb",
+      "one_line_profile": "Tool for SBML compatible hybrid modelling",
+      "detailed_description": "A tool designed to facilitate hybrid modelling of biological systems while maintaining compatibility with the SBML standard, allowing for the integration of discrete and continuous modeling approaches.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "hybrid_modeling",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/r-costa/sbml2hyb",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "sbml",
+        "hybrid-modeling",
+        "systems-biology"
+      ],
+      "id": 53
+    },
+    {
+      "name": "SBML_odeSolver",
+      "one_line_profile": "C library for symbolic and numerical analysis of ODEs derived from SBML models",
+      "detailed_description": "A C library designed to perform symbolic and numerical analysis on systems of ordinary differential equations (ODEs) that are derived from chemical reaction networks encoded in the Systems Biology Markup Language (SBML). It supports simulation and analysis of biological dynamics.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "simulation",
+        "numerical_analysis",
+        "ode_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "C",
+      "repo_url": "https://github.com/raim/SBML_odeSolver",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "sbml",
+        "ode",
+        "simulation",
+        "systems-biology"
+      ],
+      "id": 54
+    },
+    {
+      "name": "libsbgn",
+      "one_line_profile": "Library for reading, writing, and manipulating SBGN (Systems Biology Graphical Notation) files",
+      "detailed_description": "A library providing support for the Systems Biology Graphical Notation (SBGN), a standard for visualizing biological networks. It enables developers to read, write, and validate SBGN files in Java and C++ applications.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "format_handling",
+        "network_representation"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/sbgn/libsbgn",
+      "help_website": [
+        "http://sbgn.org/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "sbgn",
+        "visualization",
+        "biological-networks"
+      ],
+      "id": 55
+    },
+    {
+      "name": "ySBGN",
+      "one_line_profile": "Converter between GraphML (yED) and SBGN-ML formats",
+      "detailed_description": "A utility tool that facilitates the translation between GraphML format (used by the yED graph editor) and SBGN-ML, allowing researchers to design biological networks in yED and convert them to the standard SBGN format.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "network_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/sbgn/ySBGN",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "sbgn",
+        "graphml",
+        "converter",
+        "yed"
+      ],
+      "id": 56
+    },
+    {
+      "name": "deviser",
+      "one_line_profile": "Design Explorer and Viewer for Iterative SBML Enhancement",
+      "detailed_description": "A tool designed for exploring and viewing SBML models, aiding in the iterative enhancement of model representations. It serves as a visual interface for inspecting model structures in systems biology.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "model_visualization",
+        "model_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/sbmlteam/deviser",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "sbml",
+        "visualization",
+        "model-editing"
+      ],
+      "id": 57
+    },
+    {
+      "name": "JSBML",
+      "one_line_profile": "Pure Java library for reading, writing, and manipulating SBML files",
+      "detailed_description": "A community-driven, pure Java library for processing Systems Biology Markup Language (SBML) files. It provides a comprehensive API for reading, writing, and manipulating SBML data structures, serving as an alternative to the JNI-based libSBML bindings.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "format_handling",
+        "model_manipulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/sbmlteam/jsbml",
+      "help_website": [
+        "http://sbml.org/Software/JSBML"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "sbml",
+        "java",
+        "bioinformatics"
+      ],
+      "id": 58
+    },
+    {
+      "name": "libCombine",
+      "one_line_profile": "C++ library for working with the COMBINE Archive format",
+      "detailed_description": "A C++ library implementing support for the COMBINE Archive format (OMEX), which is used to bundle systems biology models, simulation descriptions, and associated data into a single file for exchange and reproducibility.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "data_archiving",
+        "reproducibility",
+        "format_handling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/sbmlteam/libCombine",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "combine-archive",
+        "omex",
+        "reproducibility"
+      ],
+      "id": 59
+    },
+    {
+      "name": "libSBML",
+      "one_line_profile": "Standard native library for reading, writing, and manipulating SBML files",
+      "detailed_description": "The reference implementation library for the Systems Biology Markup Language (SBML). It provides APIs for reading, writing, validating, and manipulating SBML models, with bindings for multiple programming languages including C, C++, Python, Java, and MATLAB.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "format_handling",
+        "model_validation",
+        "interoperability"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/sbmlteam/libsbml",
+      "help_website": [
+        "http://sbml.org/Software/libSBML"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "sbml",
+        "systems-biology",
+        "standard"
+      ],
+      "id": 60
+    },
+    {
+      "name": "python-libsbml",
+      "one_line_profile": "Python bindings for libSBML to handle SBML models",
+      "detailed_description": "A standalone Python package providing the libSBML interface. It allows Python developers to read, write, validate, and manipulate SBML Level 3 Core and package extensions for systems biology modeling.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "format_handling",
+        "model_manipulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sbmlteam/python-libsbml",
+      "help_website": [
+        "http://sbml.org/Software/libSBML"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "sbml",
+        "python",
+        "bioinformatics"
+      ],
+      "id": 61
+    },
+    {
+      "name": "Spatial Model Editor",
+      "one_line_profile": "Spatial bio-chemical reaction model editor and simulator",
+      "detailed_description": "A software tool for creating, editing, and simulating spatial biochemical reaction models. It supports the definition of geometry and reaction kinetics, enabling the study of spatial dynamics in biological systems.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "spatial_modeling",
+        "simulation",
+        "model_editing"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/spatial-model-editor/spatial-model-editor",
+      "help_website": [
+        "https://spatial-model-editor.github.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "spatial-modeling",
+        "simulation",
+        "reaction-diffusion"
+      ],
+      "id": 62
+    },
+    {
+      "name": "simpleSBML",
+      "one_line_profile": "Simplified Python interface for building SBML models",
+      "detailed_description": "A Python package that provides a simplified, high-level interface for constructing SBML models. It abstracts away the complexity of the full libSBML API, making it easier for researchers to script model generation.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "model_construction",
+        "scripting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sys-bio/simplesbml",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sbml",
+        "python",
+        "model-building"
+      ],
+      "id": 63
+    },
+    {
+      "name": "Chimera",
+      "one_line_profile": "Pipeline for genome-based metabolic network reconstruction and visualization",
+      "detailed_description": "A pipeline tool designed for the reconstruction, evaluation, and visualization of metabolic networks based on genomic data. It facilitates the creation of genome-scale metabolic models (GEMs).",
+      "domains": [
+        "SYSBIO1"
+      ],
+      "subtask_category": [
+        "metabolic_reconstruction",
+        "network_visualization",
+        "model_evaluation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/tamascogustavo/chimera",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "metabolic-network",
+        "reconstruction",
+        "visualization"
+      ],
+      "id": 64
+    },
+    {
+      "name": "SBtab",
+      "one_line_profile": "Tools and format definition for table-based systems biology data",
+      "detailed_description": "A project defining the SBtab format, which uses spreadsheet-like tables to represent systems biology models and data. The repository typically includes specifications and utility scripts for handling this format.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "format_handling",
+        "data_representation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tlubitz/SBtab",
+      "help_website": [
+        "http://sbtab.net"
+      ],
+      "license": "MIT",
+      "tags": [
+        "sbtab",
+        "data-format",
+        "systems-biology"
+      ],
+      "id": 65
+    },
+    {
+      "name": "krayon4sbgn",
+      "one_line_profile": "Editor for SBGN diagrams based on yFiles",
+      "detailed_description": "A graphical editor for creating and modifying Systems Biology Graphical Notation (SBGN) diagrams. It is built using Kotlin and the yFiles library, providing a user-friendly interface for biological network visualization.",
+      "domains": [
+        "SYSBIO1",
+        "SYSBIO1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "network_editing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Kotlin",
+      "repo_url": "https://github.com/wiese42/krayon4sbgn",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "sbgn",
+        "editor",
+        "visualization"
+      ],
+      "id": 66
+    }
+  ]
+}

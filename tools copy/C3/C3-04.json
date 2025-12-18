@@ -1,0 +1,794 @@
+{
+  "generated_at": "2025-12-16T06:44:21.502197+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "C3",
+      "leaf_cluster_name": "化学-反应预测与逆合成生态",
+      "domain": "Chemistry",
+      "typical_objects": "reaction SMILES/templates",
+      "task_chain": "清洗→预测→规划→路线评估→benchmark",
+      "tool_form": "预测/规划器 + 数据/评测"
+    },
+    "unit": {
+      "unit_id": "C3-04",
+      "unit_name": "可行性/条件推荐/路线评估",
+      "target_scale": "150–350",
+      "coverage_tools": "condition prediction、route scoring"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] ReacNet",
+        "[GH] ParRoute",
+        "[GH] Chemformer",
+        "[GH] Yield-BERT",
+        "[GH] RAscore",
+        "[GH] SYBA",
+        "[GH] SCScore",
+        "[GH] AiZynthFinder",
+        "[GH] ASKCOS",
+        "[GH] reaction condition prediction",
+        "[GH] reaction yield prediction",
+        "[GH] retrosynthesis route scoring",
+        "[GH] synthetic accessibility score",
+        "[GH] reaction context recommendation",
+        "[GH] chemical reaction feasibility",
+        "[GH] catalyst prediction",
+        "[GH] solvent prediction",
+        "[GH] reaction optimization",
+        "[GH] reaction feasibility analysis",
+        "[GH] chemical route evaluation",
+        "[WEB] reaction condition prediction deep learning github",
+        "[WEB] chemical reaction yield prediction github",
+        "[WEB] retrosynthetic route scoring algorithm github",
+        "[WEB] synthetic accessibility score python github",
+        "[WEB] reaction context recommendation system github",
+        "[WEB] AI based reaction feasibility assessment github"
+      ],
+      "total_candidates": 361,
+      "tool_candidates": 88,
+      "final_tools": 30
+    }
+  },
+  "tools": [
+    {
+      "name": "ASKCOS",
+      "one_line_profile": "Computer-aided synthesis planning software package",
+      "detailed_description": "A comprehensive software package for computer-aided synthesis planning (CASP) that integrates data-driven retrosynthesis prediction, reaction condition recommendation, and route evaluation.",
+      "domains": [
+        "Chemistry",
+        "C3",
+        "C3-04"
+      ],
+      "subtask_category": [
+        "retrosynthesis",
+        "synthesis_planning",
+        "condition_prediction"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ASKCOS/ASKCOS",
+      "help_website": [
+        "https://askcos.mit.edu/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "casp",
+        "retrosynthesis",
+        "cheminformatics"
+      ],
+      "id": 1
+    },
+    {
+      "name": "askcos-core",
+      "one_line_profile": "Core logic library for the ASKCOS synthesis planning platform",
+      "detailed_description": "The backend Python package providing the core algorithms and prediction logic for the ASKCOS platform, handling chemical reactivity prediction and route scoring.",
+      "domains": [
+        "Chemistry",
+        "C3",
+        "C3-04"
+      ],
+      "subtask_category": [
+        "reactivity_prediction",
+        "route_scoring"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ASKCOS/askcos-core",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "backend",
+        "reactivity",
+        "synthesis-planning"
+      ],
+      "id": 2
+    },
+    {
+      "name": "ASKCOSv2 (Mirror)",
+      "one_line_profile": "Mirror of the ASKCOSv2 synthesis planning platform",
+      "detailed_description": "A mirror of the ASKCOSv2 project, providing computer-aided synthesis planning capabilities with specific customizations (Chemhacktica-flavored).",
+      "domains": [
+        "Chemistry",
+        "C3",
+        "C3-04"
+      ],
+      "subtask_category": [
+        "synthesis_planning",
+        "retrosynthesis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FourThievesVinegar/ASKCOSv2",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "casp",
+        "mirror",
+        "synthesis"
+      ],
+      "id": 3
+    },
+    {
+      "name": "askcos2_core (Mirror)",
+      "one_line_profile": "Mirror of the core library for ASKCOSv2",
+      "detailed_description": "A mirror of the askcos2-core package, providing the underlying algorithms and logic for the ASKCOSv2 synthesis planning system.",
+      "domains": [
+        "Chemistry",
+        "C3",
+        "C3-04"
+      ],
+      "subtask_category": [
+        "synthesis_planning",
+        "backend"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/FourThievesVinegar/askcos2_core",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "core",
+        "synthesis",
+        "mirror"
+      ],
+      "id": 4
+    },
+    {
+      "name": "RDTool",
+      "one_line_profile": "Optimized Reaction Decoder Tool for atom mapping",
+      "detailed_description": "An optimized version of the Reaction Decoder Tool (RDTool) used for reaction atom mapping and analysis, essential for reaction data processing.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "atom_mapping",
+        "reaction_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/Laboratoire-de-Chemoinformatique/RDTool",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "atom-mapping",
+        "reaction-decoder",
+        "java"
+      ],
+      "id": 5
+    },
+    {
+      "name": "MANULS",
+      "one_line_profile": "Electrostatic catalysis optimization program",
+      "detailed_description": "A program designed to find the smallest electric field required to remove the reaction barrier for electrostatic catalysis of chemical reactions.",
+      "domains": [
+        "Chemistry",
+        "C3-04"
+      ],
+      "subtask_category": [
+        "catalysis_optimization",
+        "reaction_barrier_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MSeveri96/MANULS",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "catalysis",
+        "electrostatics",
+        "reaction-barrier"
+      ],
+      "id": 6
+    },
+    {
+      "name": "ReactiveDynamics.jl",
+      "one_line_profile": "Julia package for reaction network dynamical systems",
+      "detailed_description": "A Julia package implementing a category of reaction (transportation) network-type dynamical systems for modeling reactive dynamics.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "reaction_dynamics",
+        "network_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/Merck/ReactiveDynamics.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "julia",
+        "dynamics",
+        "reaction-network"
+      ],
+      "id": 7
+    },
+    {
+      "name": "aizynthfinder",
+      "one_line_profile": "Retrosynthetic planning tool",
+      "detailed_description": "A tool for retrosynthetic planning that uses neural networks and tree search algorithms to suggest synthesis routes for target molecules.",
+      "domains": [
+        "Chemistry",
+        "C3",
+        "C3-04"
+      ],
+      "subtask_category": [
+        "retrosynthesis",
+        "route_planning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MolecularAI/aizynthfinder",
+      "help_website": [
+        "https://molecularai.github.io/aizynthfinder/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "retrosynthesis",
+        "ai-planning",
+        "cheminformatics"
+      ],
+      "id": 8
+    },
+    {
+      "name": "AARON",
+      "one_line_profile": "Automated Reaction Optimizer for New catalysts",
+      "detailed_description": "A tool that automates DFT optimizations of transition state (TS) structures for asymmetric catalytic reactions, facilitating catalyst discovery.",
+      "domains": [
+        "Chemistry",
+        "C3-04"
+      ],
+      "subtask_category": [
+        "reaction_optimization",
+        "ts_search",
+        "dft_automation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/QChASM/Aaron",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "catalysis",
+        "dft",
+        "optimization"
+      ],
+      "id": 9
+    },
+    {
+      "name": "AROPS",
+      "one_line_profile": "Automated Reaction Optimization with Parallelized Scheduling",
+      "detailed_description": "A framework for automated reaction optimization that employs parallelized scheduling to efficiently explore reaction conditions.",
+      "domains": [
+        "Chemistry",
+        "C3-04"
+      ],
+      "subtask_category": [
+        "reaction_optimization",
+        "process_scheduling"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Ruan-Yixiang/AROPS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "automation",
+        "optimization",
+        "scheduling"
+      ],
+      "id": 10
+    },
+    {
+      "name": "SA_score",
+      "one_line_profile": "Synthetic Accessibility score calculator",
+      "detailed_description": "A standalone implementation for calculating the Synthetic Accessibility (SA) score of molecules, used to estimate the difficulty of synthesizing a compound.",
+      "domains": [
+        "Chemistry",
+        "C3-04"
+      ],
+      "subtask_category": [
+        "feasibility_scoring",
+        "synthetic_accessibility"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UnixJunkie/SA_score",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "sa-score",
+        "cheminformatics",
+        "feasibility"
+      ],
+      "id": 11
+    },
+    {
+      "name": "pyGSM",
+      "one_line_profile": "Reaction path optimization and discovery tool",
+      "detailed_description": "A Python tool for thermal and photochemical reaction path optimization and discovery using the Growing String Method (GSM).",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "reaction_path_optimization",
+        "mechanism_discovery"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ZimmermanGroup/pyGSM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gsm",
+        "reaction-path",
+        "photochemistry"
+      ],
+      "id": 12
+    },
+    {
+      "name": "precomplex_generator",
+      "one_line_profile": "Input structure generator for TS searches",
+      "detailed_description": "A tool for generating suitable precomplex input structures for automated transition-state (TS) searches based on single-ended reaction path optimization algorithms.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "ts_search",
+        "structure_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/basf/precomplex_generator",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "transition-state",
+        "computational-chemistry",
+        "automation"
+      ],
+      "id": 13
+    },
+    {
+      "name": "reacnetgenerator",
+      "one_line_profile": "Reaction network generator for MD simulations",
+      "detailed_description": "An automatic reaction network generator designed for analyzing reactive molecular dynamics simulations and extracting reaction networks.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "reaction_network_generation",
+        "md_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepmodeling/reacnetgenerator",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "molecular-dynamics",
+        "reaction-network",
+        "analysis"
+      ],
+      "id": 14
+    },
+    {
+      "name": "EDBO+",
+      "one_line_profile": "Bayesian reaction optimization tool",
+      "detailed_description": "EDBO+ (Experimental Design via Bayesian Optimization) is a tool for chemical synthesis optimization, utilizing Bayesian optimization to recommend experimental conditions.",
+      "domains": [
+        "Chemistry",
+        "C3-04"
+      ],
+      "subtask_category": [
+        "reaction_optimization",
+        "experimental_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/doyle-lab-ucla/edboplus",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bayesian-optimization",
+        "synthesis",
+        "automation"
+      ],
+      "id": 15
+    },
+    {
+      "name": "CrossSpeciesWorkflow",
+      "one_line_profile": "CWL workflow for protein structure and phenotype prediction",
+      "detailed_description": "A Common Workflow Language (CWL) workflow that integrates multiple third-party prediction methods for protein secondary structure, solvent accessibility, and modifications.",
+      "domains": [
+        "Biology",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "structure_prediction",
+        "property_prediction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eliza-m/CrossSpeciesWorkflow",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "cwl",
+        "protein-structure",
+        "workflow"
+      ],
+      "id": 16
+    },
+    {
+      "name": "pysisyphus",
+      "one_line_profile": "Reaction path and stationary point optimization suite",
+      "detailed_description": "A Python suite for the optimization of stationary points on ground- and excited-state potential energy surfaces and the determination of reaction paths.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "reaction_path_optimization",
+        "pes_exploration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eljost/pysisyphus",
+      "help_website": [
+        "https://pysisyphus.readthedocs.io/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "quantum-chemistry",
+        "optimization",
+        "reaction-path"
+      ],
+      "id": 17
+    },
+    {
+      "name": "RNAsnap2",
+      "one_line_profile": "RNA solvent accessibility prediction tool",
+      "detailed_description": "A tool for single-sequence and profile-based prediction of RNA solvent accessibility using dilated convolution neural networks.",
+      "domains": [
+        "Biology",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "rna_structure_prediction",
+        "solvent_accessibility"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/jaswindersingh2/RNAsnap2",
+      "help_website": [],
+      "license": "MPL-2.0",
+      "tags": [
+        "rna",
+        "deep-learning",
+        "structure-prediction"
+      ],
+      "id": 18
+    },
+    {
+      "name": "Deep-Synthesis",
+      "one_line_profile": "Deep learning framework for chemical synthesis prediction",
+      "detailed_description": "A deep learning framework designed for predicting chemical synthesis outcomes and reactions.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "synthesis_prediction",
+        "reaction_prediction"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kheyer/Deep-Synthesis",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "deep-learning",
+        "synthesis",
+        "prediction"
+      ],
+      "id": 19
+    },
+    {
+      "name": "Retrosynthesis-Prediction",
+      "one_line_profile": "Transformer-based sequence-to-sequence model for retrosynthesis prediction",
+      "detailed_description": "A deep learning implementation using Transformer architecture to predict retrosynthetic routes from product SMILES, featuring data augmentation strategies to improve model robustness.",
+      "domains": [
+        "C3",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "retrosynthesis",
+        "reaction_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/kheyer/Retrosynthesis-Prediction",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "transformer",
+        "retrosynthesis",
+        "deep-learning",
+        "smiles"
+      ],
+      "id": 20
+    },
+    {
+      "name": "SYBA",
+      "one_line_profile": "Synthetic Bayesian Accessibility scoring tool for organic compounds",
+      "detailed_description": "A classification tool that calculates a score (SYBA) to estimate the synthetic accessibility of organic molecules based on the distribution of substructures in easy-to-synthesize and hard-to-synthesize datasets.",
+      "domains": [
+        "C3",
+        "C3-04"
+      ],
+      "subtask_category": [
+        "synthetic_accessibility_scoring",
+        "feasibility_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lich-uct/syba",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "synthetic-accessibility",
+        "scoring-function",
+        "cheminformatics"
+      ],
+      "id": 21
+    },
+    {
+      "name": "ChemOpt",
+      "one_line_profile": "Deep reinforcement learning framework for chemical reaction optimization",
+      "detailed_description": "A framework that utilizes deep reinforcement learning to optimize chemical reaction conditions, aiming to maximize yield or other objectives through automated exploration of the parameter space.",
+      "domains": [
+        "C3",
+        "C3-04"
+      ],
+      "subtask_category": [
+        "reaction_optimization",
+        "condition_recommendation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lightingghost/chemopt",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reinforcement-learning",
+        "reaction-optimization",
+        "automation"
+      ],
+      "id": 22
+    },
+    {
+      "name": "RAScore",
+      "one_line_profile": "Tool for analyzing and classifying RAS protein structures",
+      "detailed_description": "A specialized tool designed to analyze the structures of RAS proteins, facilitating the classification and study of this critical protein family in biology.",
+      "domains": [
+        "Biology"
+      ],
+      "subtask_category": [
+        "protein_structure_analysis",
+        "structural_biology"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mitch-parker/rascore",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ras-protein",
+        "structure-analysis",
+        "bioinformatics"
+      ],
+      "id": 23
+    },
+    {
+      "name": "AZURE2",
+      "one_line_profile": "R-Matrix minimization code for nuclear astrophysics reaction analysis",
+      "detailed_description": "A specialized code for the analysis of complex multi-level multi-channel nuclear reactions, optimized for low energy charged particle reactions relevant to stellar nucleosynthesis.",
+      "domains": [
+        "Physics",
+        "Nuclear Astrophysics"
+      ],
+      "subtask_category": [
+        "nuclear_reaction_analysis",
+        "r-matrix_calculation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rdeboer1/AZURE2",
+      "help_website": [
+        "https://azure.nd.edu/"
+      ],
+      "license": null,
+      "tags": [
+        "nuclear-physics",
+        "astrophysics",
+        "reaction-analysis"
+      ],
+      "id": 24
+    },
+    {
+      "name": "RDKit",
+      "one_line_profile": "Open source toolkit for cheminformatics",
+      "detailed_description": "The industry-standard open-source library for cheminformatics, providing extensive functionality for molecule manipulation, descriptor calculation, fingerprint generation, and chemical reaction handling.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "cheminformatics_utility",
+        "molecule_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/rdkit/rdkit",
+      "help_website": [
+        "https://www.rdkit.org/docs/index.html"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cheminformatics",
+        "molecular-modeling",
+        "descriptors"
+      ],
+      "id": 25
+    },
+    {
+      "name": "CORDA",
+      "one_line_profile": "Cost Optimization Reaction Dependency Assessment for metabolic models",
+      "detailed_description": "A Python implementation for reconstructing genome-scale metabolic models using the CORDA algorithm, which assesses reaction dependencies to build concise metabolic networks.",
+      "domains": [
+        "Biology",
+        "Systems Biology"
+      ],
+      "subtask_category": [
+        "metabolic_model_reconstruction",
+        "network_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/resendislab/corda",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "metabolic-modeling",
+        "systems-biology",
+        "reconstruction"
+      ],
+      "id": 26
+    },
+    {
+      "name": "RAscore",
+      "one_line_profile": "Retrosynthetic Accessibility score prediction tool",
+      "detailed_description": "A machine learning-based scoring function that predicts the retrosynthetic accessibility (RA) of molecules, trained on outcomes from computer-aided synthesis planning tools.",
+      "domains": [
+        "C3",
+        "C3-04"
+      ],
+      "subtask_category": [
+        "retrosynthetic_accessibility_scoring",
+        "feasibility_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/reymond-group/RAscore",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "retrosynthesis",
+        "scoring-function",
+        "machine-learning"
+      ],
+      "id": 27
+    },
+    {
+      "name": "rxn_yields",
+      "one_line_profile": "Chemical reaction yield prediction and data augmentation",
+      "detailed_description": "A library for training and evaluating machine learning models for chemical reaction yield prediction, including implementations of data augmentation strategies for reactions.",
+      "domains": [
+        "C3",
+        "C3-04"
+      ],
+      "subtask_category": [
+        "yield_prediction",
+        "reaction_augmentation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rxn4chemistry/rxn_yields",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "yield-prediction",
+        "reaction-yield",
+        "bert"
+      ],
+      "id": 28
+    },
+    {
+      "name": "Summit",
+      "one_line_profile": "Machine learning platform for chemical reaction optimization",
+      "detailed_description": "A comprehensive toolkit for optimizing chemical reactions, providing interfaces for various machine learning algorithms and benchmarks to accelerate the discovery of optimal reaction conditions.",
+      "domains": [
+        "C3",
+        "C3-04"
+      ],
+      "subtask_category": [
+        "reaction_optimization",
+        "experimental_design"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sustainable-processes/summit",
+      "help_website": [
+        "https://summit.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "reaction-optimization",
+        "bayesian-optimization",
+        "machine-learning"
+      ],
+      "id": 29
+    },
+    {
+      "name": "gopt",
+      "one_line_profile": "Library for molecular geometry optimization and reaction pathway determination",
+      "detailed_description": "A Python library designed for optimizing molecular structures and finding chemical reaction pathways, suitable for computational chemistry workflows.",
+      "domains": [
+        "Chemistry",
+        "C3"
+      ],
+      "subtask_category": [
+        "geometry_optimization",
+        "reaction_pathway_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/theochem/gopt",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "computational-chemistry",
+        "geometry-optimization",
+        "reaction-pathway"
+      ],
+      "id": 30
+    }
+  ]
+}

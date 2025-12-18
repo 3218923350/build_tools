@@ -1,0 +1,4714 @@
+{
+  "generated_at": "2025-12-16T12:17:55.430464+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "P3",
+      "leaf_cluster_name": "物理-粒子/多体/动力学生态",
+      "domain": "Physics",
+      "typical_objects": "trajectories",
+      "task_chain": "模拟→统计→可视化→基准",
+      "tool_form": "引擎 + 分析 + HPC"
+    },
+    "unit": {
+      "unit_id": "P3-04",
+      "unit_name": "AI代理模拟与降阶",
+      "target_scale": "150–350",
+      "coverage_tools": "surrogates、ROM、operator learning"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] TensorDiffEq",
+        "[GH] Pina",
+        "[GH] SciML",
+        "[GH] EZyRB",
+        "[GH] SMT",
+        "[GH] PyDMD",
+        "[GH] PySINDy",
+        "[GH] NVIDIA Modulus",
+        "[GH] neuraloperator",
+        "[GH] DeepXDE",
+        "[GH] surrogate model",
+        "[GH] reduced order model",
+        "[GH] neural operator",
+        "[GH] fourier neural operator",
+        "[GH] deeponet",
+        "[GH] operator learning",
+        "[GH] model reduction",
+        "[GH] physics informed machine learning",
+        "[GH] koopman operator",
+        "[GH] dynamic mode decomposition",
+        "[GH] data-driven dynamics",
+        "[GH] pde surrogate",
+        "[GH] sparse identification",
+        "[GH] dynamical systems learning",
+        "[WEB] reduced order modeling python library github",
+        "[WEB] neural operator framework github",
+        "[WEB] surrogate modeling toolbox physics github",
+        "[WEB] data-driven fluid dynamics simulation github",
+        "[WEB] physics informed deep learning tools github",
+        "[WEB] koopman operator deep learning github"
+      ],
+      "total_candidates": 1152,
+      "tool_candidates": 788,
+      "final_tools": 186
+    }
+  },
+  "tools": [
+    {
+      "name": "Super-Resolution-Neural-Operator",
+      "one_line_profile": "Neural operator framework for super-resolution of physical fields",
+      "detailed_description": "An implementation of the Super-Resolution Neural Operator (SRNO) designed to enhance the resolution of physical field data, such as fluid dynamics simulations, using operator learning techniques.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "super_resolution",
+        "surrogate_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/2y7c3/Super-Resolution-Neural-Operator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operator",
+        "super-resolution",
+        "pde"
+      ],
+      "id": 1
+    },
+    {
+      "name": "AI4SIM Model Collection",
+      "one_line_profile": "Collection of deep learning surrogate models for physical processes",
+      "detailed_description": "A repository providing canonical PyTorch Lightning pipelines and model implementations for surrogating various physical processes, developed by the AI4Sim team.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AI4SIM/model-collection",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "surrogate-model",
+        "physics-simulation",
+        "deep-learning"
+      ],
+      "id": 2
+    },
+    {
+      "name": "BENO",
+      "one_line_profile": "Boundary-embedded neural operator for PDEs with complex geometries",
+      "detailed_description": "A boundary-embedded neural operator (BENO) implementation that incorporates complex boundary shapes and inhomogeneous boundary values for solving partial differential equations.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "surrogate_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AI4Science-WestlakeU/beno",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operator",
+        "pde",
+        "boundary-conditions"
+      ],
+      "id": 3
+    },
+    {
+      "name": "LE-PDE-UQ",
+      "one_line_profile": "Uncertainty quantification for deep learning-based PDE surrogates",
+      "detailed_description": "A framework that endows deep learning-based surrogate models with robust and efficient uncertainty quantification capabilities for both forward and inverse PDE problems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/AI4Science-WestlakeU/le-pde-uq",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "uncertainty-quantification",
+        "pde",
+        "surrogate-model"
+      ],
+      "id": 4
+    },
+    {
+      "name": "WDNO",
+      "one_line_profile": "Wavelet Diffusion Neural Operator for generative PDE simulation",
+      "detailed_description": "Wavelet Diffusion Neural Operator (WDNO) utilizes diffusion models in wavelet space for generative simulation and control of partial differential equations.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "generative_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AI4Science-WestlakeU/wdno",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-model",
+        "neural-operator",
+        "wavelet"
+      ],
+      "id": 5
+    },
+    {
+      "name": "flowTorch",
+      "one_line_profile": "Library for analysis and reduced-order modeling of fluid flows",
+      "detailed_description": "A Python library designed for the analysis and reduced-order modeling (ROM) of fluid flow data, leveraging PyTorch for optimization and learning.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "fluid_dynamics_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/AndreWeiner/flowtorch",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "fluid-dynamics",
+        "rom",
+        "pytorch"
+      ],
+      "id": 6
+    },
+    {
+      "name": "Seeq",
+      "one_line_profile": "Hybrid physics-informed machine learning library",
+      "detailed_description": "A library for hybrid physics-informed machine learning, developed by the BYU-PRISM group, likely focusing on optimization and parameter estimation in scientific models.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "physics_informed_learning",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BYU-PRISM/Seeq",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "piml",
+        "machine-learning",
+        "physics"
+      ],
+      "id": 7
+    },
+    {
+      "name": "FactFormer",
+      "one_line_profile": "Scalable Transformer for PDE surrogate modelling",
+      "detailed_description": "An implementation of the FactFormer architecture, a scalable Transformer-based model designed for efficient surrogate modeling of partial differential equations.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "pde_solving"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BaratiLab/FactFormer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "transformer",
+        "pde",
+        "surrogate-model"
+      ],
+      "id": 8
+    },
+    {
+      "name": "ROMER",
+      "one_line_profile": "Reduced-Order Modeling of Fluid Flows with Transformers",
+      "detailed_description": "A Transformer-based framework for reduced-order modeling (ROM) of fluid dynamics, enabling efficient prediction and reconstruction of flow fields.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/BaratiLab/ROMER",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rom",
+        "fluid-dynamics",
+        "transformer"
+      ],
+      "id": 9
+    },
+    {
+      "name": "DeepKoopman",
+      "one_line_profile": "Neural networks for learning Koopman eigenfunctions",
+      "detailed_description": "A library using neural networks to learn Koopman eigenfunctions, enabling the modeling of nonlinear dynamical systems as linear systems in a lifted space.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "dynamics_modeling",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/BethanyL/DeepKoopman",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "koopman-operator",
+        "dynamical-systems",
+        "deep-learning"
+      ],
+      "id": 10
+    },
+    {
+      "name": "LiiBRA.jl",
+      "one_line_profile": "Reduced-order state-space models for lithium-ion batteries",
+      "detailed_description": "A Julia package for creating reduced-order state-space models of lithium-ion batteries using realisation algorithms, facilitating efficient battery simulation.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "battery_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/BradyPlanden/LiiBRA.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "battery",
+        "rom",
+        "julia"
+      ],
+      "id": 11
+    },
+    {
+      "name": "EFDO",
+      "one_line_profile": "Neural operator for magnetotelluric data forward modeling",
+      "detailed_description": "A neural operator network designed for fast forward modeling of magnetotelluric data in complex media, serving as a surrogate for geophysical simulations.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "forward_modeling",
+        "geophysics_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/CUG-EMI/EFDO",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "magnetotellurics",
+        "neural-operator",
+        "geophysics"
+      ],
+      "id": 12
+    },
+    {
+      "name": "DeepOHeat",
+      "one_line_profile": "Operator learning-based thermal simulation for 3D-IC",
+      "detailed_description": "An operator learning-based tool for ultra-fast thermal simulation in 3D integrated circuit (3D-IC) design, providing a surrogate model for heat diffusion.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "thermal_simulation",
+        "operator_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Cadence-Celsius/DeepOHeat",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "thermal-simulation",
+        "operator-learning",
+        "3d-ic"
+      ],
+      "id": 13
+    },
+    {
+      "name": "keedmd",
+      "one_line_profile": "Koopman Eigenfunction Extended Dynamic Mode Decomposition",
+      "detailed_description": "A library for the construction of Koopman eigenfunctions and identification of lifted state-space models using the Koopman Eigenfunction Extended Dynamic Mode Decomposition (KEEDMD) method.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "dynamics_identification",
+        "koopman_operator"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Cafolkes/keedmd",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "koopman",
+        "dmd",
+        "system-identification"
+      ],
+      "id": 14
+    },
+    {
+      "name": "CRNN",
+      "one_line_profile": "Julia library for modeling chemical reaction kinetics using neural networks",
+      "detailed_description": "A Julia package implementing Chemical Reaction Neural Networks (CRNN) for learning and modeling the dynamics of chemical kinetics and reaction systems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "dynamics_learning",
+        "kinetics_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/DENG-MIT/CRNN",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "chemical-kinetics",
+        "neural-networks",
+        "julia",
+        "dynamics"
+      ],
+      "id": 15
+    },
+    {
+      "name": "MARBLE",
+      "one_line_profile": "Data-driven representation of non-linear dynamics over manifolds",
+      "detailed_description": "A Python package for learning representations of non-linear dynamics on manifolds based on statistical distributions of local phase portrait features, applicable to neural and physical systems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "dynamics_representation",
+        "manifold_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Dynamics-of-Neural-Systems-Lab/MARBLE",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dynamics",
+        "manifold-learning",
+        "representation-learning"
+      ],
+      "id": 16
+    },
+    {
+      "name": "PIML4PDE",
+      "one_line_profile": "Physics-informed machine learning package for solving PDEs",
+      "detailed_description": "A Python package developed by EMSL-Computing for applying physics-informed machine learning techniques to solve partial differential equations.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "physics_informed_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EMSL-Computing/PIML4PDE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "piml",
+        "pde",
+        "scientific-machine-learning"
+      ],
+      "id": 17
+    },
+    {
+      "name": "AutoKoopman",
+      "one_line_profile": "Automated Koopman operator methods for dynamical systems",
+      "detailed_description": "A library for automated data-driven analysis and control of dynamical systems using Koopman operator methods, including hyperparameter tuning and model selection.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "dynamics_identification",
+        "koopman_operator"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/EthanJamesLew/AutoKoopman",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "koopman-operator",
+        "dynamical-systems",
+        "automl",
+        "control"
+      ],
+      "id": 18
+    },
+    {
+      "name": "simulai",
+      "one_line_profile": "Toolkit for physics-informed machine learning pipelines",
+      "detailed_description": "A toolkit developed by IBM for building data-driven pipelines for physics-informed machine learning, supporting model reduction and operator learning.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "physics_informed_learning",
+        "model_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/IBM/simulai",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "piml",
+        "operator-learning",
+        "model-reduction",
+        "ibm"
+      ],
+      "id": 19
+    },
+    {
+      "name": "ITHACA-FV",
+      "one_line_profile": "Reduced order modelling library for OpenFOAM",
+      "detailed_description": "An OpenFOAM-based C++ library for reduced order modelling (ROM) in computational fluid dynamics, implementing methods like POD and Galerkin projection.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "cfd_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ITHACA-FV/ITHACA-FV",
+      "help_website": [
+        "https://mathlab.sissa.it/ithaca-fv"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "openfoam",
+        "rom",
+        "cfd",
+        "model-reduction"
+      ],
+      "id": 20
+    },
+    {
+      "name": "AccelerateCFD_CE",
+      "one_line_profile": "Platform for creating reduced order models from CFD data",
+      "detailed_description": "Community Edition of the AccelerateCFD platform, designed to generate reduced order models (ROMs) from high-fidelity Computational Fluid Dynamics (CFD) simulations.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "cfd_acceleration"
+      ],
+      "application_level": "platform",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/IllinoisRocstar/AccelerateCFD_CE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cfd",
+        "rom",
+        "simulation-acceleration"
+      ],
+      "id": 21
+    },
+    {
+      "name": "JAX-DIPS",
+      "one_line_profile": "Differentiable interfacial PDE solver using JAX",
+      "detailed_description": "A JAX-based differentiable solver for interfacial partial differential equations, enabling gradient-based optimization and learning in physics simulations.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "interfacial_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JAX-DIPS/JAX-DIPS",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "jax",
+        "pde-solver",
+        "differentiable-physics"
+      ],
+      "id": 22
+    },
+    {
+      "name": "PinnDE",
+      "one_line_profile": "Library for solving DEs with PINNs and DeepONets",
+      "detailed_description": "A Python library for solving differential equations using Physics-Informed Neural Networks (PINNs) and Deep Operator Networks (DeepONets).",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "physics_informed_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JB55Matthews/PinnDE",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "pinn",
+        "deeponet",
+        "differential-equations"
+      ],
+      "id": 23
+    },
+    {
+      "name": "NeurOLight",
+      "one_line_profile": "Neural Operator-based framework for integrated photonic device simulation",
+      "detailed_description": "A simulation framework utilizing Neural Operators to model and simulate integrated photonic devices, offering a data-driven alternative to traditional physics solvers.",
+      "domains": [
+        "Physics",
+        "Photonics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "framework",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/JeremieMelo/NeurOLight",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operator",
+        "photonics",
+        "simulation",
+        "surrogate-model"
+      ],
+      "id": 24
+    },
+    {
+      "name": "LabelFree-DNN-Surrogate",
+      "one_line_profile": "Physics-constrained label-free deep learning for fluid flow surrogate modeling",
+      "detailed_description": "A surrogate modeling tool for fluid dynamics that employs physics-constrained deep learning techniques without requiring labeled data, enabling efficient flow predictions.",
+      "domains": [
+        "Physics",
+        "Fluid Dynamics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "modeling",
+        "surrogate_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/Jianxun-Wang/LabelFree-DNN-Surrogate",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fluid-dynamics",
+        "surrogate-model",
+        "physics-informed",
+        "deep-learning"
+      ],
+      "id": 25
+    },
+    {
+      "name": "Jittor",
+      "one_line_profile": "High-performance deep learning framework with JIT compiling",
+      "detailed_description": "A deep learning framework based on JIT compiling and meta-operators, widely used in AI for Science research for high-performance computing tasks.",
+      "domains": [
+        "Computer Science",
+        "AI4S",
+        "P3"
+      ],
+      "subtask_category": [
+        "modeling",
+        "training"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Jittor/jittor",
+      "help_website": [
+        "https://jittor.com/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "deep-learning",
+        "framework",
+        "jit",
+        "high-performance-computing"
+      ],
+      "id": 26
+    },
+    {
+      "name": "PINNs-based-MPC",
+      "one_line_profile": "Physics-Informed Neural Networks for Nonlinear Model Predictive Control",
+      "detailed_description": "A library implementing Physics-Informed Neural Networks (PINNs) to approximate system dynamics for Nonlinear Model Predictive Control (NMPC), specifically for multi-body dynamics.",
+      "domains": [
+        "Physics",
+        "Control Theory",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "control",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Jonas-Nicodemus/PINNs-based-MPC",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pinns",
+        "mpc",
+        "control",
+        "dynamics"
+      ],
+      "id": 27
+    },
+    {
+      "name": "Kriging-and-GE-Kriging-model-toolbox",
+      "one_line_profile": "Toolbox for Gradient-enhanced Kriging surrogate modeling",
+      "detailed_description": "A MATLAB toolbox for constructing Kriging and Gradient-Enhanced Kriging (GE-Kriging) surrogate models, useful for engineering design and optimization.",
+      "domains": [
+        "Engineering",
+        "Physics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "modeling",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/KaiChengDM/Kriging-and-GE-Kriging-model-toolbox",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "kriging",
+        "surrogate-model",
+        "matlab",
+        "optimization"
+      ],
+      "id": 28
+    },
+    {
+      "name": "KoopmanLab",
+      "one_line_profile": "PyTorch library for Koopman Neural Operator learning",
+      "detailed_description": "A library for learning Koopman Operators using PyTorch, facilitating data-driven analysis and prediction of dynamical systems.",
+      "domains": [
+        "Physics",
+        "Dynamics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "modeling",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Koopman-Laboratory/KoopmanLab",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "koopman-operator",
+        "neural-operator",
+        "dynamics",
+        "pytorch"
+      ],
+      "id": 29
+    },
+    {
+      "name": "MultiscaleTopOpt",
+      "one_line_profile": "3D multiscale topology optimization using surrogate models",
+      "detailed_description": "A code for 3D multiscale topology optimization that leverages surrogate models to predict lattice microscale responses, developed by LLNL.",
+      "domains": [
+        "Physics",
+        "Materials Science",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "optimization",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/LLNL/MultiscaleTopOpt",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "topology-optimization",
+        "surrogate-model",
+        "multiscale",
+        "llnl"
+      ],
+      "id": 30
+    },
+    {
+      "name": "libROM",
+      "one_line_profile": "Library for Reduced Order Models (ROM) with large scale parallelism",
+      "detailed_description": "A C++ library for data-driven model reduction, emphasizing large-scale parallelism and linear subspace methods, suitable for physical simulations.",
+      "domains": [
+        "Physics",
+        "Dynamics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduction",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/LLNL/libROM",
+      "help_website": [
+        "https://www.librom.net/"
+      ],
+      "license": null,
+      "tags": [
+        "rom",
+        "model-reduction",
+        "hpc",
+        "linear-algebra"
+      ],
+      "id": 31
+    },
+    {
+      "name": "pylibROM",
+      "one_line_profile": "Python interface for libROM reduced order modeling library",
+      "detailed_description": "The Python bindings for libROM, enabling access to reduced order modeling capabilities within Python-based scientific workflows.",
+      "domains": [
+        "Physics",
+        "Dynamics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduction",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LLNL/pylibROM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rom",
+        "python-binding",
+        "model-reduction"
+      ],
+      "id": 32
+    },
+    {
+      "name": "ICON",
+      "one_line_profile": "In-Context Operator Networks for operator learning",
+      "detailed_description": "Implementation of In-Context Operator Networks (ICON), a method for learning operators in a context-aware manner for physical system simulation.",
+      "domains": [
+        "Physics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "modeling",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/LiuYangMage/in-context-operator-networks",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "operator-learning",
+        "in-context-learning",
+        "pde-solver"
+      ],
+      "id": 33
+    },
+    {
+      "name": "DMD-Multiverse",
+      "one_line_profile": "Collection of Dynamic Mode Decomposition (DMD) algorithms",
+      "detailed_description": "A MATLAB package providing implementations of various Dynamic Mode Decomposition algorithms, accompanying a review article on the subject.",
+      "domains": [
+        "Physics",
+        "Dynamics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "analysis",
+        "decomposition"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/MColbrook/DMD-Multiverse",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "dmd",
+        "dynamical-systems",
+        "matlab",
+        "algorithms"
+      ],
+      "id": 34
+    },
+    {
+      "name": "ResDMD",
+      "one_line_profile": "Residual Dynamic Mode Decomposition for spectral properties of Koopman Operators",
+      "detailed_description": "Code for Residual Dynamic Mode Decomposition (ResDMD), a method for computing data-driven spectral properties of Koopman Operators with error control.",
+      "domains": [
+        "Physics",
+        "Dynamics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "analysis",
+        "spectral_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/MColbrook/Residual-Dynamic-Mode-Decomposition",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "dmd",
+        "koopman-operator",
+        "spectral-analysis",
+        "matlab"
+      ],
+      "id": 35
+    },
+    {
+      "name": "KoopmanDL",
+      "one_line_profile": "Extended Dynamic Mode Decomposition with trainable dictionary",
+      "detailed_description": "A library for learning the Koopman operator using Extended Dynamic Mode Decomposition (EDMD) combined with a trainable dictionary (Deep Learning).",
+      "domains": [
+        "Physics",
+        "Dynamics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "modeling",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MLDS-NUS/KoopmanDL",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "koopman-operator",
+        "edmd",
+        "deep-learning",
+        "dynamics"
+      ],
+      "id": 36
+    },
+    {
+      "name": "sssMOR",
+      "one_line_profile": "Sparse State-Space and Model Order Reduction Toolbox",
+      "detailed_description": "A MATLAB toolbox for sparse state-space analysis and model order reduction (MOR) of large-scale dynamical systems.",
+      "domains": [
+        "Physics",
+        "Dynamics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduction",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/MORLab/sssMOR",
+      "help_website": [
+        "https://www.rt.mw.tum.de/?sssmor"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "model-order-reduction",
+        "state-space",
+        "dynamical-systems",
+        "matlab"
+      ],
+      "id": 37
+    },
+    {
+      "name": "dsatools",
+      "one_line_profile": "Digital signal analysis library including DMD and SSA",
+      "detailed_description": "A Python library for digital signal analysis, processing, and parameter estimation, featuring methods like Dynamic Mode Decomposition (DMD) and Singular Spectrum Analysis (SSA).",
+      "domains": [
+        "Physics",
+        "Signal Processing",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "analysis",
+        "processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/MVRonkin/dsatools",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "signal-processing",
+        "dmd",
+        "ssa",
+        "time-series"
+      ],
+      "id": 38
+    },
+    {
+      "name": "deepSI",
+      "one_line_profile": "Deep learning framework for Dynamical System Identification",
+      "detailed_description": "A Python framework for dynamical system identification that incorporates deep learning methods to model complex system behaviors.",
+      "domains": [
+        "Physics",
+        "Dynamics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "identification",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MaartenSchoukens/deepSI",
+      "help_website": [
+        "https://deepsi.readthedocs.io/"
+      ],
+      "license": null,
+      "tags": [
+        "system-identification",
+        "deep-learning",
+        "dynamics",
+        "control"
+      ],
+      "id": 39
+    },
+    {
+      "name": "kooplearn",
+      "one_line_profile": "Python package for learning the Koopman operator",
+      "detailed_description": "A Python package designed to learn the Koopman operator from data, enabling spectral analysis and prediction of dynamical systems.",
+      "domains": [
+        "Physics",
+        "Dynamics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "modeling",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Machine-Learning-Dynamical-Systems/kooplearn",
+      "help_website": [
+        "https://kooplearn.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "koopman-operator",
+        "machine-learning",
+        "dynamics",
+        "spectral-analysis"
+      ],
+      "id": 40
+    },
+    {
+      "name": "SMT",
+      "one_line_profile": "Surrogate Modeling Toolbox for Python",
+      "detailed_description": "A Python package that contains a collection of surrogate modeling methods (response surface methods), sampling techniques, and benchmarking functions. It provides a unified interface for various surrogate models including Kriging, RBF, and neural networks.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "model_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SMTorg/smt",
+      "help_website": [
+        "https://smt.readthedocs.io/"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "surrogate-modeling",
+        "kriging",
+        "optimization",
+        "python"
+      ],
+      "id": 41
+    },
+    {
+      "name": "AutoOptimize.jl",
+      "one_line_profile": "Automatic optimization and parallelization for SciML",
+      "detailed_description": "A library that provides automatic optimization and parallelization utilities for the Scientific Machine Learning (SciML) ecosystem in Julia, helping to accelerate simulation and training workflows.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "performance_optimization",
+        "parallel_computing"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/AutoOptimize.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "optimization",
+        "parallelization",
+        "sciml",
+        "julia"
+      ],
+      "id": 42
+    },
+    {
+      "name": "Catalyst.jl",
+      "one_line_profile": "Chemical reaction network modeling interface for SciML",
+      "detailed_description": "A domain-specific language and library for defining and simulating chemical reaction networks. It integrates with the SciML ecosystem to provide high-performance solvers for mass action kinetics and systems biology models.",
+      "domains": [
+        "P3",
+        "B1"
+      ],
+      "subtask_category": [
+        "chemical_kinetics_simulation",
+        "systems_biology_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/Catalyst.jl",
+      "help_website": [
+        "https://docs.sciml.ai/Catalyst/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "chemical-reaction-networks",
+        "systems-biology",
+        "sciml",
+        "julia"
+      ],
+      "id": 43
+    },
+    {
+      "name": "DataDrivenDiffEq.jl",
+      "one_line_profile": "Automated discovery of dynamical systems from data",
+      "detailed_description": "A library for data-driven modeling and automated discovery of differential equations (SINDy, etc.). It allows users to recover analytical governing equations from simulation or experimental data.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "equation_discovery",
+        "system_identification"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DataDrivenDiffEq.jl",
+      "help_website": [
+        "https://docs.sciml.ai/DataDrivenDiffEq/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "sindy",
+        "symbolic-regression",
+        "dynamical-systems",
+        "sciml"
+      ],
+      "id": 44
+    },
+    {
+      "name": "DiffEqBase.jl",
+      "one_line_profile": "Base library for differential equation definitions in SciML",
+      "detailed_description": "The core library defining the abstract types and interfaces for differential equations in the Julia SciML ecosystem. It serves as the foundation for interoperability between solvers and modeling tools.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "modeling_infrastructure"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DiffEqBase.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "differential-equations",
+        "infrastructure",
+        "sciml"
+      ],
+      "id": 45
+    },
+    {
+      "name": "DiffEqBayes.jl",
+      "one_line_profile": "Bayesian parameter estimation for differential equations",
+      "detailed_description": "A library that connects differential equation solvers with Bayesian inference tools (like Turing.jl and Stan) to perform probabilistic parameter estimation and uncertainty quantification.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "parameter_estimation",
+        "bayesian_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DiffEqBayes.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bayesian-inference",
+        "parameter-estimation",
+        "sciml"
+      ],
+      "id": 46
+    },
+    {
+      "name": "DiffEqCallbacks.jl",
+      "one_line_profile": "Event handling and callbacks for differential equation solvers",
+      "detailed_description": "Provides a library of callbacks for handling events, discontinuities, and other dynamic interventions during the numerical integration of differential equations.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "simulation_control",
+        "event_handling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DiffEqCallbacks.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "callbacks",
+        "event-handling",
+        "sciml"
+      ],
+      "id": 47
+    },
+    {
+      "name": "DiffEqFlux.jl",
+      "one_line_profile": "Neural differential equations and scientific machine learning layers",
+      "detailed_description": "A library for integrating neural networks with differential equations (Neural ODEs, SDEs, etc.). It provides differentiable solver layers for building physics-informed machine learning models.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "neural_odes",
+        "physics_informed_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DiffEqFlux.jl",
+      "help_website": [
+        "https://docs.sciml.ai/DiffEqFlux/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "neural-ode",
+        "scientific-machine-learning",
+        "sciml",
+        "flux"
+      ],
+      "id": 48
+    },
+    {
+      "name": "DiffEqGPU.jl",
+      "one_line_profile": "GPU acceleration for differential equation solvers",
+      "detailed_description": "Provides GPU-accelerated ensemble simulations and solver routines for the DifferentialEquations.jl ecosystem, enabling high-performance parallel solving of ODEs/SDEs.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "gpu_acceleration",
+        "high_performance_computing"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DiffEqGPU.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gpu",
+        "cuda",
+        "parallel-computing",
+        "sciml"
+      ],
+      "id": 49
+    },
+    {
+      "name": "DiffEqOperators.jl",
+      "one_line_profile": "Finite difference operators for differential equations",
+      "detailed_description": "A library providing linear operators for the discretization of differential equations, facilitating the numerical solution of PDEs and other operator-based problems.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "discretization",
+        "numerical_methods"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DiffEqOperators.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "finite-difference",
+        "operators",
+        "sciml"
+      ],
+      "id": 50
+    },
+    {
+      "name": "DiffEqPhysics.jl",
+      "one_line_profile": "Physics-specific differential equation formulations",
+      "detailed_description": "A library for constructing differential equations from physical principles (e.g., Hamiltonian, Lagrangian mechanics) for use in scientific machine learning and simulation.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "physics_modeling",
+        "hamiltonian_mechanics"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DiffEqPhysics.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "physics",
+        "hamiltonian",
+        "lagrangian",
+        "sciml"
+      ],
+      "id": 51
+    },
+    {
+      "name": "DiffEqProblemLibrary.jl",
+      "one_line_profile": "Library of benchmark problems for differential equations",
+      "detailed_description": "A collection of standard differential equation problems (ODEs, SDEs, DAEs) used for testing, benchmarking, and examples within the SciML ecosystem.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "dataset"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DiffEqProblemLibrary.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "benchmark",
+        "examples",
+        "sciml"
+      ],
+      "id": 52
+    },
+    {
+      "name": "DifferentialEquations.jl",
+      "one_line_profile": "Comprehensive differential equation solver suite",
+      "detailed_description": "A high-performance suite for solving differential equations (ODEs, SDEs, DAEs, DDEs) in Julia. It serves as the central entry point for the SciML simulation ecosystem.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "simulation",
+        "numerical_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/DifferentialEquations.jl",
+      "help_website": [
+        "https://docs.sciml.ai/DiffEqDocs/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "ode-solver",
+        "sde-solver",
+        "scientific-computing",
+        "sciml"
+      ],
+      "id": 53
+    },
+    {
+      "name": "ExponentialUtilities.jl",
+      "one_line_profile": "Matrix exponential utilities for scientific computing",
+      "detailed_description": "Provides fast and differentiable implementations of matrix exponentials and related functions (like expmv) essential for exponential integrators and other scientific algorithms.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "numerical_linear_algebra"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/ExponentialUtilities.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "matrix-exponential",
+        "linear-algebra",
+        "sciml"
+      ],
+      "id": 54
+    },
+    {
+      "name": "FEniCS.jl",
+      "one_line_profile": "Julia wrapper for the FEniCS finite element library",
+      "detailed_description": "A wrapper allowing the use of the FEniCS Finite Element library within Julia, enabling PDE solving and integration with SciML tools.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "finite_element_analysis",
+        "pde_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/FEniCS.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fenics",
+        "fem",
+        "pde",
+        "sciml"
+      ],
+      "id": 55
+    },
+    {
+      "name": "FluxNeuralOperators.jl",
+      "one_line_profile": "Neural Operators (DeepONet, FNO) implementation in Julia",
+      "detailed_description": "A library implementing various neural operator architectures (DeepONet, Fourier Neural Operators) for learning mappings between infinite-dimensional function spaces, useful for PDE surrogates.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/FluxNeuralOperators.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operators",
+        "deeponet",
+        "fno",
+        "sciml"
+      ],
+      "id": 56
+    },
+    {
+      "name": "HighDimPDE.jl",
+      "one_line_profile": "Solvers for high-dimensional PDEs",
+      "detailed_description": "A package for solving high-dimensional Partial Differential Equations using deep learning methods like Deep BSDE and Feynman-Kac, overcoming the curse of dimensionality.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "pde_solver",
+        "deep_learning_pde"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/HighDimPDE.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "high-dimensional-pde",
+        "deep-bsde",
+        "sciml"
+      ],
+      "id": 57
+    },
+    {
+      "name": "Integrals.jl",
+      "one_line_profile": "Numerical integration interface for SciML",
+      "detailed_description": "A common interface for quadrature and numerical integration in Julia, supporting various backend libraries and high-dimensional integration.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "numerical_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/Integrals.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "integration",
+        "quadrature",
+        "sciml"
+      ],
+      "id": 58
+    },
+    {
+      "name": "JumpProcesses.jl",
+      "one_line_profile": "Simulation of jump processes and Gillespie algorithms",
+      "detailed_description": "A library for simulating jump processes, including Gillespie simulations for chemical kinetics and jump diffusions, integrated with the differential equation solvers.",
+      "domains": [
+        "P3",
+        "B1"
+      ],
+      "subtask_category": [
+        "stochastic_simulation",
+        "gillespie_algorithm"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/JumpProcesses.jl",
+      "help_website": [
+        "https://docs.sciml.ai/JumpProcesses/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "stochastic-processes",
+        "gillespie",
+        "jump-diffusion",
+        "sciml"
+      ],
+      "id": 59
+    },
+    {
+      "name": "LabelledArrays.jl",
+      "one_line_profile": "Arrays with named elements for scientific modeling",
+      "detailed_description": "Provides array types where elements can be accessed by label (name) as well as index, simplifying the definition and manipulation of state vectors in scientific models.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "data_structure",
+        "modeling_utility"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/LabelledArrays.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "arrays",
+        "utility",
+        "sciml"
+      ],
+      "id": 60
+    },
+    {
+      "name": "LinearSolve.jl",
+      "one_line_profile": "Unified interface for linear solvers",
+      "detailed_description": "A high-performance unified interface for linear solvers in Julia, allowing easy switching between factorization and Krylov methods for scientific computing applications.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "linear_algebra_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/LinearSolve.jl",
+      "help_website": [
+        "https://docs.sciml.ai/LinearSolve/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "linear-solvers",
+        "krylov",
+        "sciml"
+      ],
+      "id": 61
+    },
+    {
+      "name": "MethodOfLines.jl",
+      "one_line_profile": "Automated finite difference PDE discretization",
+      "detailed_description": "A library that automates the Method of Lines (MOL) discretization for Partial Differential Equations, converting them into ODE systems solvable by DifferentialEquations.jl.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "pde_discretization",
+        "finite_difference"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/MethodOfLines.jl",
+      "help_website": [
+        "https://docs.sciml.ai/MethodOfLines/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "pde",
+        "method-of-lines",
+        "discretization",
+        "sciml"
+      ],
+      "id": 62
+    },
+    {
+      "name": "ModelOrderReduction.jl",
+      "one_line_profile": "Model order reduction for simulation acceleration",
+      "detailed_description": "A library providing techniques for model order reduction (ROM) to accelerate large-scale simulations by creating lower-dimensional approximations of complex systems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "model_order_reduction",
+        "simulation_acceleration"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/ModelOrderReduction.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rom",
+        "model-reduction",
+        "sciml"
+      ],
+      "id": 63
+    },
+    {
+      "name": "ModelingToolkit.jl",
+      "one_line_profile": "Acausal modeling and symbolic transformation framework",
+      "detailed_description": "A comprehensive modeling framework for defining acausal, equation-based models. It provides symbolic capabilities for automated simplification, index reduction, and code generation for high-performance simulation.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "symbolic_modeling",
+        "acausal_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/ModelingToolkit.jl",
+      "help_website": [
+        "https://docs.sciml.ai/ModelingToolkit/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "symbolic-computing",
+        "modeling",
+        "sciml",
+        "digital-twin"
+      ],
+      "id": 64
+    },
+    {
+      "name": "ModelingToolkitStandardLibrary.jl",
+      "one_line_profile": "Standard component library for ModelingToolkit",
+      "detailed_description": "A library of pre-built components (electrical, mechanical, thermal, etc.) for constructing multi-domain physical models using ModelingToolkit.jl.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "component_library",
+        "physical_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/ModelingToolkitStandardLibrary.jl",
+      "help_website": [
+        "https://docs.sciml.ai/ModelingToolkitStandardLibrary/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "components",
+        "physical-modeling",
+        "sciml"
+      ],
+      "id": 65
+    },
+    {
+      "name": "MultiScaleArrays.jl",
+      "one_line_profile": "Data structures for multi-scale simulations",
+      "detailed_description": "A framework for creating and managing multi-scale array structures, useful for simulations involving biological cells or other hierarchical physical systems.",
+      "domains": [
+        "P3",
+        "B1"
+      ],
+      "subtask_category": [
+        "data_structure",
+        "multiscale_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/MultiScaleArrays.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "multiscale",
+        "arrays",
+        "sciml"
+      ],
+      "id": 66
+    },
+    {
+      "name": "NBodySimulator.jl",
+      "one_line_profile": "Differentiable N-body simulation library",
+      "detailed_description": "A differentiable simulator for N-body problems, suitable for astrophysical and molecular dynamics simulations, allowing for gradient-based optimization and machine learning integration.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "n_body_simulation",
+        "molecular_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/NBodySimulator.jl",
+      "help_website": [
+        "https://docs.sciml.ai/NBodySimulator/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "n-body",
+        "molecular-dynamics",
+        "differentiable-physics",
+        "sciml"
+      ],
+      "id": 67
+    },
+    {
+      "name": "NeuralOperators.jl",
+      "one_line_profile": "Neural Operators library for SciML",
+      "detailed_description": "A library providing implementations of Neural Operators (like DeepONet and FNO) for learning mesh-independent solution operators to PDEs.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "pde_surrogate"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/NeuralOperators.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operators",
+        "deeponet",
+        "fno",
+        "sciml"
+      ],
+      "id": 68
+    },
+    {
+      "name": "NeuralPDE.jl",
+      "one_line_profile": "Physics-Informed Neural Networks (PINN) solvers",
+      "detailed_description": "A comprehensive library for solving Partial Differential Equations using Physics-Informed Neural Networks (PINNs). It automates the construction of loss functions based on PDE constraints.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "pinn",
+        "pde_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/NeuralPDE.jl",
+      "help_website": [
+        "https://docs.sciml.ai/NeuralPDE/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "pinn",
+        "physics-informed",
+        "pde",
+        "sciml"
+      ],
+      "id": 69
+    },
+    {
+      "name": "NonlinearSolve.jl",
+      "one_line_profile": "High-performance nonlinear equation solvers",
+      "detailed_description": "A library providing robust and efficient solvers for systems of nonlinear equations, supporting Newton methods, bracketing methods, and integration with the SciML ecosystem.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "nonlinear_solver",
+        "root_finding"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/NonlinearSolve.jl",
+      "help_website": [
+        "https://docs.sciml.ai/NonlinearSolve/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nonlinear-equations",
+        "newton-method",
+        "sciml"
+      ],
+      "id": 70
+    },
+    {
+      "name": "OperatorLearning.jl",
+      "one_line_profile": "Operator learning utilities for SciML",
+      "detailed_description": "A library focused on operator learning techniques within the SciML ecosystem, facilitating the training of models that map between infinite-dimensional function spaces.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/OperatorLearning.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "operator-learning",
+        "sciml"
+      ],
+      "id": 71
+    },
+    {
+      "name": "Optimization.jl",
+      "one_line_profile": "Unified interface for mathematical optimization",
+      "detailed_description": "A unified interface for various optimization packages in Julia, supporting local, global, gradient-based, and derivative-free optimization for scientific problems.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "optimization",
+        "parameter_fitting"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/Optimization.jl",
+      "help_website": [
+        "https://docs.sciml.ai/Optimization/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "optimization",
+        "mathematical-programming",
+        "sciml"
+      ],
+      "id": 72
+    },
+    {
+      "name": "OrdinaryDiffEq.jl",
+      "one_line_profile": "High-performance ODE solvers for Julia",
+      "detailed_description": "The primary library containing the implementations of ordinary differential equation (ODE) solvers in the SciML ecosystem, known for its performance and wide range of algorithms.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "ode_solver",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/OrdinaryDiffEq.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ode",
+        "numerical-methods",
+        "sciml"
+      ],
+      "id": 73
+    },
+    {
+      "name": "ParameterizedFunctions.jl",
+      "one_line_profile": "DSL for defining parameterized differential equations",
+      "detailed_description": "A domain-specific language (DSL) that simplifies the definition of differential equations with parameters, making it easier to set up models for simulation and analysis.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "modeling_utility",
+        "dsl"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/ParameterizedFunctions.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dsl",
+        "modeling",
+        "sciml"
+      ],
+      "id": 74
+    },
+    {
+      "name": "QuasiMonteCarlo.jl",
+      "one_line_profile": "Quasi-Monte Carlo sampling sequences",
+      "detailed_description": "A library for generating Quasi-Monte Carlo sequences (Sobol, Halton, etc.), which are useful for efficient sampling in high-dimensional integration and parameter space exploration.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "sampling",
+        "monte_carlo"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/QuasiMonteCarlo.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "qmc",
+        "sampling",
+        "sciml"
+      ],
+      "id": 75
+    },
+    {
+      "name": "RecursiveArrayTools.jl",
+      "one_line_profile": "Tools for recursive array structures",
+      "detailed_description": "Utilities for handling complex, nested array structures (like arrays of arrays) often encountered in scientific computing and differential equation solvers.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "data_structure",
+        "utility"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/RecursiveArrayTools.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "arrays",
+        "utility",
+        "sciml"
+      ],
+      "id": 76
+    },
+    {
+      "name": "ReservoirComputing.jl",
+      "one_line_profile": "Reservoir computing library for SciML",
+      "detailed_description": "A library providing implementations of Reservoir Computing (Echo State Networks, etc.) for time series prediction and learning dynamical systems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reservoir_computing",
+        "time_series_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/ReservoirComputing.jl",
+      "help_website": [
+        "https://docs.sciml.ai/ReservoirComputing/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "reservoir-computing",
+        "echo-state-networks",
+        "sciml"
+      ],
+      "id": 77
+    },
+    {
+      "name": "SciMLBase.jl",
+      "one_line_profile": "Base interface for the SciML ecosystem",
+      "detailed_description": "The foundational library defining the common interface and types for the entire Scientific Machine Learning (SciML) ecosystem, ensuring compatibility across different solvers and tools.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "infrastructure"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/SciMLBase.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "infrastructure",
+        "sciml"
+      ],
+      "id": 78
+    },
+    {
+      "name": "SciMLOperators.jl",
+      "one_line_profile": "Matrix-free operators interface for scientific machine learning in Julia",
+      "detailed_description": "A Julia library providing a common interface for matrix-free operators, essential for memory-efficient scientific machine learning and differential equation solving.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "numerical_methods"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/SciMLOperators.jl",
+      "help_website": [
+        "https://docs.sciml.ai/SciMLOperators/stable/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "matrix-free",
+        "sciml",
+        "linear-algebra"
+      ],
+      "id": 79
+    },
+    {
+      "name": "SciMLSensitivity.jl",
+      "one_line_profile": "Sensitivity analysis and gradient computation for scientific machine learning",
+      "detailed_description": "A component of the SciML ecosystem enabling sensitivity analysis (adjoint methods) for differential equations, crucial for training Neural ODEs and parameter estimation.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "sensitivity_analysis",
+        "parameter_estimation",
+        "training"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/SciMLSensitivity.jl",
+      "help_website": [
+        "https://docs.sciml.ai/SciMLSensitivity/stable/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "adjoint-method",
+        "automatic-differentiation",
+        "neural-ode"
+      ],
+      "id": 80
+    },
+    {
+      "name": "StochasticDiffEq.jl",
+      "one_line_profile": "Solvers for stochastic differential equations (SDEs)",
+      "detailed_description": "A library for solving stochastic differential equations, integrated with the SciML ecosystem for physics-informed machine learning and simulation.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "sde_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/StochasticDiffEq.jl",
+      "help_website": [
+        "https://docs.sciml.ai/DiffEqDocs/stable/solvers/sde_solve/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "sde",
+        "stochastic-processes",
+        "simulation"
+      ],
+      "id": 81
+    },
+    {
+      "name": "Sundials.jl",
+      "one_line_profile": "Julia interface to Sundials ODE/DAE solvers",
+      "detailed_description": "Provides an interface to the SUNDIALS suite (CVODE, IDA, KINSOL) for solving ODEs, DAEs, and nonlinear systems within the Julia SciML ecosystem.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "ode_solver",
+        "dae_solver"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/Sundials.jl",
+      "help_website": [
+        "https://docs.sciml.ai/DiffEqDocs/stable/solvers/ode_solve/"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "sundials",
+        "ode",
+        "dae"
+      ],
+      "id": 82
+    },
+    {
+      "name": "Surrogates.jl",
+      "one_line_profile": "Surrogate modeling and optimization library",
+      "detailed_description": "A library for building surrogate models (Kriging, Radial Basis Functions, etc.) and performing surrogate-based optimization, designed for scientific machine learning applications.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/Surrogates.jl",
+      "help_website": [
+        "https://docs.sciml.ai/Surrogates/stable/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "surrogates",
+        "optimization",
+        "kriging"
+      ],
+      "id": 83
+    },
+    {
+      "name": "TensorFlowDiffEq.jl",
+      "one_line_profile": "Physics-Informed Neural Networks (PINNs) using TensorFlow in Julia",
+      "detailed_description": "A library bridging TensorFlow with the SciML ecosystem to implement Physics-Informed Neural Networks (PINNs) for solving differential equations.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "pinn",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SciML/TensorFlowDiffEq.jl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "tensorflow",
+        "pinn",
+        "neural-networks"
+      ],
+      "id": 84
+    },
+    {
+      "name": "diffeqpy",
+      "one_line_profile": "Python interface for DifferentialEquations.jl",
+      "detailed_description": "Allows Python users to utilize the high-performance differential equation solvers from the Julia SciML ecosystem via a Python wrapper.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "ode_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SciML/diffeqpy",
+      "help_website": [
+        "https://github.com/SciML/diffeqpy"
+      ],
+      "license": "MIT",
+      "tags": [
+        "python-wrapper",
+        "differential-equations",
+        "interop"
+      ],
+      "id": 85
+    },
+    {
+      "name": "diffeqr",
+      "one_line_profile": "R interface for DifferentialEquations.jl",
+      "detailed_description": "Allows R users to utilize the high-performance differential equation solvers from the Julia SciML ecosystem via an R wrapper.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "ode_solver"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/SciML/diffeqr",
+      "help_website": [
+        "https://github.com/SciML/diffeqr"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "r-wrapper",
+        "differential-equations",
+        "interop"
+      ],
+      "id": 86
+    },
+    {
+      "name": "NMFk.jl",
+      "one_line_profile": "Nonnegative Matrix Factorization with physics constraints",
+      "detailed_description": "A Julia package for Nonnegative Matrix Factorization (NMF) combined with k-means clustering and physics constraints, used for unsupervised feature extraction in scientific data.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "dimensionality_reduction",
+        "clustering",
+        "feature_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/SmartTensors/NMFk.jl",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "nmf",
+        "unsupervised-learning",
+        "physics-informed"
+      ],
+      "id": 87
+    },
+    {
+      "name": "NTFk.jl",
+      "one_line_profile": "Nonnegative Tensor Factorization with physics constraints",
+      "detailed_description": "A Julia package for Nonnegative Tensor Factorization (NTF) combined with k-means clustering and physics constraints, extending NMFk to tensor data.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "dimensionality_reduction",
+        "tensor_decomposition"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/SmartTensors/NTFk.jl",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "tensor-factorization",
+        "unsupervised-learning",
+        "physics-informed"
+      ],
+      "id": 88
+    },
+    {
+      "name": "ModelOrderReduction",
+      "one_line_profile": "SOFA plugin for Model Order Reduction",
+      "detailed_description": "A plugin for the SOFA (Simulation Open Framework Architecture) framework to perform Model Order Reduction (MOR), enabling faster simulations of complex physical systems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "model_order_reduction",
+        "simulation_acceleration"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/SofaDefrost/ModelOrderReduction",
+      "help_website": [
+        "https://www.sofa-framework.org/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "sofa-framework",
+        "mor",
+        "simulation"
+      ],
+      "id": 89
+    },
+    {
+      "name": "rompc",
+      "one_line_profile": "Reduced Order Model Predictive Control",
+      "detailed_description": "A MATLAB toolbox for Model Predictive Control (MPC) using Reduced Order Models (ROM), facilitating control of high-dimensional dynamical systems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "control",
+        "model_order_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/StanfordASL/rompc",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "mpc",
+        "rom",
+        "control-theory"
+      ],
+      "id": 90
+    },
+    {
+      "name": "iLearn",
+      "one_line_profile": "Toolkit for feature analysis of DNA/RNA/Protein sequences",
+      "detailed_description": "A Python toolkit and web server for feature calculation, extraction, clustering, selection, and model construction for biological sequence analysis.",
+      "domains": [
+        "Biology"
+      ],
+      "subtask_category": [
+        "feature_extraction",
+        "bioinformatics",
+        "sequence_analysis"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Superzchen/iLearn",
+      "help_website": [
+        "http://ilearn.erc.monash.edu/"
+      ],
+      "license": null,
+      "tags": [
+        "bioinformatics",
+        "feature-engineering",
+        "dna-rna-protein"
+      ],
+      "id": 91
+    },
+    {
+      "name": "koopcore",
+      "one_line_profile": "Koopman Kernels for Learning Dynamical Systems",
+      "detailed_description": "A Python library implementing Koopman operator theory with kernel methods for learning and predicting dynamical systems from trajectory data.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "dynamics_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TUM-ITR/koopcore",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "koopman-operator",
+        "dynamical-systems",
+        "kernel-methods"
+      ],
+      "id": 92
+    },
+    {
+      "name": "EA_Battery_SPMparameterization",
+      "one_line_profile": "Reduced-order electrochemical battery model and parameterization",
+      "detailed_description": "A MATLAB tool for parameterizing and simulating reduced-order electrochemical lithium-ion battery models (Single Particle Model), useful for fast charging control.",
+      "domains": [
+        "Energy",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "modeling",
+        "parameterization",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/TUMFTM/EA_Battery_SPMparameterization",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "battery-model",
+        "reduced-order-model",
+        "parameter-estimation"
+      ],
+      "id": 93
+    },
+    {
+      "name": "Mimir",
+      "one_line_profile": "Memory-efficient MapReduce over MPI for HPC",
+      "detailed_description": "An implementation of MapReduce over MPI designed for high-performance computing environments, optimizing memory usage and performance for scientific data processing.",
+      "domains": [
+        "HPC"
+      ],
+      "subtask_category": [
+        "parallel_computing",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/TauferLab/Mimir",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "mpi",
+        "mapreduce",
+        "hpc"
+      ],
+      "id": 94
+    },
+    {
+      "name": "rom-operator-inference-Python3",
+      "one_line_profile": "Operator Inference for non-intrusive model reduction",
+      "detailed_description": "A Python library for Operator Inference (OpInf), a data-driven method to learn reduced-order models from data, preserving physical structure.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "model_order_reduction",
+        "operator_inference"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Willcox-Research-Group/rom-operator-inference-Python3",
+      "help_website": [
+        "https://rom-operator-inference-python3.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "operator-inference",
+        "rom",
+        "scientific-computing"
+      ],
+      "id": 95
+    },
+    {
+      "name": "continuiti",
+      "one_line_profile": "Library for learning function operators with neural networks",
+      "detailed_description": "A Python library designed for learning function operators (such as DeepONet) to solve differential equations and model physical systems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aai-institute/continuiti",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "deeponet",
+        "neural-operators",
+        "pde-solver"
+      ],
+      "id": 96
+    },
+    {
+      "name": "sparse_dmd",
+      "one_line_profile": "Sparse Dynamic Mode Decomposition (DMD) implementation",
+      "detailed_description": "A Python implementation of Sparse Dynamic Mode Decomposition, a data-driven method for identifying dynamical systems with sparsity constraints.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "dynamics_identification",
+        "dimensionality_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aaren/sparse_dmd",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dmd",
+        "sparse-dmd",
+        "dynamical-systems"
+      ],
+      "id": 97
+    },
+    {
+      "name": "LatticeQCD.jl",
+      "one_line_profile": "Lattice QCD simulations with dynamical fermions in Julia",
+      "detailed_description": "A native Julia library for performing Lattice Quantum Chromodynamics (Lattice QCD) simulations, supporting dynamical fermions in 4 dimensions.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "simulation",
+        "lattice_qcd"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/akio-tomiya/LatticeQCD.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "lattice-qcd",
+        "physics-simulation",
+        "high-energy-physics"
+      ],
+      "id": 98
+    },
+    {
+      "name": "SymINDy",
+      "one_line_profile": "Symbolic Identification of Non-linear Dynamics",
+      "detailed_description": "A library for Symbolic Identification of Non-linear Dynamics that generalizes the SINDy algorithm by combining sparse regression with genetic programming.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "equation_discovery",
+        "dynamics_identification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/andreikitaitsev/SymINDy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sindy",
+        "symbolic-regression",
+        "dynamical-systems"
+      ],
+      "id": 99
+    },
+    {
+      "name": "piDMD",
+      "one_line_profile": "Physics-informed Dynamic Mode Decomposition (piDMD) solver",
+      "detailed_description": "A MATLAB toolbox for physics-informed Dynamic Mode Decomposition (piDMD), allowing the incorporation of physical constraints into the DMD calculation for better dynamical system identification.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "dynamics_identification",
+        "reduced_order_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/baddoo/piDMD",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dmd",
+        "physics-informed",
+        "dynamical-systems"
+      ],
+      "id": 100
+    },
+    {
+      "name": "BifurcationInference.jl",
+      "one_line_profile": "Tool for learning state-space targets in dynamical systems",
+      "detailed_description": "A Julia library for inferring state-space targets and parameters in dynamical systems, designed to work within the BifurcationKit ecosystem for bifurcation analysis.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "inference",
+        "dynamics_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/bifurcationkit/BifurcationInference.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dynamical-systems",
+        "bifurcation",
+        "inference",
+        "julia"
+      ],
+      "id": 101
+    },
+    {
+      "name": "pifno",
+      "one_line_profile": "Physics Informed Fourier Neural Operator implementation",
+      "detailed_description": "A Python implementation of Physics Informed Fourier Neural Operators (PI-FNO) for solving partial differential equations using physics-informed deep learning.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bilzinet/pifno",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fno",
+        "physics-informed",
+        "neural-operator",
+        "pde"
+      ],
+      "id": 102
+    },
+    {
+      "name": "dmd-neuro",
+      "one_line_profile": "Dynamic Mode Decomposition for large-scale neural recordings",
+      "detailed_description": "A MATLAB library for computing Dynamic Mode Decomposition (DMD) specifically adapted for analyzing large-scale neural recording data in neuroscience research.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "dimensionality_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/bwbrunton/dmd-neuro",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dmd",
+        "neuroscience",
+        "dynamical-systems",
+        "matlab"
+      ],
+      "id": 103
+    },
+    {
+      "name": "ConvolutionalNeuralOperator",
+      "one_line_profile": "Convolutional Neural Operators for robust PDE learning",
+      "detailed_description": "Official implementation of Convolutional Neural Operators (CNO), a deep learning framework for accurate and robust learning of partial differential equations.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/camlab-ethz/ConvolutionalNeuralOperator",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cno",
+        "neural-operator",
+        "pde",
+        "deep-learning"
+      ],
+      "id": 104
+    },
+    {
+      "name": "GAOT",
+      "one_line_profile": "Geometry Aware Operator Transformer for PDEs",
+      "detailed_description": "Implementation of the Geometry Aware Operator Transformer (GAOT), an efficient neural surrogate model for solving PDEs on arbitrary domains.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/camlab-ethz/GAOT",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "transformer",
+        "operator-learning",
+        "pde",
+        "surrogate"
+      ],
+      "id": 105
+    },
+    {
+      "name": "rigno",
+      "one_line_profile": "Graph-based operator learning in arbitrary geometries",
+      "detailed_description": "A Python library for graph-based operator learning, enabling the solution of PDEs on arbitrary geometries using graph neural networks.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/camlab-ethz/rigno",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "graph-neural-networks",
+        "operator-learning",
+        "pde",
+        "geometry"
+      ],
+      "id": 106
+    },
+    {
+      "name": "cnn-surrogate",
+      "one_line_profile": "Bayesian deep convolutional networks for surrogate modeling",
+      "detailed_description": "A library for creating Bayesian deep convolutional encoder-decoder networks, designed for surrogate modeling and uncertainty quantification in scientific applications.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "uncertainty_quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cics-nd/cnn-surrogate",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "surrogate-model",
+        "uncertainty-quantification",
+        "bayesian-deep-learning",
+        "cnn"
+      ],
+      "id": 107
+    },
+    {
+      "name": "pde-surrogate",
+      "one_line_profile": "Physics-constrained deep learning for PDE surrogate modeling",
+      "detailed_description": "A framework for high-dimensional surrogate modeling and uncertainty quantification using physics-constrained deep learning, specifically for PDE systems without labeled data.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cics-nd/pde-surrogate",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "physics-constrained",
+        "surrogate-model",
+        "pde",
+        "uncertainty-quantification"
+      ],
+      "id": 108
+    },
+    {
+      "name": "GPdoemd",
+      "one_line_profile": "Design of experiments for model discrimination using GP surrogates",
+      "detailed_description": "A Python package for optimal experimental design aimed at model discrimination, utilizing Gaussian process surrogate models to accelerate the process.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "experimental_design",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cog-imperial/GPdoemd",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gaussian-processes",
+        "experimental-design",
+        "surrogate-model",
+        "model-discrimination"
+      ],
+      "id": 109
+    },
+    {
+      "name": "PYRO-NN",
+      "one_line_profile": "Python Reconstruction Operators in Neural Networks",
+      "detailed_description": "A high-level Python API for reconstruction operators (like Radon transform) integrated into neural networks, facilitating deep learning-based medical image reconstruction.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "image_reconstruction",
+        "inverse_problems"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/csyben/PYRO-NN",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "medical-imaging",
+        "reconstruction",
+        "ct",
+        "deep-learning"
+      ],
+      "id": 110
+    },
+    {
+      "name": "perform",
+      "one_line_profile": "1D unsteady compressible reacting flow simulation framework",
+      "detailed_description": "A Python framework for simulating one-dimensional unsteady compressible reacting flows, designed specifically for prototyping and testing reduced-order model (ROM) methods.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "rom_prototyping"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cwentland0/perform",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cfd",
+        "reacting-flow",
+        "reduced-order-model",
+        "simulation"
+      ],
+      "id": 111
+    },
+    {
+      "name": "dmdtools",
+      "one_line_profile": "Library for Dynamic Mode Decomposition variants",
+      "detailed_description": "A Python library providing tools for computing various forms of Dynamic Mode Decomposition (DMD), a data-driven method for analyzing dynamical systems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "dimensionality_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cwrowley/dmdtools",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "dmd",
+        "dynamical-systems",
+        "modal-decomposition"
+      ],
+      "id": 112
+    },
+    {
+      "name": "datafold",
+      "one_line_profile": "EDMD and Diffusion Maps for system identification",
+      "detailed_description": "A Python library for data-driven system identification using Extended Dynamic Mode Decomposition (EDMD) and geometric data analysis using Diffusion Maps.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "system_identification",
+        "manifold_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/datafold-dev/datafold",
+      "help_website": [
+        "https://datafold-dev.github.io/datafold/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "edmd",
+        "diffusion-maps",
+        "system-identification",
+        "dynamical-systems"
+      ],
+      "id": 113
+    },
+    {
+      "name": "pykoop",
+      "one_line_profile": "Koopman operator identification library",
+      "detailed_description": "A Python library for identifying Koopman operators from data, compatible with scikit-learn, supporting various lifting functions and regression methods for system identification.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "system_identification",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/decargroup/pykoop",
+      "help_website": [
+        "https://pykoop.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "koopman-operator",
+        "system-identification",
+        "scikit-learn",
+        "dynamics"
+      ],
+      "id": 114
+    },
+    {
+      "name": "deeptime",
+      "one_line_profile": "Python library for analysis of time series data using dimensionality reduction and Markov models",
+      "detailed_description": "A Python library for the analysis of time series data, focusing on dimensionality reduction, clustering, and Markov model estimation. It is widely used in molecular dynamics and dynamical systems to extract kinetic models and metastable states from trajectory data.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "time_series_analysis",
+        "dimensionality_reduction",
+        "markov_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deeptime-ml/deeptime",
+      "help_website": [
+        "https://deeptime-ml.github.io/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "time-series",
+        "markov-models",
+        "molecular-dynamics",
+        "dimensionality-reduction"
+      ],
+      "id": 115
+    },
+    {
+      "name": "SINDy-PI",
+      "one_line_profile": "Robust algorithm for parallel implicit sparse identification of nonlinear dynamics",
+      "detailed_description": "A robust algorithm implementation for Parallel Implicit Sparse Identification of Nonlinear Dynamics (SINDy-PI). It enables the identification of implicit dynamics and rational nonlinearities from data, suitable for complex physical systems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "system_identification",
+        "equation_discovery",
+        "dynamics_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/dynamicslab/SINDy-PI",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "sindy",
+        "system-identification",
+        "nonlinear-dynamics",
+        "implicit-models"
+      ],
+      "id": 116
+    },
+    {
+      "name": "hydrogym",
+      "one_line_profile": "Reinforcement learning environment for fluid dynamics control",
+      "detailed_description": "An open-source library of challenge problems in data-driven modeling and control of fluid dynamics, wrapped in a standard Reinforcement Learning (RL) interface. It facilitates the development and benchmarking of control algorithms for fluid flows.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "simulation",
+        "control",
+        "reinforcement_learning"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/dynamicslab/hydrogym",
+      "help_website": [
+        "https://hydrogym.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "fluid-dynamics",
+        "reinforcement-learning",
+        "control",
+        "cfd"
+      ],
+      "id": 117
+    },
+    {
+      "name": "pykoopman",
+      "one_line_profile": "Python package for computing data-driven approximations to the Koopman operator",
+      "detailed_description": "A Python package for computing data-driven approximations to the Koopman operator. It provides tools for learning linear embeddings of nonlinear dynamical systems, enabling linear control and analysis techniques on complex systems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "system_identification",
+        "dimensionality_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dynamicslab/pykoopman",
+      "help_website": [
+        "https://pykoopman.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "koopman-operator",
+        "dynamical-systems",
+        "data-driven",
+        "linearization"
+      ],
+      "id": 118
+    },
+    {
+      "name": "PySINDy",
+      "one_line_profile": "Sparse Identification of Nonlinear Dynamics (SINDy) in Python",
+      "detailed_description": "A comprehensive Python package for the sparse identification of nonlinear dynamical systems from data. It allows researchers to discover governing equations from noisy measurement data using sparse regression techniques.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "system_identification",
+        "equation_discovery",
+        "dynamics_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dynamicslab/pysindy",
+      "help_website": [
+        "https://pysindy.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "sindy",
+        "system-identification",
+        "equation-discovery",
+        "dynamical-systems"
+      ],
+      "id": 119
+    },
+    {
+      "name": "pynirom",
+      "one_line_profile": "Python tools for non-intrusive reduced order modeling",
+      "detailed_description": "A Python library providing tools for Non-Intrusive Reduced Order Modeling (NIROM). It supports the creation of surrogate models from data without requiring access to the governing equations' source code.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/erdc/pynirom",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "nirom",
+        "reduced-order-models",
+        "surrogates",
+        "data-driven"
+      ],
+      "id": 120
+    },
+    {
+      "name": "DMDpack",
+      "one_line_profile": "Python package for Dynamic Mode Decomposition (DMD)",
+      "detailed_description": "A Python package implementing various Dynamic Mode Decomposition (DMD) algorithms. It is used for decomposing complex dynamical systems into spatiotemporal modes, facilitating analysis and reduced-order modeling.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "dimensionality_reduction",
+        "mode_decomposition",
+        "dynamics_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/erichson/DMDpack",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "dmd",
+        "dynamic-mode-decomposition",
+        "dynamical-systems"
+      ],
+      "id": 121
+    },
+    {
+      "name": "data-driven-dynamics",
+      "one_line_profile": "Data-driven dynamics modeling framework for aerial vehicles",
+      "detailed_description": "A framework for data-driven modeling of dynamics, specifically tailored for aerial vehicles. It provides tools for learning dynamic models from flight data, useful for control and simulation.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "system_identification",
+        "dynamics_modeling",
+        "robotics_control"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ethz-asl/data-driven-dynamics",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dynamics-modeling",
+        "aerial-vehicles",
+        "system-identification",
+        "robotics"
+      ],
+      "id": 122
+    },
+    {
+      "name": "GCA-ROM",
+      "one_line_profile": "Graph Convolutional Autoencoder for Nonlinear Model Order Reduction",
+      "detailed_description": "A library implementing Graph Convolutional Autoencoder (GCA) architectures for nonlinear model order reduction (ROM). It leverages graph neural networks to learn reduced representations of physical systems on unstructured meshes.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "dimensionality_reduction",
+        "graph_neural_networks"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/fpichi/gca-rom",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "model-order-reduction",
+        "graph-convolution",
+        "autoencoder",
+        "rom"
+      ],
+      "id": 123
+    },
+    {
+      "name": "U-FNO",
+      "one_line_profile": "Enhanced Fourier neural operator model for multiphase flow simulation",
+      "detailed_description": "A deep learning model based on Fourier Neural Operators (FNO) designed for multiphase flow problems, specifically addressing gas saturation and pressure buildup in geological carbon storage.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "fluid_dynamics_simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/gegewen/ufno",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "fno",
+        "multiphase-flow",
+        "pde-solver",
+        "deep-learning"
+      ],
+      "id": 124
+    },
+    {
+      "name": "MemoryEfficientStableLDS",
+      "one_line_profile": "Memory-efficient learning of stable linear dynamical systems",
+      "detailed_description": "A MATLAB codebase for learning stable Linear Dynamical Systems (LDS) from data with memory efficiency, suitable for prediction and control tasks in dynamical systems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "system_identification",
+        "dynamics_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/giorgosmamakoukas/MemoryEfficientStableLDS",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "linear-dynamical-systems",
+        "stability",
+        "control-theory"
+      ],
+      "id": 125
+    },
+    {
+      "name": "fusion_surrogates",
+      "one_line_profile": "Surrogate transport models for tokamak fusion simulation",
+      "detailed_description": "A library providing surrogate models for transport simulations in tokamak fusion reactors, enabling faster evaluation of plasma properties compared to high-fidelity physics simulators.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "plasma_physics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/google-deepmind/fusion_surrogates",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "fusion",
+        "tokamak",
+        "surrogate-model",
+        "plasma-transport"
+      ],
+      "id": 126
+    },
+    {
+      "name": "SSMLearn",
+      "one_line_profile": "Data-driven reduced order modeling for nonlinear dynamical systems",
+      "detailed_description": "A MATLAB toolbox for learning Spectral Submanifolds (SSM) from data to construct reduced-order models of nonlinear dynamical systems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "nonlinear_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/haller-group/SSMLearn",
+      "help_website": [
+        "https://www.ssmlearn.com"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "rom",
+        "dynamical-systems",
+        "spectral-submanifolds",
+        "dimensionality-reduction"
+      ],
+      "id": 127
+    },
+    {
+      "name": "SSMLearnPy",
+      "one_line_profile": "Python implementation of SSMLearn for reduced order modeling",
+      "detailed_description": "The Python version of the SSMLearn toolbox, facilitating data-driven reduced order modeling for nonlinear dynamical systems via Spectral Submanifolds.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "nonlinear_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/haller-group/SSMLearnPy",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "rom",
+        "python",
+        "dynamical-systems"
+      ],
+      "id": 128
+    },
+    {
+      "name": "matlab-DMD",
+      "one_line_profile": "MATLAB implementation of Dynamic Mode Decomposition",
+      "detailed_description": "A lightweight MATLAB library for performing Dynamic Mode Decomposition (DMD) to analyze fluid dynamics and other time-series data.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "dimensionality_reduction",
+        "dynamics_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/hanyoseob/matlab-DMD",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "dmd",
+        "fluid-dynamics",
+        "modal-analysis"
+      ],
+      "id": 129
+    },
+    {
+      "name": "matlab-koopman",
+      "one_line_profile": "MATLAB implementation of Koopman operator algorithms",
+      "detailed_description": "A MATLAB library for estimating Koopman operators to analyze nonlinear dynamical systems using linear techniques.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "dynamics_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/hanyoseob/matlab-koopman",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "koopman-operator",
+        "nonlinear-dynamics",
+        "system-identification"
+      ],
+      "id": 130
+    },
+    {
+      "name": "odmd",
+      "one_line_profile": "Online and Window Dynamic Mode Decomposition",
+      "detailed_description": "Python and MATLAB implementations of Online DMD and Window DMD algorithms for real-time or streaming analysis of dynamical systems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "dimensionality_reduction",
+        "online_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haozhg/odmd",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dmd",
+        "online-learning",
+        "time-series"
+      ],
+      "id": 131
+    },
+    {
+      "name": "hippyflow",
+      "one_line_profile": "Dimension reduced surrogate construction for parametric PDE maps",
+      "detailed_description": "A Python library for constructing dimension-reduced surrogate models for parametric Partial Differential Equations (PDEs), facilitating efficient inverse problems and uncertainty quantification.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hippylib/hippyflow",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "pde",
+        "surrogate-model",
+        "inverse-problems"
+      ],
+      "id": 132
+    },
+    {
+      "name": "ROM_code",
+      "one_line_profile": "Numerical tool for reduced-order modeling of fluid flows",
+      "detailed_description": "A Fortran-based numerical tool designed for constructing reduced-order models (ROM) specifically for fluid flow simulations.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "fluid_dynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/hugolui/ROM_code",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "rom",
+        "cfd",
+        "fortran"
+      ],
+      "id": 133
+    },
+    {
+      "name": "pysindy-gui",
+      "one_line_profile": "Graphical User Interface for PySINDy",
+      "detailed_description": "A GUI wrapper for the PySINDy library, enabling users to perform sparse identification of nonlinear dynamics (SINDy) without writing code.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "system_identification",
+        "dynamics_modeling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hyumo/pysindy-gui",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "gui",
+        "sindy",
+        "dynamical-systems"
+      ],
+      "id": 134
+    },
+    {
+      "name": "mpc-koopman",
+      "one_line_profile": "Model-based Control using Koopman Operators",
+      "detailed_description": "A toolkit for implementing Model Predictive Control (MPC) using Koopman operator theory to linearize nonlinear dynamics for control purposes.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "control_theory",
+        "operator_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/i-abr/mpc-koopman",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "mpc",
+        "koopman",
+        "control"
+      ],
+      "id": 135
+    },
+    {
+      "name": "RAVEN",
+      "one_line_profile": "Probabilistic risk analysis and uncertainty quantification framework",
+      "detailed_description": "A comprehensive framework for probabilistic risk analysis, uncertainty quantification, parameter optimization, and model reduction, often used in nuclear engineering and complex system analysis.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "risk_analysis",
+        "reduced_order_modeling"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/idaholab/raven",
+      "help_website": [
+        "https://raven.inl.gov"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "uq",
+        "risk-analysis",
+        "optimization",
+        "nuclear-engineering"
+      ],
+      "id": 136
+    },
+    {
+      "name": "PFNR",
+      "one_line_profile": "Implementations of Fourier Subneural Operator and related models",
+      "detailed_description": "A repository containing implementations for Winning SubNetwork (WSN), Fourier Subneural Operator (FSO), and other neural implicit representations for scientific machine learning tasks.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "neural_representation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ihaeyong/PFNR",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fno",
+        "implicit-representation",
+        "sciml"
+      ],
+      "id": 137
+    },
+    {
+      "name": "brglm2",
+      "one_line_profile": "Bias reduction in generalized linear models",
+      "detailed_description": "An R package for estimation and inference from generalized linear models using explicit and implicit methods for bias reduction, useful for statistical analysis in scientific research.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "statistical_analysis",
+        "inference"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ikosmidis/brglm2",
+      "help_website": [],
+      "license": "Unknown",
+      "tags": [
+        "statistics",
+        "glm",
+        "bias-reduction"
+      ],
+      "id": 138
+    },
+    {
+      "name": "pinns_for_comp_mech",
+      "one_line_profile": "PINNs for Computational Mechanics based on DeepXDE",
+      "detailed_description": "A library implementing Physics-Informed Neural Networks (PINNs) specifically tailored for computational mechanics problems, built on top of the DeepXDE framework.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "computational_mechanics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/imcs-compsim/pinns_for_comp_mech",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pinns",
+        "mechanics",
+        "deepxde"
+      ],
+      "id": 139
+    },
+    {
+      "name": "VENI-VINDy-VICI",
+      "one_line_profile": "Interpretable data-driven framework for generative reduced order models",
+      "detailed_description": "A framework for building generative reduced order models (ROMs) with embedded uncertainty quantification, focusing on interpretability and data-driven discovery.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "uncertainty_quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jkneifl/VENI-VINDy-VICI",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rom",
+        "generative-models",
+        "uq"
+      ],
+      "id": 140
+    },
+    {
+      "name": "position_induced_transformer",
+      "one_line_profile": "Position-induced Transformer for operator learning in PDEs",
+      "detailed_description": "A PyTorch implementation of the Position-induced Transformer, a model designed for operator learning tasks to solve partial differential equations.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "pde_solving"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/junfeng-chen/position_induced_transformer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "transformer",
+        "operator-learning",
+        "pde"
+      ],
+      "id": 141
+    },
+    {
+      "name": "DeepXDE",
+      "one_line_profile": "Comprehensive library for scientific machine learning and physics-informed neural networks",
+      "detailed_description": "DeepXDE is a powerful library for scientific machine learning (SciML), specifically designed for solving partial differential equations (PDEs) using physics-informed neural networks (PINNs), DeepONet, and other operator learning methods. It supports multiple backends (TensorFlow, PyTorch, JAX, PaddlePaddle) and provides a unified interface for solving forward and inverse problems in physics and engineering.",
+      "domains": [
+        "Physics",
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "scientific_modeling",
+        "pde_solving",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lululxvi/deepxde",
+      "help_website": [
+        "https://deepxde.readthedocs.io"
+      ],
+      "license": "LGPL-2.1",
+      "tags": [
+        "pinns",
+        "deeponet",
+        "sciml",
+        "pde-solver",
+        "physics-informed"
+      ],
+      "id": 142
+    },
+    {
+      "name": "EZyRB",
+      "one_line_profile": "Python library for Model Order Reduction (MOR) of parametric physical systems",
+      "detailed_description": "EZyRB (Easy Reduced Basis method) is a Python library for performing Model Order Reduction (MOR) on parametric physical systems. It implements methods such as Proper Orthogonal Decomposition (POD) and AutoEncoders to construct reduced order models from high-fidelity data.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "model_reduction",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/mathLab/EZyRB",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "rom",
+        "pod",
+        "reduced-basis",
+        "surrogate-modeling"
+      ],
+      "id": 143
+    },
+    {
+      "name": "PINA",
+      "one_line_profile": "Python library for Physics-Informed Neural Networks (PINNs)",
+      "detailed_description": "PINA (Physics-Informed Neural networks for Advanced modeling) is a Python package that provides an intuitive interface for solving Partial Differential Equations (PDEs) and approximating functions using Physics-Informed Neural Networks. It supports various problem definitions and training strategies.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mathLab/PINA",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pinn",
+        "deep-learning",
+        "pde",
+        "scientific-machine-learning"
+      ],
+      "id": 144
+    },
+    {
+      "name": "AI4FluidSimulations",
+      "one_line_profile": "Library for training large-scale surrogate models for fluid dynamics",
+      "detailed_description": "A C++ codebase/library designed to train large-scale surrogate models for fluid simulation tasks, specifically targeting CO2 flow in porous media and solving 3D Navier-Stokes equations. It serves as a high-performance tool for AI-accelerated fluid dynamics.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "fluid_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/microsoft/AI4FluidSimulations",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fluid-dynamics",
+        "surrogate-model",
+        "navier-stokes",
+        "porous-media"
+      ],
+      "id": 145
+    },
+    {
+      "name": "morgen",
+      "one_line_profile": "MATLAB toolbox for Model Order Reduction in gas and energy networks",
+      "detailed_description": "morgen (Model Order Reduction for Gas and Energy Networks) is a MATLAB toolbox developed by MPI Magdeburg. It provides tools for reducing the complexity of gas and energy network models while preserving their essential dynamics.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "model_reduction",
+        "network_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/mpimd-csc/morgen",
+      "help_website": [],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "rom",
+        "energy-networks",
+        "matlab",
+        "simulation"
+      ],
+      "id": 146
+    },
+    {
+      "name": "SROMPy",
+      "one_line_profile": "Python module for generating Stochastic Reduced Order Models (SROMs)",
+      "detailed_description": "SROMPy is a Python module developed by NASA for generating Stochastic Reduced Order Models (SROMs). It is used to efficiently represent uncertain input parameters in computational models, facilitating uncertainty quantification and propagation.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "model_reduction",
+        "uncertainty_quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nasa/SROMPy",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "srom",
+        "stochastic-modeling",
+        "nasa",
+        "uncertainty-quantification"
+      ],
+      "id": 147
+    },
+    {
+      "name": "UQPCE",
+      "one_line_profile": "Uncertainty Quantification using Polynomial Chaos Expansion surrogate modeling",
+      "detailed_description": "UQPCE is a Python-based research code from NASA for Uncertainty Quantification (UQ) using Polynomial Chaos Expansion (PCE). It utilizes non-intrusive PCE surrogate modeling techniques to efficiently estimate uncertainties in parametric computational studies.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "uncertainty_quantification",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nasa/UQPCE",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "uq",
+        "polynomial-chaos",
+        "surrogate-model",
+        "nasa"
+      ],
+      "id": 148
+    },
+    {
+      "name": "NeuralOperator",
+      "one_line_profile": "Comprehensive library for learning in infinite dimensions with neural operators",
+      "detailed_description": "A core library for implementing Neural Operators (like FNO) in PyTorch, enabling resolution-invariant solution of PDEs and operator learning tasks.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "modeling",
+        "simulation",
+        "pde_solving"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/neuraloperator/neuraloperator",
+      "help_website": [
+        "https://neuraloperator.github.io/neuraloperator/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "neural-operator",
+        "fno",
+        "pde",
+        "deep-learning"
+      ],
+      "id": 149
+    },
+    {
+      "name": "SMPT",
+      "one_line_profile": "SMT-based model checker for Petri nets",
+      "detailed_description": "A Satisfiability Modulo Theories (SMT) based model checker designed for reachability analysis in Petri nets, which are used for modeling distributed systems and biological networks.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "model_checking",
+        "verification",
+        "network_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/nicolasAmat/SMPT",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "model-checking",
+        "petri-nets",
+        "smt",
+        "verification"
+      ],
+      "id": 150
+    },
+    {
+      "name": "operalib",
+      "one_line_profile": "Library for learning with operator-valued kernels",
+      "detailed_description": "A Python library implementing operator-valued kernels for machine learning tasks, useful for vector-valued regression and functional data analysis.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "modeling",
+        "regression",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/operalib/operalib",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "kernel-methods",
+        "operator-learning",
+        "machine-learning"
+      ],
+      "id": 151
+    },
+    {
+      "name": "OMD",
+      "one_line_profile": "MATLAB package for Optimal Mode Decomposition and DMD",
+      "detailed_description": "A MATLAB package for computing Optimal Mode Decomposition (OMD) and Dynamic Mode Decomposition (DMD), developed by the Oxford Control Group for analyzing dynamical systems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "dimensionality_reduction",
+        "dynamics_decomposition"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/oxfordcontrol/OMD",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "dmd",
+        "omd",
+        "dynamical-systems",
+        "matlab"
+      ],
+      "id": 152
+    },
+    {
+      "name": "nmor",
+      "one_line_profile": "Deep learning framework for model reduction of dynamical systems",
+      "detailed_description": "A framework leveraging deep learning techniques for non-linear model order reduction (MOR) of dynamical systems, facilitating faster simulations.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "model_reduction",
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/panchgonzalez/nmor",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "model-reduction",
+        "deep-learning",
+        "dynamical-systems"
+      ],
+      "id": 153
+    },
+    {
+      "name": "NodeLab",
+      "one_line_profile": "MATLAB repository for meshfree methods and PINNs",
+      "detailed_description": "A toolkit for node generation and adaptive refinement to support meshfree methods, Physics-Informed Neural Networks (PINNs), and DeepONet for solving PDEs.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "mesh_generation",
+        "pde_solving",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/pankajkmishra/NodeLab",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "pinns",
+        "deeponet",
+        "meshfree",
+        "pde"
+      ],
+      "id": 154
+    },
+    {
+      "name": "PDEBench",
+      "one_line_profile": "Extensive benchmark suite for Scientific Machine Learning",
+      "detailed_description": "A comprehensive benchmark dataset and code suite for evaluating machine learning methods on various Partial Differential Equations (PDEs) across different domains.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "benchmarking",
+        "dataset",
+        "evaluation"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pdebench/PDEBench",
+      "help_website": [
+        "https://arxiv.org/abs/2210.07182"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "benchmark",
+        "sciml",
+        "pde",
+        "dataset"
+      ],
+      "id": 155
+    },
+    {
+      "name": "NeuralFoil",
+      "one_line_profile": "Physics-informed machine learning tool for airfoil aerodynamics",
+      "detailed_description": "A practical tool for airfoil aerodynamic analysis that utilizes physics-informed machine learning to provide rapid predictions, exposed as a Python library.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "aerodynamic_analysis",
+        "simulation",
+        "modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/peterdsharpe/NeuralFoil",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "aerodynamics",
+        "airfoil",
+        "physics-informed",
+        "cfd"
+      ],
+      "id": 156
+    },
+    {
+      "name": "pi-optimal",
+      "one_line_profile": "Library for Reinforcement Learning in dynamic systems control",
+      "detailed_description": "An open-source Python library designed to model, optimize, and control dynamic systems using Reinforcement Learning (RL) techniques.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "control",
+        "optimization",
+        "modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/pi-optimal/pi-optimal",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "reinforcement-learning",
+        "control-systems",
+        "optimization"
+      ],
+      "id": 157
+    },
+    {
+      "name": "SLIM",
+      "one_line_profile": "Stable linear layers for physics-informed machine learning",
+      "detailed_description": "A library providing drop-in replacements for PyTorch nn.Linear layers, designed to improve stability and incorporate inductive priors in physics-informed machine learning applications.",
+      "domains": [
+        "P3-04"
+      ],
+      "subtask_category": [
+        "physics_informed_learning",
+        "model_optimization"
+      ],
+      "application_level": "library",
+      "primary_language": "Cuda",
+      "repo_url": "https://github.com/pnnl/slim",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "pytorch",
+        "piml",
+        "stability",
+        "neural-networks"
+      ],
+      "id": 158
+    },
+    {
+      "name": "SKDMD",
+      "one_line_profile": "Sparsity-promoting Kernel Dynamic Mode Decomposition",
+      "detailed_description": "A Python implementation of Sparsity-promoting Kernel Dynamic Mode Decomposition (SKDMD) for analyzing nonlinear dynamical systems and extracting coherent structures.",
+      "domains": [
+        "P3-04"
+      ],
+      "subtask_category": [
+        "dynamical_systems_analysis",
+        "dimensionality_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pswpswpsw/SKDMD",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dmd",
+        "dynamical-systems",
+        "kernel-methods",
+        "sparse-modeling"
+      ],
+      "id": 159
+    },
+    {
+      "name": "pyMOR",
+      "one_line_profile": "Model Order Reduction with Python",
+      "detailed_description": "A software library for building model order reduction applications, particularly for parametrized partial differential equations (PDEs). It supports various reduction methods and integrates with external PDE solvers.",
+      "domains": [
+        "P3-04"
+      ],
+      "subtask_category": [
+        "model_order_reduction",
+        "pde_solving",
+        "surrogate_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pymor/pymor",
+      "help_website": [
+        "https://pymor.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "model-order-reduction",
+        "pde",
+        "scientific-computing",
+        "python"
+      ],
+      "id": 160
+    },
+    {
+      "name": "ConvDO",
+      "one_line_profile": "Convolutional Differential Operators for Physics-based Deep Learning",
+      "detailed_description": "A library providing convolutional differential operators to facilitate physics-based deep learning studies, enabling the integration of differential constraints into neural networks.",
+      "domains": [
+        "P3-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "physics_informed_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/qiauil/ConvDO",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pde",
+        "deep-learning",
+        "differential-operators",
+        "physics-informed"
+      ],
+      "id": 161
+    },
+    {
+      "name": "gd-qpt",
+      "one_line_profile": "Gradient-descent quantum process tomography",
+      "detailed_description": "A tool for performing quantum process tomography by learning Kraus operators using gradient descent, useful for characterizing quantum channels and gates.",
+      "domains": [
+        "P3"
+      ],
+      "subtask_category": [
+        "quantum_tomography",
+        "parameter_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/quantshah/gd-qpt",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "quantum-computing",
+        "tomography",
+        "gradient-descent",
+        "kraus-operators"
+      ],
+      "id": 162
+    },
+    {
+      "name": "redbKIT",
+      "one_line_profile": "MATLAB library for reduced-order modeling of parametrized PDEs",
+      "detailed_description": "A MATLAB library designed for model order reduction of parametrized partial differential equations, providing tools for simulation and reduced basis generation.",
+      "domains": [
+        "P3-04"
+      ],
+      "subtask_category": [
+        "model_order_reduction",
+        "pde_simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/redbKIT/redbKIT",
+      "help_website": [
+        "http://redbkit.github.io/redbKIT/"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "matlab",
+        "model-order-reduction",
+        "pde",
+        "finite-elements"
+      ],
+      "id": 163
+    },
+    {
+      "name": "profit",
+      "one_line_profile": "Probabilistic Response Model Fitting with Interactive Tools",
+      "detailed_description": "A framework for surrogate modeling and uncertainty quantification, providing tools for fitting probabilistic response models to simulation data.",
+      "domains": [
+        "P3-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "uncertainty_quantification"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/redmod-team/profit",
+      "help_website": [
+        "https://profit.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "surrogate-modeling",
+        "uncertainty-quantification",
+        "gaussian-processes",
+        "active-learning"
+      ],
+      "id": 164
+    },
+    {
+      "name": "torch-cfd",
+      "one_line_profile": "Neural Operator-Assisted Computational Fluid Dynamics in PyTorch",
+      "detailed_description": "A PyTorch library for accelerating computational fluid dynamics (CFD) simulations using neural operators, facilitating the integration of deep learning with traditional CFD solvers.",
+      "domains": [
+        "P3-04"
+      ],
+      "subtask_category": [
+        "cfd_simulation",
+        "operator_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/scaomath/torch-cfd",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "cfd",
+        "neural-operators",
+        "pytorch",
+        "fluid-dynamics"
+      ],
+      "id": 165
+    },
+    {
+      "name": "FNO4CO2",
+      "one_line_profile": "Learned coupled inversion framework for carbon sequestration monitoring using Fourier Neural Operators",
+      "detailed_description": "A scientific machine learning tool that utilizes Fourier Neural Operators (FNO) for coupled inversion tasks, specifically designed for monitoring and forecasting carbon sequestration processes in geophysics.",
+      "domains": [
+        "P3",
+        "P3-04",
+        "Geophysics"
+      ],
+      "subtask_category": [
+        "inverse_problem",
+        "forecasting",
+        "surrogate_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/slimgroup/FNO4CO2",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fno",
+        "carbon-sequestration",
+        "inversion",
+        "geophysics"
+      ],
+      "id": 166
+    },
+    {
+      "name": "dfno",
+      "one_line_profile": "Distributed implementation of Fourier Neural Operators for large-scale scientific machine learning",
+      "detailed_description": "A Python library enabling distributed training and inference of Fourier Neural Operators (FNO), designed to scale operator learning models for high-dimensional physics simulations.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/slimgroup/dfno",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "distributed-computing",
+        "fno",
+        "neural-operators"
+      ],
+      "id": 167
+    },
+    {
+      "name": "LAMP",
+      "one_line_profile": "Deep learning-based surrogate model with joint evolution learning and mesh optimization",
+      "detailed_description": "A surrogate modeling tool that jointly learns the evolution model of a physical system and optimizes computational costs via remeshing, presented at ICLR 2023.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "mesh_optimization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/snap-stanford/lamp",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "surrogate",
+        "gnn",
+        "remeshing",
+        "simulation"
+      ],
+      "id": 168
+    },
+    {
+      "name": "KoopmanMPC_Quadrotor",
+      "one_line_profile": "Koopman operator-based Model Predictive Control for quadrotor dynamics",
+      "detailed_description": "A MATLAB toolkit implementing data-driven control using Koopman operator theory, specifically applied to the dynamics and control of quadrotors.",
+      "domains": [
+        "P3",
+        "P3-04",
+        "Robotics"
+      ],
+      "subtask_category": [
+        "control",
+        "dynamics_modeling",
+        "operator_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/sriram-2502/KoopmanMPC_Quadrotor",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "koopman-operator",
+        "mpc",
+        "control-theory",
+        "dynamics"
+      ],
+      "id": 169
+    },
+    {
+      "name": "DL-ROM-Meth",
+      "one_line_profile": "Deep learning-based reduced order models for nonlinear time-dependent PDEs",
+      "detailed_description": "Implementation of deep learning-based reduced order models (DL-ROM) designed to solve nonlinear time-dependent parametrized Partial Differential Equations (PDEs) efficiently.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "pde_solving"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stefaniafresca/DL-ROM-Meth",
+      "help_website": [
+        "https://doi.org/10.1007/s10915-021-01462-7"
+      ],
+      "license": null,
+      "tags": [
+        "rom",
+        "pde",
+        "deep-learning",
+        "scientific-computing"
+      ],
+      "id": 170
+    },
+    {
+      "name": "POD-DL-ROM",
+      "one_line_profile": "Enhanced reduced order models using POD and deep learning for parametrized PDEs",
+      "detailed_description": "A tool combining Proper Orthogonal Decomposition (POD) with deep learning to create enhanced reduced order models for nonlinear parametrized PDEs, improving efficiency over standard DL-ROMs.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "dimensionality_reduction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stefaniafresca/POD-DL-ROM",
+      "help_website": [
+        "https://doi.org/10.1016/j.cma.2021.114181"
+      ],
+      "license": null,
+      "tags": [
+        "pod",
+        "rom",
+        "pde",
+        "hybrid-modeling"
+      ],
+      "id": 171
+    },
+    {
+      "name": "PhaseNO",
+      "one_line_profile": "Phase Neural Operator for modeling dynamics",
+      "detailed_description": "Implementation of the Phase Neural Operator, a specialized operator learning architecture designed to capture phase-dependent dynamics in physical systems.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "dynamics_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/sun-hongyu/PhaseNO",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operator",
+        "phase-dynamics",
+        "scientific-ml"
+      ],
+      "id": 172
+    },
+    {
+      "name": "gwsurrogate",
+      "one_line_profile": "Interface to gravitational wave surrogate models",
+      "detailed_description": "A Python package providing an easy-to-use interface for evaluating surrogate models of gravitational waveforms, used in astrophysics for efficient signal generation and analysis.",
+      "domains": [
+        "P3",
+        "P3-04",
+        "Astrophysics"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "waveform_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/sxs-collaboration/gwsurrogate",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "gravitational-waves",
+        "surrogate",
+        "astrophysics"
+      ],
+      "id": 173
+    },
+    {
+      "name": "TensorDiffEq",
+      "one_line_profile": "Scalable Physics-Informed Deep Learning framework on TensorFlow",
+      "detailed_description": "A Python library for efficient and scalable Physics-Informed Deep Learning (PINNs) and Scientific Machine Learning, built on TensorFlow with support for multi-worker distributed computing.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "pde_solving",
+        "scientific_machine_learning",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tensordiffeq/TensorDiffEq",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pinn",
+        "tensorflow",
+        "distributed-computing",
+        "pde"
+      ],
+      "id": 174
+    },
+    {
+      "name": "neurop_invdes",
+      "one_line_profile": "Neural operator surrogates for electromagnetic inverse design",
+      "detailed_description": "A tool utilizing neural operators as surrogate models to accelerate inverse design processes in electromagnetics and photonics.",
+      "domains": [
+        "P3",
+        "P3-04",
+        "Photonics"
+      ],
+      "subtask_category": [
+        "inverse_design",
+        "surrogate_modeling",
+        "operator_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tfp-photonics/neurop_invdes",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "electromagnetics",
+        "inverse-design",
+        "neural-operator"
+      ],
+      "id": 175
+    },
+    {
+      "name": "NUNO",
+      "one_line_profile": "Non-Uniform Neural Operator for solving PDEs on irregular grids",
+      "detailed_description": "Implementation of the Non-Uniform Neural Operator (NUNO), designed to handle operator learning tasks on non-uniform meshes and grids efficiently.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "pde_solving"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/thu-ml/NUNO",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "neural-operator",
+        "irregular-grids",
+        "pde"
+      ],
+      "id": 176
+    },
+    {
+      "name": "Diffusion-based-Flow-Prediction",
+      "one_line_profile": "Uncertainty-aware surrogate models for airfoil flow simulations using diffusion models",
+      "detailed_description": "Implementation of Denoising Diffusion Probabilistic Models (DDPM) as uncertainty-aware surrogates for predicting fluid flow around airfoils, enabling probabilistic simulation.",
+      "domains": [
+        "P3",
+        "P3-04",
+        "Fluid Dynamics"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "flow_prediction",
+        "uncertainty_quantification"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/tum-pbs/Diffusion-based-Flow-Prediction",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "diffusion-models",
+        "cfd",
+        "surrogate",
+        "airfoil"
+      ],
+      "id": 177
+    },
+    {
+      "name": "snapshot_pod_rom_py",
+      "one_line_profile": "Python implementation of Snapshot POD for reduced order modeling",
+      "detailed_description": "A Python tool to calculate Proper Orthogonal Decomposition (POD) modes from snapshot data and generate reduced order models (ROM) for system dynamics.",
+      "domains": [
+        "P3",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "dimensionality_reduction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/vassilikitsios/snapshot_pod_rom_py",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pod",
+        "rom",
+        "dynamics"
+      ],
+      "id": 178
+    },
+    {
+      "name": "Kinetic.jl",
+      "one_line_profile": "Universal modeling and simulation of fluid mechanics using machine learning",
+      "detailed_description": "A Julia library for modeling and simulation of fluid mechanics based on the Boltzmann equation, integrating machine learning for multiscale and multiphysics flows.",
+      "domains": [
+        "P3",
+        "P3-04",
+        "Fluid Dynamics"
+      ],
+      "subtask_category": [
+        "simulation",
+        "modeling",
+        "scientific_machine_learning"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/vavrines/Kinetic.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "fluid-dynamics",
+        "boltzmann-equation",
+        "julia",
+        "scientific-ml"
+      ],
+      "id": 179
+    },
+    {
+      "name": "GAN-ROM",
+      "one_line_profile": "GAN-based reduced-order model framework for time series prediction and data assimilation",
+      "detailed_description": "A framework utilizing Generative Adversarial Networks (GAN) within a Reduced-Order Model (ROM) context to handle time series prediction, data assimilation, and uncertainty quantification for dynamical systems.",
+      "domains": [
+        "Physics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "reduced_order_modeling",
+        "time_series_prediction",
+        "data_assimilation"
+      ],
+      "application_level": "framework",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/viluiz/gan",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gan",
+        "rom",
+        "uncertainty-quantification"
+      ],
+      "id": 180
+    },
+    {
+      "name": "H_Kriging",
+      "one_line_profile": "MATLAB implementation of Hierarchical Kriging surrogate models",
+      "detailed_description": "A MATLAB library for constructing Hierarchical Kriging models, a type of variable fidelity surrogate model that improves upon co-Kriging for multi-fidelity data fusion.",
+      "domains": [
+        "Physics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "data_fusion"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/wangjz131/H_Kriging",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "kriging",
+        "surrogate-model",
+        "variable-fidelity"
+      ],
+      "id": 181
+    },
+    {
+      "name": "EasySurrogate",
+      "one_line_profile": "Toolkit for creating surrogate models of multiscale systems",
+      "detailed_description": "Part of the VECMA toolkit, this tool facilitates the creation and deployment of surrogate models specifically designed for multiscale simulations and uncertainty quantification.",
+      "domains": [
+        "Physics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "surrogate_modeling",
+        "multiscale_simulation"
+      ],
+      "application_level": "toolkit",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/wedeling/EasySurrogate",
+      "help_website": [],
+      "license": "LGPL-2.1",
+      "tags": [
+        "vecma",
+        "surrogate-model",
+        "multiscale"
+      ],
+      "id": 182
+    },
+    {
+      "name": "Denovo-Pinal",
+      "one_line_profile": "Text-guided de novo protein design model",
+      "detailed_description": "A deep learning model for generating protein structures based on textual descriptions, enabling text-guided de novo protein design.",
+      "domains": [
+        "Biology",
+        "B2"
+      ],
+      "subtask_category": [
+        "protein_design",
+        "structure_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/westlake-repl/Denovo-Pinal",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "protein-design",
+        "generative-model",
+        "text-to-structure"
+      ],
+      "id": 183
+    },
+    {
+      "name": "Koopman-Neural-Network-Training",
+      "one_line_profile": "Software for training neural networks via Koopman operator theory",
+      "detailed_description": "A MATLAB software package for optimizing and training neural networks by leveraging Koopman operator theory to linearize nonlinear dynamics in the latent space.",
+      "domains": [
+        "Physics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "operator_learning",
+        "dynamics_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/william-redman/Koopman-Neural-Network-Training",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "koopman-operator",
+        "neural-networks",
+        "dynamics"
+      ],
+      "id": 184
+    },
+    {
+      "name": "turbulence-modeling-PIML",
+      "one_line_profile": "Physics-informed machine learning framework for Reynolds stress turbulence modeling",
+      "detailed_description": "A data-driven framework for Reynolds stress modeling in turbulence simulations using physics-informed machine learning (PIML) techniques to improve RANS predictions.",
+      "domains": [
+        "Physics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "turbulence_modeling",
+        "piml"
+      ],
+      "application_level": "framework",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/xiaoh/turbulence-modeling-PIML",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "turbulence",
+        "rans",
+        "physics-informed"
+      ],
+      "id": 185
+    },
+    {
+      "name": "cDMDc",
+      "one_line_profile": "Compressive Dynamic Mode Decomposition with Control (cDMDc) implementation",
+      "detailed_description": "A MATLAB implementation of Compressive Dynamic Mode Decomposition with Control (cDMDc) for system identification and dynamics modeling from compressive measurements.",
+      "domains": [
+        "Physics",
+        "P3-04"
+      ],
+      "subtask_category": [
+        "system_identification",
+        "dynamics_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/zhbai/cDMDc",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dmd",
+        "compressive-sensing",
+        "control-theory"
+      ],
+      "id": 186
+    }
+  ]
+}

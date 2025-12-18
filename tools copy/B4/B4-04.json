@@ -1,0 +1,1442 @@
+{
+  "generated_at": "2025-12-16T17:24:04.758763+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "B4",
+      "leaf_cluster_name": "生信-宏基因组与微生物生态",
+      "domain": "Bioinfo",
+      "typical_objects": "metagenome reads, MAGs",
+      "task_chain": "组装→分箱→分类→功能注释→统计→benchmark",
+      "tool_form": "CLI + 数据库 + workflow"
+    },
+    "unit": {
+      "unit_id": "B4-04",
+      "unit_name": "功能注释与通路分析",
+      "target_scale": "200–450",
+      "coverage_tools": "gene prediction、KO/pathway annotation"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] MicrobeAnnotator",
+        "[GH] InterProScan",
+        "[GH] dbCAN",
+        "[GH] Bakta",
+        "[GH] HUMAnN",
+        "[GH] antiSMASH",
+        "[GH] DRAM",
+        "[GH] eggNOG-mapper",
+        "[GH] Prokka",
+        "[GH] Prodigal",
+        "[GH] metagenome functional annotation",
+        "[GH] microbial gene prediction",
+        "[GH] metabolic pathway reconstruction",
+        "[GH] KEGG orthology annotation",
+        "[GH] eggNOG mapper",
+        "[GH] CAZyme annotation",
+        "[GH] biosynthetic gene clusters mining",
+        "[GH] antimicrobial resistance gene detection",
+        "[GH] ORF caller metagenomics",
+        "[GH] functional profiling metagenomics",
+        "[GH] metagenome annotation pipeline",
+        "[GH] secondary metabolite prediction",
+        "[WEB] metagenomic functional annotation tools github",
+        "[WEB] microbial gene prediction software github",
+        "[WEB] metabolic pathway reconstruction pipeline github",
+        "[WEB] antimicrobial resistance gene finder github",
+        "[WEB] biosynthetic gene cluster tools github",
+        "[WEB] CAZyme annotation github"
+      ],
+      "total_candidates": 667,
+      "tool_candidates": 147,
+      "final_tools": 54
+    }
+  },
+  "tools": [
+    {
+      "name": "BiGMeC",
+      "one_line_profile": "Biosynthetic Gene cluster Metabolic pathway Constructor",
+      "detailed_description": "BiGMeC is a tool designed to construct metabolic pathways from Biosynthetic Gene Clusters (BGCs), facilitating the functional analysis of secondary metabolites in microbial genomes.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "metabolic_reconstruction",
+        "pathway_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/AlmaasLab/BiGMeC",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "metabolism",
+        "bgc",
+        "pathway-construction"
+      ],
+      "id": 1
+    },
+    {
+      "name": "lsaBGC",
+      "one_line_profile": "Lineage Specific Analysis of Biosynthetic Gene Clusters",
+      "detailed_description": "lsaBGC is a bioinformatics suite for performing lineage-specific analysis of biosynthetic gene clusters (BGCs), enabling evolutionary and functional insights into secondary metabolism across related genomes.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "bgc_analysis",
+        "comparative_genomics",
+        "evolutionary_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Kalan-Lab/lsaBGC",
+      "help_website": [
+        "https://github.com/Kalan-Lab/lsaBGC/wiki"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "bgc",
+        "genomics",
+        "evolution"
+      ],
+      "id": 2
+    },
+    {
+      "name": "pb-metagenomics-tools",
+      "one_line_profile": "Tools and pipelines for PacBio HiFi metagenomics data",
+      "detailed_description": "A collection of tools and pipelines specifically tailored for processing and analyzing PacBio HiFi reads in metagenomics, covering tasks from taxonomic profiling to assembly and binning.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "metagenome_assembly",
+        "binning",
+        "taxonomic_profiling"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/PacificBiosciences/pb-metagenomics-tools",
+      "help_website": [],
+      "license": "BSD-3-Clause-Clear",
+      "tags": [
+        "pacbio",
+        "hifi",
+        "metagenomics"
+      ],
+      "id": 3
+    },
+    {
+      "name": "DRAM",
+      "one_line_profile": "Distilled and Refined Annotation of Metabolism",
+      "detailed_description": "DRAM is a tool for the annotation and curation of function for microbial and viral genomes, providing a summary of metabolic potential to facilitate the interpretation of metagenomic data.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "metabolic_profiling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/WrightonLabCSU/DRAM",
+      "help_website": [
+        "https://github.com/WrightonLabCSU/DRAM/wiki"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "metabolism",
+        "annotation",
+        "microbiome"
+      ],
+      "id": 4
+    },
+    {
+      "name": "pyrodigal",
+      "one_line_profile": "Python interface to Prodigal gene predictor",
+      "detailed_description": "Pyrodigal provides Cython bindings and a Python interface to Prodigal, a highly popular ORF finder for genomes and metagenomes, enabling efficient gene prediction within Python workflows.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "gene_prediction",
+        "orf_finding"
+      ],
+      "application_level": "library",
+      "primary_language": "Cython",
+      "repo_url": "https://github.com/althonos/pyrodigal",
+      "help_website": [
+        "https://pyrodigal.readthedocs.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "gene-prediction",
+        "prodigal",
+        "python-bindings"
+      ],
+      "id": 5
+    },
+    {
+      "name": "antiSMASH",
+      "one_line_profile": "Antibiotics and Secondary Metabolite Analysis Shell",
+      "detailed_description": "antiSMASH is a comprehensive pipeline for the identification, annotation, and analysis of biosynthetic gene clusters (BGCs) in bacterial and fungal genomes, widely used for secondary metabolite discovery.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "bgc_prediction",
+        "functional_annotation",
+        "secondary_metabolites"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/antismash/antismash",
+      "help_website": [
+        "https://docs.antismash.secondarymetabolites.org/"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "bgc",
+        "secondary-metabolites",
+        "genome-mining"
+      ],
+      "id": 6
+    },
+    {
+      "name": "distillR",
+      "one_line_profile": "R package for distilling and summarizing functional annotations of microbial genomes",
+      "detailed_description": "A tool designed to filter, summarize, and visualize functional annotation data (e.g., from KEGG, Pfam) for bacterial genomes and metagenomes, facilitating the interpretation of large-scale functional profiles.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "data_summarization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/anttonalberdi/distillR",
+      "help_website": [
+        "https://github.com/anttonalberdi/distillR"
+      ],
+      "license": null,
+      "tags": [
+        "metagenomics",
+        "functional-annotation",
+        "r-package"
+      ],
+      "id": 7
+    },
+    {
+      "name": "prodigal-gv",
+      "one_line_profile": "Gene prediction tool optimized for giant viruses and alternative genetic codes",
+      "detailed_description": "A fork of the Prodigal gene prediction software, specifically tuned to address the complexities of gene calling in giant viruses (NCLDV) and viruses utilizing alternative genetic codes.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "gene_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/apcamargo/prodigal-gv",
+      "help_website": [
+        "https://github.com/apcamargo/prodigal-gv"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "gene-calling",
+        "viruses",
+        "metagenomics"
+      ],
+      "id": 8
+    },
+    {
+      "name": "RGI",
+      "one_line_profile": "Resistance Gene Identifier for predicting resistomes from genomic data",
+      "detailed_description": "A software tool used to predict antibiotic resistance genes (resistomes) from protein or nucleotide data, including metagenomics data, utilizing the Comprehensive Antibiotic Resistance Database (CARD).",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "antimicrobial_resistance_prediction",
+        "functional_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/arpcard/rgi",
+      "help_website": [
+        "https://card.mcmaster.ca/analyze/rgi"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "amr",
+        "resistome",
+        "card"
+      ],
+      "id": 9
+    },
+    {
+      "name": "run_dbcan (V5)",
+      "one_line_profile": "Automated Carbohydrate-active enzyme (CAZyme) annotation tool",
+      "detailed_description": "The standalone tool for dbCAN V5, designed to annotate Carbohydrate-active enzymes (CAZymes) in genomes and metagenomes using HMMER, DIAMOND, and CGC finding.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "cazyme_prediction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bcb-unl/run_dbcan",
+      "help_website": [
+        "https://dbcan.readthedocs.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "cazymes",
+        "dbcan",
+        "annotation"
+      ],
+      "id": 10
+    },
+    {
+      "name": "HUMAnN",
+      "one_line_profile": "Profiling presence/absence and abundance of microbial pathways in metagenomes",
+      "detailed_description": "HUMAnN (HMP Unified Metabolic Analysis Network) is a pipeline for efficiently and accurately profiling the abundance of microbial metabolic pathways and other molecular functions from metagenomic or metatranscriptomic sequencing data.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "metabolic_profiling",
+        "pathway_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/biobakery/humann",
+      "help_website": [
+        "http://huttenhower.sph.harvard.edu/humann"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "metagenomics",
+        "metabolic-pathways",
+        "profiling"
+      ],
+      "id": 11
+    },
+    {
+      "name": "micronota",
+      "one_line_profile": "Pipeline for annotating microbial genomes and metagenomes",
+      "detailed_description": "An open-source, BSD-licensed pipeline for the structural and functional annotation of microbial genomes and metagenomic assemblies, integrating various tools for high-quality annotation.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "genome_annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/biocore/micronota",
+      "help_website": [
+        "https://github.com/biocore/micronota"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "pipeline",
+        "annotation",
+        "microbial-genomics"
+      ],
+      "id": 12
+    },
+    {
+      "name": "EukMetaSanity",
+      "one_line_profile": "Pipeline for annotation of eukaryotic metagenome-assembled genomes",
+      "detailed_description": "A specialized pipeline designed for the structural and functional annotation of eukaryotic genomes recovered from metagenomic datasets (MAGs), addressing the specific challenges of eukaryotic gene prediction.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "eukaryotic_annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cjneely10/EukMetaSanity",
+      "help_website": [
+        "https://github.com/cjneely10/EukMetaSanity"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "eukaryotes",
+        "mags",
+        "annotation-pipeline"
+      ],
+      "id": 13
+    },
+    {
+      "name": "MicrobeAnnotator",
+      "one_line_profile": "Pipeline for metabolic annotation of microbial genomes",
+      "detailed_description": "A user-friendly pipeline for the comprehensive metabolic annotation of microbial genomes and metagenomes, utilizing an iterative search approach with KOfam, UniProt, and RefSeq databases.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "metabolic_annotation",
+        "pathway_reconstruction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cruizperez/MicrobeAnnotator",
+      "help_website": [
+        "https://github.com/cruizperez/MicrobeAnnotator"
+      ],
+      "license": "Artistic-2.0",
+      "tags": [
+        "metabolism",
+        "kegg",
+        "annotation"
+      ],
+      "id": 14
+    },
+    {
+      "name": "InterProScan",
+      "one_line_profile": "Genome-scale protein function classification tool",
+      "detailed_description": "The standard tool for scanning protein sequences against the InterPro database's member databases (including Pfam, TIGRFAMs, etc.) to predict protein families, domains, and sites.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "protein_classification",
+        "functional_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/ebi-pf-team/interproscan",
+      "help_website": [
+        "https://interproscan-docs.readthedocs.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "protein-domains",
+        "interpro",
+        "classification"
+      ],
+      "id": 15
+    },
+    {
+      "name": "InterProScan 6",
+      "one_line_profile": "Nextflow-based implementation of InterProScan",
+      "detailed_description": "A scalable, cloud-ready implementation of the InterProScan protein function classification tool, built using the Nextflow workflow manager for improved parallelization and deployment.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "protein_classification",
+        "functional_annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/ebi-pf-team/interproscan6",
+      "help_website": [
+        "https://github.com/ebi-pf-team/interproscan6"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "nextflow",
+        "protein-domains",
+        "scalable"
+      ],
+      "id": 16
+    },
+    {
+      "name": "eggNOG-mapper",
+      "one_line_profile": "Fast genome-wide functional annotation through orthology assignment",
+      "detailed_description": "A tool for fast functional annotation of novel sequences (genes or proteins) using precomputed orthologous groups and phylogenies from the eggNOG database, providing high-precision orthology assignments.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "orthology_assignment"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/eggnogdb/eggnog-mapper",
+      "help_website": [
+        "http://eggnog-mapper.embl.de"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "orthology",
+        "eggnog",
+        "annotation"
+      ],
+      "id": 17
+    },
+    {
+      "name": "BRICK",
+      "one_line_profile": "Interactive visualization tool for bacterial genome annotations and comparisons",
+      "detailed_description": "A web-based tool that creates interactive, BRIG-like circular visualizations for bacterial genomes, allowing for the display of annotations, coverage, and comparative genomic data.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "comparative_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Svelte",
+      "repo_url": "https://github.com/esteinig/brick",
+      "help_website": [
+        "https://brick.steineggerlab.com"
+      ],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "bacterial-genomics",
+        "circular-plot"
+      ],
+      "id": 18
+    },
+    {
+      "name": "clinker",
+      "one_line_profile": "Gene cluster comparison figure generator",
+      "detailed_description": "A bioinformatics tool for generating interactive, publication-quality figures comparing gene clusters (BGCs), automatically performing alignments and visualizing structural similarities.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "visualization",
+        "comparative_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gamcil/clinker",
+      "help_website": [
+        "https://github.com/gamcil/clinker"
+      ],
+      "license": "MIT",
+      "tags": [
+        "gene-clusters",
+        "visualization",
+        "alignment"
+      ],
+      "id": 19
+    },
+    {
+      "name": "dnaapler",
+      "one_line_profile": "Tool for reorienting assembled microbial sequences",
+      "detailed_description": "A tool designed to identify the replication origin (dnaA) in bacterial chromosomal assemblies and reorient the sequence to begin at the origin, standardizing genome assemblies for downstream analysis.",
+      "domains": [
+        "B4",
+        "B4-02"
+      ],
+      "subtask_category": [
+        "genome_assembly_processing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gbouras13/dnaapler",
+      "help_website": [
+        "https://github.com/gbouras13/dnaapler"
+      ],
+      "license": "MIT",
+      "tags": [
+        "assembly",
+        "bacteria",
+        "dnaa"
+      ],
+      "id": 20
+    },
+    {
+      "name": "MetaPathways",
+      "one_line_profile": "Pipeline for constructing Pathway/Genome Databases from environmental sequences",
+      "detailed_description": "A modular pipeline for analyzing metagenomic data, performing quality control, ORF prediction, and functional annotation to construct Pathway/Genome Databases (PGDBs) compatible with Pathway Tools.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "pathway_reconstruction",
+        "functional_annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/hallamlab/MetaPathways",
+      "help_website": [
+        "https://github.com/hallamlab/MetaPathways"
+      ],
+      "license": null,
+      "tags": [
+        "metagenomics",
+        "pathways",
+        "pgdb"
+      ],
+      "id": 21
+    },
+    {
+      "name": "Prodigal",
+      "one_line_profile": "Fast, reliable protein-coding gene prediction for prokaryotic genomes",
+      "detailed_description": "The industry-standard software for microbial gene prediction (CDS calling), widely used in pipelines for annotating bacteria and archaea genomes and metagenomes.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "gene_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/hyattpd/Prodigal",
+      "help_website": [
+        "https://github.com/hyattpd/Prodigal/wiki"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "gene-finding",
+        "prokaryotes",
+        "ab-initio"
+      ],
+      "id": 22
+    },
+    {
+      "name": "KEGGaNOG",
+      "one_line_profile": "Tool for mining KEGG pathways completeness from eggNOG-mapper annotations",
+      "detailed_description": "A utility to analyze the output of eggNOG-mapper and calculate the completeness of KEGG metabolic pathways, helping to infer functional capabilities of microbial communities.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "pathway_analysis",
+        "functional_profiling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/iliapopov17/KEGGaNOG",
+      "help_website": [
+        "https://github.com/iliapopov17/KEGGaNOG"
+      ],
+      "license": "MIT",
+      "tags": [
+        "kegg",
+        "eggnog",
+        "pathway-completeness"
+      ],
+      "id": 23
+    },
+    {
+      "name": "PPanGGOLiN",
+      "one_line_profile": "Partitioned pangenome graph construction and analysis",
+      "detailed_description": "A software suite for building and analyzing partitioned pangenome graphs from large sets of microbial genomes, enabling the study of gene families and their genomic context.",
+      "domains": [
+        "B4",
+        "B4-03"
+      ],
+      "subtask_category": [
+        "pangenomics",
+        "comparative_genomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/labgem/PPanGGOLiN",
+      "help_website": [
+        "https://github.com/labgem/PPanGGOLiN/wiki"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "pangenome",
+        "graph",
+        "microbial-genomics"
+      ],
+      "id": 24
+    },
+    {
+      "name": "run_dbcan (V4)",
+      "one_line_profile": "Standalone tool for CAZyme annotation (dbCAN V4)",
+      "detailed_description": "The standalone implementation of the dbCAN V4 pipeline for automated Carbohydrate-active enzyme (CAZyme) annotation in genomic and metagenomic sequences.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "cazyme_prediction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/linnabrown/run_dbcan",
+      "help_website": [
+        "https://github.com/linnabrown/run_dbcan"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "cazymes",
+        "dbcan",
+        "annotation"
+      ],
+      "id": 25
+    },
+    {
+      "name": "BiG-SLiCE",
+      "one_line_profile": "Scalable analysis of Biosynthetic Gene Clusters (BGCs)",
+      "detailed_description": "A tool designed for the large-scale clustering and analysis of Biosynthetic Gene Clusters (BGCs), capable of processing massive datasets to identify gene cluster families and explore their diversity.",
+      "domains": [
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "bgc_analysis",
+        "clustering"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/medema-group/bigslice",
+      "help_website": [
+        "https://github.com/medema-group/bigslice"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "bgc",
+        "clustering",
+        "secondary-metabolism"
+      ],
+      "id": 26
+    },
+    {
+      "name": "Meteor",
+      "one_line_profile": "Quantitative metagenomics profiling platform for complex ecosystems",
+      "detailed_description": "Meteor is a platform for quantitative metagenomics profiling that relies on gene catalogues to perform species-level taxonomic profiling, functional analysis, and strain-level population structure inference.",
+      "domains": [
+        "Bioinfo",
+        "Metagenomics",
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "taxonomic_profiling",
+        "functional_analysis",
+        "strain_inference"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/metagenopolis/meteor",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "metagenomics",
+        "profiling",
+        "microbiome"
+      ],
+      "id": 27
+    },
+    {
+      "name": "MicFunPred",
+      "one_line_profile": "Functional profile prediction from 16S rRNA sequence data",
+      "detailed_description": "A conserved approach to predict functional profiles from 16S rRNA sequence data, enabling functional inference from taxonomic marker genes.",
+      "domains": [
+        "Bioinfo",
+        "Microbial Ecology",
+        "B4",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "functional_prediction",
+        "16S_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/microDM/MicFunPred",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "16S-rRNA",
+        "functional-prediction",
+        "microbiome"
+      ],
+      "id": 28
+    },
+    {
+      "name": "mcmcstat",
+      "one_line_profile": "MCMC toolbox for Matlab",
+      "detailed_description": "A Matlab toolbox for Markov Chain Monte Carlo (MCMC) simulation, widely used for statistical inference and parameter estimation in scientific modeling.",
+      "domains": [
+        "Statistics",
+        "Scientific Computing"
+      ],
+      "subtask_category": [
+        "statistical_inference",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "MATLAB",
+      "repo_url": "https://github.com/mjlaine/mcmcstat",
+      "help_website": [
+        "https://mjlaine.github.io/mcmcstat/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "mcmc",
+        "statistics",
+        "matlab"
+      ],
+      "id": 29
+    },
+    {
+      "name": "AMRFinderPlus",
+      "one_line_profile": "Identification of AMR, virulence, and stress resistance genes",
+      "detailed_description": "AMRFinderPlus identifies antimicrobial resistance (AMR) genes, point mutations, virulence factors, and stress resistance genes in assembled bacterial nucleotide and protein sequences.",
+      "domains": [
+        "Bioinfo",
+        "Genomics",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "gene_identification",
+        "functional_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/ncbi/amr",
+      "help_website": [
+        "https://ncbi.nlm.nih.gov/pathogens/antimicrobial-resistance/AMRFinder/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "amr",
+        "virulence",
+        "bacteria"
+      ],
+      "id": 30
+    },
+    {
+      "name": "nf-core/mag",
+      "one_line_profile": "Assembly and binning pipeline for metagenomes",
+      "detailed_description": "A Nextflow pipeline for the assembly, binning, and annotation of metagenomes, facilitating the reconstruction of Metagenome-Assembled Genomes (MAGs).",
+      "domains": [
+        "Bioinfo",
+        "Metagenomics",
+        "B4"
+      ],
+      "subtask_category": [
+        "assembly",
+        "binning",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Nextflow",
+      "repo_url": "https://github.com/nf-core/mag",
+      "help_website": [
+        "https://nf-co.re/mag"
+      ],
+      "license": "MIT",
+      "tags": [
+        "nextflow",
+        "mag",
+        "metagenomics"
+      ],
+      "id": 31
+    },
+    {
+      "name": "omixer-rpmR",
+      "one_line_profile": "R interface for metagenomic pathway mapping",
+      "detailed_description": "An R interface to the omixer-rpm tool, designed to turn metagenomic functional profiles into pathway or module profiles for functional analysis.",
+      "domains": [
+        "Bioinfo",
+        "Metagenomics",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "pathway_analysis",
+        "functional_profiling"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/omixer/omixer-rpmR",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "R",
+        "metagenomics",
+        "pathways"
+      ],
+      "id": 32
+    },
+    {
+      "name": "Bakta",
+      "one_line_profile": "Rapid and standardized annotation of bacterial genomes and MAGs",
+      "detailed_description": "A tool for the rapid and standardized annotation of bacterial genomes, MAGs, and plasmids, designed to be a successor to Prokka with improved database handling.",
+      "domains": [
+        "Bioinfo",
+        "Genomics",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "genome_annotation",
+        "gene_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/oschwengers/bakta",
+      "help_website": [
+        "https://bakta.readthedocs.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "annotation",
+        "bacteria",
+        "mag"
+      ],
+      "id": 33
+    },
+    {
+      "name": "orthosnake",
+      "one_line_profile": "Snakemake workflow for orthology inference",
+      "detailed_description": "A Snakemake-based workflow script that integrates Prokka and OrthoFinder for automated orthology inference in comparative genomics.",
+      "domains": [
+        "Bioinfo",
+        "Comparative Genomics"
+      ],
+      "subtask_category": [
+        "orthology_inference",
+        "workflow"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/paraslonic/orthosnake",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "snakemake",
+        "orthology",
+        "prokka"
+      ],
+      "id": 34
+    },
+    {
+      "name": "BlastViewer",
+      "one_line_profile": "Interactive viewer for BLAST results",
+      "detailed_description": "A graphical tool for visualizing and analyzing BLAST (Basic Local Alignment Search Tool) results, aiding in the interpretation of sequence alignment data.",
+      "domains": [
+        "Bioinfo",
+        "Sequence Analysis"
+      ],
+      "subtask_category": [
+        "visualization",
+        "alignment_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/pgdurand/BlastViewer",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "blast",
+        "visualization",
+        "java"
+      ],
+      "id": 35
+    },
+    {
+      "name": "plantiSMASH",
+      "one_line_profile": "Mining biosynthetic gene clusters in plant genomes",
+      "detailed_description": "A tool adapted from antiSMASH to explore and predict potential Biosynthetic Gene Clusters (BGCs) specifically within plant genomes.",
+      "domains": [
+        "Bioinfo",
+        "Genomics",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "bgc_mining",
+        "functional_annotation"
+      ],
+      "application_level": "solver",
+      "primary_language": "OpenEdge ABL",
+      "repo_url": "https://github.com/plantismash/plantismash",
+      "help_website": [
+        "http://plantismash.secondarymetabolites.org/"
+      ],
+      "license": "AGPL-3.0",
+      "tags": [
+        "plant-genomics",
+        "secondary-metabolites",
+        "bgc"
+      ],
+      "id": 36
+    },
+    {
+      "name": "omixer-rpm",
+      "one_line_profile": "Reference Pathways Mapper for metagenomics",
+      "detailed_description": "A tool for mapping metagenomic functional profiles into pathway or module profiles, enabling high-level functional interpretation of microbiome data.",
+      "domains": [
+        "Bioinfo",
+        "Metagenomics",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "pathway_mapping",
+        "functional_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/raeslab/omixer-rpm",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "pathways",
+        "metagenomics",
+        "java"
+      ],
+      "id": 37
+    },
+    {
+      "name": "pgp_reconstruction",
+      "one_line_profile": "Pathway-Guided Pruning for metabolic model reconstruction",
+      "detailed_description": "Implements a Pathway-Guided Pruning (PGP) approach for the reconstruction of genome-scale metabolic models, aiding in systems biology modeling.",
+      "domains": [
+        "Bioinfo",
+        "Systems Biology",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "metabolic_modeling",
+        "network_reconstruction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/rcolpo/pgp_reconstruction",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "metabolic-model",
+        "reconstruction",
+        "pathways"
+      ],
+      "id": 38
+    },
+    {
+      "name": "tcga-microbiome-prediction",
+      "one_line_profile": "Cancer prognosis prediction using tumor microbial abundances",
+      "detailed_description": "Predictive models and analysis scripts for cancer prognosis and drug response using primary tumor microbial abundances derived from WGS and RNA-seq data.",
+      "domains": [
+        "Bioinfo",
+        "Oncology",
+        "Microbiome"
+      ],
+      "subtask_category": [
+        "predictive_modeling",
+        "clinical_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ruppinlab/tcga-microbiome-prediction",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "cancer",
+        "microbiome",
+        "machine-learning"
+      ],
+      "id": 39
+    },
+    {
+      "name": "ARIBA",
+      "one_line_profile": "Antimicrobial Resistance Identification By Assembly",
+      "detailed_description": "ARIBA identifies antimicrobial resistance genes by running local assemblies from paired-end sequencing reads, suitable for bacterial pathogen analysis.",
+      "domains": [
+        "Bioinfo",
+        "Genomics",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "amr_detection",
+        "assembly"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sanger-pathogens/ariba",
+      "help_website": [
+        "https://github.com/sanger-pathogens/ariba/wiki"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "amr",
+        "pathogen",
+        "assembly"
+      ],
+      "id": 40
+    },
+    {
+      "name": "gff3toembl",
+      "one_line_profile": "Converter from Prokka GFF3 to EMBL format",
+      "detailed_description": "A utility script to convert GFF3 files generated by Prokka into EMBL format, facilitating the submission of annotated assemblies to databases like EBI.",
+      "domains": [
+        "Bioinfo",
+        "Data Management"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "data_submission"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sanger-pathogens/gff3toembl",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "conversion",
+        "gff3",
+        "embl"
+      ],
+      "id": 41
+    },
+    {
+      "name": "ShotMAP",
+      "one_line_profile": "Shotgun Metagenome Annotation Pipeline",
+      "detailed_description": "A pipeline for the annotation of shotgun metagenomic data, enabling functional and taxonomic characterization of microbial communities.",
+      "domains": [
+        "Bioinfo",
+        "Metagenomics",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "annotation",
+        "pipeline"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/sharpton/shotmap",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "metagenomics",
+        "annotation",
+        "perl"
+      ],
+      "id": 42
+    },
+    {
+      "name": "pprodigal",
+      "one_line_profile": "Parallelized wrapper for Prodigal gene predictor",
+      "detailed_description": "A Python3 wrapper that parallelizes the execution of Prodigal, a popular prokaryotic gene prediction tool, to speed up analysis of large datasets.",
+      "domains": [
+        "Bioinfo",
+        "Genomics",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "gene_prediction",
+        "parallelization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sjaenick/pprodigal",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "prodigal",
+        "gene-prediction",
+        "parallel"
+      ],
+      "id": 43
+    },
+    {
+      "name": "autoprokka",
+      "one_line_profile": "Automated batch invocation of Prokka",
+      "detailed_description": "A script to automatically invoke Prokka on a directory of FASTA genomes and organize the output, streamlining batch genome annotation.",
+      "domains": [
+        "Bioinfo",
+        "Genomics",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "annotation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/stevenjdunn/autoprokka",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "prokka",
+        "automation",
+        "batch-processing"
+      ],
+      "id": 44
+    },
+    {
+      "name": "EcoFoldDB",
+      "one_line_profile": "Pipeline for structure-guided metagenome annotation",
+      "detailed_description": "A database and pipeline for protein structure-guided annotations of ecologically relevant functions at the metagenome scale.",
+      "domains": [
+        "Bioinfo",
+        "Metagenomics",
+        "Structural Biology",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "structure_prediction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Shell",
+      "repo_url": "https://github.com/timghaly/EcoFoldDB",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "protein-structure",
+        "metagenomics",
+        "annotation"
+      ],
+      "id": 45
+    },
+    {
+      "name": "PGPg_finder",
+      "one_line_profile": "Annotation of Plant-Growth Promotion Genes",
+      "detailed_description": "A command-line tool offering workflows for the annotation of Plant-Growth Promotion Genes (PGPg) in genomes and metagenomes.",
+      "domains": [
+        "Bioinfo",
+        "Metagenomics",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "functional_annotation",
+        "gene_mining"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tpellegrinetti/PGPg_finder",
+      "help_website": [],
+      "license": "CC0-1.0",
+      "tags": [
+        "plant-growth",
+        "annotation",
+        "bacteria"
+      ],
+      "id": 46
+    },
+    {
+      "name": "Prokka",
+      "one_line_profile": "Rapid prokaryotic genome annotation",
+      "detailed_description": "A widely used software tool for the rapid annotation of prokaryotic genomes, integrating multiple prediction tools into a single workflow.",
+      "domains": [
+        "Bioinfo",
+        "Genomics",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "genome_annotation",
+        "gene_prediction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/tseemann/prokka",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "annotation",
+        "bacteria",
+        "prokaryote"
+      ],
+      "id": 47
+    },
+    {
+      "name": "DRAMPower",
+      "one_line_profile": "DRAM power and energy estimation tool",
+      "detailed_description": "A fast and accurate tool for estimating power and energy consumption of DRAM memories, used in computer architecture research and hardware simulation.",
+      "domains": [
+        "Computer Engineering",
+        "Hardware Simulation"
+      ],
+      "subtask_category": [
+        "power_estimation",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/tukl-msd/DRAMPower",
+      "help_website": [
+        "http://www.drampower.info"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "dram",
+        "power-estimation",
+        "simulation"
+      ],
+      "id": 48
+    },
+    {
+      "name": "DRAMSys",
+      "one_line_profile": "SystemC TLM-2.0 based DRAM simulator",
+      "detailed_description": "A flexible DRAM subsystem simulator based on SystemC TLM-2.0, allowing for the exploration of DRAM architectures and controllers.",
+      "domains": [
+        "Computer Engineering",
+        "Hardware Simulation"
+      ],
+      "subtask_category": [
+        "architecture_simulation",
+        "memory_systems"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/tukl-msd/DRAMSys",
+      "help_website": [
+        "https://www.dramsys.info"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "systemc",
+        "dram",
+        "simulator"
+      ],
+      "id": 49
+    },
+    {
+      "name": "DRAMSim2",
+      "one_line_profile": "Cycle accurate DRAM simulator",
+      "detailed_description": "A cycle-accurate memory system simulator for DDR2/DDR3 memory systems, widely used in computer architecture research.",
+      "domains": [
+        "Computer Engineering",
+        "Hardware Simulation"
+      ],
+      "subtask_category": [
+        "cycle_accurate_simulation",
+        "memory_systems"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/umd-memsys/DRAMSim2",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "simulator",
+        "dram",
+        "memory"
+      ],
+      "id": 50
+    },
+    {
+      "name": "DRAMsim3",
+      "one_line_profile": "Cycle-accurate, Thermal-Capable DRAM Simulator",
+      "detailed_description": "The successor to DRAMSim2, adding support for newer memory standards (HBM, HMC) and thermal modeling capabilities.",
+      "domains": [
+        "Computer Engineering",
+        "Hardware Simulation"
+      ],
+      "subtask_category": [
+        "thermal_simulation",
+        "memory_systems"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/umd-memsys/DRAMsim3",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "simulator",
+        "thermal",
+        "dram"
+      ],
+      "id": 51
+    },
+    {
+      "name": "StrainPanDA",
+      "one_line_profile": "Reconstruction of subspecies composition and functional profiles",
+      "detailed_description": "A method for the reconstruction of subspecies composition and functional profiles from metagenomic data, utilizing pangenome graphs.",
+      "domains": [
+        "Bioinfo",
+        "Metagenomics",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "strain_profiling",
+        "functional_reconstruction"
+      ],
+      "application_level": "solver",
+      "primary_language": "C",
+      "repo_url": "https://github.com/xbiome/StrainPanDA",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "strain-level",
+        "metagenomics",
+        "pangenome"
+      ],
+      "id": 52
+    },
+    {
+      "name": "Cayman",
+      "one_line_profile": "Profiling CAZyme abundances in metagenomic datasets",
+      "detailed_description": "A command-line tool for profiling Carbohydrate-Active Enzyme (CAZyme) abundances in metagenomic datasets, essential for understanding carbon metabolism.",
+      "domains": [
+        "Bioinfo",
+        "Metagenomics",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "functional_profiling",
+        "cazyme_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zellerlab/cayman",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cazyme",
+        "metagenomics",
+        "profiling"
+      ],
+      "id": 53
+    },
+    {
+      "name": "MultiSMASH",
+      "one_line_profile": "Workflow for large-scale antiSMASH analyses",
+      "detailed_description": "A workflow and collection of scripts designed to facilitate large-scale analyses using antiSMASH, a tool for identifying biosynthetic gene clusters.",
+      "domains": [
+        "Bioinfo",
+        "Genomics",
+        "B4-04"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "bgc_analysis"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zreitz/multismash",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "antismash",
+        "high-throughput",
+        "bgc"
+      ],
+      "id": 54
+    }
+  ]
+}

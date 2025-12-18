@@ -1,0 +1,2679 @@
+{
+  "generated_at": "2025-12-16T01:52:25.496514+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "G1",
+      "leaf_cluster_name": "科研文献-检索/解析/引用网络生态",
+      "domain": "Sci Knowledge",
+      "typical_objects": "PDFs/citations",
+      "task_chain": "解析→抽取→索引→检索→评测",
+      "tool_form": "解析器 + 检索 + 评测"
+    },
+    "unit": {
+      "unit_id": "G1-02",
+      "unit_name": "引用抽取/引文网络/元数据对齐",
+      "target_scale": "150–350",
+      "coverage_tools": "citation graph tools"
+    },
+    "search": {
+      "target_candidates": 350,
+      "queries": [
+        "[GH] S2ORC",
+        "[GH] ParsCit",
+        "[GH] habanero",
+        "[GH] pybliometrics",
+        "[GH] bibtexparser",
+        "[GH] RefExtract",
+        "[GH] Neural-ParsCit",
+        "[GH] AnyStyle",
+        "[GH] CERMINE",
+        "[GH] Grobid",
+        "[GH] citation extraction",
+        "[GH] reference parser",
+        "[GH] citation graph",
+        "[GH] citation network",
+        "[GH] bibliometrics",
+        "[GH] scientometrics",
+        "[GH] bibtex parser",
+        "[GH] metadata alignment",
+        "[GH] author disambiguation",
+        "[GH] reference resolution",
+        "[GH] scholarly graph",
+        "[GH] citation recommendation",
+        "[GH] co-citation analysis",
+        "[WEB] citation extraction library github",
+        "[WEB] reference parsing tools pdf github",
+        "[WEB] citation network analysis python github",
+        "[WEB] bibliographic metadata alignment github",
+        "[WEB] scholarly knowledge graph tools github",
+        "[WEB] author name disambiguation github"
+      ],
+      "total_candidates": 937,
+      "tool_candidates": 451,
+      "final_tools": 104
+    }
+  },
+  "tools": [
+    {
+      "name": "tetsuo-dox-agent",
+      "one_line_profile": "AI-powered research assistant for drafting answers with citations",
+      "detailed_description": "A research agent leveraging Large Language Models to provide technically-focused answers with robust citations. It employs a graph-based architecture to draft answers, perform self-reflection, conduct research, and iteratively improve responses.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "literature_review",
+        "citation_retrieval"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/7etsuo/tetsuo-dox-agent",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "llm",
+        "research-assistant",
+        "citation-generation"
+      ],
+      "id": 1
+    },
+    {
+      "name": "GIANT-Citation-String-Generator",
+      "one_line_profile": "Script to generate synthetic annotated bibliographic reference strings",
+      "detailed_description": "A tool designed to generate tagged XML citation strings for training and evaluating citation parsing algorithms. It supports the creation of large-scale synthetic datasets for bibliometric analysis.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "data_generation",
+        "citation_parsing"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/BeelGroup/GIANT-The-1-Billion-Annotated-Synthetic-Bibliographic-Reference-String-Dataset",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "synthetic-data",
+        "citation-parsing",
+        "bibliometrics"
+      ],
+      "id": 2
+    },
+    {
+      "name": "CERMINE",
+      "one_line_profile": "Java library for extracting metadata and content from scientific PDFs",
+      "detailed_description": "A comprehensive Java library and tool for extracting metadata, bibliographic references, and structured full text from scientific articles in PDF format. It uses machine learning techniques for layout analysis and content classification.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "metadata_extraction",
+        "pdf_parsing",
+        "citation_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/CeON/CERMINE",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "pdf-extraction",
+        "metadata",
+        "bibliometrics"
+      ],
+      "id": 3
+    },
+    {
+      "name": "citation-network-explorer",
+      "one_line_profile": "Interactive tool for exploring and visualizing local citation networks",
+      "detailed_description": "A web-based tool that allows users to visualize and explore citation networks. It helps researchers understand the connections between papers and discover relevant literature through network visualization.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "visualization",
+        "network_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/CitationGecko/citation-network-explorer",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "citation-network",
+        "literature-review"
+      ],
+      "id": 4
+    },
+    {
+      "name": "CiteGraph",
+      "one_line_profile": "Web-based visualizer for citation graphs",
+      "detailed_description": "A web application for visualizing citation graphs, enabling users to interactively explore the relationships between scientific publications.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "visualization",
+        "network_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/Citegraph/citegraph",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "citation-graph",
+        "bibliometrics"
+      ],
+      "id": 5
+    },
+    {
+      "name": "refchaser",
+      "one_line_profile": "Tool for backward and forward reference searching in systematic reviews",
+      "detailed_description": "A Python tool designed to assist with systematic reviews and literature reviews. It automates backward and forward reference searching, extracts references, creates search queries, ranks articles by relevance, and supports batch downloading of full-text PDFs.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "literature_review",
+        "citation_tracking",
+        "pdf_retrieval"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/DQ-Zhang/refchaser",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "systematic-review",
+        "citation-tracking",
+        "literature-search"
+      ],
+      "id": 6
+    },
+    {
+      "name": "citation-graph-builder",
+      "one_line_profile": "Tool for creating and visualizing citation networks from PDFs and APIs",
+      "detailed_description": "A tool that combines citation data obtained from parsing paper PDF files and querying bibliographic APIs to create and visualize citation networks. Developed by Forschungszentrum Jülich (FZJ).",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "visualization",
+        "network_construction",
+        "pdf_parsing"
+      ],
+      "application_level": "solver",
+      "primary_language": "TeX",
+      "repo_url": "https://github.com/FZJ-IEK3-VSA/citation-graph-builder",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "citation-network",
+        "visualization",
+        "bibliometrics"
+      ],
+      "id": 7
+    },
+    {
+      "name": "BibliometricVisualization",
+      "one_line_profile": "Integrated platform for bibliometric visualization and analysis",
+      "detailed_description": "A bibliometric visualization platform that integrates Gestalt design principles, keyword extraction, temporal algorithms, machine learning, and large language models to analyze and visualize scientific literature data.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "visualization",
+        "bibliometrics",
+        "keyword_extraction"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/FengDushuo/BibliometricVisualization",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bibliometrics",
+        "visualization",
+        "llm"
+      ],
+      "id": 8
+    },
+    {
+      "name": "OneCite",
+      "one_line_profile": "Intelligent toolkit for parsing and formatting academic references",
+      "detailed_description": "A toolkit designed to automatically parse, complete, and format academic references. It supports the Model Context Protocol (MCP) and aids in managing bibliographic data.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "reference_parsing",
+        "formatting",
+        "metadata_completion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/HzaCode/OneCite",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "reference-management",
+        "parsing",
+        "formatting"
+      ],
+      "id": 9
+    },
+    {
+      "name": "PubTrends",
+      "one_line_profile": "Scientific literature explorer for visualizing and analyzing research trends and citation networks",
+      "detailed_description": "A tool that runs searches on Pubmed or Semantic Scholar and allows users to explore the high-level structure of result papers through visualization and topological analysis.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "literature_exploration",
+        "citation_network_analysis",
+        "visualization"
+      ],
+      "application_level": "application",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/JetBrains-Research/pubtrends",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "scientometrics",
+        "visualization",
+        "literature-review"
+      ],
+      "id": 10
+    },
+    {
+      "name": "MeDuSA",
+      "one_line_profile": "Fine-resolution cellular deconvolution method for RNA-seq data",
+      "detailed_description": "A method that leverages scRNA-seq data as a reference to estimate cell-state abundance in bulk RNA-seq data, useful for biological data analysis.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "deconvolution",
+        "abundance_estimation"
+      ],
+      "application_level": "solver",
+      "primary_language": "R",
+      "repo_url": "https://github.com/JianYang-Lab/MeDuSA",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "rna-seq",
+        "deconvolution",
+        "single-cell"
+      ],
+      "id": 11
+    },
+    {
+      "name": "novelpy",
+      "one_line_profile": "Python package for computing bibliometric novelty indicators",
+      "detailed_description": "A library designed to compute various novelty indicators for scientific publications based on co-occurrence matrices of references, keywords, or other metadata.",
+      "domains": [
+        "G1",
+        "G1-02",
+        "Scientometrics"
+      ],
+      "subtask_category": [
+        "bibliometrics",
+        "novelty_detection",
+        "indicator_calculation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Kwirtz/novelpy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bibliometrics",
+        "novelty",
+        "indicators"
+      ],
+      "id": 12
+    },
+    {
+      "name": "Local Citation Network",
+      "one_line_profile": "Web application for literature review using local citation networks",
+      "detailed_description": "A tool that helps scientists perform literature reviews by visualizing and analyzing local citation networks using metadata from OpenAlex, Semantic Scholar, and Crossref.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "literature_review",
+        "citation_network_visualization",
+        "metadata_aggregation"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/LocalCitationNetwork/LocalCitationNetwork.github.io",
+      "help_website": [
+        "https://localcitationnetwork.github.io"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "citation-network",
+        "literature-review",
+        "openalex"
+      ],
+      "id": 13
+    },
+    {
+      "name": "scimeetr",
+      "one_line_profile": "R package and Shiny app for bibliometric analysis and mapping",
+      "detailed_description": "A suite of functions and a web interface to load bibliometric data, create networks, identify research communities, and generate reading lists.",
+      "domains": [
+        "G1",
+        "G1-02",
+        "Scientometrics"
+      ],
+      "subtask_category": [
+        "bibliometrics",
+        "network_mapping",
+        "community_detection"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/MaximeRivest/scimeetr",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bibliometrics",
+        "shiny",
+        "r-package"
+      ],
+      "id": 14
+    },
+    {
+      "name": "LitStudy",
+      "one_line_profile": "Python library for automated scientific literature analysis",
+      "detailed_description": "A Python package that enables researchers to perform literature analysis, including searching, refining, and visualizing bibliometric data within Jupyter notebooks.",
+      "domains": [
+        "G1",
+        "G1-02",
+        "Scientometrics"
+      ],
+      "subtask_category": [
+        "literature_analysis",
+        "bibliometrics",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NLeSC/litstudy",
+      "help_website": [
+        "https://nlesc.github.io/litstudy/"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "literature-analysis",
+        "bibliometrics",
+        "python"
+      ],
+      "id": 15
+    },
+    {
+      "name": "bibtexParseJs",
+      "one_line_profile": "JavaScript library for parsing BibTeX files",
+      "detailed_description": "A library maintained by ORCID for parsing BibTeX formatted citations into JSON, facilitating the handling of bibliographic data in web applications.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "parsing",
+        "citation_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/ORCID/bibtexParseJs",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bibtex",
+        "parser",
+        "javascript"
+      ],
+      "id": 16
+    },
+    {
+      "name": "talaria_bibtex",
+      "one_line_profile": "OCaml library for parsing BibTeX files",
+      "detailed_description": "A parser for BibTeX files written in OCaml, useful for processing bibliographic databases in functional programming environments.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "parsing",
+        "bibliography_management"
+      ],
+      "application_level": "library",
+      "primary_language": "OCaml",
+      "repo_url": "https://github.com/Octachron/talaria_bibtex",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "bibtex",
+        "parser",
+        "ocaml"
+      ],
+      "id": 17
+    },
+    {
+      "name": "Equi7Grid",
+      "one_line_profile": "Spatial reference system optimized for global high-resolution raster data",
+      "detailed_description": "A Python package defining the Equi7Grid, a spatial reference system designed to handle global high-resolution raster data efficiently with minimal distortion.",
+      "domains": [
+        "Earth Science",
+        "GIS"
+      ],
+      "subtask_category": [
+        "spatial_referencing",
+        "raster_processing",
+        "grid_definition"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/TUW-GEO/Equi7Grid",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "gis",
+        "raster",
+        "spatial-reference"
+      ],
+      "id": 18
+    },
+    {
+      "name": "metaknowledge",
+      "one_line_profile": "Python library for bibliometric and network analysis",
+      "detailed_description": "A comprehensive Python library designed for doing bibliometric and network analysis in science and health policy research, supporting parsing, analysis, and visualization of citation data.",
+      "domains": [
+        "G1",
+        "G1-02",
+        "Scientometrics"
+      ],
+      "subtask_category": [
+        "bibliometrics",
+        "network_analysis",
+        "citation_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/UWNETLAB/metaknowledge",
+      "help_website": [
+        "https://metaknowledge.readthedocs.io/"
+      ],
+      "license": "GPL-2.0",
+      "tags": [
+        "bibliometrics",
+        "network-analysis",
+        "python"
+      ],
+      "id": 19
+    },
+    {
+      "name": "pybibx",
+      "one_line_profile": "AI-powered bibliometric and scientometric Python library",
+      "detailed_description": "A Python library that integrates artificial intelligence tools for performing bibliometric and scientometric analyses, including data processing and visualization.",
+      "domains": [
+        "G1",
+        "G1-02",
+        "Scientometrics"
+      ],
+      "subtask_category": [
+        "bibliometrics",
+        "scientometrics",
+        "ai_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Valdecy/pybibx",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "bibliometrics",
+        "ai",
+        "python"
+      ],
+      "id": 20
+    },
+    {
+      "name": "Scholia",
+      "one_line_profile": "Wikidata-based scholarly profile visualization tool",
+      "detailed_description": "A web service and tool that generates scholarly profiles for researchers, organizations, and topics using data from Wikidata, visualizing citation networks and research outputs.",
+      "domains": [
+        "G1",
+        "G1-02",
+        "Scientometrics"
+      ],
+      "subtask_category": [
+        "scholarly_profiling",
+        "visualization",
+        "wikidata_integration"
+      ],
+      "application_level": "service",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/WDscholia/scholia",
+      "help_website": [
+        "https://scholia.toolforge.org/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "wikidata",
+        "scientometrics",
+        "visualization"
+      ],
+      "id": 21
+    },
+    {
+      "name": "biblicit",
+      "one_line_profile": "Citation extraction tool for PDF documents",
+      "detailed_description": "A Ruby-based utility developed by Academia.edu to extract and parse citations directly from PDF files of scientific papers, facilitating metadata retrieval and citation network construction.",
+      "domains": [
+        "Sci Knowledge",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "citation_extraction",
+        "pdf_parsing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/academia-edu/biblicit",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "citation-extraction",
+        "pdf-parsing",
+        "bibliometrics"
+      ],
+      "id": 22
+    },
+    {
+      "name": "biblib",
+      "one_line_profile": "Robust BibTeX parser and processing library",
+      "detailed_description": "A simple yet faithful BibTeX parser for Python 3 that handles common BibTeX idiosyncrasies, allowing for the manipulation, normalization, and analysis of bibliographic databases.",
+      "domains": [
+        "Sci Knowledge",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "metadata_parsing",
+        "bibliography_management"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/aclements/biblib",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bibtex",
+        "parser",
+        "bibliography"
+      ],
+      "id": 23
+    },
+    {
+      "name": "Academic Review Tool (ART)",
+      "one_line_profile": "Automated pipeline for academic literature review and bibliometrics",
+      "detailed_description": "A Python package developed by the Alan Turing Institute to streamline the process of academic reviews. It provides capabilities for discovering, retrieving, and analyzing academic literature at scale, supporting systematic reviews and bibliometric studies.",
+      "domains": [
+        "Sci Knowledge",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "literature_review",
+        "bibliometrics",
+        "systematic_review"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/alan-turing-institute/academic_review_tool",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "systematic-review",
+        "bibliometrics",
+        "literature-search"
+      ],
+      "id": 24
+    },
+    {
+      "name": "S2AND",
+      "one_line_profile": "Semantic Scholar's Author Name Disambiguation algorithm",
+      "detailed_description": "The official implementation of the Author Name Disambiguation (AND) algorithm used by Semantic Scholar. It provides a unified framework and evaluation suite for clustering author signatures into distinct author entities within bibliographic databases.",
+      "domains": [
+        "Sci Knowledge",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "author_disambiguation",
+        "entity_resolution"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/allenai/S2AND",
+      "help_website": [
+        "https://www.semanticscholar.org/product/api"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "author-disambiguation",
+        "clustering",
+        "bibliometrics"
+      ],
+      "id": 25
+    },
+    {
+      "name": "Citeomatic",
+      "one_line_profile": "AI-powered citation recommendation system",
+      "detailed_description": "A tool developed by AllenAI for citation recommendation, allowing users to find relevant citations for paper drafts based on text context. It leverages the Semantic Scholar OpenCorpus dataset to suggest missing references.",
+      "domains": [
+        "Sci Knowledge",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "citation_recommendation",
+        "literature_discovery"
+      ],
+      "application_level": "service",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/allenai/citeomatic",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "citation-recommendation",
+        "nlp",
+        "scientific-writing"
+      ],
+      "id": 26
+    },
+    {
+      "name": "peS2o",
+      "one_line_profile": "Pretraining Efficiently on S2ORC dataset",
+      "detailed_description": "A toolkit and dataset derived from S2ORC for pretraining language models on scientific text. It provides cleaned and filtered scientific papers to facilitate the development of Sci-BERT/Sci-LLM style models.",
+      "domains": [
+        "Sci Knowledge",
+        "NLP"
+      ],
+      "subtask_category": [
+        "model_pretraining",
+        "corpus_processing"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/allenai/peS2o",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "llm-pretraining",
+        "scientific-corpus",
+        "nlp"
+      ],
+      "id": 27
+    },
+    {
+      "name": "S2ORC",
+      "one_line_profile": "The Semantic Scholar Open Research Corpus",
+      "detailed_description": "A large-scale corpus of English-language academic papers spanning many disciplines. While primarily a dataset, the repository serves as the entry point for accessing structured full-text and metadata for millions of scientific papers.",
+      "domains": [
+        "Sci Knowledge",
+        "G1"
+      ],
+      "subtask_category": [
+        "corpus_access",
+        "text_mining"
+      ],
+      "application_level": "dataset",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/allenai/s2orc",
+      "help_website": [
+        "https://github.com/allenai/s2orc"
+      ],
+      "license": null,
+      "tags": [
+        "corpus",
+        "scientific-text",
+        "dataset"
+      ],
+      "id": 28
+    },
+    {
+      "name": "s2orc-doc2json",
+      "one_line_profile": "Scientific paper parsers (PDF/TeX/JATS to JSON)",
+      "detailed_description": "A suite of parsers developed by AllenAI to convert scientific documents from various formats (PDF, LaTeX, JATS XML) into a unified, structured JSON format (S2ORC format), enabling large-scale text mining and analysis.",
+      "domains": [
+        "Sci Knowledge",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "pdf_to_json",
+        "format_conversion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/allenai/s2orc-doc2json",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pdf-parsing",
+        "latex-parsing",
+        "scientific-text-processing"
+      ],
+      "id": 29
+    },
+    {
+      "name": "openeditors",
+      "one_line_profile": "Data and scraper for scientific journal editors",
+      "detailed_description": "An R package and dataset for collecting and analyzing data about editors of scientific journals. It facilitates bibliometric research into editorial board composition, diversity, and network structures.",
+      "domains": [
+        "Sci Knowledge",
+        "Bibliometrics"
+      ],
+      "subtask_category": [
+        "data_collection",
+        "editorial_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/andreaspacher/openeditors",
+      "help_website": [],
+      "license": "CC0-1.0",
+      "tags": [
+        "bibliometrics",
+        "journal-editors",
+        "web-scraping"
+      ],
+      "id": 30
+    },
+    {
+      "name": "Chinese-Elite",
+      "one_line_profile": "Social network mapping tool for elite relationships",
+      "detailed_description": "An experimental project that uses LLMs to parse public data and cross-reference official sources to map relationship networks of Chinese elites. While focused on social science/political science, it represents a tool for network inference from unstructured text.",
+      "domains": [
+        "Social Science",
+        "Network Analysis"
+      ],
+      "subtask_category": [
+        "relationship_extraction",
+        "network_mapping"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Roff",
+      "repo_url": "https://github.com/anonym-g/Chinese-Elite",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "social-network-analysis",
+        "llm",
+        "relationship-mapping"
+      ],
+      "id": 31
+    },
+    {
+      "name": "obsidian-reference-map",
+      "one_line_profile": "Citation network visualization for literature review",
+      "detailed_description": "An Obsidian plugin that creates interactive citation maps for literature reviews. It helps researchers visualize connections between papers, discover related works, and manage bibliographic references within their knowledge base.",
+      "domains": [
+        "Sci Knowledge",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "visualization",
+        "literature_review",
+        "knowledge_management"
+      ],
+      "application_level": "workflow",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/anoopkcn/obsidian-reference-map",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "obsidian",
+        "citation-network",
+        "visualization"
+      ],
+      "id": 32
+    },
+    {
+      "name": "pythonbible",
+      "one_line_profile": "Library for parsing and normalizing scripture references",
+      "detailed_description": "A Python library designed for Digital Humanities and Theological studies to parse, normalize, and validate references to scripture texts. It supports extracting structured citation data from unstructured text.",
+      "domains": [
+        "Digital Humanities",
+        "Text Analysis"
+      ],
+      "subtask_category": [
+        "text_parsing",
+        "reference_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/avendesora/pythonbible",
+      "help_website": [
+        "https://pythonbible.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "digital-humanities",
+        "text-parsing",
+        "reference-normalization"
+      ],
+      "id": 33
+    },
+    {
+      "name": "geomodelgrids",
+      "one_line_profile": "Geographic referenced grid-based modeling library",
+      "detailed_description": "A C++ library developed by USGS for handling geographic referenced grid-based models. It supports querying and manipulating multi-resolution grid data for earth science applications like seismology and geology.",
+      "domains": [
+        "Earth Science",
+        "Geology"
+      ],
+      "subtask_category": [
+        "spatial_modeling",
+        "grid_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/baagaard-usgs/geomodelgrids",
+      "help_website": [
+        "https://geomodelgrids.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "geology",
+        "spatial-data",
+        "usgs"
+      ],
+      "id": 34
+    },
+    {
+      "name": "arxivcheck",
+      "one_line_profile": "Utility to check arXiv publication status and update BibTeX metadata",
+      "detailed_description": "A Python tool that checks if an arXiv paper has been published in a peer-reviewed venue and updates the corresponding BibTeX entry with the official publication metadata.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "metadata_alignment",
+        "citation_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bibcure/arxivcheck",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "arxiv",
+        "bibtex",
+        "metadata-correction"
+      ],
+      "id": 35
+    },
+    {
+      "name": "bibcure",
+      "one_line_profile": "CLI tool for managing and normalizing BibTeX files",
+      "detailed_description": "A command-line utility to keep BibTeX files up to date, normalize entries, and download papers associated with the bibliography.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "citation_management",
+        "data_retrieval"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bibcure/bibcure",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "bibtex",
+        "cli",
+        "bibliography-management"
+      ],
+      "id": 36
+    },
+    {
+      "name": "doi2bib",
+      "one_line_profile": "Tool to retrieve BibTeX metadata from DOIs",
+      "detailed_description": "A lightweight utility that fetches the BibTeX citation string for a given Digital Object Identifier (DOI).",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "metadata_retrieval",
+        "citation_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bibcure/doi2bib",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "doi",
+        "bibtex",
+        "metadata"
+      ],
+      "id": 37
+    },
+    {
+      "name": "scihub2pdf",
+      "one_line_profile": "Bulk PDF downloader using DOIs or BibTeX files",
+      "detailed_description": "A tool to download research paper PDFs in bulk via DOI numbers, article titles, or BibTeX files, utilizing various repositories.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "data_retrieval",
+        "document_acquisition"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bibcure/scihub2pdf",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "pdf-download",
+        "scihub",
+        "automation"
+      ],
+      "id": 38
+    },
+    {
+      "name": "title2bib",
+      "one_line_profile": "Tool to retrieve BibTeX metadata from paper titles",
+      "detailed_description": "A utility that searches for and returns the BibTeX citation format given a scientific paper's title.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "metadata_retrieval",
+        "citation_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/bibcure/title2bib",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bibtex",
+        "metadata",
+        "search"
+      ],
+      "id": 39
+    },
+    {
+      "name": "sidewall",
+      "one_line_profile": "Library for interacting with the Dimensions search API",
+      "detailed_description": "A Python library developed by Caltech Library to facilitate interaction with the Dimensions API for retrieving and analyzing scientometric data.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "data_retrieval",
+        "scientometrics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/caltechlibrary/sidewall",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dimensions-api",
+        "scientometrics",
+        "library"
+      ],
+      "id": 40
+    },
+    {
+      "name": "nom-bibtex",
+      "one_line_profile": "High-performance BibTeX parser written in Rust",
+      "detailed_description": "A feature-complete and fast BibTeX parser implemented in Rust using the nom parser combinator library, suitable for high-throughput bibliographic data processing.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "parsing",
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/charlesvdv/nom-bibtex",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "rust",
+        "bibtex",
+        "parser"
+      ],
+      "id": 41
+    },
+    {
+      "name": "python-bibx",
+      "one_line_profile": "Bibliometric analysis tools for Python",
+      "detailed_description": "A Python library developed by Core of Science for performing bibliometric analyses, including processing and analyzing bibliographic data.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "bibliometrics",
+        "data_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/coreofscience/python-bibx",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bibliometrics",
+        "scientometrics",
+        "python"
+      ],
+      "id": 42
+    },
+    {
+      "name": "GAKG",
+      "one_line_profile": "Multimodal Geoscience Academic Knowledge Graph framework",
+      "detailed_description": "A framework for constructing a multimodal Geoscience Academic Knowledge Graph by fusing information from paper illustrations, text, and bibliometric data.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "knowledge_graph_construction",
+        "data_fusion"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/davendw49/gakg",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "knowledge-graph",
+        "geoscience",
+        "multimodal"
+      ],
+      "id": 43
+    },
+    {
+      "name": "papergraph",
+      "one_line_profile": "AI/ML citation graph exploration platform",
+      "detailed_description": "A project providing a citation graph implementation for AI/ML papers using Postgres and GraphQL, enabling analysis and visualization of citation networks.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "citation_network_analysis",
+        "visualization"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/dennybritz/papergraph",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "citation-graph",
+        "network-analysis",
+        "machine-learning"
+      ],
+      "id": 44
+    },
+    {
+      "name": "tethne",
+      "one_line_profile": "Bibliographic network analysis library",
+      "detailed_description": "A Python module designed for parsing bibliographic data and generating networks for analysis, supporting various citation formats and network types.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "network_analysis",
+        "bibliometrics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/diging/tethne",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bibliometrics",
+        "network-analysis",
+        "citation-graph"
+      ],
+      "id": 45
+    },
+    {
+      "name": "dimcli",
+      "one_line_profile": "CLI and Python client for Dimensions Analytics API",
+      "detailed_description": "The official Python client and command-line interface for interacting with the Dimensions Analytics API, facilitating scientometric research and data extraction.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "data_retrieval",
+        "scientometrics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/digital-science/dimcli",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "dimensions-api",
+        "scientometrics",
+        "cli"
+      ],
+      "id": 46
+    },
+    {
+      "name": "Docling",
+      "one_line_profile": "Advanced document parsing library for converting PDFs to structured formats for GenAI",
+      "detailed_description": "A comprehensive library designed to parse and convert documents (including complex scientific PDFs with tables, equations, and layouts) into structured formats like JSON and Markdown, enabling downstream Generative AI and analysis tasks.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "layout_analysis",
+        "pdf_to_text"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/docling-project/docling",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pdf-parsing",
+        "ocr",
+        "layout-analysis",
+        "scientific-literature"
+      ],
+      "id": 47
+    },
+    {
+      "name": "Alexandria3k",
+      "one_line_profile": "High-performance relational interface for open publication datasets",
+      "detailed_description": "A library and command-line tool that provides fast, relational SQL-like access to massive open bibliographic datasets such as OpenAlex and Crossref, facilitating large-scale bibliometric analysis and metadata retrieval.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "metadata_retrieval",
+        "bibliometrics",
+        "database_querying"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/dspinellis/alexandria3k",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "openalex",
+        "bibliometrics",
+        "citation-analysis",
+        "relational-data"
+      ],
+      "id": 48
+    },
+    {
+      "name": "Etudier",
+      "one_line_profile": "Command-line tool for extracting citation networks from Google Scholar",
+      "detailed_description": "A utility to scrape and extract citation network data from Google Scholar profiles and publications, enabling the construction of citation graphs for bibliometric research.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "citation_extraction",
+        "network_construction"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/edsu/etudier",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "google-scholar",
+        "citation-network",
+        "scraping"
+      ],
+      "id": 49
+    },
+    {
+      "name": "ScienceBeam Parser",
+      "one_line_profile": "Scalable PDF to XML conversion tool for scientific publications",
+      "detailed_description": "A set of tools utilizing Apache Beam and computer vision models to convert scientific PDF documents into structured XML (JATS/TEI) formats at scale, developed by eLife Sciences.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "pdf_parsing",
+        "format_conversion",
+        "xml_generation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/elifesciences/sciencebeam-parser",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pdf-to-xml",
+        "jats",
+        "scientific-publishing",
+        "apache-beam"
+      ],
+      "id": 50
+    },
+    {
+      "name": "OpenAlex Networks",
+      "one_line_profile": "Library for generating citation and co-authorship networks from OpenAlex",
+      "detailed_description": "A helper library designed to interface with the OpenAlex API, facilitating the retrieval of bibliographic data and the generation of citation and co-authorship networks for scientometric analysis.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "network_generation",
+        "api_client",
+        "bibliometrics"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/filipinascimento/openalexnet",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "openalex",
+        "citation-graph",
+        "co-authorship",
+        "network-analysis"
+      ],
+      "id": 51
+    },
+    {
+      "name": "RefExtract",
+      "one_line_profile": "Bibliographic reference extraction tool for scientific articles",
+      "detailed_description": "A tool developed by INSPIRE-HEP to extract, parse, and structure bibliographic references from scientific article PDFs, supporting the construction of citation networks in high-energy physics and beyond.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "reference_extraction",
+        "citation_parsing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/inspirehep/refextract",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "reference-extraction",
+        "pdf-parsing",
+        "inspire-hep",
+        "bibliometrics"
+      ],
+      "id": 52
+    },
+    {
+      "name": "AnyStyle",
+      "one_line_profile": "Fast and smart citation reference parsing library based on Conditional Random Fields",
+      "detailed_description": "AnyStyle is a very fast and smart parser for academic reference lists and bibliographies. It uses machine learning algorithms (Conditional Random Fields) to parse citation strings into structured data (BibTeX, JSON, CSL).",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "citation_parsing",
+        "metadata_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/inukshuk/anystyle",
+      "help_website": [
+        "https://anystyle.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "citation-parser",
+        "machine-learning",
+        "bibliography",
+        "crf"
+      ],
+      "id": 53
+    },
+    {
+      "name": "AnyStyle CLI",
+      "one_line_profile": "Command-line interface for the AnyStyle citation parser",
+      "detailed_description": "The command-line interface wrapper for the AnyStyle library, allowing users to parse bibliographic references from the terminal and convert them into structured formats like BibTeX or JSON.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "citation_parsing",
+        "metadata_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/inukshuk/anystyle-cli",
+      "help_website": [
+        "https://anystyle.io"
+      ],
+      "license": "BSD-2-Clause",
+      "tags": [
+        "cli",
+        "citation-parser",
+        "bibliography"
+      ],
+      "id": 54
+    },
+    {
+      "name": "bibtex-ruby",
+      "one_line_profile": "A strict BibTeX library, parser, and converter for Ruby",
+      "detailed_description": "A Ruby library for parsing, converting, and manipulating BibTeX files. It supports lexical analysis and parsing of BibTeX data, providing a robust foundation for bibliographic data management.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "bibliography_management",
+        "format_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/inukshuk/bibtex-ruby",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "bibtex",
+        "parser",
+        "bibliography"
+      ],
+      "id": 55
+    },
+    {
+      "name": "citation_map",
+      "one_line_profile": "Tool to generate Gephi citation graphs from Zotero PDF collections",
+      "detailed_description": "A Python tool that analyzes text from PDFs stored in Zotero to create citation graphs compatible with Gephi. It helps in visualizing the connection between papers in a personal library.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "citation_network_generation",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jaks6/citation_map",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "citation-graph",
+        "gephi",
+        "zotero",
+        "bibliometrics"
+      ],
+      "id": 56
+    },
+    {
+      "name": "ScientoPy",
+      "one_line_profile": "Open-source scientometric analysis tool",
+      "detailed_description": "ScientoPy is a Python-based tool for performing scientometric analysis. It allows researchers to analyze bibliographic data (from Scopus, WoS) to identify trends, top authors, and research topics.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "scientometrics",
+        "bibliometric_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jpruiz84/ScientoPy",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "scientometrics",
+        "bibliometrics",
+        "data-analysis"
+      ],
+      "id": 57
+    },
+    {
+      "name": "reffix",
+      "one_line_profile": "Tool for fixing BibTeX reference lists using the DBLP API",
+      "detailed_description": "Reffix is a utility that cleans and corrects BibTeX reference lists by cross-referencing them with the DBLP computer science bibliography database, ensuring citation accuracy.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "bibliography_management",
+        "metadata_correction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kasnerz/reffix",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bibtex",
+        "dblp",
+        "citation-cleaning"
+      ],
+      "id": 58
+    },
+    {
+      "name": "GROBID",
+      "one_line_profile": "Machine learning software for extracting information from scholarly documents",
+      "detailed_description": "GROBID (GeneRation Of BIbliographic Data) is a machine learning library for extracting, parsing, and restructuring raw documents such as PDF into structured XML/TEI encoded data, with a focus on technical and scientific publications.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "pdf_extraction",
+        "citation_parsing",
+        "metadata_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/kermitt2/grobid",
+      "help_website": [
+        "https://grobid.readthedocs.io"
+      ],
+      "license": "Apache-2.0",
+      "tags": [
+        "pdf-parsing",
+        "crf",
+        "scientific-literature",
+        "tei"
+      ],
+      "id": 59
+    },
+    {
+      "name": "grobid-astro",
+      "one_line_profile": "GROBID module for extracting astronomical entities from scholarly documents",
+      "detailed_description": "A specialized module for GROBID designed to recognize and extract astronomical entities (such as celestial objects, coordinates, and instrument names) from scientific texts.",
+      "domains": [
+        "G1",
+        "G1-02",
+        "Astronomy"
+      ],
+      "subtask_category": [
+        "entity_extraction",
+        "ner"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/kermitt2/grobid-astro",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "astronomy",
+        "ner",
+        "grobid-module"
+      ],
+      "id": 60
+    },
+    {
+      "name": "grobid-client-java",
+      "one_line_profile": "Java client library for GROBID REST services",
+      "detailed_description": "A Java client library to interact with the GROBID REST API, facilitating the integration of GROBID's document extraction capabilities into Java applications.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "api_client",
+        "pdf_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/kermitt2/grobid-client-java",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "java",
+        "client",
+        "grobid"
+      ],
+      "id": 61
+    },
+    {
+      "name": "grobid-client-node",
+      "one_line_profile": "Node.js client library for GROBID REST services",
+      "detailed_description": "A Node.js client library for consuming GROBID services, enabling JavaScript/TypeScript applications to perform scientific document parsing.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "api_client",
+        "pdf_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/kermitt2/grobid-client-node",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "nodejs",
+        "client",
+        "grobid"
+      ],
+      "id": 62
+    },
+    {
+      "name": "grobid-client-python",
+      "one_line_profile": "Python client library for GROBID Web services",
+      "detailed_description": "A Python client for the GROBID web service, allowing Python users to easily extract metadata and citations from scientific PDFs in bulk.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "api_client",
+        "pdf_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kermitt2/grobid-client-python",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "python",
+        "client",
+        "grobid"
+      ],
+      "id": 63
+    },
+    {
+      "name": "grobid-ner",
+      "one_line_profile": "Named-Entity Recogniser based on GROBID",
+      "detailed_description": "A module for GROBID that performs Named Entity Recognition (NER) on scientific texts, leveraging the structural parsing capabilities of the main GROBID engine.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "ner",
+        "entity_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/kermitt2/grobid-ner",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "ner",
+        "nlp",
+        "grobid"
+      ],
+      "id": 64
+    },
+    {
+      "name": "ParsCit",
+      "one_line_profile": "CRF-based reference string parsing package",
+      "detailed_description": "ParsCit is an open-source package for parsing reference strings and extracting citations from scholarly documents using Conditional Random Fields (CRF). It also includes modules for logical structure parsing of scientific articles.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "citation_parsing",
+        "structure_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/knmnyn/ParsCit",
+      "help_website": [
+        "http://parscit.sng-lls.com/"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "citation-parsing",
+        "crf",
+        "perl",
+        "bibliometrics"
+      ],
+      "id": 65
+    },
+    {
+      "name": "Global Canopy Height Model",
+      "one_line_profile": "High-resolution global canopy height estimation model using Sentinel-2 and GEDI data",
+      "detailed_description": "A deep learning model for estimating canopy top height globally at high resolution (10m). It fuses Sentinel-2 optical imagery with sparse GEDI LIDAR data to generate continuous canopy height maps.",
+      "domains": [
+        "Earth Science",
+        "Ecology"
+      ],
+      "subtask_category": [
+        "canopy_height_estimation",
+        "remote_sensing",
+        "environmental_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/langnico/global-canopy-height-model",
+      "help_website": [
+        "https://langnico.github.io/global-canopy-height-model/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "remote-sensing",
+        "deep-learning",
+        "ecology",
+        "sentinel-2",
+        "gedi"
+      ],
+      "id": 66
+    },
+    {
+      "name": "Citation-Graph-Python",
+      "one_line_profile": "Tool for auto-generation of citation graphs from references",
+      "detailed_description": "A Python tool to generate and visualize citation graphs from a set of papers. It helps researchers understand the citation network and relationships between publications.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "citation_network_generation",
+        "visualization"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lanstonchu/Citation-Graph-Python",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "citation-graph",
+        "visualization",
+        "bibliometrics"
+      ],
+      "id": 67
+    },
+    {
+      "name": "grobid-quantities",
+      "one_line_profile": "GROBID extension for identifying and normalizing physical quantities",
+      "detailed_description": "A machine learning module for GROBID that extracts, parses, and normalizes physical quantities (values and units) from scientific text.",
+      "domains": [
+        "G1",
+        "G1-02",
+        "Physics",
+        "Materials Science"
+      ],
+      "subtask_category": [
+        "quantity_extraction",
+        "normalization",
+        "ner"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/lfoppiano/grobid-quantities",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "quantities",
+        "ner",
+        "grobid",
+        "unit-normalization"
+      ],
+      "id": 68
+    },
+    {
+      "name": "grobid-superconductors",
+      "one_line_profile": "GROBID module for superconductor material and properties extraction",
+      "detailed_description": "A specialized GROBID module designed to extract information about superconductor materials, their properties (like critical temperature), and related experimental conditions from scientific literature.",
+      "domains": [
+        "Materials Science",
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "material_extraction",
+        "property_extraction",
+        "ner"
+      ],
+      "application_level": "library",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/lfoppiano/grobid-superconductors",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "superconductors",
+        "materials-science",
+        "text-mining",
+        "grobid"
+      ],
+      "id": 69
+    },
+    {
+      "name": "structure-vision",
+      "one_line_profile": "Visualizer for document structures extracted by GROBID",
+      "detailed_description": "A visualization tool designed to display and inspect the structured data (XML/TEI) extracted by GROBID from PDF documents, aiding in the verification and analysis of extraction results.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "visualization",
+        "document_structure_analysis"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lfoppiano/structure-vision",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "visualization",
+        "grobid",
+        "pdf-structure"
+      ],
+      "id": 70
+    },
+    {
+      "name": "StrainScan",
+      "one_line_profile": "High-resolution strain-level microbiome composition analysis tool",
+      "detailed_description": "StrainScan is a bioinformatics tool for strain-level microbiome composition analysis. It uses a reference-based approach with k-mers to identify and quantify bacterial strains from metagenomic data.",
+      "domains": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "subtask_category": [
+        "microbiome_analysis",
+        "strain_identification",
+        "metagenomics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/liaoherui/StrainScan",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "microbiome",
+        "metagenomics",
+        "strain-identification",
+        "bioinformatics"
+      ],
+      "id": 71
+    },
+    {
+      "name": "bibliometrix",
+      "one_line_profile": "Comprehensive science mapping analysis tool for R",
+      "detailed_description": "An R-tool for quantitative research in scientometrics and bibliometrics, providing various routines for importing bibliographic data, performing bibliometric analysis, and building data matrices for co-citation, coupling, scientific collaboration analysis, and co-word analysis.",
+      "domains": [
+        "Sci Knowledge",
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "bibliometrics",
+        "network_analysis",
+        "science_mapping"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/massimoaria/bibliometrix",
+      "help_website": [
+        "https://www.bibliometrix.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "bibliometrics",
+        "scientometrics",
+        "r-package",
+        "citation-analysis"
+      ],
+      "id": 72
+    },
+    {
+      "name": "dimensionsR",
+      "one_line_profile": "R interface for Digital Science Dimensions API",
+      "detailed_description": "An R package designed to gather metadata about publications, patents, grants, clinical trials, and policy documents from the Digital Science Dimensions database using its DSL API, facilitating bibliometric data collection.",
+      "domains": [
+        "Sci Knowledge",
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "data_retrieval",
+        "metadata_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/massimoaria/dimensionsR",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "dimensions-api",
+        "bibliometrics",
+        "data-collection"
+      ],
+      "id": 73
+    },
+    {
+      "name": "draw-citation-graph",
+      "one_line_profile": "Citation graph generator from BibTeX and PDFs",
+      "detailed_description": "A Python script that attempts to generate a visual citation graph by analyzing a BibTeX file and a corresponding directory of PDF files, linking papers based on their references.",
+      "domains": [
+        "Sci Knowledge",
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "visualization",
+        "graph_generation",
+        "citation_network"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/mhl/draw-citation-graph",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "citation-graph",
+        "bibtex",
+        "visualization"
+      ],
+      "id": 74
+    },
+    {
+      "name": "CitationExtractor",
+      "one_line_profile": "Tool to extract canonical references from text",
+      "detailed_description": "A tool designed to extract canonical references from textual documents, aiding in the creation of citation networks and metadata alignment.",
+      "domains": [
+        "Sci Knowledge",
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "citation_extraction",
+        "information_extraction"
+      ],
+      "application_level": "solver",
+      "primary_language": "HTML",
+      "repo_url": "https://github.com/mromanello/CitationExtractor",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "citation-extraction",
+        "reference-parsing"
+      ],
+      "id": 75
+    },
+    {
+      "name": "GetLattesData",
+      "one_line_profile": "R package for reading Lattes curriculum data",
+      "detailed_description": "An R package for downloading and reading data from the Lattes platform (Brazilian academic CV database), enabling scientometric analysis of researcher data.",
+      "domains": [
+        "Sci Knowledge",
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "data_retrieval",
+        "scientometrics"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/msperlin/GetLattesData",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "lattes",
+        "scientometrics",
+        "data-import"
+      ],
+      "id": 76
+    },
+    {
+      "name": "rscopus",
+      "one_line_profile": "Scopus Database API Interface to R",
+      "detailed_description": "An R package that provides an interface to the Elsevier Scopus API, allowing users to retrieve bibliographic information, citation counts, and other metadata for bibliometric analysis.",
+      "domains": [
+        "Sci Knowledge",
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "data_retrieval",
+        "bibliometrics"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/muschellij2/rscopus",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "scopus",
+        "api-wrapper",
+        "bibliometrics"
+      ],
+      "id": 77
+    },
+    {
+      "name": "bibfix",
+      "one_line_profile": "Tool to repair bibliographic data",
+      "detailed_description": "An R package designed to repair and standardize bibliographic data, useful for cleaning datasets prior to bibliometric analysis or evidence synthesis.",
+      "domains": [
+        "Sci Knowledge",
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "data_cleaning",
+        "normalization"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/nealhaddaway/bibfix",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "bibliographic-data",
+        "data-cleaning"
+      ],
+      "id": 78
+    },
+    {
+      "name": "citationchaser",
+      "one_line_profile": "Forward and backward citation chasing tool",
+      "detailed_description": "An R package and Shiny app for performing forward and backward citation chasing, automating the process of finding related articles for systematic reviews and evidence synthesis.",
+      "domains": [
+        "Sci Knowledge",
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "literature_review",
+        "citation_analysis",
+        "network_traversal"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/nealhaddaway/citationchaser",
+      "help_website": [
+        "https://estech.shinyapps.io/citationchaser/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "systematic-review",
+        "citation-chasing",
+        "evidence-synthesis"
+      ],
+      "id": 79
+    },
+    {
+      "name": "VOSviewer-Online",
+      "one_line_profile": "Web-based network visualization tool for bibliometrics",
+      "detailed_description": "The web-based version of VOSviewer, a popular tool for constructing and visualizing bibliometric networks such as co-citation, co-authorship, and term co-occurrence networks.",
+      "domains": [
+        "Sci Knowledge",
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "visualization",
+        "network_analysis",
+        "bibliometrics"
+      ],
+      "application_level": "platform",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/neesjanvaneck/VOSviewer-Online",
+      "help_website": [
+        "https://app.vosviewer.com"
+      ],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "bibliometrics",
+        "network-analysis"
+      ],
+      "id": 80
+    },
+    {
+      "name": "citegraph",
+      "one_line_profile": "Citation network explorer",
+      "detailed_description": "A Python tool for exploring and visualizing citation networks, allowing users to navigate the connections between scientific papers.",
+      "domains": [
+        "Sci Knowledge",
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "visualization",
+        "network_exploration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/oowekyala/citegraph",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "citation-network",
+        "visualization"
+      ],
+      "id": 81
+    },
+    {
+      "name": "PDF-Extract-Kit",
+      "one_line_profile": "Comprehensive toolkit for PDF content extraction",
+      "detailed_description": "A high-quality toolkit for extracting content from scientific PDFs, including layout analysis, formula detection, table extraction, and text parsing, essential for downstream scientific knowledge graph construction.",
+      "domains": [
+        "Sci Knowledge",
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "pdf_parsing",
+        "information_extraction",
+        "layout_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/opendatalab/PDF-Extract-Kit",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "pdf-extraction",
+        "ocr",
+        "layout-analysis",
+        "scientific-literature"
+      ],
+      "id": 82
+    },
+    {
+      "name": "openalex-pdf-parser",
+      "one_line_profile": "PDF parser powered by Grobid for OpenAlex",
+      "detailed_description": "A Python-based PDF parsing pipeline used by OpenAlex, leveraging Grobid to extract structured metadata and full text from scientific articles.",
+      "domains": [
+        "Sci Knowledge",
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "pdf_parsing",
+        "metadata_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ourresearch/openalex-pdf-parser",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "openalex",
+        "grobid",
+        "pdf-parsing"
+      ],
+      "id": 83
+    },
+    {
+      "name": "pybliometrics",
+      "one_line_profile": "Python-based API-Wrapper to access Scopus",
+      "detailed_description": "A Python library that provides a wrapper for the Scopus API, enabling researchers to access and analyze citation data, author profiles, and publication metadata for bibliometric studies.",
+      "domains": [
+        "Sci Knowledge",
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "data_retrieval",
+        "bibliometrics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pybliometrics-dev/pybliometrics",
+      "help_website": [
+        "https://pybliometrics.readthedocs.io"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "scopus",
+        "bibliometrics",
+        "python-api"
+      ],
+      "id": 84
+    },
+    {
+      "name": "bibtex-parser (PHP)",
+      "one_line_profile": "PHP library for parsing BibTeX files programmatically",
+      "detailed_description": "A PHP library designed to parse BibTeX files into structured data, enabling the integration of bibliographic metadata processing into PHP-based applications.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "metadata_parsing",
+        "bibliographic_data_handling"
+      ],
+      "application_level": "library",
+      "primary_language": "PHP",
+      "repo_url": "https://github.com/renanbr/bibtex-parser",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bibtex",
+        "php",
+        "parser",
+        "bibliography"
+      ],
+      "id": 85
+    },
+    {
+      "name": "bibtex-parser (JS)",
+      "one_line_profile": "BibTeX parser driving Better BibTeX for Zotero",
+      "detailed_description": "A robust JavaScript/TypeScript parser for BibTeX files, primarily developed for and used by the Better BibTeX extension for Zotero to handle complex citation data.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "metadata_parsing",
+        "citation_management"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/retorquere/bibtex-parser",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "bibtex",
+        "zotero",
+        "parser",
+        "javascript"
+      ],
+      "id": 86
+    },
+    {
+      "name": "bib2df",
+      "one_line_profile": "Parse BibTeX files into R data frames",
+      "detailed_description": "An R package that parses BibTeX files and converts them into tibbles (data frames), facilitating bibliometric analysis and data manipulation within the R ecosystem.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "metadata_parsing",
+        "data_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ropensci/bib2df",
+      "help_website": [
+        "https://docs.ropensci.org/bib2df/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "r",
+        "bibtex",
+        "bibliometrics",
+        "data-frame"
+      ],
+      "id": 87
+    },
+    {
+      "name": "bibtex",
+      "one_line_profile": "BibTeX parser for R",
+      "detailed_description": "An R package providing utilities to parse and manipulate BibTeX files, serving as a foundational library for bibliographic data processing in R.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "metadata_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ropensci/bibtex",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "r",
+        "bibtex",
+        "parser"
+      ],
+      "id": 88
+    },
+    {
+      "name": "europepmc",
+      "one_line_profile": "R Interface to Europe PMC RESTful Web Service",
+      "detailed_description": "An R client for the Europe PMC RESTful API, allowing users to search and retrieve open access biomedical literature and metadata programmatically.",
+      "domains": [
+        "G1",
+        "G1-01"
+      ],
+      "subtask_category": [
+        "literature_retrieval",
+        "metadata_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ropensci/europepmc",
+      "help_website": [
+        "https://docs.ropensci.org/europepmc/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "r",
+        "europe-pmc",
+        "literature-search",
+        "biomedical"
+      ],
+      "id": 89
+    },
+    {
+      "name": "openalexR",
+      "one_line_profile": "R client for retrieving bibliographic records from OpenAlex",
+      "detailed_description": "An R package designed to interface with the OpenAlex API, enabling researchers to query and analyze the massive graph of scholarly citations, authors, and institutions.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "literature_retrieval",
+        "citation_graph_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ropensci/openalexR",
+      "help_website": [
+        "https://docs.ropensci.org/openalexR/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "r",
+        "openalex",
+        "bibliometrics",
+        "citation-graph"
+      ],
+      "id": 90
+    },
+    {
+      "name": "rAltmetric",
+      "one_line_profile": "Query and visualize metrics from Altmetric.com",
+      "detailed_description": "An R package to retrieve and visualize alternative impact metrics (Altmetrics) for scholarly articles from the Altmetric.com API.",
+      "domains": [
+        "G1",
+        "G1-03"
+      ],
+      "subtask_category": [
+        "impact_analysis",
+        "scientometrics"
+      ],
+      "application_level": "library",
+      "primary_language": "R",
+      "repo_url": "https://github.com/ropensci/rAltmetric",
+      "help_website": [
+        "https://docs.ropensci.org/rAltmetric/"
+      ],
+      "license": "CC0-1.0",
+      "tags": [
+        "r",
+        "altmetrics",
+        "scientometrics",
+        "api-client"
+      ],
+      "id": 91
+    },
+    {
+      "name": "python-bibtexparser",
+      "one_line_profile": "BibTeX parser for Python 3",
+      "detailed_description": "A widely used Python library for parsing, modifying, and writing BibTeX files, serving as a core component in many Python-based bibliometric and citation management workflows.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "metadata_parsing",
+        "bibliographic_data_handling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sciunto-org/python-bibtexparser",
+      "help_website": [
+        "https://bibtexparser.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "python",
+        "bibtex",
+        "parser",
+        "bibliography"
+      ],
+      "id": 92
+    },
+    {
+      "name": "habanero",
+      "one_line_profile": "Python client for Crossref search API",
+      "detailed_description": "A Python library that provides an interface to the Crossref API, allowing users to search for metadata of scientific publications, retrieve DOIs, and access citation data.",
+      "domains": [
+        "G1",
+        "G1-01"
+      ],
+      "subtask_category": [
+        "literature_retrieval",
+        "metadata_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/sckott/habanero",
+      "help_website": [
+        "https://habanero.readthedocs.io/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "python",
+        "crossref",
+        "doi",
+        "bibliometrics"
+      ],
+      "id": 93
+    },
+    {
+      "name": "GCMex",
+      "one_line_profile": "Matlab wrapper for Graph Cut algorithm",
+      "detailed_description": "A Matlab wrapper for the Graph Cut algorithm (max-flow/min-cut), commonly used in scientific image segmentation and computer vision research.",
+      "domains": [
+        "Scientific Imaging"
+      ],
+      "subtask_category": [
+        "image_segmentation",
+        "graph_cut"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/shaibagon/GCMex",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "matlab",
+        "graph-cut",
+        "image-segmentation",
+        "computer-vision"
+      ],
+      "id": 94
+    },
+    {
+      "name": "metacheck",
+      "one_line_profile": "Metadata compliance checker for hybrid open access",
+      "detailed_description": "A tool developed by SUB Göttingen to automatically check metadata compliance for hybrid open access publications, supporting library science and scholarly communication workflows.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "metadata_validation",
+        "open_access_compliance"
+      ],
+      "application_level": "tool",
+      "primary_language": "R",
+      "repo_url": "https://github.com/subugoe/metacheck",
+      "help_website": [],
+      "license": "AGPL-3.0",
+      "tags": [
+        "open-access",
+        "metadata",
+        "library-science",
+        "compliance"
+      ],
+      "id": 95
+    },
+    {
+      "name": "latex-utensils",
+      "one_line_profile": "LaTeX and BibTeX parser in TypeScript",
+      "detailed_description": "A TypeScript library providing parsers for LaTeX and BibTeX, commonly used in editors and tools (like VSCode extensions) to process and analyze scientific documents.",
+      "domains": [
+        "G1",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "document_parsing",
+        "metadata_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "TypeScript",
+      "repo_url": "https://github.com/tamuratak/latex-utensils",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "latex",
+        "bibtex",
+        "parser",
+        "typescript"
+      ],
+      "id": 96
+    },
+    {
+      "name": "scipdf_parser",
+      "one_line_profile": "Python parser for extracting content and figures from scientific PDF publications",
+      "detailed_description": "A Python library that parses scientific PDFs into structured JSON format. It leverages GROBID for text extraction and provides capabilities to extract sections, titles, abstracts, and figures from research papers.",
+      "domains": [
+        "Sci Knowledge",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "pdf_parsing",
+        "information_extraction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/titipata/scipdf_parser",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pdf-parser",
+        "scientific-literature",
+        "grobid"
+      ],
+      "id": 97
+    },
+    {
+      "name": "typst-biblatex",
+      "one_line_profile": "Rust library for parsing BibTeX and BibLaTeX files for the Typst typesetting system",
+      "detailed_description": "A high-performance Rust crate designed to parse and write BibTeX and BibLaTeX bibliography files. It serves as a core component for bibliography management in the Typst scientific typesetting ecosystem.",
+      "domains": [
+        "Sci Knowledge",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "bibliography_management",
+        "metadata_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Rust",
+      "repo_url": "https://github.com/typst/biblatex",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "bibtex",
+        "biblatex",
+        "parser",
+        "typst"
+      ],
+      "id": 98
+    },
+    {
+      "name": "ALIGNN",
+      "one_line_profile": "Atomistic Line Graph Neural Network for material property prediction",
+      "detailed_description": "A Python package implementing Atomistic Line Graph Neural Networks (ALIGNN) for predicting material properties from atomic structures. It captures both bond lengths and bond angles to model atomic interactions effectively.",
+      "domains": [
+        "Materials Science",
+        "G1"
+      ],
+      "subtask_category": [
+        "structure_property_prediction",
+        "molecular_modeling"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/usnistgov/alignn",
+      "help_website": [
+        "https://jarvis.nist.gov/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "gnn",
+        "materials-science",
+        "atomistic-modeling"
+      ],
+      "id": 99
+    },
+    {
+      "name": "ReCiter",
+      "one_line_profile": "Enterprise author disambiguation system for academic institutions",
+      "detailed_description": "An open-source system developed by Weill Cornell Medicine for accurate author disambiguation in academic publications. It uses machine learning and institutional data to maintain up-to-date publication lists for researchers.",
+      "domains": [
+        "Sci Knowledge",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "author_disambiguation",
+        "metadata_alignment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/wcmc-its/ReCiter",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "author-disambiguation",
+        "bibliometrics",
+        "academic-profiling"
+      ],
+      "id": 100
+    },
+    {
+      "name": "ReCiter-PubMed-Retrieval-Tool",
+      "one_line_profile": "Tool for retrieving and synchronizing articles from PubMed",
+      "detailed_description": "A standalone utility designed to fetch article metadata from PubMed. It is part of the ReCiter ecosystem, facilitating the ingestion of publication data for author disambiguation and institutional reporting.",
+      "domains": [
+        "Sci Knowledge",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "literature_retrieval",
+        "data_ingestion"
+      ],
+      "application_level": "solver",
+      "primary_language": "Java",
+      "repo_url": "https://github.com/wcmc-its/ReCiter-PubMed-Retrieval-Tool",
+      "help_website": [],
+      "license": "Apache-2.0",
+      "tags": [
+        "pubmed",
+        "data-retrieval",
+        "reciter"
+      ],
+      "id": 101
+    },
+    {
+      "name": "deep_reference_parser",
+      "one_line_profile": "Deep learning model for extracting references from text",
+      "detailed_description": "A tool developed by Wellcome Trust that uses deep learning models to identify, extract, and parse bibliographic references from unstructured text documents.",
+      "domains": [
+        "Sci Knowledge",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "reference_extraction",
+        "citation_parsing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wellcometrust/deep_reference_parser",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "deep-learning",
+        "reference-parsing",
+        "nlp"
+      ],
+      "id": 102
+    },
+    {
+      "name": "reach",
+      "one_line_profile": "Tool to parse references from policy documents",
+      "detailed_description": "A machine learning-based tool created by Wellcome Trust to scrape and parse references found in policy documents, enabling the tracking of research impact in policy making.",
+      "domains": [
+        "Sci Knowledge",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "impact_analysis",
+        "reference_parsing"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/wellcometrust/reach",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "policy-analysis",
+        "citation-tracking",
+        "scraping"
+      ],
+      "id": 103
+    },
+    {
+      "name": "semantic-scholar-fastmcp",
+      "one_line_profile": "MCP server for accessing Semantic Scholar API via LLM agents",
+      "detailed_description": "A FastMCP server implementation that provides a standardized interface for Large Language Model (LLM) agents to query the Semantic Scholar API. It enables AI-driven workflows to retrieve academic papers, author details, and citation networks.",
+      "domains": [
+        "Sci Knowledge",
+        "G1-02"
+      ],
+      "subtask_category": [
+        "literature_retrieval",
+        "agent_interface"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "semantic-scholar",
+        "llm-agent"
+      ],
+      "id": 104
+    }
+  ]
+}

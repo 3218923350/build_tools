@@ -1,0 +1,1490 @@
+{
+  "generated_at": "2025-12-16T00:49:56.673536+08:00",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "M1",
+      "leaf_cluster_name": "材料-DFT 生态（输入/求解/后处理）",
+      "domain": "Materials",
+      "typical_objects": "crystals/structures",
+      "task_chain": "结构生成→DFT→后处理→高通量→验证",
+      "tool_form": "DFT code + workflow + DB"
+    },
+    "unit": {
+      "unit_id": "M1-01",
+      "unit_name": "结构构建/缺陷/超胞与输入生成",
+      "target_scale": "200–450",
+      "coverage_tools": "builders、input generators、prototypes"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] Dopamine",
+        "[GH] Jarvis-tools",
+        "[GH] CatKit",
+        "[GH] PyDefects",
+        "[GH] PyXtal",
+        "[GH] Atomsk",
+        "[GH] ASE",
+        "[GH] Pymatgen",
+        "[GH] crystal structure builder",
+        "[GH] dft input generator",
+        "[GH] supercell generation",
+        "[GH] point defect generator",
+        "[GH] slab generator",
+        "[GH] heterostructure builder",
+        "[GH] vasp input generation",
+        "[GH] quantum espresso input",
+        "[GH] material structure manipulation",
+        "[GH] atomic structure prototyping",
+        "[GH] cif parser",
+        "[GH] structure relaxation input",
+        "[GH] interface builder materials",
+        "[WEB] crystal structure generation python github",
+        "[WEB] dft input file generator tools github",
+        "[WEB] point defect builder materials science github",
+        "[WEB] vasp input generation automation github",
+        "[WEB] 2d heterostructure builder github",
+        "[WEB] supercell construction tools github"
+      ],
+      "total_candidates": 576,
+      "tool_candidates": 225,
+      "final_tools": 58
+    }
+  },
+  "tools": [
+    {
+      "name": "made.js",
+      "one_line_profile": "JavaScript library for creating and manipulating material structures",
+      "detailed_description": "Materials Design in Javascript (made.js) is a library allowing for the creation and manipulation of material structures from atoms up, designed for web-based materials science applications.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "structure_generation",
+        "structure_manipulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Exabyte-io/made",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "materials-science",
+        "structure-builder",
+        "javascript"
+      ],
+      "id": 1
+    },
+    {
+      "name": "wave.js",
+      "one_line_profile": "Web-based Atomic Viewer and Editor for material structures",
+      "detailed_description": "A JavaScript library for 3D atomic visualization and editing, enabling the manipulation of material structures from atoms up on the web.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "visualization",
+        "structure_editing"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/Exabyte-io/wave.js",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "visualization",
+        "atomic-structure",
+        "web-component"
+      ],
+      "id": 2
+    },
+    {
+      "name": "pymatgen-io-espresso",
+      "one_line_profile": "Pymatgen addon for parsing Quantum ESPRESSO files",
+      "detailed_description": "A pymatgen extension that provides input/output parsing capabilities specifically for Quantum ESPRESSO, facilitating the integration of QE calculations into pymatgen workflows.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "input_generation",
+        "parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/Griffin-Group/pymatgen-io-espresso",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pymatgen",
+        "quantum-espresso",
+        "dft",
+        "io"
+      ],
+      "id": 3
+    },
+    {
+      "name": "PyXtal",
+      "one_line_profile": "Generation of atomic crystal structures with symmetry constraints",
+      "detailed_description": "A Python package for generating atomic structures with specific symmetry constraints, useful for crystal structure prediction and materials discovery.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "structure_generation",
+        "symmetry_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MaterSim/PyXtal",
+      "help_website": [
+        "https://pyxtal.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "crystallography",
+        "symmetry",
+        "structure-generation"
+      ],
+      "id": 4
+    },
+    {
+      "name": "PyXtal_FF",
+      "one_line_profile": "Machine Learning Interatomic Potential Predictions",
+      "detailed_description": "A package for developing machine learning interatomic potentials, enabling atomistic simulations with ML-derived force fields.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "potential_learning",
+        "simulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/MaterSim/PyXtal_FF",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "machine-learning",
+        "interatomic-potentials",
+        "force-field"
+      ],
+      "id": 5
+    },
+    {
+      "name": "QuantumESPRESSOBase.jl",
+      "one_line_profile": "Julia tools for Quantum ESPRESSO input generation and structure manipulation",
+      "detailed_description": "Provides basic data structures and functions in Julia for manipulating crystal structures and generating input files for Quantum ESPRESSO calculations.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "input_generation",
+        "structure_manipulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Julia",
+      "repo_url": "https://github.com/MineralsCloud/QuantumESPRESSOBase.jl",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "julia",
+        "quantum-espresso",
+        "dft"
+      ],
+      "id": 6
+    },
+    {
+      "name": "nfp",
+      "one_line_profile": "Keras layers for materials deep learning with rdkit and pymatgen",
+      "detailed_description": "A library providing Keras layers and utilities for building end-to-end deep learning models for molecules and materials, integrating with RDKit and Pymatgen.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "machine_learning",
+        "property_prediction"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/NREL/nfp",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "deep-learning",
+        "materials-informatics",
+        "keras"
+      ],
+      "id": 7
+    },
+    {
+      "name": "ScalableWorkflow_VASP_Calculations",
+      "one_line_profile": "Workflow for generating randomized VASP input structures for alloys",
+      "detailed_description": "A scalable workflow designed to generate VASP input cases with randomized atomic structures for solid solution binary and ternary alloys across compositional ranges.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "input_generation",
+        "high_throughput"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ORNL/ScalableWorkflow_VASP_Calculations",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "vasp",
+        "workflow",
+        "alloys"
+      ],
+      "id": 8
+    },
+    {
+      "name": "readcif",
+      "one_line_profile": "Fast C++ CIF and mmCIF parser",
+      "detailed_description": "A high-performance C++ library for parsing CIF (Crystallographic Information File) and mmCIF formats, essential for reading structural data.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "parsing",
+        "structure_io"
+      ],
+      "application_level": "library",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/RBVI/readcif",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "cif",
+        "parser",
+        "crystallography"
+      ],
+      "id": 9
+    },
+    {
+      "name": "ShakeNBreak",
+      "one_line_profile": "Defect structure-searching with chemically-guided bond distortions",
+      "detailed_description": "A tool for generating defect structures by applying chemically-guided bond distortions to identify ground-state defect configurations in materials.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "defect_generation",
+        "structure_search"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SMTG-Bham/ShakeNBreak",
+      "help_website": [
+        "https://shakenbreak.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "defects",
+        "structure-search",
+        "dft"
+      ],
+      "id": 10
+    },
+    {
+      "name": "doped",
+      "one_line_profile": "Generation, processing and analysis of defect supercell calculations",
+      "detailed_description": "A Python package for the generation, pre-/post-processing, and analysis of defect supercell calculations, streamlining the defect simulation workflow.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "defect_generation",
+        "input_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SMTG-Bham/doped",
+      "help_website": [
+        "https://doped.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "defects",
+        "supercells",
+        "workflow"
+      ],
+      "id": 11
+    },
+    {
+      "name": "surfaxe",
+      "one_line_profile": "Tools for slab generation and surface calculations",
+      "detailed_description": "A Python library for generating and handling slab structures for first-principles surface calculations, including surface energy analysis.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "surface_generation",
+        "slab_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/SMTG-Bham/surfaxe",
+      "help_website": [
+        "https://surfaxe.readthedocs.io"
+      ],
+      "license": "MIT",
+      "tags": [
+        "surfaces",
+        "slabs",
+        "dft"
+      ],
+      "id": 12
+    },
+    {
+      "name": "AtomicStructureGenerator",
+      "one_line_profile": "Crystal structure generator using prototype databases",
+      "detailed_description": "A module that utilizes the Crystal Structure Prototype Database (CSPD) to generate lists of crystal structures for user-defined systems, facilitating high-throughput materials screening.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "structure_generation",
+        "high_throughput"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SUNCAT-Center/AtomicStructureGenerator",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "crystal-structure",
+        "prototypes",
+        "materials-science"
+      ],
+      "id": 13
+    },
+    {
+      "name": "CatKit",
+      "one_line_profile": "High-throughput catalysis modeling toolkit",
+      "detailed_description": "General purpose tools designed for high-throughput catalysis research, providing utilities for structure manipulation, adsorption generation, and analysis.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "catalysis",
+        "high_throughput",
+        "structure_manipulation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SUNCAT-Center/CatKit",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "catalysis",
+        "dft",
+        "high-throughput"
+      ],
+      "id": 14
+    },
+    {
+      "name": "VASP-DOS_extractor",
+      "one_line_profile": "VASP density of states extraction script",
+      "detailed_description": "A Pymatgen-based Python script designed to extract total and projected density of states (DOS) data directly from VASP vasprun.xml output files.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "post_processing",
+        "electronic_structure"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ShinMaterials/VASP-DOS_extractor",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vasp",
+        "dos",
+        "pymatgen"
+      ],
+      "id": 15
+    },
+    {
+      "name": "VASP-Structural_Descriptors",
+      "one_line_profile": "Atomic structure descriptor collector",
+      "detailed_description": "A script leveraging Pymatgen to calculate and collect structural descriptors from large sets of atomic structures for materials analysis.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "data_analysis",
+        "descriptors"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ShinMaterials/VASP-Structural_Descriptors",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "structural-descriptors",
+        "materials-analysis"
+      ],
+      "id": 16
+    },
+    {
+      "name": "VASPIN_GEN",
+      "one_line_profile": "VASP input file generator",
+      "detailed_description": "A Python script to automate the generation of standard VASP input files (INCAR, KPOINTS, POTCAR) and job submission scripts.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "input_generation",
+        "workflow_automation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/ShuangLeung/VASPIN_GEN",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "vasp",
+        "input-generation"
+      ],
+      "id": 17
+    },
+    {
+      "name": "mcp-atomictoolkit",
+      "one_line_profile": "MCP server for atomistic simulations",
+      "detailed_description": "A Model Context Protocol (MCP) compatible server that exposes atomistic simulation capabilities (via ASE, pymatgen) to LLM agents.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "simulation_interface",
+        "llm_agent"
+      ],
+      "application_level": "service",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/XirtamEsrevni/mcp-atomictoolkit",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "mcp",
+        "ase",
+        "pymatgen",
+        "llm"
+      ],
+      "id": 18
+    },
+    {
+      "name": "JARVIS-Tools",
+      "one_line_profile": "Data-driven atomistic materials design package",
+      "detailed_description": "An open-source software package for data-driven atomistic materials design, providing tools for high-throughput calculations, machine learning, and database interaction (NIST-JARVIS).",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "materials_design",
+        "high_throughput",
+        "machine_learning"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/atomgptlab/jarvis",
+      "help_website": [
+        "https://jarvis.nist.gov/"
+      ],
+      "license": null,
+      "tags": [
+        "materials-design",
+        "dft",
+        "machine-learning"
+      ],
+      "id": 19
+    },
+    {
+      "name": "molecule-synthesis",
+      "one_line_profile": "Generative AI for brain-targeting molecules",
+      "detailed_description": "A multi-objective generative AI framework designed for the synthesis and design of novel small molecules targeting the brain.",
+      "domains": [
+        "Chemistry",
+        "Drug_Discovery"
+      ],
+      "subtask_category": [
+        "generative_model",
+        "drug_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/ayushnoori/molecule-synthesis",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "generative-ai",
+        "drug-discovery",
+        "small-molecules"
+      ],
+      "id": 20
+    },
+    {
+      "name": "beautiful-atoms",
+      "one_line_profile": "High-quality atom/molecule rendering with Blender",
+      "detailed_description": "A Python module that interfaces with Blender to create high-quality, publication-ready 3D renderings of atoms and molecular structures.",
+      "domains": [
+        "M1",
+        "Chemistry"
+      ],
+      "subtask_category": [
+        "visualization",
+        "rendering"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/beautiful-atoms/beautiful-atoms",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "visualization",
+        "blender",
+        "molecular-rendering"
+      ],
+      "id": 21
+    },
+    {
+      "name": "crawfish",
+      "one_line_profile": "Pymatgen-compatible plotting tool",
+      "detailed_description": "A rewrite of the ultrasoftcrawfish tool designed for compatibility with pymatgen, used for plotting and analyzing materials properties.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "post_processing",
+        "visualization"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/benrich37/crawfish",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pymatgen",
+        "plotting",
+        "materials-science"
+      ],
+      "id": 22
+    },
+    {
+      "name": "icsg3d",
+      "one_line_profile": "3D inorganic crystal structure generation",
+      "detailed_description": "A deep learning framework for 3D inorganic crystal structure generation and property prediction via representation learning.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "structure_generation",
+        "property_prediction",
+        "deep_learning"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/by256/icsg3d",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "generative-model",
+        "crystal-structure",
+        "representation-learning"
+      ],
+      "id": 23
+    },
+    {
+      "name": "ase-notebook",
+      "one_line_profile": "ASE/Pymatgen structure visualization in Jupyter",
+      "detailed_description": "A tool for highly configurable 2D (SVG) and 3D (Three.js) visualizations of ASE and Pymatgen atomic structures directly within Jupyter Notebooks.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "visualization",
+        "notebook_integration"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chrisjsewell/ase-notebook",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "visualization",
+        "jupyter",
+        "ase",
+        "pymatgen"
+      ],
+      "id": 24
+    },
+    {
+      "name": "StructurePrototypeAnalysisPackage",
+      "one_line_profile": "Atomic structure symmetry and similarity analysis",
+      "detailed_description": "A package to analyze symmetry and compare the similarity of a large number of atomic structures, useful for prototype classification.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "structure_analysis",
+        "symmetry_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/chuanxun/StructurePrototypeAnalysisPackage",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "symmetry",
+        "structure-comparison",
+        "prototypes"
+      ],
+      "id": 25
+    },
+    {
+      "name": "Hetero2d",
+      "one_line_profile": "2D heterostructure discovery automation",
+      "detailed_description": "A tool to automate the discovery and property computation of stable 2D materials stacked on substrates or other 2D layers.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "structure_discovery",
+        "heterostructures",
+        "2d_materials"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/cmdlab/Hetero2d",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "2d-materials",
+        "heterostructures",
+        "automation"
+      ],
+      "id": 26
+    },
+    {
+      "name": "cod-tools",
+      "one_line_profile": "Crystallography Open Database tools",
+      "detailed_description": "A collection of tools and parsers for handling CIF files, maintained by the Crystallography Open Database (COD) developers.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "cif_parsing"
+      ],
+      "application_level": "library",
+      "primary_language": "Perl",
+      "repo_url": "https://github.com/cod-developers/cod-tools",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "cif",
+        "crystallography",
+        "cod"
+      ],
+      "id": 27
+    },
+    {
+      "name": "atco",
+      "one_line_profile": "ATCO-CIF to JSON converter",
+      "detailed_description": "A Ruby-based parser and converter for transforming ATCO-CIF crystallographic data files into JSON format.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "format_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "Ruby",
+      "repo_url": "https://github.com/davidjrice/atco",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cif",
+        "json",
+        "parser"
+      ],
+      "id": 28
+    },
+    {
+      "name": "deepmd-kit",
+      "one_line_profile": "Deep learning molecular dynamics package",
+      "detailed_description": "A deep learning package for generating many-body potential energy representations and performing molecular dynamics simulations.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "potential_learning",
+        "simulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepmodeling/deepmd-kit",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "deep-learning",
+        "molecular-dynamics",
+        "potentials"
+      ],
+      "id": 29
+    },
+    {
+      "name": "dftd4",
+      "one_line_profile": "DFT-D4 dispersion correction tool",
+      "detailed_description": "Implementation of the generally applicable atomic-charge dependent London dispersion correction (DFT-D4) for density functional theory calculations.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "physics_modeling",
+        "dft_correction"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/dftd4/dftd4",
+      "help_website": [],
+      "license": "LGPL-3.0",
+      "tags": [
+        "dft",
+        "dispersion-correction",
+        "quantum-chemistry"
+      ],
+      "id": 30
+    },
+    {
+      "name": "bandstructureplots",
+      "one_line_profile": "Band structure visualization tool for pymatgen",
+      "detailed_description": "A Python tool to plot electronic band structures using pymatgen, featuring RGB scales to visualize atomic or orbital contributions.",
+      "domains": [
+        "M1",
+        "M1-03"
+      ],
+      "subtask_category": [
+        "visualization",
+        "electronic_structure_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/gVallverdu/bandstructureplots",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "pymatgen",
+        "band-structure",
+        "visualization",
+        "dft"
+      ],
+      "id": 31
+    },
+    {
+      "name": "maptools",
+      "one_line_profile": "Materials simulation data processing toolkit",
+      "detailed_description": "An open-source program based on Pymatgen for processing materials simulation data, facilitating input setup and output analysis.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "data_processing",
+        "simulation_setup"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/haidi-ustc/maptools",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "pymatgen",
+        "materials-science",
+        "data-processing"
+      ],
+      "id": 32
+    },
+    {
+      "name": "chemeleon",
+      "one_line_profile": "Text-guided diffusion model for crystal structure generation",
+      "detailed_description": "A generative AI tool that uses text-guided diffusion models to generate crystal structures, enabling inverse design from textual descriptions.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "structure_generation",
+        "inverse_design"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/hspark1212/chemeleon",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "diffusion-model",
+        "crystal-generation",
+        "generative-ai",
+        "materials-design"
+      ],
+      "id": 33
+    },
+    {
+      "name": "ASE_ANI",
+      "one_line_profile": "ANI neural network potential interface for ASE",
+      "detailed_description": "A Python interface integrating the ANI-1 neural network potential with the Atomic Simulation Environment (ASE) for molecular dynamics and atomistic simulations.",
+      "domains": [
+        "M1",
+        "M1-02"
+      ],
+      "subtask_category": [
+        "potential_energy_surface",
+        "molecular_dynamics"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/isayev/ASE_ANI",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "machine-learning-potential",
+        "ase",
+        "ani",
+        "molecular-dynamics"
+      ],
+      "id": 34
+    },
+    {
+      "name": "jkitchin-vasp",
+      "one_line_profile": "Enhanced ASE interface for VASP",
+      "detailed_description": "A Python library providing an ASE-compliant interface to VASP, developed by John Kitchin, offering advanced workflow automation and analysis capabilities.",
+      "domains": [
+        "M1",
+        "M1-02"
+      ],
+      "subtask_category": [
+        "workflow_automation",
+        "dft_interface"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/jkitchin/vasp",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "vasp",
+        "ase",
+        "dft",
+        "workflow"
+      ],
+      "id": 35
+    },
+    {
+      "name": "pydefect",
+      "one_line_profile": "Point-defect calculation tool for non-metallic solids",
+      "detailed_description": "A Python library for performing point-defect calculations in non-metallic solids based on first-principles calculations (VASP), handling defect formation energies and corrections.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "defect_analysis",
+        "thermodynamics"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/kumagai-group/pydefect",
+      "help_website": [
+        "https://kumagai-group.github.io/pydefect/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "point-defects",
+        "vasp",
+        "materials-science",
+        "thermodynamics"
+      ],
+      "id": 36
+    },
+    {
+      "name": "CrystaLLM",
+      "one_line_profile": "Large Language Model for crystal structure generation",
+      "detailed_description": "A Large Language Model trained on CIF files to generate valid crystal structures, enabling generative design of new materials.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "structure_generation",
+        "generative_model"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/lantunes/CrystaLLM",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "crystal-generation",
+        "cif",
+        "generative-ai"
+      ],
+      "id": 37
+    },
+    {
+      "name": "MPWorks",
+      "one_line_profile": "Workflow management system for Materials Project calculations",
+      "detailed_description": "A custom workflow package that merges pymatgen, custodian, and FireWorks to manage high-throughput DFT calculations for the Materials Project.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "high_throughput_computing"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/MPWorks",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "workflow",
+        "materials-project",
+        "dft",
+        "high-throughput"
+      ],
+      "id": 38
+    },
+    {
+      "name": "MPmorph",
+      "one_line_profile": "Tools for running and analyzing ab-initio molecular dynamics (AIMD)",
+      "detailed_description": "A collection of tools to run and analyze ab-initio molecular dynamics (AIMD) calculations using VASP, built upon the Materials Project infrastructure.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "molecular_dynamics",
+        "trajectory_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/mpmorph",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "aimd",
+        "vasp",
+        "molecular-dynamics",
+        "materials-science"
+      ],
+      "id": 39
+    },
+    {
+      "name": "pymatgen",
+      "one_line_profile": "Robust materials analysis code for structure definition and electronic structure analysis",
+      "detailed_description": "A core Python library for materials analysis that defines classes for structures and molecules, supporting input/output for many electronic structure codes like VASP, Gaussian, and more.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "structure_building",
+        "input_generation",
+        "electronic_structure_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen",
+      "help_website": [
+        "https://pymatgen.org"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "materials-science",
+        "crystallography",
+        "dft",
+        "structure-analysis"
+      ],
+      "id": 40
+    },
+    {
+      "name": "pymatgen-analysis-alloys",
+      "one_line_profile": "Pymatgen add-on for alloy system description and analysis",
+      "detailed_description": "An add-on package for pymatgen containing classes and tools specifically designed for describing alloy systems and analyzing relevant data.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "alloy_modeling",
+        "structure_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-analysis-alloys",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "alloys",
+        "materials-science",
+        "pymatgen-addon"
+      ],
+      "id": 41
+    },
+    {
+      "name": "pymatgen-analysis-defects",
+      "one_line_profile": "Defect analysis modules for pymatgen",
+      "detailed_description": "A specialized add-on for pymatgen to handle point defect analysis, including formation energy calculations and finite-size corrections.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "defect_analysis",
+        "structure_generation"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-analysis-defects",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "defects",
+        "point-defects",
+        "semiconductors",
+        "thermodynamics"
+      ],
+      "id": 42
+    },
+    {
+      "name": "pymatgen-db",
+      "one_line_profile": "Database management tool for Materials Project style databases",
+      "detailed_description": "An addon to pymatgen that enables the creation and management of MongoDB-based databases for materials data, following Materials Project schemas.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "database_management",
+        "data_storage"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-db",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "database",
+        "mongodb",
+        "materials-informatics"
+      ],
+      "id": 43
+    },
+    {
+      "name": "pymatgen-io-validation",
+      "one_line_profile": "Input/output validator for DFT calculations",
+      "detailed_description": "A comprehensive validator to ensure VASP calculations are compatible with Materials Project data standards, with potential for other DFT codes.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "input_validation",
+        "quality_control"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialsproject/pymatgen-io-validation",
+      "help_website": [],
+      "license": "NOASSERTION",
+      "tags": [
+        "validation",
+        "vasp",
+        "quality-control"
+      ],
+      "id": 44
+    },
+    {
+      "name": "pymatgen-analysis-diffusion",
+      "one_line_profile": "Pymatgen add-on for analyzing diffusion in materials",
+      "detailed_description": "Tools for analyzing diffusion pathways and calculating diffusion coefficients from molecular dynamics or nudged elastic band (NEB) calculations.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "diffusion_analysis",
+        "transport_properties"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/materialyzeai/pymatgen-analysis-diffusion",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "diffusion",
+        "neb",
+        "molecular-dynamics",
+        "batteries"
+      ],
+      "id": 45
+    },
+    {
+      "name": "supercell",
+      "one_line_profile": "Program to create regular structure supercells from CIF files",
+      "detailed_description": "A tool that allows the creation of regular structure supercells from CIF files, handling partial occupancy and substitutions.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "supercell_generation",
+        "structure_manipulation"
+      ],
+      "application_level": "solver",
+      "primary_language": "C++",
+      "repo_url": "https://github.com/orex/supercell",
+      "help_website": [],
+      "license": "GPL-2.0",
+      "tags": [
+        "crystallography",
+        "supercell",
+        "cif",
+        "structure-building"
+      ],
+      "id": 46
+    },
+    {
+      "name": "Atomsk",
+      "one_line_profile": "Tool for manipulating and converting atomic data files",
+      "detailed_description": "A command-line tool for converting between various atomic data file formats and performing manipulations like supercell creation, defect insertion, and dislocation generation.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "format_conversion",
+        "structure_manipulation",
+        "defect_generation"
+      ],
+      "application_level": "solver",
+      "primary_language": "Fortran",
+      "repo_url": "https://github.com/pierrehirel/atomsk",
+      "help_website": [
+        "https://atomsk.univ-lille.fr/"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "atomic-structure",
+        "conversion",
+        "defects",
+        "dislocations"
+      ],
+      "id": 47
+    },
+    {
+      "name": "DFTtoolbox",
+      "one_line_profile": "Toolbox for building inputs and analyzing DFT results",
+      "detailed_description": "A Python toolbox designed to facilitate the quick generation of input files and the analysis of results for Density Functional Theory (DFT) codes.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "input_generation",
+        "result_analysis"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/pipidog/DFTtoolbox",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "dft",
+        "vasp",
+        "analysis",
+        "input-generation"
+      ],
+      "id": 48
+    },
+    {
+      "name": "pyiron",
+      "one_line_profile": "Integrated development environment for computational materials science",
+      "detailed_description": "An integrated development environment (IDE) that provides a workflow framework for computational materials science, supporting various simulation codes and data management.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "integrated_environment"
+      ],
+      "application_level": "platform",
+      "primary_language": "Jupyter Notebook",
+      "repo_url": "https://github.com/pyiron/pyiron",
+      "help_website": [
+        "https://pyiron.org"
+      ],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "ide",
+        "workflow",
+        "materials-science",
+        "simulation"
+      ],
+      "id": 49
+    },
+    {
+      "name": "atomium",
+      "one_line_profile": "Python macromolecular parsing and generation library",
+      "detailed_description": "A Python library for parsing, manipulating, and saving macromolecular structures (PDB, CIF, MMTF formats), suitable for structural biology and materials.",
+      "domains": [
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "structure_parsing",
+        "file_io"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/samirelanduk/atomium",
+      "help_website": [
+        "https://atomium.samireland.com/"
+      ],
+      "license": "MIT",
+      "tags": [
+        "pdb",
+        "cif",
+        "macromolecules",
+        "parsing"
+      ],
+      "id": 50
+    },
+    {
+      "name": "pysktb",
+      "one_line_profile": "Slater Koster tight-binding solver",
+      "detailed_description": "A scientific Python package for solving Slater-Koster tight-binding topological hamiltonians, useful for electronic structure calculations.",
+      "domains": [
+        "M1"
+      ],
+      "subtask_category": [
+        "electronic_structure",
+        "tight_binding"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/santoshkumarradha/pysktb",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "tight-binding",
+        "electronic-structure",
+        "hamiltonian"
+      ],
+      "id": 51
+    },
+    {
+      "name": "catkit2",
+      "one_line_profile": "Hardware control package for astronomical testbeds and telescopes",
+      "detailed_description": "A Python package developed by STScI for controlling testbed hardware, specifically designed for high-contrast imaging and optical experiments in astronomy.",
+      "domains": [
+        "Astronomy",
+        "Optics"
+      ],
+      "subtask_category": [
+        "hardware_control",
+        "data_acquisition"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/spacetelescope/catkit2",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "astronomy",
+        "hardware-control",
+        "optics",
+        "testbed"
+      ],
+      "id": 52
+    },
+    {
+      "name": "crystcif-parse",
+      "one_line_profile": "JavaScript parser for Crystallographic Information Files (CIF)",
+      "detailed_description": "A lightweight JavaScript library for parsing Crystallographic Information Files (CIF), commonly used in materials science and chemistry to describe crystal structures.",
+      "domains": [
+        "Materials",
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "data_parsing",
+        "format_conversion"
+      ],
+      "application_level": "library",
+      "primary_language": "JavaScript",
+      "repo_url": "https://github.com/stur86/crystcif-parse",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "cif",
+        "crystallography",
+        "parser",
+        "materials-science"
+      ],
+      "id": 53
+    },
+    {
+      "name": "Genarris",
+      "one_line_profile": "Molecular crystal structure generation and polymorph prediction workflow",
+      "detailed_description": "A Python package for generating molecular crystal structures and performing robust workflows for polymorph prediction, utilizing genetic algorithms and other sampling techniques.",
+      "domains": [
+        "Materials",
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "structure_generation",
+        "polymorph_prediction",
+        "crystal_structure_prediction"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/timcrose/Genarris",
+      "help_website": [],
+      "license": "BSD-3-Clause",
+      "tags": [
+        "molecular-crystals",
+        "polymorph-prediction",
+        "structure-generation",
+        "genetic-algorithm"
+      ],
+      "id": 54
+    },
+    {
+      "name": "supercell-core",
+      "one_line_profile": "Tool for investigating multilayer 2D heterostructure lattices",
+      "detailed_description": "A Python package designed for building and investigating supercells of multilayer 2D heterostructures, facilitating the study of moiré patterns and lattice mismatch.",
+      "domains": [
+        "Materials",
+        "M1",
+        "M1-01"
+      ],
+      "subtask_category": [
+        "structure_building",
+        "supercell_generation",
+        "heterostructure_modeling"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/tnecio/supercell-core",
+      "help_website": [],
+      "license": "GPL-3.0",
+      "tags": [
+        "2d-materials",
+        "heterostructures",
+        "supercell",
+        "crystallography"
+      ],
+      "id": 55
+    },
+    {
+      "name": "JARVIS-Tools",
+      "one_line_profile": "Open-source software package for data-driven atomistic materials design",
+      "detailed_description": "A comprehensive toolkit from NIST for data-driven atomistic materials design, including modules for high-throughput DFT calculations, machine learning force fields, and materials data analysis.",
+      "domains": [
+        "Materials",
+        "M1"
+      ],
+      "subtask_category": [
+        "high_throughput_screening",
+        "dft_workflow",
+        "machine_learning",
+        "materials_design"
+      ],
+      "application_level": "platform",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/usnistgov/jarvis",
+      "help_website": [
+        "https://jarvis.nist.gov/"
+      ],
+      "license": "NOASSERTION",
+      "tags": [
+        "dft",
+        "machine-learning",
+        "materials-design",
+        "high-throughput"
+      ],
+      "id": 56
+    },
+    {
+      "name": "MAST",
+      "one_line_profile": "Materials Simulation Toolkit for automation of calculation workflows",
+      "detailed_description": "MAterials Simulation Toolkit (MAST) is designed to manage and automate computational materials science workflows, particularly working with pymatgen for structure manipulation and input generation.",
+      "domains": [
+        "Materials",
+        "M1"
+      ],
+      "subtask_category": [
+        "workflow_management",
+        "simulation_automation",
+        "input_generation"
+      ],
+      "application_level": "workflow",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/uw-cmg/MAST",
+      "help_website": [],
+      "license": null,
+      "tags": [
+        "workflow",
+        "pymatgen",
+        "materials-simulation",
+        "automation"
+      ],
+      "id": 57
+    },
+    {
+      "name": "ternary-diagram",
+      "one_line_profile": "Library for drawing ternary diagrams for materials science",
+      "detailed_description": "A Python package specifically designed to draw beautiful and customizable ternary diagrams (phase diagrams) without the heavy dependencies of larger materials frameworks like pymatgen.",
+      "domains": [
+        "Materials"
+      ],
+      "subtask_category": [
+        "visualization",
+        "phase_diagram_plotting"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/yu9824/ternary-diagram",
+      "help_website": [],
+      "license": "MIT",
+      "tags": [
+        "ternary-diagram",
+        "visualization",
+        "phase-diagram",
+        "materials-science"
+      ],
+      "id": 58
+    }
+  ]
+}
