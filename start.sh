@@ -2,9 +2,7 @@
 set -e
 
 APP_DIR="/root/build_tools"
-VENV="$APP_DIR/.venv"
-PYTHON_BIN="$VENV/bin/python"
-PIP_BIN="$VENV/bin/pip"
+
 
 cd "$APP_DIR"
 
@@ -22,27 +20,19 @@ if [ -f run.pid ] && kill -0 "$(cat run.pid)" 2>/dev/null; then
     sleep 2
 fi
 
-# ===============================
-# 创建虚拟环境（关键修正点）
-# ===============================
-if [ ! -x "$PYTHON_BIN" ]; then
-    echo "🐍 Creating virtualenv..."
-    PYTHON_SYS="$(which python)"
-    "$PYTHON_SYS" -m venv "$VENV"
-fi
+
 
 # ===============================
 # 安装依赖（必须用 venv 的 pip）
 # ===============================
 echo "📦 Installing requirements..."
-"$PIP_BIN" install --upgrade pip
-"$PIP_BIN" install -r requirements.txt
+pip install -r requirements.txt
 
 # ===============================
 # 启动服务
 # ===============================
 echo "🚀 Starting service..."
-nohup "$PYTHON_BIN" run.py --all > log 2>&1 &
+nohup /opt/mamba/bin/python run.py --all > log 2>&1 &
 
 echo $! > run.pid
 echo "✅ Done"
