@@ -27,6 +27,7 @@ fi
 # ===============================
 if [ ! -x "$PYTHON_BIN" ]; then
     echo "🐍 Creating virtualenv..."
+    rm -rf "$VENV"
     PYTHON_SYS="/opt/mamba/bin/python"
     "$PYTHON_SYS" -m venv "$VENV"
 fi
