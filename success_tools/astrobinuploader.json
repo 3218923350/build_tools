@@ -1,0 +1,87 @@
+{
+  "generated_at": "2025-12-18T12:22:30+0800",
+  "metadata": {
+    "leaf_cluster": {
+      "leaf_cluster_id": "A1",
+      "leaf_cluster_name": "天文-观测数据处理与源检测生态",
+      "domain": "Astronomy",
+      "typical_objects": "FITS/images",
+      "task_chain": "校准→源检测→测光→匹配→平台",
+      "tool_form": "管线 + 库 + 平台"
+    },
+    "unit": {
+      "unit_id": "A1-01",
+      "unit_name": "FITS/观测数据IO与校准",
+      "target_scale": "200–450",
+      "coverage_tools": "FITS libs、calibration pipelines"
+    },
+    "search": {
+      "target_candidates": 450,
+      "queries": [
+        "[GH] IRAF",
+        "[GH] JWST Calibration Pipeline",
+        "[GH] SunPy",
+        "[GH] CCfits",
+        "[GH] WCSTools",
+        "[GH] fitsio",
+        "[GH] CCDProc",
+        "[GH] CFITSIO",
+        "[GH] Astropy",
+        "[GH] fits io",
+        "[GH] fits library",
+        "[GH] astronomy calibration",
+        "[GH] image reduction pipeline",
+        "[GH] ccd processing",
+        "[GH] bias dark flat correction",
+        "[GH] wcs astrometry",
+        "[GH] fits header",
+        "[GH] astronomical data reduction",
+        "[GH] fits reader",
+        "[GH] observatory pipeline",
+        "[GH] fits file handler",
+        "[GH] astrophotography stacking",
+        "[WEB] astronomy fits io library github",
+        "[WEB] ccd data reduction pipeline github",
+        "[WEB] astronomical image calibration tools github",
+        "[WEB] fits file manipulation software github",
+        "[WEB] astropy ccdproc github"
+      ],
+      "total_candidates": 895,
+      "tool_candidates": 260,
+      "final_tools": 110
+    }
+  },
+  "tools": [
+    {
+      "name": "AstroBinUploader",
+      "one_line_profile": "Script to parse FITS/XISF headers and generate AstroBin-compatible CSVs",
+      "detailed_description": "A Python script that parses directories of astronomical images (FITS/XISF), reads header information, and creates a summary CSV file formatted for upload to AstroBin.",
+      "domains": [
+        "A1",
+        "A1-01"
+      ],
+      "subtask_category": [
+        "metadata_extraction",
+        "data_management"
+      ],
+      "application_level": "solver",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/SteveGreaves/AstroBinUploader",
+      "help_website": [
+        "https://github.com/SteveGreaves/AstroBinUploader"
+      ],
+      "license": "GPL-3.0",
+      "tags": [
+        "fits",
+        "xisf",
+        "metadata",
+        "astrophotography"
+      ],
+      "id": 2,
+      "dockerfile": "FROM python:3.11-slim\n\nENV DEBIAN_FRONTEND=noninteractive\n\n# Base utilities and SSH/MCP setup\nRUN apt-get update && apt-get install -y --no-install-recommends \\\n    curl unzip supervisor net-tools openssh-server \\\n    git wget ca-certificates \\\n    && rm -rf /var/lib/apt/lists/* && \\\n    cat > /etc/supervisord.conf << 'EOF'\n[supervisord]\nnodaemon=true\nlogfile=/var/log/supervisor/supervisord.log\npidfile=/var/run/supervisord.log\n[program:sshd]\ncommand=/usr/sbin/sshd -D\nEOF\n\nRUN cat >> /etc/ssh/sshd_config << 'EOF'\nClientAliveInterval 60\nClientAliveCountMax 3\nEOF\n\nRUN mkdir -p /var/run/sshd && \\\n    mkdir -p /var/log/supervisor && \\\n    sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config && \\\n    sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config\n\n# System-required Python packages\nRUN pip install --no-cache-dir mcp numpy\n\n# Get source and install its Python dependencies if declared\nWORKDIR /opt\nRUN git clone https://github.com/SteveGreaves/AstroBinUploader && \\\n    cd AstroBinUploader && \\\n    if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi\n\nWORKDIR /opt/AstroBinUploader\n\n# No restrictive CMD/ENTRYPOINT\n\nRUN apt-get update && apt-get install -y curl unzip supervisor net-tools openssh-server --no-install-recommends && \\\n    cat > /etc/supervisord.conf << 'EOF'\n[supervisord]\nnodaemon=true\nlogfile=/var/log/supervisor/supervisord.log\npidfile=/var/run/supervisord.log\n[program:sshd]\ncommand=/usr/sbin/sshd -D\nEOF\n\nRUN cat >> /etc/ssh/sshd_config << 'EOF'\nClientAliveInterval 60\nClientAliveCountMax 3\nEOF\n\nRUN mkdir -p /var/run/sshd && \\\n    mkdir -p /var/log/supervisor && \\\n    sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config && \\\n    sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config\n\nRUN pip install mcp numpy\n",
+      "helpurl": [
+        "https://github.com/SteveGreaves/AstroBinUploader"
+      ]
+    }
+  ]
+}

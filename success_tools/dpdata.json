@@ -1,0 +1,39 @@
+{
+  "generated_at": "2025-12-18T14:12:39+0800",
+  "metadata": {},
+  "tools": [
+    {
+      "name": "dpdata",
+      "one_line_profile": "A Python package for manipulating atomistic data of software in computational science",
+      "detailed_description": "A Python package for manipulating atomistic data of software in computational science Topics: atomic-data, python",
+      "domains": [
+        "deepmodeling"
+      ],
+      "subtask_category": [
+        "data_processing"
+      ],
+      "application_level": "library",
+      "primary_language": "Python",
+      "repo_url": "https://github.com/deepmodeling/dpdata",
+      "help_website": [
+        "https://github.com/deepmodeling/dpdata",
+        "https://docs.deepmodeling.com/projects/dpdata/en/master/installation.html",
+        "https://pypi.org/project/dpdata/",
+        "https://docs.deepmodeling.com/projects/dpdata/en/master/systems/bond_order_system.html"
+      ],
+      "license": "LGPL-3.0",
+      "tags": [
+        "python",
+        "atomic-data"
+      ],
+      "id": 1,
+      "dockerfile": "FROM python:3.11-slim\n\nENV DEBIAN_FRONTEND=noninteractive\n\n# Install system dependencies\n# We include git as a common utility, though pip install dpdata usually fetches wheels.\nRUN apt-get update && apt-get install -y --no-install-recommends \\\n    curl wget unzip supervisor net-tools openssh-server ca-certificates git \\\n    && rm -rf /var/lib/apt/lists/*\n\n# Supervisor configuration (Required Snippet)\nRUN cat > /etc/supervisord.conf << 'EOF'\n[supervisord]\nnodaemon=true\nlogfile=/var/log/supervisor/supervisord.log\npidfile=/var/run/supervisord.log\n[program:sshd]\ncommand=/usr/sbin/sshd -D\nEOF\n\n# SSH server configuration (Required Snippet)\nRUN cat >> /etc/ssh/sshd_config << 'EOF'\nClientAliveInterval 60\nClientAliveCountMax 3\nEOF\n\n# SSH setup (Required Snippet)\nRUN mkdir -p /var/run/sshd && \\\n    mkdir -p /var/log/supervisor && \\\n    sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config && \\\n    sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config\n\n# Install dpdata via pip as officially recommended\n# This will automatically pull dependencies like numpy, scipy, h5py, monty, wcmatch\nRUN pip install --no-cache-dir --upgrade pip && \\\n    pip install --no-cache-dir dpdata\n\n# Install MCP and numpy explicitly (Required Snippet)\n# Note: numpy is likely already installed by dpdata, but we enforce the requirement here.\nRUN pip install mcp numpy\n\nWORKDIR /workspace\n",
+      "helpurl": [
+        "https://github.com/deepmodeling/dpdata",
+        "https://docs.deepmodeling.com/projects/dpdata/en/master/installation.html",
+        "https://pypi.org/project/dpdata/",
+        "https://docs.deepmodeling.com/projects/dpdata/en/master/systems/bond_order_system.html"
+      ]
+    }
+  ]
+}
