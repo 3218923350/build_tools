@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import shutil
 import time
 from dataclasses import dataclass
@@ -319,15 +320,13 @@ def _compose_result_json(
     组装你给的新 result_json schema（缺失字段尽量补空/None）。
     """
     # GitHub 信息优先（接口下发的 tool_meta 通常不包含这些字段）
-    gh_token = str(tool_meta.get("_github_token") or "").strip()  # 允许注入，但一般不使用
-    gh_api_base = str(tool_meta.get("_github_api_base") or "").strip() or "https://api.github.com"
+    gh_token = str(tool_meta.get("_github_token") or "").strip() or os.getenv("GITHUB_TOKEN", "").strip()
+    gh_api_base = str(tool_meta.get("_github_api_base") or "").strip() or os.getenv("GITHUB_API_BASE", "").strip() or "https://api.github.com"
     gh = fetch_github_repo_info(
         repo_url=str(tool_meta.get("repo_url") or ""),
         token=gh_token or "",
         api_base=gh_api_base,
     )
-    print(gh)
-    return {}
 
     primary_language = (gh.primary_language if gh else "") or ""
     language_list = (gh.language_list if gh else None) or {}

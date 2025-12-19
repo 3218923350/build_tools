@@ -19,9 +19,16 @@ def _worker_loop(
     report_md_base: str,
     idle_sleep: float = 1.0,
 ):
+    last_idle_log = 0.0
+    idle_count = 0
     while True:
         task = dispatch_task(dispatch_url=dispatch_url, worker_ip=worker_ip)
         if task is None:
+            idle_count += 1
+            now = time.time()
+            if now - last_idle_log > 30:
+                print(f"[worker-{worker_idx}] idle (no task). dispatch_url={dispatch_url} worker_ip={worker_ip} idle_count={idle_count}")
+                last_idle_log = now
             time.sleep(idle_sleep)
             continue
 
@@ -88,12 +95,18 @@ def main(argv: Optional[List[str]] = None):
             s.connect(("8.8.8.8", 80))
             worker_ip = s.getsockname()[0]
         except Exception:
+            print(f"[main] failed to get worker_ip")
             worker_ip = ""
         finally:
             try:
                 s.close()
             except Exception:
                 pass
+
+    print(f"[main] dispatch_url={dispatch_url}")
+    print(f"[main] report_url={report_url}")
+    print(f"[main] worker_ip={worker_ip}")
+    print(f"[main] concurrency={args.concurrency} idle_sleep={args.idle_sleep} report_md_base={args.report_md_base}")
 
     threads: List[threading.Thread] = []
     for i in range(args.concurrency):
@@ -113,8 +126,12 @@ def main(argv: Optional[List[str]] = None):
         threads.append(th)
 
     # 主线程阻塞
-    for th in threads:
-        th.join()
+    try:
+        for th in threads:
+            th.join()
+    except KeyboardInterrupt:
+        print("\n[main] received Ctrl+C, exiting (workers are daemon threads).")
+        return
 
 
 if __name__ == "__main__":
