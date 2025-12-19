@@ -2,7 +2,7 @@
 set -e
 
 APP_DIR="/root/build_tools"
-VENV="$APP_DIR/.venv"
+VENV="$APP_DIR/.build"
 PYTHON_BIN="$VENV/bin/python"
 PIP_BIN="$VENV/bin/pip"
 
