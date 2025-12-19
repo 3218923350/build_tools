@@ -11,7 +11,7 @@ from .config import SEARCH_BASE_URL, SEARCH_KEY
 from .utils import summarize_text
 
 
-def web_search(query: str, count: int = 5, timeout: int = 20, max_retries: int = 40) -> List[Dict[str, str]]:
+def web_search(query: str, count: int = 5, timeout: int = 20, max_retries: int = 2) -> List[Dict[str, str]]:
     """基于 searchapi.io 的 websearch 封装（400台机器并发场景：40次重试，每次随机1-30秒）"""
     if not SEARCH_KEY:
         return []
