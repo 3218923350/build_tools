@@ -42,7 +42,7 @@ echo "📦 Installing requirements..."
 # 启动服务
 # ===============================
 echo "🚀 Starting service..."
-nohup "$PYTHON_BIN" run.py --all > log 2>&1 &
+nohup "$PYTHON_BIN" run.py  > log 2>&1 &
 
 echo $! > run.pid
 echo "✅ Done"
