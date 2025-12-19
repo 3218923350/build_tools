@@ -1,76 +1,118 @@
 from __future__ import annotations
 
 import argparse
+import os
+import socket
 import threading
-from pathlib import Path
-from typing import List, Tuple
+import time
+from typing import List, Optional
 
-from . import config
-from .builder import build_image_for_tool
-from .loaders import ToolSource, load_tools_from_tools_dir
-from .models import ToolSpec
+from .api_client import dispatch_task, report_result
+from .builder import build_image_for_task
 
 
-def worker_thread(tool: ToolSpec, source: ToolSource):
-    try:
-        note = f"{source.json_path}"
-        if source.tool_id is not None:
-            note += f" (id={source.tool_id})"
-        build_image_for_tool(tool, source=source, source_note=note)
-    except Exception as e:
-        print(f"[worker] Tool {tool.name} failed with error: {e}")
+def _worker_loop(
+    worker_idx: int,
+    dispatch_url: str,
+    report_url: str,
+    worker_ip: str,
+    report_md_base: str,
+    idle_sleep: float = 1.0,
+):
+    while True:
+        task = dispatch_task(dispatch_url=dispatch_url, worker_ip=worker_ip)
+        if task is None:
+            time.sleep(idle_sleep)
+            continue
+
+        print(f"[worker-{worker_idx}] got task_id={task.task_id} tool={task.tool_meta.get('name')}")
+
+        result = build_image_for_task(
+            task_id=task.task_id,
+            tool_meta=task.tool_meta,
+            worker_ip_for_report=worker_ip,
+            report_md_base=report_md_base,
+        )
+
+        if result.status == "success":
+            payload = {
+                "task_id": result.task_id,
+                "status": "success",
+                "result_json": result.result_json,
+                "process_md_url": result.process_md_url,
+            }
+        else:
+            payload = {
+                "task_id": result.task_id,
+                "status": "failed",
+                "error_message": result.error_message,
+                "process_md_url": result.process_md_url,
+            }
+
+        ok = report_result(report_url=report_url, payload=payload)
+        if not ok:
+            print(f"[worker-{worker_idx}] report failed for task_id={result.task_id}")
 
 
-def main(argv: List[str] | None = None):
-    parser = argparse.ArgumentParser(description="自动构建工具 Docker 镜像（多工具并行，v2）")
+def main(argv: Optional[List[str]] = None):
+    parser = argparse.ArgumentParser(description="自动构建工具 Docker 镜像（API dispatch/report，v3）")
     parser.add_argument(
-        "--tools-root",
-        default="tools",
-        help="工具清单根目录（默认 tools/，扫描 tools/<子目录>/*.json）",
-    )
-    parser.add_argument(
-        "--max-parallel",
+        "--concurrency",
         type=int,
-        default=config.MAX_PARALLEL_TOOLS,
-        help=f"最大并行工具数（默认 {config.MAX_PARALLEL_TOOLS}）",
+        default=10,
+        help="并发 worker 数（默认 10；会并发请求 dispatch）",
     )
     parser.add_argument(
-        "--only",
-        type=str,
-        default="",
-        help="只处理某一个工具名（完全匹配 name 字段）",
+        "--report-md-base",
+        default="/build_agent",
+        help="上报 process_md_url 的路径前缀（默认 /build_agent；最终形如 ip:/build_agent/logs/xxx.md）",
+    )
+    parser.add_argument(
+        "--idle-sleep",
+        type=float,
+        default=1.0,
+        help="无任务时 sleep 秒数（默认 1.0）",
     )
 
     args = parser.parse_args(argv)
 
-    tools_root = Path(args.tools_root)
-    pairs: List[Tuple[ToolSpec, ToolSource]] = load_tools_from_tools_dir(tools_root)
-
-    if args.only:
-        pairs = [(t, s) for (t, s) in pairs if t.name == args.only]
-
-    print(f"[INFO] 将处理 {len(pairs)} 个工具（最多并行 {args.max_parallel} 个）")
+    dispatch_url = os.getenv("DISPATCH_URL", "https://tast-agent.test.dp.tech/api/v1/dispatch").strip()
+    report_url = os.getenv("REPORT_URL", "https://tast-agent.test.dp.tech/api/v1/report").strip()
+    worker_ip = os.getenv("WORKER_IP", "").strip()
+    if not worker_ip:
+        # 兜底：尽量获取一个本机对外可用 IP（不保证在所有网络环境都准确）
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            s.connect(("8.8.8.8", 80))
+            worker_ip = s.getsockname()[0]
+        except Exception:
+            worker_ip = ""
+        finally:
+            try:
+                s.close()
+            except Exception:
+                pass
 
     threads: List[threading.Thread] = []
-    sem = threading.Semaphore(args.max_parallel)
-
-    for tool, source in pairs:
-        sem.acquire()
-
-        def start_tool(t: ToolSpec, s: ToolSource):
-            try:
-                worker_thread(t, s)
-            finally:
-                sem.release()
-
-        th = threading.Thread(target=start_tool, args=(tool, source), daemon=True)
+    for i in range(args.concurrency):
+        th = threading.Thread(
+            target=_worker_loop,
+            args=(
+                i,
+                dispatch_url,
+                report_url,
+                worker_ip,
+                args.report_md_base,
+                args.idle_sleep,
+            ),
+            daemon=True,
+        )
         th.start()
         threads.append(th)
 
+    # 主线程阻塞
     for th in threads:
         th.join()
-
-    print("[INFO] 所有工具处理结束。")
 
 
 if __name__ == "__main__":

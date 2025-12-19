@@ -3,8 +3,9 @@ from __future__ import annotations
 import json
 import shutil
 import time
+from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 from . import config
 from .dockerfile_utils import sanitize_dockerfile
@@ -14,6 +15,18 @@ from .models import AttemptLog, ToolSpec
 from .repo_context import collect_repo_context
 from .utils import ensure_dir, is_git_repo, run_cmd, slugify
 from .web import collect_docs_context
+
+
+@dataclass
+class BuildResult:
+    task_id: str
+    tool_meta: Dict[str, Any]
+    status: str  # "success" | "failed"
+    result_json: Optional[Dict[str, Any]]
+    docker_image_uri: str
+    dockerfile: str
+    process_md_url: str
+    error_message: str = ""
 
 
 def _unique_urls(urls: List[str]) -> List[str]:
@@ -29,48 +42,23 @@ def _unique_urls(urls: List[str]) -> List[str]:
 
 
 def _write_success_artifact(
-    tool: ToolSpec,
-    source: Optional[ToolSource],
-    dockerfile_text: str,
-    used_links: List[str],
+    tool_slug: str,
+    result_json: Dict[str, Any],
 ) -> Path:
     """
-    成功后输出一个“单工具 JSON”，结构参考 tools/*/*.json：
-    - generated_at
-    - metadata（来自原始 json 的 metadata）
-    - tools: [ 原 tool 条目 + dockerfile + helpurl/help_website(使用的链接) ]
+    成功后输出一个“单工具 JSON”（新 schema）。
     """
     success_dir = Path("success_tools").absolute()
     ensure_dir(success_dir)
 
-    tool_slug = slugify(tool.name)
     out_path = success_dir / f"{tool_slug}.json"
-
-    raw_metadata = source.raw_metadata if source else {}
-    raw_tool = dict(source.raw_tool) if (source and isinstance(source.raw_tool, dict)) else {}
-    if not raw_tool:
-        raw_tool = {
-            "name": tool.name,
-            "repo_url": tool.homepage,
-            "help_website": [],
-        }
-
-    used_links = _unique_urls(used_links)
-    raw_tool["dockerfile"] = dockerfile_text
-    raw_tool["helpurl"] = used_links
-    raw_tool["help_website"] = used_links
-
-    payload = {
-        "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
-        "metadata": raw_metadata,
-        "tools": [raw_tool],
-    }
-    out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    out_path.write_text(json.dumps(result_json, ensure_ascii=False, indent=2), encoding="utf-8")
     return out_path
 
 
 def build_image_for_tool(
     tool: ToolSpec,
+    task_id: str = "",
     source: Optional[ToolSource] = None,
     source_note: str = "",
 ) -> Optional[str]:
@@ -84,7 +72,9 @@ def build_image_for_tool(
     ensure_dir(work_dir)
     ensure_dir(repo_dir)
 
-    log_md_path = config.LOG_DIR / f"{tool_slug}.md"
+    # 多并发/多任务：日志文件名必须包含 task_id，避免同名覆盖
+    log_name = f"{tool_slug}.md" if not task_id else f"{tool_slug}__{task_id}.md"
+    log_md_path = config.LOG_DIR / log_name
     history: List[AttemptLog] = []
 
     def append_md(text: str):
@@ -306,15 +296,7 @@ def build_image_for_tool(
             for cmd in verify_commands:
                 append_md(f"  - `{cmd}`")
             append_md("\n构建流程结束。\n")
-            out_path = _write_success_artifact(
-                tool=tool,
-                source=source,
-                dockerfile_text=dockerfile_sanitized,
-                used_links=used_links,
-            )
-            append_md("\n### 成功产物（单工具 JSON）\n")
-            append_md(f"- `{out_path}`\n")
-            
+            # 旧的 success_tools 写入逻辑迁移到 build_image_for_task（需要 tool_meta 等更多信息）
             append_md(f"\n---\n\n## 结束时间：{time.strftime('%Y-%m-%d %H:%M:%S')}\n")
             return image_tag
         else:
@@ -323,5 +305,168 @@ def build_image_for_tool(
     append_md(f"\n在消耗了 {config.MAX_BUILD_ATTEMPTS} 次 Dockerfile 构建机会后仍未成功，按照规则，该工具暂时被放弃。\n")
     append_md(f"\n---\n\n## 结束时间：{time.strftime('%Y-%m-%d %H:%M:%S')}\n")
     return None
+
+
+def _compose_result_json(
+    tool_meta: Dict[str, Any],
+    repo_facts: Dict[str, Any],
+    dockerfile: str,
+    docker_image_uri: str,
+    help_url: List[str],
+) -> Dict[str, Any]:
+    """
+    组装你给的新 result_json schema（缺失字段尽量补空/None）。
+    """
+    primary_language = tool_meta.get("primary_language") or ""
+    language_list = tool_meta.get("language_list")
+    if not isinstance(language_list, dict):
+        language_list = {str(primary_language): 1.0} if primary_language else {}
+
+    return {
+        "id": tool_meta.get("id"),
+        "name": tool_meta.get("name"),
+        "one_line_profile": tool_meta.get("one_line_profile", ""),
+        "detailed_description": tool_meta.get("detailed_description", ""),
+        "domains": tool_meta.get("domains", []) if isinstance(tool_meta.get("domains"), list) else [],
+        "domains_name": tool_meta.get("domains_name", []) if isinstance(tool_meta.get("domains_name"), list) else [],
+        "subtask_category": tool_meta.get("subtask_category", []) if isinstance(tool_meta.get("subtask_category"), list) else [],
+        "application_level": tool_meta.get("application_level", ""),
+        "sub_domain": tool_meta.get("sub_domain", []) if isinstance(tool_meta.get("sub_domain"), list) else [],
+        "sub_domain_name": tool_meta.get("sub_domain_name", []) if isinstance(tool_meta.get("sub_domain_name"), list) else [],
+        "capability": tool_meta.get("capability", []) if isinstance(tool_meta.get("capability"), list) else [],
+        "capability_name": tool_meta.get("capability_name", []) if isinstance(tool_meta.get("capability_name"), list) else [],
+        "avatar_url": tool_meta.get("avatar_url", ""),
+        "primary_language": primary_language,
+        "language_list": language_list,
+        "repo_url": tool_meta.get("repo_url", ""),
+        "help_url": help_url,
+        "stars": tool_meta.get("stars"),
+        "forks": tool_meta.get("forks"),
+        "watchers": tool_meta.get("watchers"),
+        "open_issues": tool_meta.get("open_issues"),
+        "has_setup_py": repo_facts.get("has_setup_py", False),
+        "has_pyproject_toml": repo_facts.get("has_pyproject_toml", False),
+        "has_cmakelists": repo_facts.get("has_cmakelists", False),
+        "has_makefile": repo_facts.get("has_makefile", False),
+        "has_requirements_txt": repo_facts.get("has_requirements_txt", False),
+        "build_type": repo_facts.get("build_type", {}),
+        "license": tool_meta.get("license"),
+        "last_commit_id": repo_facts.get("last_commit_id", ""),
+        "last_commit_date": repo_facts.get("last_commit_date", ""),
+        "version_tag": repo_facts.get("version_tag", ""),
+        "llm_tool_description": tool_meta.get("llm_tool_description")
+        or tool_meta.get("detailed_description")
+        or tool_meta.get("one_line_profile", ""),
+        "usage_entry_command": tool_meta.get("usage_entry_command", ""),
+        "dockerfile": dockerfile,
+        "docker_image_uri": docker_image_uri,
+        "tags": tool_meta.get("tags", []) if isinstance(tool_meta.get("tags"), list) else [],
+    }
+
+
+def build_image_for_task(
+    task_id: str,
+    tool_meta: Dict[str, Any],
+    worker_ip_for_report: str,
+    report_md_base: str,
+) -> BuildResult:
+    """
+    API 任务构建：构建完成后返回 report 所需结构（不在此处发 report）。
+    """
+    name = str(tool_meta.get("name") or "").strip() or "tool"
+    repo_url = str(tool_meta.get("repo_url") or "").strip()
+    help_website = tool_meta.get("help_website") or []
+    docs_url = help_website[0] if isinstance(help_website, list) and help_website else ""
+
+    tool = ToolSpec(
+        topic=",".join(tool_meta.get("domains") or []) if isinstance(tool_meta.get("domains"), list) else "",
+        category=",".join(tool_meta.get("subtask_category") or []) if isinstance(tool_meta.get("subtask_category"), list) else "",
+        name=name,
+        version="",
+        homepage=repo_url,
+        docs_url=str(docs_url or ""),
+        external_dep="",
+    )
+
+    tool_slug = slugify(tool.name)
+    log_name = f"{tool_slug}__{task_id}.md"
+    log_md_path = config.LOG_DIR / log_name
+
+    # report 的 md url：worker_ip:/build_agent/<relative-path>
+    try:
+        rel = log_md_path.relative_to(Path.cwd())
+        process_md_url = f"{worker_ip_for_report}:{report_md_base.rstrip('/')}/{str(rel)}"
+    except Exception:
+        process_md_url = f"{worker_ip_for_report}:{str(log_md_path)}"
+
+    docker_image_uri = ""
+    dockerfile_text = ""
+    error_message = ""
+
+    try:
+        docker_image_uri = build_image_for_tool(tool, task_id=task_id, source=None, source_note=f"task_id={task_id}") or ""
+        dockerfile_path = (config.BASE_WORK_DIR / tool_slug / "Dockerfile")
+        if dockerfile_path.exists():
+            dockerfile_text = dockerfile_path.read_text(encoding="utf-8", errors="ignore")
+    except Exception as e:
+        error_message = str(e)
+
+    repo_facts: Dict[str, Any] = {"build_type": {}}
+    repo_dir = config.BASE_WORK_DIR / tool_slug / "repo"
+    if repo_dir.exists():
+        repo_facts["has_setup_py"] = (repo_dir / "setup.py").exists()
+        repo_facts["has_pyproject_toml"] = (repo_dir / "pyproject.toml").exists()
+        repo_facts["has_cmakelists"] = (repo_dir / "CMakeLists.txt").exists()
+        repo_facts["has_makefile"] = (repo_dir / "Makefile").exists()
+        repo_facts["has_requirements_txt"] = (repo_dir / "requirements.txt").exists()
+        if repo_facts["has_cmakelists"]:
+            repo_facts["build_type"]["cmakelists"] = "unknown"
+        if repo_facts["has_makefile"]:
+            repo_facts["build_type"]["makefile"] = "unknown"
+
+        code, out, _ = run_cmd(["git", "rev-parse", "HEAD"], cwd=repo_dir)
+        if code == 0:
+            repo_facts["last_commit_id"] = out.strip()
+        code, out, _ = run_cmd(["git", "log", "-1", "--format=%cI"], cwd=repo_dir)
+        if code == 0:
+            repo_facts["last_commit_date"] = out.strip()
+        code, out, _ = run_cmd(["git", "describe", "--tags", "--abbrev=0"], cwd=repo_dir)
+        if code == 0:
+            repo_facts["version_tag"] = out.strip()
+
+    help_url = _unique_urls(help_website if isinstance(help_website, list) else [])
+
+    if docker_image_uri:
+        result_json = _compose_result_json(
+            tool_meta=tool_meta,
+            repo_facts=repo_facts,
+            dockerfile=dockerfile_text,
+            docker_image_uri=docker_image_uri,
+            help_url=help_url,
+        )
+        _write_success_artifact(tool_slug=tool_slug, result_json=result_json)
+        return BuildResult(
+            task_id=task_id,
+            tool_meta=tool_meta,
+            status="success",
+            result_json=result_json,
+            docker_image_uri=docker_image_uri,
+            dockerfile=dockerfile_text,
+            process_md_url=process_md_url,
+            error_message="",
+        )
+
+    if not error_message:
+        error_message = "build failed (see logs)"
+    return BuildResult(
+        task_id=task_id,
+        tool_meta=tool_meta,
+        status="failed",
+        result_json=None,
+        docker_image_uri="",
+        dockerfile=dockerfile_text,
+        process_md_url=process_md_url,
+        error_message=error_message,
+    )
 
 
