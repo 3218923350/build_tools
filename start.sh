@@ -12,22 +12,11 @@ echo "📥 Pulling latest code..."
 git fetch origin &&
 git checkout main &&
 git reset --hard origin/main &&
-git pull origin main
-rm -rf "$VENV"
-# ===============================
-# 创建虚拟环境（如果不存在）
-# ===============================
-if [ ! -x "$PYTHON_BIN" ]; then
-    echo "🐍 Creating virtualenv..."
-    python3 -m venv "$VENV"
-fi
+git pull origin main &&
+rm -rf "$VENV" &&
+python3 -m venv "$VENV" &&
+pip install -r requirements.txt
 
-
-# ===============================
-# 安装依赖
-# ===============================
-echo "📦 Installing requirements..."
-"$PIP_BIN" install -r requirements.txt
 
 # ===============================
 # 启动服务
