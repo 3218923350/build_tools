@@ -9,6 +9,9 @@ PIP_BIN="$VENV/bin/pip"
 cd "$APP_DIR"
 
 echo "📥 Pulling latest code..."
+git fetch origin &&
+git checkout main &&
+git reset --hard origin/main &&
 git pull origin main
 
 # ===============================
