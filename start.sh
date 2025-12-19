@@ -13,7 +13,7 @@ git fetch origin &&
 git checkout main &&
 git reset --hard origin/main &&
 git pull origin main
-
+rm -rf "$VENV"
 # ===============================
 # 创建虚拟环境（如果不存在）
 # ===============================
