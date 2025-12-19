@@ -1,9 +1,35 @@
+#!/usr/bin/env bash
 set -e
-cd /root/build_tools || exit 1
-source /root/build_tools/.env || exit 1
 
-nohup /root/build_tools/.venv/bin/python run.py --all > log 2>&1 &
+APP_DIR="/root/build_tools"
+VENV="$APP_DIR/.venv"
+PYTHON_BIN="$VENV/bin/python"
+PIP_BIN="$VENV/bin/pip"
 
-disown $!
+cd "$APP_DIR"
 
-exit 0
+echo "📥 Pulling latest code..."
+git pull origin main
+
+# ===============================
+# 创建虚拟环境（如果不存在）
+# ===============================
+if [ ! -x "$PYTHON_BIN" ]; then
+    echo "🐍 Creating virtualenv..."
+    python3 -m venv "$VENV"
+fi
+
+# ===============================
+# 安装依赖
+# ===============================
+echo "📦 Installing requirements..."
+"$PIP_BIN" install -r requirements.txt
+
+# ===============================
+# 启动服务
+# ===============================
+echo "🚀 Starting service..."
+nohup "$PYTHON_BIN" run.py --all > log 2>&1 &
+
+echo $! > run.pid
+echo "✅ Done"
