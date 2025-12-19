@@ -11,7 +11,7 @@ from typing import Any, Dict, List, Optional
 from . import config
 from .dockerfile_utils import sanitize_dockerfile
 from .github_client import fetch_github_repo_info
-from .llm import build_docker_plan_with_two_models
+from .llm import build_docker_plan_with_two_models, call_llm_json
 from .loaders import ToolSource
 from .models import AttemptLog, ToolSpec
 from .repo_context import collect_repo_context
@@ -63,7 +63,7 @@ def build_image_for_tool(
     task_id: str = "",
     source: Optional[ToolSource] = None,
     source_note: str = "",
-) -> Optional[str]:
+) -> Optional[Dict[str, Any]]:
     """
     为单个工具构建镜像。
     返回成功镜像 tag；失败则返回 None。
@@ -149,8 +149,11 @@ def build_image_for_tool(
     append_md("")
     # 生成时间戳作为镜像 tag（格式：YYYYMMDDHHMMSS）
     timestamp = time.strftime("%Y%m%d%H%M%S")
-    image_tag = f"registry.dp.tech/dptech/davinci/{tool_slug}:{timestamp}"
+    image_tag = f"registry.dp.tech/davinci/{tool_slug}:{timestamp}"
     build_attempt_index = 0  # 已经使用了多少次"写 Dockerfile + build"的机会
+
+    last_verify_commands: List[str] = []
+    last_used_links: List[str] = []
 
     while build_attempt_index < config.MAX_BUILD_ATTEMPTS:
         attempts_left = config.MAX_BUILD_ATTEMPTS - build_attempt_index
@@ -181,6 +184,7 @@ def build_image_for_tool(
         used_links = _unique_urls(
             [c.get("url", "") for c in (plan.citations or [])] + ([tool.docs_url] if tool.docs_url else [])
         )
+        last_used_links = used_links
         append_md("### 本轮使用的链接（去重）\n")
         if used_links:
             for u in used_links:
@@ -253,6 +257,7 @@ def build_image_for_tool(
         verify_commands = plan.verify_commands or []
         if not verify_commands:
             verify_commands = ["echo 'No specific verify command provided'"]
+        last_verify_commands = verify_commands
 
         append_md("将依次执行：\n")
         for cmd in verify_commands:
@@ -300,7 +305,12 @@ def build_image_for_tool(
             append_md("\n构建流程结束。\n")
             # 旧的 success_tools 写入逻辑迁移到 build_image_for_task（需要 tool_meta 等更多信息）
             append_md(f"\n---\n\n## 结束时间：{time.strftime('%Y-%m-%d %H:%M:%S')}\n")
-            return image_tag
+            return {
+                "image_tag": image_tag,
+                "dockerfile": dockerfile_sanitized,
+                "verify_commands": last_verify_commands,
+                "used_links": last_used_links,
+            }
         else:
             append_md("**本轮结果**：镜像构建成功，但验证命令失败，构建机会已消耗 1 次，将结合日志进行下一轮分析。\n")
 
@@ -413,12 +423,16 @@ def build_image_for_task(
     docker_image_uri = ""
     dockerfile_text = ""
     error_message = ""
+    verify_commands: List[str] = []
+    used_links: List[str] = []
 
     try:
-        docker_image_uri = build_image_for_tool(tool, task_id=task_id, source=None, source_note=f"task_id={task_id}") or ""
-        dockerfile_path = (config.BASE_WORK_DIR / tool_slug / "Dockerfile")
-        if dockerfile_path.exists():
-            dockerfile_text = dockerfile_path.read_text(encoding="utf-8", errors="ignore")
+        outcome = build_image_for_tool(tool, task_id=task_id, source=None, source_note=f"task_id={task_id}")
+        if outcome:
+            docker_image_uri = str(outcome.get("image_tag") or "")
+            dockerfile_text = str(outcome.get("dockerfile") or "")
+            verify_commands = list(outcome.get("verify_commands") or [])
+            used_links = list(outcome.get("used_links") or [])
     except Exception as e:
         error_message = str(e)
 
@@ -445,9 +459,93 @@ def build_image_for_task(
         if code == 0:
             repo_facts["version_tag"] = out.strip()
 
-    help_url = _unique_urls(help_website if isinstance(help_website, list) else [])
+    # help_url 以“成功构建时实际使用的链接”为准（优先 citations/used_links）
+    help_url = _unique_urls(used_links) if used_links else _unique_urls(help_website if isinstance(help_website, list) else [])
 
     if docker_image_uri:
+        # usage_entry_command：按你要求等于“最终验证命令”
+        tool_meta = dict(tool_meta)
+        if verify_commands:
+            tool_meta["usage_entry_command"] = " && ".join([c.strip() for c in verify_commands if isinstance(c, str) and c.strip()])
+
+        # build_type / help_url：再过一遍大模型填充（如果 LLM 可用），否则兜底
+        build_type = repo_facts.get("build_type", {}) or {}
+        if dockerfile_text:
+            dl = dockerfile_text.lower()
+            if "cmake" in dl and "cmake --version" not in dl:
+                build_type.setdefault("cmake", "unknown")
+            if "gcc" in dl or "g++" in dl:
+                build_type.setdefault("gcc", "unknown")
+            if repo_facts.get("has_cmakelists"):
+                build_type.setdefault("cmakelists", "unknown")
+
+        # LLM enrichment（可选）
+        llm_client = None
+        llm_model = ""
+        if config.gpt_client and config.OPENAI_MODEL:
+            llm_client = config.gpt_client
+            llm_model = config.OPENAI_MODEL
+        elif config.gemini_client and config.GEMINI_MODEL:
+            llm_client = config.gemini_client
+            llm_model = config.GEMINI_MODEL
+
+        if llm_client and llm_model:
+            sys_p = "你是资深 DevOps/构建工程师，负责把构建成功后的元信息补全为结构化 JSON。只输出 JSON。"
+            user_p = json.dumps(
+                {
+                    "tool_meta_allowed_fields_from_dispatch": {
+                        "id": tool_meta.get("id"),
+                        "name": tool_meta.get("name"),
+                        "one_line_profile": tool_meta.get("one_line_profile"),
+                        "detailed_description": tool_meta.get("detailed_description"),
+                        "domains": tool_meta.get("domains"),
+                        "domains_name": tool_meta.get("domains_name"),
+                        "subtask_category": tool_meta.get("subtask_category"),
+                        "application_level": tool_meta.get("application_level"),
+                        "sub_domain": tool_meta.get("sub_domain"),
+                        "sub_domain_name": tool_meta.get("sub_domain_name"),
+                        "capability": tool_meta.get("capability"),
+                        "capability_name": tool_meta.get("capability_name"),
+                        "repo_url": tool_meta.get("repo_url"),
+                        "license": tool_meta.get("license"),
+                        "tags": tool_meta.get("tags"),
+                    },
+                    "dockerfile": dockerfile_text,
+                    "verify_commands_success": verify_commands,
+                    "candidate_help_urls": help_url,
+                    "repo_facts": repo_facts,
+                    "current_guess": {
+                        "usage_entry_command": tool_meta.get("usage_entry_command", ""),
+                        "help_url": help_url,
+                        "build_type": build_type,
+                    },
+                    "requirements": {
+                        "usage_entry_command": "必须等于最终用于验证镜像成功的命令（可把多个命令用 && 串联）",
+                        "help_url": "必须从 candidate_help_urls 中选择（可以全选或子集），不能为空则尽量全选",
+                        "build_type": "根据最终 Dockerfile 推断需要的构建链与版本；如果无法确定具体版本用 x.x.x",
+                        "output_schema": {"usage_entry_command": "string", "help_url": ["string"], "build_type": {"any": "string"}},
+                    },
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+            try:
+                enrich = call_llm_json(llm_client, llm_model, sys_p, user_p, max_retries=2)
+                if isinstance(enrich, dict):
+                    ue = enrich.get("usage_entry_command")
+                    hu = enrich.get("help_url")
+                    bt = enrich.get("build_type")
+                    if isinstance(ue, str) and ue.strip():
+                        tool_meta["usage_entry_command"] = ue.strip()
+                    if isinstance(hu, list) and hu:
+                        help_url = _unique_urls([str(x) for x in hu])
+                    if isinstance(bt, dict) and bt:
+                        build_type = {str(k): str(v) for k, v in bt.items()}
+            except Exception:
+                pass
+
+        repo_facts["build_type"] = build_type
+
         result_json = _compose_result_json(
             tool_meta=tool_meta,
             repo_facts=repo_facts,

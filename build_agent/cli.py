@@ -2,10 +2,11 @@ from __future__ import annotations
 
 import argparse
 import os
-import socket
 import threading
 import time
 from typing import List, Optional
+
+import requests
 
 from .api_client import dispatch_task, report_result
 from .builder import build_image_for_task
@@ -89,8 +90,18 @@ def main(argv: Optional[List[str]] = None):
     report_url = f"{url}/api/v1/report".strip()
     worker_ip = os.getenv("WORKER_IP", "").strip()
     if not worker_ip:
-        worker_ip = ""
-        # 兜底：尽量获取一个本机对外可用 IP（不保证在所有网络环境都准确）
+        # 通过云厂商元数据服务获取公网 EIP（你指定的获取方式）
+        ip_url = os.getenv("WORKER_IP_URL", "http://100.100.100.200/latest/meta-data/eipv4").strip()
+        try:
+            r = requests.get(ip_url, timeout=5)
+            if r.status_code == 200:
+                worker_ip = (r.text or "").strip()
+        except Exception as e:
+            print(f"[main] failed to fetch worker_ip from {ip_url}: {e}")
+            worker_ip = ""
+
+    if not worker_ip:
+        raise RuntimeError("WORKER_IP 为空：请设置 WORKER_IP，或确保 WORKER_IP_URL 可访问并返回 IP。")
 
     print(f"[main] dispatch_url={dispatch_url}")
     print(f"[main] report_url={report_url}")
