@@ -89,19 +89,8 @@ def main(argv: Optional[List[str]] = None):
     report_url = f"{url}/api/v1/report".strip()
     worker_ip = os.getenv("WORKER_IP", "").strip()
     if not worker_ip:
+        worker_ip = ""
         # 兜底：尽量获取一个本机对外可用 IP（不保证在所有网络环境都准确）
-        try:
-            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-            s.connect(("8.8.8.8", 80))
-            worker_ip = s.getsockname()[0]
-        except Exception:
-            print(f"[main] failed to get worker_ip")
-            worker_ip = ""
-        finally:
-            try:
-                s.close()
-            except Exception:
-                pass
 
     print(f"[main] dispatch_url={dispatch_url}")
     print(f"[main] report_url={report_url}")

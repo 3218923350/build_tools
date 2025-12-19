@@ -40,6 +40,14 @@ echo "📦 Installing requirements..."
 "$PIP_BIN" install -r requirements.txt
 
 # ===============================
+# 加载 .env（关键）
+# ===============================
+ENV_FILE="$APP_DIR/.env"
+if [ -f "$ENV_FILE" ]; then
+    echo "🌱 Loading .env"
+    source "$ENV_FILE"
+fi
+# ===============================
 # 启动服务
 # ===============================
 echo "🚀 Starting service..."
