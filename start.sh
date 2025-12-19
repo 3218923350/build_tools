@@ -9,14 +9,34 @@ PIP_BIN="$VENV/bin/pip"
 cd "$APP_DIR"
 
 echo "📥 Pulling latest code..."
-git fetch origin &&
-git checkout main &&
-git reset --hard origin/main &&
-git pull origin main &&
-rm -rf "$VENV" &&
-python3 -m venv "$VENV" &&
-pip install -r requirements.txt
+git fetch origin
+git checkout main
+git reset --hard origin/main
 
+# ===============================
+# 停旧服务
+# ===============================
+if [ -f run.pid ] && kill -0 "$(cat run.pid)" 2>/dev/null; then
+    echo "🛑 Stopping old process"
+    kill "$(cat run.pid)"
+    sleep 2
+fi
+
+# ===============================
+# 创建虚拟环境（关键修正点）
+# ===============================
+if [ ! -x "$PYTHON_BIN" ]; then
+    echo "🐍 Creating virtualenv..."
+    PYTHON_SYS="$(which python)"
+    "$PYTHON_SYS" -m venv "$VENV"
+fi
+
+# ===============================
+# 安装依赖（必须用 venv 的 pip）
+# ===============================
+echo "📦 Installing requirements..."
+"$PIP_BIN" install --upgrade pip
+"$PIP_BIN" install -r requirements.txt
 
 # ===============================
 # 启动服务
