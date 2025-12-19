@@ -9,6 +9,7 @@ from typing import Any, Dict, List, Optional
 
 from . import config
 from .dockerfile_utils import sanitize_dockerfile
+from .github_client import fetch_github_repo_info
 from .llm import build_docker_plan_with_two_models
 from .loaders import ToolSource
 from .models import AttemptLog, ToolSpec
@@ -317,10 +318,19 @@ def _compose_result_json(
     """
     组装你给的新 result_json schema（缺失字段尽量补空/None）。
     """
-    primary_language = tool_meta.get("primary_language") or ""
-    language_list = tool_meta.get("language_list")
-    if not isinstance(language_list, dict):
-        language_list = {str(primary_language): 1.0} if primary_language else {}
+    # GitHub 信息优先（接口下发的 tool_meta 通常不包含这些字段）
+    gh_token = str(tool_meta.get("_github_token") or "").strip()  # 允许注入，但一般不使用
+    gh_api_base = str(tool_meta.get("_github_api_base") or "").strip() or "https://api.github.com"
+    gh = fetch_github_repo_info(
+        repo_url=str(tool_meta.get("repo_url") or ""),
+        token=gh_token or "",
+        api_base=gh_api_base,
+    )
+    print(gh)
+    return {}
+
+    primary_language = (gh.primary_language if gh else "") or ""
+    language_list = (gh.language_list if gh else None) or {}
 
     return {
         "id": tool_meta.get("id"),
@@ -335,25 +345,27 @@ def _compose_result_json(
         "sub_domain_name": tool_meta.get("sub_domain_name", []) if isinstance(tool_meta.get("sub_domain_name"), list) else [],
         "capability": tool_meta.get("capability", []) if isinstance(tool_meta.get("capability"), list) else [],
         "capability_name": tool_meta.get("capability_name", []) if isinstance(tool_meta.get("capability_name"), list) else [],
-        "avatar_url": tool_meta.get("avatar_url", ""),
+        "avatar_url": (gh.avatar_url if gh else "") or tool_meta.get("avatar_url", ""),
         "primary_language": primary_language,
         "language_list": language_list,
         "repo_url": tool_meta.get("repo_url", ""),
         "help_url": help_url,
-        "stars": tool_meta.get("stars"),
-        "forks": tool_meta.get("forks"),
-        "watchers": tool_meta.get("watchers"),
-        "open_issues": tool_meta.get("open_issues"),
+        "stars": (gh.stars if gh else None),
+        "forks": (gh.forks if gh else None),
+        "watchers": (gh.watchers if gh else None),
+        "open_issues": (gh.open_issues if gh else None),
         "has_setup_py": repo_facts.get("has_setup_py", False),
         "has_pyproject_toml": repo_facts.get("has_pyproject_toml", False),
         "has_cmakelists": repo_facts.get("has_cmakelists", False),
         "has_makefile": repo_facts.get("has_makefile", False),
         "has_requirements_txt": repo_facts.get("has_requirements_txt", False),
         "build_type": repo_facts.get("build_type", {}),
-        "license": tool_meta.get("license"),
-        "last_commit_id": repo_facts.get("last_commit_id", ""),
-        "last_commit_date": repo_facts.get("last_commit_date", ""),
-        "version_tag": repo_facts.get("version_tag", ""),
+        # license：你说应以工具下发为准；若下发为空再用 GitHub
+        "license": tool_meta.get("license") or (gh.license if gh else None),
+        # commit/tag：优先 GitHub（无需依赖 clone 结果），clone 能拿到也可作为兜底
+        "last_commit_id": (gh.last_commit_id if gh else "") or repo_facts.get("last_commit_id", ""),
+        "last_commit_date": (gh.last_commit_date if gh else "") or repo_facts.get("last_commit_date", ""),
+        "version_tag": (gh.version_tag if gh else "") or repo_facts.get("version_tag", ""),
         "llm_tool_description": tool_meta.get("llm_tool_description")
         or tool_meta.get("detailed_description")
         or tool_meta.get("one_line_profile", ""),

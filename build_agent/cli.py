@@ -75,9 +75,11 @@ def main(argv: Optional[List[str]] = None):
     )
 
     args = parser.parse_args(argv)
+    # url = os.getenv("URL", "https://tast-agent.test.dp.tech").strip()
+    url = os.getenv("URL", "https://tooltask.test.dp.tech").strip()
 
-    dispatch_url = os.getenv("DISPATCH_URL", "https://tast-agent.test.dp.tech/api/v1/dispatch").strip()
-    report_url = os.getenv("REPORT_URL", "https://tast-agent.test.dp.tech/api/v1/report").strip()
+    dispatch_url = f"{url}/api/v1/dispatch".strip()
+    report_url = f"{url}/api/v1/report".strip()
     worker_ip = os.getenv("WORKER_IP", "").strip()
     if not worker_ip:
         # 兜底：尽量获取一个本机对外可用 IP（不保证在所有网络环境都准确）
