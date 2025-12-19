@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import random
 import re
+import time
 from dataclasses import dataclass
 from typing import Any, Dict, Optional, Tuple
 
@@ -71,14 +73,29 @@ def fetch_github_repo_info(
     base = api_base.rstrip("/")
     headers = _gh_headers(token)
 
-    def get_json(path: str) -> Optional[Dict[str, Any]]:
-        try:
-            r = requests.get(f"{base}{path}", headers=headers, timeout=timeout)
-            if r.status_code != 200:
-                return None
-            return r.json()
-        except Exception:
-            return None
+    def get_json(path: str, max_retries: int = 40) -> Optional[Dict[str, Any]]:
+        """GitHub API 请求（400台机器并发场景：40次重试，每次随机1-30秒）"""
+        last_err = None
+        for i in range(max_retries):
+            try:
+                r = requests.get(f"{base}{path}", headers=headers, timeout=timeout)
+                if r.status_code == 200:
+                    return r.json()
+                elif r.status_code == 404:
+                    # 404 不需要重试
+                    return None
+                else:
+                    last_err = f"HTTP {r.status_code}"
+            except Exception as e:
+                last_err = str(e)
+            
+            if i < max_retries - 1:
+                sleep_sec = random.uniform(1, 30)
+                print(f"[github_api] Retry {i+1}/{max_retries} for {path}: {last_err}, sleep {sleep_sec:.1f}s")
+                time.sleep(sleep_sec)
+            else:
+                print(f"[github_api] All {max_retries} retries exhausted for {path}: {last_err}")
+        return None
 
     repo_j = get_json(f"/repos/{owner}/{repo}")
     if not repo_j:
@@ -124,12 +141,19 @@ def fetch_github_repo_info(
         version_tag = rel.get("tag_name") or ""
     if not version_tag:
         tags = None
-        try:
-            r = requests.get(f"{base}/repos/{owner}/{repo}/tags?per_page=1", headers=headers, timeout=timeout)
-            if r.status_code == 200:
-                tags = r.json()
-        except Exception:
-            tags = None
+        for i in range(40):  # 40次重试
+            try:
+                r = requests.get(f"{base}/repos/{owner}/{repo}/tags?per_page=1", headers=headers, timeout=timeout)
+                if r.status_code == 200:
+                    tags = r.json()
+                    break
+                elif r.status_code == 404:
+                    break
+            except Exception as e:
+                if i < 39:
+                    sleep_sec = random.uniform(1, 30)
+                    print(f"[github_api] Retry {i+1}/40 for tags: {e}, sleep {sleep_sec:.1f}s")
+                    time.sleep(sleep_sec)
         if isinstance(tags, list) and tags:
             version_tag = str((tags[0] or {}).get("name") or "")
 

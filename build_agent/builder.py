@@ -554,6 +554,26 @@ def build_image_for_task(
             help_url=help_url,
         )
         _write_success_artifact(tool_slug=tool_slug, result_json=result_json)
+        
+        # 构建成功后清理存储：删除 GitHub 仓库目录以节省空间
+        work_dir = config.BASE_WORK_DIR / tool_slug
+        repo_dir = work_dir / "repo"
+        if repo_dir.exists():
+            try:
+                shutil.rmtree(repo_dir)
+                print(f"[cleanup] deleted repo directory: {repo_dir}")
+            except Exception as e:
+                print(f"[cleanup] WARN: failed to delete {repo_dir}: {e}")
+        
+        # 可选：删除整个 work_dir（包括 Dockerfile），但保留日志
+        # 如果后续不需要重新构建，可以启用下面这段
+        # if work_dir.exists():
+        #     try:
+        #         shutil.rmtree(work_dir)
+        #         print(f"[cleanup] deleted work directory: {work_dir}")
+        #     except Exception as e:
+        #         print(f"[cleanup] WARN: failed to delete {work_dir}: {e}")
+        
         return BuildResult(
             task_id=task_id,
             tool_meta=tool_meta,

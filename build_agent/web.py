@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import random
+import time
 from typing import Dict, List
 
 import requests
@@ -9,8 +11,8 @@ from .config import SEARCH_BASE_URL, SEARCH_KEY
 from .utils import summarize_text
 
 
-def web_search(query: str, count: int = 5, timeout: int = 20) -> List[Dict[str, str]]:
-    """基于 searchapi.io 的 websearch 封装"""
+def web_search(query: str, count: int = 5, timeout: int = 20, max_retries: int = 40) -> List[Dict[str, str]]:
+    """基于 searchapi.io 的 websearch 封装（400台机器并发场景：40次重试，每次随机1-30秒）"""
     if not SEARCH_KEY:
         return []
     url = f"{SEARCH_BASE_URL}api/v1/search"
@@ -20,26 +22,35 @@ def web_search(query: str, count: int = 5, timeout: int = 20) -> List[Dict[str, 
         "api_key": SEARCH_KEY,
         "num": min(count, 10),
     }
-    try:
-        resp = requests.get(url, params=params, timeout=timeout)
-        if resp.status_code == 200:
-            data = resp.json()
-            results = []
-            for item in data.get("organic_results", [])[:count]:
-                results.append(
-                    {
-                        "title": item.get("title", ""),
-                        "link": item.get("link", ""),
-                        "snippet": item.get("snippet", ""),
-                    }
-                )
-            return results
+    last_err = None
+    for i in range(max_retries):
+        try:
+            resp = requests.get(url, params=params, timeout=timeout)
+            if resp.status_code == 200:
+                data = resp.json()
+                results = []
+                for item in data.get("organic_results", [])[:count]:
+                    results.append(
+                        {
+                            "title": item.get("title", ""),
+                            "link": item.get("link", ""),
+                            "snippet": item.get("snippet", ""),
+                        }
+                    )
+                return results
+            else:
+                last_err = f"HTTP {resp.status_code}"
+        except Exception as e:
+            last_err = str(e)
+        
+        if i < max_retries - 1:
+            sleep_sec = random.uniform(1, 30)
+            print(f"[web_search] Retry {i+1}/{max_retries} for '{query}': {last_err}, sleep {sleep_sec:.1f}s")
+            time.sleep(sleep_sec)
         else:
-            print(f"[web_search] HTTP {resp.status_code}: {resp.text[:200]}")
-            return []
-    except Exception as e:
-        print(f"[web_search] ERROR: {e}")
-        return []
+            print(f"[web_search] All {max_retries} retries exhausted for '{query}': {last_err}")
+    
+    return []
 
 
 import re
@@ -49,14 +60,38 @@ from urllib.parse import urlparse
 
 
 # ---------- 通用工具 ----------
-def _http_get(url: str, headers=None, params=None, timeout=20) -> requests.Response:
-    resp = requests.get(
-        url,
-        headers=headers,
-        params=params,
-        timeout=timeout,
-    )
-    return resp
+def _http_get(url: str, headers=None, params=None, timeout=20, max_retries: int = 40) -> requests.Response:
+    """HTTP GET 请求（400台机器并发场景：40次重试，每次随机1-30秒）"""
+    last_err = None
+    for i in range(max_retries):
+        try:
+            resp = requests.get(
+                url,
+                headers=headers,
+                params=params,
+                timeout=timeout,
+            )
+            if resp.status_code == 200:
+                return resp
+            elif resp.status_code == 404:
+                # 404 不需要重试
+                return resp
+            else:
+                last_err = f"HTTP {resp.status_code}"
+        except Exception as e:
+            last_err = str(e)
+        
+        if i < max_retries - 1:
+            sleep_sec = random.uniform(1, 30)
+            print(f"[_http_get] Retry {i+1}/{max_retries} for {url}: {last_err}, sleep {sleep_sec:.1f}s")
+            time.sleep(sleep_sec)
+        else:
+            print(f"[_http_get] All {max_retries} retries exhausted for {url}: {last_err}")
+            # 最后一次失败也返回响应（即使状态码不是200）
+            try:
+                return requests.get(url, headers=headers, params=params, timeout=timeout)
+            except:
+                raise RuntimeError(f"HTTP GET failed after {max_retries} retries: {last_err}")
 
 
 def _extract_text_from_html(html: str) -> str:

@@ -21,9 +21,9 @@ def call_llm_json(
     model: str,
     system_prompt: str,
     user_prompt: str,
-    max_retries: int = 3,
+    max_retries: int = 40,
 ) -> dict:
-    """调用 LLM 并解析 JSON"""
+    """调用 LLM 并解析 JSON（400台机器并发场景：40次重试，每次随机1-30秒）"""
     last_err: Optional[Exception] = None
     temperature = 1.0 if model == OPENAI_MODEL else 0.1
     for i in range(max_retries):
@@ -44,9 +44,13 @@ def call_llm_json(
             return data
         except Exception as e:
             last_err = e
-            print(f"[call_llm_json] Retry {i+1}/{max_retries} failed: {e}")
-            time.sleep(2)
-    raise RuntimeError(f"LLM 调用失败: {last_err}")
+            if i < max_retries - 1:
+                sleep_sec = random.uniform(1, 30)
+                print(f"[call_llm_json] Retry {i+1}/{max_retries} failed: {e}, sleep {sleep_sec:.1f}s")
+                time.sleep(sleep_sec)
+            else:
+                print(f"[call_llm_json] All {max_retries} retries exhausted: {e}")
+    raise RuntimeError(f"LLM 调用失败（已重试{max_retries}次）: {last_err}")
 
 
 def build_docker_plan_with_two_models(
@@ -116,16 +120,16 @@ def build_docker_plan_with_two_models(
            - false：你认为当前信息下还不能有把握写出正确 Dockerfile。
         3. 给出一个 0.0~1.0 的 confidence（你自己对 can_build=true 之后构建成功的置信度）。
         4. 当 can_build=true 时：
-           - 写出“最小可行”的 Dockerfile（不必考虑 SSH/MCP 段，系统会自动追加，只需在理由中说明，
+           - 写出“最小可行”的 Dockerfile，
              但是必须要安装 python、pip、wget、curl 等命令——可以通过发行版的包管理器安装）。
            - 不要设置限制性的 CMD/ENTRYPOINT（如 CMD ["python"], CMD ["julia"], CMD ["{tool.name.lower()}"] 等）。
-           - 优先使用官方文档中给出的安装命令，不要臆想依赖。
+           - 优先使用官方文档中给出的安装命令，比如有些工具可以直接 pip install XXX，不要臆想依赖。
            - 只安装该工具所需的依赖。
            - 如果需要源码：
              * 在 Dockerfile 中显式通过 `git clone {tool.homepage}` 获取源码后再编译安装；
                或者使用 `wget` / `curl` 下载源码压缩包，然后用 `tar` 解压再编译安装。
              * 不要假设源码已经存在于镜像中，一切源码获取动作都应该写进 Dockerfile 的 RUN 步骤中。
-           - 给出 1~3 个“最小验证命令”，例如：
+           - 给出 1~3 个“验证命令”，用于验证该工具是否安装成功，例如：
              - 命令行工具：`which xxx`、`xxx --version`、`xxx -h`
              - Python 库：`python -c "import xxx; print(xxx.__version__)"` 等。
         4.1 **硬性要求（必须满足，否则将 can_build=false）**：
