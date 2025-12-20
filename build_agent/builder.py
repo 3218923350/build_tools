@@ -303,6 +303,20 @@ def build_image_for_tool(
             for cmd in verify_commands:
                 append_md(f"  - `{cmd}`")
             append_md("\n构建流程结束。\n")
+            
+            # 4. docker push（构建成功后推送镜像）
+            append_md("### docker push 日志\n")
+            push_code, push_out, push_err = run_cmd(
+                ["docker", "push", image_tag],
+                timeout=config.BUILD_TIMEOUT,  # push 可能也需要较长时间
+            )
+            push_log = push_out + "\n" + push_err
+            append_md("```text\n" + push_log + "\n```\n")
+            if push_code == 0:
+                append_md(f"✅ 镜像推送成功：`{image_tag}`\n")
+            else:
+                append_md(f"⚠️ 镜像推送失败（退出码 {push_code}），但构建已成功。\n")
+            
             # 旧的 success_tools 写入逻辑迁移到 build_image_for_task（需要 tool_meta 等更多信息）
             append_md(f"\n---\n\n## 结束时间：{time.strftime('%Y-%m-%d %H:%M:%S')}\n")
             return {
